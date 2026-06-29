@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cowork Academy — Build with Claude</title>
+<style>
+:root{
+  --bg:#0a0e1c;--panel:#121a30;--panel2:#1a2440;--ink:#eaf0ff;--muted:#94a1c4;
+  --line:#26304f;--accent:#6c7bff;--accent2:#36e0c4;--gold:#ffce4f;--good:#46e0a0;--bad:#ff6b8a;
+  --b1:#46c98a;--b2:#ffb23e;--b3:#ff6b8a;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  background:radial-gradient(1100px 650px at 82% -8%,#19224a 0,transparent 58%),
+  radial-gradient(900px 600px at -8% 108%,#15203f 0,transparent 55%),var(--bg);
+  color:var(--ink);line-height:1.55;min-height:100vh}
+.wrap{max-width:1000px;margin:0 auto;padding:0 20px 90px}
+a{color:var(--accent2)}
+header.hero{text-align:center;padding:50px 0 8px}
+.badge{display:inline-block;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent2);
+  border:1px solid var(--line);border-radius:999px;padding:6px 14px;margin-bottom:16px}
+h1{font-size:42px;margin:0 0 8px;background:linear-gradient(90deg,#fff,#9fb0ff);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.sub{color:var(--muted);max-width:640px;margin:0 auto;font-size:16px}
+.topbar{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;
+  background:rgba(10,14,28,.7);backdrop-filter:blur(8px);border:1px solid var(--line);border-radius:14px;
+  padding:12px 16px;margin:26px 0 6px;position:sticky;top:12px;z-index:20}
+.who{font-size:14px;color:var(--muted)}
+.who b{color:var(--ink)}
+.topbtns{display:flex;gap:8px;flex-wrap:wrap}
+button{font-family:inherit;font-size:14px;font-weight:700;border-radius:10px;border:1px solid var(--line);
+  padding:9px 15px;cursor:pointer;background:var(--panel2);color:var(--ink);transition:.15s}
+button:hover{border-color:var(--accent)}
+button.primary{background:linear-gradient(90deg,var(--accent),var(--accent2));color:#0a0e1c;border:none}
+button.ghost{background:transparent}
+button.tiny{font-size:12px;padding:6px 11px}
+.hide{display:none!important}
+
+.levels{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:26px}
+@media(max-width:820px){.levels{grid-template-columns:1fr}h1{font-size:34px}}
+.lvl{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:24px;cursor:pointer;transition:.18s;position:relative;overflow:hidden}
+.lvl:hover{transform:translateY(-3px);border-color:var(--accent)}
+.lvl .tag{font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+.lvl.b1{box-shadow:inset 3px 0 0 var(--b1)} .lvl.b1 .tag{color:var(--b1)}
+.lvl.b2{box-shadow:inset 3px 0 0 var(--b2)} .lvl.b2 .tag{color:var(--b2)}
+.lvl.b3{box-shadow:inset 3px 0 0 var(--b3)} .lvl.b3 .tag{color:var(--b3)}
+.lvl h2{margin:10px 0 4px;font-size:23px}
+.lvl .proj{color:var(--accent2);font-weight:700;font-size:14px;margin-bottom:8px}
+.lvl p{color:var(--muted);font-size:14px;margin:0 0 14px}
+.lvl ul{margin:0 0 16px;padding-left:18px;color:var(--muted);font-size:13.5px}
+.lvl ul li{margin:4px 0}
+.lvl .meta{display:flex;justify-content:space-between;align-items:center;font-size:12px;color:var(--muted)}
+.lvl .prog{height:6px;background:var(--panel2);border-radius:99px;overflow:hidden;margin-top:6px}
+.lvl .prog i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--accent),var(--accent2))}
+
+.board{margin-top:24px}
+.bhead{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:6px}
+.bhead h2{margin:0;font-size:27px}
+.pill{font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:5px 11px;border-radius:99px}
+.pill.b1{background:rgba(70,201,138,.16);color:var(--b1)} .pill.b2{background:rgba(255,178,62,.16);color:var(--b2)} .pill.b3{background:rgba(255,107,138,.16);color:var(--b3)}
+.bsub{color:var(--muted);font-size:15px;margin:2px 0 14px;max-width:720px}
+.barwrap{display:flex;align-items:center;gap:12px;margin-bottom:20px}
+.barwrap .prog{flex:1;height:9px;background:var(--panel2);border-radius:99px;overflow:hidden}
+.barwrap .prog i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--accent),var(--accent2));transition:.4s}
+.barwrap .pct{font-size:13px;color:var(--muted);min-width:140px;text-align:right}
+
+.mission{background:var(--panel);border:1px solid var(--line);border-radius:16px;margin-bottom:16px;overflow:hidden}
+.mission.done{border-color:rgba(70,224,160,.5)}
+.mhead{display:flex;align-items:center;gap:13px;padding:16px 18px;cursor:pointer;user-select:none}
+.mnum{flex:0 0 auto;width:34px;height:34px;border-radius:9px;background:var(--panel2);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:15px}
+.mission.done .mnum{background:linear-gradient(135deg,var(--good),var(--accent2));color:#0a0e1c}
+.mtitle{flex:1}
+.mtitle .t{font-weight:700;font-size:17px}
+.mtitle .blk{font-size:12px;color:var(--muted)}
+.mchev{color:var(--muted);font-size:13px}
+.mbody{padding:0 18px 18px;border-top:1px solid var(--line)}
+.mbody .lead{color:var(--muted);font-size:14.5px;margin:14px 0}
+.steps{list-style:none;padding:0;margin:8px 0}
+.steps li{display:flex;gap:10px;align-items:flex-start;padding:8px 0;border-bottom:1px dashed var(--line)}
+.steps li:last-child{border-bottom:none}
+.steps input{margin-top:3px;width:17px;height:17px;accent-color:var(--accent2);flex:0 0 auto;cursor:pointer}
+.steps .stxt{font-size:14.5px}
+.steps li.checked .stxt{color:var(--muted);text-decoration:line-through}
+.victory{background:var(--panel2);border-left:3px solid var(--gold);border-radius:0 10px 10px 0;padding:11px 14px;margin:12px 0;font-size:13.5px}
+.victory b{color:var(--gold)}
+.hintbox{margin:10px 0}
+.hintbox summary{cursor:pointer;color:var(--accent2);font-size:13.5px;font-weight:600}
+.hintbox .hcontent{font-size:13.5px;color:var(--muted);background:#0c1224;border:1px solid var(--line);border-radius:10px;padding:11px 13px;margin-top:8px}
+.notes label{display:block;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:12px 0 5px}
+.notes textarea{width:100%;background:#0c1224;border:1px solid var(--line);border-radius:10px;color:var(--ink);
+  padding:11px 13px;font-family:inherit;font-size:14px;resize:vertical;min-height:64px}
+.copyprompt{display:flex;gap:8px;align-items:center;flex-wrap:wrap;background:#0c1224;border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin:10px 0}
+.copyprompt code{font-family:ui-monospace,Menlo,monospace;font-size:12.5px;color:#cdd9ff;flex:1;min-width:200px}
+.finale{background:linear-gradient(120deg,#161f44,#10182f);border:1px solid var(--accent);border-radius:18px;padding:26px;text-align:center;margin-top:22px}
+.finale h3{margin:0 0 8px;font-size:24px}
+.finale p{color:var(--muted);max-width:600px;margin:0 auto 14px}
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:var(--accent2);color:#0a0e1c;
+  padding:11px 18px;border-radius:11px;font-weight:700;opacity:0;transition:.3s;pointer-events:none;z-index:50}
+.toast.show{opacity:1}
+.foot{text-align:center;color:var(--muted);font-size:12px;margin-top:36px}
+.savedot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--good);margin-right:5px;vertical-align:middle}
+.kit{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin:18px 0}
+.kit h4{margin:0 0 8px;font-size:14px;color:var(--accent2);letter-spacing:.04em;text-transform:uppercase}
+.kit ol{margin:0;padding-left:20px;color:var(--muted);font-size:14px}
+.kit ol li{margin:6px 0}
+.kit b{color:var(--ink)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="hero">
+    <span class="badge">◆ Build with Claude Cowork</span>
+    <h1>Cowork Academy</h1>
+    <p class="sub">A hands-on, self-paced course where you learn Claude Cowork by building a real website — using Cowork's skills and connecting it to real tools. Pick your level. Your progress saves automatically, right here in your browser.</p>
+  </header>
+
+  <div class="topbar">
+    <div class="who" id="who"><span class="savedot"></span>Your progress saves automatically on this device.</div>
+    <div class="topbtns">
+      <button class="ghost tiny" id="btnHome">⌂ Levels</button>
+      <button class="ghost tiny" onclick="exportSave()">⬇ Backup</button>
+      <button class="ghost tiny" onclick="importSave()">⬆ Restore</button>
+      <button class="ghost tiny" onclick="resetAll()">↺ Reset</button>
+    </div>
+  </div>
+
+  <section id="picker">
+    <div class="kit">
+      <h4>How it works</h4>
+      <ol>
+        <li><b>Pick a level</b> below — each builds a different, progressively bigger project.</li>
+        <li><b>Open Claude Cowork</b> in another window. Each mission gives you a task; you do it there.</li>
+        <li><b>Check off steps and jot notes</b> here as you go — everything saves to your browser, so this page is your personal workbook and it'll be here when you come back.</li>
+      </ol>
+    </div>
+    <div class="levels" id="levelCards"></div>
+  </section>
+
+  <section id="board" class="board hide">
+    <div class="bhead">
+      <h2 id="bTitle"></h2>
+      <span class="pill" id="bPill"></span>
+    </div>
+    <p class="bsub" id="bSub"></p>
+    <div class="barwrap"><div class="prog"><i id="bBar"></i></div><div class="pct" id="bPct"></div></div>
+    <div id="missions"></div>
+    <div id="finale" class="finale hide"></div>
+  </section>
+
+  <p class="foot">Cowork Academy · your progress lives in this browser · <span id="ver">v1</span></p>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+const LEVELS = {
+  beginner:{
+    key:"beginner", cls:"b1", icon:"🌱",
+    name:"Beginner", project:"Your First Site",
+    blurb:"Brand-new to Cowork? Start here. Build a clean one-page personal site, run your first Cowork skill, and connect one simple tool — with step-by-step guidance the whole way.",
+    bullets:["Build a one-page website","Use 1 built-in Cowork skill","Connect 1 read-only tool"],
+    sub:"You'll go from zero to a real, good-looking one-page website — and learn the three core moves of Cowork along the way: building, using skills, and connecting tools.",
+    missions:[
+      {t:"Meet your Guide & set up your space",blk:"Orientation",
+       lead:"Before building, get Cowork to set up a project folder for your site and a short notes file so it remembers what you're making.",
+       steps:["Open Claude Cowork and ask it to create a new folder for your website project","Tell it in 1–2 sentences what your one-page site is about (you, a hobby, a small idea)","Ask it to save those details in a notes file so it remembers next time"],
+       prompt:"I'm brand new to Cowork. Help me set up a project folder for a simple one-page website about ____, and save a short notes file so you remember what it's for.",
+       victory:"Cowork has a project folder and a notes file describing your site.",
+       hints:["Just describe your idea in plain English — Cowork will pick the folder and file names.","If it asks where to save, let it choose the default project folder."]},
+      {t:"Build your one-page website (with Claude's design help)",blk:"Website + Design",
+       lead:"Now the fun part. Have Cowork build a single-page site with a headline, a short 'about' section, and a way to contact you — and importantly, ask it to use Claude's design skills so it looks genuinely good, not just functional.",
+       steps:["Ask Cowork to build a one-page website with a hero headline, an about section, and a contact button","Tell Cowork to apply good design — ask it to use its design skills/help to improve the layout, spacing, type, and color","Open the preview and actually look at it","Ask Cowork for a quick design critique of your page, then apply at least 2 of its suggestions"],
+       prompt:"Build me a one-page website with a big hero headline, a short About Me section, and a contact button. Use your design skills to make it modern and well-designed, then give it a quick design critique and improve it.",
+       victory:"A one-page site exists, you used Claude's design help on it, and you applied design feedback.",
+       hints:["Cowork has design skills — ask 'what design help can you give me?' if you're unsure.","Be specific with changes: 'more breathing room and a bolder hero' beats 'make it nicer'."]},
+      {t:"Use your first Cowork skill",blk:"Skills",
+       lead:"Cowork comes with built-in skills — ready-made abilities. Ask what skills are available, then use one to improve your site (for example, polishing the writing or generating an image).",
+       steps:["Ask Cowork what skills are available to you","Pick one that could help your site (e.g. writing polish, an image, a document)","Use it, and apply the result to your website"],
+       prompt:"What skills do you have available? Suggest one that would improve my one-page site, then use it.",
+       victory:"You used at least one built-in skill and applied its output to your site.",
+       hints:["If you're not sure which to pick, ask Cowork which skill it recommends for a personal website and why.","An image or a writing-polish skill is an easy, satisfying first win."]},
+      {t:"Connect one simple tool",blk:"Connectors",
+       lead:"Connectors plug Cowork into real apps. Pick one easy, read-only connection and do one small thing through it — proof that Cowork can reach the outside world.",
+       steps:["Ask Cowork which connectors are available to add","Connect ONE simple one (e.g. a calendar, your files/drive, or email — read-only is fine)","Ask Cowork to read one thing from it (today's events, a file list, recent emails)"],
+       prompt:"What connectors can I add? Help me connect one simple, read-only tool and then read one thing from it.",
+       victory:"One connector is connected and Cowork successfully read real data from it.",
+       hints:["Reading is safe — you're not letting it send or change anything. Start there.","If a connection asks you to log in, you do that part yourself in the popup."]},
+      {t:"Show it off",blk:"Wrap-up",
+       lead:"You built a site, used a skill, and connected a tool. Lock in the learning: get a plain-English recap and save it.",
+       steps:["Ask Cowork to summarize what you built and which Cowork features you used","Ask it to save that summary into your notes file","In the notes box below, write one thing you want to try next"],
+       prompt:"Summarize what I built today and which Cowork features I used (website, skill, connector), and save it to my notes file.",
+       victory:"You have a saved recap of your first build.",
+       hints:["This recap is your proof-of-skills — keep it.","Next-step ideas: add a second page, try another skill, or connect a second tool."]}
+    ]
+  },
+  intermediate:{
+    key:"intermediate", cls:"b2", icon:"⚡",
+    name:"Intermediate", project:"The Smart Brochure",
+    blurb:"Comfortable with the basics? Build a multi-section site for a small business, create your OWN reusable skill, and pull live data from a connector into the site or a report.",
+    bullets:["Multi-section business website","Build & save a custom skill","Connector feeds live data in"],
+    sub:"You'll build a multi-section website for a small business or project, teach Cowork a reusable skill of your own, and wire a real tool so live data flows into your work. Goals and hints — less hand-holding.",
+    missions:[
+      {t:"Scope the business & set memory",blk:"Setup",
+       lead:"Pick a small business or project to build for (real or invented). Get Cowork to record its name, audience, and vibe in a memory file it can reuse across the whole level.",
+       steps:["Decide the business: what it does, who it's for, the tone","Have Cowork write a memory/brief file capturing it","Confirm it persists: start a fresh request and check Cowork still 'knows' the business"],
+       prompt:"We're building a website and tools for a small business called ____ that helps ____. Save a brief so you remember the name, audience, and tone.",
+       victory:"A memory/brief file exists and Cowork recalls the business without re-explaining.",
+       hints:["A tight brief now makes every later mission easier — spend a few real minutes on it.","Test persistence by asking 'what business are we building for?' in a new message."]},
+      {t:"Build a multi-section website (lean on Claude's design skills)",blk:"Website + Design",
+       lead:"Go beyond one page: a hero, a services/offerings section, an about, testimonials or FAQ, and a clear call-to-action. This time, explicitly use Claude's design skills — its design critique and UX-copy help — to make it genuinely presentable and trustworthy.",
+       steps:["Have Cowork build a multi-section site for your business","Ask Cowork to use its design skills to improve layout, hierarchy, spacing, and color","Run a Claude design critique on the site and fix its top 2–3 suggestions","Ask Claude to sharpen the wording (UX copy) on your headline and call-to-action"],
+       prompt:"Build a multi-section website for my business: hero, what we offer, about, a testimonials or FAQ section, and a strong call-to-action. Use your design skills to make it modern and trustworthy, then run a design critique and tighten the copy.",
+       victory:"A polished multi-section site improved using Claude's design critique and copy help.",
+       hints:["Write the hero headline yourself first — if the words don't sell it, design won't.","Ask Cowork directly: 'use your design-critique skill on this and list the top 3 fixes.'"]},
+      {t:"Build & save your OWN skill",blk:"Skills",
+       lead:"This is the leap: teach Cowork a reusable workflow your business needs often — e.g. 'write a product blurb in our voice' or 'turn notes into a customer email'. Save it so it triggers again later.",
+       steps:["Pick a task your business will repeat often","Work with Cowork to create a saved skill capturing your rules, voice, and an example","Test it on two different inputs and confirm consistent, on-brand output"],
+       prompt:"Help me build and SAVE a reusable skill that does ____ in my business's voice. Include my rules and one example, then let's test it.",
+       victory:"A saved custom skill that fires on the right request and outputs your defined format.",
+       hints:["Give the skill at least one 'do NOT' rule — constraints make output reliable.","Test with a deliberately tricky input to see if it holds the line."]},
+      {t:"Pull live data from a connector",blk:"Connectors",
+       lead:"Connect a real tool and bring its live data INTO your work — e.g. pull recent inquiries from email, events from a calendar, or rows from a sheet, and surface them in a report or a section of the site.",
+       steps:["Connect a tool that holds real data useful to the business","Have Cowork pull current data from it","Use that data: a 'latest updates' section, a summary report, or a contact list"],
+       prompt:"Connect ____ and pull live data from it, then use that data in a short report (or a section of my site).",
+       victory:"Live data from a connector is flowing into a report or your site.",
+       hints:["Pick a tool whose data actually changes — that's what makes 'live' meaningful.","Keep it read-only; you don't need send/write access for this.","Safety habit: let Cowork draft, but YOU press send on anything outbound."]},
+      {t:"Package & reflect",blk:"Wrap-up",
+       lead:"Tie it together and prove you can repeat it.",
+       steps:["Ask Cowork to summarize the site, the custom skill, and the connector you wired","Save the summary to your brief file","Notes below: write how you'd reuse your custom skill in a real job"],
+       prompt:"Summarize what we built: the website, my custom skill, and the live connector — and save it to the brief.",
+       victory:"A saved recap showing a website + a custom skill + a live connector.",
+       hints:["Being able to explain WHY your skill works is the real test of mastery.","Next: chain the skill into a scheduled report, or add a second connector."]}
+    ]
+  },
+  higher:{
+    key:"higher", cls:"b3", icon:"🔥",
+    name:"Higher Intermediate", project:"The Connected Product",
+    blurb:"Ready to stretch? Build a multi-page site backed by an AI agent, a custom skill, two connectors working together, and a live dashboard — with open challenges and minimal guidance.",
+    bullets:["Multi-page site + live dashboard","Agent + custom skill","2 connectors working together"],
+    sub:"You'll build a small connected product: a multi-page website, an agent doing real work, a custom skill, two connectors combined, and a live dashboard. These are open challenges — figure out the 'how' yourself; ask for hints only when stuck.",
+    missions:[
+      {t:"Define the product & architecture",blk:"Design",
+       lead:"Choose a product idea that genuinely needs multiple tools. Get Cowork to help you write a one-page plan: what it does, the pages, the data it touches, and which connectors/skills/agents it'll use. Save it as the source of truth.",
+       steps:["Define a product that requires at least two external tools to be useful","Draft an architecture note: pages, data sources, skills, agents","Save it as the project's source-of-truth memory"],
+       prompt:"I'm building a connected product. Interview me, then help me write and save a one-page architecture plan: pages, data sources, the connectors, the agent, and the custom skill it'll use.",
+       victory:"A saved architecture plan naming concrete pages, connectors, an agent, and a skill.",
+       hints:["If your idea works with zero connectors, it's too simple — raise the ambition.","Name the two connectors explicitly now; you'll combine them in mission 4."]},
+      {t:"Build the multi-page website (full Claude design treatment)",blk:"Website + Design",
+       lead:"Build a real multi-page site (home + at least two more pages) and put it through Claude's full design toolkit: use its design skills to build it well, then run a design critique, a UX-copy pass, AND an accessibility review until it's genuinely portfolio-grade.",
+       steps:["Build a multi-page site matching your plan, asking Claude to apply its design skills throughout","Run Claude's design-critique skill and fix the top issues","Run Claude's accessibility-review skill (contrast, tap targets, readable type) and fix what fails","Confirm it's responsive on a narrow/mobile width"],
+       prompt:"Build the multi-page site from my plan using your design skills. Then run a design critique, an accessibility review, and a copy pass, and fix the top issues from each.",
+       victory:"A responsive multi-page site that passes Claude's design + accessibility review.",
+       hints:["Name the skills explicitly: 'use your design-critique and accessibility-review skills on this.'","Don't accept the first draft — push for a second, tighter design pass."]},
+      {t:"Hire an agent + build a skill",blk:"Agents & Skills",
+       lead:"Delegate a chunky, self-contained job to an agent (e.g. research, bulk analysis, content generation) and capture a repeatable part of your workflow as a saved custom skill. Use both outputs in the product.",
+       steps:["Write a tight brief and launch an agent to do a real multi-step job","Build & save a custom skill for a recurring task in your product","Feed both results into your site or workflow"],
+       prompt:"Brief and launch an agent to do ____ for my product. Separately, help me build and save a custom skill for ____.",
+       victory:"An agent completed an independent job AND a saved skill is reused in your product.",
+       hints:["The skill of agents is the brief — write it so a stranger could run the job.","Try running two agents in parallel and combining their outputs."]},
+      {t:"Combine two connectors",blk:"Connectors",
+       lead:"Wire up two real tools and make them work together — e.g. read from one and compose into another, or merge two data sources into one view. This is the integration challenge.",
+       steps:["Connect two different tools relevant to your product","Have Cowork use BOTH in a single workflow (read one → act/compose with the other, or merge both)","Surface the combined result somewhere useful"],
+       prompt:"Connect ____ and ____, then build one workflow that uses both together (read from one, compose/merge with the other).",
+       victory:"Two connectors feeding a single combined workflow or view.",
+       hints:["Start by getting each working alone, THEN connect them.","Keep any outbound action as a draft for your approval — never auto-send/spend."]},
+      {t:"Ship the live dashboard",blk:"Dashboard",
+       lead:"Build a reopenable dashboard/artifact that pulls fresh data (from your connectors) and shows the product's key signals — your cockpit. Add a tile that summarizes the data in plain English.",
+       steps:["Decide the 4–5 signals that actually matter","Build a live dashboard/artifact wired to real connector data","Add a plain-English 'what changed' summary tile, and reopen it to confirm it refreshes"],
+       prompt:"Build me a live, reopenable dashboard that pulls fresh data from my connectors and shows my product's key metrics, with a plain-English summary tile.",
+       victory:"A reopenable dashboard showing live signals with an auto-summary.",
+       hints:["Kill vanity metrics — every tile must drive a decision.","Reopen it after some data changes to prove it's actually live."]},
+      {t:"Launch review",blk:"Wrap-up",
+       lead:"Demo-ready. Make everything work as one product and capture it.",
+       steps:["Walk Cowork through a 5-min demo script: site, agent, both connectors, dashboard","Ask it to find the single weakest part and suggest one improvement","Save a launch summary; note below what you'd build in 'season 2'"],
+       prompt:"Help me write a 5-minute demo script covering the site, the agent, both connectors, and the dashboard — then tell me the weakest link and how to fix it.",
+       victory:"A demo script + a saved launch summary for your connected product.",
+       hints:["If you can narrate which Cowork feature powers each piece, you've mastered it.","Season 2: add auth, a third connector, or automate the whole thing on a schedule."]}
+    ]
+  }
+};
+
+const STORE_KEY="coworkAcademy.v1";
+let state=load();
+function load(){try{return JSON.parse(localStorage.getItem(STORE_KEY))||{current:null,progress:{},notes:{}};}catch(e){return{current:null,progress:{},notes:{}};}}
+function save(){try{localStorage.setItem(STORE_KEY,JSON.stringify(state));}catch(e){}pulse();}
+let pulseT;
+function pulse(){const w=document.getElementById('who');if(!w)return;w.innerHTML='<span class="savedot"></span>Saved.';clearTimeout(pulseT);
+  pulseT=setTimeout(()=>{w.innerHTML='<span class="savedot"></span>Your progress saves automatically on this device.';},1200);}
+
+function isChecked(lvl,m,s){return !!(state.progress[lvl]&&state.progress[lvl][m+'.'+s]);}
+function setChecked(lvl,m,s,v){state.progress[lvl]=state.progress[lvl]||{};state.progress[lvl][m+'.'+s]=v;save();}
+function getNote(lvl,m){return (state.notes[lvl]&&state.notes[lvl][m])||"";}
+function setNote(lvl,m,v){state.notes[lvl]=state.notes[lvl]||{};state.notes[lvl][m]=v;save();}
+
+function levelProgress(lvl){
+  const L=LEVELS[lvl];let total=0,done=0;
+  L.missions.forEach((m,mi)=>{m.steps.forEach((s,si)=>{total++;if(isChecked(lvl,mi,si))done++;});});
+  return{done,total,pct:total?Math.round(done/total*100):0};
+}
+function missionDone(lvl,mi){const m=LEVELS[lvl].missions[mi];return m.steps.every((s,si)=>isChecked(lvl,mi,si));}
+
+function esc(t){return String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+
+function renderPicker(){
+  const wrap=document.getElementById('levelCards');wrap.innerHTML='';
+  Object.values(LEVELS).forEach(L=>{
+    const p=levelProgress(L.key);
+    const el=document.createElement('div');
+    el.className='lvl '+L.cls;
+    el.innerHTML=`<div class="tag">${L.icon} ${L.name}</div>
+      <h2>${L.project}</h2>
+      <div class="proj">Build · Skills · Connectors</div>
+      <p>${L.blurb}</p>
+      <ul>${L.bullets.map(b=>`<li>${b}</li>`).join('')}</ul>
+      <div class="meta"><span>${p.done}/${p.total} steps</span><span>${p.pct}%</span></div>
+      <div class="prog"><i style="width:${p.pct}%"></i></div>`;
+    el.onclick=()=>openLevel(L.key);
+    wrap.appendChild(el);
+  });
+}
+
+function openLevel(lvl){
+  state.current=lvl;save();
+  document.getElementById('picker').classList.add('hide');
+  document.getElementById('board').classList.remove('hide');
+  const L=LEVELS[lvl];
+  document.getElementById('bTitle').textContent=L.icon+' '+L.project;
+  const pill=document.getElementById('bPill');pill.textContent=L.name;pill.className='pill '+L.cls;
+  document.getElementById('bSub').textContent=L.sub;
+  renderMissions(lvl);
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function renderMissions(lvl){
+  const L=LEVELS[lvl];const host=document.getElementById('missions');host.innerHTML='';
+  L.missions.forEach((m,mi)=>{
+    const done=missionDone(lvl,mi);
+    const el=document.createElement('div');el.className='mission'+(done?' done':'');
+    const stepsHtml=m.steps.map((s,si)=>{
+      const ck=isChecked(lvl,mi,si);
+      return `<li class="${ck?'checked':''}"><input type="checkbox" ${ck?'checked':''} data-m="${mi}" data-s="${si}"><span class="stxt">${esc(s)}</span></li>`;
+    }).join('');
+    const hintsHtml=m.hints.map((h,hi)=>`<details class="hintbox"><summary>Hint ${hi+1}</summary><div class="hcontent">${esc(h)}</div></details>`).join('');
+    el.innerHTML=`
+      <div class="mhead">
+        <div class="mnum">${done?'✓':(mi+1)}</div>
+        <div class="mtitle"><div class="t">${esc(m.t)}</div><div class="blk">${esc(m.blk)}</div></div>
+        <div class="mchev">▾</div>
+      </div>
+      <div class="mbody ${mi===0?'':'hide'}">
+        <p class="lead">${esc(m.lead)}</p>
+        <ul class="steps">${stepsHtml}</ul>
+        <div class="copyprompt"><code>${esc(m.prompt)}</code><button class="tiny" data-prompt="${mi}">📋 Copy prompt</button></div>
+        <div class="victory"><b>✓ Victory:</b> ${esc(m.victory)}</div>
+        ${hintsHtml}
+        <div class="notes"><label>Your notes for this mission</label>
+          <textarea data-note="${mi}" placeholder="What you built, links, ideas, things to revisit...">${esc(getNote(lvl,mi))}</textarea></div>
+      </div>`;
+    host.appendChild(el);
+  });
+  host.querySelectorAll('.mhead').forEach(h=>{
+    h.onclick=()=>{const body=h.nextElementSibling;body.classList.toggle('hide');};
+  });
+  host.querySelectorAll('.steps input').forEach(cb=>{
+    cb.onchange=()=>{setChecked(lvl,+cb.dataset.m,+cb.dataset.s,cb.checked);
+      cb.closest('li').classList.toggle('checked',cb.checked);
+      const mEl=cb.closest('.mission');const mi=+cb.dataset.m;
+      const d=missionDone(lvl,mi);mEl.classList.toggle('done',d);
+      mEl.querySelector('.mnum').textContent=d?'✓':(mi+1);
+      refreshProgress(lvl);
+    };
+  });
+  host.querySelectorAll('textarea[data-note]').forEach(ta=>{
+    ta.oninput=()=>setNote(lvl,+ta.dataset.note,ta.value);
+  });
+  host.querySelectorAll('button[data-prompt]').forEach(b=>{
+    b.onclick=()=>{const p=LEVELS[lvl].missions[+b.dataset.prompt].prompt;
+      navigator.clipboard.writeText(p).then(()=>toast('Prompt copied — paste it into Cowork'));};
+  });
+  refreshProgress(lvl);
+}
+function refreshProgress(lvl){
+  const p=levelProgress(lvl);
+  document.getElementById('bBar').style.width=p.pct+'%';
+  document.getElementById('bPct').textContent=`${p.done}/${p.total} steps · ${p.pct}%`;
+  const fin=document.getElementById('finale');
+  if(p.pct===100){
+    fin.classList.remove('hide');
+    fin.innerHTML=`<h3>🎉 ${LEVELS[lvl].project} — complete!</h3>
+      <p>You've built a website, used Cowork skills, and connected real tools. That's the core of Cowork, done for real.</p>
+      <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
+        ${nextLevelBtn(lvl)}
+        <button class="ghost" onclick="goHome()">Back to levels</button>
+      </div>`;
+  } else { fin.classList.add('hide'); }
+}
+function nextLevelBtn(lvl){
+  const order=["beginner","intermediate","higher"];const i=order.indexOf(lvl);
+  if(i<order.length-1){const n=order[i+1];return `<button class="primary" onclick="openLevel('${n}')">Next: ${LEVELS[n].project} →</button>`;}
+  return `<button class="primary" onclick="goHome()">🏆 You finished the hardest track!</button>`;
+}
+
+function goHome(){state.current=null;save();document.getElementById('board').classList.add('hide');
+  document.getElementById('picker').classList.remove('hide');renderPicker();window.scrollTo({top:0,behavior:'smooth'});}
+document.getElementById('btnHome').onclick=goHome;
+
+function toast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),1500);}
+
+function exportSave(){
+  const blob=new Blob([JSON.stringify(state,null,2)],{type:"application/json"});
+  const a=document.createElement('a');a.href=URL.createObjectURL(blob);
+  a.download="cowork-academy-progress.json";a.click();toast('Backup downloaded');
+}
+function importSave(){
+  const inp=document.createElement('input');inp.type='file';inp.accept='.json,application/json';
+  inp.onchange=e=>{const f=e.target.files[0];if(!f)return;const r=new FileReader();
+    r.onload=()=>{try{const data=JSON.parse(r.result);if(data&&typeof data==='object'){state=Object.assign({current:null,progress:{},notes:{}},data);save();
+      toast('Progress restored');if(state.current&&LEVELS[state.current]){openLevel(state.current);}else{goHome();}}}catch(err){toast('Could not read that file');}};
+    r.readAsText(f);};
+  inp.click();
+}
+function resetAll(){
+  if(confirm("Reset ALL progress on this device? This can't be undone (use Backup first if unsure).")){
+    state={current:null,progress:{},notes:{}};save();goHome();toast('Reset done');
+  }
+}
+
+renderPicker();
+if(state.current && LEVELS[state.current]){openLevel(state.current);}
+</script>
+</body>
+</html>
