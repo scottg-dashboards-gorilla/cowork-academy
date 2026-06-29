@@ -118,6 +118,7 @@ button.tiny{font-size:12px;padding:6px 11px}
     <div class="who" id="who"><span class="savedot"></span>Your progress saves automatically on this device.</div>
     <div class="topbtns">
       <button class="ghost tiny" id="btnHome">⌂ Levels</button>
+      <button class="ghost tiny" onclick="exportWorkbook()">📄 My Workbook (PDF)</button>
       <button class="ghost tiny" onclick="exportSave()">⬇ Backup</button>
       <button class="ghost tiny" onclick="importSave()">⬆ Restore</button>
       <button class="ghost tiny" onclick="resetAll()">↺ Reset</button>
@@ -132,6 +133,7 @@ button.tiny{font-size:12px;padding:6px 11px}
         <li><b>Open Claude Cowork</b> in another window. Each mission gives you a task; you do it there.</li>
         <li><b>Check off steps and jot notes</b> here as you go — everything saves to your browser, so this page is your personal workbook and it'll be here when you come back.</li>
       </ol>
+      <p style="margin:12px 0 0;font-size:13px;color:var(--muted)">Your progress lives in <b style="color:var(--ink)">this browser on this device</b> — no login needed. Switching computers or want a permanent copy? Use <b style="color:var(--ink)">📄 My Workbook (PDF)</b> to save your whole record, or <b style="color:var(--ink)">⬇ Backup</b> / <b style="color:var(--ink)">⬆ Restore</b> to move it between devices.</p>
     </div>
     <div class="levels" id="levelCards"></div>
   </section>
@@ -189,7 +191,13 @@ const LEVELS = {
        steps:["Ask Cowork to summarize what you built and which Cowork features you used","Ask it to save that summary into your notes file","In the notes box below, write one thing you want to try next"],
        prompt:"Summarize what I built today and which Cowork features I used (website, skill, connector), and save it to my notes file.",
        victory:"You have a saved recap of your first build.",
-       hints:["This recap is your proof-of-skills — keep it.","Next-step ideas: add a second page, try another skill, or connect a second tool."]}
+       hints:["This recap is your proof-of-skills — keep it.","Next-step ideas: add a second page, try another skill, or connect a second tool."]},
+      {t:"BONUS: Publish your site so anyone can see it",blk:"Publish (optional)",
+       lead:"Optional, but a great finish: put the website you built ONLINE so it has a real link you can share with anyone. The easiest free way is GitHub Pages — and Cowork can walk you through it step by step.",
+       steps:["Ask Cowork to help you put your website online for free (GitHub Pages is the simplest)","Follow its steps — you'll make a free GitHub account if you don't have one, and it'll guide the upload","Get your live link and open it in a new tab to confirm it works","Paste your live link into the notes box below"],
+       prompt:"I built a website in Cowork. Walk me through publishing it online for free with GitHub Pages, step by step, so I get a real link I can share.",
+       victory:"Your site is live on the internet with a link you can share.",
+       hints:["You'll need a free GitHub account — Cowork will tell you exactly when.","If you get stuck on a step, tell Cowork what you see on screen and it'll guide you.","This is optional — skip it if you just want to keep your site in Cowork for now."]}
     ]
   },
   intermediate:{
@@ -228,7 +236,13 @@ const LEVELS = {
        steps:["Ask Cowork to summarize the site, the custom skill, and the connector you wired","Save the summary to your brief file","Notes below: write how you'd reuse your custom skill in a real job"],
        prompt:"Summarize what we built: the website, my custom skill, and the live connector — and save it to the brief.",
        victory:"A saved recap showing a website + a custom skill + a live connector.",
-       hints:["Being able to explain WHY your skill works is the real test of mastery.","Next: chain the skill into a scheduled report, or add a second connector."]}
+       hints:["Being able to explain WHY your skill works is the real test of mastery.","Next: chain the skill into a scheduled report, or add a second connector."]},
+      {t:"BONUS: Put your business site online",blk:"Publish (optional)",
+       lead:"Optional, but worth it: take the multi-section site you built and publish it so the business has a real, shareable web address. Cowork can guide you through the free GitHub Pages route.",
+       steps:["Ask Cowork to help you publish your site for free with GitHub Pages","Follow its step-by-step guidance (free GitHub account, upload, enable Pages)","Open your live link to confirm the whole site works online","Paste the live link into the notes box below"],
+       prompt:"Help me publish the multi-section website I built to GitHub Pages for free, step by step, so my business has a real shareable link.",
+       victory:"Your business site is live online with a shareable link.",
+       hints:["Tell Cowork what you see on screen at each step and it'll keep you moving.","Double-check every section and link works on the live version, not just the preview.","Optional — totally fine to keep it in Cowork instead if you prefer."]}
     ]
   },
   higher:{
@@ -273,7 +287,13 @@ const LEVELS = {
        steps:["Walk Cowork through a 5-min demo script: site, agent, both connectors, dashboard","Ask it to find the single weakest part and suggest one improvement","Save a launch summary; note below what you'd build in 'season 2'"],
        prompt:"Help me write a 5-minute demo script covering the site, the agent, both connectors, and the dashboard — then tell me the weakest link and how to fix it.",
        victory:"A demo script + a saved launch summary for your connected product.",
-       hints:["If you can narrate which Cowork feature powers each piece, you've mastered it.","Season 2: add auth, a third connector, or automate the whole thing on a schedule."]}
+       hints:["If you can narrate which Cowork feature powers each piece, you've mastered it.","Season 2: add auth, a third connector, or automate the whole thing on a schedule."]},
+      {t:"BONUS: Ship your product to a live URL",blk:"Publish (optional)",
+       lead:"Optional capstone: deploy the multi-page site at the front of your connected product to a real, public URL so you can put it in a portfolio or share it with anyone.",
+       steps:["Ask Cowork to deploy your multi-page site to GitHub Pages (or a host of your choice)","Follow the steps to get it live and confirm every page loads on the public link","Sanity-check it on mobile width on the live URL","Paste the live link into the notes box below — that's your portfolio piece"],
+       prompt:"Deploy my multi-page product site to a live public URL (GitHub Pages is fine), walk me through it, and help me confirm every page works online.",
+       victory:"Your product's site is live at a public URL, ready for a portfolio.",
+       hints:["If you have connectors feeding a dashboard, note which parts are public-safe vs. private before sharing.","Never expose secrets or private data on a public page — ask Cowork to double-check.","Optional — skip if you'd rather keep the product private in Cowork."]}
     ]
   }
 };
@@ -408,6 +428,63 @@ function exportSave(){
   const blob=new Blob([JSON.stringify(state,null,2)],{type:"application/json"});
   const a=document.createElement('a');a.href=URL.createObjectURL(blob);
   a.download="cowork-academy-progress.json";a.click();toast('Backup downloaded');
+}
+
+function exportWorkbook(){
+  // Build a clean printable record of every level: completed steps + the learner's notes.
+  const order=["beginner","intermediate","higher"];
+  const today=new Date().toLocaleDateString(undefined,{year:'numeric',month:'long',day:'numeric'});
+  let anyWork=false;
+  let body="";
+  order.forEach(lvl=>{
+    const L=LEVELS[lvl];const p=levelProgress(lvl);
+    const hasNotes=L.missions.some((m,mi)=>getNote(lvl,mi).trim());
+    if(p.done===0 && !hasNotes) return; // skip untouched levels
+    anyWork=true;
+    body+=`<section class="lvl"><h2>${L.icon} ${esc(L.project)} <span class="lname">${esc(L.name)}</span></h2>
+      <div class="bar"><span style="width:${p.pct}%"></span></div>
+      <div class="meta">${p.done}/${p.total} steps complete · ${p.pct}%</div>`;
+    L.missions.forEach((m,mi)=>{
+      const stepsHtml=m.steps.map((s,si)=>{
+        const ck=isChecked(lvl,mi,si);
+        return `<li class="${ck?'done':''}">${ck?'☑':'☐'} ${esc(s)}</li>`;
+      }).join('');
+      const note=getNote(lvl,mi).trim();
+      const mdone=missionDone(lvl,mi);
+      body+=`<div class="mission"><h3>${mdone?'✓ ':''}${mi+1}. ${esc(m.t)} <span class="blk">${esc(m.blk)}</span></h3>
+        <ul>${stepsHtml}</ul>
+        ${note?`<div class="note"><b>My notes:</b><br>${esc(note).replace(/\n/g,'<br>')}</div>`:''}</div>`;
+    });
+    body+=`</section>`;
+  });
+  if(!anyWork){toast('Start a level first — nothing to export yet');return;}
+  const html=`<!DOCTYPE html><html><head><meta charset="utf-8"><title>My Cowork Academy Workbook</title>
+  <style>
+    body{font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:#15203a;max-width:740px;margin:0 auto;padding:36px 28px;line-height:1.55}
+    h1{font-size:28px;margin:0 0 2px} .date{color:#667;margin:0 0 22px;font-size:13px}
+    .lvl{margin:0 0 26px;page-break-inside:avoid} .lvl>h2{font-size:21px;border-bottom:2px solid #6c7bff;padding-bottom:5px;margin-bottom:6px}
+    .lname{font-size:12px;color:#fff;background:#6c7bff;border-radius:99px;padding:2px 9px;vertical-align:middle;margin-left:6px}
+    .bar{height:7px;background:#e6e9f5;border-radius:99px;overflow:hidden;margin:6px 0 3px}
+    .bar span{display:block;height:100%;background:linear-gradient(90deg,#6c7bff,#36c0a4)}
+    .meta{font-size:12px;color:#667;margin-bottom:12px}
+    .mission{margin:0 0 14px;page-break-inside:avoid} .mission h3{font-size:15px;margin:10px 0 4px}
+    .mission .blk{font-size:11px;color:#889;font-weight:normal}
+    .mission ul{list-style:none;padding:0;margin:4px 0;font-size:13.5px}
+    .mission li{margin:3px 0;color:#556} .mission li.done{color:#15203a}
+    .note{background:#f4f6ff;border-left:3px solid #6c7bff;border-radius:0 8px 8px 0;padding:9px 12px;font-size:13px;margin:6px 0 2px}
+    .foot{margin-top:24px;color:#889;font-size:11px;border-top:1px solid #e6e9f5;padding-top:10px}
+    @media print{@page{margin:14mm}}
+  </style></head><body>
+    <h1>My Cowork Academy Workbook</h1>
+    <p class="date">Exported ${today}</p>
+    ${body}
+    <p class="foot">Cowork Academy · your personal record of what you built and learned. Tip: use your browser's Print dialog and choose "Save as PDF".</p>
+    <script>setTimeout(function(){window.print();},400);<\/script>
+  </body></html>`;
+  const w=window.open('','_blank');
+  if(!w){toast('Allow pop-ups to export your workbook');return;}
+  w.document.open();w.document.write(html);w.document.close();
+  toast('Workbook ready — save it as PDF');
 }
 function importSave(){
   const inp=document.createElement('input');inp.type='file';inp.accept='.json,application/json';
