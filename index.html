@@ -51,6 +51,22 @@ button.tiny{font-size:12px;padding:6px 11px}
 .faq .fbody b{color:var(--ink)}
 .xlink{text-align:center;margin-top:26px;font-size:13px;color:var(--muted)}
 .xlink a{color:var(--accent2);text-decoration:none;font-weight:600}
+.capmap{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:22px 22px 8px;margin:22px 0}
+.capmap h3{margin:0 0 4px;font-size:17px}
+.capmap .csub{color:var(--muted);font-size:13px;margin:0 0 16px}
+.capgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px 20px}
+@media(max-width:680px){.capgrid{grid-template-columns:1fr}}
+.caprow{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px dashed var(--line)}
+.caprow .cname{flex:1;font-size:14px}
+.caprow .cname .cd{display:block;color:var(--muted);font-size:12px}
+.lvlchips{display:flex;gap:5px;flex-wrap:wrap}
+.lchip{font-size:10.5px;font-weight:800;letter-spacing:.03em;padding:3px 8px;border-radius:99px}
+.lchip.b1{background:rgba(70,201,138,.18);color:var(--b1)}
+.lchip.b2{background:rgba(255,178,62,.18);color:var(--b2)}
+.lchip.b3{background:rgba(255,107,138,.18);color:var(--b3)}
+.caplegend{display:flex;gap:14px;flex-wrap:wrap;margin:14px 0 4px;font-size:12px;color:var(--muted)}
+.caplegend span{display:inline-flex;align-items:center;gap:6px}
+.caplegend i{width:10px;height:10px;border-radius:3px;display:inline-block}
 
 .levels{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:26px}
 @media(max-width:820px){.levels{grid-template-columns:1fr}h1{font-size:34px}}
@@ -157,6 +173,17 @@ button.tiny{font-size:12px;padding:6px 11px}
       <p style="margin:12px 0 0;font-size:13px;color:var(--muted)">Your progress lives in <b style="color:var(--ink)">this browser on this device</b> — no login needed. Switching computers or want a permanent copy? Use <b style="color:var(--ink)">📄 My Workbook (PDF)</b> to save your whole record, or <b style="color:var(--ink)">⬇ Backup</b> / <b style="color:var(--ink)">⬆ Restore</b> to move it between devices.</p>
     </div>
     <div class="levels" id="levelCards"></div>
+
+    <div class="capmap">
+      <h3>🧭 Every Cowork capability — and where you learn it</h3>
+      <p class="csub">Do all three levels for complete, hands-on mastery. Beginner already covers most everyday tools; agents, browser/desktop control, plugins and orchestration come in the higher levels.</p>
+      <div class="caplegend">
+        <span><i style="background:var(--b1)"></i> 🌱 Beginner</span>
+        <span><i style="background:var(--b2)"></i> ⚡ Intermediate</span>
+        <span><i style="background:var(--b3)"></i> 🔥 Higher</span>
+      </div>
+      <div class="capgrid" id="capGrid"></div>
+    </div>
 
     <details class="faq" style="margin-top:22px">
       <summary>How is my progress saved? (and is it private?)</summary>
@@ -638,7 +665,40 @@ function resetAll(){
   }
 }
 
+const CAPS=[
+  ["Memory","Claude remembers your project across sessions",["b1","b2","b3"]],
+  ["Websites","Build real one-page & multi-page sites",["b1","b2","b3"]],
+  ["Design","Design critique, UX copy, accessibility",["b1","b2","b3"]],
+  ["Skills — using built-in","Run Cowork's ready-made abilities",["b1"]],
+  ["Skills — building your own","Teach & save a reusable custom skill",["b2","b3"]],
+  ["Word documents","Create real .docx files",["b1","b2"]],
+  ["Spreadsheets","Excel with working formulas",["b1"]],
+  ["Data analysis","Analyze data + build charts",["b2"]],
+  ["Presentations","Build PowerPoint decks",["b2"]],
+  ["PDFs","Produce client-ready PDFs",["b2"]],
+  ["Images","Generate logos & visuals",["b1"]],
+  ["Web research","Search the web, sourced summaries",["b1"]],
+  ["Connectors (MCP)","Plug Cowork into real apps",["b1","b2","b3"]],
+  ["Agents","Delegate self-contained jobs",["b2","b3"]],
+  ["Artifacts / dashboards","Live, reopenable data pages",["b2","b3"]],
+  ["Automation","Scheduled tasks that run themselves",["b2","b3"]],
+  ["Browser control","Claude in Chrome automation",["b3"]],
+  ["Computer use","Control native desktop apps",["b3"]],
+  ["Plugins","Install capability bundles",["b3"]],
+  ["Orchestration","Chain everything to run unattended",["b3"]],
+  ["Publishing","Put your site live on the web",["b1","b2","b3"]]
+];
+const LBL={b1:"🌱 Beg",b2:"⚡ Int",b3:"🔥 High"};
+function renderCapMap(){
+  const g=document.getElementById('capGrid');if(!g)return;
+  g.innerHTML=CAPS.map(([n,d,ls])=>`<div class="caprow">
+    <div class="cname">${n}<span class="cd">${d}</span></div>
+    <div class="lvlchips">${ls.map(l=>`<span class="lchip ${l}">${LBL[l]}</span>`).join('')}</div>
+  </div>`).join('');
+}
+
 renderPicker();
+renderCapMap();
 if(state.current && LEVELS[state.current]){openLevel(state.current);}
 </script>
 </body>
