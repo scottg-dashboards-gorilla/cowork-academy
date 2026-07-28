@@ -113,22 +113,38 @@ button.tiny{font-size:12px;padding:6px 11px}
 .steps input{margin-top:3px;width:17px;height:17px;accent-color:var(--accent2);flex:0 0 auto;cursor:pointer}
 .steps .stxt{font-size:14.5px}
 .steps li.checked .stxt{color:var(--muted);text-decoration:line-through}
-.victory{background:var(--panel2);border-left:3px solid var(--gold);border-radius:0 10px 10px 0;padding:11px 14px;margin:12px 0;font-size:13.5px}
+.victory{background:var(--panel2);border-left:3px solid var(--gold);border-radius:0 10px 10px 0;padding:11px 14px;margin:14px 0;font-size:13.5px}
 .victory b{color:var(--gold)}
-.hintbox{margin:10px 0}
+.steplabel,.blocklabel{font-size:11.5px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;color:var(--accent2);margin:16px 0 4px}
+.blocklabel .lite{color:var(--muted);font-weight:600;letter-spacing:0;text-transform:none;font-size:12.5px}
+.hintswrap{margin:14px 0 2px;border-top:1px dashed var(--line);padding-top:10px}
+.hintbox{margin:8px 0}
 .hintbox summary{cursor:pointer;color:var(--accent2);font-size:13.5px;font-weight:600}
-.hintbox .hcontent{font-size:13.5px;color:var(--muted);background:#0c1224;border:1px solid var(--line);border-radius:10px;padding:11px 13px;margin-top:8px}
-.notes label{display:block;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:12px 0 5px}
+.hintbox .hcontent{font-size:13.5px;color:var(--muted);background:transparent;border:none;border-left:2px solid var(--accent2);border-radius:0;padding:4px 0 4px 12px;margin:6px 0 6px 4px;font-style:italic}
+.notes label{display:block;font-size:12px;letter-spacing:.04em;color:var(--muted);margin:14px 0 5px}
 .notes textarea{width:100%;background:#0c1224;border:1px solid var(--line);border-radius:10px;color:var(--ink);
   padding:11px 13px;font-family:inherit;font-size:14px;resize:vertical;min-height:64px}
-.copyprompt{display:flex;gap:8px;align-items:center;flex-wrap:wrap;background:#0c1224;border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin:10px 0}
-.copyprompt code{font-family:ui-monospace,Menlo,monospace;font-size:12.5px;color:#cdd9ff;flex:1;min-width:200px}
+.promptcard{background:#0c1224;border:1px solid var(--accent);border-radius:12px;padding:12px 14px;margin:6px 0 4px}
+.promptcard .plabel{font-size:12.5px;font-weight:700;color:var(--accent2);margin-bottom:8px;display:flex;align-items:center;gap:6px}
+.promptrow{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.promptrow code{font-family:ui-monospace,Menlo,monospace;font-size:12.5px;color:#cdd9ff;flex:1;min-width:200px;line-height:1.5}
+.promptrow button{white-space:nowrap}
 .finale{background:linear-gradient(120deg,#161f44,#10182f);border:1px solid var(--accent);border-radius:18px;padding:26px;text-align:center;margin-top:22px}
 .finale h3{margin:0 0 8px;font-size:24px}
 .finale p{color:var(--muted);max-width:600px;margin:0 auto 14px}
 .toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:var(--accent2);color:#0a0e1c;
   padding:11px 18px;border-radius:11px;font-weight:700;opacity:0;transition:.3s;pointer-events:none;z-index:50}
 .toast.show{opacity:1}
+.gate{position:fixed;inset:0;background:rgba(5,8,18,.82);backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;z-index:100;padding:20px}
+.gatecard{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:30px 28px;max-width:440px;width:100%;box-shadow:0 30px 80px -30px #000}
+.gatecard h2{margin:0 0 6px;font-size:22px}
+.gatecard p{color:var(--muted);font-size:14px;margin:0 0 18px}
+.gatecard label{display:block;font-size:12px;color:var(--muted);margin:12px 0 5px;letter-spacing:.03em}
+.gatecard input{width:100%;background:#0c1224;border:1px solid var(--line);border-radius:10px;color:var(--ink);padding:12px 13px;font-size:15px;font-family:inherit}
+.gatecard input:focus{outline:none;border-color:var(--accent)}
+.gatecard .err{color:var(--bad);font-size:12.5px;margin:8px 0 0;min-height:16px}
+.gatecard button{width:100%;margin-top:16px;background:linear-gradient(90deg,var(--accent),var(--accent2));color:#0a0e1c;border:none;border-radius:10px;padding:13px;font-size:15px;font-weight:800;cursor:pointer}
+.gatecard .fine{font-size:11.5px;color:var(--muted);margin-top:14px;line-height:1.5}
 .foot{text-align:center;color:var(--muted);font-size:12px;margin-top:36px}
 .savedot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--good);margin-right:5px;vertical-align:middle}
 .kit{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin:18px 0}
@@ -139,6 +155,20 @@ button.tiny{font-size:12px;padding:6px 11px}
 </style>
 </head>
 <body>
+<div class="gate hide" id="gate">
+  <div class="gatecard">
+    <h2>👋 Welcome to Cowork Academy</h2>
+    <p>Tell us who you are so your progress is tracked for the program. Takes 5 seconds.</p>
+    <label for="gateName">Your name</label>
+    <input type="text" id="gateName" placeholder="Jordan Rivera" autocomplete="name">
+    <label for="gateEmail">Email</label>
+    <input type="email" id="gateEmail" placeholder="you@example.com" autocomplete="email">
+    <div class="err" id="gateErr"></div>
+    <button id="gateStart">Start learning →</button>
+    <p class="fine">Your name and email, and which steps you complete, are recorded so the program administrator can see progress. Your progress is private from other learners, and your personal notes stay on your device only.</p>
+  </div>
+</div>
+
 <div class="wrap">
   <header class="hero">
     <span class="badge">◆ Build with Claude Cowork</span>
@@ -166,9 +196,10 @@ button.tiny{font-size:12px;padding:6px 11px}
     <div class="kit">
       <h4>How it works</h4>
       <ol>
-        <li><b>Pick a level</b> below — each builds a different, progressively bigger project.</li>
-        <li><b>Open Claude Cowork</b> in another window. Each mission gives you a task; you do it there.</li>
-        <li><b>Check off steps and jot notes</b> here as you go — everything saves to your browser, so this page is your personal workbook and it'll be here when you come back.</li>
+        <li><b>Pick a level</b> below, then open the first mission.</li>
+        <li><b>Copy the starter prompt</b> and paste it into <b>Claude Cowork</b> (open in another window) to begin the task.</li>
+        <li><b>Do the steps in Cowork, then tick each checkbox here</b> as you finish it. The hints are optional tips to read if you get stuck — there's nothing to type into them.</li>
+        <li>Everything you check or note <b>saves automatically</b>, so this page is your personal workbook and it'll be here when you come back.</li>
       </ol>
       <p style="margin:12px 0 0;font-size:13px;color:var(--muted)">Your progress lives in <b style="color:var(--ink)">this browser on this device</b> — no login needed. Switching computers or want a permanent copy? Use <b style="color:var(--ink)">📄 My Workbook (PDF)</b> to save your whole record, or <b style="color:var(--ink)">⬇ Backup</b> / <b style="color:var(--ink)">⬆ Restore</b> to move it between devices.</p>
     </div>
@@ -188,11 +219,13 @@ button.tiny{font-size:12px;padding:6px 11px}
     <details class="faq" style="margin-top:22px">
       <summary>How is my progress saved? (and is it private?)</summary>
       <div class="fbody">
-        Your progress, checkmarks, and notes save automatically in <b>this web browser on this device</b> — there's no login and nothing is uploaded to a server, so it's private to you. A few things worth knowing:<br><br>
-        • <b>It's per-device.</b> Switching to another computer or phone won't carry your progress automatically. Use <b>📄 My Workbook (PDF)</b> for a permanent record, or <b>⬇ Backup</b> / <b>⬆ Restore</b> to move it between devices.<br>
-        • <b>Clearing your browser data erases it.</b> Back up first if you're unsure.<br>
-        • <b>The things you actually build</b> (websites, files, skills, connectors) live in your own Claude Cowork — not here. This page is your checklist and notebook; Cowork is your workshop.<br>
-        • <b>Proof of completion:</b> finish a level to unlock a certificate, and export your workbook — those are how you'd share what you did (e.g. send them to a manager or mentor), since there's no central account tracking it.
+        You enter your name and email once to begin. From then on, your <b>completed steps are recorded</b> so the program administrator can see how everyone is progressing. Here's exactly how it works:<br><br>
+        • <b>What's recorded:</b> your name, email, which steps you've checked off, and your last-active time. This is visible to the <b>program administrator only</b> — never to other learners.<br>
+        • <b>What stays on your device:</b> your personal <b>notes</b> are saved only in this browser and are <b>not</b> uploaded.<br>
+        • <b>Also saved locally:</b> your progress is cached in this browser too, so it loads instantly and still works offline (it syncs when you're back online).<br>
+        • <b>Portability:</b> use <b>📄 My Workbook (PDF)</b> for a permanent copy, or <b>⬇ Backup</b> / <b>⬆ Restore</b> to move your on-device record between machines.<br>
+        • <b>The things you actually build</b> (websites, files, skills, connectors) live in your own Claude Cowork — not here. This page is your checklist; Cowork is your workshop.<br>
+        • <b>Proof of completion:</b> finish a level to unlock a certificate you can share.
       </div>
     </details>
   </section>
@@ -443,15 +476,37 @@ const LEVELS = {
 };
 
 const STORE_KEY="coworkAcademy.v1";
+function blank(){return {current:null,progress:{},notes:{},identity:null,registered:false};}
 let state=load();
-function load(){try{return JSON.parse(localStorage.getItem(STORE_KEY))||{current:null,progress:{},notes:{}};}catch(e){return{current:null,progress:{},notes:{}};}}
+function load(){try{return Object.assign(blank(),JSON.parse(localStorage.getItem(STORE_KEY))||{});}catch(e){return blank();}}
 function save(){try{localStorage.setItem(STORE_KEY,JSON.stringify(state));}catch(e){}pulse();}
+
+/* ---- Progress tracking backend (write-only; reporting via passphrase admin page) ---- */
+const SB_URL='https://zyavgqznjznjsddldyxg.supabase.co';
+const SB_KEY='sb_publishable_NHXaBPH5DgErSn4e7cUBAQ_OJ1v0hPw';
+function sbHeaders(extra){return Object.assign({apikey:SB_KEY,Authorization:'Bearer '+SB_KEY,'Content-Type':'application/json'},extra||{});}
+// Learners write ONLY through a controlled SECURITY DEFINER function (no direct table access).
+async function syncNow(){
+  if(!state.identity)return;
+  try{
+    const r=await fetch(SB_URL+'/rest/v1/rpc/academy_upsert',{method:'POST',headers:sbHeaders(),
+      body:JSON.stringify({p_email:state.identity.email,p_name:state.identity.name,p_progress:state.progress||{}})});
+    if(r.ok){state.registered=true;}
+  }catch(e){/* offline — retry on next change */}
+}
+const registerUser=syncNow;
+let syncT;
+function scheduleSync(){
+  if(!state.identity)return;
+  clearTimeout(syncT);
+  syncT=setTimeout(syncNow,1200);
+}
 let pulseT;
 function pulse(){const w=document.getElementById('who');if(!w)return;w.innerHTML='<span class="savedot"></span>Saved.';clearTimeout(pulseT);
   pulseT=setTimeout(()=>{w.innerHTML='<span class="savedot"></span>Your progress saves automatically on this device.';},1200);}
 
 function isChecked(lvl,m,s){return !!(state.progress[lvl]&&state.progress[lvl][m+'.'+s]);}
-function setChecked(lvl,m,s,v){state.progress[lvl]=state.progress[lvl]||{};state.progress[lvl][m+'.'+s]=v;save();}
+function setChecked(lvl,m,s,v){state.progress[lvl]=state.progress[lvl]||{};state.progress[lvl][m+'.'+s]=v;save();scheduleSync();}
 function getNote(lvl,m){return (state.notes[lvl]&&state.notes[lvl][m])||"";}
 function setNote(lvl,m,v){state.notes[lvl]=state.notes[lvl]||{};state.notes[lvl][m]=v;save();}
 
@@ -506,7 +561,7 @@ function renderMissions(lvl){
       const ck=isChecked(lvl,mi,si);
       return `<li class="${ck?'checked':''}"><input type="checkbox" ${ck?'checked':''} data-m="${mi}" data-s="${si}"><span class="stxt">${esc(s)}</span></li>`;
     }).join('');
-    const hintsHtml=m.hints.map((h,hi)=>`<details class="hintbox"><summary>Hint ${hi+1}</summary><div class="hcontent">${esc(h)}</div></details>`).join('');
+    const hintsHtml=m.hints.map((h,hi)=>`<details class="hintbox"><summary>💡 Hint ${hi+1}</summary><div class="hcontent">${esc(h)}</div></details>`).join('');
     el.innerHTML=`
       <div class="mhead">
         <div class="mnum">${done?'✓':(mi+1)}</div>
@@ -515,12 +570,19 @@ function renderMissions(lvl){
       </div>
       <div class="mbody ${mi===0?'':'hide'}">
         <p class="lead">${esc(m.lead)}</p>
+        <div class="promptcard">
+          <div class="plabel">▶ Step 1 — copy this and paste it into Claude Cowork to start</div>
+          <div class="promptrow"><code>${esc(m.prompt)}</code><button class="tiny" data-prompt="${mi}">📋 Copy</button></div>
+        </div>
+        <div class="steplabel">✅ Do these in Cowork, and tick each box as you finish it</div>
         <ul class="steps">${stepsHtml}</ul>
-        <div class="copyprompt"><code>${esc(m.prompt)}</code><button class="tiny" data-prompt="${mi}">📋 Copy prompt</button></div>
-        <div class="victory"><b>✓ Victory:</b> ${esc(m.victory)}</div>
-        ${hintsHtml}
-        <div class="notes"><label>Your notes for this mission</label>
-          <textarea data-note="${mi}" placeholder="What you built, links, ideas, things to revisit...">${esc(getNote(lvl,mi))}</textarea></div>
+        <div class="victory"><b>🏁 You're done when:</b> ${esc(m.victory)}</div>
+        <div class="hintswrap">
+          <div class="blocklabel">Stuck? <span class="lite">Open a hint below — it's just a tip to read. Nothing to type in.</span></div>
+          ${hintsHtml}
+        </div>
+        <div class="notes"><label>📝 Your notes — optional, saved automatically on this device</label>
+          <textarea data-note="${mi}" placeholder="Jot anything you want to remember: what you built, links, ideas to revisit...">${esc(getNote(lvl,mi))}</textarea></div>
       </div>`;
     host.appendChild(el);
   });
@@ -661,7 +723,7 @@ function importSave(){
 }
 function resetAll(){
   if(confirm("Reset ALL progress on this device? This can't be undone (use Backup first if unsure).")){
-    state={current:null,progress:{},notes:{}};save();goHome();toast('Reset done');
+    state.current=null;state.progress={};state.notes={};save();syncNow();goHome();toast('Reset done');
   }
 }
 
@@ -697,8 +759,26 @@ function renderCapMap(){
   </div>`).join('');
 }
 
+/* ---- Identity gate ---- */
+function showGate(){
+  const g=document.getElementById('gate');g.classList.remove('hide');
+  const nm=document.getElementById('gateName'),em=document.getElementById('gateEmail'),err=document.getElementById('gateErr');
+  setTimeout(()=>nm.focus(),80);
+  document.getElementById('gateStart').onclick=()=>{
+    const name=nm.value.trim(), email=em.value.trim().toLowerCase();
+    if(name.length<2){err.textContent='Please enter your name.';return;}
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){err.textContent='Please enter a valid email.';return;}
+    state.identity={name,email};state.registered=false;save();
+    g.classList.add('hide');
+    registerUser();
+  };
+  [nm,em].forEach(f=>f.addEventListener('keydown',e=>{if(e.key==='Enter')document.getElementById('gateStart').click();}));
+}
+
 renderPicker();
 renderCapMap();
+if(!state.identity){ showGate(); }
+else { if(!state.registered) registerUser(); else syncNow(); }
 if(state.current && LEVELS[state.current]){openLevel(state.current);}
 </script>
 </body>

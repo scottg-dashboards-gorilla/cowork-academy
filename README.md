@@ -12,7 +12,7 @@ A self-paced, leveled course for learning **Claude Cowork** by building a real w
 ## How it works
 Each mission gives you a task to do in **Claude Cowork** (open in another window). You check off steps and jot notes in the app as you go. **Everything saves automatically in your own browser** — so the page is your private workbook, and it's there when you come back. Use the **Backup** / **Restore** buttons to move progress between devices.
 
-No login, no accounts — each person who opens the link gets their own private instance on their device.
+Learners enter their name and email once; completed steps are recorded so a program administrator can track progress. Personal notes stay on-device. Reporting is available via the passphrase-protected `admin.html` dashboard.
 
 ## Files
 | File | What it is |

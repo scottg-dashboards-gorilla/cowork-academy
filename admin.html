@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cowork Academy — Admin Report</title>
+<style>
+:root{--bg:#0a0e1c;--panel:#121a30;--panel2:#1a2440;--ink:#eaf0ff;--muted:#94a1c4;--line:#26304f;
+  --accent:#6c7bff;--accent2:#36e0c4;--good:#46e0a0;--warn:#ffb23e;--bad:#ff6b8a;}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  background:radial-gradient(1000px 600px at 85% -10%,#19224a 0,transparent 60%),var(--bg);color:var(--ink);line-height:1.5;min-height:100vh}
+.wrap{max-width:1160px;margin:0 auto;padding:26px 20px 80px}
+h1{font-size:26px;margin:0 0 2px}
+.sub{color:var(--muted);font-size:14px;margin:0 0 20px}
+button{font-family:inherit;font-size:14px;font-weight:700;border-radius:10px;border:1px solid var(--line);padding:10px 16px;cursor:pointer;background:var(--panel2);color:var(--ink)}
+button.primary{background:linear-gradient(90deg,var(--accent),var(--accent2));color:#0a0e1c;border:none}
+button:hover{border-color:var(--accent)}
+input{background:#0c1224;border:1px solid var(--line);border-radius:10px;color:var(--ink);padding:11px 13px;font-size:15px;font-family:inherit}
+.hide{display:none!important}
+.gate{max-width:400px;margin:12vh auto 0;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:28px}
+.gate h2{margin:0 0 6px;font-size:20px}
+.gate p{color:var(--muted);font-size:13.5px;margin:0 0 16px}
+.gate input{width:100%}
+.gate button{width:100%;margin-top:14px}
+.gate .err{color:var(--bad);font-size:13px;min-height:16px;margin-top:8px}
+.bar{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:18px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:22px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px}
+.card .n{font-size:26px;font-weight:800}
+.card .l{font-size:12px;color:var(--muted);margin-top:2px}
+table{width:100%;border-collapse:collapse;background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+th,td{text-align:left;padding:10px 12px;font-size:13.5px;border-bottom:1px solid var(--line)}
+th{background:var(--panel2);font-size:12px;letter-spacing:.03em;color:var(--muted);text-transform:uppercase;cursor:pointer;user-select:none}
+tr:last-child td{border-bottom:none}
+.pctcell{display:flex;align-items:center;gap:8px;min-width:120px}
+.mini{flex:1;height:7px;background:var(--panel2);border-radius:99px;overflow:hidden}
+.mini i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2))}
+.badge{font-size:11px;font-weight:800;padding:2px 8px;border-radius:99px}
+.b-done{background:rgba(70,224,160,.16);color:var(--good)}
+.b-prog{background:rgba(255,178,62,.16);color:var(--warn)}
+.b-none{background:rgba(148,161,196,.16);color:var(--muted)}
+.expand{cursor:pointer;color:var(--accent2);font-weight:700}
+.detail td{background:#0c1224}
+.mgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:6px 18px;padding:6px 0}
+.mrow{display:flex;align-items:center;gap:8px;font-size:12.5px}
+.dot{width:9px;height:9px;border-radius:50%;flex:0 0 auto}
+.d-done{background:var(--good)} .d-part{background:var(--warn)} .d-none{background:#39456b}
+.mname{color:var(--muted)} .mrow.done .mname{color:var(--ink)}
+.foot{color:var(--muted);font-size:12px;margin-top:18px;text-align:center}
+.empty{text-align:center;color:var(--muted);padding:40px;background:var(--panel);border:1px solid var(--line);border-radius:12px}
+a{color:var(--accent2)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <!-- Passphrase gate -->
+  <div class="gate" id="gate">
+    <h2>🔐 Admin Report</h2>
+    <p>Enter the admin passphrase to view learner progress.</p>
+    <input type="password" id="pass" placeholder="Passphrase" autocomplete="off">
+    <div class="err" id="err"></div>
+    <button class="primary" id="go">View report</button>
+  </div>
+
+  <!-- Report -->
+  <div id="report" class="hide">
+    <div class="bar">
+      <div><h1>🎓 Cowork Academy — Progress Report</h1><p class="sub" id="asof"></p></div>
+      <div style="display:flex;gap:8px">
+        <button id="refresh">↻ Refresh</button>
+        <button id="csv">⬇ Export CSV</button>
+        <button id="lock">🔒 Lock</button>
+      </div>
+    </div>
+    <div class="cards" id="cards"></div>
+    <div id="tablewrap"></div>
+    <p class="foot">Personal notes are never uploaded and are not shown here. Data is read securely via a passphrase-gated function.</p>
+  </div>
+</div>
+
+<script>
+const SB_URL='https://zyavgqznjznjsddldyxg.supabase.co';
+const SB_KEY='sb_publishable_NHXaBPH5DgErSn4e7cUBAQ_OJ1v0hPw';
+const FN=SB_URL+'/functions/v1/academy-report';
+const LEVELMAP={"beginner":{"name":"Beginner","project":"Your First Wins","missions":[{"t":"Meet your Guide & set up your space","blk":"Orientation","steps":3},{"t":"Build your one-page website (with Claude's design help)","blk":"Website + Design","steps":4},{"t":"Use your first Cowork skill","blk":"Skills","steps":3},{"t":"Create a real Word document","blk":"Documents","steps":3},{"t":"Make a simple spreadsheet","blk":"Spreadsheets","steps":3},{"t":"Generate an image or logo","blk":"Visuals","steps":3},{"t":"Do a quick research task","blk":"Research","steps":3},{"t":"Connect one simple tool","blk":"Connectors","steps":3},{"t":"Show it off","blk":"Wrap-up","steps":3},{"t":"BONUS: Publish your site so anyone can see it","blk":"Publish (optional)","steps":4}]},"intermediate":{"name":"Intermediate","project":"The Smart Business","missions":[{"t":"Scope the business & set memory","blk":"Setup","steps":3},{"t":"Build a multi-section website (lean on Claude's design skills)","blk":"Website + Design","steps":4},{"t":"Build & save your OWN skill","blk":"Skills","steps":3},{"t":"Delegate a job to an agent","blk":"Agents","steps":3},{"t":"Pull live data from a connector","blk":"Connectors","steps":3},{"t":"Analyze real data & chart it","blk":"Data","steps":3},{"t":"Build a pitch deck","blk":"Presentations","steps":3},{"t":"Produce a polished PDF","blk":"Documents","steps":3},{"t":"Set up an automation","blk":"Automation","steps":3},{"t":"Build a simple live dashboard","blk":"Artifacts","steps":3},{"t":"Package & reflect","blk":"Wrap-up","steps":3},{"t":"BONUS: Put your business site online","blk":"Publish (optional)","steps":4}]},"higher":{"name":"Higher Intermediate","project":"The Connected Product","missions":[{"t":"Define the product & architecture","blk":"Design","steps":3},{"t":"Build the multi-page website (full Claude design treatment)","blk":"Website + Design","steps":4},{"t":"Hire an agent + build a skill","blk":"Agents & Skills","steps":3},{"t":"Combine two connectors","blk":"Connectors","steps":3},{"t":"Ship the live dashboard","blk":"Dashboard","steps":3},{"t":"Automate the web with Claude in Chrome","blk":"Browser (optional)","steps":3},{"t":"Control a desktop app","blk":"Computer use (optional)","steps":3},{"t":"Install & use a plugin","blk":"Plugins","steps":3},{"t":"Orchestrate it all","blk":"Orchestration","steps":3},{"t":"Launch review","blk":"Wrap-up","steps":3},{"t":"BONUS: Ship your product to a live URL","blk":"Publish (optional)","steps":4}]}};
+const LORDER=['beginner','intermediate','higher'];
+let DATA=[], sortKey='last_active', sortDir=-1, pass='';
+
+function levelTotals(){const t={};LORDER.forEach(k=>t[k]=LEVELMAP[k].missions.reduce((a,m)=>a+m.steps,0));t.all=LORDER.reduce((a,k)=>a+t[k],0);return t;}
+const TOT=levelTotals();
+
+function countDone(progress,lvl){ // total done steps in a level
+  const p=(progress&&progress[lvl])||{};let d=0;for(const k in p){if(p[k]&&k.indexOf('.')>0)d++;}return d;}
+function missionDone(progress,lvl,mi,stepCount){const p=(progress&&progress[lvl])||{};let d=0;for(let s=0;s<stepCount;s++){if(p[mi+'.'+s])d++;}return d;}
+function pct(done,total){return total?Math.round(done/total*100):0;}
+function overall(progress){let d=0;LORDER.forEach(k=>d+=countDone(progress,k));return {done:d,total:TOT.all,pct:pct(d,TOT.all)};}
+function statusBadge(pc){if(pc>=100)return '<span class="badge b-done">Done</span>';if(pc>0)return '<span class="badge b-prog">In progress</span>';return '<span class="badge b-none">Not started</span>';}
+function fdate(s){if(!s)return '—';const d=new Date(s);return d.toLocaleDateString(undefined,{month:'short',day:'numeric'})+' '+d.toLocaleTimeString(undefined,{hour:'2-digit',minute:'2-digit'});}
+function esc(t){return String(t==null?'':t).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+
+async function loadReport(){
+  const err=document.getElementById('err');
+  try{
+    const r=await fetch(FN,{method:'POST',headers:{apikey:SB_KEY,'Content-Type':'application/json','x-admin-key':pass},body:'{}'});
+    if(r.status===401){err.textContent='Wrong passphrase.';pass='';return false;}
+    if(!r.ok){err.textContent='Error '+r.status;return false;}
+    const j=await r.json();DATA=j.users||[];
+    document.getElementById('gate').classList.add('hide');
+    document.getElementById('report').classList.remove('hide');
+    render();return true;
+  }catch(e){err.textContent='Network error — try again.';return false;}
+}
+
+function computeRows(){
+  return DATA.map(u=>{
+    const ov=overall(u.progress);
+    const lv={};LORDER.forEach(k=>{const d=countDone(u.progress,k);lv[k]={done:d,total:TOT[k],pct:pct(d,TOT[k])};});
+    return {name:u.name||'(no name)',email:u.email,created:u.created_at,active:u.last_active,ov,lv,progress:u.progress||{}};
+  });
+}
+function sortRows(rows){
+  rows.sort((a,b)=>{
+    let av,bv;
+    if(sortKey==='name'){av=a.name.toLowerCase();bv=b.name.toLowerCase();}
+    else if(sortKey==='overall'){av=a.ov.pct;bv=b.ov.pct;}
+    else if(sortKey==='created'){av=new Date(a.created||0);bv=new Date(b.created||0);}
+    else {av=new Date(a.active||0);bv=new Date(b.active||0);}
+    if(av<bv)return -1*sortDir;if(av>bv)return 1*sortDir;return 0;
+  });
+  return rows;
+}
+
+function render(){
+  const rows=sortRows(computeRows());
+  document.getElementById('asof').textContent='As of '+new Date().toLocaleString()+' · '+rows.length+' learner'+(rows.length===1?'':'s');
+  // summary cards
+  const started=rows.filter(r=>r.ov.done>0).length;
+  const fullDone=rows.filter(r=>r.ov.pct>=100).length;
+  const perLevelDone=LORDER.map(k=>rows.filter(r=>r.lv[k].pct>=100).length);
+  const cards=[
+    ['Learners',rows.length],['Started',started],['Full mastery',fullDone],
+    ['🌱 Beginner done',perLevelDone[0]],['⚡ Intermediate done',perLevelDone[1]],['🔥 Higher done',perLevelDone[2]]
+  ];
+  document.getElementById('cards').innerHTML=cards.map(c=>`<div class="card"><div class="n">${c[1]}</div><div class="l">${c[0]}</div></div>`).join('');
+  if(!rows.length){document.getElementById('tablewrap').innerHTML='<div class="empty">No learners yet. Once someone starts the course, they\'ll appear here.</div>';return;}
+  const pcell=(o)=>`<div class="pctcell"><div class="mini"><i style="width:${o.pct}%"></i></div><span>${o.pct}%</span></div>`;
+  let html=`<table><thead><tr>
+    <th data-sort="name">Learner</th>
+    <th data-sort="overall">Overall</th>
+    <th data-sort="overall">Status</th>
+    <th>🌱 Beg</th><th>⚡ Int</th><th>🔥 High</th>
+    <th data-sort="created">First seen</th>
+    <th data-sort="active">Last active</th>
+    <th></th></tr></thead><tbody>`;
+  rows.forEach((r,i)=>{
+    html+=`<tr>
+      <td><b>${esc(r.name)}</b><br><span style="color:var(--muted);font-size:12px">${esc(r.email)}</span></td>
+      <td>${pcell(r.ov)}<span style="color:var(--muted);font-size:11px">${r.ov.done}/${r.ov.total}</span></td>
+      <td>${statusBadge(r.ov.pct)}</td>
+      <td>${r.lv.beginner.pct}%</td><td>${r.lv.intermediate.pct}%</td><td>${r.lv.higher.pct}%</td>
+      <td style="color:var(--muted)">${fdate(r.created)}</td>
+      <td style="color:var(--muted)">${fdate(r.active)}</td>
+      <td><span class="expand" data-row="${i}">details ▾</span></td></tr>
+      <tr class="detail hide" id="d${i}"><td colspan="9">${missionDetail(r)}</td></tr>`;
+  });
+  html+='</tbody></table>';
+  document.getElementById('tablewrap').innerHTML=html;
+  document.querySelectorAll('th[data-sort]').forEach(th=>th.onclick=()=>{const k=th.dataset.sort;if(sortKey===k)sortDir*=-1;else{sortKey=k;sortDir=(k==='name'?1:-1);}render();});
+  document.querySelectorAll('.expand').forEach(e=>e.onclick=()=>{const d=document.getElementById('d'+e.dataset.row);d.classList.toggle('hide');e.textContent=d.classList.contains('hide')?'details ▾':'details ▴';});
+}
+function missionDetail(r){
+  let h='';
+  LORDER.forEach(k=>{
+    h+=`<div style="margin:8px 0 2px;font-weight:700;color:var(--accent2);font-size:12.5px">${LEVELMAP[k].name} — ${LEVELMAP[k].project} (${r.lv[k].pct}%)</div><div class="mgrid">`;
+    LEVELMAP[k].missions.forEach((m,mi)=>{
+      const d=missionDone(r.progress,k,mi,m.steps);const cls=d>=m.steps?'done':d>0?'part':'none';
+      const dot=d>=m.steps?'d-done':d>0?'d-part':'d-none';
+      h+=`<div class="mrow ${cls}"><span class="dot ${dot}"></span><span class="mname">${esc(m.t)} <span style="opacity:.6">(${d}/${m.steps})</span></span></div>`;
+    });
+    h+='</div>';
+  });
+  return h;
+}
+function toCSV(){
+  const rows=sortRows(computeRows());
+  const head=['Name','Email','Overall %','Steps done','Steps total','Beginner %','Intermediate %','Higher %','First seen','Last active'];
+  const lines=[head.join(',')];
+  rows.forEach(r=>{
+    const cells=[r.name,r.email,r.ov.pct,r.ov.done,r.ov.total,r.lv.beginner.pct,r.lv.intermediate.pct,r.lv.higher.pct,r.created||'',r.active||''];
+    lines.push(cells.map(c=>{const s=String(c==null?'':c);return /[",\n]/.test(s)?'"'+s.replace(/"/g,'""')+'"':s;}).join(','));
+  });
+  const blob=new Blob([lines.join('\n')],{type:'text/csv'});const a=document.createElement('a');
+  a.href=URL.createObjectURL(blob);a.download='cowork-academy-progress.csv';a.click();
+}
+
+document.getElementById('go').onclick=()=>{pass=document.getElementById('pass').value;if(!pass){document.getElementById('err').textContent='Enter the passphrase.';return;}loadReport();};
+document.getElementById('pass').addEventListener('keydown',e=>{if(e.key==='Enter')document.getElementById('go').click();});
+document.getElementById('refresh').onclick=loadReport;
+document.getElementById('csv').onclick=toCSV;
+document.getElementById('lock').onclick=()=>{pass='';DATA=[];document.getElementById('report').classList.add('hide');document.getElementById('gate').classList.remove('hide');document.getElementById('pass').value='';};
+</script>
+</body>
+</html>
