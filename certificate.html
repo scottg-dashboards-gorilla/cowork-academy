@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cowork Academy — Certificate</title>
+<style>
+  :root{--ink:#0a0e1c;--gold:#b8860b;--gold2:#ffce4f;--accent:#6c7bff;--accent2:#36e0c4;--paper:#fbf7ee;--muted:#5b6478;}
+  *{box-sizing:border-box}
+  body{margin:0;background:#0a0e1c;color:var(--ink);font-family:Georgia,"Times New Roman",serif;
+    min-height:100vh;display:flex;flex-direction:column;align-items:center;padding:28px 16px 60px}
+  .controls{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-bottom:20px;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+  .controls input,.controls select{background:#121a30;border:1px solid #26304f;border-radius:9px;color:#eaf0ff;padding:10px 13px;font-size:14px;font-family:inherit}
+  .controls button{background:linear-gradient(90deg,var(--accent),var(--accent2));color:#0a0e1c;border:none;border-radius:9px;padding:11px 20px;font-weight:700;font-size:14px;cursor:pointer;font-family:inherit}
+  .controls button.ghost{background:#121a30;color:#eaf0ff;border:1px solid #26304f}
+  .controls .hint{color:#94a1c4;font-size:12px;width:100%;text-align:center;margin-top:2px}
+  .cert{position:relative;width:960px;max-width:96vw;aspect-ratio:1.414/1;
+    background:radial-gradient(1100px 700px at 50% -10%,#fffdf7 0,var(--paper) 60%);
+    border-radius:8px;box-shadow:0 30px 80px -30px #000;overflow:hidden;padding:52px 60px;color:var(--ink)}
+  .cert::before{content:"";position:absolute;inset:16px;border:2px solid var(--gold);border-radius:4px;pointer-events:none}
+  .cert::after{content:"";position:absolute;inset:24px;border:1px solid rgba(184,134,11,.45);border-radius:2px;pointer-events:none}
+  .inner{position:relative;height:100%;display:flex;flex-direction:column;align-items:center;text-align:center;justify-content:space-between;z-index:2}
+  .crest{font-size:44px;line-height:1;margin-top:4px}
+  .kicker{letter-spacing:.34em;text-transform:uppercase;font-size:13px;color:var(--gold);font-family:-apple-system,Segoe UI,sans-serif;margin-top:8px}
+  h1{font-size:38px;margin:6px 0 0;letter-spacing:.02em;color:#171b2a}
+  .ribbon{font-family:-apple-system,Segoe UI,sans-serif;font-size:13px;color:var(--muted);margin-top:4px}
+  .awarded{font-size:15px;color:var(--muted);margin:12px 0 0;font-style:italic}
+  .name{font-size:50px;margin:6px 0 2px;color:#1d2336;
+    background:linear-gradient(90deg,#8a6d1e,#caa12f,#8a6d1e);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .nameline{width:62%;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:2px 0 12px}
+  .body{font-size:16px;line-height:1.7;max-width:680px;color:#2b3042}
+  .body b{color:#1d2336}
+  .track{font-style:italic;color:var(--gold)}
+  .stats{display:flex;gap:40px;margin-top:6px;font-family:-apple-system,Segoe UI,sans-serif}
+  .stat .v{font-size:24px;font-weight:800;color:#1d2336}
+  .stat .l{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:2px}
+  .foot{display:flex;justify-content:space-between;align-items:flex-end;width:100%;font-family:-apple-system,Segoe UI,sans-serif}
+  .sig{text-align:center;flex:1}
+  .sig .line{width:78%;margin:0 auto 4px;border-top:1.5px solid #1d2336;padding-top:6px;font-size:13px;color:#2b3042}
+  .sig .role{font-size:11px;color:var(--muted);letter-spacing:.08em}
+  .seal{width:92px;height:92px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#ffe9a8,#caa12f 55%,#8a6d1e);
+    display:flex;align-items:center;justify-content:center;flex-direction:column;color:#3a2c06;font-family:-apple-system,Segoe UI,sans-serif;
+    box-shadow:0 6px 18px -6px #8a6d1e, inset 0 0 0 4px rgba(255,255,255,.35);flex:0 0 auto;text-align:center}
+  .seal .s1{font-size:19px;line-height:1}
+  .seal .s2{font-size:7.5px;letter-spacing:.1em;margin-top:3px;font-weight:700}
+  @media print{ body{background:#fff;padding:0} .controls{display:none} .cert{box-shadow:none;width:100%;max-width:100%;border-radius:0} @page{size:A4 landscape;margin:0} }
+</style>
+</head>
+<body>
+  <div class="controls">
+    <input id="in-name" type="text" placeholder="Your name" oninput="sync()">
+    <select id="in-track" onchange="sync()">
+      <option value="Full Cowork Mastery">Full Cowork Mastery (all 3 levels)</option>
+      <option value="Beginner — Your First Wins">Beginner — Your First Wins</option>
+      <option value="Intermediate — The Smart Business">Intermediate — The Smart Business</option>
+      <option value="Higher Intermediate — The Connected Product">Higher Intermediate — The Connected Product</option>
+    </select>
+    <input id="in-steps" type="text" placeholder="Steps done" oninput="sync()" style="width:110px">
+    <button onclick="window.print()">🖨️ Print / Save as PDF</button>
+    <button class="ghost" onclick="copyLink()">🔗 Copy shareable link</button>
+    <button class="ghost" onclick="location.href='index.html'">← Back to course</button>
+    <div class="hint">The course fills this in for you automatically. Share the PDF or link as proof you completed it.</div>
+  </div>
+
+  <div class="cert" id="cert">
+    <div class="inner">
+      <div>
+        <div class="crest">🎓</div>
+        <div class="kicker">Cowork Academy</div>
+        <h1>Certificate of Completion</h1>
+        <div class="ribbon">Hands-on mastery of Claude Cowork</div>
+      </div>
+      <div>
+        <div class="awarded">This certifies that</div>
+        <div class="name" id="out-name">Your Name</div>
+        <div class="nameline"></div>
+        <div class="body" id="out-body"></div>
+        <div class="stats">
+          <div class="stat"><div class="v" id="out-steps">—</div><div class="l">Steps Completed</div></div>
+          <div class="stat"><div class="v">🎓</div><div class="l" id="out-tracklabel">Track</div></div>
+          <div class="stat"><div class="v">✓</div><div class="l">Hands-on</div></div>
+        </div>
+      </div>
+      <div class="foot">
+        <div class="sig"><div class="line" id="out-date">Date</div><div class="role">Date Completed</div></div>
+        <div class="seal"><div class="s1">★</div><div class="s2">COWORK<br>ACADEMY</div></div>
+        <div class="sig"><div class="line">Claude</div><div class="role">Your Cowork Guide</div></div>
+      </div>
+    </div>
+  </div>
+
+<script>
+  const FULL="Full Cowork Mastery";
+  function qp(k){return new URLSearchParams(location.search).get(k);}
+  function bodyText(track){
+    if(track===FULL) return `has completed <b>all three levels</b> of Cowork Academy — building real websites, documents, spreadsheets, decks and PDFs; generating images; doing research; creating and saving skills; using memory, connectors, agents, live dashboards, automation, browser and desktop control, plugins, and full orchestration. A complete, hands-on command of <b>Claude Cowork</b>.`;
+    return `has completed the <span class="track">${esc(track)}</span> track of Cowork Academy — building hands-on with Claude Cowork across websites, real files, skills, connectors, and more.`;
+  }
+  function esc(t){return String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+  function render(name,track,steps){
+    document.getElementById('out-name').textContent=name||'Your Name';
+    document.getElementById('out-body').innerHTML=bodyText(track);
+    document.getElementById('out-steps').textContent=steps||'—';
+    document.getElementById('out-tracklabel').textContent = track===FULL ? 'Full Mastery' : track.split('—')[0].trim();
+  }
+  function sync(){
+    render(document.getElementById('in-name').value.trim(),
+           document.getElementById('in-track').value,
+           document.getElementById('in-steps').value.trim());
+  }
+  function copyLink(){
+    const p=new URLSearchParams();
+    const n=document.getElementById('in-name').value.trim();
+    const t=document.getElementById('in-track').value;
+    const s=document.getElementById('in-steps').value.trim();
+    if(n)p.set('name',n); if(t)p.set('track',t); if(s)p.set('steps',s);
+    const url=location.origin+location.pathname+(p.toString()?'?'+p.toString():'');
+    navigator.clipboard.writeText(url).then(()=>alert('Link copied:\n'+url));
+  }
+  (function(){
+    const n=qp('name'), t=qp('track'), s=qp('steps');
+    if(n)document.getElementById('in-name').value=n;
+    if(t){const sel=document.getElementById('in-track');[...sel.options].forEach(o=>{if(o.value===t)sel.value=t;});}
+    if(s)document.getElementById('in-steps').value=s;
+    document.getElementById('out-date').textContent=new Date().toLocaleDateString(undefined,{year:'numeric',month:'long',day:'numeric'});
+    sync();
+  })();
+</script>
+</body>
+</html>
