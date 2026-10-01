@@ -51,6 +51,44 @@ button.tiny{font-size:12px;padding:6px 11px}
 .faq .fbody b{color:var(--ink)}
 .xlink{text-align:center;margin-top:26px;font-size:13px;color:var(--muted)}
 .xlink a{color:var(--accent2);text-decoration:none;font-weight:600}
+.orient{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:4px 18px;margin:18px 0}
+.orient summary{cursor:pointer;font-weight:700;font-size:15px;padding:14px 0;color:var(--accent2);list-style:none}
+.orient summary::-webkit-details-marker{display:none}
+.orient summary::before{content:"▸ ";color:var(--muted)} .orient[open] summary::before{content:"▾ "}
+.orient .obody{padding:0 0 14px} .orient .obody p{color:var(--muted);font-size:14px;margin:0 0 10px} .orient .obody b{color:var(--ink)} .orient .obody a{color:var(--accent2);font-weight:600;text-decoration:none}
+.timepick{margin:22px 0 6px}
+.timepick h3{margin:0 0 3px;font-size:20px}
+.trackgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:16px}
+@media(max-width:820px){.trackgrid{grid-template-columns:1fr}}
+.track{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:22px;cursor:pointer;transition:.16s;position:relative}
+.track:hover{transform:translateY(-3px);border-color:var(--accent)}
+.track.sel{border-color:var(--accent2);box-shadow:0 0 0 1px var(--accent2) inset}
+.track.b1{box-shadow:inset 3px 0 0 var(--b1)} .track.b2{box-shadow:inset 3px 0 0 var(--b2)} .track.b3{box-shadow:inset 3px 0 0 var(--b3)}
+.track.b1.sel,.track.b2.sel,.track.b3.sel{box-shadow:0 0 0 1px var(--accent2) inset}
+.track .hrs{font-size:30px;font-weight:800;line-height:1}
+.track .hrs small{font-size:14px;color:var(--muted);font-weight:600}
+.track h4{margin:8px 0 2px;font-size:18px}
+.track .cred{font-size:12px;color:var(--accent2);font-weight:700}
+.track .who{color:var(--muted);font-size:13px;margin:8px 0 10px}
+.track ul{margin:0;padding-left:17px;color:var(--muted);font-size:12.5px}
+.track ul li{margin:3px 0}
+.track .pickbtn{margin-top:12px;display:inline-block;font-size:12.5px;font-weight:800;color:var(--accent2)}
+.trackbanner{background:linear-gradient(120deg,#141f3e,#10182f);border:1px solid var(--accent2);border-radius:14px;padding:16px 18px;margin:14px 0 2px}
+.trackbanner .tt{font-weight:800;font-size:15px}
+.trackbanner .to{color:var(--muted);font-size:13px;margin-top:4px}
+.trackbanner .chips{margin-top:8px;display:flex;gap:6px;flex-wrap:wrap}
+.trackbanner .lc{font-size:11px;font-weight:800;padding:3px 9px;border-radius:99px;background:var(--panel2);color:var(--muted)}
+.trackbanner .lc.on{background:rgba(54,224,196,.16);color:var(--accent2)}
+.tbadge{font-size:11px;color:var(--muted);font-weight:600;background:var(--panel2);border-radius:99px;padding:2px 8px}
+.mtime{font-size:11px;color:var(--muted);margin-left:auto;white-space:nowrap}
+.fb{display:flex;align-items:center;gap:8px;margin:12px 0 2px;font-size:12.5px;color:var(--muted)}
+.fb button{background:var(--panel2);border:1px solid var(--line);border-radius:8px;padding:4px 10px;font-size:13px;cursor:pointer}
+.fb button.on{border-color:var(--accent2);background:rgba(54,224,196,.14)}
+.capstone{background:#0c1224;border:1px solid var(--gold);border-radius:12px;padding:14px 16px;margin:16px 0}
+.capstone .cl{font-weight:800;color:var(--gold);font-size:13.5px;margin-bottom:4px}
+.capstone p{color:var(--muted);font-size:12.5px;margin:0 0 10px}
+.capstone input{width:100%;background:var(--bg);border:1px solid var(--line);border-radius:9px;color:var(--ink);padding:10px 12px;font-size:14px;font-family:inherit}
+.capstone .saved{font-size:12px;color:var(--good);margin-top:6px;min-height:14px}
 .capmap{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:22px 22px 8px;margin:22px 0}
 .capmap h3{margin:0 0 4px;font-size:17px}
 .capmap .csub{color:var(--muted);font-size:13px;margin:0 0 16px}
@@ -163,6 +201,8 @@ button.tiny{font-size:12px;padding:6px 11px}
     <input type="text" id="gateName" placeholder="Jordan Rivera" autocomplete="name">
     <label for="gateEmail">Email</label>
     <input type="email" id="gateEmail" placeholder="you@example.com" autocomplete="email">
+    <label for="gateCohort">Team / group <span style="opacity:.6">(optional)</span></label>
+    <input type="text" id="gateCohort" placeholder="e.g. Operations, Cohort A" autocomplete="off">
     <div class="err" id="gateErr"></div>
     <button id="gateStart">Start learning →</button>
     <p class="fine">Your name and email, and which steps you complete, are recorded so the program administrator can see progress. Your progress is private from other learners, and your personal notes stay on your device only.</p>
@@ -193,6 +233,24 @@ button.tiny{font-size:12px;padding:6px 11px}
       <div class="ms">You've used essentially every Cowork capability, hands-on.</div></div>
       <a class="finbtn" id="masterCertBtn" href="certificate.html?track=Full%20Cowork%20Mastery">🎓 Get your Mastery Certificate</a>
     </div>
+
+    <details class="orient">
+      <summary>🧭 New to Claude Cowork? Start here (2-min read)</summary>
+      <div class="obody">
+        <p><b>What Cowork is:</b> Claude Cowork is an AI teammate that doesn't just chat — it builds. It can create documents and spreadsheets, design websites, research the web, remember your projects, connect to your real apps, and even run work on a schedule. This course teaches you to do all of that, hands-on.</p>
+        <p><b>How this course works:</b> each mission gives you a task and a ready-to-paste prompt. You do the task in your own Cowork window, then tick the boxes here. You learn by <i>building real things</i> — not by watching.</p>
+        <p><b>Two safety habits</b> to carry from day one: (1) Cowork can draft emails and messages, but <b>you</b> press send. (2) It can help you spend or buy, but <b>you</b> confirm the money. Read, draft, and analyze freely; you approve anything with real-world consequences.</p>
+        <p><a href="https://support.claude.com" target="_blank" rel="noopener">📚 Official Claude documentation →</a></p>
+      </div>
+    </details>
+
+    <div class="timepick">
+      <h3>⏱️ How much time do you have?</h3>
+      <p class="csub">Pick a track by the time you can invest. Each builds on the last and ends with a shareable certificate. You can always go further later.</p>
+      <div class="trackgrid" id="trackGrid"></div>
+    </div>
+    <div id="trackBanner" class="trackbanner hide"></div>
+
     <div class="kit">
       <h4>How it works</h4>
       <ol>
@@ -475,8 +533,26 @@ const LEVELS = {
   }
 };
 
+/* ---- Time-based tracks (front door): time budget -> outcome + credential ---- */
+const TRACKS=[
+  {id:'essentials',hours:4,cls:'b1',icon:'⏱️',name:'Cowork Essentials',cred:'Practitioner',levels:['beginner'],
+   who:'Everyone — your day-one Cowork toolkit',
+   outcomes:['Create real Word documents & Excel spreadsheets','Generate images and do sourced web research','Build a clean one-page website','Use a built-in skill and connect a tool']},
+  {id:'professional',hours:8,cls:'b2',icon:'⏱️',name:'Cowork Professional',cred:'Builder',levels:['beginner','intermediate'],
+   who:'Power users & analysts who build repeatable workflows',
+   outcomes:['Everything in Essentials, plus:','Build & save your own reusable skills','Delegate work to agents and analyze data','Make pitch decks & PDFs and automate recurring work','Stand up a live dashboard']},
+  {id:'mastery',hours:12,cls:'b3',icon:'⏱️',name:'Cowork Mastery',cred:'Architect',levels:['beginner','intermediate','higher'],
+   who:'Champions & adoption leaders who build for others',
+   outcomes:['Everything in Professional, plus:','Automate a real web browser and control desktop apps','Install and use plugins','Combine multiple connectors into one workflow','Orchestrate scheduled agent workflows that run unattended']}
+];
+const MIN_PER_STEP=7;
+function missionMins(m){return Math.round((m.steps.length*MIN_PER_STEP)/5)*5;}
+function levelMins(lvl){return LEVELS[lvl].missions.reduce((a,m)=>a+missionMins(m),0);}
+function fmtHrs(mins){const h=mins/60;return h>=1?('~'+(Math.round(h*10)/10)+' hr'):('~'+mins+' min');}
+const DOCS_URL='https://support.claude.com';
+
 const STORE_KEY="coworkAcademy.v1";
-function blank(){return {current:null,progress:{},notes:{},identity:null,registered:false};}
+function blank(){return {current:null,progress:{},notes:{},identity:null,registered:false,track:null,capstones:{},feedback:{}};}
 let state=load();
 function load(){try{return Object.assign(blank(),JSON.parse(localStorage.getItem(STORE_KEY))||{});}catch(e){return blank();}}
 function save(){try{localStorage.setItem(STORE_KEY,JSON.stringify(state));}catch(e){}pulse();}
@@ -488,9 +564,17 @@ function sbHeaders(extra){return Object.assign({apikey:SB_KEY,Authorization:'Bea
 // Learners write ONLY through a controlled SECURITY DEFINER function (no direct table access).
 async function syncNow(){
   if(!state.identity)return;
+  // Bundle progress + metadata (cohort, track, capstones, feedback) into one JSON payload.
+  // Reserved keys start with "_" so level-progress counting ignores them.
+  const payload=Object.assign({},state.progress||{},{
+    _cohort:(state.identity&&state.identity.cohort)||'',
+    _track:state.track||'',
+    _capstones:state.capstones||{},
+    _feedback:state.feedback||{}
+  });
   try{
     const r=await fetch(SB_URL+'/rest/v1/rpc/academy_upsert',{method:'POST',headers:sbHeaders(),
-      body:JSON.stringify({p_email:state.identity.email,p_name:state.identity.name,p_progress:state.progress||{}})});
+      body:JSON.stringify({p_email:state.identity.email,p_name:state.identity.name,p_progress:payload})});
     if(r.ok){state.registered=true;}
   }catch(e){/* offline — retry on next change */}
 }
@@ -509,6 +593,11 @@ function isChecked(lvl,m,s){return !!(state.progress[lvl]&&state.progress[lvl][m
 function setChecked(lvl,m,s,v){state.progress[lvl]=state.progress[lvl]||{};state.progress[lvl][m+'.'+s]=v;save();scheduleSync();}
 function getNote(lvl,m){return (state.notes[lvl]&&state.notes[lvl][m])||"";}
 function setNote(lvl,m,v){state.notes[lvl]=state.notes[lvl]||{};state.notes[lvl][m]=v;save();}
+function fbKey(lvl,mi){return lvl+'.'+mi;}
+function getFb(lvl,mi){return (state.feedback||{})[fbKey(lvl,mi)]||0;}
+function setFb(lvl,mi,v){state.feedback=state.feedback||{};const k=fbKey(lvl,mi);state.feedback[k]=(state.feedback[k]===v?0:v);save();scheduleSync();}
+function getCap(lvl){return (state.capstones||{})[lvl]||"";}
+function setCap(lvl,v){state.capstones=state.capstones||{};state.capstones[lvl]=v;save();scheduleSync();}
 
 function levelProgress(lvl){
   const L=LEVELS[lvl];let total=0,done=0;
@@ -519,17 +608,49 @@ function missionDone(lvl,mi){const m=LEVELS[lvl].missions[mi];return m.steps.eve
 
 function esc(t){return String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
 
+function currentTrack(){return TRACKS.find(t=>t.id===state.track)||null;}
+function renderTracks(){
+  const g=document.getElementById('trackGrid');if(!g)return;
+  g.innerHTML=TRACKS.map(t=>{
+    const sel=state.track===t.id?'sel':'';
+    return `<div class="track ${t.cls} ${sel}" data-track="${t.id}">
+      <div class="hrs">${t.hours}<small> hrs</small></div>
+      <h4>${t.name}</h4><div class="cred">→ ${t.cred} certificate</div>
+      <div class="who">${t.who}</div>
+      <ul>${t.outcomes.map(o=>`<li>${o}</li>`).join('')}</ul>
+      <div class="pickbtn">${sel?'✓ Your track':'Choose this track →'}</div>
+    </div>`;
+  }).join('');
+  g.querySelectorAll('.track').forEach(el=>el.onclick=()=>selectTrack(el.dataset.track));
+  renderTrackBanner();
+}
+function renderTrackBanner(){
+  const b=document.getElementById('trackBanner');if(!b)return;
+  const t=currentTrack();
+  if(!t){b.classList.add('hide');return;}
+  b.classList.remove('hide');
+  const chips=['beginner','intermediate','higher'].map(k=>`<span class="lc ${t.levels.includes(k)?'on':''}">${LEVELS[k].icon} ${LEVELS[k].name}</span>`).join('');
+  b.innerHTML=`<div class="tt">${t.icon} Your track: ${t.name} (${t.hours} hrs) → ${t.cred}</div>
+    <div class="to">By the end you'll be able to: ${t.outcomes.filter(o=>!/plus:/.test(o)).join(' · ')}</div>
+    <div class="chips">Includes: ${chips}</div>`;
+}
+function selectTrack(id){ state.track=(state.track===id?null:id); save(); scheduleSync(); renderTracks(); renderPicker(); }
+
 function renderPicker(){
   const mb=document.getElementById('masterBanner');
   if(mb){ if(allLevelsDone()){mb.classList.remove('hide');
       document.getElementById('masterCertBtn').href=certLink('Full Cowork Mastery',totalStepsDone());}
     else mb.classList.add('hide'); }
+  const t=currentTrack();
   const wrap=document.getElementById('levelCards');wrap.innerHTML='';
   Object.values(LEVELS).forEach(L=>{
     const p=levelProgress(L.key);
+    const inTrack=!t||t.levels.includes(L.key);
     const el=document.createElement('div');
     el.className='lvl '+L.cls;
-    el.innerHTML=`<div class="tag">${L.icon} ${L.name}</div>
+    if(!inTrack) el.style.opacity='.5';
+    const hrs=fmtHrs(levelMins(L.key));
+    el.innerHTML=`<div class="tag">${L.icon} ${L.name} <span class="tbadge">${hrs}</span>${t&&t.levels.includes(L.key)?' <span class="tbadge" style="color:var(--accent2)">in your track</span>':''}</div>
       <h2>${L.project}</h2>
       <div class="proj">Build · Skills · Connectors</div>
       <p>${L.blurb}</p>
@@ -562,10 +683,12 @@ function renderMissions(lvl){
       return `<li class="${ck?'checked':''}"><input type="checkbox" ${ck?'checked':''} data-m="${mi}" data-s="${si}"><span class="stxt">${esc(s)}</span></li>`;
     }).join('');
     const hintsHtml=m.hints.map((h,hi)=>`<details class="hintbox"><summary>💡 Hint ${hi+1}</summary><div class="hcontent">${esc(h)}</div></details>`).join('');
+    const fb=getFb(lvl,mi);
     el.innerHTML=`
       <div class="mhead">
         <div class="mnum">${done?'✓':(mi+1)}</div>
         <div class="mtitle"><div class="t">${esc(m.t)}</div><div class="blk">${esc(m.blk)}</div></div>
+        <span class="mtime">⏱️ ~${missionMins(m)} min</span>
         <div class="mchev">▾</div>
       </div>
       <div class="mbody ${mi===0?'':'hide'}">
@@ -583,9 +706,19 @@ function renderMissions(lvl){
         </div>
         <div class="notes"><label>📝 Your notes — optional, saved automatically on this device</label>
           <textarea data-note="${mi}" placeholder="Jot anything you want to remember: what you built, links, ideas to revisit...">${esc(getNote(lvl,mi))}</textarea></div>
+        <div class="fb">Was this mission clear?
+          <button class="fbup ${fb===1?'on':''}" data-fb="${mi}" data-v="1">👍 Yes</button>
+          <button class="fbdown ${fb===-1?'on':''}" data-fb="${mi}" data-v="-1">👎 Confusing</button></div>
       </div>`;
     host.appendChild(el);
   });
+  // per-level capstone
+  const cap=document.createElement('div');cap.className='capstone';
+  cap.innerHTML=`<div class="cl">🎯 Capstone — prove it</div>
+    <p>Paste a link to (or a one-line description of) what you actually built in this level — your site, a doc, a dashboard. This is your evidence of completion and is visible to the program administrator.</p>
+    <input type="text" id="capInput" placeholder="https://your-site... or 'Built CampusCFO budget sheet + landing page'" value="${esc(getCap(lvl))}">
+    <div class="saved" id="capSaved"></div>`;
+  host.appendChild(cap);
   host.querySelectorAll('.mhead').forEach(h=>{
     h.onclick=()=>{const body=h.nextElementSibling;body.classList.toggle('hide');};
   });
@@ -605,6 +738,16 @@ function renderMissions(lvl){
     b.onclick=()=>{const p=LEVELS[lvl].missions[+b.dataset.prompt].prompt;
       navigator.clipboard.writeText(p).then(()=>toast('Prompt copied — paste it into Cowork'));};
   });
+  host.querySelectorAll('button[data-fb]').forEach(b=>{
+    b.onclick=()=>{const mi=+b.dataset.fb;setFb(lvl,mi,+b.dataset.v);
+      const wrap=b.closest('.fb');const v=getFb(lvl,mi);
+      wrap.querySelector('.fbup').classList.toggle('on',v===1);
+      wrap.querySelector('.fbdown').classList.toggle('on',v===-1);
+      toast('Thanks for the feedback');};
+  });
+  const capIn=document.getElementById('capInput');
+  if(capIn){let ct;capIn.oninput=()=>{setCap(lvl,capIn.value);
+    const s=document.getElementById('capSaved');s.textContent='✓ Saved';clearTimeout(ct);ct=setTimeout(()=>s.textContent='',1400);};}
   refreshProgress(lvl);
 }
 function allLevelsDone(){return ["beginner","intermediate","higher"].every(l=>levelProgress(l).pct===100);}
@@ -629,13 +772,25 @@ function refreshProgress(lvl){
           <button class="ghost" onclick="goHome()">Back to levels</button>
         </div>`;
     } else {
-      fin.innerHTML=`<h3>🎉 ${LEVELS[lvl].project} — complete!</h3>
-        <p>You built real things with Claude Cowork and can prove it. Grab your certificate, then take on the next level.</p>
-        <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
-          <a class="finbtn" href="${certLink(trackName,p.done)}">🎓 Get your certificate</a>
-          ${nextLevelBtn(lvl)}
-          <button class="ghost" onclick="goHome()">Back to levels</button>
-        </div>`;
+      const t=currentTrack();
+      const trackComplete = t && t.levels.every(l=>levelProgress(l).pct===100);
+      if(trackComplete){
+        fin.innerHTML=`<h3>🏆 ${t.name} complete — you've earned ${t.cred}!</h3>
+          <p>You finished every level in your ${t.hours}-hour track. Claim your certificate, or keep going into the next level for even more.</p>
+          <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
+            <a class="finbtn" href="${certLink(t.name+' — '+t.cred,totalStepsDone())}">🎓 Get your ${t.cred} Certificate</a>
+            ${nextLevelBtn(lvl)}
+            <button class="ghost" onclick="goHome()">Back to levels</button>
+          </div>`;
+      } else {
+        fin.innerHTML=`<h3>🎉 ${LEVELS[lvl].project} — complete!</h3>
+          <p>You built real things with Claude Cowork and can prove it. Grab your certificate, then take on the next level.</p>
+          <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
+            <a class="finbtn" href="${certLink(trackName,p.done)}">🎓 Get your certificate</a>
+            ${nextLevelBtn(lvl)}
+            <button class="ghost" onclick="goHome()">Back to levels</button>
+          </div>`;
+      }
     }
   } else { fin.classList.add('hide'); }
 }
@@ -723,7 +878,7 @@ function importSave(){
 }
 function resetAll(){
   if(confirm("Reset ALL progress on this device? This can't be undone (use Backup first if unsure).")){
-    state.current=null;state.progress={};state.notes={};save();syncNow();goHome();toast('Reset done');
+    state.current=null;state.progress={};state.notes={};state.capstones={};state.feedback={};save();syncNow();goHome();toast('Reset done');
   }
 }
 
@@ -766,15 +921,17 @@ function showGate(){
   setTimeout(()=>nm.focus(),80);
   document.getElementById('gateStart').onclick=()=>{
     const name=nm.value.trim(), email=em.value.trim().toLowerCase();
+    const cohort=(document.getElementById('gateCohort').value||'').trim();
     if(name.length<2){err.textContent='Please enter your name.';return;}
     if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){err.textContent='Please enter a valid email.';return;}
-    state.identity={name,email};state.registered=false;save();
+    state.identity={name,email,cohort};state.registered=false;save();
     g.classList.add('hide');
     registerUser();
   };
   [nm,em].forEach(f=>f.addEventListener('keydown',e=>{if(e.key==='Enter')document.getElementById('gateStart').click();}));
 }
 
+renderTracks();
 renderPicker();
 renderCapMap();
 if(!state.identity){ showGate(); }

@@ -40,6 +40,13 @@ tr:last-child td{border-bottom:none}
 .b-done{background:rgba(70,224,160,.16);color:var(--good)}
 .b-prog{background:rgba(255,178,62,.16);color:var(--warn)}
 .b-none{background:rgba(148,161,196,.16);color:var(--muted)}
+.b-warn{background:rgba(255,178,62,.18);color:var(--warn)}
+.b-cap{background:rgba(255,206,79,.18);color:#ffce4f}
+.b-down{background:rgba(255,107,138,.18);color:var(--bad)}
+.controlsbar{display:flex;gap:18px;flex-wrap:wrap;align-items:center;margin:0 0 16px;font-size:13px;color:var(--muted)}
+.controlsbar select,.controlsbar input{background:#0c1224;border:1px solid var(--line);border-radius:8px;color:var(--ink);padding:7px 10px;font-family:inherit;font-size:13px;margin-left:6px}
+.capbox{background:#0c1224;border-left:3px solid #ffce4f;border-radius:0 8px 8px 0;padding:8px 12px;margin:8px 0;font-size:12.5px}
+.capbox a{color:var(--accent2);word-break:break-all}
 .expand{cursor:pointer;color:var(--accent2);font-weight:700}
 .detail td{background:#0c1224}
 .mgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:6px 18px;padding:6px 0}
@@ -74,6 +81,7 @@ a{color:var(--accent2)}
       </div>
     </div>
     <div class="cards" id="cards"></div>
+    <div class="controlsbar" id="controls"></div>
     <div id="tablewrap"></div>
     <p class="foot">Personal notes are never uploaded and are not shown here. Data is read securely via a passphrase-gated function.</p>
   </div>
@@ -86,6 +94,7 @@ const FN=SB_URL+'/functions/v1/academy-report';
 const LEVELMAP={"beginner":{"name":"Beginner","project":"Your First Wins","missions":[{"t":"Meet your Guide & set up your space","blk":"Orientation","steps":3},{"t":"Build your one-page website (with Claude's design help)","blk":"Website + Design","steps":4},{"t":"Use your first Cowork skill","blk":"Skills","steps":3},{"t":"Create a real Word document","blk":"Documents","steps":3},{"t":"Make a simple spreadsheet","blk":"Spreadsheets","steps":3},{"t":"Generate an image or logo","blk":"Visuals","steps":3},{"t":"Do a quick research task","blk":"Research","steps":3},{"t":"Connect one simple tool","blk":"Connectors","steps":3},{"t":"Show it off","blk":"Wrap-up","steps":3},{"t":"BONUS: Publish your site so anyone can see it","blk":"Publish (optional)","steps":4}]},"intermediate":{"name":"Intermediate","project":"The Smart Business","missions":[{"t":"Scope the business & set memory","blk":"Setup","steps":3},{"t":"Build a multi-section website (lean on Claude's design skills)","blk":"Website + Design","steps":4},{"t":"Build & save your OWN skill","blk":"Skills","steps":3},{"t":"Delegate a job to an agent","blk":"Agents","steps":3},{"t":"Pull live data from a connector","blk":"Connectors","steps":3},{"t":"Analyze real data & chart it","blk":"Data","steps":3},{"t":"Build a pitch deck","blk":"Presentations","steps":3},{"t":"Produce a polished PDF","blk":"Documents","steps":3},{"t":"Set up an automation","blk":"Automation","steps":3},{"t":"Build a simple live dashboard","blk":"Artifacts","steps":3},{"t":"Package & reflect","blk":"Wrap-up","steps":3},{"t":"BONUS: Put your business site online","blk":"Publish (optional)","steps":4}]},"higher":{"name":"Higher Intermediate","project":"The Connected Product","missions":[{"t":"Define the product & architecture","blk":"Design","steps":3},{"t":"Build the multi-page website (full Claude design treatment)","blk":"Website + Design","steps":4},{"t":"Hire an agent + build a skill","blk":"Agents & Skills","steps":3},{"t":"Combine two connectors","blk":"Connectors","steps":3},{"t":"Ship the live dashboard","blk":"Dashboard","steps":3},{"t":"Automate the web with Claude in Chrome","blk":"Browser (optional)","steps":3},{"t":"Control a desktop app","blk":"Computer use (optional)","steps":3},{"t":"Install & use a plugin","blk":"Plugins","steps":3},{"t":"Orchestrate it all","blk":"Orchestration","steps":3},{"t":"Launch review","blk":"Wrap-up","steps":3},{"t":"BONUS: Ship your product to a live URL","blk":"Publish (optional)","steps":4}]}};
 const LORDER=['beginner','intermediate','higher'];
 let DATA=[], sortKey='last_active', sortDir=-1, pass='';
+let STALL_DAYS=7, cohortFilter='';
 
 function levelTotals(){const t={};LORDER.forEach(k=>t[k]=LEVELMAP[k].missions.reduce((a,m)=>a+m.steps,0));t.all=LORDER.reduce((a,k)=>a+t[k],0);return t;}
 const TOT=levelTotals();
@@ -112,13 +121,19 @@ async function loadReport(){
   }catch(e){err.textContent='Network error — try again.';return false;}
 }
 
+function daysSince(s){if(!s)return null;return Math.floor((Date.now()-new Date(s).getTime())/86400000);}
 function computeRows(){
   return DATA.map(u=>{
-    const ov=overall(u.progress);
-    const lv={};LORDER.forEach(k=>{const d=countDone(u.progress,k);lv[k]={done:d,total:TOT[k],pct:pct(d,TOT[k])};});
-    return {name:u.name||'(no name)',email:u.email,created:u.created_at,active:u.last_active,ov,lv,progress:u.progress||{}};
+    const pr=u.progress||{};
+    const ov=overall(pr);
+    const lv={};LORDER.forEach(k=>{const d=countDone(pr,k);lv[k]={done:d,total:TOT[k],pct:pct(d,TOT[k])};});
+    const idle=daysSince(u.last_active);
+    const stalled = ov.pct<100 && ov.done>0 && idle!=null && idle>=STALL_DAYS;
+    return {name:u.name||'(no name)',email:u.email,created:u.created_at,active:u.last_active,ov,lv,progress:pr,
+      cohort:pr._cohort||'',track:pr._track||'',capstones:pr._capstones||{},feedback:pr._feedback||{},idle,stalled};
   });
 }
+function trackLabel(id){return ({essentials:'4h Essentials',professional:'8h Professional',mastery:'12h Mastery'})[id]||'';}
 function sortRows(rows){
   rows.sort((a,b)=>{
     let av,bv;
@@ -132,21 +147,32 @@ function sortRows(rows){
 }
 
 function render(){
-  const rows=sortRows(computeRows());
-  document.getElementById('asof').textContent='As of '+new Date().toLocaleString()+' · '+rows.length+' learner'+(rows.length===1?'':'s');
+  let rows=sortRows(computeRows());
+  const allCohorts=[...new Set(computeRows().map(r=>r.cohort).filter(Boolean))].sort();
+  if(cohortFilter)rows=rows.filter(r=>r.cohort===cohortFilter);
+  document.getElementById('asof').textContent='As of '+new Date().toLocaleString()+' · '+rows.length+' learner'+(rows.length===1?'':'s')+(cohortFilter?(' in '+cohortFilter):'');
   // summary cards
   const started=rows.filter(r=>r.ov.done>0).length;
   const fullDone=rows.filter(r=>r.ov.pct>=100).length;
+  const stalledN=rows.filter(r=>r.stalled).length;
   const perLevelDone=LORDER.map(k=>rows.filter(r=>r.lv[k].pct>=100).length);
   const cards=[
-    ['Learners',rows.length],['Started',started],['Full mastery',fullDone],
+    ['Learners',rows.length],['Started',started],['Full mastery',fullDone],['⚠️ Stalled ('+STALL_DAYS+'d+)',stalledN],
     ['🌱 Beginner done',perLevelDone[0]],['⚡ Intermediate done',perLevelDone[1]],['🔥 Higher done',perLevelDone[2]]
   ];
   document.getElementById('cards').innerHTML=cards.map(c=>`<div class="card"><div class="n">${c[1]}</div><div class="l">${c[0]}</div></div>`).join('');
+  // controls row (cohort filter + stalled threshold)
+  const cohortOpts=['<option value="">All teams/groups</option>'].concat(allCohorts.map(c=>`<option value="${esc(c)}" ${cohortFilter===c?'selected':''}>${esc(c)}</option>`)).join('');
+  document.getElementById('controls').innerHTML=`
+    <label>Team/group: <select id="cohortSel">${cohortOpts}</select></label>
+    <label>Flag stalled after <input id="stallInp" type="number" min="1" value="${STALL_DAYS}" style="width:56px"> days</label>`;
+  document.getElementById('cohortSel').onchange=e=>{cohortFilter=e.target.value;render();};
+  document.getElementById('stallInp').onchange=e=>{STALL_DAYS=Math.max(1,+e.target.value||7);render();};
   if(!rows.length){document.getElementById('tablewrap').innerHTML='<div class="empty">No learners yet. Once someone starts the course, they\'ll appear here.</div>';return;}
   const pcell=(o)=>`<div class="pctcell"><div class="mini"><i style="width:${o.pct}%"></i></div><span>${o.pct}%</span></div>`;
   let html=`<table><thead><tr>
     <th data-sort="name">Learner</th>
+    <th>Team</th>
     <th data-sort="overall">Overall</th>
     <th data-sort="overall">Status</th>
     <th>🌱 Beg</th><th>⚡ Int</th><th>🔥 High</th>
@@ -154,40 +180,51 @@ function render(){
     <th data-sort="active">Last active</th>
     <th></th></tr></thead><tbody>`;
   rows.forEach((r,i)=>{
+    const capN=Object.values(r.capstones).filter(Boolean).length;
+    const downN=Object.values(r.feedback).filter(v=>v===-1).length;
+    const flags=(r.stalled?`<span class="badge b-warn">⚠️ ${r.idle}d idle</span> `:'')+(capN?`<span class="badge b-cap">🎯 ${capN}</span> `:'')+(downN?`<span class="badge b-down">👎 ${downN}</span>`:'');
     html+=`<tr>
-      <td><b>${esc(r.name)}</b><br><span style="color:var(--muted);font-size:12px">${esc(r.email)}</span></td>
+      <td><b>${esc(r.name)}</b> ${flags}<br><span style="color:var(--muted);font-size:12px">${esc(r.email)}</span></td>
+      <td style="color:var(--muted)">${esc(r.cohort)||'—'}</td>
       <td>${pcell(r.ov)}<span style="color:var(--muted);font-size:11px">${r.ov.done}/${r.ov.total}</span></td>
       <td>${statusBadge(r.ov.pct)}</td>
       <td>${r.lv.beginner.pct}%</td><td>${r.lv.intermediate.pct}%</td><td>${r.lv.higher.pct}%</td>
       <td style="color:var(--muted)">${fdate(r.created)}</td>
       <td style="color:var(--muted)">${fdate(r.active)}</td>
       <td><span class="expand" data-row="${i}">details ▾</span></td></tr>
-      <tr class="detail hide" id="d${i}"><td colspan="9">${missionDetail(r)}</td></tr>`;
+      <tr class="detail hide" id="d${i}"><td colspan="10">${missionDetail(r)}</td></tr>`;
   });
   html+='</tbody></table>';
   document.getElementById('tablewrap').innerHTML=html;
   document.querySelectorAll('th[data-sort]').forEach(th=>th.onclick=()=>{const k=th.dataset.sort;if(sortKey===k)sortDir*=-1;else{sortKey=k;sortDir=(k==='name'?1:-1);}render();});
   document.querySelectorAll('.expand').forEach(e=>e.onclick=()=>{const d=document.getElementById('d'+e.dataset.row);d.classList.toggle('hide');e.textContent=d.classList.contains('hide')?'details ▾':'details ▴';});
 }
+function capLink(v){const s=String(v||'');return /^https?:\/\//.test(s)?`<a href="${esc(s)}" target="_blank" rel="noopener">${esc(s)}</a>`:esc(s);}
 function missionDetail(r){
   let h='';
+  if(r.track)h+=`<div style="font-size:12.5px;color:var(--muted);margin-bottom:6px">Chosen track: <b style="color:var(--ink)">${esc(trackLabel(r.track))}</b></div>`;
   LORDER.forEach(k=>{
+    const cap=r.capstones[k];
     h+=`<div style="margin:8px 0 2px;font-weight:700;color:var(--accent2);font-size:12.5px">${LEVELMAP[k].name} — ${LEVELMAP[k].project} (${r.lv[k].pct}%)</div><div class="mgrid">`;
     LEVELMAP[k].missions.forEach((m,mi)=>{
       const d=missionDone(r.progress,k,mi,m.steps);const cls=d>=m.steps?'done':d>0?'part':'none';
       const dot=d>=m.steps?'d-done':d>0?'d-part':'d-none';
-      h+=`<div class="mrow ${cls}"><span class="dot ${dot}"></span><span class="mname">${esc(m.t)} <span style="opacity:.6">(${d}/${m.steps})</span></span></div>`;
+      const fb=(r.feedback[k+'.'+mi]===-1)?' <span title="learner flagged this confusing">👎</span>':'';
+      h+=`<div class="mrow ${cls}"><span class="dot ${dot}"></span><span class="mname">${esc(m.t)} <span style="opacity:.6">(${d}/${m.steps})</span>${fb}</span></div>`;
     });
     h+='</div>';
+    if(cap)h+=`<div class="capbox">🎯 <b>Capstone:</b> ${capLink(cap)}</div>`;
   });
   return h;
 }
 function toCSV(){
-  const rows=sortRows(computeRows());
-  const head=['Name','Email','Overall %','Steps done','Steps total','Beginner %','Intermediate %','Higher %','First seen','Last active'];
+  let rows=sortRows(computeRows());
+  if(cohortFilter)rows=rows.filter(r=>r.cohort===cohortFilter);
+  const head=['Name','Email','Team','Track','Overall %','Steps done','Steps total','Beginner %','Intermediate %','Higher %','Stalled','Days idle','Capstones','First seen','Last active'];
   const lines=[head.join(',')];
   rows.forEach(r=>{
-    const cells=[r.name,r.email,r.ov.pct,r.ov.done,r.ov.total,r.lv.beginner.pct,r.lv.intermediate.pct,r.lv.higher.pct,r.created||'',r.active||''];
+    const caps=LORDER.map(k=>r.capstones[k]).filter(Boolean).join(' | ');
+    const cells=[r.name,r.email,r.cohort,trackLabel(r.track),r.ov.pct,r.ov.done,r.ov.total,r.lv.beginner.pct,r.lv.intermediate.pct,r.lv.higher.pct,r.stalled?'YES':'',r.idle==null?'':r.idle,caps,r.created||'',r.active||''];
     lines.push(cells.map(c=>{const s=String(c==null?'':c);return /[",\n]/.test(s)?'"'+s.replace(/"/g,'""')+'"':s;}).join(','));
   });
   const blob=new Blob([lines.join('\n')],{type:'text/csv'});const a=document.createElement('a');

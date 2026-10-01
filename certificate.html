@@ -120,7 +120,10 @@
   (function(){
     const n=qp('name'), t=qp('track'), s=qp('steps');
     if(n)document.getElementById('in-name').value=n;
-    if(t){const sel=document.getElementById('in-track');[...sel.options].forEach(o=>{if(o.value===t)sel.value=t;});}
+    if(t){const sel=document.getElementById('in-track');
+      let found=[...sel.options].some(o=>o.value===t);
+      if(!found){const o=document.createElement('option');o.value=t;o.textContent=t;sel.insertBefore(o,sel.firstChild);}
+      sel.value=t;}
     if(s)document.getElementById('in-steps').value=s;
     document.getElementById('out-date').textContent=new Date().toLocaleDateString(undefined,{year:'numeric',month:'long',day:'numeric'});
     sync();
