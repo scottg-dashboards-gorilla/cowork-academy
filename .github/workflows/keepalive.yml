@@ -12,5 +12,5 @@ jobs:
     steps:
       - name: Ping Supabase REST endpoint
         run: |
-          code=$(curl -s -o /dev/null -w "%{http_code}" -H "apikey: sb_publishable_NHXaBPH5DgErSn4e7cUBAQ_OJ1v0hPw" "https://zyavgqznjznjsddldyxg.supabase.co/rest/v1/")
+          code=$(curl -s -o /dev/null -w "%{http_code}" -H "apikey: sb_publishable_goN36W02YRbIFEVKWZ7cZQ_v7y4JkX6" "https://dptmmtqiedggqzmfsvdh.supabase.co/rest/v1/")
           echo "Supabase responded with HTTP $code"
