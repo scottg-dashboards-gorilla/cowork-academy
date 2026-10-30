@@ -33,7 +33,7 @@ GitHub Pages redeploys the live site automatically a minute or two after each pu
 ## Good to know
 - **The live site URL** doesn't change: https://scottg-dashboards-gorilla.github.io/cowork-academy/
 - **The admin dashboard** is `admin.html` (passphrase-protected). The admin passphrase is kept private — not in this repo.
-- **The backend** is Supabase (project `datapath-ai-assessment`, tables prefixed `academy_`). A GitHub Action (`.github/workflows/keepalive.yml`) pings it every 3 days so the free-tier database never auto-pauses.
+- **The backend** is Supabase (project `cowork-academy-tracking`, ref `dptmmtqiedggqzmfsvdh`, tables prefixed `academy_`). A GitHub Action (`.github/workflows/keepalive.yml`) pings it every 3 days so the free-tier database never auto-pauses.
 - **Related repos:** `henry-founder-quest` (public — Henry's game) · `cowork-academy-private` (🔒 private — facilitator guide + backups; needs GitHub sign-in to clone).
 - Claude Code works inside one folder on your machine — it won't have Cowork's pinned-projects sidebar, and Cowork Projects/scheduled tasks don't carry over (only files/context do).
 
