@@ -87,13 +87,11 @@ a{color:var(--accent2)}
   </div>
 </div>
 
-<script src="course-data.js"></script>
 <script>
-const SB_URL='https://zyavgqznjznjsddldyxg.supabase.co';
-const SB_KEY='sb_publishable_NHXaBPH5DgErSn4e7cUBAQ_OJ1v0hPw';
+const SB_URL='https://dptmmtqiedggqzmfsvdh.supabase.co';
+const SB_KEY='sb_publishable_goN36W02YRbIFEVKWZ7cZQ_v7y4JkX6';
 const FN=SB_URL+'/functions/v1/academy-report';
-// Built from the shared course content so the report always matches the live missions.
-const LEVELMAP={};for(const k in LEVELS){const L=LEVELS[k];LEVELMAP[k]={name:L.name,project:L.project,missions:L.missions.map(m=>({t:m.t,blk:m.blk,steps:m.steps.length}))};}
+const LEVELMAP={"beginner":{"name":"Beginner","project":"Your First Wins","missions":[{"t":"Meet your Guide & set up your space","blk":"Orientation","steps":3},{"t":"Build your one-page website (with Claude's design help)","blk":"Website + Design","steps":4},{"t":"Use your first Cowork skill","blk":"Skills","steps":3},{"t":"Create a real Word document","blk":"Documents","steps":3},{"t":"Make a simple spreadsheet","blk":"Spreadsheets","steps":3},{"t":"Generate an image or logo","blk":"Visuals","steps":3},{"t":"Do a quick research task","blk":"Research","steps":3},{"t":"Connect one simple tool","blk":"Connectors","steps":3},{"t":"Show it off","blk":"Wrap-up","steps":3},{"t":"BONUS: Publish your site so anyone can see it","blk":"Publish (optional)","steps":4}]},"intermediate":{"name":"Intermediate","project":"The Smart Business","missions":[{"t":"Scope the business & set memory","blk":"Setup","steps":3},{"t":"Build a multi-section website (lean on Claude's design skills)","blk":"Website + Design","steps":4},{"t":"Build & save your OWN skill","blk":"Skills","steps":3},{"t":"Delegate a job to an agent","blk":"Agents","steps":3},{"t":"Pull live data from a connector","blk":"Connectors","steps":3},{"t":"Analyze real data & chart it","blk":"Data","steps":3},{"t":"Build a pitch deck","blk":"Presentations","steps":3},{"t":"Produce a polished PDF","blk":"Documents","steps":3},{"t":"Set up an automation","blk":"Automation","steps":3},{"t":"Build a simple live dashboard","blk":"Artifacts","steps":3},{"t":"Package & reflect","blk":"Wrap-up","steps":3},{"t":"BONUS: Put your business site online","blk":"Publish (optional)","steps":4}]},"higher":{"name":"Higher Intermediate","project":"The Connected Product","missions":[{"t":"Define the product & architecture","blk":"Design","steps":3},{"t":"Build the multi-page website (full Claude design treatment)","blk":"Website + Design","steps":4},{"t":"Hire an agent + build a skill","blk":"Agents & Skills","steps":3},{"t":"Combine two connectors","blk":"Connectors","steps":3},{"t":"Ship the live dashboard","blk":"Dashboard","steps":3},{"t":"Automate the web with Claude in Chrome","blk":"Browser (optional)","steps":3},{"t":"Control a desktop app","blk":"Computer use (optional)","steps":3},{"t":"Install & use a plugin","blk":"Plugins","steps":3},{"t":"Orchestrate it all","blk":"Orchestration","steps":3},{"t":"Launch review","blk":"Wrap-up","steps":3},{"t":"BONUS: Ship your product to a live URL","blk":"Publish (optional)","steps":4}]}};
 const LORDER=['beginner','intermediate','higher'];
 let DATA=[], sortKey='last_active', sortDir=-1, pass='';
 let STALL_DAYS=7, cohortFilter='';
