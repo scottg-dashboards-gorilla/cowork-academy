@@ -1,5 +1,8 @@
 # 🎓 Cowork Academy
 
+> **Which repo is this?** The **PUBLIC live course for anyone** — the general, pick-your-level training.
+> Related: `henry-founder-quest` (Henry's game) · `cowork-academy-private` (internal facilitator guide + backups).
+
 A self-paced, leveled course for learning **Claude Cowork** by building a real website — using Cowork's built-in skills and connecting it to real tools.
 
 **▶️ Live site: https://scottg-dashboards-gorilla.github.io/cowork-academy/**
