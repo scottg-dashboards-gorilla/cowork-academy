@@ -1,6 +1,8 @@
 name: keepalive
 
 # Pings Supabase every 3 days so the free-tier database never idles into a pause.
+# Queries the table (the public key is refused by Postgres with 42501), so the ping reaches the
+# database itself, not just the API gateway. Fails loudly if the project stops answering.
 on:
   schedule:
     - cron: '17 8 */3 * *'
@@ -10,7 +12,8 @@ jobs:
   ping:
     runs-on: ubuntu-latest
     steps:
-      - name: Ping Supabase REST endpoint
+      - name: Ping Supabase database
         run: |
-          code=$(curl -s -o /dev/null -w "%{http_code}" -H "apikey: sb_publishable_goN36W02YRbIFEVKWZ7cZQ_v7y4JkX6" "https://dptmmtqiedggqzmfsvdh.supabase.co/rest/v1/")
-          echo "Supabase responded with HTTP $code"
+          body=$(curl -sS -H "apikey: sb_publishable_goN36W02YRbIFEVKWZ7cZQ_v7y4JkX6" "https://dptmmtqiedggqzmfsvdh.supabase.co/rest/v1/academy_users?select=email&limit=1")
+          echo "Supabase responded: $body"
+          echo "$body" | grep -q '42501' || { echo "::error::Database did not answer as expected - check the Supabase project"; exit 1; }
