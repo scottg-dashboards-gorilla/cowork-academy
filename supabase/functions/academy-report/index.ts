@@ -1,8 +1,7 @@
 import "jsr:@supabase/functions-js/edge-runtime.d.ts";
 
 // Admin passphrase lives in the ADMIN_PASSPHRASE Edge Function secret, never in this repo.
-// NOTE: the version deployed on 2026-10-30 still compares against an inline SHA-256 hash;
-// set the secret, then deploy this file (verify_jwt: false) to switch over.
+// Deploy with verify_jwt: false; the function checks the passphrase itself.
 
 const cors = {
   "Access-Control-Allow-Origin": "*",
