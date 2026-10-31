@@ -108,7 +108,7 @@ function pct(done,total){return total?Math.round(done/total*100):0;}
 function overall(progress){let d=0;LORDER.forEach(k=>d+=countDone(progress,k));return {done:d,total:TOT.all,pct:pct(d,TOT.all)};}
 function statusBadge(pc){if(pc>=100)return '<span class="badge b-done">Done</span>';if(pc>0)return '<span class="badge b-prog">In progress</span>';return '<span class="badge b-none">Not started</span>';}
 function fdate(s){if(!s)return '—';const d=new Date(s);return d.toLocaleDateString(undefined,{month:'short',day:'numeric'})+' '+d.toLocaleTimeString(undefined,{hour:'2-digit',minute:'2-digit'});}
-function esc(t){return String(t==null?'':t).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function esc(t){return String(t==null?'':t).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');}
 
 async function loadReport(){
   const err=document.getElementById('err');
