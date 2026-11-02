@@ -135,7 +135,7 @@ function computeRows(){
       cohort:pr._cohort||'',track:pr._track||'',capstones:pr._capstones||{},feedback:pr._feedback||{},idle,stalled};
   });
 }
-function trackLabel(id){return ({essentials:'4h Essentials',professional:'8h Professional',mastery:'12h Mastery'})[id]||'';}
+function trackLabel(id){return ({quick:'1h Quick Start',explorer:'2h Cowork at Work',essentials:'4h Essentials',professional:'8h Professional',mastery:'12h Mastery'})[id]||'';}
 function sortRows(rows){
   rows.sort((a,b)=>{
     let av,bv;

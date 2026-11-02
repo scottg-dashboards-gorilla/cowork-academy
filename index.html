@@ -56,8 +56,6 @@ button.tiny{font-size:12px;padding:6px 11px}
 .orient summary::-webkit-details-marker{display:none}
 .orient summary::before{content:"▸ ";color:var(--muted)} .orient[open] summary::before{content:"▾ "}
 .orient .obody{padding:0 0 14px} .orient .obody p{color:var(--muted);font-size:14px;margin:0 0 10px} .orient .obody b{color:var(--ink)} .orient .obody a{color:var(--accent2);font-weight:600;text-decoration:none}
-.timepick{margin:22px 0 6px}
-.timepick h3{margin:0 0 3px;font-size:20px}
 .trackgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:16px}
 @media(max-width:820px){.trackgrid{grid-template-columns:1fr}}
 .track{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:22px;cursor:pointer;transition:.16s;position:relative}
@@ -190,6 +188,51 @@ button.tiny{font-size:12px;padding:6px 11px}
 .kit ol{margin:0;padding-left:20px;color:var(--muted);font-size:14px}
 .kit ol li{margin:6px 0}
 .kit b{color:var(--ink)}
+.secthead{margin:34px 0 0}
+.secthead h3{margin:0 0 3px;font-size:22px}
+.secthead .csub{color:var(--muted);font-size:14px;margin:0;max-width:760px}
+.sessgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:14px;margin-top:14px}
+.sess{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px;cursor:pointer;transition:.16s;display:flex;flex-direction:column}
+.sess:hover{transform:translateY(-3px);border-color:var(--accent)}
+.sess.cur{border-color:var(--accent2);box-shadow:0 0 0 1px var(--accent2) inset}
+.sess .hrs{font-size:30px;font-weight:800;line-height:1}
+.sess .hrs small{font-size:14px;color:var(--muted);font-weight:600}
+.sess h4{margin:8px 0 2px;font-size:16.5px}
+.sess .cred{font-size:12px;color:var(--accent2);font-weight:700}
+.sess .who{color:var(--muted);font-size:12.5px;margin:8px 0}
+.sess ul{margin:0 0 10px;padding-left:16px;color:var(--muted);font-size:12px;flex:1}
+.sess ul li{margin:3px 0}
+.sess .prog{height:5px;background:var(--panel2);border-radius:99px;overflow:hidden;margin:4px 0 8px}
+.sess .prog i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2))}
+.sess .go{font-size:12.5px;font-weight:800;color:var(--accent2)}
+.howgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px;margin-top:14px}
+.how{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px;cursor:pointer;transition:.16s;position:relative}
+.how:hover{transform:translateY(-3px);border-color:var(--gold)}
+.how .hi{font-size:28px;line-height:1}
+.how h4{margin:8px 0 4px;font-size:16px}
+.how .hr{color:var(--muted);font-size:12.5px;margin:0 0 8px}
+.how .hm{font-size:12px;color:var(--gold);font-weight:700}
+.how .hdone{position:absolute;top:14px;right:14px;font-size:11px;font-weight:800;color:var(--good);background:rgba(70,224,160,.14);border-radius:99px;padding:3px 9px}
+.pill.b4{background:rgba(255,206,79,.16);color:var(--gold)}
+.grouphead{font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:22px 0 10px}
+.think{background:rgba(108,123,255,.09);border:1px solid rgba(108,123,255,.35);border-radius:12px;padding:12px 14px;margin:14px 0 0}
+.think .tl{font-size:11.5px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;color:#aab6ff;margin-bottom:4px}
+.think .scene{color:var(--muted);font-size:13.5px;margin:0 0 6px}
+.think .ask{font-size:14.5px;font-weight:700;margin:0}
+.think ul{margin:4px 0 8px;padding-left:18px;color:var(--muted);font-size:13.5px}
+.hwdots{display:flex;gap:6px;flex-wrap:wrap;margin:6px 0 16px}
+.hwdots span{width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12.5px;font-weight:800;background:var(--panel2);color:var(--muted);border:1px solid var(--line)}
+.hwdots span.d{background:linear-gradient(135deg,var(--good),var(--accent2));color:#0a0e1c;border:none}
+.hwdots span.c{border:2px solid var(--gold);color:var(--ink)}
+.hwcard{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:24px}
+.hwcard h3{margin:0 0 8px;font-size:24px}
+.hwnum{font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--gold)}
+.hwdo{font-size:19px;font-weight:700;margin:6px 0 12px;line-height:1.45}
+.see{background:rgba(70,224,160,.09);border-left:3px solid var(--good);border-radius:0 10px 10px 0;padding:11px 14px;margin:14px 0 6px;font-size:14px}
+.see b{color:var(--good)}
+.hwnav{display:flex;justify-content:space-between;gap:10px;margin-top:18px;flex-wrap:wrap}
+.hwnav button:disabled{opacity:.35;cursor:default}
+.hwnotes textarea{width:100%;background:#0c1224;border:1px solid var(--line);border-radius:10px;color:var(--ink);padding:11px 13px;font-family:inherit;font-size:14px;min-height:64px;margin-top:8px}
 </style>
 </head>
 <body>
@@ -213,13 +256,13 @@ button.tiny{font-size:12px;padding:6px 11px}
   <header class="hero">
     <span class="badge">◆ Build with Claude Cowork</span>
     <h1>Cowork Academy</h1>
-    <p class="sub">A hands-on, self-paced course where you learn Claude Cowork by building a real website — using Cowork's skills and connecting it to real tools. Pick your level. Your progress saves automatically as you go.</p>
+    <p class="sub">Learn Claude Cowork hands-on, then put it to work on your own job. Every session ends with ideas for what Claude could improve for you, your team and your company.</p>
   </header>
 
   <div class="topbar">
     <div class="who" id="who"><span class="savedot"></span>Your progress saves automatically.</div>
     <div class="topbtns">
-      <button class="ghost tiny" id="btnHome">⌂ Levels</button>
+      <button class="ghost tiny" id="btnHome">⌂ Home</button>
       <button class="ghost tiny" onclick="exportWorkbook()">📄 My Workbook (PDF)</button>
       <button class="ghost tiny" onclick="exportSave()">⬇ Backup</button>
       <button class="ghost tiny" onclick="importSave()">⬆ Restore</button>
@@ -234,6 +277,14 @@ button.tiny{font-size:12px;padding:6px 11px}
       <a class="finbtn" id="masterCertBtn" href="certificate.html?track=Full%20Cowork%20Mastery">🎓 Get your Mastery Certificate</a>
     </div>
 
+    <div class="secthead"><h3>🎓 Academy sessions</h3>
+      <p class="csub">Pick the time you have. Every session is hands-on in Cowork, asks you to think about your own work as you go, ends by sparking an idea for your job, and earns a certificate.</p></div>
+    <div class="sessgrid" id="sessGrid"></div>
+
+    <div class="secthead"><h3>🛠️ How-to guides</h3>
+      <p class="csub">Need one skill right now? Each guide takes about 10 minutes, one step at a time. You do each step in Cowork and see the result for yourself.</p></div>
+    <div class="howgrid" id="howGrid"></div>
+
     <details class="orient">
       <summary>🧭 New to Claude Cowork? Start here (2-min read)</summary>
       <div class="obody">
@@ -244,17 +295,12 @@ button.tiny{font-size:12px;padding:6px 11px}
       </div>
     </details>
 
-    <div class="timepick">
-      <h3>⏱️ How much time do you have?</h3>
-      <p class="csub">Pick a track by the time you can invest. Each builds on the last and ends with a shareable certificate. You can always go further later.</p>
-      <div class="trackgrid" id="trackGrid"></div>
-    </div>
-    <div id="trackBanner" class="trackbanner hide"></div>
-
+    <div class="secthead"><h3>📚 Browse by level</h3>
+      <p class="csub">Prefer to go level by level? Each level is one project built over several missions. Progress is shared with the sessions above.</p></div>
     <div class="kit">
       <h4>How it works</h4>
       <ol>
-        <li><b>Pick a level</b> below, then open the first mission.</li>
+        <li><b>Pick a session, a how-to guide or a level</b>, then open the first mission.</li>
         <li><b>Copy the starter prompt</b> and paste it into <b>Claude Cowork</b> (open in another window) to begin the task.</li>
         <li><b>Do the steps in Cowork, then tick each checkbox here</b> as you finish it. The hints are optional tips to read if you get stuck — there's nothing to type into them.</li>
         <li>Everything you check or note <b>saves automatically</b>, so this page is your personal workbook and it'll be here when you come back.</li>
@@ -299,6 +345,8 @@ button.tiny{font-size:12px;padding:6px 11px}
     <div id="finale" class="finale hide"></div>
   </section>
 
+  <section id="howto" class="board hide"><div id="hwHost"></div></section>
+
   <p class="xlink">Prefer a story-driven version? Try <a href="https://scottg-dashboards-gorilla.github.io/henry-founder-quest/" target="_blank" rel="noopener">Founder Quest</a> — build a whole business as a game.</p>
   <p class="foot">Cowork Academy · progress saves automatically · notes stay on this device · <span id="ver">v1</span></p>
 </div>
@@ -307,26 +355,38 @@ button.tiny{font-size:12px;padding:6px 11px}
 <script src="course-data.js"></script>
 <script>
 
-/* ---- Time-based tracks (front door): time budget -> outcome + credential ---- */
-const TRACKS=[
-  {id:'essentials',hours:4,cls:'b1',icon:'⏱️',name:'Cowork Essentials',cred:'Practitioner',levels:['beginner'],
-   who:'Everyone — your day-one Cowork toolkit',
-   outcomes:['Create real Word documents & Excel spreadsheets','Generate images and do sourced web research','Build a clean one-page website','Use a built-in skill and connect a tool']},
-  {id:'professional',hours:8,cls:'b2',icon:'⏱️',name:'Cowork Professional',cred:'Builder',levels:['beginner','intermediate'],
-   who:'Power users & analysts who build repeatable workflows',
-   outcomes:['Everything in Essentials, plus:','Build & save your own reusable skills','Delegate work to agents and analyze data','Make pitch decks & PDFs and automate recurring work','Stand up a live dashboard']},
-  {id:'mastery',hours:12,cls:'b3',icon:'⏱️',name:'Cowork Mastery',cred:'Architect',levels:['beginner','intermediate','higher'],
-   who:'Champions & adoption leaders who build for others',
-   outcomes:['Everything in Professional, plus:','Automate a real web browser and control desktop apps','Install and use plugins','Combine multiple connectors into one workflow','Orchestrate scheduled agent workflows that run unattended']}
+/* ---- Sessions (front door): time budget -> missions + credential. Every session ends with the "Spark an idea" mission. ---- */
+const SESSIONS=[
+  {id:'quick',hours:1,name:'AI Quick Start',cred:'Starter',
+   who:'Anyone with a Claude license. See what it can do for your job in one hour.',
+   outcomes:['Make a real Word document','Analyze a spreadsheet and chart it','Leave with an idea for your own job'],
+   items:[['beginner',3],['intermediate',5],['ideas',0]]},
+  {id:'explorer',hours:2,name:'Cowork at Work',cred:'Explorer',
+   who:'Busy professionals who want the highlights, applied to their own work.',
+   outcomes:['Documents, research and data analysis','Connect an app and use your real data','Build and save your own skill','Leave with an idea for your own job'],
+   items:[['beginner',3],['beginner',6],['beginner',7],['intermediate',5],['intermediate',2],['ideas',0]]},
+  {id:'essentials',hours:4,name:'Cowork Essentials',cred:'Practitioner',levels:['beginner'],
+   who:'Everyone. Your day-one Cowork toolkit.',
+   outcomes:['Word documents, spreadsheets and images','Sourced web research and a one-page site','Use a skill and connect a tool','Leave with ideas for your own job']},
+  {id:'professional',hours:8,name:'Cowork Professional',cred:'Builder',levels:['beginner','intermediate'],
+   who:'Power users and analysts who build repeatable workflows.',
+   outcomes:['Everything in Essentials, plus:','Build and save your own skills','Agents, data analysis, decks and PDFs','Automations and a live dashboard']},
+  {id:'mastery',hours:12,name:'Cowork Mastery',cred:'Architect',levels:['beginner','intermediate','higher'],
+   who:'Champions and adoption leaders who build for others.',
+   outcomes:['Everything in Professional, plus:','Browser and desktop automation','Plugins and combined connectors','Workflows that run unattended']}
 ];
+const TRACKS=SESSIONS; // older name, kept for anything still referring to it
+const GROUPS=Object.assign({},LEVELS,{ideas:IDEAS});
+function sessionItems(s){return s.items||[].concat(...s.levels.map(l=>LEVELS[l].missions.map((m,mi)=>[l,mi])),[['ideas',0]]);}
+function itemsProgress(items){let total=0,done=0;items.forEach(([l,mi])=>GROUPS[l].missions[mi].steps.forEach((x,si)=>{total++;if(isChecked(l,mi,si))done++;}));return{done,total,pct:total?Math.round(done/total*100):0};}
 const MIN_PER_STEP=7;
 function missionMins(m){return Math.round((m.steps.length*MIN_PER_STEP)/5)*5;}
-function levelMins(lvl){return LEVELS[lvl].missions.reduce((a,m)=>a+missionMins(m),0);}
+function levelMins(lvl){return GROUPS[lvl].missions.reduce((a,m)=>a+missionMins(m),0);}
 function fmtHrs(mins){const h=mins/60;return h>=1?('~'+(Math.round(h*10)/10)+' hr'):('~'+mins+' min');}
 const DOCS_URL='https://support.claude.com';
 
 const STORE_KEY="coworkAcademy.v1";
-function blank(){return {current:null,progress:{},notes:{},identity:null,registered:false,track:null,capstones:{},feedback:{}};}
+function blank(){return {current:null,progress:{},notes:{},identity:null,registered:false,track:null,capstones:{},feedback:{},howtos:{}};}
 let state=load();
 function load(){try{return Object.assign(blank(),JSON.parse(localStorage.getItem(STORE_KEY))||{});}catch(e){return blank();}}
 function save(){try{localStorage.setItem(STORE_KEY,JSON.stringify(state));}catch(e){}pulse();}
@@ -344,7 +404,8 @@ async function syncNow(){
     _cohort:(state.identity&&state.identity.cohort)||'',
     _track:state.track||'',
     _capstones:state.capstones||{},
-    _feedback:state.feedback||{}
+    _feedback:state.feedback||{},
+    _howtos:state.howtos||{}
   });
   try{
     const r=await fetch(SB_URL+'/rest/v1/rpc/academy_upsert',{method:'POST',headers:sbHeaders(),
@@ -374,48 +435,47 @@ function getCap(lvl){return (state.capstones||{})[lvl]||"";}
 function setCap(lvl,v){state.capstones=state.capstones||{};state.capstones[lvl]=v;save();scheduleSync();}
 
 function levelProgress(lvl){
-  const L=LEVELS[lvl];let total=0,done=0;
+  const L=GROUPS[lvl];let total=0,done=0;
   L.missions.forEach((m,mi)=>{m.steps.forEach((s,si)=>{total++;if(isChecked(lvl,mi,si))done++;});});
   return{done,total,pct:total?Math.round(done/total*100):0};
 }
-function missionDone(lvl,mi){const m=LEVELS[lvl].missions[mi];return m.steps.every((s,si)=>isChecked(lvl,mi,si));}
+function missionDone(lvl,mi){const m=GROUPS[lvl].missions[mi];return m.steps.every((s,si)=>isChecked(lvl,mi,si));}
 
 function esc(t){return String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
 
-function currentTrack(){return TRACKS.find(t=>t.id===state.track)||null;}
-function renderTracks(){
-  const g=document.getElementById('trackGrid');if(!g)return;
-  g.innerHTML=TRACKS.map(t=>{
-    const sel=state.track===t.id?'sel':'';
-    return `<div class="track ${t.cls} ${sel}" data-track="${t.id}">
-      <div class="hrs">${t.hours}<small> hrs</small></div>
+function renderSessions(){
+  const g=document.getElementById('sessGrid');if(!g)return;
+  g.innerHTML=SESSIONS.map(t=>{
+    const p=itemsProgress(sessionItems(t));const cur=state.track===t.id;
+    return `<div class="sess ${cur?'cur':''}" data-sess="${t.id}">
+      <div class="hrs">${t.hours}<small> hr${t.hours>1?'s':''}</small></div>
       <h4>${t.name}</h4><div class="cred">→ ${t.cred} certificate</div>
       <div class="who">${t.who}</div>
       <ul>${t.outcomes.map(o=>`<li>${o}</li>`).join('')}</ul>
-      <div class="pickbtn">${sel?'✓ Your track':'Choose this track →'}</div>
+      ${p.done?`<div class="prog"><i style="width:${p.pct}%"></i></div>`:''}
+      <div class="go">${p.pct===100?'✓ Complete: get certificate':p.done?`Continue (${p.pct}%) →`:'Start →'}</div>
     </div>`;
   }).join('');
-  g.querySelectorAll('.track').forEach(el=>el.onclick=()=>selectTrack(el.dataset.track));
-  renderTrackBanner();
+  g.querySelectorAll('.sess').forEach(el=>el.onclick=()=>openSession(el.dataset.sess));
 }
-function renderTrackBanner(){
-  const b=document.getElementById('trackBanner');if(!b)return;
-  const t=currentTrack();
-  if(!t){b.classList.add('hide');return;}
-  b.classList.remove('hide');
-  const chips=['beginner','intermediate','higher'].map(k=>`<span class="lc ${t.levels.includes(k)?'on':''}">${LEVELS[k].icon} ${LEVELS[k].name}</span>`).join('');
-  b.innerHTML=`<div class="tt">${t.icon} Your track: ${t.name} (${t.hours} hrs) → ${t.cred}</div>
-    <div class="to">By the end you'll be able to: ${t.outcomes.filter(o=>!/plus:/.test(o)).join(' · ')}</div>
-    <div class="chips">Includes: ${chips}</div>`;
+function renderHowtos(){
+  const g=document.getElementById('howGrid');if(!g)return;
+  g.innerHTML=HOWTOS.map(h=>{const st=(state.howtos||{})[h.id];
+    return `<div class="how" data-how="${h.id}">${st&&st.done?'<span class="hdone">✓ Done</span>':''}
+      <div class="hi">${h.icon}</div><h4>${esc(h.title)}</h4>
+      <p class="hr">${esc(h.result)}</p>
+      <div class="hm">⏱️ ~${h.mins} min · ${h.steps.length} steps ${st&&!st.done&&st.step?'· continue →':'→'}</div></div>`;}).join('');
+  g.querySelectorAll('.how').forEach(el=>el.onclick=()=>openHowto(el.dataset.how));
 }
-function selectTrack(id){ state.track=(state.track===id?null:id); save(); scheduleSync(); renderTracks(); renderPicker(); }
+function renderHome(){renderSessions();renderHowtos();renderPicker();}
+function showView(id){['picker','board','howto'].forEach(v=>document.getElementById(v).classList.toggle('hide',v!==id));window.scrollTo({top:0,behavior:'smooth'});}
 
 function renderPicker(){
   const mb=document.getElementById('masterBanner');
   if(mb){ if(allLevelsDone()){mb.classList.remove('hide');
       document.getElementById('masterCertBtn').href=certLink('Full Cowork Mastery',totalStepsDone());}
     else mb.classList.add('hide'); }
-  const t=currentTrack();
+  const t=null;
   const wrap=document.getElementById('levelCards');wrap.innerHTML='';
   Object.values(LEVELS).forEach(L=>{
     const p=levelProgress(L.key);
@@ -437,92 +497,101 @@ function renderPicker(){
 }
 
 function openLevel(lvl){
-  state.current=lvl;save();
-  document.getElementById('picker').classList.add('hide');
-  document.getElementById('board').classList.remove('hide');
+  state.current=lvl;save();showView('board');
   const L=LEVELS[lvl];
   document.getElementById('bTitle').textContent=L.icon+' '+L.project;
   const pill=document.getElementById('bPill');pill.textContent=L.name;pill.className='pill '+L.cls;
   document.getElementById('bSub').textContent=L.sub;
-  renderMissions(lvl);
-  window.scrollTo({top:0,behavior:'smooth'});
+  renderList(L.missions.map((m,mi)=>[lvl,mi]),{kind:'level',lvl,capKey:lvl});
 }
-function renderMissions(lvl){
-  const L=LEVELS[lvl];const host=document.getElementById('missions');host.innerHTML='';
-  L.missions.forEach((m,mi)=>{
+function openSession(id){
+  const t=SESSIONS.find(x=>x.id===id);if(!t)return goHome();
+  state.current='s:'+id;state.track=id;save();scheduleSync();showView('board');
+  document.getElementById('bTitle').textContent='🎓 '+t.name;
+  const pill=document.getElementById('bPill');pill.textContent=t.hours+' hr'+(t.hours>1?'s':'')+' · '+t.cred;pill.className='pill b1';
+  document.getElementById('bSub').textContent=t.who+' Do each mission in Cowork, answer its "Think about your work" question, and finish by sparking an idea of your own.';
+  renderList(sessionItems(t),{kind:'session',sess:t,capKey:'s:'+id});
+}
+let CUR=null; // {items,ctx} of the open list
+function renderList(items,ctx){
+  CUR={items,ctx};
+  const host=document.getElementById('missions');host.innerHTML='';
+  const firstOpen=Math.max(0,items.findIndex(([l,mi])=>!missionDone(l,mi)));
+  let prevL=null;
+  items.forEach(([lvl,mi],ii)=>{
+    const m=GROUPS[lvl].missions[mi];
+    if(ctx.kind==='session'&&lvl!==prevL){const h=document.createElement('div');h.className='grouphead';h.textContent=GROUPS[lvl].icon+' '+GROUPS[lvl].name;host.appendChild(h);}
+    prevL=lvl;
     const done=missionDone(lvl,mi);
     const el=document.createElement('div');el.className='mission'+(done?' done':'');
     const stepsHtml=m.steps.map((s,si)=>{
       const ck=isChecked(lvl,mi,si);
-      return `<li class="${ck?'checked':''}"><input type="checkbox" ${ck?'checked':''} data-m="${mi}" data-s="${si}"><span class="stxt">${esc(s)}</span></li>`;
+      return `<li class="${ck?'checked':''}"><input type="checkbox" ${ck?'checked':''} data-i="${ii}" data-s="${si}"><span class="stxt">${esc(s)}</span></li>`;
     }).join('');
     const hintsHtml=m.hints.map((h,hi)=>`<details class="hintbox"><summary>💡 Hint ${hi+1}</summary><div class="hcontent">${esc(h)}</div></details>`).join('');
+    const thinkHtml=m.think?`<div class="think"><div class="tl">💭 Think about your work</div><p class="scene">${esc(m.think.scene)}</p><p class="ask">${esc(m.think.ask)}</p></div>`:'';
     const fb=getFb(lvl,mi);
     el.innerHTML=`
       <div class="mhead">
-        <div class="mnum">${done?'✓':(mi+1)}</div>
+        <div class="mnum">${done?'✓':(ii+1)}</div>
         <div class="mtitle"><div class="t">${esc(m.t)}</div><div class="blk">${esc(m.blk)}</div></div>
         <span class="mtime">⏱️ ~${missionMins(m)} min</span>
         <div class="mchev">▾</div>
       </div>
-      <div class="mbody ${mi===0?'':'hide'}">
+      <div class="mbody ${ii===firstOpen?'':'hide'}">
         <p class="lead">${esc(m.lead)}</p>
         <div class="promptcard">
-          <div class="plabel">▶ Step 1 — copy this and paste it into Claude Cowork to start</div>
-          <div class="promptrow"><code>${esc(m.prompt)}</code><button class="tiny" data-prompt="${mi}">📋 Copy</button></div>
+          <div class="plabel">▶ Step 1: copy this and paste it into Claude Cowork to start</div>
+          <div class="promptrow"><code>${esc(m.prompt)}</code><button class="tiny" data-prompt="${ii}">📋 Copy</button></div>
         </div>
         <div class="steplabel">✅ Do these in Cowork, and tick each box as you finish it</div>
         <ul class="steps">${stepsHtml}</ul>
         <div class="victory"><b>🏁 You're done when:</b> ${esc(m.victory)}</div>
+        ${thinkHtml}
+        <div class="notes"><label>📝 ${m.think?'Your answer and notes':'Your notes'}: optional, saved automatically on this device</label>
+          <textarea data-note="${ii}" placeholder="${m.think?'Your answer to the question above, plus anything you want to remember...':'Jot anything you want to remember: what you built, links, ideas to revisit...'}">${esc(getNote(lvl,mi))}</textarea></div>
         <div class="hintswrap">
-          <div class="blocklabel">Stuck? <span class="lite">Open a hint below — it's just a tip to read. Nothing to type in.</span></div>
+          <div class="blocklabel">Stuck? <span class="lite">Open a hint below. It's just a tip to read, with nothing to type in.</span></div>
           ${hintsHtml}
         </div>
-        <div class="notes"><label>📝 Your notes — optional, saved automatically on this device</label>
-          <textarea data-note="${mi}" placeholder="Jot anything you want to remember: what you built, links, ideas to revisit...">${esc(getNote(lvl,mi))}</textarea></div>
         <div class="fb">Was this mission clear?
-          <button class="fbup ${fb===1?'on':''}" data-fb="${mi}" data-v="1">👍 Yes</button>
-          <button class="fbdown ${fb===-1?'on':''}" data-fb="${mi}" data-v="-1">👎 Confusing</button></div>
+          <button class="fbup ${fb===1?'on':''}" data-fb="${ii}" data-v="1">👍 Yes</button>
+          <button class="fbdown ${fb===-1?'on':''}" data-fb="${ii}" data-v="-1">👎 Confusing</button></div>
       </div>`;
     host.appendChild(el);
   });
-  // per-level capstone
   const cap=document.createElement('div');cap.className='capstone';
-  cap.innerHTML=`<div class="cl">🎯 Capstone — prove it</div>
-    <p>Paste a link to (or a one-line description of) what you actually built in this level — your site, a doc, a dashboard. This is your evidence of completion and is visible to the program administrator.</p>
-    <input type="text" id="capInput" placeholder="https://your-site... or 'Built CampusCFO budget sheet + landing page'" value="${esc(getCap(lvl))}">
+  const isSess=ctx.kind==='session';
+  cap.innerHTML=`<div class="cl">🎯 Capstone: prove it</div>
+    <p>${isSess?'In one line, what did you build, and what idea did you come up with for your job?':'Paste a link to, or a one-line description of, what you actually built in this level, such as your site, a doc or a dashboard.'} This is your evidence of completion, and the program administrator can see it.</p>
+    <input type="text" id="capInput" placeholder="${isSess?"Built a sales report + chart; idea: automate the Monday bookings summary":"https://your-site... or 'Built CampusCFO budget sheet + landing page'"}" value="${esc(getCap(ctx.capKey)).replace(/"/g,'&quot;')}">
     <div class="saved" id="capSaved"></div>`;
   host.appendChild(cap);
-  host.querySelectorAll('.mhead').forEach(h=>{
-    h.onclick=()=>{const body=h.nextElementSibling;body.classList.toggle('hide');};
-  });
+  const at=i=>items[+i];
+  host.querySelectorAll('.mhead').forEach(h=>{h.onclick=()=>h.nextElementSibling.classList.toggle('hide');});
   host.querySelectorAll('.steps input').forEach(cb=>{
-    cb.onchange=()=>{setChecked(lvl,+cb.dataset.m,+cb.dataset.s,cb.checked);
+    cb.onchange=()=>{const [lvl,mi]=at(cb.dataset.i);setChecked(lvl,mi,+cb.dataset.s,cb.checked);
       cb.closest('li').classList.toggle('checked',cb.checked);
-      const mEl=cb.closest('.mission');const mi=+cb.dataset.m;
-      const d=missionDone(lvl,mi);mEl.classList.toggle('done',d);
-      mEl.querySelector('.mnum').textContent=d?'✓':(mi+1);
-      refreshProgress(lvl);
-    };
+      const mEl=cb.closest('.mission');const d=missionDone(lvl,mi);mEl.classList.toggle('done',d);
+      mEl.querySelector('.mnum').textContent=d?'✓':(+cb.dataset.i+1);
+      refreshList();};
   });
-  host.querySelectorAll('textarea[data-note]').forEach(ta=>{
-    ta.oninput=()=>setNote(lvl,+ta.dataset.note,ta.value);
-  });
+  host.querySelectorAll('textarea[data-note]').forEach(ta=>{ta.oninput=()=>{const [lvl,mi]=at(ta.dataset.note);setNote(lvl,mi,ta.value);};});
   host.querySelectorAll('button[data-prompt]').forEach(b=>{
-    b.onclick=()=>{const p=LEVELS[lvl].missions[+b.dataset.prompt].prompt;
-      navigator.clipboard.writeText(p).then(()=>toast('Prompt copied — paste it into Cowork'));};
+    b.onclick=()=>{const [lvl,mi]=at(b.dataset.prompt);
+      navigator.clipboard.writeText(GROUPS[lvl].missions[mi].prompt).then(()=>toast('Prompt copied. Paste it into Cowork'));};
   });
   host.querySelectorAll('button[data-fb]').forEach(b=>{
-    b.onclick=()=>{const mi=+b.dataset.fb;setFb(lvl,mi,+b.dataset.v);
+    b.onclick=()=>{const [lvl,mi]=at(b.dataset.fb);setFb(lvl,mi,+b.dataset.v);
       const wrap=b.closest('.fb');const v=getFb(lvl,mi);
       wrap.querySelector('.fbup').classList.toggle('on',v===1);
       wrap.querySelector('.fbdown').classList.toggle('on',v===-1);
       toast('Thanks for the feedback');};
   });
   const capIn=document.getElementById('capInput');
-  if(capIn){let ct;capIn.oninput=()=>{setCap(lvl,capIn.value);
+  if(capIn){let ct;capIn.oninput=()=>{setCap(ctx.capKey,capIn.value);
     const s=document.getElementById('capSaved');s.textContent='✓ Saved';clearTimeout(ct);ct=setTimeout(()=>s.textContent='',1400);};}
-  refreshProgress(lvl);
+  refreshList();
 }
 function allLevelsDone(){return ["beginner","intermediate","higher"].every(l=>levelProgress(l).pct===100);}
 function totalStepsDone(){return ["beginner","intermediate","higher"].reduce((a,l)=>a+levelProgress(l).done,0);}
@@ -530,43 +599,40 @@ function certLink(track,steps){
   const p=new URLSearchParams();if(track)p.set('track',track);if(steps)p.set('steps',steps);
   return 'certificate.html?'+p.toString();
 }
-function refreshProgress(lvl){
-  const p=levelProgress(lvl);
+function refreshList(){
+  const {items,ctx}=CUR;const p=itemsProgress(items);
   document.getElementById('bBar').style.width=p.pct+'%';
   document.getElementById('bPct').textContent=`${p.done}/${p.total} steps · ${p.pct}%`;
   const fin=document.getElementById('finale');
-  if(p.pct===100){
-    fin.classList.remove('hide');
-    const trackName=LEVELS[lvl].name+" — "+LEVELS[lvl].project;
-    if(allLevelsDone()){
-      fin.innerHTML=`<h3>👑 Full Cowork Mastery — all three levels complete!</h3>
-        <p>You've done the entire course, hands-on: websites, documents, data, decks, images, research, skills, memory, connectors, agents, dashboards, automation, browser &amp; desktop control, plugins, and orchestration. That's the whole of Cowork.</p>
-        <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
-          <a class="finbtn" href="${certLink('Full Cowork Mastery',totalStepsDone())}">🎓 Get your Mastery Certificate</a>
-          <button class="ghost" onclick="goHome()">Back to levels</button>
-        </div>`;
-    } else {
-      const t=currentTrack();
-      const trackComplete = t && t.levels.every(l=>levelProgress(l).pct===100);
-      if(trackComplete){
-        fin.innerHTML=`<h3>🏆 ${t.name} complete — you've earned ${t.cred}!</h3>
-          <p>You finished every level in your ${t.hours}-hour track. Claim your certificate, or keep going into the next level for even more.</p>
-          <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
-            <a class="finbtn" href="${certLink(t.name+' — '+t.cred,totalStepsDone())}">🎓 Get your ${t.cred} Certificate</a>
-            ${nextLevelBtn(lvl)}
-            <button class="ghost" onclick="goHome()">Back to levels</button>
-          </div>`;
-      } else {
-        fin.innerHTML=`<h3>🎉 ${LEVELS[lvl].project} — complete!</h3>
-          <p>You built real things with Claude Cowork and can prove it. Grab your certificate, then take on the next level.</p>
-          <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
-            <a class="finbtn" href="${certLink(trackName,p.done)}">🎓 Get your certificate</a>
-            ${nextLevelBtn(lvl)}
-            <button class="ghost" onclick="goHome()">Back to levels</button>
-          </div>`;
-      }
-    }
-  } else { fin.classList.add('hide'); }
+  if(p.pct!==100){fin.classList.add('hide');return;}
+  fin.classList.remove('hide');
+  if(ctx.kind==='session'){
+    const t=ctx.sess;
+    fin.innerHTML=`<h3>🏆 ${t.name} complete. You've earned ${t.cred}!</h3>
+      <p>You built real things with Claude Cowork and found an idea for your own work. Make sure your idea is in <b>Spark</b>, because that's where it turns into a real improvement. Then keep going with a how-to guide or a longer session.</p>
+      <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
+        <a class="finbtn" href="${certLink(t.name+' — '+t.cred,p.done)}">🎓 Get your ${t.cred} Certificate</a>
+        <button class="ghost" onclick="goHome()">Back to the Academy</button>
+      </div>`;
+    return;
+  }
+  const lvl=ctx.lvl;
+  if(allLevelsDone()){
+    fin.innerHTML=`<h3>👑 Full Cowork Mastery: all three levels complete!</h3>
+      <p>You've done the entire course, hands-on: websites, documents, data, decks, images, research, skills, memory, connectors, agents, dashboards, automation, browser &amp; desktop control, plugins, and orchestration. That's the whole of Cowork.</p>
+      <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
+        <a class="finbtn" href="${certLink('Full Cowork Mastery',totalStepsDone())}">🎓 Get your Mastery Certificate</a>
+        <button class="ghost" onclick="goHome()">Back to the Academy</button>
+      </div>`;
+  } else {
+    fin.innerHTML=`<h3>🎉 ${LEVELS[lvl].project}: complete!</h3>
+      <p>You built real things with Claude Cowork and can prove it. Get your certificate, then take on the next level.</p>
+      <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
+        <a class="finbtn" href="${certLink(LEVELS[lvl].name+' — '+LEVELS[lvl].project,p.done)}">🎓 Get your certificate</a>
+        ${nextLevelBtn(lvl)}
+        <button class="ghost" onclick="goHome()">Back to the Academy</button>
+      </div>`;
+  }
 }
 function nextLevelBtn(lvl){
   const order=["beginner","intermediate","higher"];const i=order.indexOf(lvl);
@@ -574,8 +640,44 @@ function nextLevelBtn(lvl){
   return `<button class="primary" onclick="goHome()">🏆 You finished the hardest track!</button>`;
 }
 
-function goHome(){state.current=null;save();document.getElementById('board').classList.add('hide');
-  document.getElementById('picker').classList.remove('hide');renderPicker();window.scrollTo({top:0,behavior:'smooth'});}
+function goHome(){state.current=null;save();showView('picker');renderHome();}
+
+/* ---- How-to guides: one step at a time ---- */
+function openHowto(id){if(!HOWTOS.find(h=>h.id===id))return goHome();state.current='h:'+id;save();showView('howto');renderHowto(id);}
+function howtoState(id){state.howtos=state.howtos||{};return state.howtos[id]||(state.howtos[id]={step:0,done:false});}
+function renderHowto(id){
+  const h=HOWTOS.find(x=>x.id===id);const st=howtoState(id);const n=h.steps.length;const k=Math.min(st.step,n);
+  const dots=h.steps.map((x,i)=>`<span class="${i<k?'d':i===k?'c':''}">${i<k?'✓':i+1}</span>`).join('')+`<span class="${k===n?'c':''}">🏁</span>`;
+  let card;
+  if(k<n){const s=h.steps[k];
+    card=`<div class="hwcard"><div class="hwnum">Step ${k+1} of ${n}</div>
+      <div class="hwdo">${esc(s.do)}</div>
+      ${s.prompt?`<div class="promptcard"><div class="plabel">▶ Copy this, paste it into Cowork, and fill in any blanks (____)</div>
+        <div class="promptrow"><code>${esc(s.prompt)}</code><button class="tiny" id="hwCopy">📋 Copy</button></div></div>`:''}
+      <div class="see"><b>✅ You should see:</b> ${esc(s.see)}</div>
+      ${s.stuck?`<details class="hintbox"><summary>🤔 Didn't see that?</summary><div class="hcontent">${esc(s.stuck)}</div></details>`:''}
+      <div class="hwnav"><button class="ghost" data-go="${k-1}" ${k===0?'disabled':''}>← Back</button>
+        <button class="primary" data-go="${k+1}">${k===n-1?'I see it: finish ✓':'I see it: next step →'}</button></div></div>`;
+  } else {
+    card=`<div class="hwcard"><h3>🎉 You did it!</h3>
+      <div class="see"><b>What you now have:</b> ${esc(h.result)}</div>
+      <div class="think"><div class="tl">💭 Use it at work</div><p class="scene">Ways other people use this:</p>
+        <ul>${h.atwork.map(a=>`<li>${esc(a)}</li>`).join('')}</ul>
+        <p class="ask">Where could you use this in your job? If it's a good idea, submit it in Spark.</p></div>
+      <div class="hwnotes"><textarea id="hwNote" placeholder="Your idea, in one sentence...">${esc(getNote('howto',id))}</textarea></div>
+      <div class="hwnav"><button class="ghost" data-go="0">↺ Do it again</button>
+        <button class="primary" onclick="goHome()">Back to the Academy →</button></div></div>`;
+  }
+  document.getElementById('hwHost').innerHTML=`<div class="bhead"><h2>${h.icon} ${esc(h.title)}</h2><span class="pill b4">How-to · ~${h.mins} min</span></div>
+    <p class="bsub">${esc(h.why)}</p><div class="hwdots">${dots}</div>${card}`;
+  const host=document.getElementById('hwHost');
+  host.querySelectorAll('button[data-go]').forEach(b=>b.onclick=()=>{
+    const to=+b.dataset.go;st.step=to;if(to>=n&&!st.done){st.done=true;toast('Guide complete');}
+    save();scheduleSync();renderHowto(id);window.scrollTo({top:0,behavior:'smooth'});});
+  const cp=document.getElementById('hwCopy');
+  if(cp)cp.onclick=()=>navigator.clipboard.writeText(h.steps[k].prompt).then(()=>toast('Copied. Paste it into Cowork'));
+  const nt=document.getElementById('hwNote');if(nt)nt.oninput=()=>setNote('howto',id,nt.value);
+}
 document.getElementById('btnHome').onclick=goHome;
 
 function toast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),1500);}
@@ -588,12 +690,12 @@ function exportSave(){
 
 function exportWorkbook(){
   // Build a clean printable record of every level: completed steps + the learner's notes.
-  const order=["beginner","intermediate","higher"];
+  const order=["beginner","intermediate","higher","ideas"];
   const today=new Date().toLocaleDateString(undefined,{year:'numeric',month:'long',day:'numeric'});
   let anyWork=false;
   let body="";
   order.forEach(lvl=>{
-    const L=LEVELS[lvl];const p=levelProgress(lvl);
+    const L=GROUPS[lvl];const p=levelProgress(lvl);
     const hasNotes=L.missions.some((m,mi)=>getNote(lvl,mi).trim());
     if(p.done===0 && !hasNotes) return; // skip untouched levels
     anyWork=true;
@@ -613,6 +715,9 @@ function exportWorkbook(){
     });
     body+=`</section>`;
   });
+  const doneHow=HOWTOS.filter(h=>(state.howtos||{})[h.id]&&state.howtos[h.id].done);
+  if(doneHow.length){anyWork=true;body+=`<section class="lvl"><h2>🛠️ How-to guides completed</h2><ul>`+doneHow.map(h=>{const n=getNote('howto',h.id).trim();
+    return `<li><b>${h.icon} ${esc(h.title)}</b>${n?`: <i>${esc(n)}</i>`:''}</li>`;}).join('')+`</ul></section>`;}
   if(!anyWork){toast('Start a level first — nothing to export yet');return;}
   const html=`<!DOCTYPE html><html><head><meta charset="utf-8"><title>My Cowork Academy Workbook</title>
   <style>
@@ -648,14 +753,13 @@ function importSave(){
     r.onload=()=>{try{const data=JSON.parse(r.result);if(data&&typeof data==='object'){
       // Keep who's signed in on this device if the backup has no identity, then push the restored progress.
       const me=state.identity;state=Object.assign(blank(),data);if(!state.identity)state.identity=me;state.registered=false;save();
-      renderTracks();syncNow();
-      toast('Progress restored');if(state.current&&LEVELS[state.current]){openLevel(state.current);}else{goHome();}}}catch(err){toast('Could not read that file');}};
+      syncNow();toast('Progress restored');route();}}catch(err){toast('Could not read that file');}};
     r.readAsText(f);};
   inp.click();
 }
 function resetAll(){
-  if(confirm("Reset ALL progress? This clears your checked steps, notes, capstones and feedback on this device AND your progress record with the program administrator. It can't be undone (use Backup first if unsure).")){
-    state.current=null;state.progress={};state.notes={};state.capstones={};state.feedback={};save();syncNow();goHome();toast('Reset done');
+  if(confirm("Reset ALL progress? This clears your checked steps, how-to guides, notes, capstones and feedback on this device AND your progress record with the program administrator. It can't be undone (use Backup first if unsure).")){
+    state.current=null;state.progress={};state.notes={};state.capstones={};state.feedback={};state.howtos={};save();syncNow();goHome();toast('Reset done');
   }
 }
 
@@ -708,12 +812,18 @@ function showGate(){
   [nm,em].forEach(f=>f.addEventListener('keydown',e=>{if(e.key==='Enter')document.getElementById('gateStart').click();}));
 }
 
-renderTracks();
-renderPicker();
+function route(){
+  const c=state.current||'';
+  if(LEVELS[c])openLevel(c);
+  else if(c.startsWith('s:'))openSession(c.slice(2));
+  else if(c.startsWith('h:'))openHowto(c.slice(2));
+  else goHome();
+}
+renderHome();
 renderCapMap();
 if(!state.identity){ showGate(); }
 else { if(!state.registered) registerUser(); else syncNow(); }
-if(state.current && LEVELS[state.current]){openLevel(state.current);}
+route();
 </script>
 </body>
 </html>
