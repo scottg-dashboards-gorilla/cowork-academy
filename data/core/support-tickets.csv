@@ -1,0 +1,217 @@
+ticket_id,opened,closed,days_open,customer,region,category,issue,order_id,channel,priority,team,credit_issued,status
+CS-1001,2026-04-03,2026-04-19,16,Desert Bloom Clinics,West,Billing,Discount missing from invoice,SO-50982,Email,Medium,Billing,40,Closed
+CS-1002,2026-04-04,2026-04-18,14,Brookside Medical,East,Billing,Wrong billing address,SO-50951,Email,Medium,Billing,0,Closed
+CS-1003,2026-04-04,2026-04-14,10,Atlantic Charter School,East,Billing,Wrong billing address,SO-50421,Chat,Medium,Billing,40,Closed
+CS-1004,2026-04-04,2026-04-09,5,Canyon Facilities Group,West,Account and login,Cannot log in,,Chat,Low,Support,0,Closed
+CS-1005,2026-04-05,2026-04-06,1,Maple Street Dental,North,How-to question,How to set up a standing order,,Chat,Low,Support,0,Closed
+CS-1006,2026-04-05,2026-04-10,5,Sierra Outdoor Gear,West,Product issue,Item stopped working,SO-50426,Email,Low,Support,120,Closed
+CS-1007,2026-04-06,2026-04-10,4,Mesa Family Dental,West,Product issue,Item damaged,SO-50737,Phone,Low,Support,0,Closed
+CS-1008,2026-04-07,2026-04-13,6,Bayou Legal Partners,South,Returns,Return request,SO-50010,Phone,Medium,Warehouse,0,Closed
+CS-1009,2026-04-07,2026-04-08,1,Sierra Outdoor Gear,West,How-to question,How to download invoices,,Email,Low,Support,0,Closed
+CS-1010,2026-04-08,2026-04-16,8,Hudson Media,East,Returns,Return label needed,SO-50009,Phone,Low,Warehouse,0,Closed
+CS-1011,2026-04-12,2026-04-17,5,Pioneer Logistics,North,Account and login,Add a new user,,Email,Low,Support,0,Closed
+CS-1012,2026-04-13,2026-04-15,2,Gulfview Construction,South,Delivery,Partial delivery,SO-50190,Phone,High,Warehouse,25,Closed
+CS-1013,2026-04-14,2026-04-21,7,Pioneer Logistics,North,Product issue,Wrong item sent,SO-50658,Email,Low,Support,120,Closed
+CS-1014,2026-04-15,2026-04-24,9,Harbor Fitness Clubs,South,Billing,Wrong billing address,SO-50916,Phone,High,Billing,0,Closed
+CS-1015,2026-04-15,2026-04-20,5,Redwood Software,West,Billing,Invoice copy needed,SO-50148,Chat,Medium,Billing,0,Closed
+CS-1016,2026-04-15,2026-04-17,2,Mesa Family Dental,West,How-to question,How to download invoices,,Chat,Medium,Support,0,Closed
+CS-1017,2026-04-16,2026-04-24,8,Birchwood Schools,North,Account and login,Password reset,,Email,Low,Support,0,Closed
+CS-1018,2026-04-16,2026-04-19,3,Sunrise Pediatrics,South,Delivery,Delivery late,SO-50471,Email,High,Warehouse,75,Closed
+CS-1019,2026-04-17,2026-04-21,4,Patriot Auto Group,East,Returns,Refund not received,SO-50093,Email,Low,Warehouse,0,Closed
+CS-1020,2026-04-17,2026-05-01,14,Atlantic Charter School,East,Billing,Charged twice,SO-50206,Phone,Medium,Billing,0,Closed
+CS-1021,2026-04-18,2026-05-03,15,Coastal Credit Union,South,Billing,Invoice copy needed,SO-50122,Chat,Medium,Billing,40,Closed
+CS-1022,2026-04-18,2026-04-23,5,Bayview Nonprofit Alliance,West,Product issue,Item stopped working,SO-50376,Phone,Low,Support,120,Closed
+CS-1023,2026-04-19,2026-04-23,4,Pioneer Logistics,North,Account and login,Password reset,,Email,Low,Support,0,Closed
+CS-1024,2026-04-19,2026-04-22,3,Liberty Architects,East,Product issue,Item damaged,SO-50351,Phone,Low,Support,0,Closed
+CS-1025,2026-04-20,2026-04-27,7,Hudson Media,East,Returns,Return request,SO-50099,Chat,Low,Warehouse,0,Closed
+CS-1026,2026-04-20,2026-04-24,4,Bayview Nonprofit Alliance,West,Account and login,Cannot log in,,Phone,Low,Support,0,Closed
+CS-1027,2026-04-23,2026-04-30,7,Gulfview Construction,South,Product issue,Item damaged,SO-51027,Email,Medium,Support,120,Closed
+CS-1028,2026-04-24,2026-04-27,3,Summit Engineering,North,Billing,Wrong billing address,SO-50931,Phone,Medium,Billing,80,Closed
+CS-1029,2026-04-28,2026-05-06,8,Riverbend Library,North,Account and login,Password reset,,Email,Low,Support,0,Closed
+CS-1030,2026-04-30,2026-04-30,0,Maple Street Dental,North,How-to question,How to download invoices,,Chat,Low,Support,0,Closed
+CS-1031,2026-04-30,2026-05-02,2,Maple Street Dental,North,Delivery,Tracking not updating,SO-50101,Phone,Medium,Warehouse,75,Closed
+CS-1032,2026-05-02,2026-05-06,4,Gulfview Construction,South,Returns,Return label needed,SO-50179,Phone,Low,Warehouse,0,Closed
+CS-1033,2026-05-02,2026-05-15,13,Liberty Architects,East,Billing,Charged twice,SO-51024,Phone,Medium,Billing,0,Closed
+CS-1034,2026-05-05,2026-05-06,1,Birchwood Schools,North,How-to question,How to use saved lists,,Email,Low,Support,0,Closed
+CS-1035,2026-05-06,2026-05-11,5,Birchwood Schools,North,Product issue,Item stopped working,SO-50201,Chat,Medium,Support,0,Closed
+CS-1036,2026-05-06,2026-05-13,7,Bayview Nonprofit Alliance,West,Billing,Invoice copy needed,SO-50723,Email,Medium,Billing,40,Closed
+CS-1037,2026-05-08,2026-05-12,4,Cedar Ridge Accounting,North,Billing,Discount missing from invoice,SO-50633,Email,High,Billing,0,Closed
+CS-1038,2026-05-08,2026-05-16,8,Bluebird Coworking,East,Account and login,Add a new user,,Email,Medium,Support,0,Closed
+CS-1039,2026-05-08,2026-05-15,7,Keystone Manufacturing,East,Product issue,Item damaged,SO-50884,Email,Low,Support,60,Closed
+CS-1040,2026-05-10,2026-05-12,2,Maple Street Dental,North,Returns,Return request,SO-50215,Phone,Low,Warehouse,0,Closed
+CS-1041,2026-05-10,2026-05-12,2,Granite Realty Group,North,How-to question,How to use saved lists,,Phone,Low,Support,0,Closed
+CS-1042,2026-05-12,2026-05-12,0,Bayou Legal Partners,South,How-to question,How to use saved lists,,Email,Low,Support,0,Closed
+CS-1043,2026-05-14,2026-05-25,11,Golden State Labs,West,Billing,Invoice copy needed,SO-50430,Email,High,Billing,0,Closed
+CS-1044,2026-05-15,2026-05-22,7,Hudson Media,East,Account and login,Password reset,,Email,Medium,Support,0,Closed
+CS-1045,2026-05-15,2026-05-21,6,Magnolia Hotels Group,South,Account and login,Cannot log in,,Email,Low,Support,0,Closed
+CS-1046,2026-05-15,2026-05-16,1,Bayview Nonprofit Alliance,West,Delivery,Order not delivered,SO-50723,Email,Medium,Warehouse,150,Closed
+CS-1047,2026-05-17,2026-05-22,5,Desert Bloom Clinics,West,Returns,Return label needed,SO-50251,Phone,Medium,Warehouse,0,Closed
+CS-1048,2026-05-17,2026-05-19,2,Riverbend Library,North,Returns,Return label needed,SO-50266,Email,Low,Warehouse,0,Closed
+CS-1049,2026-05-18,2026-05-24,6,Sunrise Pediatrics,South,Returns,Refund not received,SO-50260,Chat,Medium,Warehouse,0,Closed
+CS-1050,2026-05-20,2026-05-26,6,Liberty Architects,East,Account and login,Add a new user,,Chat,Low,Support,0,Closed
+CS-1051,2026-05-21,2026-06-03,13,Brookside Medical,East,Billing,Invoice copy needed,SO-51016,Phone,High,Billing,0,Closed
+CS-1052,2026-05-21,2026-05-22,1,Magnolia Hotels Group,South,Delivery,Partial delivery,SO-50620,Email,Medium,Warehouse,75,Closed
+CS-1053,2026-05-22,2026-05-25,3,Canyon Facilities Group,West,Product issue,Item damaged,SO-50641,Chat,Low,Support,120,Closed
+CS-1054,2026-05-22,2026-05-30,8,Patriot Auto Group,East,Product issue,Wrong item sent,SO-50734,Email,Low,Support,120,Closed
+CS-1055,2026-05-23,2026-05-31,8,Keystone Manufacturing,East,Billing,Discount missing from invoice,SO-50083,Email,Medium,Billing,40,Closed
+CS-1056,2026-05-24,2026-05-27,3,Oakline Veterinary,South,Product issue,Item stopped working,SO-51058,Email,Medium,Support,60,Closed
+CS-1057,2026-05-26,2026-06-09,14,Oakline Veterinary,South,Billing,Wrong billing address,SO-50947,Phone,Medium,Billing,0,Closed
+CS-1058,2026-05-27,2026-05-28,1,Keystone Manufacturing,East,Product issue,Wrong item sent,SO-50311,Phone,Low,Support,0,Closed
+CS-1059,2026-05-29,2026-06-03,5,Granite Realty Group,North,Billing,Invoice copy needed,SO-50519,Email,Medium,Billing,0,Closed
+CS-1060,2026-05-30,2026-06-07,8,Golden State Labs,West,Returns,Return label needed,SO-50343,Email,Medium,Warehouse,0,Closed
+CS-1061,2026-05-30,2026-05-30,0,Patriot Auto Group,East,How-to question,How to download invoices,,Email,Medium,Support,0,Closed
+CS-1062,2026-05-31,2026-06-13,13,Bayview Nonprofit Alliance,West,Billing,Charged twice,SO-50324,Email,High,Billing,0,Closed
+CS-1063,2026-06-02,2026-06-02,0,Birchwood Schools,North,How-to question,How to use saved lists,,Email,Low,Support,0,Closed
+CS-1064,2026-06-02,2026-06-04,2,Birchwood Schools,North,How-to question,How to set up a standing order,,Email,Medium,Support,0,Closed
+CS-1065,2026-06-03,2026-06-05,2,Coastal Credit Union,South,How-to question,How to set up a standing order,,Email,Low,Support,0,Closed
+CS-1066,2026-06-04,2026-06-11,7,Coastal Credit Union,South,Product issue,Item damaged,SO-50370,Email,Low,Support,0,Closed
+CS-1067,2026-06-04,2026-06-17,13,Harbor Fitness Clubs,South,Billing,Charged twice,SO-50429,Chat,Medium,Billing,80,Closed
+CS-1068,2026-06-04,2026-06-07,3,Sunrise Pediatrics,South,Billing,Discount missing from invoice,SO-50831,Email,Medium,Billing,0,Closed
+CS-1069,2026-06-06,2026-06-12,6,Atlantic Charter School,East,Returns,Return request,SO-50390,Phone,Low,Warehouse,0,Closed
+CS-1070,2026-06-06,2026-06-14,8,Pacific Design Studio,West,Returns,Refund not received,SO-50407,Phone,Medium,Warehouse,0,Closed
+CS-1071,2026-06-07,2026-06-15,8,Desert Bloom Clinics,West,Returns,Return label needed,SO-50388,Email,Medium,Warehouse,0,Closed
+CS-1072,2026-06-07,2026-06-07,0,Northgate Insurance Agency,North,How-to question,How to set up a standing order,,Email,Low,Support,0,Closed
+CS-1073,2026-06-08,2026-06-09,1,Oakline Veterinary,South,How-to question,How to set up a standing order,,Email,Low,Support,0,Closed
+CS-1074,2026-06-11,2026-06-11,0,Oakline Veterinary,South,How-to question,How to set up a standing order,,Phone,Low,Support,0,Closed
+CS-1075,2026-06-11,2026-06-13,2,Summit Engineering,North,Delivery,Tracking not updating,SO-50342,Chat,High,Warehouse,50,Closed
+CS-1076,2026-06-12,2026-06-12,0,Gulfview Construction,South,How-to question,How to download invoices,,Email,Low,Support,0,Closed
+CS-1077,2026-06-12,2026-06-18,6,Mesa Family Dental,West,Delivery,Partial delivery,SO-50319,Email,Medium,Warehouse,50,Closed
+CS-1078,2026-06-13,2026-06-15,2,Riverbend Library,North,How-to question,How to download invoices,,Email,Medium,Support,0,Closed
+CS-1079,2026-06-15,2026-06-29,14,Sierra Outdoor Gear,West,Billing,Charged twice,SO-50903,Email,High,Billing,0,Closed
+CS-1080,2026-06-16,2026-06-18,2,Elmwood Senior Living,East,Returns,Return request,SO-50457,Email,Low,Warehouse,0,Closed
+CS-1081,2026-06-17,2026-06-20,3,Hudson Media,East,Product issue,Wrong item sent,SO-50438,Email,Medium,Support,120,Closed
+CS-1082,2026-06-19,2026-06-25,6,Cedar Ridge Accounting,North,Billing,Invoice copy needed,SO-50044,Email,Medium,Billing,40,Closed
+CS-1083,2026-06-19,2026-06-20,1,Canyon Facilities Group,West,Account and login,Password reset,,Email,Medium,Support,0,Closed
+CS-1084,2026-06-20,2026-06-26,6,Magnolia Hotels Group,South,Delivery,Partial delivery,SO-50613,Email,High,Warehouse,50,Closed
+CS-1085,2026-06-21,2026-06-23,2,Desert Bloom Clinics,West,Returns,Return label needed,SO-50490,Phone,Medium,Warehouse,0,Closed
+CS-1086,2026-06-21,2026-06-24,3,Palmetto Realty,South,Billing,Discount missing from invoice,SO-50464,Email,High,Billing,0,Closed
+CS-1087,2026-06-22,2026-07-05,13,Magnolia Hotels Group,South,Billing,Discount missing from invoice,SO-50142,Phone,Medium,Billing,0,Closed
+CS-1088,2026-06-25,2026-06-27,2,Bluebird Coworking,East,Product issue,Item damaged,SO-51015,Chat,Low,Support,0,Closed
+CS-1089,2026-06-25,2026-06-27,2,Oakline Veterinary,South,Delivery,Order not delivered,SO-50127,Email,High,Warehouse,25,Closed
+CS-1090,2026-06-26,2026-06-28,2,Bayview Nonprofit Alliance,West,Account and login,Add a new user,,Phone,Low,Support,0,Closed
+CS-1091,2026-07-03,2026-07-10,7,Sierra Outdoor Gear,West,Product issue,Wrong item sent,SO-50106,Chat,Low,Support,60,Closed
+CS-1092,2026-07-03,2026-07-06,3,Gulfview Construction,South,Delivery,Partial delivery,SO-50561,Email,High,Warehouse,75,Closed
+CS-1093,2026-07-05,2026-07-06,1,Bluebird Coworking,East,Account and login,Add a new user,,Phone,Low,Support,0,Closed
+CS-1094,2026-07-06,2026-07-11,5,Desert Bloom Clinics,West,Delivery,Tracking not updating,SO-50578,Email,High,Warehouse,0,Closed
+CS-1095,2026-07-06,2026-07-07,1,Harbor Fitness Clubs,South,Delivery,Delivery late,SO-50292,Email,Medium,Warehouse,100,Closed
+CS-1096,2026-07-07,2026-07-11,4,Desert Bloom Clinics,West,Returns,Return label needed,SO-50565,Chat,Low,Warehouse,0,Closed
+CS-1097,2026-07-07,2026-07-10,3,Desert Bloom Clinics,West,Delivery,Delivery late,SO-50587,Phone,High,Warehouse,150,Closed
+CS-1098,2026-07-07,2026-07-12,5,Magnolia Hotels Group,South,Billing,Wrong billing address,SO-50978,Email,High,Billing,80,Closed
+CS-1099,2026-07-07,2026-07-07,0,Elmwood Senior Living,East,How-to question,How to download invoices,,Email,Low,Support,0,Closed
+CS-1100,2026-07-08,2026-07-13,5,Desert Bloom Clinics,West,Delivery,Partial delivery,SO-50577,Chat,High,Warehouse,50,Closed
+CS-1101,2026-07-08,2026-07-23,15,Riverbend Library,North,Billing,Charged twice,SO-50500,Phone,High,Billing,80,Closed
+CS-1102,2026-07-08,2026-07-08,0,Birchwood Schools,North,How-to question,How to download invoices,,Email,Low,Support,0,Closed
+CS-1103,2026-07-10,2026-07-12,2,Pacific Design Studio,West,Delivery,Partial delivery,SO-50593,Email,High,Warehouse,150,Closed
+CS-1104,2026-07-10,2026-07-21,11,Granite Realty Group,North,Billing,Charged twice,SO-51020,Phone,Medium,Billing,0,Closed
+CS-1105,2026-07-11,2026-07-17,6,Pioneer Logistics,North,Returns,Return label needed,SO-50609,Email,Low,Warehouse,0,Closed
+CS-1106,2026-07-11,2026-07-13,2,Gulfview Construction,South,Account and login,Cannot log in,,Email,Medium,Support,0,Closed
+CS-1107,2026-07-12,2026-07-20,8,Cedar Ridge Accounting,North,Returns,Return label needed,SO-50633,Email,Low,Warehouse,0,Closed
+CS-1108,2026-07-13,2026-07-16,3,Birchwood Schools,North,Returns,Return label needed,SO-50600,Chat,Low,Warehouse,0,Closed
+CS-1109,2026-07-13,2026-07-16,3,Pacific Design Studio,West,Billing,Invoice copy needed,SO-50642,Email,High,Billing,0,Closed
+CS-1110,2026-07-13,2026-07-13,0,Birchwood Schools,North,How-to question,How to use saved lists,,Chat,Medium,Support,0,Closed
+CS-1111,2026-07-13,2026-07-14,1,Bluebird Coworking,East,How-to question,How to set up a standing order,,Chat,Medium,Support,0,Closed
+CS-1112,2026-07-14,2026-07-15,1,Desert Bloom Clinics,West,Delivery,Partial delivery,SO-50619,Phone,Medium,Warehouse,100,Closed
+CS-1113,2026-07-14,2026-07-20,6,Cedar Ridge Accounting,North,Delivery,Delivery late,SO-50720,Email,Medium,Warehouse,50,Closed
+CS-1114,2026-07-15,2026-07-20,5,Desert Bloom Clinics,West,Delivery,Tracking not updating,SO-50626,Chat,Medium,Warehouse,0,Closed
+CS-1115,2026-07-16,2026-07-20,4,Desert Bloom Clinics,West,Delivery,Order not delivered,SO-50636,Phone,Medium,Warehouse,100,Closed
+CS-1116,2026-07-17,2026-07-17,0,Sunrise Pediatrics,South,How-to question,How to set up a standing order,,Phone,Low,Support,0,Closed
+CS-1117,2026-07-18,2026-07-24,6,Granite Realty Group,North,Returns,Return label needed,SO-50652,Phone,Low,Warehouse,0,Closed
+CS-1118,2026-07-18,2026-07-22,4,Redwood Software,West,Account and login,Password reset,,Phone,Low,Support,0,Closed
+CS-1119,2026-07-19,2026-07-25,6,Magnolia Hotels Group,South,Account and login,Cannot log in,,Phone,Low,Support,0,Closed
+CS-1120,2026-07-20,2026-08-04,15,Keystone Manufacturing,East,Billing,Wrong billing address,SO-50247,Chat,High,Billing,80,Closed
+CS-1121,2026-07-21,2026-07-27,6,Desert Bloom Clinics,West,Delivery,Tracking not updating,SO-50669,Email,High,Warehouse,150,Closed
+CS-1122,2026-07-21,2026-07-22,1,Magnolia Hotels Group,South,Account and login,Add a new user,,Email,Medium,Support,0,Closed
+CS-1123,2026-07-23,2026-07-28,5,Atlantic Charter School,East,Delivery,Order not delivered,SO-50680,Chat,Medium,Warehouse,75,Closed
+CS-1124,2026-07-24,2026-07-26,2,Redwood Software,West,How-to question,How to download invoices,,Chat,Low,Support,0,Closed
+CS-1125,2026-07-25,2026-07-26,1,Elmwood Senior Living,East,Returns,Refund not received,SO-50707,Email,Low,Warehouse,0,Closed
+CS-1126,2026-07-25,2026-08-06,12,Maple Street Dental,North,Billing,Wrong billing address,SO-50912,Phone,High,Billing,80,Closed
+CS-1127,2026-07-25,2026-07-27,2,Canyon Facilities Group,West,Account and login,Cannot log in,,Chat,Low,Support,0,Closed
+CS-1128,2026-07-25,2026-07-28,3,Birchwood Schools,North,Delivery,Partial delivery,SO-51012,Email,Medium,Warehouse,0,Closed
+CS-1129,2026-07-26,2026-08-02,7,Pioneer Logistics,North,Billing,Charged twice,SO-50291,Email,Medium,Billing,40,Closed
+CS-1130,2026-07-26,2026-08-02,7,Riverbend Library,North,Account and login,Cannot log in,,Chat,Medium,Support,0,Closed
+CS-1131,2026-07-26,2026-07-28,2,Hudson Media,East,Product issue,Item stopped working,SO-50392,Email,Low,Support,0,Closed
+CS-1132,2026-07-27,2026-08-01,5,Canyon Facilities Group,West,Delivery,Delivery late,SO-50677,Phone,High,Warehouse,0,Closed
+CS-1133,2026-07-27,2026-07-30,3,Desert Bloom Clinics,West,Delivery,Partial delivery,SO-50681,Email,Medium,Warehouse,25,Closed
+CS-1134,2026-07-27,2026-07-31,4,Maple Street Dental,North,Returns,Refund not received,SO-50696,Email,Low,Warehouse,0,Closed
+CS-1135,2026-07-27,2026-08-05,9,Redwood Software,West,Billing,Charged twice,SO-50554,Email,Medium,Billing,80,Closed
+CS-1136,2026-07-28,2026-07-28,0,Magnolia Hotels Group,South,How-to question,How to download invoices,,Phone,Low,Support,0,Closed
+CS-1137,2026-08-01,2026-08-05,4,Summit Engineering,North,Returns,Return request,SO-50743,Chat,Medium,Warehouse,0,Closed
+CS-1138,2026-08-02,2026-08-02,0,Pacific Design Studio,West,How-to question,How to set up a standing order,,Email,Low,Support,0,Closed
+CS-1139,2026-08-05,2026-08-09,4,Mesa Family Dental,West,Delivery,Delivery late,SO-50737,Email,Medium,Warehouse,0,Closed
+CS-1140,2026-08-05,2026-08-07,2,Patriot Auto Group,East,Product issue,Item stopped working,SO-50750,Chat,Low,Support,120,Closed
+CS-1141,2026-08-06,2026-08-11,5,Desert Bloom Clinics,West,Delivery,Partial delivery,SO-50752,Chat,Medium,Warehouse,150,Closed
+CS-1142,2026-08-06,2026-08-12,6,Sierra Outdoor Gear,West,Delivery,Order not delivered,SO-50760,Email,Medium,Warehouse,50,Closed
+CS-1143,2026-08-06,2026-08-16,10,Pioneer Logistics,North,Billing,Invoice copy needed,SO-50461,Chat,Medium,Billing,80,Closed
+CS-1144,2026-08-07,2026-08-16,9,Coastal Credit Union,South,Billing,Invoice copy needed,SO-50122,Chat,Medium,Billing,0,Closed
+CS-1145,2026-08-10,2026-08-17,7,Magnolia Hotels Group,South,Product issue,Item stopped working,SO-50241,Chat,Low,Support,0,Closed
+CS-1146,2026-08-11,2026-08-17,6,Canyon Facilities Group,West,Delivery,Tracking not updating,SO-50778,Email,Medium,Warehouse,50,Closed
+CS-1147,2026-08-12,2026-08-24,12,Palmetto Realty,South,Billing,Discount missing from invoice,SO-50709,Chat,Medium,Billing,0,Closed
+CS-1148,2026-08-13,2026-08-14,1,Magnolia Hotels Group,South,Returns,Return label needed,SO-50806,Email,Low,Warehouse,0,Closed
+CS-1149,2026-08-14,2026-08-22,8,Bayou Legal Partners,South,Product issue,Wrong item sent,SO-50810,Chat,Low,Support,0,Closed
+CS-1150,2026-08-14,2026-08-17,3,Birchwood Schools,North,Account and login,Password reset,,Email,Medium,Support,0,Closed
+CS-1151,2026-08-14,2026-08-20,6,Coastal Credit Union,South,Account and login,Cannot log in,,Email,Low,Support,0,Closed
+CS-1152,2026-08-14,2026-08-21,7,Harbor Fitness Clubs,South,Product issue,Item damaged,SO-50381,Email,Low,Support,120,Closed
+CS-1153,2026-08-15,2026-08-17,2,Hudson Media,East,How-to question,How to set up a standing order,,Chat,Medium,Support,0,Closed
+CS-1154,2026-08-16,2026-08-29,13,Atlantic Charter School,East,Billing,Invoice copy needed,SO-51010,Phone,Medium,Billing,0,Closed
+CS-1155,2026-08-16,2026-08-21,5,Liberty Architects,East,Account and login,Add a new user,,Email,Low,Support,0,Closed
+CS-1156,2026-08-16,2026-08-18,2,Bayview Nonprofit Alliance,West,How-to question,How to use saved lists,,Phone,Low,Support,0,Closed
+CS-1157,2026-08-17,2026-08-24,7,Sunrise Pediatrics,South,Product issue,Wrong item sent,SO-50831,Email,Medium,Support,0,Closed
+CS-1158,2026-08-17,2026-08-21,4,Elmwood Senior Living,East,Account and login,Add a new user,,Email,Low,Support,0,Closed
+CS-1159,2026-08-18,2026-08-30,12,Patriot Auto Group,East,Billing,Invoice copy needed,SO-50953,Chat,Medium,Billing,0,Closed
+CS-1160,2026-08-19,2026-08-22,3,Bayview Nonprofit Alliance,West,Delivery,Tracking not updating,SO-50838,Email,High,Warehouse,50,Closed
+CS-1161,2026-08-19,2026-08-21,2,Harbor Fitness Clubs,South,How-to question,How to set up a standing order,,Email,Low,Support,0,Closed
+CS-1162,2026-08-22,2026-08-28,6,Desert Bloom Clinics,West,Delivery,Order not delivered,SO-50848,Chat,Medium,Warehouse,0,Closed
+CS-1163,2026-08-22,2026-08-23,1,Sunrise Pediatrics,South,Account and login,Password reset,,Email,Medium,Support,0,Closed
+CS-1164,2026-08-23,2026-08-24,1,Cedar Ridge Accounting,North,Product issue,Item stopped working,SO-50160,Email,Low,Support,0,Closed
+CS-1165,2026-08-25,2026-08-27,2,Riverbend Library,North,How-to question,How to set up a standing order,,Phone,Medium,Support,0,Closed
+CS-1166,2026-08-26,2026-09-01,6,Desert Bloom Clinics,West,Delivery,Delivery late,SO-50874,Email,High,Warehouse,0,Closed
+CS-1167,2026-08-26,2026-08-28,2,Bayview Nonprofit Alliance,West,Product issue,Item stopped working,SO-50854,Email,Medium,Support,120,Closed
+CS-1168,2026-08-27,2026-08-28,1,Canyon Facilities Group,West,How-to question,How to set up a standing order,,Phone,Low,Support,0,Closed
+CS-1169,2026-08-27,2026-08-28,1,Brookside Medical,East,Delivery,Delivery late,SO-50951,Email,Medium,Warehouse,50,Closed
+CS-1170,2026-08-28,2026-09-02,5,Mesa Family Dental,West,Delivery,Tracking not updating,SO-50876,Phone,Medium,Warehouse,75,Closed
+CS-1171,2026-08-30,2026-09-07,8,Desert Bloom Clinics,West,Product issue,Item damaged,SO-50891,Chat,Medium,Support,0,Closed
+CS-1172,2026-08-31,2026-09-07,7,Bluebird Coworking,East,Returns,Return label needed,SO-50901,Email,Low,Warehouse,0,Closed
+CS-1173,2026-08-31,2026-09-10,10,Elmwood Senior Living,East,Billing,Charged twice,SO-50586,Email,Medium,Billing,0,Closed
+CS-1174,2026-08-31,2026-09-01,1,Oakline Veterinary,South,Product issue,Wrong item sent,SO-50219,Email,Low,Support,0,Closed
+CS-1175,2026-09-01,2026-09-05,4,Sierra Outdoor Gear,West,Delivery,Partial delivery,SO-50903,Email,Medium,Warehouse,75,Closed
+CS-1176,2026-09-01,2026-09-03,2,Bluebird Coworking,East,How-to question,How to download invoices,,Email,Low,Support,0,Closed
+CS-1177,2026-09-01,2026-09-03,2,Bluebird Coworking,East,How-to question,How to download invoices,,Email,Low,Support,0,Closed
+CS-1178,2026-09-02,2026-09-07,5,Desert Bloom Clinics,West,Delivery,Order not delivered,SO-50894,Chat,Medium,Warehouse,0,Closed
+CS-1179,2026-09-02,2026-09-04,2,Harbor Fitness Clubs,South,Delivery,Partial delivery,SO-50066,Chat,High,Warehouse,100,Closed
+CS-1180,2026-09-03,2026-09-17,14,Sunrise Pediatrics,South,Billing,Charged twice,SO-50818,Phone,Medium,Billing,80,Closed
+CS-1181,2026-09-03,2026-09-09,6,Elmwood Senior Living,East,Delivery,Tracking not updating,SO-50705,Phone,Medium,Warehouse,25,Closed
+CS-1182,2026-09-04,2026-09-06,2,Sunrise Pediatrics,South,How-to question,How to set up a standing order,,Chat,Medium,Support,0,Closed
+CS-1183,2026-09-05,2026-09-07,2,Liberty Architects,East,How-to question,How to download invoices,,Email,Medium,Support,0,Closed
+CS-1184,2026-09-07,2026-09-08,1,Pacific Design Studio,West,Delivery,Delivery late,SO-50933,Phone,Medium,Warehouse,75,Closed
+CS-1185,2026-09-08,2026-09-14,6,Pacific Design Studio,West,Billing,Wrong billing address,SO-50642,Phone,Medium,Billing,0,Closed
+CS-1186,2026-09-09,2026-09-14,5,Redwood Software,West,Delivery,Order not delivered,SO-50960,Phone,High,Warehouse,0,Closed
+CS-1187,2026-09-09,2026-09-22,13,Oakline Veterinary,South,Billing,Charged twice,SO-50219,Email,High,Billing,0,Closed
+CS-1188,2026-09-09,2026-09-10,1,Magnolia Hotels Group,South,How-to question,How to set up a standing order,,Email,Medium,Support,0,Closed
+CS-1189,2026-09-09,2026-09-14,5,Atlantic Charter School,East,Product issue,Wrong item sent,SO-50448,Email,Medium,Support,0,Closed
+CS-1190,2026-09-09,2026-09-16,7,Hudson Media,East,Product issue,Item damaged,SO-50510,Phone,Low,Support,0,Closed
+CS-1191,2026-09-10,2026-09-17,7,Pacific Design Studio,West,Account and login,Password reset,,Email,Low,Support,0,Closed
+CS-1192,2026-09-10,2026-09-18,8,Riverbend Library,North,Product issue,Wrong item sent,SO-50186,Chat,Low,Support,60,Closed
+CS-1193,2026-09-12,2026-09-14,2,Harbor Fitness Clubs,South,How-to question,How to download invoices,,Email,Low,Support,0,Closed
+CS-1194,2026-09-12,2026-09-18,6,Summit Engineering,North,Delivery,Partial delivery,SO-51036,Phone,High,Warehouse,25,Closed
+CS-1195,2026-09-15,2026-09-18,3,Desert Bloom Clinics,West,Delivery,Order not delivered,SO-50982,Email,Medium,Warehouse,0,Closed
+CS-1196,2026-09-15,2026-09-23,8,Riverbend Library,North,Returns,Return label needed,SO-50988,Email,Low,Warehouse,0,Closed
+CS-1197,2026-09-15,2026-09-19,4,Oakline Veterinary,South,Account and login,Add a new user,,Phone,Low,Support,0,Closed
+CS-1198,2026-09-17,2026-09-23,6,Pacific Design Studio,West,Delivery,Partial delivery,SO-51004,Phone,High,Warehouse,150,Closed
+CS-1199,2026-09-17,2026-09-22,5,Brookside Medical,East,Billing,Discount missing from invoice,SO-50015,Email,Medium,Billing,0,Closed
+CS-1200,2026-09-17,2026-09-21,4,Canyon Facilities Group,West,Billing,Invoice copy needed,SO-50338,Email,Medium,Billing,0,Closed
+CS-1201,2026-09-17,2026-09-19,2,Palmetto Realty,South,How-to question,How to use saved lists,,Chat,Low,Support,0,Closed
+CS-1202,2026-09-18,2026-09-28,10,Coastal Credit Union,South,Billing,Discount missing from invoice,SO-50122,Email,Medium,Billing,40,Closed
+CS-1203,2026-09-19,2026-09-21,2,Bayview Nonprofit Alliance,West,Delivery,Delivery late,SO-51013,Email,Medium,Warehouse,50,Closed
+CS-1204,2026-09-20,,,Magnolia Hotels Group,South,Billing,Invoice copy needed,SO-50716,Chat,Medium,Billing,0,Open
+CS-1205,2026-09-22,2026-09-28,6,Gulfview Construction,South,Returns,Refund not received,SO-51028,Email,Low,Warehouse,0,Closed
+CS-1206,2026-09-23,,,Hudson Media,East,Billing,Invoice copy needed,SO-50392,Phone,Medium,Billing,0,Open
+CS-1207,2026-09-23,2026-09-27,4,Riverbend Library,North,Account and login,Password reset,,Email,Medium,Support,0,Closed
+CS-1208,2026-09-25,2026-09-28,3,Mesa Family Dental,West,Billing,Discount missing from invoice,SO-50558,Email,High,Billing,0,Closed
+CS-1209,2026-09-25,,,Coastal Credit Union,South,Account and login,Password reset,,Phone,Low,Support,0,Open
+CS-1210,2026-09-27,2026-09-28,1,Cedar Ridge Accounting,North,Product issue,Item damaged,SO-51064,Phone,Low,Support,120,Closed
+CS-1211,2026-09-27,,,Canyon Facilities Group,West,Billing,Discount missing from invoice,SO-50450,Email,High,Billing,0,Open
+CS-1212,2026-09-27,2026-09-29,2,Coastal Credit Union,South,Account and login,Password reset,,Email,Medium,Support,0,Closed
+CS-1213,2026-09-29,,,Keystone Manufacturing,East,Billing,Wrong billing address,SO-50311,Email,Medium,Billing,0,Open
+CS-1214,2026-09-30,,,Granite Realty Group,North,Account and login,Cannot log in,,Chat,Low,Support,0,Open
+CS-1215,2026-09-30,2026-09-30,0,Northgate Insurance Agency,North,How-to question,How to download invoices,,Email,Low,Support,0,Closed
+CS-1216,2026-09-30,,,Redwood Software,West,How-to question,How to use saved lists,,Chat,Medium,Support,0,Open

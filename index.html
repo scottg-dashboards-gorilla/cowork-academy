@@ -149,6 +149,7 @@ button.tiny{font-size:13px;padding:6px 11px}
 /* ---- reference row ---- */
 .refrow{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:44px}
 @media(max-width:820px){.refrow{grid-template-columns:1fr}}
+.edbadge{font-family:var(--display);font-weight:700;font-size:13px;background:var(--spark-soft);color:var(--ink);border:1px solid #E5AE1F;border-radius:999px;padding:3px 10px;margin-right:auto}
 .refcard{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px}
 .refcard h3{margin:0 0 6px;font-size:19px}
 .refcard p{color:var(--slate);font-size:14.5px;margin:0 0 12px}
@@ -386,11 +387,6 @@ details.capstone p{margin-top:10px}
         <div class="finder" id="finder">
           <div class="fq">I work in
             <select id="fRole" aria-label="Your role">
-              <option value="guest">guest services</option>
-              <option value="ops">property operations</option>
-              <option value="finance">revenue or finance</option>
-              <option value="growth">sales or marketing</option>
-              <option value="leaders">leading a team</option>
               <option value="other">something else</option>
             </select>
             and I have
@@ -432,7 +428,7 @@ details.capstone p{margin-top:10px}
         <div class="sessgrid" id="sessGrid"></div>
       </div>
       <div class="tabpanel hide" role="tabpanel" id="panel-role" aria-labelledby="tab-role">
-        <p class="tnote">Two hours of missions for vacation rental and hospitality teams, using your own data or the practice data pack.</p>
+        <p class="tnote" id="roleNote"></p>
         <div class="rolegrid" id="roleGrid"></div>
       </div>
       <div class="tabpanel hide" role="tabpanel" id="panel-how" aria-labelledby="tab-how">
@@ -452,8 +448,8 @@ details.capstone p{margin-top:10px}
     <div class="refrow">
       <div class="refcard">
         <h3>Practice data pack</h3>
-        <p>A made-up 12-property rental company, April to September 2026: bookings, guest reviews, maintenance tickets, an owner statement, a guest inbox and more. The Set up mission puts it all in your Cowork Academy folder. There are real patterns hidden inside.</p>
-        <div class="dlinks"><a href="data/cowork-academy-starter.zip" download style="background:var(--spark);border-color:#E5AE1F;color:var(--ink)">Download the starter folder</a><a href="data/bookings.csv" download>bookings.csv</a><a href="data/guest-reviews.csv" download>guest-reviews.csv</a><a href="data/maintenance-tickets.csv" download>maintenance-tickets.csv</a><a href="data/README.txt" target="_blank" rel="noopener">About the data</a></div>
+        <p id="packText"></p>
+        <div class="dlinks" id="packLinks"></div>
       </div>
       <div class="refcard">
         <h3>Three habits for using Claude at work</h3>
@@ -509,7 +505,14 @@ details.capstone p{margin-top:10px}
 </div>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-<script src="course-data.js"></script>
+<script>
+/* Edition: the general course (course-data.js) or a client edition (course-data-<id>.js).
+   ?edition=avari switches and is remembered on this device; ?edition=core switches back. */
+(function(){var KNOWN=['avari'],p=new URLSearchParams(location.search).get('edition'),e='';
+  try{if(p)localStorage.setItem('coworkAcademy.edition',KNOWN.indexOf(p)>=0?p:'');e=localStorage.getItem('coworkAcademy.edition')||'';}catch(x){e=p||'';}
+  if(KNOWN.indexOf(e)<0)e='';
+  document.write('<script src="course-data'+(e?'-'+e:'')+'.js"><\/script>');})();
+</script>
 <script>
 
 /* ---- Sessions (front door): time budget -> missions + credential. Every session ends with the "Spark an idea" mission. ---- */
@@ -520,7 +523,7 @@ const SESSIONS=[
    items:[['setup',0],['safety',0],['intermediate',5],['ideas',0]]},
   {id:'explorer',hours:2,name:'Cowork at Work',cred:'Explorer',
    who:'Busy professionals who want the highlights, applied to their own work.',
-   outcomes:['Use Claude safely at work','Turn a guest inbox into a sorted to-do list','Analyze a spreadsheet and chart it','Build and save your own skill','Leave with an idea for your own job'],
+   outcomes:['Use Claude safely at work',EDITION.explorerOutcome,'Analyze a spreadsheet and chart it','Build and save your own skill','Leave with an idea for your own job'],
    items:[['setup',0],['safety',0],['beginner',7],['intermediate',5],['intermediate',2],['ideas',0]]},
   {id:'essentials',hours:4,name:'Cowork Essentials',cred:'Practitioner',levels:['beginner'],
    who:'Everyone. Your day-one Cowork toolkit.',
@@ -547,7 +550,8 @@ function levelMins(lvl){return GROUPS[lvl].missions.reduce((a,m)=>a+missionMins(
 function fmtHrs(mins){const h=mins/60;return h>=1?('~'+(Math.round(h*10)/10)+' hr'):('~'+mins+' min');}
 const DOCS_URL='https://support.claude.com';
 
-const STORE_KEY="coworkAcademy.v1";
+const STORE_KEY=EDITION.storeKey;
+const IX=EDITION.ideaExample;
 function blank(){return {current:null,progress:{},notes:{},identity:null,registered:false,track:null,capstones:{},feedback:{},howtos:{}};}
 let state=load();
 if(!state.v2){state.progressV1=state.progress;state.progress={};state.howtos={};state.v2=true;state.play=null;state.current=null;try{localStorage.setItem(STORE_KEY,JSON.stringify(state));}catch(e){}}
@@ -565,6 +569,7 @@ async function syncNow(){
   // Reserved keys start with "_" so level-progress counting ignores them.
   const payload=Object.assign({},state.progress||{},{
     _cohort:(state.identity&&state.identity.cohort)||'',
+    _edition:EDITION.id,
     _track:state.track||'',
     _capstones:state.capstones||{},
     _feedback:state.feedback||{},
@@ -701,7 +706,7 @@ function renderList(items,ctx){
   const isSess=ctx.kind==='session';
   html+=`<details class="capstone"><summary>🎯 Optional: show what you made</summary>
     <p>${isSess?'In one line, what did you build, and what idea did you come up with?':'Paste a link to, or a one-line description of, what you built in this level.'} Your program administrator can see this.</p>
-    <input type="text" id="capInput" aria-label="What you made" placeholder="${isSess?'Built a bookings report and chart; idea: automate the Monday summary':'Link or short description'}" value="${esc(getCap(ctx.capKey)).replace(/"/g,'&quot;')}">
+    <input type="text" id="capInput" aria-label="What you made" placeholder="${isSess?esc(EDITION.capPlaceholder):'Link or short description'}" value="${esc(getCap(ctx.capKey)).replace(/"/g,'&quot;')}">
     <div class="saved" id="capSaved"></div></details>`;
   host.innerHTML=html;
   host.querySelectorAll('button[data-ii]').forEach(b=>b.onclick=()=>openPlayer(+b.dataset.ii));
@@ -800,7 +805,7 @@ function renderStep(s,si,n,l,mi){
     <details class="stuck"><summary>Haven't set up the folder yet?</summary><div>Do the <b>Set up Cowork for the Academy</b> mission first. It takes about 10 minutes.</div></details>
     ${navHtml(si,'Ready, next step')}</div>`;
   if(s.type==='do'){
-    const files=(s.files||[]).map(f=>`<a href="data/${f}" download>${f}</a>`).join(', ');
+    const files=(s.files||[]).map(f=>`<a href="${EDITION.dataDir}${f}" download>${f}</a>`).join(', ');
     const link=s.link?`<a class="filebtn" href="${s.link.href}" ${s.link.download?'download':'target="_blank" rel="noopener"'}>${esc(s.link.label)}</a>`:'';
     const prompt=s.prompt?fillTokens(s.prompt):'';
     return `<div class="stepcard">${head}
@@ -846,7 +851,7 @@ function renderStep(s,si,n,l,mi){
     const v=(state.ideaDraft||{});const f=(k,ph,w)=>`<input class="ifield" data-k="${k}" placeholder="${ph}" value="${esc(v[k]||'').replace(/"/g,'&quot;')}" style="width:${w}">`;
     return `<div class="stepcard think">${head}
       <p class="sdo">Fill in the blanks with your best idea from Cowork's list. Good ideas are specific: the task, how often, the time it takes and what Cowork would do.</p>
-      <div class="ibuild">Every ${f('when','Monday morning','11em')} I spend ${f('time','2 hours','7em')} on ${f('task','copying booking numbers into a report','100%')} Cowork could ${f('what','build the report from the export automatically','100%')}</div>
+      <div class="ibuild">Every ${f('when',IX.when,'11em')} I spend ${f('time',IX.time,'7em')} on ${f('task',IX.task,'100%')} Cowork could ${f('what',IX.what,'100%')}</div>
       <div class="ipreview" id="iPreview"></div>
       <div class="files"><button id="iCopy">Copy my idea</button><a class="finbtn" href="${SPARK_URL}" target="_blank" rel="noopener">Open Spark to submit it</a></div>
       <p class="pnote">Your idea is also saved in your idea notebook.</p>
@@ -854,11 +859,11 @@ function renderStep(s,si,n,l,mi){
   }
   return `<div class="stepcard">${head}${navHtml(si,nextLabel)}</div>`;
 }
-const ROLE_LABEL={guest:'guest services and reservations',ops:'property operations',finance:'revenue and finance',growth:'sales, marketing and owner relations',leaders:'leading a team'};
+const ROLE_LABEL=Object.fromEntries(ROLES.map(r=>[r.id,r.label]));
 function fillTokens(t){
   if(!/\{\{/.test(t))return t;
   const rid=(CUR&&CUR.ctx.kind==='session'&&CUR.ctx.sess.id.startsWith('role-'))?CUR.ctx.sess.id.slice(5):(state.finder&&state.finder.role);
-  const role=ROLE_LABEL[rid]||'[your role, e.g. reservations]';
+  const role=ROLE_LABEL[rid]||'[your role, e.g. customer service]';
   const notes=[...new Set(notebookEntries().filter(e=>e.g!=='ideas').map(e=>e.a.replace(/\s+/g,' ').trim()).filter(Boolean))].slice(0,8);
   return t.replace('{{ROLE}}',role).replace('{{NOTES}}',notes.length?'Notes I made while learning Cowork: '+notes.map(n=>'"'+n.slice(0,160)+'"').join('; ')+'. ':'');
 }
@@ -963,6 +968,7 @@ document.querySelectorAll('#tabs [role=tab]').forEach((t,i,all)=>{
   t.onkeydown=e=>{if(e.key!=='ArrowRight'&&e.key!=='ArrowLeft')return;const n=all[(i+(e.key==='ArrowRight'?1:all.length-1))%all.length];n.focus();selectTab(n.id.slice(4));};
 });
 function recommend(role,hours){
+  if(!ROLES.some(r=>r.id===role))role='other';
   if(hours>=8)return {id:'professional',why:'You have time for the full Professional path: workflows, skills, agents and automation.'};
   if(hours>=4)return {id:'essentials',why:'Half a day covers the everyday Cowork toolkit end to end.'};
   if(role!=='other'&&hours>=2)return {id:'role-'+role,why:'Two hours of missions built around your job, with practice data ready to use.'};
@@ -1233,6 +1239,23 @@ function route(){
   if(play&&CUR&&(LEVELS[c]||c.startsWith('s:'))&&CUR.items[play.ii]){state.play=play;showView('player');renderPlayer();}
   else goHome();
 }
+/* Edition-specific wording: role finder, role note, practice data pack, edition badge. */
+(function(){
+  const sel=document.getElementById('fRole');
+  ROLES.forEach((r,i)=>{const o=document.createElement('option');o.value=r.id;o.textContent=r.finder;sel.insertBefore(o,sel.options[i]);});
+  sel.value=ROLES[0].id;
+  document.getElementById('roleNote').textContent=EDITION.roleNote;
+  document.getElementById('packText').textContent=EDITION.dataPack.text;
+  const dd=EDITION.dataDir;
+  document.getElementById('packLinks').innerHTML=`<a href="${dd}cowork-academy-starter.zip" download style="background:var(--spark);border-color:#E5AE1F;color:var(--ink)">Download the starter folder</a>`
+    +EDITION.dataPack.files.map(f=>`<a href="${dd}${f}" download>${f}</a>`).join('')
+    +`<a href="${dd}README.txt" target="_blank" rel="noopener">About the data</a>`;
+  if(EDITION.badge){
+    const b=document.createElement('span');b.className='edbadge';b.textContent=EDITION.badge;
+    document.getElementById('btnHome').after(b);
+    const m=document.querySelector('.more .menu');const x=document.createElement('a');x.className='ghost tiny btn';x.href='?edition=core';x.textContent='Switch to the general course';m.appendChild(x);
+  }
+})();
 if(state.finder){try{document.getElementById('fRole').value=state.finder.role;document.getElementById('fTime').value=state.finder.time;}catch(e){}}
 renderHome();
 renderCapMap();

@@ -143,7 +143,9 @@ function computeRows(){
       cohort:pr._cohort||'',track:pr._track||'',capstones:pr._capstones||{},feedback:pr._feedback||{},idle,stalled,idea,engaged:active,guides,followUp};
   });
 }
-function trackLabel(id){return ({quick:'1h Quick Start',explorer:'2h Cowork at Work',essentials:'4h Essentials',professional:'8h Professional',mastery:'12h Mastery'})[id]||((typeof ROLES!=='undefined'&&ROLES.find(r=>'role-'+r.id===id))?'Role: '+ROLES.find(r=>'role-'+r.id===id).name:'');}
+// Role paths that exist only in a client edition (this page loads the general course-data.js).
+const EDITION_ROLE_NAMES={'role-guest':'Guest Services and Reservations'};
+function trackLabel(id){return ({quick:'1h Quick Start',explorer:'2h Cowork at Work',essentials:'4h Essentials',professional:'8h Professional',mastery:'12h Mastery'})[id]||(EDITION_ROLE_NAMES[id]?'Role: '+EDITION_ROLE_NAMES[id]:'')||((typeof ROLES!=='undefined'&&ROLES.find(r=>'role-'+r.id===id))?'Role: '+ROLES.find(r=>'role-'+r.id===id).name:'');}
 function sortRows(rows){
   rows.sort((a,b)=>{
     let av,bv;

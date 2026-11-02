@@ -21,15 +21,30 @@ Learners enter their name and email once. Checked steps, chosen track, team, cap
 | File | What it is |
 |------|-----------|
 | `index.html` | The course app (UI, progress, sync) |
-| `course-data.js` | All course content (`LEVELS`) — shared by the course and the admin report |
+| `course-data.js` | The general edition's course content (any industry; practice company Lakeview Supply Co.). Generated. |
+| `course-data-avari.js` | The Avari edition (vacation rental), opened at `/avari/`. Generated. |
 | `admin.html` | Passphrase-protected progress report (cohort filter, stalled learners, capstones, CSV export) |
 | `certificate.html` | Certificate of completion, unlocked per level, per track and for full mastery |
 | `OPEN-IN-CLAUDE-CODE.md` | How to open and work on this repo in Claude Code |
 | `supabase/` | Backend source: database migration + admin-report Edge Function |
 | `.github/workflows/keepalive.yml` | Pings Supabase every few days so the free-tier database doesn't pause |
 
+## Editions
+The site is one engine with several content packs. The **general edition** (`course-data.js`, practice data in `data/core/`) is the default at the main URL. A client edition, such as **Avari** (`course-data-avari.js`, practice data in `data/`), opens at `/avari/`. That page sends people to `?edition=avari`, and this device remembers the choice until someone opens `?edition=core`. Each edition saves progress under its own key, and syncs it with `_edition` in the payload.
+
 ## Editing the course
-Edit missions in `course-data.js` — the admin report picks up changes automatically. Progress is stored by position (`missionIndex.stepIndex`), so **add new missions or steps at the end of a level**; reordering or deleting existing ones shifts learners' saved ticks.
+Missions live as JSON in `tools/missions-<edition>/`, alongside `edition.json`, which holds the edition's roles, level text, data pack wording and storage key. To change the course, edit those files and rebuild:
+
+```
+node tools/validate2.js tools/missions-core/out2-beginner.json 10   # check a file
+node tools/build-course-data.js core                                # writes course-data.js
+node tools/build-course-data.js avari                               # writes course-data-avari.js
+node tools/make-core-data.js                                        # general practice data + starter zip + FACTS.md
+```
+
+Progress is stored by position (`missionIndex.stepIndex`), so **add new missions or steps at the end of a level**. Reordering or deleting existing ones shifts learners' saved ticks.
+
+To add a client edition, copy `tools/missions-core` to `tools/missions-<client>` and adapt it. Add the id to `KNOWN` in `index.html`'s edition loader, then add a `<client>/index.html` redirect like `avari/index.html`.
 
 ## Backend
 Supabase project `cowork-academy-tracking` (ref `dptmmtqiedggqzmfsvdh`), in the scottgordon2002 Supabase account. It replaced the original project, which was deleted and recreated by Cowork on 2026-10-30.

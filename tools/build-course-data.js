@@ -1,41 +1,27 @@
-// Rebuilds course-data.js from the current file plus rewritten mission JSON.
-// Usage: node tools/build-course-data.js tools/missions
+// Builds one edition's course data file from its mission JSON.
+// Usage: node tools/build-course-data.js <edition>     (edition = core | avari)
+//   reads  tools/missions-<edition>/{edition.json, out2-*.json, special.json}
+//   writes course-data.js (core, the general edition) or course-data-<edition>.js
+// The SAFETY/IDEAS/SETUP shells (key, icon, name...) come from course-data-avari.js, the original template.
 const fs=require('fs'),vm=require('vm'),path=require('path');
-const dir=process.argv[2];const src=path.join(__dirname,'..','course-data.js');
+const ed=process.argv[2];if(!ed){console.error('usage: node tools/build-course-data.js <core|avari>');process.exit(1);}
+const root=path.join(__dirname,'..');const dir=path.join(__dirname,'missions-'+ed);
+const outFile=path.join(root,ed==='core'?'course-data.js':'course-data-'+ed+'.js');
 const c={};vm.createContext(c);
-vm.runInContext(fs.readFileSync(src,'utf8')+';this.D={LEVELS,IDEAS,SAFETY,ROLES,HOWTOS,SPARK_URL};',c);
+vm.runInContext(fs.readFileSync(path.join(root,'course-data-avari.js'),'utf8')+';this.D={LEVELS,IDEAS,SAFETY,ROLES,HOWTOS,SPARK_URL};',c);
 const D=JSON.parse(JSON.stringify(c.D));
-// guide() runs when the file loads; undo its how-to change so rebuilding is repeatable.
-D.HOWTOS.forEach(h=>{if(/start a new task/.test(h.steps[0].do||''))h.steps.shift();});
 const rd=f=>JSON.parse(fs.readFileSync(path.join(dir,f),'utf8'));
-const pick=(n)=>fs.existsSync(path.join(dir,'out2-'+n+'.json'))?'out2-'+n+'.json':'out-'+n+'.json';
-for(const k of ['beginner','intermediate','higher'])D.LEVELS[k].missions=rd(pick(k));
-const roles=rd(pick('roles'));
-if(fs.existsSync(path.join(dir,'out2-howtos.json')))D.HOWTOS=rd('out2-howtos.json');D.ROLES.forEach((r,i)=>r.missions=roles.slice(i*4,i*4+4));
+const E=rd('edition.json');
+for(const k of ['beginner','intermediate','higher']){D.LEVELS[k].missions=rd('out2-'+k+'.json');Object.assign(D.LEVELS[k],E.levels[k]);}
+const roleMissions=rd('out2-roles.json');
+D.ROLES=E.roles.map((r,i)=>({id:r.id,icon:r.icon,name:r.name,who:r.who,outcomes:r.outcomes,label:r.label,finder:r.finder,missions:roleMissions.slice(i*4,i*4+4)}));
+D.HOWTOS=rd('out2-howtos.json');
 const sp=rd('special.json');
-// Level and role descriptions (workplace projects; no unconfirmed features).
-Object.assign(D.LEVELS.beginner,{name:'Beginner',project:'Your first wins at work',
-  blurb:'New to Cowork? Start here. Make the everyday files your job runs on, a Word letter, a working spreadsheet and a team page, then research, use a skill and connect an app, with every step spelled out.',
-  bullets:['Word letter, team tracker and a one-page team page','Research, a simple logo and your first skill','Connect one company-approved app'],
-  sub:'A guided tour of everyday Cowork using your job and the practice files: real Word and Excel files, a one-page team page, web research, a skill and a connected app.'});
-Object.assign(D.LEVELS.intermediate,{name:'Intermediate',project:'Run a small business with Cowork',
-  blurb:'Comfortable with the basics? Build a small company\'s toolkit: a business brief, a website, your own saved skill, a research brief, data analysis, a deck, a PDF, a scheduled summary and a dashboard.',
-  bullets:['Business brief, website and your own skill','Data analysis, a deck and a client-ready PDF','A scheduled summary and a refreshable dashboard'],
-  sub:'You\'ll build the everyday toolkit of a small vacation rental company, using its brief and the practice data, and learn the habits that make results reliable.'});
-Object.assign(D.LEVELS.higher,{name:'Higher',project:'Build a connected workflow',
-  blurb:'Ready to stretch? Plan and build a connected workflow: a product plan, a multi-page site, a delegation brief, two apps working together, a dashboard, optional browser and desktop control, and a chained workflow.',
-  bullets:['Product plan, multi-page site and a delegation brief','Two apps working together and a dashboard','Optional browser and desktop control, then chain it all'],
-  sub:'For confident users. Prompts are half-written: you decide the goals and what good looks like, and judge the results against them.'});
-const RW={guest:{name:'Guest Services and Reservations'},ops:{name:'Property Operations',who:'For operations coordinators and managers who keep properties guest-ready.',outcomes:['Maintenance cost drivers and repeat problems','A turnover checklist housekeepers can use on a phone','A weekly operations brief']},
- finance:{name:'Revenue and Finance',outcomes:['Bookings analyzed by channel and month','A rate-scenario model with working formulas','An owner statement checked for mistakes']},
- growth:{name:'Sales, Marketing and Owner Relations',outcomes:['A listing-writer skill in your brand voice','A sourced one-page market brief','An owner pitch deck and a monthly owner update']},
- leaders:{name:'Leaders and Managers',outcomes:['A KPI dashboard from the bookings data','A process mapped for automation','A team idea huddle that feeds Spark']}};
-D.ROLES.forEach(r=>Object.assign(r,RW[r.id]||{}));
 const SETUP={key:'setup',cls:'b4',icon:'🧰',name:'Get set up',project:'Your workspace',missions:[sp.setup]};
 D.SAFETY.missions=[sp.safety];D.IDEAS.missions=[sp.ideas];
 const J=v=>JSON.stringify(v,null,2);
-const out=`/* Cowork Academy course content, shared by index.html (the course) and admin.html (the report).
-   Generated by tools/build-course-data.js; edit here or regenerate.
+const out=`/* Cowork Academy course content (${ed} edition), shared by index.html (the course) and admin.html (the report).
+   Generated by tools/build-course-data.js ${ed} from tools/missions-${ed}/. Edit the JSON there and rebuild.
 
    Missions are guided: each has steps the learner does one at a time.
      {type:"do", title, do, prompt?, see, stuck?, files?}  an action in Cowork
@@ -43,6 +29,9 @@ const out=`/* Cowork Academy course content, shared by index.html (the course) a
      {type:"quiz", ...}, {type:"idea"}                       special steps (safety quiz, idea builder)
    guide() below adds a "start a new task" step first and a reflection step last, unless a mission opts out.
    Progress is stored by POSITION ("missionIndex.stepIndex"), so add missions/steps at the END of a group. */
+
+/* Edition settings: which practice data, where progress is stored, and edition-specific wording. */
+const EDITION = ${J(E.edition)};
 
 const LEVELS = ${J(D.LEVELS)};
 
@@ -55,7 +44,7 @@ const SAFETY = ${J(D.SAFETY)};
 /* "Spark your ideas" closes every session. Progress key: "ideas". */
 const IDEAS = ${J(D.IDEAS)};
 
-/* Paths by role (vacation rental and hospitality). Progress key: "role-<id>". */
+/* ${E.edition.rolesComment}. Progress key: "role-<id>". */
 const ROLES = ${J(D.ROLES)};
 
 /* How-to guides: short walkthroughs. Progress is stored by guide id. */
@@ -73,4 +62,4 @@ const SPARK_URL = ${J(D.SPARK_URL)};
   HOWTOS.forEach(h=>h.steps.unshift({do:"In Cowork, start a new task in your Cowork Academy folder.",see:"An empty task with a message box, ready for your first message.",stuck:"Haven't set up the folder yet? Do the \\"Set up Cowork for the Academy\\" mission first. It takes about 10 minutes."}));
 })();
 `;
-fs.writeFileSync(src,out);console.log('wrote',src);
+fs.writeFileSync(outFile,out);console.log('wrote',outFile);

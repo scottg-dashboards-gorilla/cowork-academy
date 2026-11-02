@@ -1,0 +1,130 @@
+{
+ "edition": {
+  "id": "avari",
+  "storeKey": "coworkAcademy.v1",
+  "dataDir": "data/",
+  "badge": "Avari edition",
+  "company": "a vacation rental company",
+  "dataPack": {
+   "title": "Practice data pack",
+   "text": "A made-up 12-property rental company, April to September 2026: bookings, guest reviews, maintenance tickets, an owner statement, a guest inbox and more. The Set up mission puts it all in your Cowork Academy folder. There are real patterns hidden inside.",
+   "files": [
+    "bookings.csv",
+    "guest-reviews.csv",
+    "maintenance-tickets.csv"
+   ]
+  },
+  "roleNote": "Two hours of missions for vacation rental and hospitality teams, using your own data or the practice data pack.",
+  "explorerOutcome": "Turn a guest inbox into a sorted to-do list",
+  "capPlaceholder": "Built a bookings report and chart; idea: automate the Monday summary",
+  "ideaExample": {
+   "when": "Monday morning",
+   "time": "2 hours",
+   "task": "copying booking numbers into a report",
+   "what": "build the report from the export automatically"
+  },
+  "rolesComment": "Paths by role (vacation rental and hospitality)"
+ },
+ "levels": {
+  "beginner": {
+   "name": "Beginner",
+   "project": "Your first wins at work",
+   "blurb": "New to Cowork? Start here. Make the everyday files your job runs on, a Word letter, a working spreadsheet and a team page, then research, use a skill and connect an app, with every step spelled out.",
+   "bullets": [
+    "Word letter, team tracker and a one-page team page",
+    "Research, a simple logo and your first skill",
+    "Connect one company-approved app"
+   ],
+   "sub": "A guided tour of everyday Cowork using your job and the practice files: real Word and Excel files, a one-page team page, web research, a skill and a connected app."
+  },
+  "intermediate": {
+   "name": "Intermediate",
+   "project": "Run a small business with Cowork",
+   "blurb": "Comfortable with the basics? Build a small company's toolkit: a business brief, a website, your own saved skill, a research brief, data analysis, a deck, a PDF, a scheduled summary and a dashboard.",
+   "bullets": [
+    "Business brief, website and your own skill",
+    "Data analysis, a deck and a client-ready PDF",
+    "A scheduled summary and a refreshable dashboard"
+   ],
+   "sub": "You'll build the everyday toolkit of a small vacation rental company, using its brief and the practice data, and learn the habits that make results reliable."
+  },
+  "higher": {
+   "name": "Higher",
+   "project": "Build a connected workflow",
+   "blurb": "Ready to stretch? Plan and build a connected workflow: a product plan, a multi-page site, a delegation brief, two apps working together, a dashboard, optional browser and desktop control, and a chained workflow.",
+   "bullets": [
+    "Product plan, multi-page site and a delegation brief",
+    "Two apps working together and a dashboard",
+    "Optional browser and desktop control, then chain it all"
+   ],
+   "sub": "For confident users. Prompts are half-written: you decide the goals and what good looks like, and judge the results against them."
+  }
+ },
+ "roles": [
+  {
+   "id": "guest",
+   "icon": "🛎️",
+   "name": "Guest Services and Reservations",
+   "who": "For people who answer guests, handle bookings and keep reviews high.",
+   "outcomes": [
+    "A saved skill that drafts on-policy guest replies",
+    "Review themes and fixes by property",
+    "A house guide and a sorted inbox"
+   ],
+   "label": "guest services and reservations",
+   "finder": "guest services"
+  },
+  {
+   "id": "ops",
+   "icon": "🧰",
+   "name": "Property Operations",
+   "who": "For operations coordinators and managers who keep properties guest-ready.",
+   "outcomes": [
+    "Maintenance cost drivers and repeat problems",
+    "A turnover checklist housekeepers can use on a phone",
+    "A weekly operations brief"
+   ],
+   "label": "property operations",
+   "finder": "property operations"
+  },
+  {
+   "id": "finance",
+   "icon": "📈",
+   "name": "Revenue and Finance",
+   "who": "For revenue managers, accounting and anyone who owns the numbers.",
+   "outcomes": [
+    "Bookings analyzed by channel and month",
+    "A rate-scenario model with working formulas",
+    "An owner statement checked for mistakes"
+   ],
+   "label": "revenue and finance",
+   "finder": "revenue or finance"
+  },
+  {
+   "id": "growth",
+   "icon": "📣",
+   "name": "Sales, Marketing and Owner Relations",
+   "who": "For people who win owners, fill calendars and tell the company's story.",
+   "outcomes": [
+    "A listing-writer skill in your brand voice",
+    "A sourced one-page market brief",
+    "An owner pitch deck and a monthly owner update"
+   ],
+   "label": "sales, marketing and owner relations",
+   "finder": "sales or marketing"
+  },
+  {
+   "id": "leaders",
+   "icon": "🧭",
+   "name": "Leaders and Managers",
+   "who": "For anyone who runs a team and wants their people bringing AI ideas forward.",
+   "outcomes": [
+    "A KPI dashboard from the bookings data",
+    "A process mapped for automation",
+    "A team idea huddle that feeds Spark"
+   ],
+   "label": "leading a team",
+   "finder": "leading a team"
+  }
+ ]
+}

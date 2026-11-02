@@ -1,0 +1,10 @@
+const fs=require('fs');const [,,f,n]=process.argv;const base=require('child_process').spawnSync('node',[__dirname+'/validate.js',f,n||'']).stdout.toString();
+const errs=base.startsWith('OK')?[]:base.trim().split('\n');
+const a=JSON.parse(fs.readFileSync(f,'utf8'));const chk=a.map(m=>m.steps.find(s=>s.type==='check')).filter(Boolean);
+let longest=0;const pos=[0,0,0];
+chk.forEach((c,i)=>{pos[c.answer]++;const L=c.options.map(o=>o.length);if(L[c.answer]===Math.max(...L)&&L.filter(x=>x===L[c.answer]).length===1)longest++;});
+if(longest>Math.ceil(chk.length*0.34))errs.push(`correct answer is the single longest option in ${longest}/${chk.length} checks (max ${Math.ceil(chk.length*0.34)})`);
+pos.forEach((p,i)=>{if(chk.length>=6&&p<Math.floor(chk.length*0.2))errs.push(`answer position ${i} used only ${p}/${chk.length} times`);});
+const t=JSON.stringify(a);for(const [re,msg] of [[/____/,'uses ____'],[/\blive dashboard/i,'says "live dashboard"'],[/read-only/i,'promises read-only'],[/personal account/i,'mentions a personal account'],[/conversation/i,'says conversation (use task)'],[/r[ée]sum[ée]/i,'résumé is a personal project'],[/ask Cowork how/i,'"ask Cowork how" fallback']])if(re.test(t))errs.push(msg);
+a.forEach((m,i)=>{if(/&|^bonus/i.test(m.t))errs.push(`mission ${i+1} title has & or Bonus`);});
+console.log(errs.length?errs.join('\n'):'OK '+a.length+' missions, answer positions '+pos.join('/')+', longest-correct '+longest);process.exit(errs.length?1:0);

@@ -1,0 +1,1103 @@
+order_id,order_date,customer,region,channel,product_line,units,unit_price,discount_pct,order_value,carrier,days_to_deliver,status,revenue,sales_rep
+SO-50001,2026-04-01,Bluebird Coworking,East,Online store,Tech accessories,10,15.12,0,151,Northline Freight,3,Delivered,151,
+SO-50002,2026-04-01,Sierra Outdoor Gear,West,Online store,Office supplies,60,18.26,0,1096,SwiftRoute,4,Delivered,1096,
+SO-50003,2026-04-01,Maple Street Dental,North,Online store,Tech accessories,11,56.43,5,590,Northline Freight,2,Delivered,590,
+SO-50004,2026-04-01,Riverbend Library,North,Online store,Office supplies,38,23.14,0,879,ParcelPro,2,Delivered,879,
+SO-50005,2026-04-01,Cedar Ridge Accounting,North,Online store,Tech accessories,23,41.46,0,954,ParcelPro,4,Delivered,954,
+SO-50006,2026-04-01,Mesa Family Dental,West,Phone,Furniture,8,264.00,0,2112,Northline Freight,3,Delivered,2112,Felix T.
+SO-50007,2026-04-01,Keystone Manufacturing,East,Marketplace,Office supplies,22,18.01,0,396,ParcelPro,2,Delivered,396,
+SO-50008,2026-04-01,Elmwood Senior Living,East,Marketplace,Tech accessories,4,17.10,0,68,Northline Freight,4,Delivered,68,
+SO-50009,2026-04-01,Hudson Media,East,Online store,Office supplies,14,12.84,0,180,Northline Freight,4,Returned,0,
+SO-50010,2026-04-02,Bayou Legal Partners,South,Sales rep,Office supplies,53,20.96,15,944,ParcelPro,3,Returned,0,Carmen D.
+SO-50011,2026-04-02,Mesa Family Dental,West,Marketplace,Tech accessories,10,77.10,0,771,,,Cancelled,0,
+SO-50012,2026-04-02,Bayou Legal Partners,South,Online store,Office supplies,35,11.81,5,393,ParcelPro,3,Delivered,393,
+SO-50013,2026-04-02,Bayou Legal Partners,South,Online store,Office supplies,27,19.71,0,532,ParcelPro,4,Delivered,532,
+SO-50014,2026-04-02,Redwood Software,West,Online store,Furniture,3,339.87,0,1020,SwiftRoute,4,Delivered,1020,
+SO-50015,2026-04-02,Brookside Medical,East,Marketplace,Office supplies,27,12.45,0,336,Northline Freight,3,Delivered,336,
+SO-50016,2026-04-02,Canyon Facilities Group,West,Online store,Cleaning and facilities,73,21.07,0,1538,SwiftRoute,5,Delivered,1538,
+SO-50017,2026-04-03,Hudson Media,East,Online store,Tech accessories,4,78.75,0,315,ParcelPro,3,Delivered,315,
+SO-50018,2026-04-03,Desert Bloom Clinics,West,Online store,Furniture,17,316.93,0,5388,Northline Freight,4,Delivered,5388,
+SO-50019,2026-04-03,Pacific Design Studio,West,Online store,Tech accessories,14,91.70,0,1284,Northline Freight,4,Delivered,1284,
+SO-50020,2026-04-03,Desert Bloom Clinics,West,Phone,Tech accessories,26,107.37,0,2792,SwiftRoute,5,Delivered,2792,Felix T.
+SO-50021,2026-04-03,Coastal Credit Union,South,Marketplace,Office supplies,9,22.09,5,189,,,Cancelled,0,
+SO-50022,2026-04-03,Redwood Software,West,Online store,Office supplies,35,22.40,0,784,Northline Freight,4,Delivered,784,
+SO-50023,2026-04-06,Palmetto Realty,South,Online store,Office supplies,56,6.73,0,377,Northline Freight,4,Delivered,377,
+SO-50024,2026-04-06,Canyon Facilities Group,West,Online store,Service plans,1,1363.56,0,1364,,,Delivered,1364,
+SO-50025,2026-04-06,Elmwood Senior Living,East,Online store,Office supplies,53,17.47,0,926,ParcelPro,3,Delivered,926,
+SO-50026,2026-04-06,Birchwood Schools,North,Marketplace,Cleaning and facilities,42,15.04,0,632,Northline Freight,4,Delivered,632,
+SO-50027,2026-04-06,Riverbend Library,North,Marketplace,Cleaning and facilities,41,25.64,0,1051,ParcelPro,2,Delivered,1051,
+SO-50028,2026-04-06,Keystone Manufacturing,East,Online store,Service plans,1,1095.70,5,1041,,,Delivered,1041,
+SO-50029,2026-04-06,Gulfview Construction,South,Online store,Service plans,1,1768.42,0,1768,,,Cancelled,0,
+SO-50030,2026-04-06,Desert Bloom Clinics,West,Online store,Cleaning and facilities,66,26.09,0,1722,SwiftRoute,3,Delivered,1722,
+SO-50031,2026-04-06,Gulfview Construction,South,Marketplace,Office supplies,56,11.48,5,611,Northline Freight,4,Delivered,611,
+SO-50032,2026-04-06,Oakline Veterinary,South,Marketplace,Office supplies,56,22.62,0,1267,Northline Freight,2,Delivered,1267,
+SO-50033,2026-04-06,Palmetto Realty,South,Phone,Furniture,12,601.43,0,7217,ParcelPro,3,Delivered,7217,Carmen D.
+SO-50034,2026-04-07,Northgate Insurance Agency,North,Online store,Service plans,1,2051.15,5,1949,,,Delivered,1949,
+SO-50035,2026-04-07,Keystone Manufacturing,East,Phone,Service plans,1,1660.85,0,1661,,,Delivered,1661,Erin S.
+SO-50036,2026-04-07,Redwood Software,West,Online store,Office supplies,14,8.91,0,125,SwiftRoute,4,Delivered,125,
+SO-50037,2026-04-07,Liberty Architects,East,Marketplace,Tech accessories,27,98.13,0,2650,Northline Freight,2,Delivered,2650,
+SO-50038,2026-04-07,Sierra Outdoor Gear,West,Marketplace,Office supplies,23,24.56,0,565,SwiftRoute,4,Delivered,565,
+SO-50039,2026-04-07,Desert Bloom Clinics,West,Online store,Furniture,9,461.94,0,4157,SwiftRoute,4,Delivered,4157,
+SO-50040,2026-04-07,Bayou Legal Partners,South,Online store,Furniture,8,618.94,5,4704,ParcelPro,3,Delivered,4704,
+SO-50041,2026-04-07,Bayou Legal Partners,South,Online store,Office supplies,9,20.00,0,180,Northline Freight,3,Delivered,180,
+SO-50042,2026-04-07,Mesa Family Dental,West,Sales rep,Office supplies,51,7.39,10,339,SwiftRoute,3,Delivered,339,Felix T.
+SO-50043,2026-04-07,Hudson Media,East,Marketplace,Furniture,12,210.60,0,2527,ParcelPro,4,Delivered,2527,
+SO-50044,2026-04-07,Cedar Ridge Accounting,North,Online store,Office supplies,34,16.14,0,549,ParcelPro,4,Delivered,549,
+SO-50045,2026-04-08,Bayou Legal Partners,South,Phone,Service plans,1,905.40,0,905,,,Delivered,905,Carmen D.
+SO-50046,2026-04-08,Gulfview Construction,South,Phone,Office supplies,41,8.64,0,354,ParcelPro,3,Delivered,354,Carmen D.
+SO-50047,2026-04-08,Patriot Auto Group,East,Online store,Service plans,1,739.74,0,740,,,Delivered,740,
+SO-50048,2026-04-08,Maple Street Dental,North,Sales rep,Office supplies,26,12.45,15,275,Northline Freight,2,Delivered,275,Ben K.
+SO-50049,2026-04-08,Cedar Ridge Accounting,North,Online store,Cleaning and facilities,76,13.30,0,1011,Northline Freight,2,Delivered,1011,
+SO-50050,2026-04-08,Oakline Veterinary,South,Online store,Tech accessories,6,114.50,0,687,ParcelPro,2,Delivered,687,
+SO-50051,2026-04-08,Cedar Ridge Accounting,North,Phone,Cleaning and facilities,41,22.91,0,939,Northline Freight,3,Delivered,939,Alicia R.
+SO-50052,2026-04-08,Bluebird Coworking,East,Online store,Tech accessories,11,117.54,0,1293,Northline Freight,4,Delivered,1293,
+SO-50053,2026-04-08,Northgate Insurance Agency,North,Online store,Office supplies,13,8.18,0,106,ParcelPro,3,Delivered,106,
+SO-50054,2026-04-08,Desert Bloom Clinics,West,Phone,Tech accessories,29,49.55,5,1365,SwiftRoute,3,Delivered,1365,Felix T.
+SO-50055,2026-04-08,Granite Realty Group,North,Online store,Furniture,12,547.92,5,6246,ParcelPro,4,Delivered,6246,
+SO-50056,2026-04-09,Magnolia Hotels Group,South,Phone,Furniture,6,168.90,0,1013,ParcelPro,3,Delivered,1013,Carmen D.
+SO-50057,2026-04-09,Birchwood Schools,North,Sales rep,Tech accessories,43,92.91,15,3396,ParcelPro,2,Delivered,3396,Alicia R.
+SO-50058,2026-04-09,Desert Bloom Clinics,West,Phone,Office supplies,71,21.44,0,1522,SwiftRoute,5,Delivered,1522,Felix T.
+SO-50059,2026-04-09,Cedar Ridge Accounting,North,Phone,Service plans,1,2327.46,0,2327,,,Delivered,2327,Ben K.
+SO-50060,2026-04-09,Mesa Family Dental,West,Phone,Office supplies,36,22.47,5,768,Northline Freight,3,Delivered,768,Felix T.
+SO-50061,2026-04-09,Patriot Auto Group,East,Marketplace,Cleaning and facilities,18,8.47,0,152,ParcelPro,2,Delivered,152,
+SO-50062,2026-04-09,Keystone Manufacturing,East,Sales rep,Service plans,1,1132.73,15,963,,,Delivered,963,Erin S.
+SO-50063,2026-04-09,Keystone Manufacturing,East,Online store,Office supplies,45,9.67,0,435,Northline Freight,2,Delivered,435,
+SO-50064,2026-04-09,Cedar Ridge Accounting,North,Sales rep,Office supplies,37,5.95,15,187,Northline Freight,4,Delivered,187,Ben K.
+SO-50065,2026-04-10,Pacific Design Studio,West,Sales rep,Office supplies,12,24.81,15,253,Northline Freight,2,Delivered,253,Felix T.
+SO-50066,2026-04-10,Harbor Fitness Clubs,South,Sales rep,Office supplies,102,13.74,5,1331,Northline Freight,2,Delivered,1331,Carmen D.
+SO-50067,2026-04-10,Pioneer Logistics,North,Online store,Service plans,1,1206.54,0,1207,,,Delivered,1207,
+SO-50068,2026-04-10,Liberty Architects,East,Online store,Cleaning and facilities,44,27.10,0,1192,ParcelPro,3,Delivered,1192,
+SO-50069,2026-04-10,Liberty Architects,East,Online store,Furniture,5,578.37,0,2892,Northline Freight,4,Delivered,2892,
+SO-50070,2026-04-10,Keystone Manufacturing,East,Online store,Office supplies,53,15.34,0,813,ParcelPro,3,Delivered,813,
+SO-50071,2026-04-10,Elmwood Senior Living,East,Online store,Office supplies,22,14.13,0,311,ParcelPro,2,Delivered,311,
+SO-50072,2026-04-10,Brookside Medical,East,Sales rep,Tech accessories,44,87.31,15,3265,Northline Freight,2,Delivered,3265,David M.
+SO-50073,2026-04-10,Mesa Family Dental,West,Marketplace,Office supplies,21,23.72,5,473,SwiftRoute,4,Delivered,473,
+SO-50074,2026-04-13,Elmwood Senior Living,East,Marketplace,Office supplies,29,10.41,0,302,ParcelPro,4,Delivered,302,
+SO-50075,2026-04-13,Cedar Ridge Accounting,North,Online store,Office supplies,52,17.15,0,892,ParcelPro,2,Delivered,892,
+SO-50076,2026-04-13,Liberty Architects,East,Phone,Cleaning and facilities,14,13.27,0,186,ParcelPro,4,Delivered,186,David M.
+SO-50077,2026-04-13,Canyon Facilities Group,West,Marketplace,Tech accessories,6,20.56,0,123,,,Cancelled,0,
+SO-50078,2026-04-13,Coastal Credit Union,South,Marketplace,Tech accessories,26,47.32,5,1169,ParcelPro,3,Delivered,1169,
+SO-50079,2026-04-13,Magnolia Hotels Group,South,Online store,Service plans,1,2209.15,5,2099,,,Delivered,2099,
+SO-50080,2026-04-13,Desert Bloom Clinics,West,Sales rep,Service plans,1,2088.01,5,1984,,,Delivered,1984,Felix T.
+SO-50081,2026-04-13,Brookside Medical,East,Sales rep,Office supplies,71,15.57,10,995,ParcelPro,2,Delivered,995,Erin S.
+SO-50082,2026-04-13,Coastal Credit Union,South,Online store,Office supplies,18,4.44,5,76,,,Cancelled,0,
+SO-50083,2026-04-14,Keystone Manufacturing,East,Online store,Service plans,1,2186.09,5,2077,,,Delivered,2077,
+SO-50084,2026-04-14,Northgate Insurance Agency,North,Online store,Tech accessories,12,75.75,5,864,Northline Freight,4,Delivered,864,
+SO-50085,2026-04-14,Maple Street Dental,North,Phone,Office supplies,35,23.67,0,828,Northline Freight,4,Delivered,828,Ben K.
+SO-50086,2026-04-14,Desert Bloom Clinics,West,Sales rep,Furniture,5,170.14,10,766,SwiftRoute,3,Returned,0,Felix T.
+SO-50087,2026-04-14,Desert Bloom Clinics,West,Sales rep,Cleaning and facilities,30,8.42,5,240,SwiftRoute,4,Delivered,240,Felix T.
+SO-50088,2026-04-14,Sunrise Pediatrics,South,Online store,Office supplies,38,7.45,0,283,Northline Freight,4,Delivered,283,
+SO-50089,2026-04-14,Northgate Insurance Agency,North,Online store,Tech accessories,22,15.94,0,351,ParcelPro,2,Delivered,351,
+SO-50090,2026-04-15,Keystone Manufacturing,East,Online store,Office supplies,21,14.95,0,314,Northline Freight,2,Delivered,314,
+SO-50091,2026-04-15,Patriot Auto Group,East,Phone,Cleaning and facilities,36,8.15,0,293,Northline Freight,4,Delivered,293,David M.
+SO-50092,2026-04-15,Magnolia Hotels Group,South,Sales rep,Office supplies,14,6.53,10,82,Northline Freight,4,Delivered,82,Carmen D.
+SO-50093,2026-04-15,Patriot Auto Group,East,Marketplace,Tech accessories,5,115.02,0,575,ParcelPro,2,Returned,0,
+SO-50094,2026-04-15,Sierra Outdoor Gear,West,Marketplace,Office supplies,52,21.10,0,1097,SwiftRoute,4,Delivered,1097,
+SO-50095,2026-04-15,Desert Bloom Clinics,West,Online store,Office supplies,81,5.56,0,450,Northline Freight,3,Delivered,450,
+SO-50096,2026-04-15,Canyon Facilities Group,West,Online store,Tech accessories,21,112.78,0,2368,Northline Freight,3,Delivered,2368,
+SO-50097,2026-04-15,Birchwood Schools,North,Phone,Service plans,1,2191.04,0,2191,,,Cancelled,0,Alicia R.
+SO-50098,2026-04-15,Pioneer Logistics,North,Online store,Office supplies,24,20.56,0,493,ParcelPro,2,Delivered,493,
+SO-50099,2026-04-15,Hudson Media,East,Sales rep,Cleaning and facilities,17,16.49,15,238,Northline Freight,2,Returned,0,David M.
+SO-50100,2026-04-16,Desert Bloom Clinics,West,Marketplace,Office supplies,39,19.34,5,717,SwiftRoute,5,Delivered,717,
+SO-50101,2026-04-16,Maple Street Dental,North,Marketplace,Cleaning and facilities,20,21.22,0,424,ParcelPro,4,Delivered,424,
+SO-50102,2026-04-16,Harbor Fitness Clubs,South,Online store,Office supplies,46,8.61,0,396,Northline Freight,4,Delivered,396,
+SO-50103,2026-04-16,Sierra Outdoor Gear,West,Online store,Furniture,8,333.60,0,2669,SwiftRoute,3,Delivered,2669,
+SO-50104,2026-04-16,Granite Realty Group,North,Marketplace,Tech accessories,13,68.37,0,889,Northline Freight,4,Delivered,889,
+SO-50105,2026-04-16,Atlantic Charter School,East,Sales rep,Service plans,1,1279.20,15,1087,,,Delivered,1087,Erin S.
+SO-50106,2026-04-16,Sierra Outdoor Gear,West,Sales rep,Office supplies,99,12.14,10,1082,SwiftRoute,4,Delivered,1082,Felix T.
+SO-50107,2026-04-16,Bayview Nonprofit Alliance,West,Marketplace,Cleaning and facilities,27,11.25,0,304,,,Cancelled,0,
+SO-50108,2026-04-16,Northgate Insurance Agency,North,Online store,Cleaning and facilities,70,14.75,5,981,Northline Freight,3,Delivered,981,
+SO-50109,2026-04-16,Sierra Outdoor Gear,West,Online store,Cleaning and facilities,19,10.67,5,193,SwiftRoute,4,Delivered,193,
+SO-50110,2026-04-16,Atlantic Charter School,East,Phone,Office supplies,21,16.73,0,351,Northline Freight,3,Delivered,351,Erin S.
+SO-50111,2026-04-17,Birchwood Schools,North,Sales rep,Office supplies,87,5.84,15,432,Northline Freight,4,Delivered,432,Ben K.
+SO-50112,2026-04-17,Pioneer Logistics,North,Phone,Service plans,1,988.57,0,989,,,Delivered,989,Ben K.
+SO-50113,2026-04-17,Redwood Software,West,Phone,Tech accessories,22,98.81,5,2065,SwiftRoute,4,Delivered,2065,Felix T.
+SO-50114,2026-04-17,Northgate Insurance Agency,North,Marketplace,Tech accessories,3,38.08,0,114,ParcelPro,4,Delivered,114,
+SO-50115,2026-04-17,Bluebird Coworking,East,Marketplace,Cleaning and facilities,78,23.12,0,1803,ParcelPro,4,Delivered,1803,
+SO-50116,2026-04-17,Palmetto Realty,South,Online store,Service plans,1,1395.25,5,1325,,,Delivered,1325,
+SO-50117,2026-04-17,Birchwood Schools,North,Marketplace,Tech accessories,13,24.81,0,323,Northline Freight,2,Delivered,323,
+SO-50118,2026-04-17,Sunrise Pediatrics,South,Phone,Tech accessories,30,33.86,5,965,Northline Freight,2,Delivered,965,Carmen D.
+SO-50119,2026-04-20,Patriot Auto Group,East,Online store,Service plans,1,846.09,0,846,,,Delivered,846,
+SO-50120,2026-04-20,Birchwood Schools,North,Online store,Cleaning and facilities,36,13.07,0,471,Northline Freight,3,Delivered,471,
+SO-50121,2026-04-20,Keystone Manufacturing,East,Online store,Service plans,1,1796.04,0,1796,,,Delivered,1796,
+SO-50122,2026-04-20,Coastal Credit Union,South,Marketplace,Furniture,7,181.73,0,1272,ParcelPro,4,Delivered,1272,
+SO-50123,2026-04-20,Desert Bloom Clinics,West,Marketplace,Office supplies,18,8.47,0,152,SwiftRoute,4,Delivered,152,
+SO-50124,2026-04-20,Liberty Architects,East,Online store,Office supplies,13,16.45,0,214,ParcelPro,3,Delivered,214,
+SO-50125,2026-04-20,Desert Bloom Clinics,West,Sales rep,Service plans,1,1592.51,10,1433,,,Delivered,1433,Felix T.
+SO-50126,2026-04-20,Hudson Media,East,Online store,Service plans,1,1119.42,0,1119,,,Delivered,1119,
+SO-50127,2026-04-20,Oakline Veterinary,South,Phone,Furniture,7,366.89,0,2568,ParcelPro,4,Delivered,2568,Carmen D.
+SO-50128,2026-04-21,Golden State Labs,West,Sales rep,Tech accessories,46,77.62,5,3392,Northline Freight,3,Delivered,3392,Felix T.
+SO-50129,2026-04-21,Desert Bloom Clinics,West,Marketplace,Cleaning and facilities,53,27.77,0,1472,SwiftRoute,4,Delivered,1472,
+SO-50130,2026-04-21,Northgate Insurance Agency,North,Sales rep,Tech accessories,14,23.98,5,319,Northline Freight,2,Delivered,319,Ben K.
+SO-50131,2026-04-21,Granite Realty Group,North,Marketplace,Office supplies,29,5.06,0,147,Northline Freight,3,Delivered,147,
+SO-50132,2026-04-21,Mesa Family Dental,West,Sales rep,Furniture,2,471.54,10,849,SwiftRoute,5,Delivered,849,Felix T.
+SO-50133,2026-04-21,Keystone Manufacturing,East,Sales rep,Office supplies,80,7.17,5,545,ParcelPro,3,Delivered,545,David M.
+SO-50134,2026-04-21,Harbor Fitness Clubs,South,Online store,Tech accessories,6,74.68,0,448,ParcelPro,4,Delivered,448,
+SO-50135,2026-04-21,Oakline Veterinary,South,Online store,Office supplies,26,18.98,0,493,Northline Freight,3,Delivered,493,
+SO-50136,2026-04-21,Keystone Manufacturing,East,Online store,Service plans,1,1120.45,5,1064,,,Delivered,1064,
+SO-50137,2026-04-21,Desert Bloom Clinics,West,Online store,Tech accessories,17,59.34,0,1009,SwiftRoute,3,Delivered,1009,
+SO-50138,2026-04-21,Bluebird Coworking,East,Online store,Cleaning and facilities,18,17.68,5,302,ParcelPro,3,Delivered,302,
+SO-50139,2026-04-22,Keystone Manufacturing,East,Online store,Service plans,1,1549.34,0,1549,,,Delivered,1549,
+SO-50140,2026-04-22,Liberty Architects,East,Online store,Cleaning and facilities,24,29.54,0,709,ParcelPro,3,Delivered,709,
+SO-50141,2026-04-22,Summit Engineering,North,Online store,Furniture,8,521.20,0,4170,,,Cancelled,0,
+SO-50142,2026-04-22,Magnolia Hotels Group,South,Phone,Tech accessories,21,55.77,0,1171,ParcelPro,4,Delivered,1171,Carmen D.
+SO-50143,2026-04-22,Pacific Design Studio,West,Online store,Cleaning and facilities,45,10.60,5,453,SwiftRoute,4,Delivered,453,
+SO-50144,2026-04-22,Northgate Insurance Agency,North,Phone,Tech accessories,6,62.07,0,372,Northline Freight,2,Delivered,372,Ben K.
+SO-50145,2026-04-22,Pioneer Logistics,North,Online store,Furniture,11,212.27,5,2218,ParcelPro,3,Delivered,2218,
+SO-50146,2026-04-23,Bayview Nonprofit Alliance,West,Online store,Office supplies,42,18.56,0,780,Northline Freight,4,Delivered,780,
+SO-50147,2026-04-23,Desert Bloom Clinics,West,Phone,Service plans,1,2059.40,0,2059,,,Delivered,2059,Felix T.
+SO-50148,2026-04-23,Redwood Software,West,Phone,Tech accessories,15,31.53,0,473,SwiftRoute,3,Delivered,473,Felix T.
+SO-50149,2026-04-23,Sunrise Pediatrics,South,Marketplace,Tech accessories,6,91.66,0,550,Northline Freight,3,Delivered,550,
+SO-50150,2026-04-23,Birchwood Schools,North,Sales rep,Service plans,1,1446.51,5,1374,,,Delivered,1374,Alicia R.
+SO-50151,2026-04-23,Golden State Labs,West,Online store,Office supplies,14,11.16,0,156,SwiftRoute,5,Delivered,156,
+SO-50152,2026-04-23,Liberty Architects,East,Online store,Service plans,1,768.28,0,768,,,Delivered,768,
+SO-50153,2026-04-23,Brookside Medical,East,Phone,Office supplies,30,23.21,0,696,ParcelPro,3,Delivered,696,David M.
+SO-50154,2026-04-23,Liberty Architects,East,Online store,Furniture,11,573.89,0,6313,ParcelPro,4,Delivered,6313,
+SO-50155,2026-04-23,Magnolia Hotels Group,South,Online store,Office supplies,17,19.23,0,327,ParcelPro,2,Delivered,327,
+SO-50156,2026-04-23,Riverbend Library,North,Online store,Tech accessories,2,35.56,0,71,ParcelPro,2,Delivered,71,
+SO-50157,2026-04-24,Desert Bloom Clinics,West,Marketplace,Cleaning and facilities,98,9.61,0,942,SwiftRoute,3,Delivered,942,
+SO-50158,2026-04-24,Desert Bloom Clinics,West,Phone,Tech accessories,32,87.27,0,2793,SwiftRoute,4,Delivered,2793,Felix T.
+SO-50159,2026-04-24,Hudson Media,East,Phone,Office supplies,56,10.57,0,592,Northline Freight,3,Delivered,592,David M.
+SO-50160,2026-04-24,Cedar Ridge Accounting,North,Sales rep,Office supplies,90,13.32,15,1019,ParcelPro,2,Delivered,1019,Alicia R.
+SO-50161,2026-04-24,Birchwood Schools,North,Online store,Office supplies,60,24.69,0,1481,Northline Freight,4,Delivered,1481,
+SO-50162,2026-04-24,Riverbend Library,North,Online store,Cleaning and facilities,78,21.77,5,1613,Northline Freight,4,Delivered,1613,
+SO-50163,2026-04-24,Harbor Fitness Clubs,South,Online store,Service plans,1,2038.97,0,2039,,,Delivered,2039,
+SO-50164,2026-04-24,Riverbend Library,North,Online store,Furniture,11,534.05,5,5581,ParcelPro,2,Delivered,5581,
+SO-50165,2026-04-24,Liberty Architects,East,Online store,Office supplies,31,24.14,0,748,ParcelPro,2,Delivered,748,
+SO-50166,2026-04-27,Keystone Manufacturing,East,Online store,Office supplies,11,7.28,0,80,Northline Freight,4,Delivered,80,
+SO-50167,2026-04-27,Granite Realty Group,North,Phone,Office supplies,29,19.63,0,569,,,Cancelled,0,Alicia R.
+SO-50168,2026-04-27,Magnolia Hotels Group,South,Sales rep,Furniture,15,398.74,5,5682,ParcelPro,3,Delivered,5682,Carmen D.
+SO-50169,2026-04-27,Bluebird Coworking,East,Online store,Furniture,10,451.70,5,4291,Northline Freight,2,Delivered,4291,
+SO-50170,2026-04-27,Sierra Outdoor Gear,West,Sales rep,Office supplies,26,14.65,5,362,SwiftRoute,3,Delivered,362,Felix T.
+SO-50171,2026-04-27,Patriot Auto Group,East,Sales rep,Furniture,10,484.35,15,4117,ParcelPro,4,Delivered,4117,David M.
+SO-50172,2026-04-28,Sunrise Pediatrics,South,Sales rep,Office supplies,39,20.96,15,695,ParcelPro,2,Delivered,695,Carmen D.
+SO-50173,2026-04-28,Pacific Design Studio,West,Marketplace,Office supplies,57,20.14,5,1091,SwiftRoute,4,Delivered,1091,
+SO-50174,2026-04-28,Palmetto Realty,South,Online store,Tech accessories,15,107.31,0,1610,ParcelPro,2,Delivered,1610,
+SO-50175,2026-04-28,Desert Bloom Clinics,West,Online store,Furniture,14,373.39,0,5227,Northline Freight,2,Delivered,5227,
+SO-50176,2026-04-28,Desert Bloom Clinics,West,Online store,Service plans,1,879.52,0,880,,,Delivered,880,
+SO-50177,2026-04-28,Keystone Manufacturing,East,Online store,Tech accessories,5,107.21,0,536,Northline Freight,3,Delivered,536,
+SO-50178,2026-04-29,Coastal Credit Union,South,Phone,Office supplies,40,9.14,5,347,Northline Freight,3,Delivered,347,Carmen D.
+SO-50179,2026-04-29,Gulfview Construction,South,Online store,Office supplies,41,10.03,0,411,ParcelPro,2,Returned,0,
+SO-50180,2026-04-29,Desert Bloom Clinics,West,Online store,Cleaning and facilities,108,29.04,0,3136,SwiftRoute,5,Delivered,3136,
+SO-50181,2026-04-29,Maple Street Dental,North,Online store,Furniture,6,395.72,0,2374,ParcelPro,2,Delivered,2374,
+SO-50182,2026-04-29,Atlantic Charter School,East,Online store,Tech accessories,16,75.08,0,1201,Northline Freight,3,Delivered,1201,
+SO-50183,2026-04-29,Golden State Labs,West,Sales rep,Furniture,19,157.81,10,2699,Northline Freight,2,Delivered,2699,Felix T.
+SO-50184,2026-04-29,Palmetto Realty,South,Online store,Office supplies,6,12.36,0,74,ParcelPro,3,Delivered,74,
+SO-50185,2026-04-29,Brookside Medical,East,Marketplace,Cleaning and facilities,54,8.62,0,465,Northline Freight,2,Delivered,465,
+SO-50186,2026-04-29,Riverbend Library,North,Sales rep,Furniture,9,568.34,15,4348,ParcelPro,4,Delivered,4348,Ben K.
+SO-50187,2026-04-29,Bayou Legal Partners,South,Phone,Service plans,1,1181.82,0,1182,,,Delivered,1182,Carmen D.
+SO-50188,2026-04-30,Sunrise Pediatrics,South,Marketplace,Office supplies,31,7.30,0,226,ParcelPro,2,Delivered,226,
+SO-50189,2026-04-30,Gulfview Construction,South,Online store,Office supplies,31,5.36,0,166,ParcelPro,2,Delivered,166,
+SO-50190,2026-04-30,Gulfview Construction,South,Sales rep,Furniture,3,444.30,15,1133,Northline Freight,2,Delivered,1133,Carmen D.
+SO-50191,2026-04-30,Desert Bloom Clinics,West,Online store,Tech accessories,23,103.32,0,2376,SwiftRoute,4,Delivered,2376,
+SO-50192,2026-04-30,Golden State Labs,West,Marketplace,Tech accessories,6,15.53,0,93,SwiftRoute,5,Delivered,93,
+SO-50193,2026-04-30,Pacific Design Studio,West,Marketplace,Office supplies,30,6.08,0,182,SwiftRoute,3,Delivered,182,
+SO-50194,2026-04-30,Magnolia Hotels Group,South,Sales rep,Office supplies,53,23.97,5,1207,Northline Freight,2,Delivered,1207,Carmen D.
+SO-50195,2026-04-30,Desert Bloom Clinics,West,Phone,Office supplies,17,20.05,5,324,Northline Freight,3,Delivered,324,Felix T.
+SO-50196,2026-04-30,Birchwood Schools,North,Phone,Furniture,12,572.88,5,6531,Northline Freight,2,Delivered,6531,Alicia R.
+SO-50197,2026-04-30,Sierra Outdoor Gear,West,Online store,Service plans,1,1927.54,0,1928,,,Delivered,1928,
+SO-50198,2026-05-01,Keystone Manufacturing,East,Sales rep,Furniture,9,591.87,10,4794,Northline Freight,3,Delivered,4794,David M.
+SO-50199,2026-05-01,Bayview Nonprofit Alliance,West,Sales rep,Office supplies,10,21.43,15,182,SwiftRoute,5,Delivered,182,Felix T.
+SO-50200,2026-05-01,Atlantic Charter School,East,Online store,Furniture,4,646.17,0,2585,ParcelPro,4,Delivered,2585,
+SO-50201,2026-05-01,Birchwood Schools,North,Online store,Furniture,4,337.66,0,1351,Northline Freight,4,Returned,0,
+SO-50202,2026-05-01,Brookside Medical,East,Marketplace,Tech accessories,4,49.41,0,198,Northline Freight,4,Delivered,198,
+SO-50203,2026-05-01,Keystone Manufacturing,East,Phone,Tech accessories,11,60.59,0,666,ParcelPro,2,Delivered,666,Erin S.
+SO-50204,2026-05-01,Northgate Insurance Agency,North,Sales rep,Office supplies,85,13.53,10,1035,ParcelPro,4,Delivered,1035,Alicia R.
+SO-50205,2026-05-01,Granite Realty Group,North,Online store,Tech accessories,13,85.52,0,1112,ParcelPro,2,Delivered,1112,
+SO-50206,2026-05-01,Atlantic Charter School,East,Online store,Furniture,12,533.63,0,6404,Northline Freight,2,Delivered,6404,
+SO-50207,2026-05-04,Desert Bloom Clinics,West,Online store,Office supplies,35,5.73,0,201,SwiftRoute,4,Delivered,201,
+SO-50208,2026-05-04,Desert Bloom Clinics,West,Online store,Tech accessories,27,27.25,5,699,Northline Freight,4,Delivered,699,
+SO-50209,2026-05-04,Elmwood Senior Living,East,Marketplace,Office supplies,18,8.47,5,145,ParcelPro,4,Delivered,145,
+SO-50210,2026-05-04,Summit Engineering,North,Marketplace,Tech accessories,13,18.30,0,238,ParcelPro,2,Delivered,238,
+SO-50211,2026-05-04,Redwood Software,West,Online store,Tech accessories,29,32.98,0,956,SwiftRoute,3,Delivered,956,
+SO-50212,2026-05-04,Pioneer Logistics,North,Online store,Cleaning and facilities,16,20.92,0,335,ParcelPro,4,Delivered,335,
+SO-50213,2026-05-04,Patriot Auto Group,East,Online store,Furniture,12,159.87,5,1823,ParcelPro,3,Delivered,1823,
+SO-50214,2026-05-05,Keystone Manufacturing,East,Phone,Office supplies,47,8.24,5,368,Northline Freight,2,Delivered,368,David M.
+SO-50215,2026-05-05,Maple Street Dental,North,Online store,Furniture,11,374.56,5,3914,Northline Freight,2,Returned,0,
+SO-50216,2026-05-05,Maple Street Dental,North,Sales rep,Office supplies,80,22.52,15,1531,ParcelPro,4,Delivered,1531,Alicia R.
+SO-50217,2026-05-05,Summit Engineering,North,Sales rep,Office supplies,102,4.19,10,385,Northline Freight,3,Delivered,385,Alicia R.
+SO-50218,2026-05-05,Brookside Medical,East,Online store,Cleaning and facilities,57,14.88,0,848,Northline Freight,3,Delivered,848,
+SO-50219,2026-05-05,Oakline Veterinary,South,Phone,Office supplies,49,18.93,0,928,Northline Freight,4,Delivered,928,Carmen D.
+SO-50220,2026-05-05,Canyon Facilities Group,West,Sales rep,Service plans,1,1506.76,10,1356,,,Delivered,1356,Felix T.
+SO-50221,2026-05-05,Desert Bloom Clinics,West,Phone,Service plans,1,2188.51,0,2189,,,Delivered,2189,Felix T.
+SO-50222,2026-05-05,Birchwood Schools,North,Online store,Cleaning and facilities,73,21.90,0,1599,ParcelPro,2,Delivered,1599,
+SO-50223,2026-05-05,Elmwood Senior Living,East,Phone,Service plans,1,2189.58,5,2080,,,Delivered,2080,David M.
+SO-50224,2026-05-06,Pioneer Logistics,North,Sales rep,Tech accessories,9,15.26,15,117,ParcelPro,4,Delivered,117,Alicia R.
+SO-50225,2026-05-06,Magnolia Hotels Group,South,Online store,Cleaning and facilities,33,21.45,5,672,ParcelPro,4,Delivered,672,
+SO-50226,2026-05-06,Palmetto Realty,South,Online store,Service plans,1,1155.80,0,1156,,,Delivered,1156,
+SO-50227,2026-05-06,Granite Realty Group,North,Online store,Tech accessories,12,106.35,0,1276,Northline Freight,4,Delivered,1276,
+SO-50228,2026-05-06,Bayou Legal Partners,South,Sales rep,Tech accessories,26,108.98,15,2408,,,Cancelled,0,Carmen D.
+SO-50229,2026-05-06,Sierra Outdoor Gear,West,Marketplace,Office supplies,7,21.86,0,153,Northline Freight,2,Delivered,153,
+SO-50230,2026-05-07,Sunrise Pediatrics,South,Phone,Cleaning and facilities,64,12.38,0,792,ParcelPro,3,Delivered,792,Carmen D.
+SO-50231,2026-05-07,Coastal Credit Union,South,Online store,Office supplies,46,4.88,0,224,,,Cancelled,0,
+SO-50232,2026-05-07,Bayview Nonprofit Alliance,West,Sales rep,Tech accessories,32,31.49,15,857,SwiftRoute,3,Delivered,857,Felix T.
+SO-50233,2026-05-07,Birchwood Schools,North,Marketplace,Cleaning and facilities,26,12.80,0,333,Northline Freight,3,Delivered,333,
+SO-50234,2026-05-07,Gulfview Construction,South,Online store,Cleaning and facilities,24,12.20,0,293,ParcelPro,2,Delivered,293,
+SO-50235,2026-05-07,Gulfview Construction,South,Marketplace,Tech accessories,12,46.47,0,558,Northline Freight,2,Delivered,558,
+SO-50236,2026-05-08,Elmwood Senior Living,East,Phone,Office supplies,48,9.80,5,447,Northline Freight,3,Delivered,447,Erin S.
+SO-50237,2026-05-08,Pioneer Logistics,North,Marketplace,Office supplies,21,18.59,0,390,Northline Freight,4,Delivered,390,
+SO-50238,2026-05-08,Granite Realty Group,North,Phone,Cleaning and facilities,17,18.94,0,322,ParcelPro,4,Delivered,322,Alicia R.
+SO-50239,2026-05-08,Cedar Ridge Accounting,North,Phone,Service plans,1,1604.18,0,1604,,,Delivered,1604,Ben K.
+SO-50240,2026-05-08,Cedar Ridge Accounting,North,Sales rep,Tech accessories,43,114.17,10,4418,Northline Freight,2,Delivered,4418,Ben K.
+SO-50241,2026-05-08,Magnolia Hotels Group,South,Online store,Furniture,1,444.35,0,444,Northline Freight,3,Delivered,444,
+SO-50242,2026-05-08,Keystone Manufacturing,East,Sales rep,Tech accessories,51,25.29,10,1161,,,Cancelled,0,David M.
+SO-50243,2026-05-08,Desert Bloom Clinics,West,Online store,Cleaning and facilities,110,27.24,0,2996,SwiftRoute,4,Delivered,2996,
+SO-50244,2026-05-08,Magnolia Hotels Group,South,Marketplace,Tech accessories,9,101.11,0,910,Northline Freight,4,Delivered,910,
+SO-50245,2026-05-08,Riverbend Library,North,Marketplace,Office supplies,9,8.74,5,75,,,Cancelled,0,
+SO-50246,2026-05-08,Cedar Ridge Accounting,North,Sales rep,Tech accessories,34,69.77,5,2254,Northline Freight,3,Delivered,2254,Ben K.
+SO-50247,2026-05-11,Keystone Manufacturing,East,Sales rep,Office supplies,27,6.63,10,161,Northline Freight,2,Returned,0,Erin S.
+SO-50248,2026-05-11,Sunrise Pediatrics,South,Sales rep,Office supplies,24,14.06,5,321,Northline Freight,2,Delivered,321,Carmen D.
+SO-50249,2026-05-11,Summit Engineering,North,Online store,Office supplies,59,11.50,0,679,Northline Freight,4,Delivered,679,
+SO-50250,2026-05-11,Bayou Legal Partners,South,Sales rep,Office supplies,31,11.48,5,338,Northline Freight,4,Delivered,338,Carmen D.
+SO-50251,2026-05-11,Desert Bloom Clinics,West,Online store,Furniture,3,167.68,0,503,SwiftRoute,5,Returned,0,
+SO-50252,2026-05-11,Canyon Facilities Group,West,Sales rep,Office supplies,82,15.51,15,1081,SwiftRoute,4,Delivered,1081,Felix T.
+SO-50253,2026-05-11,Desert Bloom Clinics,West,Marketplace,Office supplies,35,15.71,5,522,SwiftRoute,4,Delivered,522,
+SO-50254,2026-05-11,Elmwood Senior Living,East,Online store,Furniture,8,564.11,0,4513,Northline Freight,3,Delivered,4513,
+SO-50255,2026-05-11,Desert Bloom Clinics,West,Sales rep,Office supplies,23,21.65,10,448,Northline Freight,2,Delivered,448,Felix T.
+SO-50256,2026-05-11,Bayview Nonprofit Alliance,West,Sales rep,Tech accessories,20,58.34,15,992,SwiftRoute,4,Delivered,992,Felix T.
+SO-50257,2026-05-12,Sierra Outdoor Gear,West,Online store,Cleaning and facilities,27,8.31,0,224,Northline Freight,3,Delivered,224,
+SO-50258,2026-05-12,Bluebird Coworking,East,Phone,Cleaning and facilities,39,25.37,0,989,Northline Freight,4,Delivered,989,David M.
+SO-50259,2026-05-12,Desert Bloom Clinics,West,Online store,Office supplies,24,9.90,0,238,SwiftRoute,5,Delivered,238,
+SO-50260,2026-05-12,Sunrise Pediatrics,South,Online store,Office supplies,33,7.53,5,236,ParcelPro,4,Returned,0,
+SO-50261,2026-05-12,Summit Engineering,North,Online store,Tech accessories,28,119.74,0,3353,,,Cancelled,0,
+SO-50262,2026-05-12,Granite Realty Group,North,Online store,Office supplies,17,7.81,0,133,Northline Freight,3,Delivered,133,
+SO-50263,2026-05-12,Coastal Credit Union,South,Phone,Service plans,1,1153.42,0,1153,,,Delivered,1153,Carmen D.
+SO-50264,2026-05-12,Desert Bloom Clinics,West,Online store,Cleaning and facilities,101,11.15,0,1126,SwiftRoute,4,Delivered,1126,
+SO-50265,2026-05-13,Desert Bloom Clinics,West,Online store,Service plans,1,925.33,0,925,,,Delivered,925,
+SO-50266,2026-05-13,Riverbend Library,North,Phone,Furniture,3,302.36,5,862,ParcelPro,3,Returned,0,Ben K.
+SO-50267,2026-05-13,Cedar Ridge Accounting,North,Sales rep,Office supplies,32,10.32,10,297,ParcelPro,2,Delivered,297,Alicia R.
+SO-50268,2026-05-13,Summit Engineering,North,Online store,Furniture,9,643.08,0,5788,ParcelPro,3,Delivered,5788,
+SO-50269,2026-05-13,Bayou Legal Partners,South,Online store,Furniture,9,286.31,0,2577,ParcelPro,4,Returned,0,
+SO-50270,2026-05-13,Desert Bloom Clinics,West,Online store,Office supplies,42,19.11,0,803,SwiftRoute,3,Delivered,803,
+SO-50271,2026-05-14,Maple Street Dental,North,Online store,Furniture,12,508.76,0,6105,ParcelPro,3,Delivered,6105,
+SO-50272,2026-05-14,Riverbend Library,North,Phone,Office supplies,18,21.44,0,386,Northline Freight,3,Delivered,386,Alicia R.
+SO-50273,2026-05-14,Sierra Outdoor Gear,West,Phone,Service plans,1,1146.84,0,1147,,,Delivered,1147,Felix T.
+SO-50274,2026-05-14,Pioneer Logistics,North,Marketplace,Cleaning and facilities,25,23.34,5,554,Northline Freight,3,Delivered,554,
+SO-50275,2026-05-14,Harbor Fitness Clubs,South,Sales rep,Cleaning and facilities,29,27.73,5,764,ParcelPro,4,Delivered,764,Carmen D.
+SO-50276,2026-05-14,Desert Bloom Clinics,West,Marketplace,Furniture,12,568.74,5,6484,SwiftRoute,4,Delivered,6484,
+SO-50277,2026-05-14,Desert Bloom Clinics,West,Marketplace,Tech accessories,32,51.68,0,1654,Northline Freight,4,Delivered,1654,
+SO-50278,2026-05-14,Summit Engineering,North,Online store,Tech accessories,29,34.18,0,991,ParcelPro,2,Delivered,991,
+SO-50279,2026-05-14,Desert Bloom Clinics,West,Online store,Office supplies,84,14.14,0,1188,SwiftRoute,4,Delivered,1188,
+SO-50280,2026-05-15,Mesa Family Dental,West,Marketplace,Office supplies,44,22.16,0,975,SwiftRoute,4,Delivered,975,
+SO-50281,2026-05-15,Granite Realty Group,North,Phone,Office supplies,42,9.12,0,383,Northline Freight,3,Delivered,383,Alicia R.
+SO-50282,2026-05-15,Pioneer Logistics,North,Sales rep,Furniture,10,497.08,10,4474,Northline Freight,4,Delivered,4474,Alicia R.
+SO-50283,2026-05-15,Coastal Credit Union,South,Sales rep,Cleaning and facilities,80,29.28,5,2225,Northline Freight,4,Delivered,2225,Carmen D.
+SO-50284,2026-05-15,Mesa Family Dental,West,Online store,Office supplies,30,13.10,0,393,SwiftRoute,4,Delivered,393,
+SO-50285,2026-05-15,Desert Bloom Clinics,West,Online store,Tech accessories,12,102.82,0,1234,Northline Freight,2,Delivered,1234,
+SO-50286,2026-05-15,Birchwood Schools,North,Online store,Office supplies,45,15.98,0,719,ParcelPro,2,Delivered,719,
+SO-50287,2026-05-15,Coastal Credit Union,South,Sales rep,Tech accessories,10,24.62,5,234,ParcelPro,2,Delivered,234,Carmen D.
+SO-50288,2026-05-15,Bayview Nonprofit Alliance,West,Sales rep,Service plans,1,1968.08,5,1870,,,Delivered,1870,Felix T.
+SO-50289,2026-05-15,Pacific Design Studio,West,Online store,Furniture,9,603.37,5,5159,SwiftRoute,4,Delivered,5159,
+SO-50290,2026-05-18,Keystone Manufacturing,East,Online store,Furniture,3,572.59,5,1632,Northline Freight,2,Delivered,1632,
+SO-50291,2026-05-18,Pioneer Logistics,North,Online store,Office supplies,43,23.18,0,997,Northline Freight,4,Delivered,997,
+SO-50292,2026-05-18,Harbor Fitness Clubs,South,Phone,Service plans,1,1858.78,0,1859,,,Delivered,1859,Carmen D.
+SO-50293,2026-05-18,Coastal Credit Union,South,Marketplace,Office supplies,36,15.15,0,545,Northline Freight,3,Delivered,545,
+SO-50294,2026-05-18,Hudson Media,East,Sales rep,Service plans,1,1588.68,15,1350,,,Delivered,1350,David M.
+SO-50295,2026-05-18,Desert Bloom Clinics,West,Phone,Service plans,1,1726.96,5,1641,,,Delivered,1641,Felix T.
+SO-50296,2026-05-19,Pioneer Logistics,North,Online store,Service plans,1,2316.28,0,2316,,,Delivered,2316,
+SO-50297,2026-05-19,Riverbend Library,North,Phone,Cleaning and facilities,34,17.59,0,598,Northline Freight,3,Delivered,598,Ben K.
+SO-50298,2026-05-19,Oakline Veterinary,South,Sales rep,Service plans,1,1281.78,15,1090,,,Delivered,1090,Carmen D.
+SO-50299,2026-05-19,Sunrise Pediatrics,South,Phone,Tech accessories,24,66.91,0,1606,ParcelPro,4,Delivered,1606,Carmen D.
+SO-50300,2026-05-19,Coastal Credit Union,South,Online store,Tech accessories,18,113.08,0,2035,ParcelPro,4,Delivered,2035,
+SO-50301,2026-05-19,Birchwood Schools,North,Online store,Office supplies,8,6.48,0,52,Northline Freight,2,Delivered,52,
+SO-50302,2026-05-20,Desert Bloom Clinics,West,Marketplace,Furniture,5,459.86,0,2299,SwiftRoute,4,Delivered,2299,
+SO-50303,2026-05-20,Redwood Software,West,Online store,Office supplies,55,5.29,0,291,SwiftRoute,4,Delivered,291,
+SO-50304,2026-05-20,Magnolia Hotels Group,South,Sales rep,Tech accessories,14,37.13,10,468,ParcelPro,2,Delivered,468,Carmen D.
+SO-50305,2026-05-20,Liberty Architects,East,Online store,Office supplies,59,13.20,5,740,ParcelPro,3,Delivered,740,
+SO-50306,2026-05-20,Mesa Family Dental,West,Sales rep,Office supplies,20,22.23,10,400,SwiftRoute,4,Delivered,400,Felix T.
+SO-50307,2026-05-20,Magnolia Hotels Group,South,Online store,Office supplies,25,5.22,5,124,ParcelPro,2,Delivered,124,
+SO-50308,2026-05-20,Bayview Nonprofit Alliance,West,Online store,Office supplies,41,22.30,0,914,SwiftRoute,3,Delivered,914,
+SO-50309,2026-05-20,Atlantic Charter School,East,Sales rep,Service plans,1,971.69,10,875,,,Delivered,875,David M.
+SO-50310,2026-05-20,Liberty Architects,East,Marketplace,Tech accessories,21,84.15,0,1767,ParcelPro,2,Delivered,1767,
+SO-50311,2026-05-20,Keystone Manufacturing,East,Phone,Furniture,2,327.42,0,655,ParcelPro,4,Returned,0,Erin S.
+SO-50312,2026-05-20,Magnolia Hotels Group,South,Sales rep,Furniture,10,448.03,5,4256,Northline Freight,3,Delivered,4256,Carmen D.
+SO-50313,2026-05-21,Desert Bloom Clinics,West,Phone,Office supplies,56,5.04,5,268,Northline Freight,3,Delivered,268,Felix T.
+SO-50314,2026-05-21,Brookside Medical,East,Sales rep,Tech accessories,12,104.69,10,1131,,,Cancelled,0,Erin S.
+SO-50315,2026-05-21,Pioneer Logistics,North,Sales rep,Office supplies,85,9.86,15,712,Northline Freight,2,Delivered,712,Ben K.
+SO-50316,2026-05-21,Pacific Design Studio,West,Online store,Cleaning and facilities,72,23.11,0,1664,SwiftRoute,5,Delivered,1664,
+SO-50317,2026-05-21,Elmwood Senior Living,East,Online store,Office supplies,20,12.69,0,254,Northline Freight,4,Delivered,254,
+SO-50318,2026-05-21,Magnolia Hotels Group,South,Marketplace,Tech accessories,17,82.58,0,1404,ParcelPro,3,Delivered,1404,
+SO-50319,2026-05-21,Mesa Family Dental,West,Marketplace,Office supplies,39,22.31,0,870,SwiftRoute,4,Delivered,870,
+SO-50320,2026-05-21,Pacific Design Studio,West,Marketplace,Office supplies,21,19.93,0,419,SwiftRoute,5,Delivered,419,
+SO-50321,2026-05-21,Sunrise Pediatrics,South,Sales rep,Service plans,1,1307.56,10,1177,,,Delivered,1177,Carmen D.
+SO-50322,2026-05-21,Atlantic Charter School,East,Online store,Tech accessories,12,76.82,0,922,Northline Freight,4,Delivered,922,
+SO-50323,2026-05-22,Desert Bloom Clinics,West,Online store,Tech accessories,15,107.20,5,1528,SwiftRoute,5,Delivered,1528,
+SO-50324,2026-05-22,Bayview Nonprofit Alliance,West,Online store,Cleaning and facilities,23,20.57,0,473,SwiftRoute,4,Delivered,473,
+SO-50325,2026-05-22,Sierra Outdoor Gear,West,Online store,Tech accessories,23,118.85,5,2597,SwiftRoute,4,Delivered,2597,
+SO-50326,2026-05-22,Pioneer Logistics,North,Sales rep,Office supplies,70,8.30,10,523,ParcelPro,4,Delivered,523,Alicia R.
+SO-50327,2026-05-22,Magnolia Hotels Group,South,Marketplace,Office supplies,54,9.29,0,502,Northline Freight,2,Delivered,502,
+SO-50328,2026-05-22,Golden State Labs,West,Online store,Tech accessories,10,21.08,0,211,SwiftRoute,5,Delivered,211,
+SO-50329,2026-05-25,Riverbend Library,North,Online store,Office supplies,33,12.75,5,400,Northline Freight,2,Delivered,400,
+SO-50330,2026-05-25,Desert Bloom Clinics,West,Online store,Tech accessories,35,17.90,0,627,SwiftRoute,4,Delivered,627,
+SO-50331,2026-05-25,Palmetto Realty,South,Phone,Office supplies,24,22.32,0,536,,,Cancelled,0,Carmen D.
+SO-50332,2026-05-25,Pacific Design Studio,West,Marketplace,Furniture,7,394.04,0,2758,,,Cancelled,0,
+SO-50333,2026-05-25,Northgate Insurance Agency,North,Online store,Office supplies,26,5.98,0,155,Northline Freight,2,Delivered,155,
+SO-50334,2026-05-25,Brookside Medical,East,Sales rep,Office supplies,9,16.63,10,135,ParcelPro,2,Delivered,135,Erin S.
+SO-50335,2026-05-25,Harbor Fitness Clubs,South,Phone,Office supplies,55,23.34,0,1284,Northline Freight,3,Delivered,1284,Carmen D.
+SO-50336,2026-05-25,Desert Bloom Clinics,West,Marketplace,Office supplies,12,5.79,0,69,,,Cancelled,0,
+SO-50337,2026-05-25,Desert Bloom Clinics,West,Marketplace,Office supplies,21,4.07,0,85,SwiftRoute,5,Delivered,85,
+SO-50338,2026-05-25,Canyon Facilities Group,West,Marketplace,Furniture,4,642.14,0,2569,SwiftRoute,4,Delivered,2569,
+SO-50339,2026-05-25,Keystone Manufacturing,East,Online store,Tech accessories,11,70.41,5,736,Northline Freight,2,Delivered,736,
+SO-50340,2026-05-26,Liberty Architects,East,Online store,Furniture,2,644.26,0,1289,,,Cancelled,0,
+SO-50341,2026-05-26,Desert Bloom Clinics,West,Marketplace,Office supplies,20,11.65,0,233,SwiftRoute,5,Delivered,233,
+SO-50342,2026-05-26,Summit Engineering,North,Online store,Tech accessories,15,73.73,0,1106,ParcelPro,2,Delivered,1106,
+SO-50343,2026-05-26,Golden State Labs,West,Marketplace,Furniture,11,544.13,0,5985,Northline Freight,2,Returned,0,
+SO-50344,2026-05-26,Golden State Labs,West,Sales rep,Office supplies,102,22.48,15,1949,SwiftRoute,3,Delivered,1949,Felix T.
+SO-50345,2026-05-26,Keystone Manufacturing,East,Marketplace,Tech accessories,19,40.65,0,772,ParcelPro,4,Delivered,772,
+SO-50346,2026-05-26,Mesa Family Dental,West,Marketplace,Office supplies,10,5.53,5,53,SwiftRoute,5,Delivered,53,
+SO-50347,2026-05-27,Magnolia Hotels Group,South,Phone,Office supplies,28,9.07,0,254,Northline Freight,4,Delivered,254,Carmen D.
+SO-50348,2026-05-27,Birchwood Schools,North,Online store,Tech accessories,20,119.47,0,2389,ParcelPro,3,Delivered,2389,
+SO-50349,2026-05-27,Cedar Ridge Accounting,North,Online store,Tech accessories,14,76.64,0,1073,Northline Freight,4,Delivered,1073,
+SO-50350,2026-05-27,Brookside Medical,East,Online store,Office supplies,12,8.32,5,95,,,Cancelled,0,
+SO-50351,2026-05-27,Liberty Architects,East,Marketplace,Cleaning and facilities,77,16.57,0,1276,ParcelPro,4,Delivered,1276,
+SO-50352,2026-05-27,Desert Bloom Clinics,West,Online store,Office supplies,53,23.47,5,1182,SwiftRoute,3,Delivered,1182,
+SO-50353,2026-05-27,Pioneer Logistics,North,Online store,Service plans,1,706.30,5,671,,,Delivered,671,
+SO-50354,2026-05-27,Keystone Manufacturing,East,Phone,Service plans,1,1953.09,0,1953,,,Delivered,1953,Erin S.
+SO-50355,2026-05-27,Redwood Software,West,Sales rep,Office supplies,73,15.76,10,1035,SwiftRoute,5,Delivered,1035,Felix T.
+SO-50356,2026-05-27,Bayview Nonprofit Alliance,West,Sales rep,Tech accessories,7,90.56,10,571,SwiftRoute,5,Delivered,571,Felix T.
+SO-50357,2026-05-28,Palmetto Realty,South,Marketplace,Office supplies,47,21.17,0,995,,,Cancelled,0,
+SO-50358,2026-05-28,Birchwood Schools,North,Marketplace,Furniture,5,639.81,5,3039,Northline Freight,3,Delivered,3039,
+SO-50359,2026-05-28,Sunrise Pediatrics,South,Marketplace,Cleaning and facilities,45,22.66,0,1020,Northline Freight,3,Delivered,1020,
+SO-50360,2026-05-28,Desert Bloom Clinics,West,Sales rep,Tech accessories,48,95.96,15,3915,SwiftRoute,4,Delivered,3915,Felix T.
+SO-50361,2026-05-28,Pioneer Logistics,North,Sales rep,Office supplies,51,10.62,10,487,Northline Freight,4,Delivered,487,Alicia R.
+SO-50362,2026-05-28,Desert Bloom Clinics,West,Phone,Furniture,5,523.97,0,2620,SwiftRoute,3,Delivered,2620,Felix T.
+SO-50363,2026-05-28,Pacific Design Studio,West,Online store,Tech accessories,10,111.67,5,1061,SwiftRoute,5,Delivered,1061,
+SO-50364,2026-05-28,Birchwood Schools,North,Phone,Service plans,1,2249.46,0,2249,,,Delivered,2249,Ben K.
+SO-50365,2026-05-28,Desert Bloom Clinics,West,Sales rep,Tech accessories,23,72.13,5,1576,Northline Freight,2,Delivered,1576,Felix T.
+SO-50366,2026-05-28,Hudson Media,East,Sales rep,Office supplies,60,23.02,10,1243,Northline Freight,2,Delivered,1243,David M.
+SO-50367,2026-05-28,Desert Bloom Clinics,West,Online store,Office supplies,32,7.53,0,241,SwiftRoute,3,Delivered,241,
+SO-50368,2026-05-29,Bayview Nonprofit Alliance,West,Phone,Tech accessories,13,43.82,0,570,SwiftRoute,5,Delivered,570,Felix T.
+SO-50369,2026-05-29,Magnolia Hotels Group,South,Online store,Service plans,1,725.84,0,726,,,Delivered,726,
+SO-50370,2026-05-29,Coastal Credit Union,South,Marketplace,Furniture,8,307.07,0,2457,ParcelPro,3,Returned,0,
+SO-50371,2026-05-29,Magnolia Hotels Group,South,Online store,Office supplies,20,16.69,5,317,Northline Freight,4,Delivered,317,
+SO-50372,2026-05-29,Pioneer Logistics,North,Online store,Service plans,1,2380.68,0,2381,,,Delivered,2381,
+SO-50373,2026-05-29,Riverbend Library,North,Online store,Furniture,1,630.37,0,630,ParcelPro,3,Delivered,630,
+SO-50374,2026-05-29,Pioneer Logistics,North,Online store,Service plans,1,1605.48,0,1605,,,Delivered,1605,
+SO-50375,2026-05-29,Desert Bloom Clinics,West,Online store,Tech accessories,8,36.27,0,290,SwiftRoute,3,Delivered,290,
+SO-50376,2026-06-01,Bayview Nonprofit Alliance,West,Online store,Tech accessories,7,56.47,0,395,SwiftRoute,5,Delivered,395,
+SO-50377,2026-06-01,Gulfview Construction,South,Sales rep,Service plans,1,1859.89,15,1581,,,Delivered,1581,Carmen D.
+SO-50378,2026-06-01,Cedar Ridge Accounting,North,Online store,Furniture,12,401.54,5,4578,ParcelPro,2,Delivered,4578,
+SO-50379,2026-06-01,Magnolia Hotels Group,South,Marketplace,Cleaning and facilities,61,15.39,5,892,ParcelPro,3,Delivered,892,
+SO-50380,2026-06-01,Maple Street Dental,North,Marketplace,Cleaning and facilities,69,7.12,0,491,Northline Freight,4,Delivered,491,
+SO-50381,2026-06-01,Harbor Fitness Clubs,South,Phone,Office supplies,59,6.77,0,399,Northline Freight,2,Delivered,399,Carmen D.
+SO-50382,2026-06-01,Sierra Outdoor Gear,West,Marketplace,Furniture,11,346.71,0,3814,SwiftRoute,4,Delivered,3814,
+SO-50383,2026-06-01,Bayview Nonprofit Alliance,West,Sales rep,Tech accessories,14,22.81,10,287,Northline Freight,2,Delivered,287,Felix T.
+SO-50384,2026-06-01,Bluebird Coworking,East,Online store,Tech accessories,10,17.71,0,177,Northline Freight,3,Delivered,177,
+SO-50385,2026-06-02,Keystone Manufacturing,East,Online store,Service plans,1,1009.50,5,959,,,Delivered,959,
+SO-50386,2026-06-02,Maple Street Dental,North,Marketplace,Office supplies,50,23.38,0,1169,Northline Freight,3,Delivered,1169,
+SO-50387,2026-06-02,Northgate Insurance Agency,North,Marketplace,Furniture,5,563.23,0,2816,ParcelPro,2,Delivered,2816,
+SO-50388,2026-06-02,Desert Bloom Clinics,West,Phone,Office supplies,48,16.51,0,792,SwiftRoute,3,Returned,0,Felix T.
+SO-50389,2026-06-02,Birchwood Schools,North,Marketplace,Tech accessories,21,50.76,0,1066,Northline Freight,2,Delivered,1066,
+SO-50390,2026-06-02,Atlantic Charter School,East,Sales rep,Office supplies,9,20.99,15,161,ParcelPro,2,Returned,0,Erin S.
+SO-50391,2026-06-02,Magnolia Hotels Group,South,Phone,Service plans,1,1570.73,0,1571,,,Delivered,1571,Carmen D.
+SO-50392,2026-06-02,Hudson Media,East,Sales rep,Cleaning and facilities,99,9.98,15,840,ParcelPro,4,Delivered,840,David M.
+SO-50393,2026-06-02,Keystone Manufacturing,East,Phone,Furniture,4,298.85,0,1195,Northline Freight,3,Delivered,1195,David M.
+SO-50394,2026-06-02,Northgate Insurance Agency,North,Online store,Furniture,1,616.05,0,616,ParcelPro,4,Delivered,616,
+SO-50395,2026-06-03,Maple Street Dental,North,Marketplace,Office supplies,53,10.34,5,521,ParcelPro,2,Delivered,521,
+SO-50396,2026-06-03,Sunrise Pediatrics,South,Marketplace,Tech accessories,3,64.65,0,194,ParcelPro,3,Delivered,194,
+SO-50397,2026-06-03,Mesa Family Dental,West,Marketplace,Cleaning and facilities,64,19.81,0,1268,SwiftRoute,5,Delivered,1268,
+SO-50398,2026-06-03,Birchwood Schools,North,Phone,Service plans,1,875.37,0,875,,,Delivered,875,Alicia R.
+SO-50399,2026-06-03,Bayou Legal Partners,South,Online store,Service plans,1,1406.81,5,1336,,,Delivered,1336,
+SO-50400,2026-06-03,Hudson Media,East,Online store,Tech accessories,6,103.28,0,620,Northline Freight,2,Delivered,620,
+SO-50401,2026-06-03,Hudson Media,East,Sales rep,Furniture,15,615.20,10,8305,ParcelPro,4,Delivered,8305,David M.
+SO-50402,2026-06-04,Keystone Manufacturing,East,Marketplace,Office supplies,56,10.92,0,612,ParcelPro,4,Delivered,612,
+SO-50403,2026-06-04,Coastal Credit Union,South,Sales rep,Cleaning and facilities,136,19.16,15,2215,ParcelPro,3,Delivered,2215,Carmen D.
+SO-50404,2026-06-04,Magnolia Hotels Group,South,Phone,Office supplies,52,12.09,5,597,ParcelPro,2,Delivered,597,Carmen D.
+SO-50405,2026-06-04,Liberty Architects,East,Sales rep,Cleaning and facilities,83,19.84,15,1400,,,Cancelled,0,David M.
+SO-50406,2026-06-04,Birchwood Schools,North,Marketplace,Furniture,6,316.67,0,1900,Northline Freight,3,Delivered,1900,
+SO-50407,2026-06-04,Pacific Design Studio,West,Marketplace,Cleaning and facilities,27,7.82,0,211,Northline Freight,2,Returned,0,
+SO-50408,2026-06-05,Cedar Ridge Accounting,North,Online store,Service plans,1,1503.31,0,1503,,,Delivered,1503,
+SO-50409,2026-06-05,Birchwood Schools,North,Online store,Furniture,4,572.47,0,2290,Northline Freight,2,Delivered,2290,
+SO-50410,2026-06-05,Northgate Insurance Agency,North,Online store,Tech accessories,10,19.93,0,199,Northline Freight,2,Delivered,199,
+SO-50411,2026-06-05,Desert Bloom Clinics,West,Phone,Cleaning and facilities,107,19.99,0,2139,SwiftRoute,4,Delivered,2139,Felix T.
+SO-50412,2026-06-05,Summit Engineering,North,Phone,Furniture,6,282.23,0,1693,ParcelPro,2,Returned,0,Ben K.
+SO-50413,2026-06-05,Birchwood Schools,North,Online store,Cleaning and facilities,43,25.41,0,1093,Northline Freight,3,Delivered,1093,
+SO-50414,2026-06-05,Bayou Legal Partners,South,Sales rep,Cleaning and facilities,41,26.00,5,1013,ParcelPro,2,Delivered,1013,Carmen D.
+SO-50415,2026-06-05,Sunrise Pediatrics,South,Marketplace,Office supplies,24,18.81,0,451,Northline Freight,4,Delivered,451,
+SO-50416,2026-06-05,Maple Street Dental,North,Marketplace,Office supplies,29,17.51,5,482,ParcelPro,4,Delivered,482,
+SO-50417,2026-06-08,Keystone Manufacturing,East,Sales rep,Furniture,2,545.09,10,981,ParcelPro,4,Delivered,981,Erin S.
+SO-50418,2026-06-08,Sunrise Pediatrics,South,Marketplace,Office supplies,47,9.13,0,429,Northline Freight,3,Delivered,429,
+SO-50419,2026-06-08,Redwood Software,West,Online store,Office supplies,34,19.29,0,656,SwiftRoute,5,Delivered,656,
+SO-50420,2026-06-08,Patriot Auto Group,East,Online store,Furniture,7,318.42,5,2117,,,Cancelled,0,
+SO-50421,2026-06-08,Atlantic Charter School,East,Online store,Office supplies,50,19.31,5,917,Northline Freight,2,Delivered,917,
+SO-50422,2026-06-08,Bayou Legal Partners,South,Marketplace,Tech accessories,9,87.92,0,791,Northline Freight,4,Delivered,791,
+SO-50423,2026-06-08,Desert Bloom Clinics,West,Online store,Office supplies,54,4.25,0,230,,,Cancelled,0,
+SO-50424,2026-06-08,Northgate Insurance Agency,North,Online store,Cleaning and facilities,18,24.69,0,444,ParcelPro,4,Delivered,444,
+SO-50425,2026-06-08,Canyon Facilities Group,West,Online store,Service plans,1,810.24,0,810,,,Delivered,810,
+SO-50426,2026-06-09,Sierra Outdoor Gear,West,Online store,Office supplies,29,23.38,5,644,Northline Freight,3,Delivered,644,
+SO-50427,2026-06-09,Desert Bloom Clinics,West,Phone,Service plans,1,2199.17,0,2199,,,Cancelled,0,Felix T.
+SO-50428,2026-06-09,Golden State Labs,West,Online store,Cleaning and facilities,15,15.28,0,229,SwiftRoute,4,Delivered,229,
+SO-50429,2026-06-09,Harbor Fitness Clubs,South,Marketplace,Cleaning and facilities,44,29.81,0,1312,Northline Freight,2,Delivered,1312,
+SO-50430,2026-06-09,Golden State Labs,West,Online store,Office supplies,18,9.25,0,167,SwiftRoute,4,Delivered,167,
+SO-50431,2026-06-09,Golden State Labs,West,Online store,Office supplies,14,19.92,5,265,Northline Freight,3,Delivered,265,
+SO-50432,2026-06-09,Keystone Manufacturing,East,Online store,Tech accessories,11,16.00,0,176,,,Cancelled,0,
+SO-50433,2026-06-10,Northgate Insurance Agency,North,Sales rep,Office supplies,94,15.88,15,1269,ParcelPro,4,Delivered,1269,Alicia R.
+SO-50434,2026-06-10,Canyon Facilities Group,West,Online store,Office supplies,32,12.50,5,380,Northline Freight,4,Delivered,380,
+SO-50435,2026-06-10,Desert Bloom Clinics,West,Phone,Cleaning and facilities,101,19.15,5,1837,SwiftRoute,5,Delivered,1837,Felix T.
+SO-50436,2026-06-10,Riverbend Library,North,Marketplace,Office supplies,59,20.96,5,1175,Northline Freight,2,Delivered,1175,
+SO-50437,2026-06-10,Liberty Architects,East,Online store,Furniture,2,607.90,5,1155,Northline Freight,2,Delivered,1155,
+SO-50438,2026-06-10,Hudson Media,East,Marketplace,Furniture,5,603.83,0,3019,ParcelPro,4,Returned,0,
+SO-50439,2026-06-10,Magnolia Hotels Group,South,Online store,Cleaning and facilities,71,16.56,0,1176,ParcelPro,3,Delivered,1176,
+SO-50440,2026-06-10,Desert Bloom Clinics,West,Online store,Office supplies,21,18.87,0,396,SwiftRoute,4,Delivered,396,
+SO-50441,2026-06-10,Birchwood Schools,North,Marketplace,Office supplies,10,11.94,0,119,ParcelPro,3,Delivered,119,
+SO-50442,2026-06-10,Oakline Veterinary,South,Sales rep,Furniture,9,322.65,15,2468,ParcelPro,2,Delivered,2468,Carmen D.
+SO-50443,2026-06-10,Pioneer Logistics,North,Online store,Office supplies,34,21.54,0,732,Northline Freight,2,Delivered,732,
+SO-50444,2026-06-11,Magnolia Hotels Group,South,Sales rep,Tech accessories,32,96.39,10,2776,ParcelPro,3,Delivered,2776,Carmen D.
+SO-50445,2026-06-11,Birchwood Schools,North,Marketplace,Office supplies,6,15.93,0,96,ParcelPro,2,Delivered,96,
+SO-50446,2026-06-11,Palmetto Realty,South,Online store,Furniture,10,363.58,0,3636,Northline Freight,4,Delivered,3636,
+SO-50447,2026-06-11,Pioneer Logistics,North,Sales rep,Service plans,1,2224.92,10,2002,,,Delivered,2002,Ben K.
+SO-50448,2026-06-11,Atlantic Charter School,East,Online store,Cleaning and facilities,44,22.13,0,974,ParcelPro,2,Delivered,974,
+SO-50449,2026-06-11,Magnolia Hotels Group,South,Sales rep,Office supplies,82,4.28,10,316,Northline Freight,3,Delivered,316,Carmen D.
+SO-50450,2026-06-11,Canyon Facilities Group,West,Phone,Tech accessories,16,72.36,0,1158,SwiftRoute,5,Delivered,1158,Felix T.
+SO-50451,2026-06-11,Cedar Ridge Accounting,North,Sales rep,Cleaning and facilities,119,25.63,15,2592,Northline Freight,3,Delivered,2592,Alicia R.
+SO-50452,2026-06-11,Magnolia Hotels Group,South,Sales rep,Tech accessories,24,44.30,5,1010,ParcelPro,2,Delivered,1010,Carmen D.
+SO-50453,2026-06-11,Coastal Credit Union,South,Marketplace,Office supplies,36,20.44,0,736,Northline Freight,3,Delivered,736,
+SO-50454,2026-06-12,Northgate Insurance Agency,North,Online store,Office supplies,38,9.72,5,351,Northline Freight,2,Delivered,351,
+SO-50455,2026-06-12,Birchwood Schools,North,Online store,Office supplies,20,6.89,0,138,Northline Freight,3,Delivered,138,
+SO-50456,2026-06-12,Birchwood Schools,North,Online store,Cleaning and facilities,42,19.96,0,838,Northline Freight,3,Delivered,838,
+SO-50457,2026-06-12,Elmwood Senior Living,East,Sales rep,Office supplies,63,16.72,10,948,ParcelPro,4,Returned,0,Erin S.
+SO-50458,2026-06-12,Desert Bloom Clinics,West,Sales rep,Office supplies,131,21.14,5,2631,SwiftRoute,5,Delivered,2631,Felix T.
+SO-50459,2026-06-12,Bayview Nonprofit Alliance,West,Online store,Cleaning and facilities,47,14.12,0,664,SwiftRoute,4,Delivered,664,
+SO-50460,2026-06-12,Desert Bloom Clinics,West,Phone,Tech accessories,32,19.97,0,639,SwiftRoute,3,Delivered,639,Felix T.
+SO-50461,2026-06-12,Pioneer Logistics,North,Phone,Service plans,1,1442.64,0,1443,,,Delivered,1443,Ben K.
+SO-50462,2026-06-12,Harbor Fitness Clubs,South,Online store,Office supplies,8,15.21,0,122,ParcelPro,4,Delivered,122,
+SO-50463,2026-06-12,Riverbend Library,North,Sales rep,Tech accessories,43,112.31,10,4346,Northline Freight,2,Delivered,4346,Ben K.
+SO-50464,2026-06-12,Palmetto Realty,South,Phone,Furniture,12,523.84,0,6286,ParcelPro,3,Delivered,6286,Carmen D.
+SO-50465,2026-06-15,Desert Bloom Clinics,West,Marketplace,Furniture,17,218.32,0,3711,,,Cancelled,0,
+SO-50466,2026-06-15,Magnolia Hotels Group,South,Sales rep,Tech accessories,29,17.06,10,445,Northline Freight,3,Delivered,445,Carmen D.
+SO-50467,2026-06-15,Elmwood Senior Living,East,Online store,Service plans,1,741.43,0,741,,,Delivered,741,
+SO-50468,2026-06-15,Atlantic Charter School,East,Online store,Furniture,8,459.45,5,3492,,,Cancelled,0,
+SO-50469,2026-06-15,Bayview Nonprofit Alliance,West,Online store,Cleaning and facilities,76,29.30,0,2227,SwiftRoute,4,Delivered,2227,
+SO-50470,2026-06-15,Sunrise Pediatrics,South,Online store,Office supplies,22,10.64,5,222,Northline Freight,4,Delivered,222,
+SO-50471,2026-06-15,Sunrise Pediatrics,South,Phone,Service plans,1,1022.03,5,971,,,Delivered,971,Carmen D.
+SO-50472,2026-06-15,Desert Bloom Clinics,West,Online store,Tech accessories,23,111.74,0,2570,SwiftRoute,3,Delivered,2570,
+SO-50473,2026-06-15,Pioneer Logistics,North,Phone,Tech accessories,17,100.14,0,1702,ParcelPro,4,Delivered,1702,Ben K.
+SO-50474,2026-06-15,Desert Bloom Clinics,West,Sales rep,Furniture,26,206.45,5,5099,Northline Freight,2,Delivered,5099,Felix T.
+SO-50475,2026-06-15,Brookside Medical,East,Marketplace,Cleaning and facilities,80,13.63,0,1090,ParcelPro,2,Delivered,1090,
+SO-50476,2026-06-16,Magnolia Hotels Group,South,Online store,Furniture,7,492.52,5,3275,Northline Freight,2,Delivered,3275,
+SO-50477,2026-06-16,Harbor Fitness Clubs,South,Marketplace,Office supplies,19,20.25,0,385,Northline Freight,2,Delivered,385,
+SO-50478,2026-06-16,Birchwood Schools,North,Sales rep,Office supplies,41,19.62,10,724,Northline Freight,2,Delivered,724,Ben K.
+SO-50479,2026-06-16,Hudson Media,East,Phone,Service plans,1,1837.62,0,1838,,,Delivered,1838,David M.
+SO-50480,2026-06-16,Desert Bloom Clinics,West,Online store,Furniture,14,595.22,0,8333,SwiftRoute,4,Delivered,8333,
+SO-50481,2026-06-16,Desert Bloom Clinics,West,Marketplace,Office supplies,74,15.25,0,1129,SwiftRoute,5,Delivered,1129,
+SO-50482,2026-06-16,Desert Bloom Clinics,West,Sales rep,Cleaning and facilities,80,14.95,5,1136,SwiftRoute,5,Delivered,1136,Felix T.
+SO-50483,2026-06-16,Hudson Media,East,Marketplace,Cleaning and facilities,11,17.43,0,192,ParcelPro,3,Delivered,192,
+SO-50484,2026-06-17,Granite Realty Group,North,Sales rep,Furniture,14,209.05,10,2634,Northline Freight,3,Delivered,2634,Ben K.
+SO-50485,2026-06-17,Redwood Software,West,Online store,Service plans,1,2054.79,5,1952,,,Delivered,1952,
+SO-50486,2026-06-17,Gulfview Construction,South,Marketplace,Furniture,6,283.14,5,1614,,,Cancelled,0,
+SO-50487,2026-06-17,Golden State Labs,West,Marketplace,Cleaning and facilities,77,13.04,0,1004,SwiftRoute,4,Returned,0,
+SO-50488,2026-06-17,Golden State Labs,West,Online store,Office supplies,39,9.10,0,355,Northline Freight,4,Delivered,355,
+SO-50489,2026-06-17,Harbor Fitness Clubs,South,Marketplace,Tech accessories,11,67.32,0,741,,,Cancelled,0,
+SO-50490,2026-06-17,Desert Bloom Clinics,West,Marketplace,Office supplies,50,19.79,0,990,SwiftRoute,4,Returned,0,
+SO-50491,2026-06-17,Elmwood Senior Living,East,Online store,Service plans,1,1304.42,5,1239,,,Delivered,1239,
+SO-50492,2026-06-17,Mesa Family Dental,West,Sales rep,Service plans,1,871.26,10,784,,,Delivered,784,Felix T.
+SO-50493,2026-06-17,Magnolia Hotels Group,South,Online store,Tech accessories,5,25.78,0,129,Northline Freight,4,Delivered,129,
+SO-50494,2026-06-17,Riverbend Library,North,Online store,Service plans,1,2218.87,5,2108,,,Delivered,2108,
+SO-50495,2026-06-18,Desert Bloom Clinics,West,Marketplace,Office supplies,74,21.69,0,1605,SwiftRoute,4,Delivered,1605,
+SO-50496,2026-06-18,Desert Bloom Clinics,West,Online store,Service plans,1,646.74,0,647,,,Delivered,647,
+SO-50497,2026-06-18,Magnolia Hotels Group,South,Sales rep,Cleaning and facilities,44,9.54,10,378,ParcelPro,2,Delivered,378,Carmen D.
+SO-50498,2026-06-18,Bluebird Coworking,East,Marketplace,Office supplies,8,16.33,5,124,,,Cancelled,0,
+SO-50499,2026-06-18,Desert Bloom Clinics,West,Online store,Service plans,1,638.13,0,638,,,Delivered,638,
+SO-50500,2026-06-18,Riverbend Library,North,Online store,Office supplies,43,19.55,0,841,Northline Freight,2,Delivered,841,
+SO-50501,2026-06-18,Cedar Ridge Accounting,North,Online store,Cleaning and facilities,17,22.27,0,379,Northline Freight,3,Delivered,379,
+SO-50502,2026-06-18,Patriot Auto Group,East,Online store,Office supplies,21,22.31,0,469,ParcelPro,2,Delivered,469,
+SO-50503,2026-06-18,Harbor Fitness Clubs,South,Online store,Office supplies,60,13.10,0,786,Northline Freight,4,Delivered,786,
+SO-50504,2026-06-19,Harbor Fitness Clubs,South,Phone,Cleaning and facilities,35,29.60,5,984,ParcelPro,4,Delivered,984,Carmen D.
+SO-50505,2026-06-19,Oakline Veterinary,South,Online store,Furniture,9,146.57,5,1253,ParcelPro,4,Delivered,1253,
+SO-50506,2026-06-19,Cedar Ridge Accounting,North,Phone,Service plans,1,1293.44,0,1293,,,Delivered,1293,Ben K.
+SO-50507,2026-06-19,Desert Bloom Clinics,West,Online store,Cleaning and facilities,57,6.64,0,378,,,Cancelled,0,
+SO-50508,2026-06-19,Keystone Manufacturing,East,Sales rep,Tech accessories,26,95.66,15,2114,Northline Freight,2,Delivered,2114,David M.
+SO-50509,2026-06-19,Riverbend Library,North,Online store,Cleaning and facilities,44,8.64,5,361,ParcelPro,2,Delivered,361,
+SO-50510,2026-06-19,Hudson Media,East,Marketplace,Office supplies,17,7.12,0,121,Northline Freight,2,Delivered,121,
+SO-50511,2026-06-19,Sunrise Pediatrics,South,Online store,Service plans,1,834.93,0,835,,,Delivered,835,
+SO-50512,2026-06-22,Pacific Design Studio,West,Online store,Office supplies,42,21.57,0,906,SwiftRoute,5,Delivered,906,
+SO-50513,2026-06-22,Palmetto Realty,South,Phone,Service plans,1,1780.42,0,1780,,,Delivered,1780,Carmen D.
+SO-50514,2026-06-22,Pioneer Logistics,North,Online store,Cleaning and facilities,14,9.19,5,122,Northline Freight,3,Delivered,122,
+SO-50515,2026-06-22,Sierra Outdoor Gear,West,Online store,Service plans,1,1150.22,0,1150,,,Delivered,1150,
+SO-50516,2026-06-22,Oakline Veterinary,South,Online store,Office supplies,27,18.75,5,481,Northline Freight,3,Delivered,481,
+SO-50517,2026-06-22,Maple Street Dental,North,Phone,Cleaning and facilities,42,14.98,0,629,Northline Freight,2,Delivered,629,Alicia R.
+SO-50518,2026-06-22,Gulfview Construction,South,Marketplace,Cleaning and facilities,73,15.47,0,1129,ParcelPro,3,Delivered,1129,
+SO-50519,2026-06-22,Granite Realty Group,North,Marketplace,Furniture,8,562.79,0,4502,ParcelPro,4,Delivered,4502,
+SO-50520,2026-06-23,Liberty Architects,East,Online store,Office supplies,39,8.80,5,326,ParcelPro,2,Delivered,326,
+SO-50521,2026-06-23,Elmwood Senior Living,East,Online store,Tech accessories,11,71.21,5,744,Northline Freight,4,Delivered,744,
+SO-50522,2026-06-23,Golden State Labs,West,Marketplace,Cleaning and facilities,71,8.24,0,585,SwiftRoute,4,Delivered,585,
+SO-50523,2026-06-23,Magnolia Hotels Group,South,Phone,Tech accessories,10,38.30,0,383,Northline Freight,2,Delivered,383,Carmen D.
+SO-50524,2026-06-23,Desert Bloom Clinics,West,Online store,Tech accessories,9,32.18,0,290,SwiftRoute,5,Delivered,290,
+SO-50525,2026-06-23,Brookside Medical,East,Marketplace,Furniture,4,587.19,5,2231,,,Cancelled,0,
+SO-50526,2026-06-23,Coastal Credit Union,South,Online store,Furniture,9,567.52,0,5108,Northline Freight,4,Delivered,5108,
+SO-50527,2026-06-23,Pacific Design Studio,West,Online store,Cleaning and facilities,14,29.37,0,411,SwiftRoute,5,Delivered,411,
+SO-50528,2026-06-23,Sierra Outdoor Gear,West,Marketplace,Office supplies,52,18.18,5,898,SwiftRoute,3,Delivered,898,
+SO-50529,2026-06-23,Birchwood Schools,North,Online store,Furniture,9,280.01,5,2394,,,Cancelled,0,
+SO-50530,2026-06-24,Sunrise Pediatrics,South,Sales rep,Service plans,1,2192.01,15,1863,,,Delivered,1863,Carmen D.
+SO-50531,2026-06-24,Sunrise Pediatrics,South,Phone,Service plans,1,1128.14,0,1128,,,Delivered,1128,Carmen D.
+SO-50532,2026-06-24,Canyon Facilities Group,West,Marketplace,Office supplies,55,24.56,0,1351,Northline Freight,3,Delivered,1351,
+SO-50533,2026-06-24,Atlantic Charter School,East,Online store,Office supplies,56,7.40,5,394,Northline Freight,3,Delivered,394,
+SO-50534,2026-06-24,Pacific Design Studio,West,Online store,Cleaning and facilities,75,27.13,5,1933,SwiftRoute,4,Delivered,1933,
+SO-50535,2026-06-24,Riverbend Library,North,Online store,Cleaning and facilities,19,29.49,0,560,Northline Freight,3,Delivered,560,
+SO-50536,2026-06-25,Cedar Ridge Accounting,North,Online store,Furniture,12,549.76,0,6597,Northline Freight,4,Delivered,6597,
+SO-50537,2026-06-25,Desert Bloom Clinics,West,Online store,Service plans,1,901.59,0,902,,,Delivered,902,
+SO-50538,2026-06-25,Northgate Insurance Agency,North,Phone,Furniture,6,566.01,5,3226,Northline Freight,3,Delivered,3226,Alicia R.
+SO-50539,2026-06-25,Northgate Insurance Agency,North,Phone,Cleaning and facilities,45,10.89,0,490,Northline Freight,4,Delivered,490,Ben K.
+SO-50540,2026-06-25,Magnolia Hotels Group,South,Online store,Service plans,1,793.96,0,794,,,Delivered,794,
+SO-50541,2026-06-25,Bayview Nonprofit Alliance,West,Online store,Tech accessories,17,103.31,5,1668,Northline Freight,4,Delivered,1668,
+SO-50542,2026-06-25,Pioneer Logistics,North,Marketplace,Furniture,10,551.04,0,5510,,,Cancelled,0,
+SO-50543,2026-06-25,Desert Bloom Clinics,West,Sales rep,Office supplies,84,7.17,10,542,SwiftRoute,3,Delivered,542,Felix T.
+SO-50544,2026-06-25,Hudson Media,East,Online store,Office supplies,16,17.26,0,276,ParcelPro,3,Delivered,276,
+SO-50545,2026-06-25,Elmwood Senior Living,East,Online store,Office supplies,17,22.60,5,365,ParcelPro,3,Delivered,365,
+SO-50546,2026-06-25,Harbor Fitness Clubs,South,Marketplace,Office supplies,45,6.51,0,293,Northline Freight,3,Delivered,293,
+SO-50547,2026-06-26,Pacific Design Studio,West,Online store,Cleaning and facilities,47,29.62,5,1323,Northline Freight,2,Delivered,1323,
+SO-50548,2026-06-26,Bluebird Coworking,East,Online store,Office supplies,15,7.02,0,105,Northline Freight,3,Delivered,105,
+SO-50549,2026-06-26,Keystone Manufacturing,East,Phone,Office supplies,23,6.97,0,160,ParcelPro,2,Delivered,160,David M.
+SO-50550,2026-06-26,Sunrise Pediatrics,South,Sales rep,Office supplies,61,14.49,10,796,Northline Freight,4,Delivered,796,Carmen D.
+SO-50551,2026-06-26,Northgate Insurance Agency,North,Online store,Office supplies,49,8.25,5,384,Northline Freight,3,Delivered,384,
+SO-50552,2026-06-26,Northgate Insurance Agency,North,Online store,Office supplies,44,21.59,0,950,,,Cancelled,0,
+SO-50553,2026-06-26,Maple Street Dental,North,Online store,Office supplies,22,16.15,0,355,ParcelPro,4,Delivered,355,
+SO-50554,2026-06-26,Redwood Software,West,Online store,Office supplies,50,4.75,0,238,Northline Freight,2,Delivered,238,
+SO-50555,2026-06-26,Pacific Design Studio,West,Marketplace,Office supplies,23,24.99,0,575,SwiftRoute,4,Delivered,575,
+SO-50556,2026-06-26,Canyon Facilities Group,West,Online store,Office supplies,48,5.60,0,269,,,Cancelled,0,
+SO-50557,2026-06-29,Pacific Design Studio,West,Online store,Tech accessories,14,68.63,0,961,SwiftRoute,5,Returned,0,
+SO-50558,2026-06-29,Mesa Family Dental,West,Sales rep,Office supplies,34,15.04,5,486,SwiftRoute,4,Delivered,486,Felix T.
+SO-50559,2026-06-29,Birchwood Schools,North,Sales rep,Service plans,1,678.19,15,576,,,Delivered,576,Alicia R.
+SO-50560,2026-06-29,Keystone Manufacturing,East,Marketplace,Furniture,2,299.02,0,598,Northline Freight,3,Delivered,598,
+SO-50561,2026-06-29,Gulfview Construction,South,Online store,Service plans,1,2035.30,0,2035,,,Delivered,2035,
+SO-50562,2026-06-29,Summit Engineering,North,Online store,Office supplies,21,11.69,5,233,ParcelPro,4,Delivered,233,
+SO-50563,2026-06-29,Liberty Architects,East,Online store,Office supplies,17,9.46,5,153,Northline Freight,2,Delivered,153,
+SO-50564,2026-06-29,Bluebird Coworking,East,Marketplace,Cleaning and facilities,42,17.67,0,742,ParcelPro,3,Delivered,742,
+SO-50565,2026-06-29,Desert Bloom Clinics,West,Sales rep,Office supplies,44,24.58,15,919,SwiftRoute,5,Returned,0,Felix T.
+SO-50566,2026-06-29,Keystone Manufacturing,East,Online store,Office supplies,23,5.80,0,133,,,Cancelled,0,
+SO-50567,2026-06-30,Brookside Medical,East,Online store,Office supplies,13,10.57,5,131,Northline Freight,4,Delivered,131,
+SO-50568,2026-06-30,Desert Bloom Clinics,West,Marketplace,Cleaning and facilities,120,12.68,0,1522,SwiftRoute,4,Delivered,1522,
+SO-50569,2026-06-30,Palmetto Realty,South,Marketplace,Cleaning and facilities,21,14.14,0,297,Northline Freight,3,Delivered,297,
+SO-50570,2026-06-30,Birchwood Schools,North,Online store,Office supplies,21,9.10,0,191,ParcelPro,2,Delivered,191,
+SO-50571,2026-06-30,Birchwood Schools,North,Marketplace,Tech accessories,3,105.33,0,316,Northline Freight,3,Delivered,316,
+SO-50572,2026-06-30,Summit Engineering,North,Online store,Office supplies,9,16.15,5,138,ParcelPro,2,Delivered,138,
+SO-50573,2026-06-30,Palmetto Realty,South,Online store,Office supplies,51,8.98,5,435,ParcelPro,2,Delivered,435,
+SO-50574,2026-06-30,Bayview Nonprofit Alliance,West,Sales rep,Office supplies,41,10.53,5,410,SwiftRoute,4,Delivered,410,Felix T.
+SO-50575,2026-07-01,Birchwood Schools,North,Marketplace,Tech accessories,21,105.97,0,2225,Northline Freight,2,Delivered,2225,
+SO-50576,2026-07-01,Northgate Insurance Agency,North,Online store,Tech accessories,26,60.03,0,1561,ParcelPro,4,Delivered,1561,
+SO-50577,2026-07-01,Desert Bloom Clinics,West,Phone,Office supplies,29,20.47,5,564,SwiftRoute,10,Delivered,564,Felix T.
+SO-50578,2026-07-01,Desert Bloom Clinics,West,Online store,Cleaning and facilities,41,25.68,0,1053,SwiftRoute,10,Delivered,1053,
+SO-50579,2026-07-01,Desert Bloom Clinics,West,Online store,Service plans,1,2041.45,0,2041,,,Delivered,2041,
+SO-50580,2026-07-01,Magnolia Hotels Group,South,Sales rep,Furniture,12,450.86,15,4599,Northline Freight,2,Delivered,4599,Carmen D.
+SO-50581,2026-07-02,Bluebird Coworking,East,Marketplace,Office supplies,34,12.85,0,437,ParcelPro,2,Delivered,437,
+SO-50582,2026-07-02,Desert Bloom Clinics,West,Marketplace,Tech accessories,23,33.20,5,725,,,Cancelled,0,
+SO-50583,2026-07-02,Mesa Family Dental,West,Phone,Office supplies,30,6.95,5,198,Northline Freight,2,Delivered,198,Felix T.
+SO-50584,2026-07-02,Canyon Facilities Group,West,Online store,Tech accessories,3,91.27,5,260,SwiftRoute,10,Delivered,260,
+SO-50585,2026-07-02,Bluebird Coworking,East,Online store,Furniture,6,460.92,0,2766,Northline Freight,3,Delivered,2766,
+SO-50586,2026-07-02,Elmwood Senior Living,East,Sales rep,Office supplies,54,16.55,10,804,Northline Freight,3,Delivered,804,Erin S.
+SO-50587,2026-07-02,Desert Bloom Clinics,West,Phone,Office supplies,41,4.39,0,180,SwiftRoute,7,Delivered,180,Felix T.
+SO-50588,2026-07-02,Coastal Credit Union,South,Phone,Office supplies,58,21.03,0,1220,ParcelPro,3,Delivered,1220,Carmen D.
+SO-50589,2026-07-02,Golden State Labs,West,Online store,Office supplies,33,11.12,0,367,Northline Freight,4,Delivered,367,
+SO-50590,2026-07-02,Granite Realty Group,North,Sales rep,Office supplies,88,6.39,10,506,Northline Freight,3,Delivered,506,Ben K.
+SO-50591,2026-07-02,Birchwood Schools,North,Marketplace,Tech accessories,29,62.23,5,1714,Northline Freight,4,Delivered,1714,
+SO-50592,2026-07-03,Magnolia Hotels Group,South,Marketplace,Furniture,8,240.66,5,1829,Northline Freight,2,Delivered,1829,
+SO-50593,2026-07-03,Pacific Design Studio,West,Online store,Office supplies,25,10.23,0,256,SwiftRoute,7,Delivered,256,
+SO-50594,2026-07-03,Magnolia Hotels Group,South,Marketplace,Tech accessories,14,110.73,0,1550,Northline Freight,2,Delivered,1550,
+SO-50595,2026-07-03,Desert Bloom Clinics,West,Sales rep,Cleaning and facilities,135,7.27,5,932,SwiftRoute,5,Delivered,932,Felix T.
+SO-50596,2026-07-03,Coastal Credit Union,South,Marketplace,Cleaning and facilities,26,10.21,0,265,Northline Freight,2,Delivered,265,
+SO-50597,2026-07-03,Liberty Architects,East,Online store,Office supplies,28,23.04,0,645,ParcelPro,3,Delivered,645,
+SO-50598,2026-07-03,Bayou Legal Partners,South,Sales rep,Cleaning and facilities,34,14.06,10,430,Northline Freight,3,Delivered,430,Carmen D.
+SO-50599,2026-07-03,Bayou Legal Partners,South,Online store,Furniture,3,373.23,5,1064,Northline Freight,3,Delivered,1064,
+SO-50600,2026-07-06,Birchwood Schools,North,Online store,Tech accessories,14,92.80,0,1299,Northline Freight,4,Returned,0,
+SO-50601,2026-07-06,Mesa Family Dental,West,Online store,Office supplies,34,15.08,0,513,Northline Freight,4,Delivered,513,
+SO-50602,2026-07-06,Keystone Manufacturing,East,Sales rep,Tech accessories,12,23.76,10,257,Northline Freight,4,Delivered,257,David M.
+SO-50603,2026-07-06,Sunrise Pediatrics,South,Phone,Service plans,1,2284.18,0,2284,,,Delivered,2284,Carmen D.
+SO-50604,2026-07-06,Pioneer Logistics,North,Phone,Tech accessories,26,95.88,0,2493,Northline Freight,4,Delivered,2493,Alicia R.
+SO-50605,2026-07-06,Granite Realty Group,North,Sales rep,Cleaning and facilities,70,26.09,5,1735,Northline Freight,4,Delivered,1735,Alicia R.
+SO-50606,2026-07-06,Cedar Ridge Accounting,North,Marketplace,Furniture,5,491.54,0,2458,Northline Freight,3,Delivered,2458,
+SO-50607,2026-07-06,Riverbend Library,North,Marketplace,Tech accessories,9,33.36,0,300,Northline Freight,4,Delivered,300,
+SO-50608,2026-07-06,Keystone Manufacturing,East,Phone,Cleaning and facilities,29,10.93,0,317,Northline Freight,3,Delivered,317,David M.
+SO-50609,2026-07-06,Pioneer Logistics,North,Sales rep,Office supplies,60,4.95,10,267,ParcelPro,2,Returned,0,Alicia R.
+SO-50610,2026-07-07,Coastal Credit Union,South,Online store,Furniture,4,631.71,5,2400,ParcelPro,3,Delivered,2400,
+SO-50611,2026-07-07,Gulfview Construction,South,Sales rep,Cleaning and facilities,107,19.32,10,1861,ParcelPro,2,Delivered,1861,Carmen D.
+SO-50612,2026-07-07,Atlantic Charter School,East,Sales rep,Tech accessories,39,26.82,10,941,Northline Freight,2,Delivered,941,Erin S.
+SO-50613,2026-07-07,Magnolia Hotels Group,South,Online store,Tech accessories,20,84.31,5,1602,Northline Freight,4,Delivered,1602,
+SO-50614,2026-07-07,Maple Street Dental,North,Online store,Tech accessories,29,50.00,0,1450,ParcelPro,4,Delivered,1450,
+SO-50615,2026-07-07,Hudson Media,East,Online store,Tech accessories,14,91.81,0,1285,ParcelPro,4,Delivered,1285,
+SO-50616,2026-07-07,Sunrise Pediatrics,South,Online store,Service plans,1,1010.48,0,1010,,,Delivered,1010,
+SO-50617,2026-07-07,Riverbend Library,North,Online store,Office supplies,32,4.60,0,147,ParcelPro,3,Delivered,147,
+SO-50618,2026-07-07,Patriot Auto Group,East,Online store,Tech accessories,24,65.36,0,1569,ParcelPro,2,Delivered,1569,
+SO-50619,2026-07-08,Desert Bloom Clinics,West,Marketplace,Furniture,5,438.31,0,2192,SwiftRoute,7,Delivered,2192,
+SO-50620,2026-07-08,Magnolia Hotels Group,South,Online store,Office supplies,41,18.70,0,767,Northline Freight,2,Delivered,767,
+SO-50621,2026-07-08,Northgate Insurance Agency,North,Online store,Cleaning and facilities,67,22.04,0,1477,ParcelPro,3,Delivered,1477,
+SO-50622,2026-07-08,Hudson Media,East,Phone,Office supplies,24,23.51,0,564,ParcelPro,3,Delivered,564,David M.
+SO-50623,2026-07-08,Bayou Legal Partners,South,Phone,Service plans,1,1667.93,0,1668,,,Delivered,1668,Carmen D.
+SO-50624,2026-07-08,Patriot Auto Group,East,Sales rep,Cleaning and facilities,39,15.96,5,591,ParcelPro,2,Delivered,591,Erin S.
+SO-50625,2026-07-09,Bayou Legal Partners,South,Marketplace,Cleaning and facilities,33,10.21,0,337,Northline Freight,2,Delivered,337,
+SO-50626,2026-07-09,Desert Bloom Clinics,West,Online store,Cleaning and facilities,65,29.39,5,1815,SwiftRoute,10,Returned,0,
+SO-50627,2026-07-09,Desert Bloom Clinics,West,Online store,Office supplies,14,18.43,5,245,SwiftRoute,9,Delivered,245,
+SO-50628,2026-07-09,Bayview Nonprofit Alliance,West,Online store,Service plans,1,1903.57,5,1808,,,Delivered,1808,
+SO-50629,2026-07-09,Birchwood Schools,North,Online store,Furniture,3,163.87,0,492,Northline Freight,4,Delivered,492,
+SO-50630,2026-07-09,Sunrise Pediatrics,South,Online store,Furniture,8,464.65,5,3531,Northline Freight,3,Delivered,3531,
+SO-50631,2026-07-09,Palmetto Realty,South,Marketplace,Tech accessories,14,69.68,0,976,Northline Freight,3,Delivered,976,
+SO-50632,2026-07-09,Northgate Insurance Agency,North,Online store,Cleaning and facilities,14,18.70,0,262,ParcelPro,3,Delivered,262,
+SO-50633,2026-07-09,Cedar Ridge Accounting,North,Online store,Furniture,2,164.69,0,329,ParcelPro,2,Returned,0,
+SO-50634,2026-07-10,Bayview Nonprofit Alliance,West,Online store,Office supplies,42,12.23,0,514,SwiftRoute,8,Delivered,514,
+SO-50635,2026-07-10,Elmwood Senior Living,East,Online store,Cleaning and facilities,36,28.56,0,1028,ParcelPro,4,Delivered,1028,
+SO-50636,2026-07-10,Desert Bloom Clinics,West,Sales rep,Furniture,21,519.47,10,9818,SwiftRoute,10,Delivered,9818,Felix T.
+SO-50637,2026-07-10,Harbor Fitness Clubs,South,Phone,Service plans,1,1183.86,0,1184,,,Delivered,1184,Carmen D.
+SO-50638,2026-07-10,Elmwood Senior Living,East,Phone,Tech accessories,18,96.59,0,1739,Northline Freight,4,Delivered,1739,David M.
+SO-50639,2026-07-10,Birchwood Schools,North,Online store,Tech accessories,15,119.96,0,1799,ParcelPro,3,Delivered,1799,
+SO-50640,2026-07-10,Bluebird Coworking,East,Sales rep,Tech accessories,36,84.84,10,2749,Northline Freight,4,Delivered,2749,David M.
+SO-50641,2026-07-10,Canyon Facilities Group,West,Phone,Service plans,1,1497.99,0,1498,,,Delivered,1498,Felix T.
+SO-50642,2026-07-10,Pacific Design Studio,West,Online store,Office supplies,50,23.45,0,1173,SwiftRoute,10,Delivered,1173,
+SO-50643,2026-07-10,Elmwood Senior Living,East,Sales rep,Office supplies,65,12.43,10,727,ParcelPro,3,Delivered,727,David M.
+SO-50644,2026-07-13,Bayview Nonprofit Alliance,West,Sales rep,Cleaning and facilities,111,10.31,5,1087,SwiftRoute,8,Delivered,1087,Felix T.
+SO-50645,2026-07-13,Pioneer Logistics,North,Marketplace,Office supplies,17,16.19,5,261,Northline Freight,3,Delivered,261,
+SO-50646,2026-07-13,Gulfview Construction,South,Online store,Office supplies,8,7.73,0,62,ParcelPro,2,Delivered,62,
+SO-50647,2026-07-13,Sunrise Pediatrics,South,Online store,Cleaning and facilities,69,28.51,0,1967,Northline Freight,3,Delivered,1967,
+SO-50648,2026-07-13,Pacific Design Studio,West,Online store,Office supplies,15,5.39,0,81,Northline Freight,3,Delivered,81,
+SO-50649,2026-07-13,Palmetto Realty,South,Online store,Office supplies,45,20.52,5,877,Northline Freight,3,Delivered,877,
+SO-50650,2026-07-13,Magnolia Hotels Group,South,Marketplace,Office supplies,43,4.13,0,178,ParcelPro,3,Delivered,178,
+SO-50651,2026-07-13,Keystone Manufacturing,East,Sales rep,Service plans,1,1632.95,15,1388,,,Delivered,1388,Erin S.
+SO-50652,2026-07-14,Granite Realty Group,North,Marketplace,Furniture,1,485.58,0,486,Northline Freight,2,Returned,0,
+SO-50653,2026-07-14,Atlantic Charter School,East,Phone,Service plans,1,675.06,0,675,,,Delivered,675,David M.
+SO-50654,2026-07-14,Birchwood Schools,North,Online store,Furniture,8,164.65,5,1251,ParcelPro,3,Delivered,1251,
+SO-50655,2026-07-14,Gulfview Construction,South,Sales rep,Office supplies,73,4.31,15,267,ParcelPro,3,Delivered,267,Carmen D.
+SO-50656,2026-07-14,Desert Bloom Clinics,West,Online store,Cleaning and facilities,54,16.82,0,908,Northline Freight,2,Delivered,908,
+SO-50657,2026-07-14,Bluebird Coworking,East,Online store,Tech accessories,22,48.99,0,1078,Northline Freight,3,Delivered,1078,
+SO-50658,2026-07-15,Pioneer Logistics,North,Phone,Office supplies,36,10.16,0,366,Northline Freight,2,Delivered,366,Ben K.
+SO-50659,2026-07-15,Bayou Legal Partners,South,Online store,Office supplies,7,18.41,0,129,,,Cancelled,0,
+SO-50660,2026-07-15,Cedar Ridge Accounting,North,Sales rep,Tech accessories,44,53.35,5,2230,Northline Freight,4,Delivered,2230,Alicia R.
+SO-50661,2026-07-15,Maple Street Dental,North,Online store,Tech accessories,2,103.06,0,206,Northline Freight,2,Delivered,206,
+SO-50662,2026-07-15,Desert Bloom Clinics,West,Sales rep,Tech accessories,36,86.85,10,2814,SwiftRoute,6,Delivered,2814,Felix T.
+SO-50663,2026-07-15,Magnolia Hotels Group,South,Phone,Service plans,1,971.09,0,971,,,Delivered,971,Carmen D.
+SO-50664,2026-07-16,Pioneer Logistics,North,Online store,Service plans,1,2304.33,0,2304,,,Delivered,2304,
+SO-50665,2026-07-16,Bluebird Coworking,East,Sales rep,Cleaning and facilities,32,24.93,5,758,ParcelPro,4,Delivered,758,Erin S.
+SO-50666,2026-07-16,Maple Street Dental,North,Online store,Tech accessories,16,30.75,0,492,ParcelPro,3,Delivered,492,
+SO-50667,2026-07-16,Gulfview Construction,South,Online store,Furniture,4,182.65,0,731,ParcelPro,3,Delivered,731,
+SO-50668,2026-07-16,Birchwood Schools,North,Online store,Tech accessories,24,103.99,0,2496,ParcelPro,4,Delivered,2496,
+SO-50669,2026-07-16,Desert Bloom Clinics,West,Online store,Furniture,8,594.77,0,4758,SwiftRoute,9,Delivered,4758,
+SO-50670,2026-07-17,Sierra Outdoor Gear,West,Phone,Furniture,10,179.43,0,1794,,,Cancelled,0,Felix T.
+SO-50671,2026-07-17,Northgate Insurance Agency,North,Online store,Tech accessories,24,67.39,0,1617,ParcelPro,4,Delivered,1617,
+SO-50672,2026-07-17,Atlantic Charter School,East,Online store,Tech accessories,3,30.55,0,92,Northline Freight,4,Delivered,92,
+SO-50673,2026-07-17,Desert Bloom Clinics,West,Online store,Service plans,1,1663.22,0,1663,,,Delivered,1663,
+SO-50674,2026-07-17,Cedar Ridge Accounting,North,Phone,Furniture,9,197.95,0,1782,,,Cancelled,0,Ben K.
+SO-50675,2026-07-17,Pacific Design Studio,West,Online store,Office supplies,26,21.87,5,540,SwiftRoute,6,Delivered,540,
+SO-50676,2026-07-17,Bluebird Coworking,East,Online store,Cleaning and facilities,59,21.42,5,1201,Northline Freight,3,Delivered,1201,
+SO-50677,2026-07-20,Canyon Facilities Group,West,Marketplace,Cleaning and facilities,66,29.29,0,1933,SwiftRoute,7,Delivered,1933,
+SO-50678,2026-07-20,Elmwood Senior Living,East,Online store,Cleaning and facilities,28,9.23,0,258,ParcelPro,2,Delivered,258,
+SO-50679,2026-07-20,Elmwood Senior Living,East,Online store,Tech accessories,23,56.81,0,1307,ParcelPro,4,Delivered,1307,
+SO-50680,2026-07-20,Atlantic Charter School,East,Online store,Tech accessories,22,27.67,0,609,ParcelPro,3,Delivered,609,
+SO-50681,2026-07-20,Desert Bloom Clinics,West,Sales rep,Tech accessories,41,116.04,10,4282,SwiftRoute,7,Delivered,4282,Felix T.
+SO-50682,2026-07-20,Birchwood Schools,North,Online store,Cleaning and facilities,43,21.72,0,934,ParcelPro,4,Delivered,934,
+SO-50683,2026-07-20,Golden State Labs,West,Online store,Cleaning and facilities,77,10.68,0,822,SwiftRoute,6,Delivered,822,
+SO-50684,2026-07-21,Sierra Outdoor Gear,West,Online store,Office supplies,14,11.62,0,163,SwiftRoute,5,Delivered,163,
+SO-50685,2026-07-21,Elmwood Senior Living,East,Online store,Service plans,1,1777.94,5,1689,,,Delivered,1689,
+SO-50686,2026-07-21,Desert Bloom Clinics,West,Online store,Office supplies,36,10.99,5,376,SwiftRoute,6,Delivered,376,
+SO-50687,2026-07-21,Desert Bloom Clinics,West,Online store,Tech accessories,14,26.42,5,351,SwiftRoute,6,Delivered,351,
+SO-50688,2026-07-21,Desert Bloom Clinics,West,Marketplace,Office supplies,53,16.67,5,839,SwiftRoute,7,Delivered,839,
+SO-50689,2026-07-21,Northgate Insurance Agency,North,Online store,Office supplies,30,14.99,0,450,Northline Freight,4,Delivered,450,
+SO-50690,2026-07-22,Keystone Manufacturing,East,Sales rep,Service plans,1,1457.80,10,1312,,,Delivered,1312,David M.
+SO-50691,2026-07-22,Magnolia Hotels Group,South,Online store,Service plans,1,1421.97,0,1422,,,Delivered,1422,
+SO-50692,2026-07-22,Magnolia Hotels Group,South,Sales rep,Service plans,1,2349.64,5,2232,,,Delivered,2232,Carmen D.
+SO-50693,2026-07-22,Riverbend Library,North,Online store,Cleaning and facilities,73,13.24,0,967,Northline Freight,2,Delivered,967,
+SO-50694,2026-07-22,Desert Bloom Clinics,West,Phone,Tech accessories,36,93.06,0,3350,Northline Freight,4,Delivered,3350,Felix T.
+SO-50695,2026-07-22,Golden State Labs,West,Phone,Office supplies,12,22.16,0,266,SwiftRoute,6,Delivered,266,Felix T.
+SO-50696,2026-07-22,Maple Street Dental,North,Marketplace,Tech accessories,17,19.78,0,336,Northline Freight,2,Returned,0,
+SO-50697,2026-07-22,Desert Bloom Clinics,West,Sales rep,Cleaning and facilities,201,24.75,10,4477,Northline Freight,4,Delivered,4477,Felix T.
+SO-50698,2026-07-22,Golden State Labs,West,Online store,Office supplies,23,19.28,0,443,Northline Freight,3,Delivered,443,
+SO-50699,2026-07-23,Mesa Family Dental,West,Online store,Office supplies,5,18.52,0,93,SwiftRoute,9,Delivered,93,
+SO-50700,2026-07-23,Desert Bloom Clinics,West,Online store,Tech accessories,35,83.32,0,2916,SwiftRoute,7,Delivered,2916,
+SO-50701,2026-07-23,Desert Bloom Clinics,West,Online store,Office supplies,77,16.55,0,1274,Northline Freight,4,Delivered,1274,
+SO-50702,2026-07-23,Keystone Manufacturing,East,Online store,Cleaning and facilities,61,10.15,0,619,Northline Freight,3,Delivered,619,
+SO-50703,2026-07-23,Riverbend Library,North,Marketplace,Furniture,5,372.06,5,1767,,,Cancelled,0,
+SO-50704,2026-07-23,Pioneer Logistics,North,Online store,Office supplies,29,12.33,0,358,,,Cancelled,0,
+SO-50705,2026-07-23,Elmwood Senior Living,East,Phone,Service plans,1,1872.44,0,1872,,,Delivered,1872,David M.
+SO-50706,2026-07-23,Sunrise Pediatrics,South,Phone,Furniture,4,374.95,5,1425,Northline Freight,4,Delivered,1425,Carmen D.
+SO-50707,2026-07-23,Elmwood Senior Living,East,Marketplace,Office supplies,40,17.60,0,704,ParcelPro,2,Returned,0,
+SO-50708,2026-07-23,Birchwood Schools,North,Sales rep,Office supplies,61,6.72,5,389,Northline Freight,3,Delivered,389,Alicia R.
+SO-50709,2026-07-23,Palmetto Realty,South,Phone,Service plans,1,2007.20,0,2007,,,Delivered,2007,Carmen D.
+SO-50710,2026-07-24,Coastal Credit Union,South,Online store,Tech accessories,23,94.67,5,2069,,,Cancelled,0,
+SO-50711,2026-07-24,Liberty Architects,East,Online store,Furniture,6,561.74,5,3202,ParcelPro,4,Delivered,3202,
+SO-50712,2026-07-24,Hudson Media,East,Sales rep,Office supplies,99,23.09,10,2057,ParcelPro,4,Delivered,2057,Erin S.
+SO-50713,2026-07-24,Desert Bloom Clinics,West,Online store,Service plans,1,1725.47,0,1725,,,Delivered,1725,
+SO-50714,2026-07-24,Golden State Labs,West,Phone,Service plans,1,1216.89,0,1217,,,Delivered,1217,Felix T.
+SO-50715,2026-07-24,Bayou Legal Partners,South,Sales rep,Tech accessories,26,47.95,5,1184,ParcelPro,2,Delivered,1184,Carmen D.
+SO-50716,2026-07-24,Magnolia Hotels Group,South,Online store,Office supplies,34,13.72,0,466,Northline Freight,2,Delivered,466,
+SO-50717,2026-07-24,Magnolia Hotels Group,South,Sales rep,Office supplies,29,9.71,15,239,Northline Freight,2,Delivered,239,Carmen D.
+SO-50718,2026-07-24,Palmetto Realty,South,Online store,Office supplies,52,7.26,5,359,Northline Freight,4,Delivered,359,
+SO-50719,2026-07-24,Northgate Insurance Agency,North,Online store,Tech accessories,13,61.04,5,754,Northline Freight,2,Delivered,754,
+SO-50720,2026-07-24,Cedar Ridge Accounting,North,Sales rep,Tech accessories,9,109.68,10,888,ParcelPro,2,Delivered,888,Alicia R.
+SO-50721,2026-07-27,Sunrise Pediatrics,South,Online store,Tech accessories,16,85.77,0,1372,ParcelPro,4,Delivered,1372,
+SO-50722,2026-07-27,Desert Bloom Clinics,West,Sales rep,Office supplies,74,7.98,5,561,SwiftRoute,10,Delivered,561,Felix T.
+SO-50723,2026-07-27,Bayview Nonprofit Alliance,West,Online store,Furniture,3,322.46,0,967,SwiftRoute,7,Delivered,967,
+SO-50724,2026-07-27,Desert Bloom Clinics,West,Sales rep,Office supplies,29,10.03,10,262,Northline Freight,4,Delivered,262,Felix T.
+SO-50725,2026-07-27,Pioneer Logistics,North,Online store,Office supplies,36,22.82,0,822,ParcelPro,4,Delivered,822,
+SO-50726,2026-07-27,Harbor Fitness Clubs,South,Marketplace,Office supplies,39,10.49,0,409,ParcelPro,3,Delivered,409,
+SO-50727,2026-07-27,Magnolia Hotels Group,South,Online store,Tech accessories,12,87.59,0,1051,Northline Freight,3,Delivered,1051,
+SO-50728,2026-07-27,Desert Bloom Clinics,West,Marketplace,Office supplies,59,6.69,0,395,SwiftRoute,10,Delivered,395,
+SO-50729,2026-07-28,Desert Bloom Clinics,West,Online store,Tech accessories,14,82.29,0,1152,SwiftRoute,10,Returned,0,
+SO-50730,2026-07-28,Bayview Nonprofit Alliance,West,Online store,Service plans,1,1338.39,5,1271,,,Delivered,1271,
+SO-50731,2026-07-28,Magnolia Hotels Group,South,Marketplace,Office supplies,36,10.09,0,363,,,Cancelled,0,
+SO-50732,2026-07-28,Keystone Manufacturing,East,Phone,Office supplies,58,20.13,0,1168,Northline Freight,3,Delivered,1168,Erin S.
+SO-50733,2026-07-28,Pacific Design Studio,West,Online store,Office supplies,35,22.77,0,797,SwiftRoute,5,Delivered,797,
+SO-50734,2026-07-28,Patriot Auto Group,East,Phone,Furniture,4,248.51,0,994,Northline Freight,4,Returned,0,Erin S.
+SO-50735,2026-07-28,Hudson Media,East,Phone,Tech accessories,17,72.33,0,1230,ParcelPro,4,Delivered,1230,Erin S.
+SO-50736,2026-07-28,Pioneer Logistics,North,Phone,Tech accessories,10,58.49,5,556,Northline Freight,3,Delivered,556,Alicia R.
+SO-50737,2026-07-29,Mesa Family Dental,West,Marketplace,Office supplies,42,9.32,0,391,SwiftRoute,8,Delivered,391,
+SO-50738,2026-07-29,Keystone Manufacturing,East,Sales rep,Office supplies,70,12.32,5,819,ParcelPro,3,Delivered,819,David M.
+SO-50739,2026-07-29,Cedar Ridge Accounting,North,Online store,Cleaning and facilities,18,9.19,0,165,Northline Freight,2,Delivered,165,
+SO-50740,2026-07-29,Desert Bloom Clinics,West,Sales rep,Tech accessories,56,70.91,10,3574,SwiftRoute,9,Delivered,3574,Felix T.
+SO-50741,2026-07-29,Desert Bloom Clinics,West,Online store,Office supplies,32,22.22,0,711,SwiftRoute,5,Delivered,711,
+SO-50742,2026-07-29,Mesa Family Dental,West,Online store,Cleaning and facilities,80,26.00,5,1976,SwiftRoute,5,Delivered,1976,
+SO-50743,2026-07-29,Summit Engineering,North,Marketplace,Office supplies,28,21.37,0,598,Northline Freight,3,Returned,0,
+SO-50744,2026-07-29,Keystone Manufacturing,East,Online store,Office supplies,32,24.54,5,746,Northline Freight,3,Delivered,746,
+SO-50745,2026-07-29,Magnolia Hotels Group,South,Phone,Service plans,1,795.89,0,796,,,Delivered,796,Carmen D.
+SO-50746,2026-07-29,Liberty Architects,East,Online store,Tech accessories,28,28.83,0,807,Northline Freight,4,Delivered,807,
+SO-50747,2026-07-30,Summit Engineering,North,Online store,Furniture,1,219.55,0,220,Northline Freight,4,Delivered,220,
+SO-50748,2026-07-30,Patriot Auto Group,East,Online store,Cleaning and facilities,69,7.00,0,483,ParcelPro,4,Delivered,483,
+SO-50749,2026-07-30,Canyon Facilities Group,West,Online store,Cleaning and facilities,44,12.45,5,520,Northline Freight,2,Delivered,520,
+SO-50750,2026-07-30,Patriot Auto Group,East,Online store,Office supplies,36,11.74,0,423,Northline Freight,2,Delivered,423,
+SO-50751,2026-07-30,Liberty Architects,East,Marketplace,Office supplies,38,4.85,0,184,ParcelPro,2,Delivered,184,
+SO-50752,2026-07-30,Desert Bloom Clinics,West,Sales rep,Cleaning and facilities,158,7.41,10,1054,SwiftRoute,9,Delivered,1054,Felix T.
+SO-50753,2026-07-30,Northgate Insurance Agency,North,Marketplace,Office supplies,58,5.81,5,320,ParcelPro,4,Delivered,320,
+SO-50754,2026-07-30,Bayview Nonprofit Alliance,West,Phone,Office supplies,31,21.28,5,627,SwiftRoute,5,Delivered,627,Felix T.
+SO-50755,2026-07-30,Sierra Outdoor Gear,West,Online store,Office supplies,12,24.38,5,278,Northline Freight,4,Delivered,278,
+SO-50756,2026-07-30,Elmwood Senior Living,East,Online store,Tech accessories,16,62.75,5,954,ParcelPro,4,Delivered,954,
+SO-50757,2026-07-31,Maple Street Dental,North,Phone,Tech accessories,5,48.02,0,240,ParcelPro,4,Delivered,240,Ben K.
+SO-50758,2026-07-31,Sierra Outdoor Gear,West,Online store,Office supplies,41,22.36,5,871,SwiftRoute,9,Delivered,871,
+SO-50759,2026-07-31,Riverbend Library,North,Online store,Tech accessories,26,97.25,0,2529,Northline Freight,2,Delivered,2529,
+SO-50760,2026-07-31,Sierra Outdoor Gear,West,Sales rep,Office supplies,100,19.63,5,1865,SwiftRoute,10,Returned,0,Felix T.
+SO-50761,2026-07-31,Liberty Architects,East,Marketplace,Office supplies,43,20.46,0,880,,,Cancelled,0,
+SO-50762,2026-07-31,Granite Realty Group,North,Online store,Tech accessories,10,98.86,5,939,Northline Freight,2,Delivered,939,
+SO-50763,2026-08-03,Liberty Architects,East,Sales rep,Tech accessories,10,28.24,15,240,Northline Freight,2,Delivered,240,David M.
+SO-50764,2026-08-03,Sunrise Pediatrics,South,Marketplace,Tech accessories,21,17.77,5,355,Northline Freight,4,Delivered,355,
+SO-50765,2026-08-03,Riverbend Library,North,Sales rep,Furniture,10,381.19,15,3240,Northline Freight,2,Delivered,3240,Alicia R.
+SO-50766,2026-08-03,Riverbend Library,North,Online store,Office supplies,43,23.55,5,962,ParcelPro,2,Delivered,962,
+SO-50767,2026-08-03,Keystone Manufacturing,East,Online store,Service plans,1,2383.59,5,2264,,,Delivered,2264,
+SO-50768,2026-08-03,Palmetto Realty,South,Online store,Office supplies,36,11.49,0,414,Northline Freight,2,Delivered,414,
+SO-50769,2026-08-03,Keystone Manufacturing,East,Phone,Office supplies,58,5.09,0,295,ParcelPro,2,Delivered,295,Erin S.
+SO-50770,2026-08-03,Patriot Auto Group,East,Marketplace,Office supplies,20,21.21,5,403,Northline Freight,4,Delivered,403,
+SO-50771,2026-08-04,Harbor Fitness Clubs,South,Online store,Office supplies,52,13.17,5,651,Northline Freight,4,Delivered,651,
+SO-50772,2026-08-04,Birchwood Schools,North,Online store,Cleaning and facilities,42,14.05,0,590,ParcelPro,3,Delivered,590,
+SO-50773,2026-08-04,Hudson Media,East,Online store,Office supplies,53,14.36,0,761,ParcelPro,4,Delivered,761,
+SO-50774,2026-08-04,Desert Bloom Clinics,West,Sales rep,Office supplies,95,20.02,10,1712,SwiftRoute,6,Delivered,1712,Felix T.
+SO-50775,2026-08-04,Summit Engineering,North,Marketplace,Cleaning and facilities,40,22.81,0,912,ParcelPro,2,Delivered,912,
+SO-50776,2026-08-04,Pioneer Logistics,North,Phone,Tech accessories,20,98.68,0,1974,,,Cancelled,0,Alicia R.
+SO-50777,2026-08-05,Desert Bloom Clinics,West,Phone,Cleaning and facilities,80,20.72,5,1575,SwiftRoute,9,Delivered,1575,Felix T.
+SO-50778,2026-08-05,Canyon Facilities Group,West,Online store,Tech accessories,6,113.97,0,684,SwiftRoute,7,Delivered,684,
+SO-50779,2026-08-05,Riverbend Library,North,Online store,Office supplies,35,12.78,5,425,ParcelPro,4,Delivered,425,
+SO-50780,2026-08-05,Summit Engineering,North,Sales rep,Cleaning and facilities,26,25.74,10,602,Northline Freight,3,Delivered,602,Ben K.
+SO-50781,2026-08-05,Patriot Auto Group,East,Online store,Cleaning and facilities,42,10.98,5,438,Northline Freight,3,Delivered,438,
+SO-50782,2026-08-05,Birchwood Schools,North,Online store,Office supplies,42,22.08,0,927,Northline Freight,4,Delivered,927,
+SO-50783,2026-08-05,Oakline Veterinary,South,Marketplace,Office supplies,7,10.25,0,72,ParcelPro,2,Delivered,72,
+SO-50784,2026-08-05,Elmwood Senior Living,East,Online store,Office supplies,20,6.65,0,133,ParcelPro,3,Delivered,133,
+SO-50785,2026-08-05,Sunrise Pediatrics,South,Marketplace,Office supplies,41,14.05,5,547,,,Cancelled,0,
+SO-50786,2026-08-06,Magnolia Hotels Group,South,Sales rep,Office supplies,31,14.14,15,373,ParcelPro,2,Delivered,373,Carmen D.
+SO-50787,2026-08-06,Magnolia Hotels Group,South,Online store,Tech accessories,22,84.06,5,1757,ParcelPro,3,Delivered,1757,
+SO-50788,2026-08-06,Granite Realty Group,North,Marketplace,Office supplies,33,20.53,5,644,Northline Freight,4,Delivered,644,
+SO-50789,2026-08-06,Magnolia Hotels Group,South,Sales rep,Tech accessories,44,18.85,5,788,Northline Freight,3,Delivered,788,Carmen D.
+SO-50790,2026-08-06,Coastal Credit Union,South,Marketplace,Cleaning and facilities,49,20.99,0,1029,Northline Freight,3,Delivered,1029,
+SO-50791,2026-08-06,Patriot Auto Group,East,Sales rep,Service plans,1,2154.19,10,1939,,,Delivered,1939,David M.
+SO-50792,2026-08-06,Gulfview Construction,South,Phone,Service plans,1,2109.46,0,2109,,,Delivered,2109,Carmen D.
+SO-50793,2026-08-06,Coastal Credit Union,South,Online store,Cleaning and facilities,62,24.69,0,1531,ParcelPro,3,Delivered,1531,
+SO-50794,2026-08-06,Summit Engineering,North,Phone,Office supplies,44,17.40,0,766,ParcelPro,2,Returned,0,Alicia R.
+SO-50795,2026-08-06,Gulfview Construction,South,Sales rep,Office supplies,41,17.06,5,664,Northline Freight,3,Delivered,664,Carmen D.
+SO-50796,2026-08-07,Hudson Media,East,Marketplace,Cleaning and facilities,16,23.96,0,383,ParcelPro,4,Delivered,383,
+SO-50797,2026-08-07,Birchwood Schools,North,Marketplace,Office supplies,40,19.92,5,757,Northline Freight,4,Delivered,757,
+SO-50798,2026-08-07,Sierra Outdoor Gear,West,Phone,Tech accessories,2,112.95,5,215,Northline Freight,2,Delivered,215,Felix T.
+SO-50799,2026-08-07,Desert Bloom Clinics,West,Sales rep,Office supplies,131,23.26,5,2895,Northline Freight,2,Delivered,2895,Felix T.
+SO-50800,2026-08-07,Golden State Labs,West,Marketplace,Cleaning and facilities,21,6.26,5,125,SwiftRoute,5,Delivered,125,
+SO-50801,2026-08-07,Pioneer Logistics,North,Online store,Service plans,1,832.42,0,832,,,Delivered,832,
+SO-50802,2026-08-10,Birchwood Schools,North,Online store,Office supplies,44,23.93,5,1000,ParcelPro,4,Delivered,1000,
+SO-50803,2026-08-10,Northgate Insurance Agency,North,Online store,Office supplies,28,18.51,0,518,Northline Freight,4,Delivered,518,
+SO-50804,2026-08-10,Northgate Insurance Agency,North,Marketplace,Tech accessories,2,36.91,0,74,ParcelPro,3,Delivered,74,
+SO-50805,2026-08-10,Cedar Ridge Accounting,North,Online store,Office supplies,57,8.06,0,459,Northline Freight,4,Delivered,459,
+SO-50806,2026-08-10,Magnolia Hotels Group,South,Phone,Service plans,1,2002.67,0,2003,,,Returned,0,Carmen D.
+SO-50807,2026-08-10,Maple Street Dental,North,Marketplace,Tech accessories,29,40.23,0,1167,Northline Freight,3,Delivered,1167,
+SO-50808,2026-08-11,Granite Realty Group,North,Online store,Office supplies,15,9.94,0,149,ParcelPro,3,Delivered,149,
+SO-50809,2026-08-11,Summit Engineering,North,Marketplace,Cleaning and facilities,47,7.89,0,371,Northline Freight,2,Delivered,371,
+SO-50810,2026-08-11,Bayou Legal Partners,South,Sales rep,Furniture,15,213.65,5,3045,Northline Freight,3,Returned,0,Carmen D.
+SO-50811,2026-08-11,Brookside Medical,East,Sales rep,Service plans,1,620.76,15,528,,,Delivered,528,David M.
+SO-50812,2026-08-11,Riverbend Library,North,Sales rep,Furniture,15,325.83,5,4643,ParcelPro,2,Delivered,4643,Alicia R.
+SO-50813,2026-08-11,Brookside Medical,East,Phone,Office supplies,42,7.71,0,324,Northline Freight,2,Delivered,324,David M.
+SO-50814,2026-08-11,Keystone Manufacturing,East,Phone,Tech accessories,5,85.64,0,428,ParcelPro,4,Delivered,428,David M.
+SO-50815,2026-08-11,Pioneer Logistics,North,Online store,Cleaning and facilities,17,26.49,5,428,Northline Freight,3,Delivered,428,
+SO-50816,2026-08-12,Magnolia Hotels Group,South,Online store,Furniture,3,480.56,0,1442,ParcelPro,3,Delivered,1442,
+SO-50817,2026-08-12,Magnolia Hotels Group,South,Marketplace,Cleaning and facilities,76,26.14,0,1987,Northline Freight,2,Delivered,1987,
+SO-50818,2026-08-12,Sunrise Pediatrics,South,Sales rep,Furniture,3,634.11,15,1617,ParcelPro,4,Delivered,1617,Carmen D.
+SO-50819,2026-08-12,Sierra Outdoor Gear,West,Phone,Tech accessories,3,58.35,0,175,Northline Freight,4,Delivered,175,Felix T.
+SO-50820,2026-08-12,Patriot Auto Group,East,Phone,Service plans,1,2236.33,0,2236,,,Delivered,2236,David M.
+SO-50821,2026-08-13,Desert Bloom Clinics,West,Online store,Tech accessories,44,86.02,5,3596,SwiftRoute,6,Delivered,3596,
+SO-50822,2026-08-13,Harbor Fitness Clubs,South,Sales rep,Tech accessories,3,116.78,15,298,ParcelPro,4,Delivered,298,Carmen D.
+SO-50823,2026-08-13,Northgate Insurance Agency,North,Online store,Office supplies,48,18.51,0,888,ParcelPro,3,Delivered,888,
+SO-50824,2026-08-13,Birchwood Schools,North,Phone,Tech accessories,20,52.73,0,1055,ParcelPro,3,Delivered,1055,Ben K.
+SO-50825,2026-08-13,Coastal Credit Union,South,Marketplace,Cleaning and facilities,76,17.49,0,1329,ParcelPro,3,Delivered,1329,
+SO-50826,2026-08-13,Coastal Credit Union,South,Sales rep,Tech accessories,48,69.53,5,3171,Northline Freight,3,Delivered,3171,Carmen D.
+SO-50827,2026-08-13,Bayview Nonprofit Alliance,West,Online store,Office supplies,44,6.88,0,303,Northline Freight,3,Delivered,303,
+SO-50828,2026-08-13,Granite Realty Group,North,Online store,Service plans,1,635.86,0,636,,,Delivered,636,
+SO-50829,2026-08-14,Granite Realty Group,North,Sales rep,Office supplies,22,23.54,10,466,Northline Freight,3,Delivered,466,Alicia R.
+SO-50830,2026-08-14,Maple Street Dental,North,Online store,Tech accessories,24,29.37,0,705,Northline Freight,3,Delivered,705,
+SO-50831,2026-08-14,Sunrise Pediatrics,South,Marketplace,Furniture,5,627.82,5,2982,Northline Freight,3,Returned,0,
+SO-50832,2026-08-14,Desert Bloom Clinics,West,Online store,Office supplies,23,7.11,5,155,SwiftRoute,6,Delivered,155,
+SO-50833,2026-08-14,Magnolia Hotels Group,South,Phone,Office supplies,50,7.23,0,362,,,Cancelled,0,Carmen D.
+SO-50834,2026-08-14,Hudson Media,East,Online store,Service plans,1,755.23,0,755,,,Delivered,755,
+SO-50835,2026-08-14,Magnolia Hotels Group,South,Online store,Cleaning and facilities,48,17.68,0,849,Northline Freight,4,Delivered,849,
+SO-50836,2026-08-14,Birchwood Schools,North,Online store,Cleaning and facilities,46,17.18,0,790,ParcelPro,3,Delivered,790,
+SO-50837,2026-08-14,Gulfview Construction,South,Online store,Service plans,1,1326.20,0,1326,,,Delivered,1326,
+SO-50838,2026-08-14,Bayview Nonprofit Alliance,West,Online store,Tech accessories,8,50.12,0,401,SwiftRoute,10,Delivered,401,
+SO-50839,2026-08-14,Oakline Veterinary,South,Sales rep,Furniture,20,341.22,15,5801,Northline Freight,4,Delivered,5801,Carmen D.
+SO-50840,2026-08-17,Keystone Manufacturing,East,Online store,Furniture,1,595.04,5,565,ParcelPro,2,Delivered,565,
+SO-50841,2026-08-17,Elmwood Senior Living,East,Sales rep,Furniture,14,312.23,10,3934,ParcelPro,4,Delivered,3934,David M.
+SO-50842,2026-08-17,Maple Street Dental,North,Sales rep,Furniture,5,170.26,5,809,ParcelPro,2,Delivered,809,Ben K.
+SO-50843,2026-08-17,Golden State Labs,West,Phone,Service plans,1,1524.74,0,1525,,,Delivered,1525,Felix T.
+SO-50844,2026-08-17,Palmetto Realty,South,Online store,Cleaning and facilities,61,16.62,0,1014,Northline Freight,3,Delivered,1014,
+SO-50845,2026-08-17,Liberty Architects,East,Sales rep,Furniture,7,468.11,15,2785,ParcelPro,4,Delivered,2785,David M.
+SO-50846,2026-08-17,Liberty Architects,East,Online store,Office supplies,37,22.24,0,823,Northline Freight,3,Delivered,823,
+SO-50847,2026-08-17,Birchwood Schools,North,Online store,Office supplies,18,20.81,0,375,ParcelPro,4,Delivered,375,
+SO-50848,2026-08-17,Desert Bloom Clinics,West,Phone,Cleaning and facilities,50,23.66,0,1183,SwiftRoute,10,Delivered,1183,Felix T.
+SO-50849,2026-08-17,Palmetto Realty,South,Phone,Office supplies,45,6.51,0,293,ParcelPro,3,Delivered,293,Carmen D.
+SO-50850,2026-08-18,Summit Engineering,North,Marketplace,Cleaning and facilities,79,15.16,0,1198,ParcelPro,2,Delivered,1198,
+SO-50851,2026-08-18,Cedar Ridge Accounting,North,Online store,Office supplies,19,7.38,0,140,Northline Freight,3,Delivered,140,
+SO-50852,2026-08-18,Desert Bloom Clinics,West,Sales rep,Service plans,1,1915.54,5,1820,,,Delivered,1820,Felix T.
+SO-50853,2026-08-18,Elmwood Senior Living,East,Sales rep,Tech accessories,41,76.03,5,2961,Northline Freight,3,Delivered,2961,Erin S.
+SO-50854,2026-08-18,Bayview Nonprofit Alliance,West,Online store,Tech accessories,2,28.26,0,57,SwiftRoute,9,Delivered,57,
+SO-50855,2026-08-18,Sunrise Pediatrics,South,Online store,Furniture,9,177.12,0,1594,ParcelPro,2,Delivered,1594,
+SO-50856,2026-08-18,Keystone Manufacturing,East,Marketplace,Office supplies,14,10.58,0,148,,,Cancelled,0,
+SO-50857,2026-08-18,Maple Street Dental,North,Sales rep,Office supplies,51,11.47,10,526,Northline Freight,4,Delivered,526,Ben K.
+SO-50858,2026-08-18,Coastal Credit Union,South,Marketplace,Cleaning and facilities,63,14.61,5,874,ParcelPro,3,Delivered,874,
+SO-50859,2026-08-18,Liberty Architects,East,Online store,Office supplies,22,10.13,0,223,ParcelPro,3,Delivered,223,
+SO-50860,2026-08-19,Atlantic Charter School,East,Online store,Tech accessories,11,113.58,0,1249,,,Cancelled,0,
+SO-50861,2026-08-19,Birchwood Schools,North,Online store,Office supplies,27,5.93,0,160,ParcelPro,2,Delivered,160,
+SO-50862,2026-08-19,Sunrise Pediatrics,South,Online store,Office supplies,28,4.59,5,122,Northline Freight,3,Delivered,122,
+SO-50863,2026-08-19,Coastal Credit Union,South,Online store,Tech accessories,6,54.44,5,310,ParcelPro,3,Delivered,310,
+SO-50864,2026-08-19,Harbor Fitness Clubs,South,Sales rep,Office supplies,95,8.93,10,764,ParcelPro,2,Delivered,764,Carmen D.
+SO-50865,2026-08-19,Northgate Insurance Agency,North,Online store,Service plans,1,1920.30,0,1920,,,Delivered,1920,
+SO-50866,2026-08-20,Birchwood Schools,North,Online store,Tech accessories,8,51.45,0,412,ParcelPro,4,Delivered,412,
+SO-50867,2026-08-20,Canyon Facilities Group,West,Online store,Cleaning and facilities,43,8.24,0,354,SwiftRoute,8,Returned,0,
+SO-50868,2026-08-20,Patriot Auto Group,East,Sales rep,Office supplies,53,7.67,10,366,Northline Freight,2,Delivered,366,David M.
+SO-50869,2026-08-20,Gulfview Construction,South,Online store,Furniture,8,556.39,0,4451,Northline Freight,3,Delivered,4451,
+SO-50870,2026-08-20,Palmetto Realty,South,Marketplace,Cleaning and facilities,76,23.93,0,1819,ParcelPro,3,Returned,0,
+SO-50871,2026-08-20,Magnolia Hotels Group,South,Online store,Office supplies,16,22.98,0,368,ParcelPro,4,Delivered,368,
+SO-50872,2026-08-21,Keystone Manufacturing,East,Online store,Office supplies,28,22.97,0,643,Northline Freight,2,Delivered,643,
+SO-50873,2026-08-21,Granite Realty Group,North,Marketplace,Tech accessories,8,55.49,0,444,ParcelPro,4,Delivered,444,
+SO-50874,2026-08-21,Desert Bloom Clinics,West,Sales rep,Cleaning and facilities,29,8.97,15,221,SwiftRoute,10,Delivered,221,Felix T.
+SO-50875,2026-08-21,Atlantic Charter School,East,Online store,Tech accessories,20,81.61,0,1632,Northline Freight,2,Delivered,1632,
+SO-50876,2026-08-21,Mesa Family Dental,West,Marketplace,Office supplies,51,4.23,5,205,SwiftRoute,8,Delivered,205,
+SO-50877,2026-08-21,Oakline Veterinary,South,Phone,Cleaning and facilities,70,25.31,0,1772,Northline Freight,4,Delivered,1772,Carmen D.
+SO-50878,2026-08-24,Riverbend Library,North,Online store,Cleaning and facilities,15,22.27,0,334,Northline Freight,3,Delivered,334,
+SO-50879,2026-08-24,Sunrise Pediatrics,South,Phone,Service plans,1,1697.42,0,1697,,,Cancelled,0,Carmen D.
+SO-50880,2026-08-24,Palmetto Realty,South,Online store,Tech accessories,24,87.07,0,2090,ParcelPro,3,Delivered,2090,
+SO-50881,2026-08-24,Sunrise Pediatrics,South,Phone,Office supplies,6,14.34,0,86,Northline Freight,2,Delivered,86,Carmen D.
+SO-50882,2026-08-24,Keystone Manufacturing,East,Online store,Tech accessories,9,35.10,5,300,Northline Freight,4,Delivered,300,
+SO-50883,2026-08-24,Maple Street Dental,North,Online store,Tech accessories,3,39.63,0,119,ParcelPro,3,Delivered,119,
+SO-50884,2026-08-24,Keystone Manufacturing,East,Phone,Service plans,1,1620.53,0,1621,,,Returned,0,Erin S.
+SO-50885,2026-08-24,Birchwood Schools,North,Marketplace,Office supplies,45,11.84,5,506,Northline Freight,3,Delivered,506,
+SO-50886,2026-08-24,Maple Street Dental,North,Online store,Office supplies,23,14.19,0,326,Northline Freight,2,Delivered,326,
+SO-50887,2026-08-25,Summit Engineering,North,Online store,Tech accessories,8,60.09,0,481,Northline Freight,4,Delivered,481,
+SO-50888,2026-08-25,Sunrise Pediatrics,South,Online store,Office supplies,38,5.59,0,212,ParcelPro,3,Delivered,212,
+SO-50889,2026-08-25,Magnolia Hotels Group,South,Online store,Tech accessories,26,53.45,0,1390,,,Cancelled,0,
+SO-50890,2026-08-25,Riverbend Library,North,Sales rep,Tech accessories,41,28.86,10,1065,,,Cancelled,0,Alicia R.
+SO-50891,2026-08-25,Desert Bloom Clinics,West,Marketplace,Furniture,11,177.36,5,1853,Northline Freight,3,Returned,0,
+SO-50892,2026-08-25,Bluebird Coworking,East,Online store,Office supplies,40,22.19,0,888,Northline Freight,4,Delivered,888,
+SO-50893,2026-08-25,Gulfview Construction,South,Online store,Tech accessories,2,22.12,0,44,Northline Freight,2,Delivered,44,
+SO-50894,2026-08-26,Desert Bloom Clinics,West,Phone,Office supplies,18,18.43,0,332,SwiftRoute,9,Delivered,332,Felix T.
+SO-50895,2026-08-26,Desert Bloom Clinics,West,Online store,Office supplies,69,15.80,0,1090,SwiftRoute,5,Delivered,1090,
+SO-50896,2026-08-26,Granite Realty Group,North,Sales rep,Cleaning and facilities,111,24.80,10,2478,Northline Freight,2,Delivered,2478,Alicia R.
+SO-50897,2026-08-26,Bayou Legal Partners,South,Online store,Tech accessories,9,43.39,0,391,Northline Freight,4,Delivered,391,
+SO-50898,2026-08-26,Bayou Legal Partners,South,Online store,Tech accessories,19,39.72,0,755,Northline Freight,2,Delivered,755,
+SO-50899,2026-08-26,Bayou Legal Partners,South,Phone,Service plans,1,1783.46,0,1783,,,Delivered,1783,Carmen D.
+SO-50900,2026-08-26,Sunrise Pediatrics,South,Marketplace,Cleaning and facilities,63,20.93,0,1319,,,Cancelled,0,
+SO-50901,2026-08-27,Bluebird Coworking,East,Marketplace,Tech accessories,24,20.54,0,493,ParcelPro,4,Returned,0,
+SO-50902,2026-08-27,Patriot Auto Group,East,Marketplace,Tech accessories,5,70.38,0,352,Northline Freight,2,Delivered,352,
+SO-50903,2026-08-27,Sierra Outdoor Gear,West,Online store,Cleaning and facilities,12,28.97,0,348,SwiftRoute,7,Delivered,348,
+SO-50904,2026-08-27,Birchwood Schools,North,Marketplace,Tech accessories,8,114.90,0,919,Northline Freight,4,Delivered,919,
+SO-50905,2026-08-27,Desert Bloom Clinics,West,Phone,Tech accessories,23,59.21,0,1362,SwiftRoute,7,Delivered,1362,Felix T.
+SO-50906,2026-08-27,Magnolia Hotels Group,South,Online store,Cleaning and facilities,14,21.63,0,303,Northline Freight,3,Delivered,303,
+SO-50907,2026-08-27,Birchwood Schools,North,Sales rep,Office supplies,27,18.60,10,452,Northline Freight,4,Delivered,452,Alicia R.
+SO-50908,2026-08-27,Sierra Outdoor Gear,West,Online store,Office supplies,39,13.19,5,489,,,Cancelled,0,
+SO-50909,2026-08-28,Oakline Veterinary,South,Marketplace,Cleaning and facilities,44,6.79,0,299,ParcelPro,4,Delivered,299,
+SO-50910,2026-08-28,Cedar Ridge Accounting,North,Sales rep,Tech accessories,24,97.65,10,2109,ParcelPro,3,Delivered,2109,Ben K.
+SO-50911,2026-08-28,Granite Realty Group,North,Sales rep,Office supplies,51,15.65,10,718,ParcelPro,4,Delivered,718,Ben K.
+SO-50912,2026-08-28,Maple Street Dental,North,Online store,Office supplies,36,21.04,0,757,Northline Freight,4,Delivered,757,
+SO-50913,2026-08-28,Northgate Insurance Agency,North,Marketplace,Tech accessories,12,28.39,0,341,,,Cancelled,0,
+SO-50914,2026-08-28,Redwood Software,West,Phone,Tech accessories,14,70.04,0,981,SwiftRoute,10,Delivered,981,Felix T.
+SO-50915,2026-08-28,Birchwood Schools,North,Marketplace,Tech accessories,23,116.04,0,2669,ParcelPro,2,Delivered,2669,
+SO-50916,2026-08-31,Harbor Fitness Clubs,South,Marketplace,Cleaning and facilities,70,12.26,0,858,Northline Freight,2,Returned,0,
+SO-50917,2026-08-31,Bluebird Coworking,East,Phone,Tech accessories,26,51.77,0,1346,ParcelPro,2,Delivered,1346,David M.
+SO-50918,2026-08-31,Gulfview Construction,South,Online store,Office supplies,34,5.43,0,185,Northline Freight,4,Delivered,185,
+SO-50919,2026-08-31,Coastal Credit Union,South,Sales rep,Tech accessories,44,103.53,15,3872,ParcelPro,2,Delivered,3872,Carmen D.
+SO-50920,2026-08-31,Bayou Legal Partners,South,Sales rep,Tech accessories,22,49.11,10,972,ParcelPro,3,Delivered,972,Carmen D.
+SO-50921,2026-08-31,Granite Realty Group,North,Sales rep,Office supplies,95,10.65,5,961,Northline Freight,2,Delivered,961,Alicia R.
+SO-50922,2026-08-31,Cedar Ridge Accounting,North,Online store,Tech accessories,30,56.17,0,1685,Northline Freight,4,Delivered,1685,
+SO-50923,2026-08-31,Palmetto Realty,South,Online store,Furniture,8,637.55,0,5100,Northline Freight,4,Delivered,5100,
+SO-50924,2026-08-31,Birchwood Schools,North,Phone,Office supplies,15,24.54,5,350,ParcelPro,2,Delivered,350,Ben K.
+SO-50925,2026-08-31,Birchwood Schools,North,Phone,Office supplies,25,14.15,0,354,Northline Freight,2,Delivered,354,Ben K.
+SO-50926,2026-08-31,Mesa Family Dental,West,Online store,Cleaning and facilities,22,9.69,0,213,SwiftRoute,7,Delivered,213,
+SO-50927,2026-09-01,Hudson Media,East,Sales rep,Office supplies,49,11.49,5,535,Northline Freight,2,Delivered,535,David M.
+SO-50928,2026-09-01,Desert Bloom Clinics,West,Marketplace,Cleaning and facilities,78,14.65,0,1143,Northline Freight,4,Delivered,1143,
+SO-50929,2026-09-01,Patriot Auto Group,East,Online store,Office supplies,32,4.10,0,131,ParcelPro,4,Delivered,131,
+SO-50930,2026-09-01,Brookside Medical,East,Online store,Cleaning and facilities,75,25.48,0,1911,ParcelPro,2,Delivered,1911,
+SO-50931,2026-09-01,Summit Engineering,North,Online store,Cleaning and facilities,39,18.67,5,692,ParcelPro,2,Delivered,692,
+SO-50932,2026-09-01,Magnolia Hotels Group,South,Phone,Office supplies,49,20.93,5,974,ParcelPro,4,Delivered,974,Carmen D.
+SO-50933,2026-09-02,Pacific Design Studio,West,Sales rep,Furniture,5,361.05,10,1625,SwiftRoute,7,Delivered,1625,Felix T.
+SO-50934,2026-09-02,Bayou Legal Partners,South,Online store,Office supplies,53,16.02,0,849,ParcelPro,4,Delivered,849,
+SO-50935,2026-09-02,Bayou Legal Partners,South,Marketplace,Cleaning and facilities,64,8.19,0,524,Northline Freight,3,Delivered,524,
+SO-50936,2026-09-02,Oakline Veterinary,South,Online store,Cleaning and facilities,24,19.98,0,480,ParcelPro,2,Delivered,480,
+SO-50937,2026-09-02,Granite Realty Group,North,Phone,Service plans,1,2055.55,0,2056,,,Delivered,2056,Alicia R.
+SO-50938,2026-09-02,Oakline Veterinary,South,Online store,Office supplies,55,23.24,5,1214,ParcelPro,2,Delivered,1214,
+SO-50939,2026-09-02,Bluebird Coworking,East,Sales rep,Furniture,15,316.95,10,4279,ParcelPro,3,Delivered,4279,Erin S.
+SO-50940,2026-09-02,Gulfview Construction,South,Online store,Office supplies,47,18.57,0,873,ParcelPro,2,Delivered,873,
+SO-50941,2026-09-02,Pioneer Logistics,North,Sales rep,Tech accessories,43,62.99,5,2573,ParcelPro,2,Delivered,2573,Ben K.
+SO-50942,2026-09-02,Oakline Veterinary,South,Phone,Service plans,1,706.01,5,671,,,Delivered,671,Carmen D.
+SO-50943,2026-09-02,Patriot Auto Group,East,Phone,Cleaning and facilities,36,14.60,0,526,Northline Freight,2,Delivered,526,Erin S.
+SO-50944,2026-09-03,Desert Bloom Clinics,West,Marketplace,Tech accessories,33,55.11,5,1728,SwiftRoute,5,Delivered,1728,
+SO-50945,2026-09-03,Palmetto Realty,South,Online store,Office supplies,33,15.95,0,526,ParcelPro,4,Delivered,526,
+SO-50946,2026-09-03,Bluebird Coworking,East,Sales rep,Service plans,1,1542.39,10,1388,,,Cancelled,0,Erin S.
+SO-50947,2026-09-03,Oakline Veterinary,South,Phone,Tech accessories,25,72.61,5,1724,Northline Freight,3,Delivered,1724,Carmen D.
+SO-50948,2026-09-03,Magnolia Hotels Group,South,Phone,Cleaning and facilities,44,11.60,0,510,Northline Freight,3,Delivered,510,Carmen D.
+SO-50949,2026-09-03,Keystone Manufacturing,East,Online store,Furniture,8,540.72,5,4109,Northline Freight,4,Delivered,4109,
+SO-50950,2026-09-03,Bluebird Coworking,East,Sales rep,Cleaning and facilities,44,28.95,10,1146,Northline Freight,2,Delivered,1146,Erin S.
+SO-50951,2026-09-03,Brookside Medical,East,Online store,Office supplies,42,11.41,0,479,ParcelPro,3,Delivered,479,
+SO-50952,2026-09-03,Brookside Medical,East,Sales rep,Furniture,19,649.16,15,10484,ParcelPro,3,Delivered,10484,Erin S.
+SO-50953,2026-09-04,Patriot Auto Group,East,Online store,Service plans,1,720.34,0,720,,,Delivered,720,
+SO-50954,2026-09-04,Riverbend Library,North,Phone,Office supplies,51,16.99,0,866,Northline Freight,4,Delivered,866,Ben K.
+SO-50955,2026-09-04,Palmetto Realty,South,Online store,Cleaning and facilities,63,25.52,0,1608,ParcelPro,3,Delivered,1608,
+SO-50956,2026-09-04,Keystone Manufacturing,East,Online store,Office supplies,45,18.98,0,854,Northline Freight,3,Delivered,854,
+SO-50957,2026-09-04,Granite Realty Group,North,Online store,Cleaning and facilities,69,29.54,0,2038,Northline Freight,4,Delivered,2038,
+SO-50958,2026-09-04,Canyon Facilities Group,West,Online store,Office supplies,6,5.07,0,30,SwiftRoute,8,Delivered,30,
+SO-50959,2026-09-04,Desert Bloom Clinics,West,Online store,Tech accessories,17,118.89,0,2021,SwiftRoute,5,Delivered,2021,
+SO-50960,2026-09-04,Redwood Software,West,Sales rep,Cleaning and facilities,53,16.04,15,723,SwiftRoute,9,Returned,0,Felix T.
+SO-50961,2026-09-04,Hudson Media,East,Online store,Service plans,1,1097.32,0,1097,,,Delivered,1097,
+SO-50962,2026-09-07,Granite Realty Group,North,Sales rep,Service plans,1,1031.26,5,980,,,Delivered,980,Ben K.
+SO-50963,2026-09-07,Magnolia Hotels Group,South,Online store,Office supplies,43,4.42,0,190,ParcelPro,4,Delivered,190,
+SO-50964,2026-09-07,Desert Bloom Clinics,West,Online store,Office supplies,42,21.86,0,918,Northline Freight,3,Delivered,918,
+SO-50965,2026-09-07,Redwood Software,West,Sales rep,Office supplies,44,5.11,15,191,Northline Freight,2,Delivered,191,Felix T.
+SO-50966,2026-09-07,Gulfview Construction,South,Sales rep,Furniture,17,469.15,10,7178,Northline Freight,2,Delivered,7178,Carmen D.
+SO-50967,2026-09-07,Riverbend Library,North,Phone,Tech accessories,24,75.41,0,1810,Northline Freight,4,Delivered,1810,Ben K.
+SO-50968,2026-09-07,Sunrise Pediatrics,South,Marketplace,Tech accessories,14,33.41,0,468,ParcelPro,3,Delivered,468,
+SO-50969,2026-09-07,Golden State Labs,West,Sales rep,Cleaning and facilities,56,16.57,10,835,SwiftRoute,10,Delivered,835,Felix T.
+SO-50970,2026-09-08,Summit Engineering,North,Phone,Office supplies,49,20.54,0,1006,Northline Freight,3,Delivered,1006,Alicia R.
+SO-50971,2026-09-08,Desert Bloom Clinics,West,Online store,Office supplies,21,22.71,0,477,Northline Freight,2,Delivered,477,
+SO-50972,2026-09-08,Birchwood Schools,North,Online store,Tech accessories,3,22.69,0,68,Northline Freight,4,Delivered,68,
+SO-50973,2026-09-08,Magnolia Hotels Group,South,Marketplace,Office supplies,21,17.92,0,376,,,Cancelled,0,
+SO-50974,2026-09-08,Coastal Credit Union,South,Marketplace,Furniture,5,629.02,0,3145,ParcelPro,3,Delivered,3145,
+SO-50975,2026-09-08,Patriot Auto Group,East,Marketplace,Tech accessories,7,37.51,0,263,ParcelPro,4,Delivered,263,
+SO-50976,2026-09-08,Gulfview Construction,South,Sales rep,Office supplies,71,10.56,10,675,ParcelPro,2,Delivered,675,Carmen D.
+SO-50977,2026-09-08,Pioneer Logistics,North,Online store,Office supplies,17,10.56,0,180,ParcelPro,3,Delivered,180,
+SO-50978,2026-09-09,Magnolia Hotels Group,South,Marketplace,Cleaning and facilities,53,7.53,0,399,Northline Freight,3,Delivered,399,
+SO-50979,2026-09-09,Desert Bloom Clinics,West,Phone,Service plans,1,687.17,0,687,,,Delivered,687,Felix T.
+SO-50980,2026-09-09,Desert Bloom Clinics,West,Phone,Office supplies,54,23.21,0,1253,Northline Freight,2,Delivered,1253,Felix T.
+SO-50981,2026-09-09,Atlantic Charter School,East,Online store,Office supplies,15,21.88,0,328,ParcelPro,3,Delivered,328,
+SO-50982,2026-09-09,Desert Bloom Clinics,West,Online store,Office supplies,23,15.62,0,359,SwiftRoute,9,Delivered,359,
+SO-50983,2026-09-09,Elmwood Senior Living,East,Marketplace,Cleaning and facilities,43,26.84,0,1154,Northline Freight,4,Delivered,1154,
+SO-50984,2026-09-09,Keystone Manufacturing,East,Online store,Cleaning and facilities,32,21.72,0,695,ParcelPro,4,Delivered,695,
+SO-50985,2026-09-09,Granite Realty Group,North,Online store,Tech accessories,28,76.86,0,2152,Northline Freight,3,Delivered,2152,
+SO-50986,2026-09-09,Birchwood Schools,North,Online store,Office supplies,7,24.99,0,175,ParcelPro,2,Delivered,175,
+SO-50987,2026-09-10,Patriot Auto Group,East,Online store,Tech accessories,13,47.33,0,615,Northline Freight,3,Delivered,615,
+SO-50988,2026-09-10,Riverbend Library,North,Sales rep,Service plans,1,2302.51,15,1957,,,Returned,0,Alicia R.
+SO-50989,2026-09-10,Pacific Design Studio,West,Marketplace,Cleaning and facilities,10,15.38,0,154,,,Cancelled,0,
+SO-50990,2026-09-10,Maple Street Dental,North,Sales rep,Office supplies,99,20.43,10,1820,Northline Freight,2,Delivered,1820,Ben K.
+SO-50991,2026-09-10,Birchwood Schools,North,Online store,Cleaning and facilities,22,17.45,5,365,ParcelPro,4,Delivered,365,
+SO-50992,2026-09-10,Palmetto Realty,South,Online store,Office supplies,22,24.55,0,540,Northline Freight,2,Delivered,540,
+SO-50993,2026-09-10,Desert Bloom Clinics,West,Online store,Tech accessories,11,66.15,0,728,SwiftRoute,9,Returned,0,
+SO-50994,2026-09-10,Hudson Media,East,Online store,Office supplies,15,4.86,0,73,Northline Freight,2,Delivered,73,
+SO-50995,2026-09-10,Keystone Manufacturing,East,Online store,Office supplies,56,20.16,0,1129,Northline Freight,2,Delivered,1129,
+SO-50996,2026-09-11,Magnolia Hotels Group,South,Online store,Cleaning and facilities,24,25.88,5,590,Northline Freight,4,Delivered,590,
+SO-50997,2026-09-11,Keystone Manufacturing,East,Marketplace,Tech accessories,28,21.02,0,589,,,Cancelled,0,
+SO-50998,2026-09-11,Palmetto Realty,South,Marketplace,Office supplies,13,23.49,0,305,Northline Freight,2,Delivered,305,
+SO-50999,2026-09-11,Keystone Manufacturing,East,Sales rep,Office supplies,51,17.45,5,845,ParcelPro,3,Delivered,845,Erin S.
+SO-51000,2026-09-11,Canyon Facilities Group,West,Phone,Service plans,1,785.50,5,746,,,Delivered,746,Felix T.
+SO-51001,2026-09-11,Riverbend Library,North,Sales rep,Office supplies,26,6.42,10,150,Northline Freight,4,Delivered,150,Ben K.
+SO-51002,2026-09-11,Pioneer Logistics,North,Phone,Office supplies,28,17.42,5,463,ParcelPro,4,Delivered,463,Ben K.
+SO-51003,2026-09-11,Bluebird Coworking,East,Marketplace,Cleaning and facilities,67,8.57,0,574,ParcelPro,4,Delivered,574,
+SO-51004,2026-09-11,Pacific Design Studio,West,Online store,Tech accessories,25,58.86,0,1472,SwiftRoute,7,Delivered,1472,
+SO-51005,2026-09-11,Summit Engineering,North,Online store,Service plans,1,2212.06,0,2212,,,Delivered,2212,
+SO-51006,2026-09-14,Coastal Credit Union,South,Online store,Office supplies,7,14.04,0,98,ParcelPro,2,Delivered,98,
+SO-51007,2026-09-14,Harbor Fitness Clubs,South,Phone,Tech accessories,11,30.15,5,315,Northline Freight,3,Delivered,315,Carmen D.
+SO-51008,2026-09-14,Palmetto Realty,South,Marketplace,Cleaning and facilities,66,26.93,0,1777,Northline Freight,4,Delivered,1777,
+SO-51009,2026-09-14,Harbor Fitness Clubs,South,Online store,Office supplies,32,18.49,0,592,ParcelPro,3,Delivered,592,
+SO-51010,2026-09-14,Atlantic Charter School,East,Online store,Furniture,10,248.00,0,2480,ParcelPro,4,Delivered,2480,
+SO-51011,2026-09-14,Elmwood Senior Living,East,Sales rep,Office supplies,90,18.58,10,1505,ParcelPro,3,Delivered,1505,David M.
+SO-51012,2026-09-14,Birchwood Schools,North,Marketplace,Tech accessories,12,80.81,0,970,Northline Freight,4,Delivered,970,
+SO-51013,2026-09-14,Bayview Nonprofit Alliance,West,Online store,Tech accessories,3,103.47,0,310,SwiftRoute,9,Delivered,310,
+SO-51014,2026-09-14,Birchwood Schools,North,Online store,Tech accessories,30,34.92,0,1048,ParcelPro,3,Delivered,1048,
+SO-51015,2026-09-14,Bluebird Coworking,East,Sales rep,Office supplies,39,23.63,15,783,Northline Freight,3,Delivered,783,Erin S.
+SO-51016,2026-09-15,Brookside Medical,East,Marketplace,Office supplies,34,14.53,0,494,Northline Freight,2,Delivered,494,
+SO-51017,2026-09-15,Desert Bloom Clinics,West,Online store,Tech accessories,20,71.30,0,1426,SwiftRoute,6,Delivered,1426,
+SO-51018,2026-09-15,Golden State Labs,West,Marketplace,Office supplies,45,4.05,0,182,SwiftRoute,5,Delivered,182,
+SO-51019,2026-09-15,Desert Bloom Clinics,West,Online store,Cleaning and facilities,66,27.79,5,1742,Northline Freight,3,Delivered,1742,
+SO-51020,2026-09-15,Granite Realty Group,North,Sales rep,Office supplies,77,5.34,5,391,ParcelPro,2,Delivered,391,Alicia R.
+SO-51021,2026-09-15,Cedar Ridge Accounting,North,Marketplace,Furniture,8,648.75,0,5190,ParcelPro,4,Delivered,5190,
+SO-51022,2026-09-15,Sunrise Pediatrics,South,Sales rep,Furniture,7,326.34,5,2170,ParcelPro,2,Delivered,2170,Carmen D.
+SO-51023,2026-09-15,Pioneer Logistics,North,Online store,Cleaning and facilities,31,16.82,0,521,Northline Freight,3,Delivered,521,
+SO-51024,2026-09-16,Liberty Architects,East,Online store,Cleaning and facilities,79,21.83,5,1638,ParcelPro,4,Delivered,1638,
+SO-51025,2026-09-16,Elmwood Senior Living,East,Sales rep,Tech accessories,34,39.67,15,1146,ParcelPro,3,Delivered,1146,Erin S.
+SO-51026,2026-09-16,Desert Bloom Clinics,West,Marketplace,Office supplies,15,13.65,0,205,,,Cancelled,0,
+SO-51027,2026-09-16,Gulfview Construction,South,Marketplace,Tech accessories,21,95.37,5,1903,ParcelPro,4,Delivered,1903,
+SO-51028,2026-09-16,Gulfview Construction,South,Online store,Office supplies,28,8.72,0,244,ParcelPro,3,Returned,0,
+SO-51029,2026-09-16,Riverbend Library,North,Sales rep,Service plans,1,1871.84,10,1685,,,Delivered,1685,Ben K.
+SO-51030,2026-09-16,Maple Street Dental,North,Online store,Cleaning and facilities,64,9.56,5,581,Northline Freight,4,Delivered,581,
+SO-51031,2026-09-17,Harbor Fitness Clubs,South,Online store,Furniture,1,530.36,0,530,Northline Freight,4,Delivered,530,
+SO-51032,2026-09-17,Hudson Media,East,Online store,Service plans,1,642.77,0,643,,,Delivered,643,
+SO-51033,2026-09-17,Northgate Insurance Agency,North,Phone,Service plans,1,1295.57,0,1296,,,Delivered,1296,Ben K.
+SO-51034,2026-09-17,Pioneer Logistics,North,Sales rep,Furniture,2,563.59,10,1014,ParcelPro,4,Delivered,1014,Alicia R.
+SO-51035,2026-09-17,Palmetto Realty,South,Online store,Cleaning and facilities,78,23.35,0,1821,ParcelPro,3,Delivered,1821,
+SO-51036,2026-09-18,Summit Engineering,North,Sales rep,Tech accessories,24,112.66,15,2298,ParcelPro,3,Delivered,2298,Alicia R.
+SO-51037,2026-09-18,Maple Street Dental,North,Online store,Cleaning and facilities,24,23.43,0,562,Northline Freight,4,Delivered,562,
+SO-51038,2026-09-18,Liberty Architects,East,Sales rep,Service plans,1,1762.24,10,1586,,,Delivered,1586,David M.
+SO-51039,2026-09-18,Summit Engineering,North,Sales rep,Cleaning and facilities,131,26.05,10,3071,ParcelPro,2,Delivered,3071,Alicia R.
+SO-51040,2026-09-18,Maple Street Dental,North,Sales rep,Cleaning and facilities,17,19.74,15,285,Northline Freight,2,Delivered,285,Alicia R.
+SO-51041,2026-09-18,Cedar Ridge Accounting,North,Online store,Cleaning and facilities,28,26.14,5,695,Northline Freight,4,Delivered,695,
+SO-51042,2026-09-18,Maple Street Dental,North,Online store,Furniture,10,513.65,5,4880,ParcelPro,2,Delivered,4880,
+SO-51043,2026-09-21,Granite Realty Group,North,Marketplace,Office supplies,50,14.30,0,715,Northline Freight,4,Delivered,715,
+SO-51044,2026-09-21,Sunrise Pediatrics,South,Online store,Office supplies,36,5.73,5,196,Northline Freight,4,Delivered,196,
+SO-51045,2026-09-21,Riverbend Library,North,Online store,Furniture,2,330.76,0,662,Northline Freight,3,Delivered,662,
+SO-51046,2026-09-21,Oakline Veterinary,South,Online store,Tech accessories,16,48.55,0,777,Northline Freight,4,Delivered,777,
+SO-51047,2026-09-21,Harbor Fitness Clubs,South,Online store,Office supplies,37,23.54,0,871,ParcelPro,4,Delivered,871,
+SO-51048,2026-09-21,Magnolia Hotels Group,South,Online store,Office supplies,56,23.39,0,1310,ParcelPro,3,Delivered,1310,
+SO-51049,2026-09-21,Liberty Architects,East,Online store,Tech accessories,21,58.30,0,1224,ParcelPro,3,Delivered,1224,
+SO-51050,2026-09-22,Bluebird Coworking,East,Marketplace,Furniture,12,171.60,0,2059,Northline Freight,2,Returned,0,
+SO-51051,2026-09-22,Desert Bloom Clinics,West,Online store,Furniture,18,483.11,0,8696,SwiftRoute,5,Delivered,8696,
+SO-51052,2026-09-22,Cedar Ridge Accounting,North,Online store,Furniture,5,198.23,5,942,ParcelPro,2,Delivered,942,
+SO-51053,2026-09-22,Granite Realty Group,North,Phone,Service plans,1,1436.24,0,1436,,,Delivered,1436,Ben K.
+SO-51054,2026-09-22,Cedar Ridge Accounting,North,Sales rep,Office supplies,39,22.57,15,748,ParcelPro,4,Delivered,748,Ben K.
+SO-51055,2026-09-22,Liberty Architects,East,Online store,Office supplies,11,18.69,0,206,Northline Freight,2,Delivered,206,
+SO-51056,2026-09-22,Magnolia Hotels Group,South,Online store,Tech accessories,10,118.31,0,1183,Northline Freight,4,Delivered,1183,
+SO-51057,2026-09-22,Golden State Labs,West,Sales rep,Cleaning and facilities,34,7.23,10,221,,,Cancelled,0,Felix T.
+SO-51058,2026-09-22,Oakline Veterinary,South,Online store,Furniture,9,543.61,0,4892,Northline Freight,4,Returned,0,
+SO-51059,2026-09-23,Northgate Insurance Agency,North,Phone,Office supplies,19,7.25,0,138,Northline Freight,2,Delivered,138,Ben K.
+SO-51060,2026-09-23,Oakline Veterinary,South,Online store,Office supplies,20,15.20,0,304,Northline Freight,2,Delivered,304,
+SO-51061,2026-09-23,Redwood Software,West,Online store,Service plans,1,1356.73,0,1357,,,Delivered,1357,
+SO-51062,2026-09-23,Desert Bloom Clinics,West,Sales rep,Office supplies,132,15.52,5,1946,SwiftRoute,7,Returned,0,Felix T.
+SO-51063,2026-09-23,Northgate Insurance Agency,North,Phone,Office supplies,29,21.00,5,579,ParcelPro,3,Delivered,579,Alicia R.
+SO-51064,2026-09-23,Cedar Ridge Accounting,North,Phone,Furniture,7,173.36,5,1153,Northline Freight,3,Returned,0,Ben K.
+SO-51065,2026-09-23,Northgate Insurance Agency,North,Sales rep,Service plans,1,2385.74,10,2147,,,Delivered,2147,Ben K.
+SO-51066,2026-09-23,Gulfview Construction,South,Marketplace,Cleaning and facilities,66,9.68,0,639,Northline Freight,2,Delivered,639,
+SO-51067,2026-09-23,Magnolia Hotels Group,South,Online store,Cleaning and facilities,11,23.39,0,257,ParcelPro,3,Delivered,257,
+SO-51068,2026-09-23,Magnolia Hotels Group,South,Sales rep,Tech accessories,5,41.29,10,186,Northline Freight,2,Delivered,186,Carmen D.
+SO-51069,2026-09-24,Liberty Architects,East,Online store,Service plans,1,2241.68,0,2242,,,Delivered,2242,
+SO-51070,2026-09-24,Gulfview Construction,South,Phone,Service plans,1,849.64,0,850,,,Delivered,850,Carmen D.
+SO-51071,2026-09-24,Coastal Credit Union,South,Online store,Office supplies,38,12.11,0,460,Northline Freight,4,Delivered,460,
+SO-51072,2026-09-24,Magnolia Hotels Group,South,Sales rep,Office supplies,36,4.54,15,139,ParcelPro,2,Delivered,139,Carmen D.
+SO-51073,2026-09-24,Elmwood Senior Living,East,Phone,Service plans,1,1602.23,0,1602,,,Delivered,1602,David M.
+SO-51074,2026-09-24,Sunrise Pediatrics,South,Online store,Tech accessories,30,76.72,0,2302,ParcelPro,4,Delivered,2302,
+SO-51075,2026-09-24,Desert Bloom Clinics,West,Sales rep,Cleaning and facilities,81,8.95,5,689,SwiftRoute,8,Delivered,689,Felix T.
+SO-51076,2026-09-24,Coastal Credit Union,South,Marketplace,Office supplies,44,12.85,5,537,ParcelPro,4,Delivered,537,
+SO-51077,2026-09-24,Liberty Architects,East,Phone,Service plans,1,1285.70,5,1221,,,Delivered,1221,David M.
+SO-51078,2026-09-25,Patriot Auto Group,East,Sales rep,Office supplies,27,7.62,10,185,Northline Freight,3,Delivered,185,Erin S.
+SO-51079,2026-09-25,Magnolia Hotels Group,South,Online store,Service plans,1,1060.99,0,1061,,,Delivered,1061,
+SO-51080,2026-09-25,Sunrise Pediatrics,South,Sales rep,Service plans,1,2260.51,15,1921,,,Delivered,1921,Carmen D.
+SO-51081,2026-09-25,Pacific Design Studio,West,Online store,Tech accessories,20,38.91,0,778,Northline Freight,3,Delivered,778,
+SO-51082,2026-09-25,Pacific Design Studio,West,Online store,Office supplies,35,21.20,5,705,SwiftRoute,7,Delivered,705,
+SO-51083,2026-09-25,Desert Bloom Clinics,West,Online store,Tech accessories,18,30.13,0,542,SwiftRoute,7,Delivered,542,
+SO-51084,2026-09-28,Birchwood Schools,North,Online store,Office supplies,41,7.71,0,316,Northline Freight,4,Delivered,316,
+SO-51085,2026-09-28,Summit Engineering,North,Online store,Tech accessories,22,62.58,0,1377,Northline Freight,2,Delivered,1377,
+SO-51086,2026-09-28,Granite Realty Group,North,Sales rep,Furniture,10,198.50,10,1787,ParcelPro,4,Delivered,1787,Ben K.
+SO-51087,2026-09-28,Granite Realty Group,North,Online store,Service plans,1,1625.31,0,1625,,,Delivered,1625,
+SO-51088,2026-09-28,Desert Bloom Clinics,West,Online store,Service plans,1,2054.60,0,2055,,,Delivered,2055,
+SO-51089,2026-09-28,Cedar Ridge Accounting,North,Sales rep,Office supplies,26,13.63,15,301,Northline Freight,2,Delivered,301,Ben K.
+SO-51090,2026-09-28,Oakline Veterinary,South,Phone,Tech accessories,10,84.11,5,799,ParcelPro,4,Delivered,799,Carmen D.
+SO-51091,2026-09-28,Golden State Labs,West,Marketplace,Office supplies,27,8.19,0,221,SwiftRoute,10,Delivered,221,
+SO-51092,2026-09-29,Magnolia Hotels Group,South,Phone,Service plans,1,2231.11,5,2120,,,Delivered,2120,Carmen D.
+SO-51093,2026-09-29,Elmwood Senior Living,East,Online store,Service plans,1,2139.96,0,2140,,,Delivered,2140,
+SO-51094,2026-09-29,Magnolia Hotels Group,South,Online store,Office supplies,60,15.42,0,925,ParcelPro,2,Delivered,925,
+SO-51095,2026-09-29,Desert Bloom Clinics,West,Phone,Office supplies,57,9.16,5,496,Northline Freight,4,Delivered,496,Felix T.
+SO-51096,2026-09-29,Magnolia Hotels Group,South,Phone,Tech accessories,22,109.66,0,2413,ParcelPro,4,Delivered,2413,Carmen D.
+SO-51097,2026-09-30,Magnolia Hotels Group,South,Sales rep,Service plans,1,908.71,10,818,,,Delivered,818,Carmen D.
+SO-51098,2026-09-30,Birchwood Schools,North,Sales rep,Cleaning and facilities,105,12.16,10,1149,ParcelPro,2,Delivered,1149,Alicia R.
+SO-51099,2026-09-30,Riverbend Library,North,Sales rep,Office supplies,100,20.93,10,1884,ParcelPro,2,Delivered,1884,Ben K.
+SO-51100,2026-09-30,Sierra Outdoor Gear,West,Online store,Tech accessories,27,34.31,5,880,Northline Freight,2,Delivered,880,
+SO-51101,2026-09-30,Cedar Ridge Accounting,North,Phone,Service plans,1,1186.03,5,1127,,,Delivered,1127,Alicia R.
+SO-51102,2026-09-30,Palmetto Realty,South,Online store,Office supplies,22,18.42,0,405,ParcelPro,2,Delivered,405,

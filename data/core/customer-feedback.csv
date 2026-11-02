@@ -1,0 +1,186 @@
+response_id,order_id,customer,region,response_date,rating,comment
+FB0001,SO-50001,Bluebird Coworking,East,2026-04-06,5,"Rep remembered our usual order, very helpful."
+FB0002,SO-50007,Keystone Manufacturing,East,2026-04-08,5,Online ordering is easy.
+FB0003,SO-50008,Elmwood Senior Living,East,2026-04-09,4,Toner and paper were the right ones this time.
+FB0004,SO-50013,Bayou Legal Partners,South,2026-04-10,5,Great advice from the sales team on what to buy. Delivery was quick and on time.
+FB0005,SO-50017,Hudson Media,East,2026-04-09,4,Good quality for the price.
+FB0006,SO-50022,Redwood Software,West,2026-04-11,5,Everything was packed well.
+FB0007,SO-50025,Elmwood Senior Living,East,2026-04-14,2,Order was missing two boxes.
+FB0008,SO-50026,Birchwood Schools,North,2026-04-12,5,Arrived a day early. Toner and paper were the right ones this time.
+FB0009,SO-50027,Riverbend Library,North,2026-04-13,5,Reordering from our saved list takes two minutes.
+FB0010,SO-50038,Sierra Outdoor Gear,West,2026-04-12,5,Showed up exactly when promised.
+FB0011,SO-50040,Bayou Legal Partners,South,2026-04-14,4,Delivery was quick and on time.
+FB0012,SO-50044,Cedar Ridge Accounting,North,2026-04-13,5,Exactly what we ordered. Online ordering is easy.
+FB0013,SO-50060,Mesa Family Dental,West,2026-04-17,5,Reordering from our saved list takes two minutes. Showed up exactly when promised.
+FB0014,SO-50061,Patriot Auto Group,East,2026-04-15,5,Support answered my question within the hour.
+FB0015,SO-50064,Cedar Ridge Accounting,North,2026-04-14,5,Toner and paper were the right ones this time. Love the order tracking emails.
+FB0016,SO-50065,Pacific Design Studio,West,2026-04-13,2,Received the wrong item.
+FB0017,SO-50066,Harbor Fitness Clubs,South,2026-04-16,4,"Delivery was quick and on time. Rep remembered our usual order, very helpful."
+FB0018,SO-50069,Liberty Architects,East,2026-04-19,4,Good quality for the price. Showed up exactly when promised.
+FB0019,SO-50073,Mesa Family Dental,West,2026-04-15,5,Invoice was clear and easy to approve.
+FB0020,SO-50075,Cedar Ridge Accounting,North,2026-04-17,5,Love the order tracking emails.
+FB0021,SO-50078,Coastal Credit Union,South,2026-04-19,5,Good quality for the price. Online ordering is easy.
+FB0022,SO-50080,Desert Bloom Clinics,West,2026-04-16,5,Arrived a day early.
+FB0023,SO-50085,Maple Street Dental,North,2026-04-22,5,Fast shipping as always.
+FB0024,SO-50086,Desert Bloom Clinics,West,2026-04-18,1,Desk arrived with a cracked top.
+FB0025,SO-50092,Magnolia Hotels Group,South,2026-04-24,4,"Rep remembered our usual order, very helpful. Fast shipping as always."
+FB0026,SO-50093,Patriot Auto Group,East,2026-04-18,4,Reordering from our saved list takes two minutes. Everything was packed well.
+FB0027,SO-50099,Hudson Media,East,2026-04-19,4,Showed up exactly when promised. Love the order tracking emails.
+FB0028,SO-50129,Desert Bloom Clinics,West,2026-04-27,4,Exactly what we ordered. Invoice was clear and easy to approve.
+FB0029,SO-50142,Magnolia Hotels Group,South,2026-04-30,5,Great advice from the sales team on what to buy.
+FB0030,SO-50144,Northgate Insurance Agency,North,2026-04-27,4,Invoice was clear and easy to approve. Delivery was quick and on time.
+FB0031,SO-50152,Liberty Architects,East,2026-04-27,4,Delivery was quick and on time. Reordering from our saved list takes two minutes.
+FB0032,SO-50153,Brookside Medical,East,2026-04-27,5,Next-day delivery saved our week.
+FB0033,SO-50158,Desert Bloom Clinics,West,2026-05-03,2,"Billing was confusing, two invoices for one order."
+FB0034,SO-50166,Keystone Manufacturing,East,2026-05-04,5,Delivery was quick and on time. Our account rep sorted everything in one call.
+FB0035,SO-50169,Bluebird Coworking,East,2026-05-01,5,The chairs are comfortable and sturdy. Our account rep sorted everything in one call.
+FB0036,SO-50171,Patriot Auto Group,East,2026-05-03,5,The chairs are comfortable and sturdy.
+FB0037,SO-50178,Coastal Credit Union,South,2026-05-05,4,"Everything was packed well. Rep remembered our usual order, very helpful."
+FB0038,SO-50184,Palmetto Realty,South,2026-05-04,4,Our account rep sorted everything in one call.
+FB0039,SO-50188,Sunrise Pediatrics,South,2026-05-06,5,"Online ordering is easy. Rep remembered our usual order, very helpful."
+FB0040,SO-50189,Gulfview Construction,South,2026-05-07,4,Invoice was clear and easy to approve. Support answered my question within the hour.
+FB0041,SO-50193,Pacific Design Studio,West,2026-05-07,5,Exactly what we ordered.
+FB0042,SO-50198,Keystone Manufacturing,East,2026-05-06,3,Took three emails to get a corrected invoice.
+FB0043,SO-50201,Birchwood Schools,North,2026-05-09,1,Bookcase panels were damaged on arrival.
+FB0044,SO-50205,Granite Realty Group,North,2026-05-06,4,Good quality for the price. Love the order tracking emails.
+FB0045,SO-50210,Summit Engineering,North,2026-05-10,2,Invoice did not show our agreed discount.
+FB0046,SO-50212,Pioneer Logistics,North,2026-05-10,5,Online ordering is easy. Support answered my question within the hour.
+FB0047,SO-50217,Summit Engineering,North,2026-05-12,5,Love the order tracking emails.
+FB0048,SO-50218,Brookside Medical,East,2026-05-13,4,Love the order tracking emails. The chairs are comfortable and sturdy.
+FB0049,SO-50223,Elmwood Senior Living,East,2026-05-11,5,Toner and paper were the right ones this time. Next-day delivery saved our week.
+FB0050,SO-50224,Pioneer Logistics,North,2026-05-15,5,Exactly what we ordered. Great advice from the sales team on what to buy.
+FB0051,SO-50226,Palmetto Realty,South,2026-05-11,4,Great advice from the sales team on what to buy.
+FB0052,SO-50233,Birchwood Schools,North,2026-05-15,4,Arrived a day early. Good quality for the price.
+FB0053,SO-50238,Granite Realty Group,North,2026-05-15,5,Reordering from our saved list takes two minutes.
+FB0054,SO-50249,Summit Engineering,North,2026-05-19,5,Great advice from the sales team on what to buy. Invoice was clear and easy to approve.
+FB0055,SO-50253,Desert Bloom Clinics,West,2026-05-17,5,Showed up exactly when promised. Reordering from our saved list takes two minutes.
+FB0056,SO-50260,Sunrise Pediatrics,South,2026-05-20,5,Exactly what we ordered. Next-day delivery saved our week.
+FB0057,SO-50269,Bayou Legal Partners,South,2026-05-19,1,Furniture was scratched and had to go back.
+FB0058,SO-50277,Desert Bloom Clinics,West,2026-05-23,4,Fast shipping as always. Invoice was clear and easy to approve.
+FB0059,SO-50279,Desert Bloom Clinics,West,2026-05-22,5,Reordering from our saved list takes two minutes. Support answered my question within the hour.
+FB0060,SO-50287,Coastal Credit Union,South,2026-05-21,5,Toner and paper were the right ones this time. Arrived a day early.
+FB0061,SO-50290,Keystone Manufacturing,East,2026-05-23,5,Exactly what we ordered. Showed up exactly when promised.
+FB0062,SO-50293,Coastal Credit Union,South,2026-05-24,5,"Rep remembered our usual order, very helpful. Invoice was clear and easy to approve."
+FB0063,SO-50294,Hudson Media,East,2026-05-22,5,The chairs are comfortable and sturdy.
+FB0064,SO-50305,Liberty Architects,East,2026-05-25,5,The chairs are comfortable and sturdy. Fast shipping as always.
+FB0065,SO-50309,Atlantic Charter School,East,2026-05-24,5,Delivery was quick and on time.
+FB0066,SO-50313,Desert Bloom Clinics,West,2026-05-26,5,Reordering from our saved list takes two minutes. Fast shipping as always.
+FB0067,SO-50318,Magnolia Hotels Group,South,2026-05-28,4,Fast shipping as always.
+FB0068,SO-50319,Mesa Family Dental,West,2026-05-26,5,Reordering from our saved list takes two minutes. Exactly what we ordered.
+FB0069,SO-50324,Bayview Nonprofit Alliance,West,2026-05-28,5,Next-day delivery saved our week.
+FB0070,SO-50326,Pioneer Logistics,North,2026-05-29,5,Toner and paper were the right ones this time.
+FB0071,SO-50329,Riverbend Library,North,2026-06-01,5,Toner and paper were the right ones this time. Showed up exactly when promised.
+FB0072,SO-50330,Desert Bloom Clinics,West,2026-05-30,5,The chairs are comfortable and sturdy. Love the order tracking emails.
+FB0073,SO-50344,Golden State Labs,West,2026-06-02,4,Showed up exactly when promised. Invoice was clear and easy to approve.
+FB0074,SO-50359,Sunrise Pediatrics,South,2026-06-02,4,Our account rep sorted everything in one call. Delivery was quick and on time.
+FB0075,SO-50375,Desert Bloom Clinics,West,2026-06-02,5,"The chairs are comfortable and sturdy. Rep remembered our usual order, very helpful."
+FB0076,SO-50390,Atlantic Charter School,East,2026-06-08,2,"Billing was confusing, two invoices for one order."
+FB0077,SO-50403,Coastal Credit Union,South,2026-06-10,5,Online ordering is easy.
+FB0078,SO-50408,Cedar Ridge Accounting,North,2026-06-10,5,Next-day delivery saved our week. Toner and paper were the right ones this time.
+FB0079,SO-50409,Birchwood Schools,North,2026-06-11,5,Online ordering is easy. Exactly what we ordered.
+FB0080,SO-50412,Summit Engineering,North,2026-06-10,1,Furniture was scratched and had to go back.
+FB0081,SO-50415,Sunrise Pediatrics,South,2026-06-13,4,Everything was packed well.
+FB0082,SO-50447,Pioneer Logistics,North,2026-06-15,5,The chairs are comfortable and sturdy.
+FB0083,SO-50452,Magnolia Hotels Group,South,2026-06-18,4,Love the order tracking emails.
+FB0084,SO-50453,Coastal Credit Union,South,2026-06-16,5,Good quality for the price.
+FB0085,SO-50477,Harbor Fitness Clubs,South,2026-06-23,5,Good quality for the price. Reordering from our saved list takes two minutes.
+FB0086,SO-50480,Desert Bloom Clinics,West,2026-06-23,2,Order was missing two boxes.
+FB0087,SO-50481,Desert Bloom Clinics,West,2026-06-25,5,Love the order tracking emails.
+FB0088,SO-50484,Granite Realty Group,North,2026-06-21,5,"Rep remembered our usual order, very helpful. Delivery was quick and on time."
+FB0089,SO-50485,Redwood Software,West,2026-06-22,5,Exactly what we ordered. Showed up exactly when promised.
+FB0090,SO-50488,Golden State Labs,West,2026-06-22,5,Love the order tracking emails. Fast shipping as always.
+FB0091,SO-50500,Riverbend Library,North,2026-06-22,2,Order was missing two boxes.
+FB0092,SO-50506,Cedar Ridge Accounting,North,2026-06-23,5,Online ordering is easy.
+FB0093,SO-50508,Keystone Manufacturing,East,2026-06-22,5,Delivery was quick and on time. The chairs are comfortable and sturdy.
+FB0094,SO-50523,Magnolia Hotels Group,South,2026-06-27,4,Support answered my question within the hour. Love the order tracking emails.
+FB0095,SO-50532,Canyon Facilities Group,West,2026-07-02,5,Next-day delivery saved our week. Everything was packed well.
+FB0096,SO-50536,Cedar Ridge Accounting,North,2026-07-02,5,Online ordering is easy. Good quality for the price.
+FB0097,SO-50537,Desert Bloom Clinics,West,2026-07-01,4,Next-day delivery saved our week.
+FB0098,SO-50540,Magnolia Hotels Group,South,2026-06-29,5,Our account rep sorted everything in one call. Good quality for the price.
+FB0099,SO-50546,Harbor Fitness Clubs,South,2026-06-29,4,The chairs are comfortable and sturdy.
+FB0100,SO-50549,Keystone Manufacturing,East,2026-07-01,5,Our account rep sorted everything in one call. Toner and paper were the right ones this time.
+FB0101,SO-50553,Maple Street Dental,North,2026-07-02,5,Invoice was clear and easy to approve.
+FB0102,SO-50558,Mesa Family Dental,West,2026-07-04,4,Good quality for the price. Support answered my question within the hour.
+FB0103,SO-50559,Birchwood Schools,North,2026-07-02,5,Next-day delivery saved our week. Exactly what we ordered.
+FB0104,SO-50569,Palmetto Realty,South,2026-07-05,5,Everything was packed well. Next-day delivery saved our week.
+FB0105,SO-50576,Northgate Insurance Agency,North,2026-07-08,5,Love the order tracking emails.
+FB0106,SO-50577,Desert Bloom Clinics,West,2026-07-12,3,"Still waiting on part of this order, tracking has not moved."
+FB0107,SO-50578,Desert Bloom Clinics,West,2026-07-14,1,Late again. We had to buy supplies locally in the meantime. Good quality for the price.
+FB0108,SO-50584,Canyon Facilities Group,West,2026-07-15,1,Our clinic ran short because the delivery was late.
+FB0109,SO-50586,Elmwood Senior Living,East,2026-07-10,5,Love the order tracking emails. Next-day delivery saved our week.
+FB0110,SO-50588,Coastal Credit Union,South,2026-07-10,5,Exactly what we ordered. Online ordering is easy.
+FB0111,SO-50595,Desert Bloom Clinics,West,2026-07-13,4,Good quality for the price.
+FB0112,SO-50601,Mesa Family Dental,West,2026-07-14,5,Exactly what we ordered. Our account rep sorted everything in one call.
+FB0113,SO-50612,Atlantic Charter School,East,2026-07-10,5,Invoice was clear and easy to approve.
+FB0114,SO-50626,Desert Bloom Clinics,West,2026-07-21,2,"Still waiting on part of this order, tracking has not moved. Good quality for the price."
+FB0115,SO-50634,Bayview Nonprofit Alliance,West,2026-07-20,5,Fast shipping as always. Great advice from the sales team on what to buy.
+FB0116,SO-50644,Bayview Nonprofit Alliance,West,2026-07-22,2,Late again. We had to buy supplies locally in the meantime.
+FB0117,SO-50646,Gulfview Construction,South,2026-07-19,5,"Rep remembered our usual order, very helpful."
+FB0118,SO-50652,Granite Realty Group,North,2026-07-20,2,Furniture was scratched and had to go back.
+FB0119,SO-50660,Cedar Ridge Accounting,North,2026-07-23,5,The chairs are comfortable and sturdy.
+FB0120,SO-50661,Maple Street Dental,North,2026-07-20,5,The chairs are comfortable and sturdy. Support answered my question within the hour.
+FB0121,SO-50676,Bluebird Coworking,East,2026-07-21,5,Invoice was clear and easy to approve.
+FB0122,SO-50677,Canyon Facilities Group,West,2026-07-28,1,Carrier missed two delivery windows. The chairs are comfortable and sturdy.
+FB0123,SO-50694,Desert Bloom Clinics,West,2026-07-29,4,Arrived a day early. Exactly what we ordered.
+FB0124,SO-50722,Desert Bloom Clinics,West,2026-08-07,3,"Still waiting on part of this order, tracking has not moved."
+FB0125,SO-50723,Bayview Nonprofit Alliance,West,2026-08-06,3,Our clinic ran short because the delivery was late. Exactly what we ordered.
+FB0126,SO-50726,Harbor Fitness Clubs,South,2026-08-04,5,Our account rep sorted everything in one call. Exactly what we ordered.
+FB0127,SO-50729,Desert Bloom Clinics,West,2026-08-11,2,Carrier missed two delivery windows.
+FB0128,SO-50734,Patriot Auto Group,East,2026-08-02,1,Bookcase panels were damaged on arrival.
+FB0129,SO-50749,Canyon Facilities Group,West,2026-08-05,5,"Rep remembered our usual order, very helpful."
+FB0130,SO-50752,Desert Bloom Clinics,West,2026-08-13,3,"Delivery was a week late, no update from the carrier."
+FB0131,SO-50758,Sierra Outdoor Gear,West,2026-08-12,3,Our clinic ran short because the delivery was late. Support answered my question within the hour.
+FB0132,SO-50759,Riverbend Library,North,2026-08-04,5,Reordering from our saved list takes two minutes. Good quality for the price.
+FB0133,SO-50763,Liberty Architects,East,2026-08-09,4,Exactly what we ordered. Love the order tracking emails.
+FB0134,SO-50772,Birchwood Schools,North,2026-08-11,5,Toner and paper were the right ones this time.
+FB0135,SO-50778,Canyon Facilities Group,West,2026-08-16,1,"Delivery was a week late, no update from the carrier."
+FB0136,SO-50779,Riverbend Library,North,2026-08-13,5,Showed up exactly when promised.
+FB0137,SO-50784,Elmwood Senior Living,East,2026-08-12,5,The chairs are comfortable and sturdy. Invoice was clear and easy to approve.
+FB0138,SO-50789,Magnolia Hotels Group,South,2026-08-10,5,Exactly what we ordered. Fast shipping as always.
+FB0139,SO-50801,Pioneer Logistics,North,2026-08-11,5,Online ordering is easy.
+FB0140,SO-50803,Northgate Insurance Agency,North,2026-08-16,2,We were charged twice for the same order.
+FB0141,SO-50805,Cedar Ridge Accounting,North,2026-08-16,5,Exactly what we ordered.
+FB0142,SO-50806,Magnolia Hotels Group,South,2026-08-14,5,"Rep remembered our usual order, very helpful. Toner and paper were the right ones this time."
+FB0143,SO-50810,Bayou Legal Partners,South,2026-08-19,2,Chair base was broken in the box.
+FB0144,SO-50814,Keystone Manufacturing,East,2026-08-17,4,The chairs are comfortable and sturdy. Delivery was quick and on time.
+FB0145,SO-50825,Coastal Credit Union,South,2026-08-18,5,Fast shipping as always. The chairs are comfortable and sturdy.
+FB0146,SO-50834,Hudson Media,East,2026-08-16,5,Invoice was clear and easy to approve. Our account rep sorted everything in one call.
+FB0147,SO-50835,Magnolia Hotels Group,South,2026-08-22,5,"Rep remembered our usual order, very helpful. Online ordering is easy."
+FB0148,SO-50854,Bayview Nonprofit Alliance,West,2026-08-28,1,"Delivery was a week late, no update from the carrier. Support answered my question within the hour."
+FB0149,SO-50868,Patriot Auto Group,East,2026-08-25,5,Fast shipping as always. Love the order tracking emails.
+FB0150,SO-50874,Desert Bloom Clinics,West,2026-09-02,2,Late again. We had to buy supplies locally in the meantime.
+FB0151,SO-50875,Atlantic Charter School,East,2026-08-27,5,Next-day delivery saved our week. Great advice from the sales team on what to buy.
+FB0152,SO-50876,Mesa Family Dental,West,2026-08-30,3,Late again. We had to buy supplies locally in the meantime. The chairs are comfortable and sturdy.
+FB0153,SO-50896,Granite Realty Group,North,2026-08-30,5,Arrived a day early.
+FB0154,SO-50904,Birchwood Schools,North,2026-09-05,4,Toner and paper were the right ones this time. Invoice was clear and easy to approve.
+FB0155,SO-50905,Desert Bloom Clinics,West,2026-09-05,1,Our clinic ran short because the delivery was late. Toner and paper were the right ones this time.
+FB0156,SO-50921,Granite Realty Group,North,2026-09-05,5,Everything was packed well. Showed up exactly when promised.
+FB0157,SO-50925,Birchwood Schools,North,2026-09-05,5,Delivery was quick and on time. Online ordering is easy.
+FB0158,SO-50927,Hudson Media,East,2026-09-04,4,Arrived a day early.
+FB0159,SO-50928,Desert Bloom Clinics,West,2026-09-06,4,Our account rep sorted everything in one call. Arrived a day early.
+FB0160,SO-50936,Oakline Veterinary,South,2026-09-07,4,Invoice was clear and easy to approve.
+FB0161,SO-50943,Patriot Auto Group,East,2026-09-08,5,Love the order tracking emails. Good quality for the price.
+FB0162,SO-50947,Oakline Veterinary,South,2026-09-08,2,"Billing was confusing, two invoices for one order."
+FB0163,SO-50956,Keystone Manufacturing,East,2026-09-12,4,Love the order tracking emails. Our account rep sorted everything in one call.
+FB0164,SO-50957,Granite Realty Group,North,2026-09-10,5,Toner and paper were the right ones this time. Our account rep sorted everything in one call.
+FB0165,SO-50976,Gulfview Construction,South,2026-09-13,5,Great advice from the sales team on what to buy. Showed up exactly when promised.
+FB0166,SO-50982,Desert Bloom Clinics,West,2026-09-21,2,Order arrived 8 days after the promised date. Good quality for the price.
+FB0167,SO-50984,Keystone Manufacturing,East,2026-09-15,5,Good quality for the price. Delivery was quick and on time.
+FB0168,SO-50986,Birchwood Schools,North,2026-09-16,4,Everything was packed well. Love the order tracking emails.
+FB0169,SO-50988,Riverbend Library,North,2026-09-12,5,Online ordering is easy. Delivery was quick and on time.
+FB0170,SO-51002,Pioneer Logistics,North,2026-09-18,5,Support answered my question within the hour.
+FB0171,SO-51004,Pacific Design Studio,West,2026-09-21,2,"Delivery was a week late, no update from the carrier. Toner and paper were the right ones this time."
+FB0172,SO-51008,Palmetto Realty,South,2026-09-22,4,Great advice from the sales team on what to buy. Good quality for the price.
+FB0173,SO-51018,Golden State Labs,West,2026-09-24,5,"Rep remembered our usual order, very helpful. Showed up exactly when promised."
+FB0174,SO-51019,Desert Bloom Clinics,West,2026-09-20,3,Took three emails to get a corrected invoice.
+FB0175,SO-51022,Sunrise Pediatrics,South,2026-09-18,4,"Rep remembered our usual order, very helpful. Reordering from our saved list takes two minutes."
+FB0176,SO-51027,Gulfview Construction,South,2026-09-23,4,Exactly what we ordered.
+FB0177,SO-51028,Gulfview Construction,South,2026-09-22,5,Arrived a day early. Reordering from our saved list takes two minutes.
+FB0178,SO-51029,Riverbend Library,North,2026-09-19,5,"Rep remembered our usual order, very helpful."
+FB0179,SO-51030,Maple Street Dental,North,2026-09-24,5,Our account rep sorted everything in one call.
+FB0180,SO-51033,Northgate Insurance Agency,North,2026-09-22,4,Good quality for the price. Arrived a day early.
+FB0181,SO-51041,Cedar Ridge Accounting,North,2026-09-25,4,Love the order tracking emails. Our account rep sorted everything in one call.
+FB0182,SO-51045,Riverbend Library,North,2026-09-27,5,Arrived a day early. Exactly what we ordered.
+FB0183,SO-51047,Harbor Fitness Clubs,South,2026-09-30,4,Our account rep sorted everything in one call. Reordering from our saved list takes two minutes.
+FB0184,SO-51060,Oakline Veterinary,South,2026-09-30,4,The chairs are comfortable and sturdy. Next-day delivery saved our week.
+FB0185,SO-51088,Desert Bloom Clinics,West,2026-09-30,3,Took three emails to get a corrected invoice.

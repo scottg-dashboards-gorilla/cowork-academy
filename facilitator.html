@@ -22,7 +22,7 @@
     <li>IT has confirmed which app connections (email, calendar, files) are allowed.</li>
     <li>You have the company's AI policy, and a leader has agreed to open the session for 5 minutes.</li>
     <li>Participants can sign in to <a href="https://spark.mydatapath.com" target="_blank" rel="noopener">Spark</a> to submit ideas.</li>
-    <li>You've set up the <a href="data/cowork-academy-starter.zip" download>starter folder</a> yourself (the Set up Cowork mission walks you through it). It has every practice file the demo and missions use.</li>
+    <li>You've set up the <a href="data/core/cowork-academy-starter.zip" download data-avari="data/cowork-academy-starter.zip">starter folder</a> yourself (the Set up Cowork mission walks you through it). It has every practice file the demo and missions use.</li>
     <li>The invitation (template below) went out at least 3 days ahead.</li>
   </ul>
 
@@ -39,8 +39,10 @@
 
   <h2>Live demo script</h2>
   <p>Start a Cowork task on your Cowork Academy folder, then paste these one at a time.</p>
-  <div class="copyblock"><pre>Open bookings.csv in this folder. Which channel brings in the most revenue per night, and which one has the most cancellations? Show me a chart.</pre><button class="copy">Copy</button></div>
-  <div class="copyblock"><pre>Now look at maintenance-tickets.csv and guest-reviews.csv too. Which property has the most repeat problems, and do the reviews say the same thing?</pre><button class="copy">Copy</button></div>
+  <div class="copyblock ed-core"><pre>Open orders.csv in this folder. Which sales channel brings in the most revenue, and which one has the most cancellations? Show me a chart.</pre><button class="copy">Copy</button></div>
+  <div class="copyblock ed-core"><pre>Now look at support-tickets.csv and customer-feedback.csv too. Which region has the most delivery problems, and does the feedback say the same thing?</pre><button class="copy">Copy</button></div>
+  <div class="copyblock ed-avari"><pre>Open bookings.csv in this folder. Which channel brings in the most revenue per night, and which one has the most cancellations? Show me a chart.</pre><button class="copy">Copy</button></div>
+  <div class="copyblock ed-avari"><pre>Now look at maintenance-tickets.csv and guest-reviews.csv too. Which property has the most repeat problems, and do the reviews say the same thing?</pre><button class="copy">Copy</button></div>
   <div class="copyblock"><pre>Turn this into a one-page summary for leadership as a Word document, with 3 recommendations.</pre><button class="copy">Copy</button></div>
   <p><b>What to point out as it runs:</b> it's plain English, the files are real spreadsheets, you check the numbers before trusting them, and Claude drafts while you decide. End with: "Imagine this arriving by itself every Monday."</p>
 
@@ -107,6 +109,12 @@ Office hours are on [date] if you get stuck. The leadership showcase is on [date
 </div>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 <script>
+/* Show the demo prompts for the edition this device is using (see index.html). */
+(function(){let e='';try{e=localStorage.getItem('coworkAcademy.edition')||'';}catch(x){}
+  const p=new URLSearchParams(location.search).get('edition');if(p)e=p==='avari'?'avari':'';
+  document.querySelectorAll(e==='avari'?'.ed-core':'.ed-avari').forEach(n=>n.remove());
+  if(e==='avari')document.querySelectorAll('[data-avari]').forEach(a=>a.setAttribute('href',a.dataset.avari));})();
+
 document.querySelectorAll('.copyblock .copy').forEach(b=>b.onclick=()=>{
   navigator.clipboard.writeText(b.parentElement.querySelector('pre').textContent).then(()=>{
     const t=document.getElementById('toast');t.textContent='Copied';t.classList.add('show');setTimeout(()=>t.classList.remove('show'),1400);});

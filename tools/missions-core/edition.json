@@ -1,0 +1,130 @@
+{
+ "edition": {
+  "id": "core",
+  "storeKey": "coworkAcademy.core.v1",
+  "dataDir": "data/core/",
+  "badge": null,
+  "company": "Lakeview Supply Co.",
+  "dataPack": {
+   "title": "Practice data pack",
+   "text": "A made-up company, Lakeview Supply Co., that sells supplies and services to other businesses, April to September 2026: orders, customer feedback, support tickets, a carrier invoice, a customer inbox and more. The Set up mission puts it all in your Cowork Academy folder. There are real patterns hidden inside.",
+   "files": [
+    "orders.csv",
+    "customer-feedback.csv",
+    "support-tickets.csv"
+   ]
+  },
+  "roleNote": "Two hours of missions for your part of the business, in any industry, using your own work or the practice data pack.",
+  "explorerOutcome": "Turn a customer inbox into a sorted to-do list",
+  "capPlaceholder": "Built an orders report and chart; idea: automate the Monday summary",
+  "ideaExample": {
+   "when": "Monday morning",
+   "time": "2 hours",
+   "task": "copying numbers from three systems into a weekly report",
+   "what": "build the report from the exports automatically"
+  },
+  "rolesComment": "Paths by role (any industry)"
+ },
+ "levels": {
+  "beginner": {
+   "name": "Beginner",
+   "project": "Your first wins at work",
+   "blurb": "New to Cowork? Start here. Make the everyday files your job runs on, a Word letter, a working spreadsheet and a team page, then research, use a skill and connect an app, with every step spelled out.",
+   "bullets": [
+    "Word letter, team tracker and a one-page team page",
+    "Research, a simple logo and your first skill",
+    "Connect one company-approved app"
+   ],
+   "sub": "A guided tour of everyday Cowork using your job and the practice files: real Word and Excel files, a one-page team page, web research, a skill and a connected app."
+  },
+  "intermediate": {
+   "name": "Intermediate",
+   "project": "Run a small business with Cowork",
+   "blurb": "Comfortable with the basics? Build a small company's toolkit: a business brief, a website, your own saved skill, a research brief, data analysis, a deck, a PDF, a scheduled summary and a dashboard.",
+   "bullets": [
+    "Business brief, website and your own skill",
+    "Data analysis, a deck and a client-ready PDF",
+    "A scheduled summary and a refreshable dashboard"
+   ],
+   "sub": "You’ll build the everyday toolkit of a small company, using its brief and the practice data, and learn the habits that make results reliable."
+  },
+  "higher": {
+   "name": "Higher",
+   "project": "Build a connected workflow",
+   "blurb": "Ready to stretch? Plan and build a connected workflow: a product plan, a multi-page site, a delegation brief, two apps working together, a dashboard, optional browser and desktop control, and a chained workflow.",
+   "bullets": [
+    "Product plan, multi-page site and a delegation brief",
+    "Two apps working together and a dashboard",
+    "Optional browser and desktop control, then chain it all"
+   ],
+   "sub": "For confident users. Prompts are half-written: you decide the goals and what good looks like, and judge the results against them."
+  }
+ },
+ "roles": [
+  {
+   "id": "service",
+   "icon": "🎧",
+   "name": "Customer Service and Support",
+   "who": "For people who answer customers, solve problems and keep them coming back.",
+   "outcomes": [
+    "A saved skill that drafts on-policy customer replies",
+    "Feedback themes and fixes, with the numbers",
+    "A help guide and a sorted inbox"
+   ],
+   "label": "customer service and support",
+   "finder": "customer service"
+  },
+  {
+   "id": "ops",
+   "icon": "🧰",
+   "name": "Operations",
+   "who": "For coordinators and managers who keep the work flowing and fix what slows it down.",
+   "outcomes": [
+    "The real causes of delays, with the numbers",
+    "A checklist tool your team can use on a phone",
+    "A weekly operations brief"
+   ],
+   "label": "operations",
+   "finder": "operations"
+  },
+  {
+   "id": "finance",
+   "icon": "📈",
+   "name": "Finance and Administration",
+   "who": "For accounting, finance and admin teams, and anyone who owns the numbers.",
+   "outcomes": [
+    "Orders analyzed by channel and month",
+    "A pricing-scenario model with working formulas",
+    "A vendor invoice checked for mistakes"
+   ],
+   "label": "finance and administration",
+   "finder": "finance or admin"
+  },
+  {
+   "id": "growth",
+   "icon": "📣",
+   "name": "Sales and Marketing",
+   "who": "For people who win and keep customers and tell the company story.",
+   "outcomes": [
+    "A product-description skill in your brand voice",
+    "A sourced one-page market brief",
+    "A customer pitch deck and a customer update"
+   ],
+   "label": "sales and marketing",
+   "finder": "sales or marketing"
+  },
+  {
+   "id": "leaders",
+   "icon": "🧭",
+   "name": "Leaders and Managers",
+   "who": "For anyone who runs a team and wants their people bringing AI ideas forward.",
+   "outcomes": [
+    "A KPI dashboard from the practice data",
+    "A process mapped for automation",
+    "A team idea huddle that feeds Spark"
+   ],
+   "label": "leading a team",
+   "finder": "leading a team"
+  }
+ ]
+}
