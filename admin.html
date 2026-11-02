@@ -222,6 +222,8 @@ function missionDetail(r){
   let h='';
   if(r.track)h+=`<div style="font-size:12.5px;color:var(--muted);margin-bottom:6px">Chosen path: <b style="color:var(--ink)">${esc(trackLabel(r.track))}</b></div>`;
   h+=`<div style="font-size:12.5px;color:var(--muted);margin-bottom:6px">Spark your ideas: ${ideaBadge(r.idea)} &nbsp; 10-minute guides done: <b style="color:var(--ink)">${r.guides.length?esc(r.guides.join(', ')):'none'}</b></div>`;
+  const fins=Object.entries(r.progress._finals||{});
+  if(fins.length)h+=`<div style="font-size:12.5px;color:var(--muted);margin-bottom:6px">Final checks: ${fins.map(([k,f])=>`<b style="color:var(--ink)">${esc(LEVELS[k]?LEVELS[k].name:(trackLabel(k.replace(/^s:/,''))||'Path'))}</b> ${esc(String(+f.score||0))}%${f.passed?' (passed)':''}`).join(', ')}</div>`;
   ROLES.forEach(role=>{const k='role-'+role.id;const p=r.progress[k];if(!p)return;
     const tot=role.missions.reduce((a,m)=>a+m.steps.length,0);let d=0;for(const x in p)if(p[x])d++;
     h+=`<div style="font-size:12.5px;color:var(--muted);margin-bottom:6px">${role.icon} ${esc(role.name)} path: <b style="color:var(--ink)">${pct(d,tot)}%</b></div>`;});

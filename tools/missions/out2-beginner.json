@@ -1,0 +1,480 @@
+[
+ {
+  "t": "Teach Cowork about your project",
+  "blk": "Orientation",
+  "mins": 15,
+  "lead": "You'll describe the one-page internal page you're going to build for your team in this level, and have Cowork save it in a short notes file in your folder.",
+  "why": "Cowork starts each task fresh. A notes file in your folder means you explain your project once, not every time.",
+  "result": "A notes file in your Cowork Academy folder that describes your team page project.",
+  "think": {
+   "scene": "At work: an operations manager keeps a notes file for each client so Cowork never needs the same background twice.",
+   "ask": "Which project or client would you want Cowork to remember, so you never re-explain it?"
+  },
+  "steps": [
+   {
+    "type": "do",
+    "title": "Describe your project",
+    "do": "Paste this into your Cowork task, change the part in square brackets, and press Enter. Use roles or first names only, and leave out phone numbers and door codes.",
+    "prompt": "I'm new to Cowork. Over the next few missions I'll build a one-page internal page for my team at a vacation rental management company. My team: [your team and what it does, e.g. the reservations team, we handle bookings and guest questions]. Save a short file called project-notes.md in this folder that says what the page is for, who will use it, and what it should include. Keep it under 10 lines.",
+    "see": "Cowork confirms it saved project-notes.md, and the file appears in your Cowork Academy folder.",
+    "stuck": "If Cowork asks you questions about the page first, answer them in a sentence or two. Plain English is fine, there's no wrong answer."
+   },
+   {
+    "type": "do",
+    "title": "Read the notes",
+    "do": "Open project-notes.md from your Cowork Academy folder and read it. If anything is wrong, tell Cowork in the same task what to change.",
+    "see": "A few short lines describing your team, who the page is for and what it should include, in words you recognize.",
+    "stuck": "If the file opens in an app you don't expect, that's fine. Any text editor or browser can show it."
+   },
+   {
+    "type": "do",
+    "title": "Test that it remembers",
+    "do": "Start another new task in your Cowork Academy folder. Paste this in and press Enter.",
+    "prompt": "Read project-notes.md in this folder and tell me in one sentence what my team page project is about.",
+    "see": "One sentence that matches your project, even though this is a brand-new task.",
+    "stuck": "If Cowork says it can't find the file, check that the new task is using your Cowork Academy folder, not a different one."
+   },
+   {
+    "type": "check",
+    "q": "On Monday you start a new task and ask Cowork to add a section to your team page. What lets Cowork know the project without you explaining it again?",
+    "options": [
+     "Cowork remembers last week's tasks by itself",
+     "It reads project-notes.md in the folder",
+     "You explained it fully in an earlier task"
+    ],
+    "answer": 1,
+    "why": "A new task can read files in its folder, so project-notes.md carries your background forward. It does not see what you typed in earlier tasks, however detailed that was."
+   }
+  ]
+ },
+ {
+  "t": "Build your one-page team page",
+  "blk": "Website + Design",
+  "mins": 25,
+  "lead": "You'll have Cowork build a one-page internal page for your team, with what you do, who to contact and useful links, then improve its design with Claude's help.",
+  "why": "Turning an idea into a working page in an afternoon means your team gets a useful page now, instead of waiting weeks for someone else.",
+  "result": "A designed one-page team page, index.html, in your Cowork Academy folder, improved with design feedback.",
+  "think": {
+   "scene": "At work: HR builds a one-page onboarding site for new hires in an afternoon, instead of waiting weeks for IT.",
+   "ask": "What page would your team or customers use tomorrow if it existed?"
+  },
+  "steps": [
+   {
+    "type": "do",
+    "title": "Build the page",
+    "do": "Paste this into your Cowork task, change the part in square brackets, and press Enter.",
+    "prompt": "Read project-notes.md in this folder (if it's missing, my team is [your team, e.g. the reservations team]). Build a one-page internal page for my team and save it as index.html. Include a headline, a short What we do section, a Who to contact section with roles, and a list of useful links. Use placeholder names I can edit later. Make it clean and easy to read.",
+    "see": "Cowork confirms it saved index.html, and the file appears in your Cowork Academy folder.",
+    "stuck": "Don't have project-notes.md? That's fine. The part in square brackets tells Cowork enough to build the page."
+   },
+   {
+    "type": "do",
+    "title": "Look at it",
+    "do": "Open index.html from your Cowork Academy folder. It opens in your web browser. Look at it properly.",
+    "see": "Your team page in the browser, with a headline and sections for what you do, who to contact and useful links.",
+    "stuck": "If you see code instead of a web page, the file opened in a text editor. Right-click it and choose to open it with your web browser."
+   },
+   {
+    "type": "do",
+    "title": "Ask for a critique",
+    "do": "Paste this into the same task and press Enter.",
+    "prompt": "Give my page a quick design critique. List the 3 changes that would improve it most, in plain English.",
+    "see": "A short numbered list of design suggestions, such as more space around the headline or clearer section headings."
+   },
+   {
+    "type": "do",
+    "title": "Apply two changes",
+    "do": "Paste this into the same task with the 2 suggestions you like, and press Enter. Then refresh the page in your browser.",
+    "prompt": "Apply suggestions [the numbers you like, e.g. 1 and 3] to index.html.",
+    "see": "After refreshing, the page shows the changes you picked.",
+    "stuck": "If nothing looks different, refresh the browser tab again, or reopen index.html from the folder."
+   },
+   {
+    "type": "check",
+    "q": "Your manager says the top of your team page looks cramped. Which request to Cowork will most likely fix it in one try?",
+    "options": [
+     "Add more space around the headline",
+     "Make the whole page look more professional",
+     "Rebuild the page from scratch with a new design"
+    ],
+    "answer": 0,
+    "why": "A specific request tells Cowork exactly what to change. Asking for a more professional look leaves it guessing, and rebuilding throws away the parts that already work."
+   }
+  ]
+ },
+ {
+  "t": "Use your first Cowork skill",
+  "blk": "Skills",
+  "mins": 15,
+  "lead": "You'll ask Cowork which skills it has, then use one of them to improve your team page.",
+  "why": "Skills are ready-made abilities. Knowing they exist means you can ask for expert help with a task instead of starting from nothing.",
+  "result": "Your team page improved with the help of one Cowork skill.",
+  "think": {
+   "scene": "At work: a marketer uses a built-in skill to turn rough meeting notes into a polished brief in seconds.",
+   "ask": "Which writing or formatting chore do you repeat every week?"
+  },
+  "steps": [
+   {
+    "type": "do",
+    "title": "See the skills",
+    "do": "Paste this into your Cowork task and press Enter.",
+    "prompt": "What skills do you have available right now? List them in plain English, with one line on what each is good for. Then look at index.html in this folder and tell me which one skill would improve it most, and why.",
+    "see": "A list of skills with short descriptions, followed by one recommended skill and a sentence or two on how it would help your page.",
+    "stuck": "Don't have index.html? First paste: \"Make a quick one-page internal page for my team and save it as index.html.\" Then paste the prompt above."
+   },
+   {
+    "type": "do",
+    "title": "Use it on your page",
+    "do": "Paste this into the same task and press Enter. Then open index.html from your Cowork Academy folder, or refresh it, to see the change.",
+    "prompt": "Use that skill to improve index.html, and tell me what you changed.",
+    "see": "A short summary of what changed, and the updated page in your browser.",
+    "stuck": "If Cowork shows the result only in the task and the page hasn't changed, paste: \"Please update index.html with that.\""
+   },
+   {
+    "type": "check",
+    "q": "A teammate says they can't use Cowork skills because they don't know any skill names. What do you tell them?",
+    "options": [
+     "Skills only work if you type the exact name",
+     "Skills are only for building web pages",
+     "Ask Cowork to list its skills first"
+    ],
+    "answer": 2,
+    "why": "Cowork can list the skills it has and suggest one that fits your file, so you don't need to memorize names. Skills cover many kinds of work, not only web pages."
+   }
+  ]
+ },
+ {
+  "t": "Create a real Word document",
+  "blk": "Documents",
+  "mins": 20,
+  "lead": "You'll have Cowork turn a messy team email thread about the Pine Ridge hot tub into a clear owner update letter, saved as a real Word document.",
+  "why": "Cowork makes real files you can edit and send, not only answers in a task, and it can turn scattered notes into something an owner can read in a minute.",
+  "result": "A Word document owner update letter in your Cowork Academy folder, opened and checked against the notes.",
+  "think": {
+   "scene": "At work: a property manager turns a messy email thread into a clean update letter for an owner.",
+   "ask": "Which document do you rewrite from scratch every time?"
+  },
+  "steps": [
+   {
+    "type": "do",
+    "title": "Ask for the letter",
+    "do": "team-notes.txt is already in your Cowork Academy folder. Paste this into your Cowork task and press Enter.",
+    "prompt": "Read team-notes.txt in this folder. Write a short, friendly update letter to the owner, Mr. Alvarez, about the Pine Ridge hot tub: what's been happening, the repair and replacement options with their costs, and what we recommend. Use only facts from the notes. Save it as a Word document called owner-update-pine-ridge.docx.",
+    "see": "Cowork confirms it saved owner-update-pine-ridge.docx, and the file appears in your Cowork Academy folder.",
+    "stuck": "If Cowork can't find team-notes.txt, check that this task is using your Cowork Academy folder. If the file is missing, download the starter folder again from the setup mission."
+   },
+   {
+    "type": "do",
+    "title": "Open and check it",
+    "do": "Open owner-update-pine-ridge.docx from your Cowork Academy folder. Compare the numbers in it with team-notes.txt.",
+    "see": "A formatted one-page letter to Mr. Alvarez that mentions the repair visits since April, the cost of the part and the cost of a full replacement, matching the notes.",
+    "stuck": "If you don't have Word, the file also opens in Google Docs, Pages or another word processor."
+   },
+   {
+    "type": "do",
+    "title": "Adjust the letter",
+    "do": "Close the file. Then paste this into the same task, change the part in square brackets, and press Enter.",
+    "prompt": "Update owner-update-pine-ridge.docx: [one change, e.g. make it shorter and put the recommendation in the first paragraph].",
+    "see": "Cowork confirms the update. When you reopen the letter, the change is there.",
+    "stuck": "If Cowork says it can't save the file, make sure the letter is closed in Word, then ask again."
+   },
+   {
+    "type": "check",
+    "q": "Mr. Alvarez calls before your letter arrives and asks how many repair visits the hot tub has needed since April. What do the team notes say?",
+    "options": [
+     "5 visits",
+     "6 visits",
+     "11 visits"
+    ],
+    "answer": 1,
+    "why": "team-notes.txt says 6 repair visits since April. If your letter shows a different number, fix it before it goes out: you send the letter, so you check the facts."
+   }
+  ]
+ },
+ {
+  "t": "Make a simple spreadsheet",
+  "blk": "Spreadsheets",
+  "mins": 20,
+  "lead": "You'll have Cowork build a team maintenance tracker in Excel from the practice tickets, with totals that add themselves up, then see the formulas work.",
+  "why": "Spreadsheets with working formulas save you from adding up numbers by hand and copying last month's file.",
+  "result": "An Excel maintenance tracker in your Cowork Academy folder, with totals that update automatically and a chart.",
+  "think": {
+   "scene": "At work: a finance lead has Cowork build a tracker with working formulas, instead of copying and patching last month's file.",
+   "ask": "Which spreadsheet do you rebuild or update by hand?"
+  },
+  "steps": [
+   {
+    "type": "do",
+    "title": "Ask for the tracker",
+    "do": "maintenance-tickets.csv is already in your Cowork Academy folder. Paste this into your Cowork task and press Enter.",
+    "prompt": "Open maintenance-tickets.csv in this folder. Create an Excel spreadsheet called maintenance-tracker.xlsx with one row per property, showing its number of tickets and total repair cost, sorted from highest cost to lowest. Add a total row at the bottom that uses SUM formulas, so it updates when a number changes.",
+    "see": "Cowork confirms it saved maintenance-tracker.xlsx, and the file appears in your Cowork Academy folder.",
+    "stuck": "If Cowork can't find maintenance-tickets.csv, use the download link below to get it, save it in your Cowork Academy folder, and paste the prompt again.",
+    "files": ["maintenance-tickets.csv"]
+   },
+   {
+    "type": "do",
+    "title": "Test the formula",
+    "do": "Open maintenance-tracker.xlsx from your Cowork Academy folder. Change one property's cost and press Enter. Then close the file without saving.",
+    "see": "The total at the bottom changes by itself to match your new number.",
+    "stuck": "If the total doesn't change, click on it. If you see a plain number instead of something like =SUM(...), paste into the task: \"Make the totals SUM formulas.\""
+   },
+   {
+    "type": "do",
+    "title": "Add a chart",
+    "do": "Paste this into the same task and press Enter. Then reopen maintenance-tracker.xlsx.",
+    "prompt": "Add a bar chart to maintenance-tracker.xlsx that shows the total repair cost for each property.",
+    "see": "A bar chart in the spreadsheet with one bar per property, with the tallest bar for the most expensive property.",
+    "stuck": "If Cowork says it can't save the file, make sure maintenance-tracker.xlsx is closed in Excel, then ask again."
+   },
+   {
+    "type": "check",
+    "q": "Your manager has already budgeted for Driftwood Bungalow's repairs. She asks which property is next highest for maintenance cost. What does your tracker show?",
+    "options": [
+     "Pine Ridge Cabin",
+     "Lakeside Retreat",
+     "Lighthouse View"
+    ],
+    "answer": 0,
+    "why": "Pine Ridge Cabin is second, at $7,545. Lakeside Retreat is very close behind at $7,498, which is why reading the sorted tracker beats guessing."
+   }
+  ]
+ },
+ {
+  "t": "Design a simple logo",
+  "blk": "Visuals",
+  "mins": 20,
+  "lead": "You'll have Cowork design a few simple logo options for your team page as SVG files, pick one, and add it to the page.",
+  "why": "Making a simple visual yourself means you don't have to wait on a designer for every small graphic.",
+  "result": "A logo file, such as logo-2.svg, in your Cowork Academy folder, shown on your team page.",
+  "think": {
+   "scene": "At work: a small team designs simple logos and icons for its internal pages without waiting for a designer.",
+   "ask": "Where do you wait on someone else for a visual?"
+  },
+  "steps": [
+   {
+    "type": "do",
+    "title": "Ask for options",
+    "do": "Paste this into your Cowork task, change the parts in square brackets, and press Enter.",
+    "prompt": "Read project-notes.md in this folder (if it's missing, my team is [your team, e.g. the reservations team]). Design 3 simple logo options for my team page in a [style, e.g. clean and coastal] style. Save them in this folder as SVG files called logo-1.svg, logo-2.svg and logo-3.svg.",
+    "see": "Three files, logo-1.svg, logo-2.svg and logo-3.svg, appear in your Cowork Academy folder.",
+    "stuck": "If Cowork shows the logos only in the task, paste: \"Save each logo as an SVG file in this folder.\""
+   },
+   {
+    "type": "do",
+    "title": "Pick your favorite",
+    "do": "Open the three logo files from your Cowork Academy folder and choose one. If none feels right, tell Cowork in the same task what to change.",
+    "see": "You have one logo you like.",
+    "stuck": "If a logo opens as code, right-click it and choose to open it with your web browser. Be specific about changes, for example \"simpler shapes\" or \"use navy instead of green\"."
+   },
+   {
+    "type": "do",
+    "title": "Add it to your page",
+    "do": "Paste this into the same task with the number of your favorite, and press Enter. Then open or refresh index.html.",
+    "prompt": "Add logo-[your pick, e.g. 2].svg to the top of index.html, next to the headline, at a sensible size.",
+    "see": "Your team page shows the logo at the top.",
+    "stuck": "Don't have index.html? Paste this first: \"Make a quick one-page internal page for my team and save it as index.html.\" If the logo doesn't show, paste: \"The logo isn't showing on index.html. Please fix it.\""
+   },
+   {
+    "type": "check",
+    "q": "Your team lead likes your logo but says it looks too busy at the small size in the page header. What's the best next step?",
+    "options": [
+     "Use it anyway, since it's only for the team",
+     "Ask for a brand-new set of logo ideas",
+     "Ask for a simpler version of it"
+    ],
+    "answer": 2,
+    "why": "Clear feedback on the logo you already like usually gets you there in one more try. Starting over loses what works, and a busy logo makes the page harder to read."
+   }
+  ]
+ },
+ {
+  "t": "Do a quick research task",
+  "blk": "Research",
+  "mins": 15,
+  "lead": "You'll give Cowork a real work question and get back a short summary, with the sources it used.",
+  "why": "A sourced summary in minutes replaces an hour of clicking through search results, as long as you check the sources.",
+  "result": "A short, sourced research summary on a work question you chose.",
+  "think": {
+   "scene": "At work: a salesperson preps for a call with a sourced one-page brief on the prospect, built in five minutes.",
+   "ask": "What do you look up by hand before meetings or decisions?"
+  },
+  "steps": [
+   {
+    "type": "do",
+    "title": "Ask your question",
+    "do": "Paste this into your Cowork task, change the question in square brackets, and press Enter.",
+    "prompt": "Search the web and research this for me: [a work question, e.g. what do vacation rental guests complain about most at check-in, and how do managers prevent it]. Give me the key points in 5 short bullets, and list the sources you used with links.",
+    "see": "Five bullet points answering your question, followed by a list of web sources with links.",
+    "stuck": "If the answer is too general, make the question more specific, with a place, time frame or type of property. If Cowork says it can't search the web, check Claude's help center at support.claude.com, or ask your Academy program contact."
+   },
+   {
+    "type": "do",
+    "title": "Check one source",
+    "do": "Click one of the source links and find the fact Cowork took from it.",
+    "see": "The page supports what Cowork said in its summary.",
+    "stuck": "If the page doesn't say what Cowork claimed, paste into the same task: \"This source doesn't support that point. Please check it.\""
+   },
+   {
+    "type": "do",
+    "title": "Ask a follow-up",
+    "do": "Type one follow-up question into the same task, based on what you learned, and press Enter.",
+    "prompt": "[your follow-up, e.g. Which of these would be cheapest for a team like ours to try first, and why?]",
+    "see": "A focused answer that builds on the first summary."
+   },
+   {
+    "type": "check",
+    "q": "Cowork's summary says a new local short-term rental rule starts next month. You want to tell your team today. What do you do first?",
+    "options": [
+     "Open the source and confirm the rule",
+     "Share it, since Cowork listed its sources",
+     "Share it with a note that Cowork found it"
+    ],
+    "answer": 0,
+    "why": "Claude can misread a page or mix up places and dates. A listed source only helps if you open it and check that it says what the summary claims."
+   }
+  ]
+ },
+ {
+  "t": "Connect one simple tool",
+  "blk": "Connectors",
+  "mins": 20,
+  "lead": "You'll connect one company-approved app, such as your work calendar, and have Cowork read one thing from it.",
+  "why": "Connectors let Cowork find information in the apps you already use, so you stop clicking through them yourself.",
+  "result": "One connected, company-approved app, and real information Cowork read from it. Or a practice summary from guest-messages.txt.",
+  "think": {
+   "scene": "At work: a coordinator asks \"what's on my calendar this week and what needs prep?\" instead of clicking through three apps.",
+   "ask": "Which app do you open most just to find information?"
+  },
+  "steps": [
+   {
+    "type": "do",
+    "title": "Find an approved app",
+    "do": "Only connect apps your company has approved. Ask your manager or Academy program contact which app you can connect, such as your work calendar.",
+    "see": "You know one approved app to connect, or you know there isn't one yet.",
+    "stuck": "No approved app yet? Skip the next step and use the practice prompt in the last step's tip instead."
+   },
+   {
+    "type": "do",
+    "title": "Connect it",
+    "do": "Connect the approved app. For directions, check Claude's help center at support.claude.com. A sign-in window opens and you sign in yourself with your work account.",
+    "see": "The app shows as connected in Cowork.",
+    "stuck": "If the sign-in window doesn't appear, check whether your browser blocked a pop-up, then try again. If you're still stuck, ask your Academy program contact."
+   },
+   {
+    "type": "do",
+    "title": "Read one thing",
+    "do": "Only if your company has approved this connector. Otherwise, use guest-messages.txt. Paste this into your Cowork task, choose the example that fits your app, and press Enter.",
+    "prompt": "Using the app I connected, read [one thing, e.g. my calendar events for the next 7 days] and summarize it in short bullets. Don't send, change or delete anything.",
+    "see": "A short summary of real information from your app, such as next week's meetings.",
+    "stuck": "No approved app? Paste this instead: \"Read guest-messages.txt in this folder and summarize the 8 messages in short bullets. Don't reply to anything.\" If Cowork can't reach your connected app, ask your Academy program contact."
+   },
+   {
+    "type": "check",
+    "q": "You've connected your company-approved calendar and want a summary of next week's meetings. What should your prompt include?",
+    "options": [
+     "Your calendar password, so it can sign in",
+     "Not to send, change or delete anything",
+     "Permission to accept invites for you"
+    ],
+    "answer": 1,
+    "why": "Telling Cowork not to send, change or delete anything keeps a reading task a reading task. You sign in yourself in a pop-up, so Cowork never needs your password."
+   }
+  ]
+ },
+ {
+  "t": "Recap your build",
+  "blk": "Wrap-up",
+  "mins": 15,
+  "lead": "You'll tell Cowork what you did in this level, get a plain-English recap, and save it into your project notes file.",
+  "why": "A saved recap shows what you can now do, and gives future tasks the full picture of your project.",
+  "result": "An updated project-notes.md with a recap of your first build.",
+  "think": {
+   "scene": "At work: the best ideas come from naming the boring parts of the job out loud.",
+   "ask": "Name three tasks from this week that felt like copy-and-paste work."
+  },
+  "steps": [
+   {
+    "type": "do",
+    "title": "Get the recap",
+    "do": "Paste this into your Cowork task, change the part in square brackets to match what you did, and press Enter.",
+    "prompt": "List the files in this folder. Then write a short recap of what I built in Cowork Academy, in plain English bullets. Here's what I did: [what you did, e.g. built a team page, wrote an owner letter, made a maintenance tracker, designed a logo, used a skill, connected my calendar].",
+    "see": "A list of the files in your folder, then a bulleted recap that names what you built, such as index.html, the owner letter and the tracker.",
+    "stuck": "If the recap misses something or adds something you didn't do, tell Cowork, for example: \"I didn't connect an app. Please remove that.\""
+   },
+   {
+    "type": "do",
+    "title": "Save it to your notes",
+    "do": "Paste this into the same task and press Enter.",
+    "prompt": "Add that recap to the end of project-notes.md under a heading called What I built. Don't change the rest of the file. If project-notes.md doesn't exist, create it.",
+    "see": "Cowork confirms it updated or created project-notes.md."
+   },
+   {
+    "type": "do",
+    "title": "Check the file",
+    "do": "Open project-notes.md from your Cowork Academy folder.",
+    "see": "Your original project description at the top, and the new What I built section at the end.",
+    "stuck": "If your original notes are gone, paste into the task: \"Please put back my original project description at the top.\""
+   },
+   {
+    "type": "check",
+    "q": "Next month you'll start a new task to add a section to your team page, and you want Cowork to know what you've built. What works best?",
+    "options": [
+     "Expect Cowork to recall this month's tasks",
+     "Let Cowork guess from the file names",
+     "Keep the recap in project-notes.md"
+    ],
+    "answer": 2,
+    "why": "A new task doesn't see earlier tasks, but it can read files in your folder. File names alone don't say what each file is for or what you decided."
+   }
+  ]
+ },
+ {
+  "t": "Publish your team page online",
+  "blk": "Publish (optional)",
+  "mins": 30,
+  "lead": "You'll put your team page online with GitHub Pages, a free service, so your team can open it from a link.",
+  "why": "Optional: a link is easier to share than a file, but setup takes 30 minutes or more, and anyone with the link can see the page.",
+  "result": "Your team page online, with a link that opens in any browser. Or a page checked and ready to share on your team's drive.",
+  "think": {
+   "scene": "At work: a team shares one link to a page instead of emailing attachments around.",
+   "ask": "What would you rather share as a link than as a file?"
+  },
+  "steps": [
+   {
+    "type": "do",
+    "title": "Check what's public",
+    "do": "Ask your manager before you publish a team page. Then paste this into your Cowork task and press Enter.",
+    "prompt": "I may publish index.html online, where anyone with the link can see it. Check it for anything that shouldn't be public, like phone numbers, emails, door or lockbox codes, owner names or internal notes, and list what you find.",
+    "see": "A short list of details that shouldn't be public, or a note that there are none.",
+    "stuck": "If something is listed, ask Cowork to remove it from index.html before you go on. If your manager would rather keep the page internal, put index.html on your team's shared drive instead and stop here. Don't have index.html? Ask Cowork to make a quick one-page team page first."
+   },
+   {
+    "type": "do",
+    "title": "Follow the walkthrough",
+    "do": "Paste this into the same task and press Enter. Follow each step and say done after each one. You create the GitHub account and sign in yourself.",
+    "prompt": "Walk me through publishing index.html, and any logo file it uses, for free with GitHub Pages. I'm a complete beginner. Give me one step at a time and wait for me to say done before the next one.",
+    "see": "One step at a time, ending with a link that looks like yourname.github.io.",
+    "stuck": "If a step doesn't match your screen, describe what you see to Cowork. If your company doesn't allow GitHub, stop here and share the file on your team's drive instead."
+   },
+   {
+    "type": "do",
+    "title": "Open your page",
+    "do": "Open your link in a new browser tab.",
+    "see": "Your team page, with its headline and logo, loading from the internet.",
+    "stuck": "A new site can take a few minutes to appear. If the link shows an error, wait 5 minutes and try again. If the logo is missing, tell Cowork. The file may not have been uploaded."
+   },
+   {
+    "type": "check",
+    "q": "Your team page lists everyone's cell numbers and the office lockbox code. Your manager says the page can go online. What do you do first?",
+    "options": [
+     "Publish it, since your manager said yes",
+     "Remove the codes and phone numbers",
+     "Publish it and fix anything people flag"
+    ],
+    "answer": 1,
+    "why": "Published pages are public, so private details must come off before anything goes online. Approval to publish the page isn't approval to publish codes, and fixing it later is too late."
+   }
+  ]
+ }
+]

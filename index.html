@@ -301,6 +301,11 @@ details.capstone p{margin-top:10px}
 .ifield{font-family:var(--body);font-size:16px;border:none;border-bottom:2px solid var(--ink);background:var(--spark-soft);padding:4px 8px;border-radius:6px 6px 0 0;max-width:100%;color:var(--ink)}
 .ipreview{font-family:var(--display);font-size:19px;font-weight:700;background:var(--paper);border-radius:12px;padding:14px 16px;margin:14px 0}
 .donecard h3{font-size:30px}
+.finalbar{height:8px;background:var(--sunk);border-radius:99px;overflow:hidden;margin:0 0 14px;max-width:820px}.finalbar i{display:block;height:100%;background:var(--go)}
+.more{position:relative}.more summary{list-style:none;cursor:pointer;font-weight:700;font-size:13px;border:1px solid var(--line);border-radius:10px;padding:6px 11px;background:transparent}
+.more summary::-webkit-details-marker{display:none}
+.more .menu{position:absolute;right:0;top:110%;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:6px;display:grid;gap:2px;min-width:200px;box-shadow:0 12px 30px -16px rgba(20,33,61,.45);z-index:40}
+.more .menu button{text-align:left;border:none}.more .menu .danger{color:var(--warn)}
 @media(max-width:600px){.pbox{flex-direction:column}.stepcard{padding:20px 18px}.sdo{font-size:17px}.rm{grid-template-columns:36px 1fr;}.rm button{grid-column:1/-1}}
 
 /* ---- how-to stepper ---- */
@@ -366,9 +371,10 @@ details.capstone p{margin-top:10px}
       <span class="who" id="who"><span class="savedot"></span>Progress saves automatically</span>
       <button class="tiny" id="btnNotebook">💡 My idea notebook</button>
       <button class="ghost tiny" onclick="exportWorkbook()">Workbook PDF</button>
-      <button class="ghost tiny" onclick="exportSave()">Back up</button>
-      <button class="ghost tiny" onclick="importSave()">Restore</button>
-      <button class="ghost tiny" onclick="resetAll()">Reset</button>
+      <details class="more"><summary class="tinybtn">More</summary><div class="menu">
+        <button class="ghost tiny" onclick="exportSave()">Back up my progress</button>
+        <button class="ghost tiny" onclick="importSave()">Restore from a backup</button>
+        <button class="ghost tiny danger" onclick="resetAll()">Reset all progress</button></div></details>
     </div>
   </div>
 
@@ -446,8 +452,8 @@ details.capstone p{margin-top:10px}
     <div class="refrow">
       <div class="refcard">
         <h3>Practice data pack</h3>
-        <p>A made-up 12-property rental company: bookings, guest reviews and maintenance tickets from April to September 2026. Use it whenever a mission needs data and you'd rather not use your own. There are real patterns hidden inside.</p>
-        <div class="dlinks"><a href="data/bookings.csv" download>bookings.csv</a><a href="data/guest-reviews.csv" download>guest-reviews.csv</a><a href="data/maintenance-tickets.csv" download>maintenance-tickets.csv</a><a href="data/README.txt" target="_blank" rel="noopener">About the data</a></div>
+        <p>A made-up 12-property rental company, April to September 2026: bookings, guest reviews, maintenance tickets, an owner statement, a guest inbox and more. The Set up mission puts it all in your Cowork Academy folder. There are real patterns hidden inside.</p>
+        <div class="dlinks"><a href="data/cowork-academy-starter.zip" download style="background:var(--spark);border-color:#E5AE1F;color:var(--ink)">Download the starter folder</a><a href="data/bookings.csv" download>bookings.csv</a><a href="data/guest-reviews.csv" download>guest-reviews.csv</a><a href="data/maintenance-tickets.csv" download>maintenance-tickets.csv</a><a href="data/README.txt" target="_blank" rel="noopener">About the data</a></div>
       </div>
       <div class="refcard">
         <h3>Three habits for using Claude at work</h3>
@@ -477,7 +483,6 @@ details.capstone p{margin-top:10px}
       </div>
     </details>
 
-    <p class="xlink">Prefer a story? Try <a href="https://scottg-dashboards-gorilla.github.io/henry-founder-quest/" target="_blank" rel="noopener">Founder Quest</a> and build a whole business as a game.</p>
     <p class="foot">Cowork Academy, by Datapath. <a href="facilitator.html">Facilitator kit</a> &nbsp; <a href="privacy.html">Privacy</a> &nbsp; <a href="terms.html">Terms of use</a> &nbsp; <span id="ver">v2</span></p>
   </section>
 
@@ -515,17 +520,17 @@ const SESSIONS=[
    items:[['setup',0],['safety',0],['intermediate',5],['ideas',0]]},
   {id:'explorer',hours:2,name:'Cowork at Work',cred:'Explorer',
    who:'Busy professionals who want the highlights, applied to their own work.',
-   outcomes:['Use Claude safely at work','A real document and data analysis','Connect an app and use your real data','Build and save your own skill','Leave with an idea for your own job'],
-   items:[['setup',0],['safety',0],['beginner',3],['beginner',7],['intermediate',5],['intermediate',2],['ideas',0]]},
+   outcomes:['Use Claude safely at work','Turn a guest inbox into a sorted to-do list','Analyze a spreadsheet and chart it','Build and save your own skill','Leave with an idea for your own job'],
+   items:[['setup',0],['safety',0],['beginner',7],['intermediate',5],['intermediate',2],['ideas',0]]},
   {id:'essentials',hours:4,name:'Cowork Essentials',cred:'Practitioner',levels:['beginner'],
    who:'Everyone. Your day-one Cowork toolkit.',
-   outcomes:['Word documents, spreadsheets and images','Sourced web research and a one-page site','Use a skill and connect a tool','Leave with ideas for your own job']},
+   outcomes:['Word letters and working spreadsheets','Sourced research and a one-page team page','Use a skill and connect an approved app','Leave with ideas for your own job']},
   {id:'professional',hours:8,name:'Cowork Professional',cred:'Builder',levels:['beginner','intermediate'],
    who:'Power users and analysts who build repeatable workflows.',
-   outcomes:['Everything in Essentials, plus:','Build and save your own skills','Agents, data analysis, decks and PDFs','Automations and a live dashboard']},
+   outcomes:['Everything in Essentials, plus:','Build and save your own skills','Data analysis, decks and PDFs','A scheduled summary and a dashboard']},
   {id:'mastery',hours:12,name:'Cowork Mastery',cred:'Architect',levels:['beginner','intermediate','higher'],
    who:'Champions and adoption leaders who build for others.',
-   outcomes:['Everything in Professional, plus:','Browser and desktop automation','Plugins and combined connectors','Workflows that run unattended']}
+   outcomes:['Everything in Professional, plus:','Two apps working together','Optional browser and desktop control','A chained workflow you design']}
 ];
 const TRACKS=SESSIONS; // older name, kept for anything still referring to it
 const GROUPS=Object.assign({},LEVELS,{ideas:IDEAS,safety:SAFETY,setup:SETUP});
@@ -563,7 +568,8 @@ async function syncNow(){
     _track:state.track||'',
     _capstones:state.capstones||{},
     _feedback:state.feedback||{},
-    _howtos:state.howtos||{}
+    _howtos:state.howtos||{},
+    _finals:state.finals||{}
   });
   try{
     const r=await fetch(SB_URL+'/rest/v1/rpc/academy_upsert',{method:'POST',headers:sbHeaders(),
@@ -631,7 +637,7 @@ function showView(id){['picker','board','howto','notebook','player'].forEach(v=>
 
 function renderPicker(){
   const mb=document.getElementById('masterBanner');
-  if(mb){ if(allLevelsDone()){mb.classList.remove('hide');
+  if(mb){ if(allLevelsDone()&&['beginner','intermediate','higher'].every(l=>(finalResult(l)||{}).passed)){mb.classList.remove('hide');
       document.getElementById('masterCertBtn').href=certLink('Full Cowork Mastery',totalStepsDone());}
     else mb.classList.add('hide'); }
   const t=null;
@@ -705,6 +711,48 @@ function renderList(items,ctx){
   refreshList();
 }
 
+/* ---- Final check: every quick-check question in the path, shuffled. Pass mark 80%. ---- */
+const PASS=0.8;
+function pathChecks(items){const out=[];items.forEach(([l,mi])=>GROUPS[l].missions[mi].steps.forEach((s,si)=>{
+  if(s.type==='check')out.push({l,mi,si,s});
+  if(s.type==='quiz')s.items.forEach(it=>out.push({l,mi,si,s:{q:it.s+' What would you do?',options:s.choices,answer:it.a,why:it.why}}));}));return out;}
+function finalResult(key){return (state.finals||{})[key]||null;}
+let FINAL=null;
+function shuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
+function startFinal(){
+  const qs=shuffle(pathChecks(CUR.items)).map(q=>({...q,order:shuffle([0,1,2])}));
+  FINAL={qs,i:0,right:0,picked:null};state.play=null;showView('player');renderFinal();
+}
+function renderFinal(){
+  const F=FINAL,host=document.getElementById('playHost');const ctxName=CUR.ctx.kind==='session'?CUR.ctx.sess.name:LEVELS[CUR.ctx.lvl].project;
+  if(F.i>=F.qs.length){
+    const pct=Math.round(F.right/F.qs.length*100),passed=F.right/F.qs.length>=PASS;
+    const prev=finalResult(CUR.ctx.capKey);
+    if(!prev||pct>prev.score){state.finals=state.finals||{};state.finals[CUR.ctx.capKey]={score:pct,passed:passed||!!(prev&&prev.passed),date:new Date().toISOString()};save();scheduleSync();}
+    host.innerHTML=`<div class="ptop"><button class="ghost tiny" id="fBack">‹ All missions</button><span>Final check, ${esc(ctxName)}</span></div>
+      <div class="stepcard ${passed?'donecard':''}"><div class="sk">Your result</div><h3>${F.right} of ${F.qs.length} right (${pct}%)</h3>
+      <p class="sdo">${passed?'You passed. Your certificate is ready.':'The pass mark is 80%. Look back at the missions you weren\'t sure about, then take the check again. The questions come in a new order each time.'}</p>
+      <div class="nav"><button class="ghost" id="fBack2">All missions</button>${passed?'<button class="primary" id="fDone">See my certificate</button>':'<button class="primary" id="fRetry">Take the check again</button>'}</div></div>`;
+    const back=()=>{showView('board');renderList(CUR.items,CUR.ctx);};
+    document.getElementById('fBack').onclick=back;document.getElementById('fBack2').onclick=back;
+    if(document.getElementById('fDone'))document.getElementById('fDone').onclick=()=>{back();document.getElementById('finale').scrollIntoView({behavior:'smooth'});};
+    if(document.getElementById('fRetry'))document.getElementById('fRetry').onclick=startFinal;
+    return;
+  }
+  const q=F.qs[F.i],s=q.s,answered=F.picked!=null;
+  host.innerHTML=`<div class="ptop"><button class="ghost tiny" id="fBack">‹ All missions</button><span>Final check, ${esc(ctxName)}</span></div>
+    <h2 class="ptitle">Final check</h2><p class="pwhy">${F.qs.length} questions from the missions in this path. Pass mark 80%.</p>
+    <div class="prog finalbar"><i style="width:${Math.round(F.i/F.qs.length*100)}%"></i></div>
+    <div class="stepcard"><div class="sk">Question ${F.i+1} of ${F.qs.length}, from "${esc(GROUPS[q.l].missions[q.mi].t)}"</div>
+      <p class="sdo">${esc(s.q)}</p>
+      <div class="opts">${q.order.map(k=>{const cls=answered?(k===s.answer?'right':k===F.picked?'wrong':''):'';return `<button class="opt ${cls}" data-fopt="${k}" ${answered?'disabled':''}>${esc(s.options[k])}</button>`;}).join('')}</div>
+      ${answered?`<div class="see ${F.picked!==s.answer?'miss':''}"><b>${F.picked===s.answer?'Right.':'Not quite.'}</b> ${esc(s.why)}</div>`:''}
+      <div class="nav"><span></span><button class="primary" id="fNext" ${answered?'':'disabled'}>${F.i===F.qs.length-1?'See my result':'Next question'}</button></div></div>`;
+  document.getElementById('fBack').onclick=()=>{FINAL=null;showView('board');renderList(CUR.items,CUR.ctx);};
+  host.querySelectorAll('[data-fopt]').forEach(b=>b.onclick=()=>{F.picked=+b.dataset.fopt;if(F.picked===s.answer)F.right++;renderFinal();});
+  document.getElementById('fNext').onclick=()=>{F.i++;F.picked=null;renderFinal();window.scrollTo({top:0,behavior:'smooth'});};
+}
+
 /* ---- Mission player: one step at a time ---- */
 const QZ={}; // in-progress quiz answers, per step
 function openPlayer(ii,si){
@@ -752,15 +800,17 @@ function renderStep(s,si,n,l,mi){
     <details class="stuck"><summary>Haven't set up the folder yet?</summary><div>Do the <b>Set up Cowork for the Academy</b> mission first. It takes about 10 minutes.</div></details>
     ${navHtml(si,'Ready, next step')}</div>`;
   if(s.type==='do'){
-    const files=(s.files||[]).map(f=>`<a class="filebtn" href="data/${f}" download>⬇ Download ${f}</a>`).join('');
-    const link=s.link?`<a class="filebtn" href="${s.link.href}" target="_blank" rel="noopener">${esc(s.link.label)}</a>`:'';
+    const files=(s.files||[]).map(f=>`<a href="data/${f}" download>${f}</a>`).join(', ');
+    const link=s.link?`<a class="filebtn" href="${s.link.href}" ${s.link.download?'download':'target="_blank" rel="noopener"'}>${esc(s.link.label)}</a>`:'';
+    const prompt=s.prompt?fillTokens(s.prompt):'';
     return `<div class="stepcard">${head}
       <p class="sdo">${esc(s.do)}</p>
-      ${files||link?`<div class="files">${files}${link}</div>`:''}
-      ${s.prompt?`<div class="pbox"><div class="ptext">${esc(s.prompt).replace(/\[([^\]]+)\]/g,'<mark>[$1]</mark>')}</div>${copyBtn(s.prompt,'Copy prompt')}</div>
-        ${/\[/.test(s.prompt)?'<p class="pnote">Replace the highlighted part in brackets with your own details after you paste it.</p>':''}`:''}
+      ${link?`<div class="files">${link}</div>`:''}
+      ${prompt?`<div class="pbox"><div class="ptext">${esc(prompt).replace(/\[([^\]]+)\]/g,'<mark>[$1]</mark>')}</div>${copyBtn(prompt,'Copy prompt')}</div>
+        ${/\[/.test(prompt)?'<p class="pnote">Replace the highlighted part in brackets with your own details after you paste it.</p>':''}`:''}
       <div class="see"><b>You should see:</b> ${esc(s.see)}</div>
       ${s.stuck?`<details class="stuck"><summary>Didn't see that?</summary><div>${esc(s.stuck)}</div></details>`:''}
+      ${files?`<p class="pnote">Missing a practice file from your folder? Download ${files} and move it into Cowork Academy.</p>`:''}
       ${navHtml(si,nextLabel)}</div>`;
   }
   if(s.type==='check'){
@@ -804,6 +854,14 @@ function renderStep(s,si,n,l,mi){
   }
   return `<div class="stepcard">${head}${navHtml(si,nextLabel)}</div>`;
 }
+const ROLE_LABEL={guest:'guest services and reservations',ops:'property operations',finance:'revenue and finance',growth:'sales, marketing and owner relations',leaders:'leading a team'};
+function fillTokens(t){
+  if(!/\{\{/.test(t))return t;
+  const rid=(CUR&&CUR.ctx.kind==='session'&&CUR.ctx.sess.id.startsWith('role-'))?CUR.ctx.sess.id.slice(5):(state.finder&&state.finder.role);
+  const role=ROLE_LABEL[rid]||'[your role, e.g. reservations]';
+  const notes=[...new Set(notebookEntries().filter(e=>e.g!=='ideas').map(e=>e.a.replace(/\s+/g,' ').trim()).filter(Boolean))].slice(0,8);
+  return t.replace('{{ROLE}}',role).replace('{{NOTES}}',notes.length?'Notes I made while learning Cowork: '+notes.map(n=>'"'+n.slice(0,160)+'"').join('; ')+'. ':'');
+}
 function ideaSentence(){const v=state.ideaDraft||{};if(!v.task&&!v.what)return '';
   return `Every ${v.when||'___'} I spend ${v.time||'___'} on ${v.task||'___'}. Cowork could ${v.what||'___'}.`;}
 function wirePlayer(m,l,mi,si,n){
@@ -816,7 +874,9 @@ function wirePlayer(m,l,mi,si,n){
     const rb=$('reflectBox');if(rb)setNote(l,mi,rb.value);
     stepDone();goStep(si+1);if(si+1>=n){toast('Mission complete');}
   };
-  document.querySelectorAll('#playHost [data-opt]').forEach(b=>b.onclick=()=>{QZ['c'+l+mi+si]=+b.dataset.opt;stepDone();renderPlayer();});
+  document.querySelectorAll('#playHost [data-opt]').forEach(b=>b.onclick=()=>{QZ['c'+l+mi+si]=+b.dataset.opt;
+    state.checks=state.checks||{};const k=l+'.'+mi+'.'+si;if(!(k in state.checks))state.checks[k]=(+b.dataset.opt===m.steps[si].answer);
+    stepDone();renderPlayer();});
   const s=m.steps[si];
   if(s&&s.type==='quiz'){const q=QZ['q'+l+mi+si];
     document.querySelectorAll('#playHost [data-qopt]').forEach(b=>b.onclick=()=>{q.ans[q.i]=+b.dataset.qopt;renderPlayer();});
@@ -836,8 +896,8 @@ function wirePlayer(m,l,mi,si,n){
 
 function allLevelsDone(){return ["beginner","intermediate","higher"].every(l=>levelProgress(l).pct===100);}
 function totalStepsDone(){return ["beginner","intermediate","higher"].reduce((a,l)=>a+levelProgress(l).done,0);}
-function certLink(track,steps){
-  const p=new URLSearchParams();if(track)p.set('track',track);if(steps)p.set('steps',steps);
+function certLink(track,steps,score){
+  const p=new URLSearchParams();if(state.identity&&state.identity.name)p.set('name',state.identity.name);if(track)p.set('track',track);if(steps)p.set('steps',steps);if(score!=null)p.set('score',score);
   return 'certificate.html?'+p.toString();
 }
 function refreshList(){
@@ -847,6 +907,14 @@ function refreshList(){
   const fin=document.getElementById('finale');
   if(p.pct!==100){fin.classList.add('hide');return;}
   fin.classList.remove('hide');
+  const fr=finalResult(ctx.capKey),nq=pathChecks(items).length;
+  if(!fr||!fr.passed){
+    fin.innerHTML=`<h3>All missions done. One last thing: the final check.</h3>
+      <p>${nq} questions from the missions you just did, in a new order. Score 80% or more to earn your certificate. You can take it again if you need to.</p>
+      ${fr?`<p>Your best score so far: ${fr.score}%.</p>`:''}
+      <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap"><button class="sparkbtn" id="finStart">Take the final check</button></div>`;
+    document.getElementById('finStart').onclick=startFinal;return;
+  }
   if(ctx.kind==='session'){
     const t=ctx.sess;
     const credName=t.icon?'your role certificate':t.cred;
@@ -854,15 +922,15 @@ function refreshList(){
       <p>You built real things with Claude Cowork and found an idea for your own work. Make sure your idea is in <a href="${SPARK_URL}" target="_blank" rel="noopener" style="color:var(--spark)">Spark</a>, because that's where it turns into a real improvement. Then keep going with a how-to guide or a longer session.</p>
       <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
         <a class="finbtn" href="${SPARK_URL}" target="_blank" rel="noopener">Submit your idea in Spark</a>
-        <a class="finbtn" href="${certLink(t.name+' — '+t.cred,p.done)}">🎓 Get your ${t.icon?'role':t.cred} certificate</a>
+        <a class="finbtn" href="${certLink(t.name+' — '+t.cred,p.done,fr.score)}">🎓 Get your ${t.icon?'role':t.cred} certificate</a>
         <button class="ghost" onclick="goHome()">Back to the Academy</button>
       </div>`;
     return;
   }
   const lvl=ctx.lvl;
-  if(allLevelsDone()){
+  if(allLevelsDone()&&['beginner','intermediate','higher'].every(l=>(finalResult(l)||{}).passed)){
     fin.innerHTML=`<h3>👑 Full Cowork Mastery: all three levels complete!</h3>
-      <p>You've done the entire course, hands-on: websites, documents, data, decks, images, research, skills, memory, connectors, agents, dashboards, automation, browser &amp; desktop control, plugins, and orchestration. That's the whole of Cowork.</p>
+      <p>You've done the entire course, hands-on: documents, data, decks, research, skills, connected apps, delegation, dashboards, scheduled tasks and chained workflows.</p>
       <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
         <a class="finbtn" href="${certLink('Full Cowork Mastery',totalStepsDone())}">🎓 Get your Mastery Certificate</a>
         <button class="ghost" onclick="goHome()">Back to the Academy</button>
@@ -871,7 +939,7 @@ function refreshList(){
     fin.innerHTML=`<h3>🎉 ${LEVELS[lvl].project}: complete!</h3>
       <p>You built real things with Claude Cowork and can prove it. Get your certificate, then take on the next level.</p>
       <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
-        <a class="finbtn" href="${certLink(LEVELS[lvl].name+' — '+LEVELS[lvl].project,p.done)}">🎓 Get your certificate</a>
+        <a class="finbtn" href="${certLink(LEVELS[lvl].name+' — '+LEVELS[lvl].project,p.done,fr.score)}">🎓 Get your certificate</a>
         ${nextLevelBtn(lvl)}
         <button class="ghost" onclick="goHome()">Back to the Academy</button>
       </div>`;
@@ -939,7 +1007,9 @@ function placeName(c){
 }
 function renderResume(){
   const el=document.getElementById('resume');const pl=placeName(state.last);
-  if(!pl){el.classList.add('hide');return;}
+  if(!pl){el.classList.remove('hide');
+    el.innerHTML=`<div><div class="rt">New here? Start with the 1-hour AI Quick Start.</div><div class="rs">It sets up Cowork, covers the safe habits, has you analyze real data, and ends with an idea for your job.</div></div><button class="primary" id="resumeBtn">Start the Quick Start</button>`;
+    document.getElementById('resumeBtn').onclick=()=>openSession('quick');return;}
   let next='';
   if(pl.items){const it=pl.items.find(([l,mi])=>!missionDone(l,mi));if(!it){el.classList.add('hide');return;}next='Next up: '+GROUPS[it[0]].missions[it[1]].t;}
   else{const st=howtoState(pl.howto.id);if(st.done){el.classList.add('hide');return;}next='Step '+(st.step+1)+' of '+pl.howto.steps.length;}
@@ -948,10 +1018,9 @@ function renderResume(){
   document.getElementById('resumeBtn').onclick=()=>{state.current=state.last;route();
     if(CUR&&pl.items){const ii=CUR.items.findIndex(([l,mi])=>!missionDone(l,mi));if(ii>=0)openPlayer(ii);}};
 }
-function certsEarned(){
-  return SESSIONS.concat(ROLE_SESSIONS).filter(t=>itemsProgress(sessionItems(t)).pct===100).length+Object.keys(LEVELS).filter(l=>levelProgress(l).pct===100).length;
-}
+function certsEarned(){return Object.values(state.finals||{}).filter(f=>f.passed).length;}
 function renderStats(){
+  document.getElementById('stats').classList.toggle('hide',!anyStepDone());
   const ideas=notebookEntries().length;const guides=HOWTOS.filter(h=>(state.howtos||{})[h.id]&&state.howtos[h.id].done).length;
   document.getElementById('stats').innerHTML=`
     <div class="st"><div class="sv">${certsEarned()}</div><div class="sl">certificates earned</div></div>
@@ -994,8 +1063,8 @@ function renderHowto(id){
   if(k<n){const s=h.steps[k];
     card=`<div class="hwcard"><div class="hwnum">Step ${k+1} of ${n}</div>
       <div class="hwdo">${esc(s.do)}</div>
-      ${s.prompt?`<div class="promptcard"><div class="plabel">Copy this into Cowork and fill in any blanks (____)</div>
-        <div class="promptrow"><code>${esc(s.prompt)}</code><button class="tiny" id="hwCopy">📋 Copy</button></div></div>`:''}
+      ${s.prompt?`<div class="pbox"><div class="ptext">${esc(s.prompt).replace(/\[([^\]]+)\]/g,'<mark>[$1]</mark>')}</div><button class="copybtn" id="hwCopy">Copy prompt</button></div>
+        <p class="pnote">Paste it into your Cowork task and press Enter.${/\[/.test(s.prompt)?' Replace the highlighted part in brackets with your own details.':''}</p>`:''}
       <div class="see"><b>✅ You should see:</b> ${esc(s.see)}</div>
       ${s.stuck?`<details class="hintbox"><summary>🤔 Didn't see that?</summary><div class="hcontent">${esc(s.stuck)}</div></details>`:''}
       <div class="hwnav"><button class="ghost" data-go="${k-1}" ${k===0?'disabled':''}>← Back</button>
@@ -1101,7 +1170,7 @@ function importSave(){
 }
 function resetAll(){
   if(confirm("Reset ALL progress? This clears your checked steps, how-to guides, notes, capstones and feedback on this device AND your progress record with the program administrator. It can't be undone (use Backup first if unsure).")){
-    state.current=null;state.progress={};state.notes={};state.capstones={};state.feedback={};state.howtos={};save();syncNow();goHome();toast('Reset done');
+    state.current=null;state.progress={};state.notes={};state.capstones={};state.feedback={};state.howtos={};state.checks={};state.finals={};state.ideaDraft={};save();syncNow();goHome();toast('Reset done');
   }
 }
 
@@ -1116,16 +1185,16 @@ const CAPS=[
   ["Data analysis","Analyze data + build charts",["b2"]],
   ["Presentations","Build PowerPoint decks",["b2"]],
   ["PDFs","Produce client-ready PDFs",["b2"]],
-  ["Images","Generate logos & visuals",["b1"]],
+  ["Logos","Design a simple logo as an SVG file",["b1"]],
   ["Web research","Search the web, sourced summaries",["b1"]],
   ["Connectors (MCP)","Plug Cowork into real apps",["b1","b2","b3"]],
-  ["Agents","Delegate self-contained jobs",["b2","b3"]],
-  ["Artifacts / dashboards","Live, reopenable data pages",["b2","b3"]],
-  ["Automation","Scheduled tasks that run themselves",["b2","b3"]],
-  ["Browser control","Claude in Chrome automation",["b3"]],
-  ["Computer use","Control native desktop apps",["b3"]],
-  ["Plugins","Install capability bundles",["b3"]],
-  ["Orchestration","Chain everything to run unattended",["b3"]],
+  ["Delegation","Write a clear brief and judge the result",["b2","b3"]],
+  ["Dashboards","Refreshable pages built from your data",["b2","b3"]],
+  ["Scheduled tasks","Summaries that run on a timetable while the app is open",["b2","b3"]],
+  ["Browser control","Optional: Claude in Chrome, if your setup has it",["b3"]],
+  ["Computer use","Optional: control desktop apps, if available",["b3"]],
+  ["Plugins","Optional: add capability bundles, if available",["b3"]],
+  ["Chained workflows","Plan and link several steps into one workflow",["b3"]],
   ["Publishing","Put your site live on the web",["b1","b2","b3"]]
 ];
 const LBL={b1:"🌱 Beg",b2:"⚡ Int",b3:"🔥 High"};

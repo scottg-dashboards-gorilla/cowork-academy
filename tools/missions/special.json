@@ -1,0 +1,210 @@
+{
+ "setup": {
+  "t": "Set up Cowork for the Academy",
+  "blk": "Setup",
+  "mins": 10,
+  "noStart": true,
+  "noReflect": true,
+  "lead": "You'll arrange your screen, add the Academy's starter folder to your computer, open Cowork on it, and check that Cowork can work with the files inside.",
+  "why": "Every mission uses this one folder and its practice files, so nothing needs downloading later and your work stays in one place.",
+  "result": "Cowork open on your Cowork Academy folder, ready for every mission.",
+  "steps": [
+   {
+    "type": "do",
+    "title": "Open the Claude desktop app",
+    "do": "Open the Claude app on your computer and sign in with your work account. Cowork runs in the desktop app, not in a browser tab.",
+    "see": "The Claude app is open and signed in.",
+    "stuck": "No desktop app yet? Use the button above to download it. If you can't find Cowork once it's open, your plan may not include it yet. Ask your Academy program contact.",
+    "link": {
+     "href": "https://claude.ai/download",
+     "label": "Get the Claude desktop app"
+    }
+   },
+   {
+    "type": "do",
+    "title": "Put the windows side by side",
+    "do": "Arrange this page and the Claude app side by side, so you can read a step here and do it there.",
+    "see": "The Academy on one half of your screen and Claude on the other.",
+    "stuck": "On a small laptop screen, keep both open and switch between them with Cmd+Tab on a Mac or Alt+Tab on Windows."
+   },
+   {
+    "type": "do",
+    "title": "Get the starter folder",
+    "do": "Download the starter folder below. Open the downloaded zip file, then move the Cowork Academy folder inside it into your Documents folder.",
+    "see": "A folder called Cowork Academy in Documents, with practice files inside such as bookings.csv and guest-messages.txt.",
+    "stuck": "On a Mac, double-click the zip in Downloads, then drag the Cowork Academy folder to Documents. On Windows, right-click the zip, choose Extract All, then move the Cowork Academy folder to Documents.",
+    "link": {
+     "href": "data/cowork-academy-starter.zip",
+     "label": "Download the starter folder (zip, 20 KB)",
+     "download": true
+    }
+   },
+   {
+    "type": "do",
+    "title": "Start a Cowork task on the folder",
+    "do": "In the Claude app, switch to Cowork and start a new task. When it asks which folder it can work in, choose Cowork Academy in Documents.",
+    "see": "An empty Cowork task with a message box, working in your Cowork Academy folder.",
+    "stuck": "If it didn't ask for a folder, look for an option to choose or change the working folder near the message box. Still stuck? Check support.claude.com or ask your Academy program contact."
+   },
+   {
+    "type": "do",
+    "title": "Check Cowork can see the files",
+    "do": "Paste this into the message box and press Enter.",
+    "prompt": "List the files in this folder and tell me in one sentence what each one seems to contain. Then create a file called hello.txt that says: My Cowork Academy folder.",
+    "see": "A list of the practice files with a short description of each, and a new hello.txt in your Cowork Academy folder.",
+    "stuck": "If Cowork asks your permission before creating the file, allow it. If it says it can't see any files, the task is pointed at the wrong folder: start a new task and choose Cowork Academy."
+   },
+   {
+    "type": "check",
+    "q": "You're in a new mission and Cowork says it can't find bookings.csv. What's the most likely cause?",
+    "options": [
+     "The task is working in a different folder",
+     "The file needs to be emailed to Cowork first",
+     "Cowork only reads files you paste into the chat"
+    ],
+    "answer": 0,
+    "why": "Cowork works with the folder you chose for the task. Start a new task on Cowork Academy and the file will be there. Emailing or pasting files isn't needed."
+   }
+  ]
+ },
+ "safety": {
+  "t": "Use Claude the right way at work",
+  "blk": "Responsible use",
+  "mins": 10,
+  "noStart": true,
+  "lead": "A six-question quiz on what's fine to share with Claude, what needs approval first, and what never belongs in an AI tool. Then you'll practice spotting private details.",
+  "why": "People who know where the lines are use AI confidently instead of nervously. Your company's own AI policy always takes priority over general guidance.",
+  "result": "Your quiz score, plus practice spotting private details before they reach any AI tool.",
+  "think": {
+   "scene": "At work: three habits cover most of the risk. Keep private things private, let Claude draft while you decide and send, and check numbers before you share them.",
+   "ask": "Which information in your job should never leave your company's approved tools?"
+  },
+  "steps": [
+   {
+    "type": "quiz",
+    "title": "Take the quiz",
+    "intro": "For each situation, choose what you'd do. You'll see the answer straight away.",
+    "choices": [
+     "Fine to do",
+     "Ask first",
+     "Never"
+    ],
+    "items": [
+     {
+      "s": "Pasting a page from your company's public website so Claude can rewrite it more clearly.",
+      "a": 0,
+      "why": "It's already public, so there's nothing private to protect."
+     },
+     {
+      "s": "Giving Claude your system login and password so it can pull a report for you.",
+      "a": 2,
+      "why": "Never share passwords with any AI tool. Sign in yourself and give Claude the exported file."
+     },
+     {
+      "s": "Uploading a spreadsheet with guests' names, phone numbers and home addresses.",
+      "a": 1,
+      "why": "Customer personal details need your company's approval. Often the better move is to remove those columns first."
+     },
+     {
+      "s": "Letting Claude send a reply to an upset guest without you reading it first.",
+      "a": 2,
+      "why": "Claude drafts, you read and send. You know the guest and the policy, and you're responsible for what goes out."
+     },
+     {
+      "s": "Uploading a signed vendor contract to get a plain-English summary of the cancellation terms.",
+      "a": 1,
+      "why": "Contracts are usually confidential. Check your company's AI policy or ask your manager before uploading one."
+     },
+     {
+      "s": "Pasting last month's team totals (no names) to make a chart for an internal meeting.",
+      "a": 0,
+      "why": "Internal numbers without personal data are usually fine in your company's approved Claude. Check the chart before you share it."
+     }
+    ]
+   },
+   {
+    "type": "do",
+    "title": "Spot the private details yourself",
+    "do": "Read this made-up message and count every private or sensitive detail before going on: \"Hi team, guest Maria Gomez (555-201-3344, card ending 4417) checked out of Seabreeze Cottage early. Her door code was 8812. Please refund her cleaning fee.\"",
+    "see": "Your own count. There are four kinds of private detail in it.",
+    "stuck": "Look for anything that identifies a person, could be used to get in somewhere, or relates to payment."
+   },
+   {
+    "type": "start"
+   },
+   {
+    "type": "do",
+    "title": "Compare with Cowork",
+    "do": "Paste this into your Cowork task and press Enter. Everything in it is made up, which is the only reason it's okay to paste.",
+    "prompt": "List every private or sensitive detail in this message, then rewrite it so it's safe to share with the wider team: \"Hi team, guest Maria Gomez (555-201-3344, card ending 4417) checked out of Seabreeze Cottage early. Her door code was 8812. Please refund her cleaning fee.\"",
+    "see": "Cowork lists the guest's name, phone number, card digits and door code, and gives a rewritten message without them. Did you find all four?",
+    "stuck": "If Cowork's list differs from yours, ask it: \"Is there anything else a careful person would remove?\""
+   },
+   {
+    "type": "check",
+    "q": "A coworker wants to paste a guest complaint, including the guest's phone number, into Claude to draft a reply. What's the best advice?",
+    "options": [
+     "Leave out the phone number, then draft",
+     "Paste it all, since Claude is approved",
+     "Don't use Claude for complaints at all"
+    ],
+    "answer": 0,
+    "why": "The reply doesn't need the phone number, so leave it out. Claude is still useful for drafting; it's the unneeded personal detail that's the risk."
+   }
+  ]
+ },
+ "ideas": {
+  "t": "Spark your ideas",
+  "blk": "Ideas",
+  "mins": 20,
+  "noReflect": true,
+  "lead": "Cowork interviews you about your week, using what you noted during the Academy, and suggests where it could save you time. Then you'll write up your best idea for Spark.",
+  "why": "This is the point of the Academy: the best improvements come from the people who do the work.",
+  "result": "One clear idea, written up and ready to submit in Spark.",
+  "think": {
+   "scene": "At work: two hours saved a week is 100 hours a year, for one person. Across a team, that's a project leadership will fund.",
+   "ask": "Your best idea, in one sentence"
+  },
+  "steps": [
+   {
+    "type": "do",
+    "title": "Get interviewed",
+    "do": "Copy this prompt (it already includes your role and the notes you saved during the Academy), paste it into your Cowork task and press Enter. Answer each question in a sentence or two.",
+    "prompt": "I work in {{ROLE}}. {{NOTES}}Interview me about my job. Ask me 5 short questions, one at a time, about what I do each week, which tasks are repetitive or manual, which reports I build, and where I wait on information from other people. Wait for my answer before asking the next question.",
+    "see": "Cowork asks its first question and waits for your answer.",
+    "stuck": "If it asks all 5 questions at once, answer them all in one message. That works too."
+   },
+   {
+    "type": "do",
+    "title": "Get your top 5",
+    "do": "After your last answer, paste this into the same task and press Enter.",
+    "prompt": "Based on my answers, list my top 5 opportunities to use Claude. For each, say what Cowork would do (a skill, a connector, a report, a dashboard or a scheduled task), roughly how many hours a month it could save, and whether I could build it myself or would need help.",
+    "see": "A numbered list of 5 opportunities, each with what Cowork would do and an estimate of hours saved.",
+    "stuck": "If the ideas feel generic, add: \"Make them specific to what I told you about my week.\""
+   },
+   {
+    "type": "do",
+    "title": "Optional: try the best one",
+    "do": "If you have 10 minutes, pick the opportunity that would help you most and try its first step. Otherwise, skip to the next step.",
+    "prompt": "Let's try the first step of opportunity number [the number you picked, e.g. 2] right now, using files in this folder or realistic made-up data.",
+    "see": "Cowork starts on your idea, for example drafting the first version of a report, a template or a checklist.",
+    "stuck": "If it needs data you don't have, ask it to use the practice files in this folder instead."
+   },
+   {
+    "type": "check",
+    "q": "Your manager will pick two ideas from the team to fund this quarter. Which submission gives them the most to go on?",
+    "options": [
+     "Monday report: 2 hrs a week, Cowork builds it from the export",
+     "Use AI more across the reservations team to save time each week",
+     "A dashboard for everything so leadership can see all of our numbers"
+    ],
+    "answer": 0,
+    "why": "It names the task, how often it happens, the time it takes and what Cowork would do, so it can be judged and built. The others sound bigger but give nothing to act on."
+   },
+   {
+    "type": "idea",
+    "title": "Write it up for Spark"
+   }
+  ]
+ }
+}

@@ -1,190 +1,185 @@
 review_id,booking_id,property,review_date,rating,comment
-R1,B1001,Seabreeze Cottage,2026-04-12,5,"Very clean, felt like home."
-R2,B1003,Seabreeze Cottage,2026-04-25,5,Check-in instructions were clear and easy.
-R3,B1004,Seabreeze Cottage,2026-05-02,5,"Perfect location, walked everywhere. Check-in instructions were clear and easy."
-R4,B1005,Seabreeze Cottage,2026-05-10,5,Check-in instructions were clear and easy. Check-in instructions were clear and easy.
-R5,B1006,Seabreeze Cottage,2026-05-16,2,Found sand and crumbs everywhere.
-R6,B1009,Seabreeze Cottage,2026-06-01,5,"Great spot, close to everything."
-R7,B1010,Seabreeze Cottage,2026-06-06,5,Spotless and well stocked.
-R8,B1016,Seabreeze Cottage,2026-07-20,5,"Great spot, close to everything."
-R9,B1020,Seabreeze Cottage,2026-08-13,5,Great value for the size.
-R10,B1022,Seabreeze Cottage,2026-08-22,4,"Check-in instructions were clear and easy. Very clean, felt like home."
-R11,B1029,Seabreeze Cottage,2026-09-26,5,Check-in instructions were clear and easy. Great value for the size.
-R12,B1031,Driftwood Bungalow,2026-04-09,5,"Very clean, felt like home. Beds were super comfortable."
-R13,B1033,Driftwood Bungalow,2026-04-18,5,Great value for the size.
-R14,B1035,Driftwood Bungalow,2026-04-24,5,Host replied within minutes.
-R15,B1037,Driftwood Bungalow,2026-05-09,5,Spotless and well stocked.
-R16,B1038,Driftwood Bungalow,2026-05-16,3,"Air conditioning broke on day two, very uncomfortable."
-R17,B1041,Driftwood Bungalow,2026-05-31,3,"Air conditioning broke on day two, very uncomfortable."
-R18,B1045,Driftwood Bungalow,2026-06-12,5,"Check-in instructions were clear and easy. Perfect location, walked everywhere."
-R19,B1051,Driftwood Bungalow,2026-07-16,2,"Air conditioning broke on day two, very uncomfortable."
-R20,B1052,Driftwood Bungalow,2026-07-21,5,"Check-in instructions were clear and easy. Great spot, close to everything."
-R21,B1056,Driftwood Bungalow,2026-08-13,5,"Perfect location, walked everywhere."
-R22,B1059,Driftwood Bungalow,2026-08-31,3,"House was hot all afternoon, AC barely worked."
-R23,B1060,Driftwood Bungalow,2026-09-02,3,"House was hot all afternoon, AC barely worked."
-R24,B1062,Driftwood Bungalow,2026-09-17,3,"Air conditioning broke on day two, very uncomfortable."
-R25,B1063,Driftwood Bungalow,2026-09-23,5,Beds were super comfortable. Check-in instructions were clear and easy.
-R26,B1064,Driftwood Bungalow,2026-09-25,5,Beds were super comfortable.
-R27,B1068,Lighthouse View,2026-04-13,5,Beds were super comfortable. Beds were super comfortable.
-R28,B1069,Lighthouse View,2026-04-25,4,"Perfect location, walked everywhere."
-R29,B1071,Lighthouse View,2026-05-03,5,"Very clean, felt like home."
-R30,B1073,Lighthouse View,2026-05-19,5,"Very clean, felt like home. Great value for the size."
-R31,B1077,Lighthouse View,2026-06-03,5,"Perfect location, walked everywhere."
-R32,B1078,Lighthouse View,2026-06-13,5,Beds were super comfortable. Beds were super comfortable.
-R33,B1082,Lighthouse View,2026-06-29,5,Check-in instructions were clear and easy. Host replied within minutes.
-R34,B1083,Lighthouse View,2026-07-05,5,Check-in instructions were clear and easy. Beds were super comfortable.
-R35,B1085,Lighthouse View,2026-07-13,5,"Very clean, felt like home. Perfect location, walked everywhere."
-R36,B1088,Lighthouse View,2026-08-03,5,Host replied within minutes. Host replied within minutes.
-R37,B1097,Lighthouse View,2026-09-27,5,Beds were super comfortable.
-R38,B1100,Pelican Flats,2026-04-09,2,"Lockbox code did not work, waited 40 minutes."
-R39,B1104,Pelican Flats,2026-05-02,4,Spotless and well stocked.
-R40,B1106,Pelican Flats,2026-05-14,3,Bathroom was not clean when we arrived.
-R41,B1108,Pelican Flats,2026-05-21,4,"Beds were super comfortable. Great spot, close to everything."
-R42,B1110,Pelican Flats,2026-06-02,5,Beds were super comfortable.
-R43,B1112,Pelican Flats,2026-06-10,5,"Spotless and well stocked. Great spot, close to everything."
-R44,B1114,Pelican Flats,2026-06-16,5,Great value for the size.
-R45,B1115,Pelican Flats,2026-06-25,4,"Perfect location, walked everywhere."
-R46,B1116,Pelican Flats,2026-06-30,5,Spotless and well stocked.
-R47,B1117,Pelican Flats,2026-07-05,4,Beds were super comfortable.
-R48,B1118,Pelican Flats,2026-07-09,5,Beds were super comfortable. Beds were super comfortable.
-R49,B1120,Pelican Flats,2026-07-20,5,Great value for the size. Beds were super comfortable.
-R50,B1122,Pelican Flats,2026-07-31,5,"Perfect location, walked everywhere."
-R51,B1126,Pelican Flats,2026-08-13,5,"Very clean, felt like home. Great value for the size."
-R52,B1127,Pelican Flats,2026-08-16,5,"Check-in instructions were clear and easy. Great spot, close to everything."
-R53,B1128,Pelican Flats,2026-08-21,3,"Lockbox code did not work, waited 40 minutes."
-R54,B1130,Pelican Flats,2026-08-25,5,Beds were super comfortable.
-R55,B1134,Pelican Flats,2026-09-16,5,Beds were super comfortable.
-R56,B1135,Pelican Flats,2026-09-20,4,Great value for the size.
-R57,B1136,Pelican Flats,2026-09-30,5,Great value for the size.
-R58,B1137,Pelican Flats,2026-10-03,5,"Very clean, felt like home. Spotless and well stocked."
-R59,B1138,Pine Ridge Cabin,2026-04-13,3,Internet was very slow.
-R60,B1139,Pine Ridge Cabin,2026-04-19,3,"Wifi kept dropping, hard to work remotely."
-R61,B1142,Pine Ridge Cabin,2026-05-10,5,Great value for the size. Host replied within minutes.
-R62,B1144,Pine Ridge Cabin,2026-05-23,5,"Great spot, close to everything."
-R63,B1145,Pine Ridge Cabin,2026-05-28,5,Host replied within minutes.
-R64,B1148,Pine Ridge Cabin,2026-06-13,2,Internet was very slow.
-R65,B1150,Pine Ridge Cabin,2026-06-24,2,Internet was very slow.
-R66,B1152,Pine Ridge Cabin,2026-07-01,4,Great value for the size.
-R67,B1153,Pine Ridge Cabin,2026-06-28,3,Internet was very slow.
-R68,B1156,Pine Ridge Cabin,2026-07-18,3,Hot tub was cold and dirty.
-R69,B1157,Pine Ridge Cabin,2026-07-23,4,"Great spot, close to everything. Great value for the size."
-R70,B1159,Pine Ridge Cabin,2026-08-04,4,Beds were super comfortable. Host replied within minutes.
-R71,B1160,Pine Ridge Cabin,2026-08-11,3,Hot tub was cold and dirty.
-R72,B1161,Pine Ridge Cabin,2026-08-21,5,"Great value for the size. Perfect location, walked everywhere."
-R73,B1165,Pine Ridge Cabin,2026-09-05,4,Spotless and well stocked.
-R74,B1168,Pine Ridge Cabin,2026-09-25,5,"Very clean, felt like home. Perfect location, walked everywhere."
-R75,B1171,Aspen Hideaway,2026-04-06,4,Beds were super comfortable.
-R76,B1172,Aspen Hideaway,2026-04-10,5,"Perfect location, walked everywhere."
-R77,B1173,Aspen Hideaway,2026-04-17,4,Check-in instructions were clear and easy. Beds were super comfortable.
-R78,B1175,Aspen Hideaway,2026-04-25,5,Beds were super comfortable. Great value for the size.
-R79,B1178,Aspen Hideaway,2026-05-16,5,Beds were super comfortable.
-R80,B1179,Aspen Hideaway,2026-05-22,4,Check-in instructions were clear and easy. Spotless and well stocked.
-R81,B1182,Aspen Hideaway,2026-06-05,5,"Great spot, close to everything."
-R82,B1183,Aspen Hideaway,2026-06-13,2,"Lockbox code did not work, waited 40 minutes."
-R83,B1186,Aspen Hideaway,2026-06-27,4,"Great spot, close to everything. Host replied within minutes."
-R84,B1187,Aspen Hideaway,2026-06-29,5,Great value for the size.
-R85,B1188,Aspen Hideaway,2026-07-04,5,Beds were super comfortable. Great value for the size.
-R86,B1189,Aspen Hideaway,2026-07-14,2,Bathroom was not clean when we arrived.
-R87,B1191,Aspen Hideaway,2026-07-18,5,"Beds were super comfortable. Perfect location, walked everywhere."
-R88,B1192,Aspen Hideaway,2026-07-24,5,Great value for the size.
-R89,B1193,Aspen Hideaway,2026-07-29,5,"Very clean, felt like home."
-R90,B1194,Aspen Hideaway,2026-08-06,4,Host replied within minutes. Great value for the size.
-R91,B1198,Aspen Hideaway,2026-08-21,5,"Very clean, felt like home. Host replied within minutes."
-R92,B1200,Aspen Hideaway,2026-09-05,5,Beds were super comfortable. Great value for the size.
-R93,B1201,Aspen Hideaway,2026-09-12,5,"Host replied within minutes. Great spot, close to everything."
-R94,B1204,Aspen Hideaway,2026-09-27,5,"Perfect location, walked everywhere."
-R95,B1206,Summit Lodge,2026-04-11,5,Check-in instructions were clear and easy.
-R96,B1208,Summit Lodge,2026-04-22,5,Great value for the size.
-R97,B1209,Summit Lodge,2026-04-30,4,"Beds were super comfortable. Perfect location, walked everywhere."
-R98,B1210,Summit Lodge,2026-05-03,5,Great value for the size.
-R99,B1211,Summit Lodge,2026-05-06,4,Beds were super comfortable.
-R100,B1213,Summit Lodge,2026-05-17,3,Found sand and crumbs everywhere.
-R101,B1215,Summit Lodge,2026-05-25,5,"Very clean, felt like home."
-R102,B1217,Summit Lodge,2026-06-02,4,"Perfect location, walked everywhere."
-R103,B1218,Summit Lodge,2026-06-13,5,Check-in instructions were clear and easy.
-R104,B1221,Summit Lodge,2026-06-24,3,"Lockbox code did not work, waited 40 minutes."
-R105,B1222,Summit Lodge,2026-06-23,5,Check-in instructions were clear and easy.
-R106,B1223,Summit Lodge,2026-06-28,5,Spotless and well stocked. Host replied within minutes.
-R107,B1225,Summit Lodge,2026-07-15,5,Great value for the size.
-R108,B1226,Summit Lodge,2026-07-18,5,Host replied within minutes.
-R109,B1228,Summit Lodge,2026-08-01,5,Beds were super comfortable.
-R110,B1235,Summit Lodge,2026-08-31,5,"Very clean, felt like home."
-R111,B1236,Summit Lodge,2026-09-03,5,Great value for the size.
-R112,B1237,Summit Lodge,2026-09-12,4,"Great spot, close to everything. Host replied within minutes."
-R113,B1238,Summit Lodge,2026-09-12,4,Great value for the size.
-R114,B1242,Old Town Loft,2026-04-05,5,Great value for the size.
-R115,B1244,Old Town Loft,2026-04-17,5,Great value for the size.
-R116,B1245,Old Town Loft,2026-04-24,4,Street noise late at night.
-R117,B1246,Old Town Loft,2026-05-05,5,Beds were super comfortable.
-R118,B1249,Old Town Loft,2026-05-09,5,Host replied within minutes. Beds were super comfortable.
-R119,B1251,Old Town Loft,2026-05-26,5,Great value for the size.
-R120,B1252,Old Town Loft,2026-06-03,3,Street noise late at night.
-R121,B1253,Old Town Loft,2026-06-07,5,Beds were super comfortable.
-R122,B1255,Old Town Loft,2026-06-15,5,Check-in instructions were clear and easy. Beds were super comfortable.
-R123,B1256,Old Town Loft,2026-06-21,5,Beds were super comfortable. Beds were super comfortable.
-R124,B1257,Old Town Loft,2026-06-27,4,Beds were super comfortable. Beds were super comfortable.
-R125,B1258,Old Town Loft,2026-07-05,4,"Very clean, felt like home."
-R126,B1260,Old Town Loft,2026-07-16,4,Great value for the size.
-R127,B1261,Old Town Loft,2026-07-18,4,"Great value for the size. Very clean, felt like home."
-R128,B1262,Old Town Loft,2026-07-29,5,Spotless and well stocked.
-R129,B1267,Old Town Loft,2026-08-23,3,Street noise late at night.
-R130,B1271,Old Town Loft,2026-09-17,5,"Perfect location, walked everywhere."
-R131,B1273,Old Town Loft,2026-09-22,4,"Beds were super comfortable. Perfect location, walked everywhere."
-R132,B1276,Market Street Studio,2026-04-10,5,Beds were super comfortable.
-R133,B1282,Market Street Studio,2026-05-09,2,Found sand and crumbs everywhere.
-R134,B1283,Market Street Studio,2026-05-13,5,Check-in instructions were clear and easy.
-R135,B1285,Market Street Studio,2026-05-20,5,Host replied within minutes. Spotless and well stocked.
-R136,B1286,Market Street Studio,2026-05-25,2,"Lockbox code did not work, waited 40 minutes."
-R137,B1289,Market Street Studio,2026-06-05,5,"Host replied within minutes. Perfect location, walked everywhere."
-R138,B1293,Market Street Studio,2026-06-26,5,Great value for the size.
-R139,B1296,Market Street Studio,2026-07-08,4,"Great spot, close to everything. Very clean, felt like home."
-R140,B1298,Market Street Studio,2026-07-17,5,Great value for the size.
-R141,B1305,Market Street Studio,2026-08-29,2,"Lockbox code did not work, waited 40 minutes."
-R142,B1306,Market Street Studio,2026-09-03,5,Great value for the size. Great value for the size.
-R143,B1307,Market Street Studio,2026-09-10,5,Beds were super comfortable. Check-in instructions were clear and easy.
-R144,B1308,Market Street Studio,2026-09-15,4,"Check-in instructions were clear and easy. Very clean, felt like home."
-R145,B1312,Lakeside Retreat,2026-04-06,5,"Great spot, close to everything."
-R146,B1313,Lakeside Retreat,2026-04-09,3,Bathroom was not clean when we arrived.
-R147,B1317,Lakeside Retreat,2026-05-07,4,Great value for the size.
-R148,B1320,Lakeside Retreat,2026-05-20,5,"Check-in instructions were clear and easy. Perfect location, walked everywhere."
-R149,B1322,Lakeside Retreat,2026-06-02,4,"Perfect location, walked everywhere. Spotless and well stocked."
-R150,B1323,Lakeside Retreat,2026-05-31,5,"Very clean, felt like home."
-R151,B1325,Lakeside Retreat,2026-06-16,3,Bathroom was not clean when we arrived.
-R152,B1327,Lakeside Retreat,2026-06-27,5,"Great spot, close to everything. Great value for the size."
-R153,B1328,Lakeside Retreat,2026-06-25,2,Found sand and crumbs everywhere.
-R154,B1332,Lakeside Retreat,2026-07-17,2,Bathroom was not clean when we arrived.
-R155,B1335,Lakeside Retreat,2026-07-30,5,"Very clean, felt like home. Great spot, close to everything."
-R156,B1337,Lakeside Retreat,2026-08-04,4,Beds were super comfortable.
-R157,B1338,Lakeside Retreat,2026-08-07,4,Spotless and well stocked. Beds were super comfortable.
-R158,B1339,Lakeside Retreat,2026-08-16,5,Great value for the size.
-R159,B1340,Lakeside Retreat,2026-08-20,5,"Great spot, close to everything. Great value for the size."
-R160,B1346,Lakeside Retreat,2026-09-28,2,Bathroom was not clean when we arrived.
-R161,B1347,Lakeside Retreat,2026-10-02,5,Great value for the size.
-R162,B1351,Dockside Cottage,2026-04-27,3,"Lockbox code did not work, waited 40 minutes."
-R163,B1352,Dockside Cottage,2026-05-03,5,Beds were super comfortable.
-R164,B1355,Dockside Cottage,2026-05-13,5,"Very clean, felt like home."
-R165,B1359,Dockside Cottage,2026-06-09,5,"Great spot, close to everything."
-R166,B1361,Dockside Cottage,2026-06-24,3,Found sand and crumbs everywhere.
-R167,B1362,Dockside Cottage,2026-06-27,5,Spotless and well stocked. Beds were super comfortable.
-R168,B1364,Dockside Cottage,2026-07-04,3,Bathroom was not clean when we arrived.
-R169,B1367,Dockside Cottage,2026-07-18,5,Great value for the size.
-R170,B1368,Dockside Cottage,2026-07-25,5,"Beds were super comfortable. Perfect location, walked everywhere."
-R171,B1370,Dockside Cottage,2026-07-31,4,Host replied within minutes. Great value for the size.
-R172,B1371,Dockside Cottage,2026-08-07,5,Beds were super comfortable.
-R173,B1374,Dockside Cottage,2026-08-26,2,Bathroom was not clean when we arrived.
-R174,B1377,Dockside Cottage,2026-09-08,5,Spotless and well stocked.
-R175,B1379,Dockside Cottage,2026-09-18,5,Spotless and well stocked. Check-in instructions were clear and easy.
-R176,B1380,Dockside Cottage,2026-09-24,4,Beds were super comfortable.
-R177,B1382,Dockside Cottage,2026-10-03,4,"Perfect location, walked everywhere."
-R178,B1383,Willow Point House,2026-04-13,5,"Spotless and well stocked. Perfect location, walked everywhere."
-R179,B1384,Willow Point House,2026-04-19,5,"Very clean, felt like home. Host replied within minutes."
-R180,B1385,Willow Point House,2026-04-23,5,"Perfect location, walked everywhere."
-R181,B1386,Willow Point House,2026-05-03,5,Host replied within minutes.
-R182,B1388,Willow Point House,2026-05-10,5,Beds were super comfortable.
-R183,B1392,Willow Point House,2026-05-29,5,Great value for the size.
-R184,B1395,Willow Point House,2026-06-18,5,"Perfect location, walked everywhere."
-R185,B1397,Willow Point House,2026-06-27,5,Check-in instructions were clear and easy.
-R186,B1398,Willow Point House,2026-06-30,5,"Perfect location, walked everywhere."
-R187,B1400,Willow Point House,2026-07-13,5,"Very clean, felt like home. Beds were super comfortable."
-R188,B1404,Willow Point House,2026-08-10,5,"Great value for the size. Perfect location, walked everywhere."
-R189,B1405,Willow Point House,2026-08-20,2,"Lockbox code did not work, waited 40 minutes."
+R1,B1001,Seabreeze Cottage,2026-04-12,5,Cleanest rental we have stayed in.
+R2,B1003,Seabreeze Cottage,2026-04-25,5,Plenty of beds for our group.
+R3,B1004,Seabreeze Cottage,2026-05-02,5,"Perfect location, we walked everywhere. Welcome message had great local tips."
+R4,B1005,Seabreeze Cottage,2026-05-10,5,"Fast replies when we needed extra towels. Slept great, good pillows and blackout curtains."
+R5,B1006,Seabreeze Cottage,2026-05-16,2,Found sand and crumbs on the floors.
+R6,B1009,Seabreeze Cottage,2026-06-01,5,Welcome message had great local tips.
+R7,B1010,Seabreeze Cottage,2026-06-06,5,"Perfect location, we walked everywhere."
+R8,B1016,Seabreeze Cottage,2026-07-20,5,Fast replies when we needed extra towels.
+R9,B1020,Seabreeze Cottage,2026-08-13,5,Beautiful decor and lots of natural light.
+R10,B1022,Seabreeze Cottage,2026-08-22,4,Welcome message had great local tips. Cleanest rental we have stayed in.
+R11,B1029,Seabreeze Cottage,2026-09-26,5,Fast replies when we needed extra towels. Beautiful decor and lots of natural light.
+R12,B1031,Driftwood Bungalow,2026-04-09,5,"Cleanest rental we have stayed in. Slept great, good pillows and blackout curtains."
+R13,B1033,Driftwood Bungalow,2026-04-18,5,Felt brand new inside.
+R14,B1035,Driftwood Bungalow,2026-04-24,5,Beds were very comfortable.
+R15,B1037,Driftwood Bungalow,2026-05-09,5,"Great spot, close to restaurants and the water."
+R16,B1038,Driftwood Bungalow,2026-05-16,3,"House was hot all afternoon, the AC barely worked."
+R17,B1041,Driftwood Bungalow,2026-05-31,3,"House was hot all afternoon, the AC barely worked."
+R18,B1045,Driftwood Bungalow,2026-06-16,5,Welcome message had great local tips. Quiet street but only a few minutes from town.
+R19,B1050,Driftwood Bungalow,2026-07-12,2,"Air conditioning broke on day two, very uncomfortable."
+R20,B1051,Driftwood Bungalow,2026-07-19,5,Welcome message had great local tips. Quiet street but only a few minutes from town.
+R21,B1054,Driftwood Bungalow,2026-07-28,5,"Perfect location, we walked everywhere."
+R22,B1058,Driftwood Bungalow,2026-08-24,3,"Upstairs bedrooms were stuffy, the AC never cooled them down."
+R23,B1059,Driftwood Bungalow,2026-08-30,3,We had to buy fans because the air conditioning was so weak.
+R24,B1061,Driftwood Bungalow,2026-09-10,3,"Air conditioning broke on day two, very uncomfortable."
+R25,B1062,Driftwood Bungalow,2026-09-19,5,Good price for what you get. Plenty of beds for our group.
+R26,B1063,Driftwood Bungalow,2026-09-19,5,Worth every penny for a family trip.
+R27,B1067,Lighthouse View,2026-04-11,5,Beds were very comfortable. Great value for the size.
+R28,B1068,Lighthouse View,2026-04-16,4,Everything was fresh and tidy when we arrived.
+R29,B1069,Lighthouse View,2026-04-25,5,Kitchen had everything we needed and it was spotless.
+R30,B1071,Lighthouse View,2026-04-30,5,Kitchen had everything we needed and it was spotless. Felt brand new inside.
+R31,B1073,Lighthouse View,2026-05-17,5,"Perfect location, we walked everywhere."
+R32,B1075,Lighthouse View,2026-05-29,4,Good price for what you get. Quiet street but only a few minutes from town.
+R33,B1078,Lighthouse View,2026-06-10,5,Welcome message had great local tips. Beds were very comfortable.
+R34,B1079,Lighthouse View,2026-06-13,5,Welcome message had great local tips. Worth every penny for a family trip.
+R35,B1082,Lighthouse View,2026-06-30,5,"Everything was fresh and tidy when we arrived. Great spot, close to restaurants and the water."
+R36,B1085,Lighthouse View,2026-07-15,5,Check-in instructions were clear and easy. Beds were very comfortable.
+R37,B1093,Lighthouse View,2026-08-31,5,Great value for the size.
+R38,B1097,Lighthouse View,2026-09-23,2,"Lockbox code did not work, we waited 40 minutes."
+R39,B1101,Pelican Flats,2026-04-20,4,Everything was fresh and tidy when we arrived.
+R40,B1102,Pelican Flats,2026-04-22,3,Found sand and crumbs on the floors.
+R41,B1104,Pelican Flats,2026-05-03,4,Plenty of beds for our group. Welcome message had great local tips.
+R42,B1106,Pelican Flats,2026-05-15,5,Good price for what you get.
+R43,B1108,Pelican Flats,2026-05-17,5,"Very clean, felt like home. The team answered all our questions before we arrived."
+R44,B1111,Pelican Flats,2026-06-04,5,Beautiful decor and lots of natural light.
+R45,B1112,Pelican Flats,2026-06-13,4,"Great spot, close to restaurants and the water."
+R46,B1113,Pelican Flats,2026-06-15,5,Spotless and well stocked.
+R47,B1114,Pelican Flats,2026-06-17,4,Good price for what you get.
+R48,B1115,Pelican Flats,2026-06-24,5,Worth every penny for a family trip. Beautiful decor and lots of natural light.
+R49,B1116,Pelican Flats,2026-06-28,5,The deck was perfect for morning coffee. Beds were very comfortable.
+R50,B1118,Pelican Flats,2026-07-14,5,"Perfect location, we walked everywhere."
+R51,B1121,Pelican Flats,2026-07-26,5,Cleanest rental we have stayed in. The deck was perfect for morning coffee.
+R52,B1122,Pelican Flats,2026-07-27,5,Fast replies when we needed extra towels. Worth every penny for a family trip.
+R53,B1123,Pelican Flats,2026-07-30,5,Felt brand new inside.
+R54,B1129,Pelican Flats,2026-08-19,5,Good price for what you get.
+R55,B1133,Pelican Flats,2026-09-13,4,Kitchen had everything we needed and it was spotless.
+R56,B1135,Pelican Flats,2026-09-21,5,Good price for what you get.
+R57,B1137,Pelican Flats,2026-09-30,5,Kitchen had everything we needed and it was spotless. Good price for what you get.
+R58,B1138,Pine Ridge Cabin,2026-04-15,5,"Host replied within minutes every time. Perfect location, we walked everywhere."
+R59,B1139,Pine Ridge Cabin,2026-04-18,4,Kids loved the yard and the games closet.
+R60,B1140,Pine Ridge Cabin,2026-04-26,4,"Great spot, close to restaurants and the water. Beautiful decor and lots of natural light."
+R61,B1143,Pine Ridge Cabin,2026-05-18,5,Easy parking and close to the shops.
+R62,B1144,Pine Ridge Cabin,2026-05-20,5,Felt brand new inside. Spotless and well stocked.
+R63,B1145,Pine Ridge Cabin,2026-05-25,4,"Wifi kept dropping, hard to work remotely."
+R64,B1147,Pine Ridge Cabin,2026-06-08,4,Kids loved the yard and the games closet.
+R65,B1148,Pine Ridge Cabin,2026-06-11,3,Could not get the wifi to work in the bedrooms.
+R66,B1152,Pine Ridge Cabin,2026-06-28,3,Hot tub was out of order the whole stay.
+R67,B1153,Pine Ridge Cabin,2026-07-01,4,Fast replies when we needed extra towels. Beautiful decor and lots of natural light.
+R68,B1156,Pine Ridge Cabin,2026-07-18,5,Beds were very comfortable. Welcome message had great local tips.
+R69,B1157,Pine Ridge Cabin,2026-07-24,4,The deck was perfect for morning coffee. Easy parking and close to the shops.
+R70,B1158,Pine Ridge Cabin,2026-07-30,4,"Wifi kept dropping, hard to work remotely."
+R71,B1160,Pine Ridge Cabin,2026-08-11,4,"Very clean, felt like home."
+R72,B1163,Pine Ridge Cabin,2026-08-27,5,Kitchen had everything we needed and it was spotless. Host replied within minutes every time.
+R73,B1167,Pine Ridge Cabin,2026-09-18,4,Beds were very comfortable.
+R74,B1168,Pine Ridge Cabin,2026-09-22,5,The team answered all our questions before we arrived.
+R75,B1169,Pine Ridge Cabin,2026-09-29,4,Welcome message had great local tips. Great value for the size.
+R76,B1170,Pine Ridge Cabin,2026-10-03,2,Hot tub was not working.
+R77,B1172,Aspen Hideaway,2026-04-13,5,Kids loved the yard and the games closet. Kitchen had everything we needed and it was spotless.
+R78,B1176,Aspen Hideaway,2026-05-04,4,Fast replies when we needed extra towels. Spotless and well stocked.
+R79,B1179,Aspen Hideaway,2026-05-25,5,The team answered all our questions before we arrived.
+R80,B1180,Aspen Hideaway,2026-05-28,2,Door code was wrong and it took an hour to get in.
+R81,B1183,Aspen Hideaway,2026-06-15,4,Easy parking and close to the shops. Beds were very comfortable.
+R82,B1184,Aspen Hideaway,2026-06-14,5,Kids loved the yard and the games closet.
+R83,B1185,Aspen Hideaway,2026-06-21,5,Worth every penny for a family trip. Kids loved the yard and the games closet.
+R84,B1186,Aspen Hideaway,2026-06-26,2,Bathroom was not clean when we arrived.
+R85,B1188,Aspen Hideaway,2026-07-03,5,"Great value for the size. Perfect location, we walked everywhere."
+R86,B1189,Aspen Hideaway,2026-07-11,5,The deck was perfect for morning coffee.
+R87,B1190,Aspen Hideaway,2026-07-14,5,Cleanest rental we have stayed in.
+R88,B1191,Aspen Hideaway,2026-07-20,4,Host replied within minutes every time. Beautiful decor and lots of natural light.
+R89,B1194,Aspen Hideaway,2026-08-02,5,Loved being able to walk to the beach. Beds were very comfortable.
+R90,B1197,Aspen Hideaway,2026-08-22,5,Beds were very comfortable. Beautiful decor and lots of natural light.
+R91,B1198,Aspen Hideaway,2026-08-26,5,"Slept great, good pillows and blackout curtains. Welcome message had great local tips."
+R92,B1199,Aspen Hideaway,2026-08-28,5,Check-in instructions were clear and easy.
+R93,B1201,Aspen Hideaway,2026-09-09,5,Welcome message had great local tips.
+R94,B1205,Aspen Hideaway,2026-10-03,5,Good price for what you get.
+R95,B1206,Summit Lodge,2026-04-11,4,"Good price for what you get. Great spot, close to restaurants and the water."
+R96,B1207,Summit Lodge,2026-04-14,5,Kids loved the yard and the games closet.
+R97,B1208,Summit Lodge,2026-04-21,4,Great value for the size.
+R98,B1210,Summit Lodge,2026-05-03,3,Found sand and crumbs on the floors.
+R99,B1212,Summit Lodge,2026-05-13,5,Loved being able to walk to the beach.
+R100,B1214,Summit Lodge,2026-05-20,4,Host replied within minutes every time.
+R101,B1215,Summit Lodge,2026-05-27,5,Plenty of beds for our group.
+R102,B1217,Summit Lodge,2026-06-05,3,"Lockbox code did not work, we waited 40 minutes."
+R103,B1218,Summit Lodge,2026-06-09,5,Plenty of beds for our group.
+R104,B1220,Summit Lodge,2026-06-19,5,"Great spot, close to restaurants and the water. Check-in instructions were clear and easy."
+R105,B1222,Summit Lodge,2026-06-26,5,Great value for the size.
+R106,B1223,Summit Lodge,2026-06-28,5,Beds were very comfortable.
+R107,B1225,Summit Lodge,2026-07-16,5,Beds were very comfortable.
+R108,B1232,Summit Lodge,2026-08-22,5,Cleanest rental we have stayed in.
+R109,B1233,Summit Lodge,2026-08-28,5,Felt brand new inside.
+R110,B1234,Summit Lodge,2026-08-31,5,Welcome message had great local tips. Felt brand new inside.
+R111,B1236,Summit Lodge,2026-09-01,4,Worth every penny for a family trip.
+R112,B1237,Summit Lodge,2026-09-12,5,The team answered all our questions before we arrived.
+R113,B1238,Summit Lodge,2026-09-10,5,Felt brand new inside.
+R114,B1240,Summit Lodge,2026-09-26,4,Cleanest rental we have stayed in. Easy parking and close to the shops.
+R115,B1245,Old Town Loft,2026-04-25,5,Beds were very comfortable. Good price for what you get.
+R116,B1248,Old Town Loft,2026-05-07,5,Felt brand new inside.
+R117,B1249,Old Town Loft,2026-05-12,3,Street noise late at night.
+R118,B1250,Old Town Loft,2026-05-22,5,Good price for what you get.
+R119,B1252,Old Town Loft,2026-05-30,5,"Slept great, good pillows and blackout curtains. Beautiful decor and lots of natural light."
+R120,B1256,Old Town Loft,2026-06-22,5,Plenty of beds for our group. Fast replies when we needed extra towels.
+R121,B1257,Old Town Loft,2026-06-30,5,Felt brand new inside. Check-in instructions were clear and easy.
+R122,B1260,Old Town Loft,2026-07-16,4,Easy parking and close to the shops.
+R123,B1263,Old Town Loft,2026-08-03,4,Kids loved the yard and the games closet. Cleanest rental we have stayed in.
+R124,B1264,Old Town Loft,2026-08-07,5,"Great spot, close to restaurants and the water."
+R125,B1271,Old Town Loft,2026-09-14,3,Street noise late at night.
+R126,B1273,Old Town Loft,2026-09-27,5,Check-in instructions were clear and easy.
+R127,B1276,Market Street Studio,2026-04-07,4,"Good price for what you get. Perfect location, we walked everywhere."
+R128,B1278,Market Street Studio,2026-04-24,5,Good price for what you get.
+R129,B1284,Market Street Studio,2026-05-17,2,"Sheets had stains, had to ask for a fresh set."
+R130,B1285,Market Street Studio,2026-05-23,5,Plenty of beds for our group.
+R131,B1287,Market Street Studio,2026-05-24,5,Host replied within minutes every time. Everything was fresh and tidy when we arrived.
+R132,B1288,Market Street Studio,2026-06-01,2,Door code was wrong and it took an hour to get in.
+R133,B1292,Market Street Studio,2026-06-19,5,"Beds were very comfortable. Perfect location, we walked everywhere."
+R134,B1296,Market Street Studio,2026-07-07,5,Kids loved the yard and the games closet.
+R135,B1298,Market Street Studio,2026-07-21,4,Easy parking and close to the shops. Kitchen had everything we needed and it was spotless.
+R136,B1300,Market Street Studio,2026-07-30,5,Beautiful decor and lots of natural light.
+R137,B1307,Market Street Studio,2026-09-11,2,"Lockbox code did not work, we waited 40 minutes."
+R138,B1308,Market Street Studio,2026-09-15,5,The deck was perfect for morning coffee. Good price for what you get.
+R139,B1309,Market Street Studio,2026-09-21,5,Good price for what you get. Plenty of beds for our group.
+R140,B1311,Market Street Studio,2026-10-02,4,Fast replies when we needed extra towels. Cleanest rental we have stayed in.
+R141,B1315,Lakeside Retreat,2026-04-18,5,Easy parking and close to the shops.
+R142,B1316,Lakeside Retreat,2026-04-30,3,Bathroom was not clean when we arrived.
+R143,B1320,Lakeside Retreat,2026-05-19,4,Felt brand new inside.
+R144,B1322,Lakeside Retreat,2026-05-29,5,Plenty of beds for our group. Check-in instructions were clear and easy.
+R145,B1324,Lakeside Retreat,2026-06-08,5,"Great spot, close to restaurants and the water. Felt brand new inside."
+R146,B1325,Lakeside Retreat,2026-06-13,5,Worth every penny for a family trip. Host replied within minutes every time.
+R147,B1329,Lakeside Retreat,2026-07-03,5,Quiet street but only a few minutes from town. The deck was perfect for morning coffee.
+R148,B1330,Lakeside Retreat,2026-07-05,2,"Sheets had stains, had to ask for a fresh set."
+R149,B1334,Lakeside Retreat,2026-07-25,2,Bathroom was not clean when we arrived.
+R150,B1337,Lakeside Retreat,2026-08-06,5,Easy parking and close to the shops. Beds were very comfortable.
+R151,B1338,Lakeside Retreat,2026-08-09,4,Great value for the size.
+R152,B1339,Lakeside Retreat,2026-08-15,4,Spotless and well stocked. Beds were very comfortable.
+R153,B1340,Lakeside Retreat,2026-08-20,5,Beautiful decor and lots of natural light.
+R154,B1341,Lakeside Retreat,2026-08-25,5,Loved being able to walk to the beach. The deck was perfect for morning coffee.
+R155,B1347,Lakeside Retreat,2026-10-06,2,Bathroom was not clean when we arrived.
+R156,B1348,Dockside Cottage,2026-04-06,5,Good price for what you get.
+R157,B1352,Dockside Cottage,2026-05-03,3,Smart lock was offline when we arrived late at night.
+R158,B1353,Dockside Cottage,2026-05-12,5,"Slept great, good pillows and blackout curtains."
+R159,B1356,Dockside Cottage,2026-05-19,5,Cleanest rental we have stayed in.
+R160,B1360,Dockside Cottage,2026-06-15,5,Loved being able to walk to the beach.
+R161,B1362,Dockside Cottage,2026-06-26,3,"Sheets had stains, had to ask for a fresh set."
+R162,B1363,Dockside Cottage,2026-06-30,5,Everything was fresh and tidy when we arrived. Good price for what you get.
+R163,B1365,Dockside Cottage,2026-07-10,3,Found sand and crumbs on the floors.
+R164,B1368,Dockside Cottage,2026-07-25,5,Kids loved the yard and the games closet.
+R165,B1369,Dockside Cottage,2026-07-27,5,Worth every penny for a family trip. The team answered all our questions before we arrived.
+R166,B1371,Dockside Cottage,2026-08-08,4,Beds were very comfortable. Beautiful decor and lots of natural light.
+R167,B1373,Dockside Cottage,2026-08-18,5,Great value for the size.
+R168,B1375,Dockside Cottage,2026-09-02,2,Found sand and crumbs on the floors.
+R169,B1379,Dockside Cottage,2026-09-16,5,Spotless and well stocked.
+R170,B1380,Dockside Cottage,2026-09-25,5,Spotless and well stocked. Plenty of beds for our group.
+R171,B1381,Dockside Cottage,2026-09-30,4,Great value for the size.
+R172,B1383,Willow Point House,2026-04-09,4,Check-in instructions were clear and easy.
+R173,B1384,Willow Point House,2026-04-20,5,Spotless and well stocked. Quiet street but only a few minutes from town.
+R174,B1385,Willow Point House,2026-04-25,5,Cleanest rental we have stayed in. Beds were very comfortable.
+R175,B1386,Willow Point House,2026-04-30,5,Host replied within minutes every time.
+R176,B1387,Willow Point House,2026-05-08,5,"Slept great, good pillows and blackout curtains."
+R177,B1389,Willow Point House,2026-05-13,5,"Slept great, good pillows and blackout curtains."
+R178,B1393,Willow Point House,2026-06-04,5,Kids loved the yard and the games closet.
+R179,B1397,Willow Point House,2026-06-27,5,"Great spot, close to restaurants and the water."
+R180,B1398,Willow Point House,2026-07-04,5,Fast replies when we needed extra towels.
+R181,B1399,Willow Point House,2026-07-07,5,"Perfect location, we walked everywhere."
+R182,B1401,Willow Point House,2026-07-24,5,Kitchen had everything we needed and it was spotless. Good price for what you get.
+R183,B1405,Willow Point House,2026-08-19,5,"Felt brand new inside. Perfect location, we walked everywhere."
+R184,B1406,Willow Point House,2026-08-22,2,Smart lock was offline when we arrived late at night.

@@ -1,5 +1,5 @@
 // Rebuilds course-data.js from the current file plus rewritten mission JSON.
-// Usage: node tools/build-course-data.js <dir-with-out-*.json-and-special.json>
+// Usage: node tools/build-course-data.js tools/missions
 const fs=require('fs'),vm=require('vm'),path=require('path');
 const dir=process.argv[2];const src=path.join(__dirname,'..','course-data.js');
 const c={};vm.createContext(c);
@@ -8,9 +8,29 @@ const D=JSON.parse(JSON.stringify(c.D));
 // guide() runs when the file loads; undo its how-to change so rebuilding is repeatable.
 D.HOWTOS.forEach(h=>{if(/start a new task/.test(h.steps[0].do||''))h.steps.shift();});
 const rd=f=>JSON.parse(fs.readFileSync(path.join(dir,f),'utf8'));
-for(const k of ['beginner','intermediate','higher'])D.LEVELS[k].missions=rd('out-'+k+'.json');
-const roles=rd('out-roles.json');D.ROLES.forEach((r,i)=>r.missions=roles.slice(i*4,i*4+4));
+const pick=(n)=>fs.existsSync(path.join(dir,'out2-'+n+'.json'))?'out2-'+n+'.json':'out-'+n+'.json';
+for(const k of ['beginner','intermediate','higher'])D.LEVELS[k].missions=rd(pick(k));
+const roles=rd(pick('roles'));
+if(fs.existsSync(path.join(dir,'out2-howtos.json')))D.HOWTOS=rd('out2-howtos.json');D.ROLES.forEach((r,i)=>r.missions=roles.slice(i*4,i*4+4));
 const sp=rd('special.json');
+// Level and role descriptions (workplace projects; no unconfirmed features).
+Object.assign(D.LEVELS.beginner,{name:'Beginner',project:'Your first wins at work',
+  blurb:'New to Cowork? Start here. Make the everyday files your job runs on, a Word letter, a working spreadsheet and a team page, then research, use a skill and connect an app, with every step spelled out.',
+  bullets:['Word letter, team tracker and a one-page team page','Research, a simple logo and your first skill','Connect one company-approved app'],
+  sub:'A guided tour of everyday Cowork using your job and the practice files: real Word and Excel files, a one-page team page, web research, a skill and a connected app.'});
+Object.assign(D.LEVELS.intermediate,{name:'Intermediate',project:'Run a small business with Cowork',
+  blurb:'Comfortable with the basics? Build a small company\'s toolkit: a business brief, a website, your own saved skill, a research brief, data analysis, a deck, a PDF, a scheduled summary and a dashboard.',
+  bullets:['Business brief, website and your own skill','Data analysis, a deck and a client-ready PDF','A scheduled summary and a refreshable dashboard'],
+  sub:'You\'ll build the everyday toolkit of a small vacation rental company, using its brief and the practice data, and learn the habits that make results reliable.'});
+Object.assign(D.LEVELS.higher,{name:'Higher',project:'Build a connected workflow',
+  blurb:'Ready to stretch? Plan and build a connected workflow: a product plan, a multi-page site, a delegation brief, two apps working together, a dashboard, optional browser and desktop control, and a chained workflow.',
+  bullets:['Product plan, multi-page site and a delegation brief','Two apps working together and a dashboard','Optional browser and desktop control, then chain it all'],
+  sub:'For confident users. Prompts are half-written: you decide the goals and what good looks like, and judge the results against them.'});
+const RW={guest:{name:'Guest Services and Reservations'},ops:{name:'Property Operations',who:'For operations coordinators and managers who keep properties guest-ready.',outcomes:['Maintenance cost drivers and repeat problems','A turnover checklist housekeepers can use on a phone','A weekly operations brief']},
+ finance:{name:'Revenue and Finance',outcomes:['Bookings analyzed by channel and month','A rate-scenario model with working formulas','An owner statement checked for mistakes']},
+ growth:{name:'Sales, Marketing and Owner Relations',outcomes:['A listing-writer skill in your brand voice','A sourced one-page market brief','An owner pitch deck and a monthly owner update']},
+ leaders:{name:'Leaders and Managers',outcomes:['A KPI dashboard from the bookings data','A process mapped for automation','A team idea huddle that feeds Spark']}};
+D.ROLES.forEach(r=>Object.assign(r,RW[r.id]||{}));
 const SETUP={key:'setup',cls:'b4',icon:'🧰',name:'Get set up',project:'Your workspace',missions:[sp.setup]};
 D.SAFETY.missions=[sp.safety];D.IDEAS.missions=[sp.ideas];
 const J=v=>JSON.stringify(v,null,2);

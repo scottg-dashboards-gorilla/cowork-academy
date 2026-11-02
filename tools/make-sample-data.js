@@ -37,10 +37,21 @@ for(const [name,area,beds,base] of props){
   }
 }
 // Reviews
-const good={clean:['Spotless and well stocked.','Very clean, felt like home.'],loc:['Perfect location, walked everywhere.','Great spot, close to everything.'],comm:['Host replied within minutes.','Check-in instructions were clear and easy.'],beds:['Beds were super comfortable.'],value:['Great value for the size.']};
-const bad={hot:['The AC could not keep up, it was too hot to sleep.','Air conditioning broke on day two, very uncomfortable.','House was hot all afternoon, AC barely worked.'],
- wifi:['Wifi kept dropping, hard to work remotely.','Internet was very slow.'],tub:['Hot tub was not working.','Hot tub was cold and dirty.'],
- checkin:['Lockbox code did not work, waited 40 minutes.'],clean:['Bathroom was not clean when we arrived.','Found sand and crumbs everywhere.'],noise:['Street noise late at night.']};
+const good={
+ clean:['Spotless and well stocked.','Very clean, felt like home.','Everything was fresh and tidy when we arrived.','Kitchen had everything we needed and it was spotless.','Cleanest rental we have stayed in.'],
+ loc:['Perfect location, we walked everywhere.','Great spot, close to restaurants and the water.','Quiet street but only a few minutes from town.','Loved being able to walk to the beach.','Easy parking and close to the shops.'],
+ comm:['Host replied within minutes every time.','Check-in instructions were clear and easy.','The team answered all our questions before we arrived.','Fast replies when we needed extra towels.','Welcome message had great local tips.'],
+ beds:['Beds were very comfortable.','Slept great, good pillows and blackout curtains.','Plenty of beds for our group.'],
+ value:['Great value for the size.','Worth every penny for a family trip.','Good price for what you get.'],
+ vibe:['Beautiful decor and lots of natural light.','Kids loved the yard and the games closet.','The deck was perfect for morning coffee.','Felt brand new inside.']};
+const bad={hot:['The AC could not keep up, it was too hot to sleep.','Air conditioning broke on day two, very uncomfortable.','House was hot all afternoon, the AC barely worked.','Upstairs bedrooms were stuffy, the AC never cooled them down.','We had to buy fans because the air conditioning was so weak.'],
+ wifi:['Wifi kept dropping, hard to work remotely.','Internet was very slow and cut out at night.','Could not get the wifi to work in the bedrooms.'],
+ tub:['Hot tub was not working.','Hot tub was cold and the water looked cloudy.','Hot tub was out of order the whole stay.'],
+ checkin:['Lockbox code did not work, we waited 40 minutes.','Door code was wrong and it took an hour to get in.','Smart lock was offline when we arrived late at night.'],
+ clean:['Bathroom was not clean when we arrived.','Found sand and crumbs on the floors.','Sheets had stains, had to ask for a fresh set.'],
+ noise:['Street noise late at night.','Bar next door was loud until 2am.']};
+function goodComment(){const ks=Object.keys(good);const k1=pick(ks);let t=pick(good[k1]);
+  if(rnd()<.4){let k2=pick(ks);let tries=0;while(k2===k1&&tries++<5)k2=pick(ks);t+=' '+pick(good[k2]);}return t;}
 const reviews=[['review_id','booking_id','property','review_date','rating','comment']];let rid=1;
 for(const b of completed){
   if(rnd()>.48)continue;const name=b[1];let theme,rating;const r=rnd();
@@ -48,7 +59,7 @@ for(const b of completed){
   else if(name==='Pine Ridge Cabin'&&r<.4){theme=pick(rnd()<.5?bad.wifi:bad.tub);rating=between(2,4);}
   else if(name.includes('Old Town')&&r<.25){theme=pick(bad.noise);rating=between(3,4);}
   else if(r<.1){const k=pick(['checkin','clean']);theme=pick(bad[k]);rating=between(2,3);}
-  else{theme=pick(good[pick(Object.keys(good))])+(rnd()<.4?' '+pick(good[pick(Object.keys(good))]):'');rating=rnd()<.75?5:4;}
+  else{theme=goodComment();rating=rnd()<.75?5:4;}
   reviews.push(['R'+rid++,b[0],name,iso(addDays(new Date(b[7]+'T00:00:00Z'),between(1,6))),rating,theme]);
 }
 // Maintenance tickets

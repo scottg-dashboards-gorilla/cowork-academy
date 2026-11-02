@@ -39,6 +39,7 @@
   .fact .l{color:var(--slate)}
   .seal{width:clamp(64px,11cqw,104px);aspect-ratio:1;border-radius:50%;background:var(--ink);color:var(--spark);display:grid;place-items:center;text-align:center;
     font-family:var(--display);font-weight:800;font-size:clamp(9px,1.25cqw,12px);line-height:1.2;box-shadow:inset 0 0 0 .5cqw var(--ink),inset 0 0 0 .75cqw var(--spark)}
+  .hide{display:none}
   @media(max-width:700px){.cert{aspect-ratio:auto;padding:28px 20px 24px 30px}.inner{gap:22px}.facts{flex-wrap:wrap;gap:16px 24px}}
   @media print{body{background:#fff;padding:0}.controls,.share{display:none}.cert{box-shadow:none;width:100%;max-width:100%;border-radius:0}@page{size:A4 landscape;margin:0}}
 </style>
@@ -79,6 +80,7 @@
         <div class="facts">
           <div class="fact"><div class="v" id="out-tracklabel">Track</div><div class="l">Completed</div></div>
           <div class="fact"><div class="v" id="out-steps">—</div><div class="l">Hands-on steps</div></div>
+          <div class="fact hide" id="scoreFact"><div class="v" id="out-score"></div><div class="l">Final check</div></div>
           <div class="fact"><div class="v" id="out-date">Date</div><div class="l">Date</div></div>
         </div>
         <div class="seal">COWORK<br>ACADEMY<br>★</div>
@@ -112,6 +114,7 @@
     const t=document.getElementById('in-track').value;
     const st=document.getElementById('in-steps').value.trim();
     if(n)p.set('name',n); if(t)p.set('track',t); if(st)p.set('steps',st);
+    const sc=qp('score');if(sc)p.set('score',sc);
     return location.origin+location.pathname+(p.toString()?'?'+p.toString():'');
   }
   function toast(m){const t=document.getElementById('toast');t.textContent=m;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),1800);}
@@ -131,6 +134,7 @@
       if(!found){const o=document.createElement('option');o.value=t;o.textContent=t;sel.insertBefore(o,sel.firstChild);}
       sel.value=t;}
     if(s)document.getElementById('in-steps').value=s;
+    const sc=qp('score');if(sc&&/^\d{1,3}$/.test(sc)){document.getElementById('out-score').textContent=sc+'%';document.getElementById('scoreFact').classList.remove('hide');}
     document.getElementById('out-date').textContent=new Date().toLocaleDateString(undefined,{year:'numeric',month:'long',day:'numeric'});
     sync();
   })();

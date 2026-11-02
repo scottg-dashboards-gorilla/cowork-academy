@@ -1,233 +1,233 @@
 ticket_id,property,opened,closed,days_open,category,issue,priority,vendor,cost,status
-T0001,Seabreeze Cottage,2026-04-01,2026-04-02,1,Locks & access,Smart lock offline,Medium,KeySafe Locksmith,121,Closed
-T0002,Lighthouse View,2026-04-01,2026-04-06,5,Pool & hot tub,Pool pump noise,High,Blue Water Pools,366,Closed
-T0003,Aspen Hideaway,2026-04-01,2026-04-08,7,Electrical,Lights flickering,Medium,BrightLine Electric,202,Closed
-T0004,Lakeside Retreat,2026-04-01,2026-04-03,2,Appliances,Dishwasher not draining,Low,ApplianceDoc,270,Closed
-T0005,Lakeside Retreat,2026-04-01,2026-05-03,32,Locks & access,Lockbox code reset,Medium,KeySafe Locksmith,147,Closed
+T0001,Lighthouse View,2026-04-01,2026-04-06,5,Pool & hot tub,Pool pump noise,High,Blue Water Pools,366,Closed
+T0002,Aspen Hideaway,2026-04-01,2026-04-08,7,Electrical,Lights flickering,Medium,BrightLine Electric,202,Closed
+T0003,Lakeside Retreat,2026-04-01,2026-04-03,2,Appliances,Dishwasher not draining,Low,ApplianceDoc,270,Closed
+T0004,Lakeside Retreat,2026-04-01,2026-05-03,32,Locks & access,Lockbox code reset,Medium,KeySafe Locksmith,147,Closed
+T0005,Driftwood Bungalow,2026-04-02,2026-04-30,28,Appliances,Dishwasher not draining,High,ApplianceDoc,251,Closed
 T0006,Lakeside Retreat,2026-04-02,2026-04-14,12,Locks & access,Smart lock offline,Medium,KeySafe Locksmith,165,Closed
 T0007,Driftwood Bungalow,2026-04-03,2026-04-04,1,HVAC,AC not cooling,Medium,Coastal Climate Co.,426,Closed
 T0008,Lighthouse View,2026-04-04,2026-04-08,4,HVAC,Thermostat not responding,High,Reliable Heating & Air,316,Closed
 T0009,Pine Ridge Cabin,2026-04-04,2026-04-07,3,HVAC,AC unit leaking,High,Coastal Climate Co.,572,Closed
 T0010,Driftwood Bungalow,2026-04-04,2026-04-06,2,HVAC,AC not cooling,Medium,Coastal Climate Co.,847,Closed
-T0011,Seabreeze Cottage,2026-04-06,2026-04-14,8,Pool & hot tub,Pool pump noise,Medium,Blue Water Pools,414,Closed
-T0012,Lighthouse View,2026-04-06,2026-05-07,31,Plumbing,Clogged drain,Low,FlowRight Plumbing,277,Closed
-T0013,Old Town Loft,2026-04-06,2026-04-06,0,Pool & hot tub,Hot tub cloudy water,Medium,Blue Water Pools,237,Closed
-T0014,Driftwood Bungalow,2026-04-06,2026-04-10,4,HVAC,Thermostat not responding,High,Coastal Climate Co.,440,Closed
-T0015,Seabreeze Cottage,2026-04-08,2026-04-08,0,Locks & access,Lockbox code reset,High,KeySafe Locksmith,149,Closed
-T0016,Lighthouse View,2026-04-09,2026-04-10,1,Pest,Ants in kitchen,Medium,Shield Pest Control,200,Closed
-T0017,Market Street Studio,2026-04-09,2026-04-11,2,Electrical,Outlet not working,Low,BrightLine Electric,282,Closed
-T0018,Willow Point House,2026-04-10,2026-04-19,9,Pool & hot tub,Hot tub cloudy water,Medium,Blue Water Pools,294,Closed
-T0019,Aspen Hideaway,2026-04-12,2026-04-16,4,HVAC,Thermostat not responding,High,Coastal Climate Co.,681,Closed
-T0020,Market Street Studio,2026-04-12,2026-05-05,23,Appliances,Fridge too warm,Medium,ApplianceDoc,300,Closed
-T0021,Driftwood Bungalow,2026-04-12,2026-04-18,6,HVAC,AC unit leaking,Medium,Reliable Heating & Air,371,Closed
-T0022,Lighthouse View,2026-04-13,2026-04-16,3,HVAC,AC unit leaking,High,Coastal Climate Co.,729,Closed
-T0023,Seabreeze Cottage,2026-04-14,2026-04-27,13,General repair,Loose railing,Medium,HandyPros,130,Closed
-T0024,Market Street Studio,2026-04-14,2026-04-27,13,General repair,Screen door torn,High,In-house team,79,Closed
-T0025,Driftwood Bungalow,2026-04-14,2026-04-20,6,HVAC,AC not cooling,Medium,Reliable Heating & Air,529,Closed
-T0026,Driftwood Bungalow,2026-04-18,2026-04-27,9,Electrical,Outlet not working,Medium,BrightLine Electric,187,Closed
-T0027,Driftwood Bungalow,2026-04-18,2026-04-26,8,Locks & access,Smart lock offline,High,KeySafe Locksmith,108,Closed
-T0028,Aspen Hideaway,2026-04-22,2026-05-01,9,General repair,Drywall patch,Medium,HandyPros,141,Closed
-T0029,Pine Ridge Cabin,2026-04-22,2026-05-03,11,Pool & hot tub,Hot tub not heating,High,Blue Water Pools,244,Closed
-T0030,Driftwood Bungalow,2026-04-23,2026-04-27,4,Locks & access,Smart lock offline,High,KeySafe Locksmith,86,Closed
-T0031,Driftwood Bungalow,2026-04-23,2026-04-27,4,HVAC,AC not cooling,High,Reliable Heating & Air,472,Closed
-T0032,Driftwood Bungalow,2026-04-24,2026-05-27,33,HVAC,AC not cooling,Medium,Reliable Heating & Air,532,Closed
-T0033,Driftwood Bungalow,2026-04-25,2026-04-26,1,HVAC,AC unit leaking,High,Reliable Heating & Air,407,Closed
-T0034,Lakeside Retreat,2026-04-25,2026-04-25,0,HVAC,Thermostat not responding,High,Reliable Heating & Air,433,Closed
-T0035,Summit Lodge,2026-04-26,2026-05-01,5,Pool & hot tub,Hot tub not heating,Medium,Blue Water Pools,340,Closed
-T0036,Willow Point House,2026-04-26,2026-04-30,4,Plumbing,Toilet running,Medium,Harbor Plumbing,312,Closed
-T0037,Driftwood Bungalow,2026-04-27,2026-05-03,6,HVAC,AC unit leaking,High,Coastal Climate Co.,488,Closed
-T0038,Lighthouse View,2026-04-27,2026-04-30,3,Electrical,Outlet not working,Medium,BrightLine Electric,191,Closed
-T0039,Summit Lodge,2026-04-28,2026-05-05,7,Pool & hot tub,Hot tub not heating,Medium,Blue Water Pools,377,Closed
-T0040,Market Street Studio,2026-04-28,2026-05-07,9,Locks & access,Lockbox code reset,High,KeySafe Locksmith,88,Closed
-T0041,Pelican Flats,2026-04-29,2026-05-04,5,HVAC,AC not cooling,Medium,Reliable Heating & Air,578,Closed
-T0042,Driftwood Bungalow,2026-04-30,2026-04-30,0,Appliances,Fridge too warm,High,ApplianceDoc,212,Closed
-T0043,Seabreeze Cottage,2026-05-01,2026-05-10,9,Pool & hot tub,Pool pump noise,High,Blue Water Pools,360,Closed
-T0044,Aspen Hideaway,2026-05-01,2026-05-10,9,Appliances,Fridge too warm,Low,ApplianceDoc,280,Closed
-T0045,Old Town Loft,2026-05-02,2026-05-14,12,Electrical,Outlet not working,High,BrightLine Electric,248,Closed
-T0046,Old Town Loft,2026-05-03,2026-05-14,11,Electrical,Lights flickering,High,BrightLine Electric,209,Closed
-T0047,Lakeside Retreat,2026-05-05,2026-06-04,30,Plumbing,Toilet running,Medium,FlowRight Plumbing,262,Closed
-T0048,Dockside Cottage,2026-05-05,2026-05-19,14,Pest,Quarterly pest treatment,Medium,Shield Pest Control,190,Closed
-T0049,Market Street Studio,2026-05-06,2026-05-18,12,Appliances,Fridge too warm,High,ApplianceDoc,274,Closed
-T0050,Lakeside Retreat,2026-05-06,2026-06-13,38,Plumbing,Toilet running,Medium,FlowRight Plumbing,204,Closed
-T0051,Driftwood Bungalow,2026-05-08,2026-05-11,3,Appliances,Fridge too warm,Medium,ApplianceDoc,278,Closed
-T0052,Lighthouse View,2026-05-08,2026-05-13,5,Electrical,Outlet not working,Low,BrightLine Electric,266,Closed
-T0053,Aspen Hideaway,2026-05-08,2026-05-12,4,General repair,Drywall patch,High,In-house team,50,Closed
-T0054,Old Town Loft,2026-05-08,2026-05-21,13,Locks & access,Smart lock offline,High,KeySafe Locksmith,141,Closed
-T0055,Lakeside Retreat,2026-05-08,2026-06-08,31,Electrical,Outlet not working,Medium,BrightLine Electric,229,Closed
-T0056,Dockside Cottage,2026-05-10,2026-05-16,6,Pest,Ants in kitchen,Medium,Shield Pest Control,144,Closed
-T0057,Pine Ridge Cabin,2026-05-10,2026-06-05,26,Pool & hot tub,Hot tub cloudy water,Medium,Blue Water Pools,242,Closed
-T0058,Aspen Hideaway,2026-05-11,2026-05-23,12,Plumbing,Clogged drain,High,FlowRight Plumbing,256,Closed
-T0059,Market Street Studio,2026-05-11,2026-05-15,4,Appliances,Fridge too warm,Medium,ApplianceDoc,305,Closed
-T0060,Pine Ridge Cabin,2026-05-12,2026-05-16,4,Pool & hot tub,Hot tub not heating,Low,Blue Water Pools,365,Closed
-T0061,Old Town Loft,2026-05-12,2026-05-21,9,General repair,Loose railing,Medium,HandyPros,194,Closed
-T0062,Driftwood Bungalow,2026-05-13,2026-05-25,12,Pest,Quarterly pest treatment,Medium,Shield Pest Control,131,Closed
-T0063,Old Town Loft,2026-05-15,2026-05-19,4,Locks & access,Smart lock offline,High,KeySafe Locksmith,163,Closed
-T0064,Dockside Cottage,2026-05-15,2026-05-26,11,Plumbing,Leaking faucet,High,FlowRight Plumbing,293,Closed
-T0065,Pine Ridge Cabin,2026-05-16,2026-05-17,1,HVAC,AC unit leaking,High,Coastal Climate Co.,610,Closed
-T0066,Market Street Studio,2026-05-19,2026-05-19,0,General repair,Screen door torn,High,HandyPros,156,Closed
-T0067,Pelican Flats,2026-05-20,2026-05-30,10,Appliances,Washer error code,Low,ApplianceDoc,201,Closed
-T0068,Old Town Loft,2026-05-20,2026-05-25,5,General repair,Loose railing,High,In-house team,54,Closed
-T0069,Lakeside Retreat,2026-05-20,2026-05-23,3,HVAC,AC not cooling,High,Reliable Heating & Air,482,Closed
-T0070,Dockside Cottage,2026-05-21,2026-05-21,0,Appliances,Dishwasher not draining,Medium,ApplianceDoc,227,Closed
-T0071,Driftwood Bungalow,2026-05-22,2026-05-22,0,HVAC,AC not cooling,Medium,Coastal Climate Co.,695,Closed
-T0072,Lighthouse View,2026-05-24,2026-06-05,12,Appliances,Dishwasher not draining,Medium,ApplianceDoc,241,Closed
-T0073,Aspen Hideaway,2026-05-24,2026-06-01,8,Appliances,Washer error code,High,ApplianceDoc,190,Closed
-T0074,Lighthouse View,2026-05-26,2026-05-30,4,HVAC,Thermostat not responding,High,Reliable Heating & Air,371,Closed
-T0075,Dockside Cottage,2026-05-26,2026-06-07,12,Electrical,Outlet not working,Medium,BrightLine Electric,314,Closed
-T0076,Dockside Cottage,2026-05-26,2026-05-29,3,HVAC,AC unit leaking,High,Reliable Heating & Air,561,Closed
-T0077,Seabreeze Cottage,2026-05-27,2026-05-27,0,HVAC,AC not cooling,High,Coastal Climate Co.,578,Closed
-T0078,Lakeside Retreat,2026-05-27,2026-06-03,7,Pool & hot tub,Hot tub not heating,Medium,Blue Water Pools,236,Closed
-T0079,Seabreeze Cottage,2026-05-28,2026-06-07,10,Electrical,Outlet not working,Low,BrightLine Electric,257,Closed
-T0080,Seabreeze Cottage,2026-05-29,2026-06-10,12,Appliances,Dishwasher not draining,High,ApplianceDoc,237,Closed
-T0081,Summit Lodge,2026-05-29,2026-06-04,6,Pool & hot tub,Hot tub not heating,Medium,Blue Water Pools,397,Closed
-T0082,Seabreeze Cottage,2026-05-30,2026-06-06,7,Pool & hot tub,Hot tub cloudy water,High,Blue Water Pools,378,Closed
-T0083,Pine Ridge Cabin,2026-05-30,2026-06-10,11,Electrical,Outlet not working,Medium,BrightLine Electric,205,Closed
-T0084,Market Street Studio,2026-05-30,2026-06-01,2,Pest,Ants in kitchen,Medium,Shield Pest Control,221,Closed
-T0085,Willow Point House,2026-05-30,2026-06-01,2,General repair,Loose railing,Low,In-house team,74,Closed
-T0086,Dockside Cottage,2026-05-31,2026-06-13,13,Plumbing,Leaking faucet,Medium,Harbor Plumbing,314,Closed
-T0087,Willow Point House,2026-06-02,2026-06-03,1,Appliances,Washer error code,Medium,ApplianceDoc,182,Closed
-T0088,Market Street Studio,2026-06-03,2026-06-13,10,Pest,Ants in kitchen,Low,Shield Pest Control,153,Closed
-T0089,Dockside Cottage,2026-06-03,2026-06-14,11,General repair,Loose railing,Medium,In-house team,61,Closed
-T0090,Seabreeze Cottage,2026-06-05,2026-06-18,13,General repair,Screen door torn,Medium,In-house team,50,Closed
-T0091,Summit Lodge,2026-06-07,2026-06-21,14,Locks & access,Smart lock offline,Medium,KeySafe Locksmith,139,Closed
-T0092,Pelican Flats,2026-06-08,2026-06-17,9,Pest,Ants in kitchen,High,Shield Pest Control,244,Closed
-T0093,Pine Ridge Cabin,2026-06-08,2026-06-13,5,Pool & hot tub,Pool pump noise,Medium,Blue Water Pools,302,Closed
-T0094,Aspen Hideaway,2026-06-11,2026-07-13,32,HVAC,Thermostat not responding,High,Coastal Climate Co.,748,Closed
-T0095,Summit Lodge,2026-06-11,2026-06-20,9,Pool & hot tub,Hot tub not heating,Low,Blue Water Pools,386,Closed
-T0096,Seabreeze Cottage,2026-06-12,2026-06-16,4,Electrical,Outlet not working,Medium,BrightLine Electric,277,Closed
-T0097,Old Town Loft,2026-06-12,2026-06-23,11,Locks & access,Lockbox code reset,Medium,KeySafe Locksmith,119,Closed
-T0098,Seabreeze Cottage,2026-06-13,2026-06-19,6,Pest,Ants in kitchen,Medium,Shield Pest Control,235,Closed
-T0099,Willow Point House,2026-06-14,2026-06-17,3,HVAC,Thermostat not responding,High,Reliable Heating & Air,560,Closed
-T0100,Pine Ridge Cabin,2026-06-15,2026-06-15,0,Pest,Ants in kitchen,Medium,Shield Pest Control,247,Closed
-T0101,Pine Ridge Cabin,2026-06-15,2026-06-27,12,Pool & hot tub,Pool pump noise,Medium,Blue Water Pools,356,Closed
-T0102,Pelican Flats,2026-06-16,2026-06-19,3,Appliances,Fridge too warm,Low,ApplianceDoc,223,Closed
-T0103,Pelican Flats,2026-06-16,2026-06-22,6,Electrical,Outlet not working,Medium,BrightLine Electric,178,Closed
-T0104,Pelican Flats,2026-06-17,2026-06-23,6,Locks & access,Smart lock offline,High,KeySafe Locksmith,98,Closed
-T0105,Pine Ridge Cabin,2026-06-17,2026-06-19,2,Pest,Quarterly pest treatment,High,Shield Pest Control,180,Closed
-T0106,Aspen Hideaway,2026-06-17,2026-06-25,8,Appliances,Fridge too warm,High,ApplianceDoc,259,Closed
-T0107,Summit Lodge,2026-06-17,2026-06-26,9,Pool & hot tub,Pool pump noise,Medium,Blue Water Pools,390,Closed
-T0108,Lakeside Retreat,2026-06-17,2026-06-18,1,HVAC,Thermostat not responding,High,Reliable Heating & Air,557,Closed
-T0109,Aspen Hideaway,2026-06-19,2026-06-19,0,Plumbing,Toilet running,High,Harbor Plumbing,258,Closed
-T0110,Summit Lodge,2026-06-19,2026-06-30,11,Electrical,Lights flickering,High,BrightLine Electric,263,Closed
-T0111,Lakeside Retreat,2026-06-19,2026-06-23,4,Electrical,Outlet not working,Medium,BrightLine Electric,314,Closed
-T0112,Driftwood Bungalow,2026-06-20,2026-06-25,5,Plumbing,Leaking faucet,High,FlowRight Plumbing,333,Closed
-T0113,Pelican Flats,2026-06-20,2026-06-27,7,Pool & hot tub,Hot tub not heating,High,Blue Water Pools,420,Closed
-T0114,Driftwood Bungalow,2026-06-21,2026-06-30,9,Plumbing,Clogged drain,Low,Harbor Plumbing,385,Closed
-T0115,Summit Lodge,2026-06-21,2026-06-22,1,Pool & hot tub,Hot tub cloudy water,High,Blue Water Pools,330,Closed
-T0116,Driftwood Bungalow,2026-06-24,2026-06-26,2,HVAC,Thermostat not responding,Medium,Coastal Climate Co.,735,Closed
-T0117,Pine Ridge Cabin,2026-06-24,2026-06-24,0,Pool & hot tub,Hot tub cloudy water,Medium,Blue Water Pools,433,Closed
-T0118,Pelican Flats,2026-06-25,2026-07-01,6,HVAC,AC unit leaking,High,Coastal Climate Co.,624,Closed
-T0119,Driftwood Bungalow,2026-06-26,2026-07-02,6,HVAC,Thermostat not responding,High,Coastal Climate Co.,684,Closed
-T0120,Seabreeze Cottage,2026-06-27,2026-07-09,12,Appliances,Fridge too warm,High,ApplianceDoc,287,Closed
-T0121,Lighthouse View,2026-06-28,2026-06-30,2,HVAC,Thermostat not responding,High,Reliable Heating & Air,473,Closed
-T0122,Pine Ridge Cabin,2026-06-28,2026-06-30,2,Appliances,Washer error code,High,ApplianceDoc,300,Closed
-T0123,Summit Lodge,2026-06-29,2026-07-11,12,Locks & access,Smart lock offline,High,KeySafe Locksmith,109,Closed
-T0124,Dockside Cottage,2026-06-30,2026-07-09,9,Appliances,Fridge too warm,High,ApplianceDoc,246,Closed
-T0125,Dockside Cottage,2026-06-30,2026-07-08,8,Electrical,Lights flickering,Low,BrightLine Electric,231,Closed
-T0126,Pine Ridge Cabin,2026-06-30,2026-07-04,4,Pool & hot tub,Hot tub not heating,High,Blue Water Pools,412,Closed
-T0127,Lighthouse View,2026-07-01,2026-07-24,23,Plumbing,Toilet running,Medium,FlowRight Plumbing,210,Closed
-T0128,Lighthouse View,2026-07-02,2026-07-07,5,Appliances,Dishwasher not draining,Low,ApplianceDoc,157,Closed
-T0129,Dockside Cottage,2026-07-02,2026-07-06,4,General repair,Screen door torn,Medium,HandyPros,130,Closed
-T0130,Lakeside Retreat,2026-07-03,2026-07-13,10,Plumbing,Toilet running,Low,Harbor Plumbing,254,Closed
-T0131,Old Town Loft,2026-07-04,2026-07-12,8,General repair,Drywall patch,Low,HandyPros,189,Closed
-T0132,Lakeside Retreat,2026-07-04,2026-07-11,7,Plumbing,Clogged drain,Low,Harbor Plumbing,264,Closed
-T0133,Lighthouse View,2026-07-05,2026-07-08,3,Appliances,Washer error code,Medium,ApplianceDoc,219,Closed
-T0134,Market Street Studio,2026-07-05,2026-07-05,0,Pest,Quarterly pest treatment,Medium,Shield Pest Control,176,Closed
-T0135,Dockside Cottage,2026-07-05,2026-07-17,12,Locks & access,Smart lock offline,High,KeySafe Locksmith,139,Closed
-T0136,Willow Point House,2026-07-06,2026-07-11,5,Pest,Quarterly pest treatment,Low,Shield Pest Control,223,Closed
-T0137,Summit Lodge,2026-07-07,2026-07-13,6,Appliances,Fridge too warm,Medium,ApplianceDoc,285,Closed
-T0138,Lighthouse View,2026-07-08,2026-07-19,11,Plumbing,Leaking faucet,Medium,FlowRight Plumbing,340,Closed
-T0139,Pelican Flats,2026-07-08,2026-07-14,6,HVAC,Thermostat not responding,High,Reliable Heating & Air,532,Closed
-T0140,Pine Ridge Cabin,2026-07-08,2026-07-10,2,Pest,Ants in kitchen,Medium,Shield Pest Control,196,Closed
-T0141,Lakeside Retreat,2026-07-08,2026-07-11,3,HVAC,Thermostat not responding,Medium,Coastal Climate Co.,806,Closed
-T0142,Pelican Flats,2026-07-11,2026-07-24,13,Electrical,Outlet not working,Medium,BrightLine Electric,190,Closed
-T0143,Summit Lodge,2026-07-11,2026-07-15,4,Pest,Quarterly pest treatment,Medium,Shield Pest Control,212,Closed
-T0144,Summit Lodge,2026-07-12,2026-07-16,4,Pest,Quarterly pest treatment,High,Shield Pest Control,144,Closed
-T0145,Seabreeze Cottage,2026-07-13,2026-07-25,12,General repair,Drywall patch,Medium,HandyPros,175,Closed
-T0146,Seabreeze Cottage,2026-07-13,2026-07-14,1,HVAC,Thermostat not responding,Medium,Reliable Heating & Air,406,Closed
-T0147,Lakeside Retreat,2026-07-13,2026-07-20,7,Locks & access,Smart lock offline,High,KeySafe Locksmith,123,Closed
-T0148,Lakeside Retreat,2026-07-13,2026-07-18,5,Pool & hot tub,Hot tub not heating,Low,Blue Water Pools,321,Closed
-T0149,Aspen Hideaway,2026-07-14,2026-07-17,3,Plumbing,Leaking faucet,Low,Harbor Plumbing,227,Closed
-T0150,Willow Point House,2026-07-14,2026-07-18,4,HVAC,AC not cooling,Medium,Coastal Climate Co.,795,Closed
-T0151,Old Town Loft,2026-07-15,2026-07-28,13,Electrical,Outlet not working,Medium,BrightLine Electric,191,Closed
-T0152,Seabreeze Cottage,2026-07-16,2026-07-23,7,General repair,Screen door torn,High,In-house team,83,Closed
-T0153,Pine Ridge Cabin,2026-07-16,2026-07-27,11,Plumbing,Clogged drain,Medium,FlowRight Plumbing,208,Closed
-T0154,Lakeside Retreat,2026-07-16,2026-07-16,0,Pest,Quarterly pest treatment,Medium,Shield Pest Control,179,Closed
-T0155,Pine Ridge Cabin,2026-07-18,2026-07-21,3,General repair,Loose railing,Low,HandyPros,118,Closed
-T0156,Aspen Hideaway,2026-07-19,2026-08-02,14,Locks & access,Lockbox code reset,High,KeySafe Locksmith,150,Closed
-T0157,Lakeside Retreat,2026-07-19,2026-07-20,1,Pest,Quarterly pest treatment,Low,Shield Pest Control,185,Closed
-T0158,Pine Ridge Cabin,2026-07-19,2026-07-26,7,Pool & hot tub,Hot tub not heating,Medium,Blue Water Pools,364,Closed
-T0159,Seabreeze Cottage,2026-07-22,2026-07-23,1,Appliances,Dishwasher not draining,Medium,ApplianceDoc,168,Closed
-T0160,Pelican Flats,2026-07-22,2026-08-05,14,Plumbing,Clogged drain,Medium,FlowRight Plumbing,288,Closed
-T0161,Market Street Studio,2026-07-22,2026-07-25,3,Appliances,Dishwasher not draining,Low,ApplianceDoc,211,Closed
-T0162,Driftwood Bungalow,2026-07-22,2026-07-26,4,HVAC,AC unit leaking,High,Coastal Climate Co.,478,Closed
-T0163,Lighthouse View,2026-07-25,2026-08-06,12,General repair,Screen door torn,Medium,In-house team,64,Closed
-T0164,Driftwood Bungalow,2026-07-26,2026-08-06,11,Pest,Quarterly pest treatment,Medium,Shield Pest Control,148,Closed
-T0165,Lighthouse View,2026-07-27,2026-08-24,28,General repair,Loose railing,Medium,HandyPros,175,Closed
-T0166,Summit Lodge,2026-07-27,2026-08-05,9,Locks & access,Lockbox code reset,High,KeySafe Locksmith,101,Closed
-T0167,Willow Point House,2026-07-28,2026-08-08,11,General repair,Screen door torn,Low,In-house team,81,Closed
-T0168,Driftwood Bungalow,2026-07-28,2026-08-20,23,HVAC,AC unit leaking,Medium,Reliable Heating & Air,572,Closed
-T0169,Driftwood Bungalow,2026-07-29,2026-08-05,7,General repair,Drywall patch,Low,In-house team,57,Closed
-T0170,Willow Point House,2026-08-01,2026-08-06,5,Pool & hot tub,Hot tub cloudy water,Low,Blue Water Pools,225,Closed
-T0171,Lighthouse View,2026-08-03,2026-08-05,2,General repair,Loose railing,Medium,In-house team,71,Closed
-T0172,Aspen Hideaway,2026-08-03,2026-08-05,2,Plumbing,Clogged drain,Medium,FlowRight Plumbing,347,Closed
-T0173,Market Street Studio,2026-08-03,2026-08-13,10,Pest,Quarterly pest treatment,High,Shield Pest Control,151,Closed
-T0174,Pelican Flats,2026-08-04,2026-08-17,13,Appliances,Dishwasher not draining,Medium,ApplianceDoc,166,Closed
-T0175,Aspen Hideaway,2026-08-05,2026-08-15,10,Appliances,Fridge too warm,Low,ApplianceDoc,155,Closed
-T0176,Aspen Hideaway,2026-08-05,2026-08-14,9,General repair,Screen door torn,Low,HandyPros,170,Closed
-T0177,Lighthouse View,2026-08-06,2026-08-17,11,Pest,Ants in kitchen,Medium,Shield Pest Control,214,Closed
-T0178,Pelican Flats,2026-08-06,2026-08-06,0,Plumbing,Leaking faucet,Medium,FlowRight Plumbing,348,Closed
-T0179,Driftwood Bungalow,2026-08-06,2026-08-08,2,HVAC,AC unit leaking,High,Coastal Climate Co.,490,Closed
-T0180,Lighthouse View,2026-08-07,2026-08-19,12,Electrical,Lights flickering,Low,BrightLine Electric,326,Closed
-T0181,Old Town Loft,2026-08-08,2026-08-18,10,Pest,Ants in kitchen,Medium,Shield Pest Control,154,Closed
-T0182,Market Street Studio,2026-08-08,2026-08-21,13,General repair,Loose railing,Low,In-house team,65,Closed
-T0183,Lakeside Retreat,2026-08-08,2026-08-08,0,HVAC,AC unit leaking,High,Reliable Heating & Air,434,Closed
-T0184,Lighthouse View,2026-08-09,2026-08-11,2,Plumbing,Leaking faucet,Low,FlowRight Plumbing,260,Closed
-T0185,Pine Ridge Cabin,2026-08-11,2026-08-12,1,Appliances,Fridge too warm,Low,ApplianceDoc,305,Closed
-T0186,Seabreeze Cottage,2026-08-12,2026-09-07,26,General repair,Loose railing,Medium,In-house team,49,Closed
-T0187,Seabreeze Cottage,2026-08-12,2026-08-24,12,Appliances,Washer error code,Medium,ApplianceDoc,231,Closed
-T0188,Aspen Hideaway,2026-08-13,2026-09-12,30,Electrical,Outlet not working,Medium,BrightLine Electric,279,Closed
-T0189,Driftwood Bungalow,2026-08-13,2026-08-19,6,HVAC,AC not cooling,High,Coastal Climate Co.,516,Closed
-T0190,Old Town Loft,2026-08-14,2026-08-22,8,Electrical,Outlet not working,High,BrightLine Electric,292,Closed
-T0191,Old Town Loft,2026-08-14,2026-08-15,1,HVAC,AC unit leaking,Medium,Coastal Climate Co.,672,Closed
-T0192,Seabreeze Cottage,2026-08-16,2026-08-26,10,Appliances,Washer error code,Medium,ApplianceDoc,255,Closed
-T0193,Seabreeze Cottage,2026-08-16,2026-08-29,13,Appliances,Dishwasher not draining,Medium,ApplianceDoc,194,Closed
-T0194,Pelican Flats,2026-08-17,2026-08-27,10,General repair,Screen door torn,Medium,HandyPros,134,Closed
-T0195,Driftwood Bungalow,2026-08-18,2026-08-28,10,General repair,Loose railing,Medium,In-house team,54,Closed
-T0196,Dockside Cottage,2026-08-18,2026-08-21,3,Electrical,Lights flickering,High,BrightLine Electric,202,Closed
-T0197,Pine Ridge Cabin,2026-08-20,2026-08-24,4,Pest,Ants in kitchen,High,Shield Pest Control,184,Closed
-T0198,Summit Lodge,2026-08-20,2026-08-31,11,Pool & hot tub,Hot tub cloudy water,Medium,Blue Water Pools,246,Closed
-T0199,Lighthouse View,2026-08-21,2026-08-27,6,Pool & hot tub,Hot tub cloudy water,Low,Blue Water Pools,428,Closed
-T0200,Pelican Flats,2026-08-21,2026-08-21,0,Pool & hot tub,Pool pump noise,Medium,Blue Water Pools,388,Closed
-T0201,Pelican Flats,2026-08-22,2026-09-16,25,General repair,Screen door torn,Medium,In-house team,52,Closed
-T0202,Pine Ridge Cabin,2026-08-22,2026-09-03,12,Locks & access,Smart lock offline,Medium,KeySafe Locksmith,102,Closed
-T0203,Pine Ridge Cabin,2026-08-22,2026-09-11,20,Pool & hot tub,Hot tub cloudy water,High,Blue Water Pools,339,Closed
-T0204,Market Street Studio,2026-08-24,2026-09-26,33,Appliances,Dishwasher not draining,Medium,ApplianceDoc,198,Closed
-T0205,Pine Ridge Cabin,2026-08-24,2026-08-25,1,Pool & hot tub,Hot tub cloudy water,Medium,Blue Water Pools,319,Closed
-T0206,Aspen Hideaway,2026-08-25,2026-08-27,2,Electrical,Outlet not working,High,BrightLine Electric,312,Closed
-T0207,Pelican Flats,2026-08-28,2026-09-08,11,Appliances,Washer error code,Medium,ApplianceDoc,235,Closed
-T0208,Aspen Hideaway,2026-08-28,2026-09-08,11,Appliances,Washer error code,Medium,ApplianceDoc,220,Closed
-T0209,Lakeside Retreat,2026-08-28,2026-09-28,31,Pest,Quarterly pest treatment,Low,Shield Pest Control,141,Closed
-T0210,Willow Point House,2026-08-28,2026-08-29,1,General repair,Screen door torn,Medium,In-house team,58,Closed
-T0211,Summit Lodge,2026-08-29,2026-09-02,4,HVAC,Thermostat not responding,Medium,Reliable Heating & Air,489,Closed
-T0212,Pelican Flats,2026-08-30,2026-09-05,6,Appliances,Washer error code,Medium,ApplianceDoc,264,Closed
-T0213,Willow Point House,2026-08-31,2026-09-10,10,Pool & hot tub,Pool pump noise,Medium,Blue Water Pools,268,Closed
-T0214,Driftwood Bungalow,2026-08-31,,,HVAC,AC not cooling,High,Reliable Heating & Air,469,Open
-T0215,Lighthouse View,2026-09-02,2026-09-30,28,Pest,Ants in kitchen,Medium,Shield Pest Control,170,Closed
-T0216,Driftwood Bungalow,2026-09-02,2026-09-07,5,HVAC,AC not cooling,High,Coastal Climate Co.,728,Closed
-T0217,Lighthouse View,2026-09-04,2026-09-09,5,HVAC,AC not cooling,High,Coastal Climate Co.,670,Closed
-T0218,Pelican Flats,2026-09-05,2026-09-06,1,HVAC,Thermostat not responding,High,Reliable Heating & Air,527,Closed
-T0219,Market Street Studio,2026-09-05,2026-09-09,4,Locks & access,Lockbox code reset,High,KeySafe Locksmith,140,Closed
-T0220,Dockside Cottage,2026-09-07,2026-09-07,0,General repair,Screen door torn,Medium,HandyPros,114,Closed
-T0221,Summit Lodge,2026-09-08,2026-09-12,4,HVAC,Thermostat not responding,Medium,Coastal Climate Co.,525,Closed
-T0222,Dockside Cottage,2026-09-08,2026-09-12,4,Pest,Ants in kitchen,Medium,Shield Pest Control,185,Closed
-T0223,Driftwood Bungalow,2026-09-08,2026-09-10,2,HVAC,Thermostat not responding,Medium,Reliable Heating & Air,443,Closed
-T0224,Driftwood Bungalow,2026-09-09,2026-09-16,7,Electrical,Lights flickering,Medium,BrightLine Electric,266,Closed
-T0225,Willow Point House,2026-09-09,2026-09-09,0,Plumbing,Clogged drain,High,Harbor Plumbing,204,Closed
-T0226,Lakeside Retreat,2026-09-10,2026-09-12,2,Electrical,Lights flickering,Medium,BrightLine Electric,318,Closed
-T0227,Summit Lodge,2026-09-12,2026-09-18,6,Locks & access,Smart lock offline,Medium,KeySafe Locksmith,119,Closed
-T0228,Summit Lodge,2026-09-12,2026-09-17,5,HVAC,AC unit leaking,High,Reliable Heating & Air,303,Closed
-T0229,Dockside Cottage,2026-09-14,2026-09-25,11,Plumbing,Leaking faucet,Medium,FlowRight Plumbing,314,Closed
+T0011,Lighthouse View,2026-04-06,2026-05-07,31,Plumbing,Clogged drain,Low,FlowRight Plumbing,277,Closed
+T0012,Old Town Loft,2026-04-06,2026-04-06,0,Pool & hot tub,Hot tub cloudy water,Medium,Blue Water Pools,237,Closed
+T0013,Driftwood Bungalow,2026-04-06,2026-04-10,4,HVAC,Thermostat not responding,High,Coastal Climate Co.,440,Closed
+T0014,Lighthouse View,2026-04-09,2026-04-10,1,Pest,Ants in kitchen,Medium,Shield Pest Control,200,Closed
+T0015,Market Street Studio,2026-04-09,2026-04-11,2,Electrical,Outlet not working,Low,BrightLine Electric,282,Closed
+T0016,Willow Point House,2026-04-10,2026-04-19,9,Pool & hot tub,Hot tub cloudy water,Medium,Blue Water Pools,294,Closed
+T0017,Seabreeze Cottage,2026-04-12,2026-04-24,12,Locks & access,Lockbox code reset,Medium,KeySafe Locksmith,166,Closed
+T0018,Aspen Hideaway,2026-04-12,2026-04-16,4,HVAC,Thermostat not responding,High,Coastal Climate Co.,681,Closed
+T0019,Market Street Studio,2026-04-12,2026-05-05,23,Appliances,Fridge too warm,Medium,ApplianceDoc,300,Closed
+T0020,Driftwood Bungalow,2026-04-12,2026-04-18,6,HVAC,AC unit leaking,Medium,Reliable Heating & Air,371,Closed
+T0021,Lighthouse View,2026-04-13,2026-04-16,3,HVAC,AC unit leaking,High,Coastal Climate Co.,729,Closed
+T0022,Market Street Studio,2026-04-14,2026-04-27,13,General repair,Screen door torn,High,In-house team,79,Closed
+T0023,Driftwood Bungalow,2026-04-14,2026-04-20,6,HVAC,AC not cooling,Medium,Reliable Heating & Air,529,Closed
+T0024,Aspen Hideaway,2026-04-22,2026-05-01,9,General repair,Drywall patch,Medium,HandyPros,141,Closed
+T0025,Pine Ridge Cabin,2026-04-22,2026-05-03,11,Pool & hot tub,Hot tub not heating,High,Blue Water Pools,244,Closed
+T0026,Driftwood Bungalow,2026-04-23,2026-04-26,3,HVAC,AC unit leaking,High,Coastal Climate Co.,629,Closed
+T0027,Driftwood Bungalow,2026-04-23,2026-04-27,4,HVAC,AC not cooling,High,Reliable Heating & Air,472,Closed
+T0028,Driftwood Bungalow,2026-04-24,2026-05-27,33,HVAC,AC not cooling,Medium,Reliable Heating & Air,532,Closed
+T0029,Driftwood Bungalow,2026-04-25,2026-04-26,1,HVAC,AC unit leaking,High,Reliable Heating & Air,407,Closed
+T0030,Lakeside Retreat,2026-04-25,2026-04-25,0,HVAC,Thermostat not responding,High,Reliable Heating & Air,433,Closed
+T0031,Summit Lodge,2026-04-26,2026-05-01,5,Pool & hot tub,Hot tub not heating,Medium,Blue Water Pools,340,Closed
+T0032,Willow Point House,2026-04-26,2026-04-30,4,Plumbing,Toilet running,Medium,Harbor Plumbing,312,Closed
+T0033,Lighthouse View,2026-04-27,2026-04-30,3,Electrical,Outlet not working,Medium,BrightLine Electric,191,Closed
+T0034,Summit Lodge,2026-04-28,2026-05-05,7,Pool & hot tub,Hot tub not heating,Medium,Blue Water Pools,377,Closed
+T0035,Market Street Studio,2026-04-28,2026-05-07,9,Locks & access,Lockbox code reset,High,KeySafe Locksmith,88,Closed
+T0036,Pelican Flats,2026-04-29,2026-05-04,5,HVAC,AC not cooling,Medium,Reliable Heating & Air,578,Closed
+T0037,Seabreeze Cottage,2026-04-30,2026-04-30,0,Appliances,Fridge too warm,Medium,ApplianceDoc,209,Closed
+T0038,Driftwood Bungalow,2026-04-30,2026-04-30,0,Appliances,Fridge too warm,High,ApplianceDoc,212,Closed
+T0039,Aspen Hideaway,2026-05-01,2026-05-10,9,Appliances,Fridge too warm,Low,ApplianceDoc,280,Closed
+T0040,Old Town Loft,2026-05-02,2026-05-14,12,Electrical,Outlet not working,High,BrightLine Electric,248,Closed
+T0041,Old Town Loft,2026-05-03,2026-05-14,11,Electrical,Lights flickering,High,BrightLine Electric,209,Closed
+T0042,Lakeside Retreat,2026-05-05,2026-06-04,30,Plumbing,Toilet running,Medium,FlowRight Plumbing,262,Closed
+T0043,Dockside Cottage,2026-05-05,2026-05-19,14,Pest,Quarterly pest treatment,Medium,Shield Pest Control,190,Closed
+T0044,Market Street Studio,2026-05-06,2026-05-18,12,Appliances,Fridge too warm,High,ApplianceDoc,274,Closed
+T0045,Lakeside Retreat,2026-05-06,2026-06-13,38,Plumbing,Toilet running,Medium,FlowRight Plumbing,204,Closed
+T0046,Driftwood Bungalow,2026-05-08,2026-05-11,3,Appliances,Fridge too warm,Medium,ApplianceDoc,278,Closed
+T0047,Lighthouse View,2026-05-08,2026-05-13,5,Electrical,Outlet not working,Low,BrightLine Electric,266,Closed
+T0048,Aspen Hideaway,2026-05-08,2026-05-12,4,General repair,Drywall patch,High,In-house team,50,Closed
+T0049,Old Town Loft,2026-05-08,2026-05-21,13,Locks & access,Smart lock offline,High,KeySafe Locksmith,141,Closed
+T0050,Lakeside Retreat,2026-05-08,2026-06-08,31,Electrical,Outlet not working,Medium,BrightLine Electric,229,Closed
+T0051,Driftwood Bungalow,2026-05-10,2026-05-10,0,HVAC,AC not cooling,High,Reliable Heating & Air,384,Closed
+T0052,Dockside Cottage,2026-05-10,2026-05-16,6,Pest,Ants in kitchen,Medium,Shield Pest Control,144,Closed
+T0053,Pine Ridge Cabin,2026-05-10,2026-06-05,26,Pool & hot tub,Hot tub cloudy water,Medium,Blue Water Pools,242,Closed
+T0054,Aspen Hideaway,2026-05-11,2026-05-23,12,Plumbing,Clogged drain,High,FlowRight Plumbing,256,Closed
+T0055,Market Street Studio,2026-05-11,2026-05-15,4,Appliances,Fridge too warm,Medium,ApplianceDoc,305,Closed
+T0056,Pine Ridge Cabin,2026-05-12,2026-05-16,4,Pool & hot tub,Hot tub not heating,Low,Blue Water Pools,365,Closed
+T0057,Old Town Loft,2026-05-12,2026-05-21,9,General repair,Loose railing,Medium,HandyPros,194,Closed
+T0058,Driftwood Bungalow,2026-05-13,2026-05-14,1,HVAC,Thermostat not responding,High,Coastal Climate Co.,830,Closed
+T0059,Old Town Loft,2026-05-15,2026-05-19,4,Locks & access,Smart lock offline,High,KeySafe Locksmith,163,Closed
+T0060,Dockside Cottage,2026-05-15,2026-05-26,11,Plumbing,Leaking faucet,High,FlowRight Plumbing,293,Closed
+T0061,Pine Ridge Cabin,2026-05-16,2026-05-17,1,HVAC,AC unit leaking,High,Coastal Climate Co.,610,Closed
+T0062,Seabreeze Cottage,2026-05-18,2026-06-08,21,Appliances,Fridge too warm,Medium,ApplianceDoc,223,Closed
+T0063,Market Street Studio,2026-05-19,2026-05-19,0,General repair,Screen door torn,High,HandyPros,156,Closed
+T0064,Pelican Flats,2026-05-20,2026-05-30,10,Appliances,Washer error code,Low,ApplianceDoc,201,Closed
+T0065,Old Town Loft,2026-05-20,2026-05-25,5,General repair,Loose railing,High,In-house team,54,Closed
+T0066,Lakeside Retreat,2026-05-20,2026-05-23,3,HVAC,AC not cooling,High,Reliable Heating & Air,482,Closed
+T0067,Dockside Cottage,2026-05-21,2026-05-21,0,Appliances,Dishwasher not draining,Medium,ApplianceDoc,227,Closed
+T0068,Lighthouse View,2026-05-24,2026-06-05,12,Appliances,Dishwasher not draining,Medium,ApplianceDoc,241,Closed
+T0069,Aspen Hideaway,2026-05-24,2026-06-01,8,Appliances,Washer error code,High,ApplianceDoc,190,Closed
+T0070,Lighthouse View,2026-05-26,2026-05-30,4,HVAC,Thermostat not responding,High,Reliable Heating & Air,371,Closed
+T0071,Dockside Cottage,2026-05-26,2026-06-07,12,Electrical,Outlet not working,Medium,BrightLine Electric,314,Closed
+T0072,Dockside Cottage,2026-05-26,2026-05-29,3,HVAC,AC unit leaking,High,Reliable Heating & Air,561,Closed
+T0073,Lakeside Retreat,2026-05-27,2026-06-03,7,Pool & hot tub,Hot tub not heating,Medium,Blue Water Pools,236,Closed
+T0074,Summit Lodge,2026-05-29,2026-06-04,6,Pool & hot tub,Hot tub not heating,Medium,Blue Water Pools,397,Closed
+T0075,Pine Ridge Cabin,2026-05-30,2026-06-10,11,Electrical,Outlet not working,Medium,BrightLine Electric,205,Closed
+T0076,Market Street Studio,2026-05-30,2026-06-01,2,Pest,Ants in kitchen,Medium,Shield Pest Control,221,Closed
+T0077,Willow Point House,2026-05-30,2026-06-01,2,General repair,Loose railing,Low,In-house team,74,Closed
+T0078,Dockside Cottage,2026-05-31,2026-06-13,13,Plumbing,Leaking faucet,Medium,Harbor Plumbing,314,Closed
+T0079,Willow Point House,2026-06-02,2026-06-03,1,Appliances,Washer error code,Medium,ApplianceDoc,182,Closed
+T0080,Market Street Studio,2026-06-03,2026-06-13,10,Pest,Ants in kitchen,Low,Shield Pest Control,153,Closed
+T0081,Dockside Cottage,2026-06-03,2026-06-14,11,General repair,Loose railing,Medium,In-house team,61,Closed
+T0082,Seabreeze Cottage,2026-06-05,2026-06-13,8,Pool & hot tub,Hot tub not heating,Medium,Blue Water Pools,410,Closed
+T0083,Seabreeze Cottage,2026-06-07,2026-06-09,2,Locks & access,Smart lock offline,Medium,KeySafe Locksmith,135,Closed
+T0084,Summit Lodge,2026-06-07,2026-06-21,14,Locks & access,Smart lock offline,Medium,KeySafe Locksmith,139,Closed
+T0085,Driftwood Bungalow,2026-06-08,2026-06-17,9,Plumbing,Clogged drain,Medium,FlowRight Plumbing,294,Closed
+T0086,Pelican Flats,2026-06-08,2026-06-17,9,Pest,Ants in kitchen,High,Shield Pest Control,244,Closed
+T0087,Pine Ridge Cabin,2026-06-08,2026-06-13,5,Pool & hot tub,Pool pump noise,Medium,Blue Water Pools,302,Closed
+T0088,Seabreeze Cottage,2026-06-09,2026-06-17,8,Locks & access,Smart lock offline,High,KeySafe Locksmith,105,Closed
+T0089,Aspen Hideaway,2026-06-11,2026-07-13,32,HVAC,Thermostat not responding,High,Coastal Climate Co.,748,Closed
+T0090,Summit Lodge,2026-06-11,2026-06-20,9,Pool & hot tub,Hot tub not heating,Low,Blue Water Pools,386,Closed
+T0091,Old Town Loft,2026-06-12,2026-06-23,11,Locks & access,Lockbox code reset,Medium,KeySafe Locksmith,119,Closed
+T0092,Willow Point House,2026-06-14,2026-06-17,3,HVAC,Thermostat not responding,High,Reliable Heating & Air,560,Closed
+T0093,Pine Ridge Cabin,2026-06-15,2026-06-15,0,Pest,Ants in kitchen,Medium,Shield Pest Control,247,Closed
+T0094,Pine Ridge Cabin,2026-06-15,2026-06-27,12,Pool & hot tub,Pool pump noise,Medium,Blue Water Pools,356,Closed
+T0095,Pelican Flats,2026-06-16,2026-06-19,3,Appliances,Fridge too warm,Low,ApplianceDoc,223,Closed
+T0096,Pelican Flats,2026-06-16,2026-06-22,6,Electrical,Outlet not working,Medium,BrightLine Electric,178,Closed
+T0097,Pelican Flats,2026-06-17,2026-06-23,6,Locks & access,Smart lock offline,High,KeySafe Locksmith,98,Closed
+T0098,Pine Ridge Cabin,2026-06-17,2026-06-19,2,Pest,Quarterly pest treatment,High,Shield Pest Control,180,Closed
+T0099,Aspen Hideaway,2026-06-17,2026-06-25,8,Appliances,Fridge too warm,High,ApplianceDoc,259,Closed
+T0100,Summit Lodge,2026-06-17,2026-06-26,9,Pool & hot tub,Pool pump noise,Medium,Blue Water Pools,390,Closed
+T0101,Lakeside Retreat,2026-06-17,2026-06-18,1,HVAC,Thermostat not responding,High,Reliable Heating & Air,557,Closed
+T0102,Aspen Hideaway,2026-06-19,2026-06-19,0,Plumbing,Toilet running,High,Harbor Plumbing,258,Closed
+T0103,Summit Lodge,2026-06-19,2026-06-30,11,Electrical,Lights flickering,High,BrightLine Electric,263,Closed
+T0104,Lakeside Retreat,2026-06-19,2026-06-23,4,Electrical,Outlet not working,Medium,BrightLine Electric,314,Closed
+T0105,Pelican Flats,2026-06-20,2026-06-27,7,Pool & hot tub,Hot tub not heating,High,Blue Water Pools,420,Closed
+T0106,Driftwood Bungalow,2026-06-21,2026-06-30,9,Plumbing,Clogged drain,Low,Harbor Plumbing,385,Closed
+T0107,Summit Lodge,2026-06-21,2026-06-22,1,Pool & hot tub,Hot tub cloudy water,High,Blue Water Pools,330,Closed
+T0108,Driftwood Bungalow,2026-06-24,2026-06-26,2,HVAC,Thermostat not responding,Medium,Coastal Climate Co.,735,Closed
+T0109,Pine Ridge Cabin,2026-06-24,2026-06-24,0,Pool & hot tub,Hot tub cloudy water,Medium,Blue Water Pools,433,Closed
+T0110,Pelican Flats,2026-06-25,2026-07-01,6,HVAC,AC unit leaking,High,Coastal Climate Co.,624,Closed
+T0111,Driftwood Bungalow,2026-06-26,2026-07-02,6,HVAC,Thermostat not responding,High,Coastal Climate Co.,684,Closed
+T0112,Seabreeze Cottage,2026-06-28,2026-06-28,0,Plumbing,Clogged drain,Medium,FlowRight Plumbing,288,Closed
+T0113,Lighthouse View,2026-06-28,2026-06-30,2,HVAC,Thermostat not responding,High,Reliable Heating & Air,473,Closed
+T0114,Pine Ridge Cabin,2026-06-28,2026-06-30,2,Appliances,Washer error code,High,ApplianceDoc,300,Closed
+T0115,Summit Lodge,2026-06-29,2026-07-11,12,Locks & access,Smart lock offline,High,KeySafe Locksmith,109,Closed
+T0116,Dockside Cottage,2026-06-30,2026-07-09,9,Appliances,Fridge too warm,High,ApplianceDoc,246,Closed
+T0117,Dockside Cottage,2026-06-30,2026-07-08,8,Electrical,Lights flickering,Low,BrightLine Electric,231,Closed
+T0118,Pine Ridge Cabin,2026-06-30,2026-07-04,4,Pool & hot tub,Hot tub not heating,High,Blue Water Pools,412,Closed
+T0119,Seabreeze Cottage,2026-07-01,2026-07-09,8,Pool & hot tub,Pool pump noise,Medium,Blue Water Pools,290,Closed
+T0120,Lighthouse View,2026-07-01,2026-07-24,23,Plumbing,Toilet running,Medium,FlowRight Plumbing,210,Closed
+T0121,Lighthouse View,2026-07-02,2026-07-07,5,Appliances,Dishwasher not draining,Low,ApplianceDoc,157,Closed
+T0122,Dockside Cottage,2026-07-02,2026-07-06,4,General repair,Screen door torn,Medium,HandyPros,130,Closed
+T0123,Lakeside Retreat,2026-07-03,2026-07-13,10,Plumbing,Toilet running,Low,Harbor Plumbing,254,Closed
+T0124,Old Town Loft,2026-07-04,2026-07-12,8,General repair,Drywall patch,Low,HandyPros,189,Closed
+T0125,Lakeside Retreat,2026-07-04,2026-07-11,7,Plumbing,Clogged drain,Low,Harbor Plumbing,264,Closed
+T0126,Lighthouse View,2026-07-05,2026-07-08,3,Appliances,Washer error code,Medium,ApplianceDoc,219,Closed
+T0127,Market Street Studio,2026-07-05,2026-07-05,0,Pest,Quarterly pest treatment,Medium,Shield Pest Control,176,Closed
+T0128,Dockside Cottage,2026-07-05,2026-07-17,12,Locks & access,Smart lock offline,High,KeySafe Locksmith,139,Closed
+T0129,Willow Point House,2026-07-06,2026-07-11,5,Pest,Quarterly pest treatment,Low,Shield Pest Control,223,Closed
+T0130,Summit Lodge,2026-07-07,2026-07-13,6,Appliances,Fridge too warm,Medium,ApplianceDoc,285,Closed
+T0131,Seabreeze Cottage,2026-07-08,2026-07-19,11,Pest,Quarterly pest treatment,Low,Shield Pest Control,146,Closed
+T0132,Lighthouse View,2026-07-08,2026-07-19,11,Plumbing,Leaking faucet,Medium,FlowRight Plumbing,340,Closed
+T0133,Pelican Flats,2026-07-08,2026-07-14,6,HVAC,Thermostat not responding,High,Reliable Heating & Air,532,Closed
+T0134,Pine Ridge Cabin,2026-07-08,2026-07-10,2,Pest,Ants in kitchen,Medium,Shield Pest Control,196,Closed
+T0135,Lakeside Retreat,2026-07-08,2026-07-11,3,HVAC,Thermostat not responding,Medium,Coastal Climate Co.,806,Closed
+T0136,Seabreeze Cottage,2026-07-11,2026-07-23,12,Appliances,Washer error code,Medium,ApplianceDoc,296,Closed
+T0137,Pelican Flats,2026-07-11,2026-07-24,13,Electrical,Outlet not working,Medium,BrightLine Electric,190,Closed
+T0138,Summit Lodge,2026-07-11,2026-07-15,4,Pest,Quarterly pest treatment,Medium,Shield Pest Control,212,Closed
+T0139,Summit Lodge,2026-07-12,2026-07-16,4,Pest,Quarterly pest treatment,High,Shield Pest Control,144,Closed
+T0140,Lakeside Retreat,2026-07-13,2026-07-20,7,Locks & access,Smart lock offline,High,KeySafe Locksmith,123,Closed
+T0141,Lakeside Retreat,2026-07-13,2026-07-18,5,Pool & hot tub,Hot tub not heating,Low,Blue Water Pools,321,Closed
+T0142,Seabreeze Cottage,2026-07-14,2026-07-25,11,Locks & access,Smart lock offline,Medium,KeySafe Locksmith,167,Closed
+T0143,Aspen Hideaway,2026-07-14,2026-07-17,3,Plumbing,Leaking faucet,Low,Harbor Plumbing,227,Closed
+T0144,Willow Point House,2026-07-14,2026-07-18,4,HVAC,AC not cooling,Medium,Coastal Climate Co.,795,Closed
+T0145,Old Town Loft,2026-07-15,2026-07-28,13,Electrical,Outlet not working,Medium,BrightLine Electric,191,Closed
+T0146,Pine Ridge Cabin,2026-07-16,2026-07-27,11,Plumbing,Clogged drain,Medium,FlowRight Plumbing,208,Closed
+T0147,Lakeside Retreat,2026-07-16,2026-07-16,0,Pest,Quarterly pest treatment,Medium,Shield Pest Control,179,Closed
+T0148,Pine Ridge Cabin,2026-07-18,2026-07-21,3,General repair,Loose railing,Low,HandyPros,118,Closed
+T0149,Aspen Hideaway,2026-07-19,2026-08-02,14,Locks & access,Lockbox code reset,High,KeySafe Locksmith,150,Closed
+T0150,Lakeside Retreat,2026-07-19,2026-07-20,1,Pest,Quarterly pest treatment,Low,Shield Pest Control,185,Closed
+T0151,Pine Ridge Cabin,2026-07-19,2026-07-26,7,Pool & hot tub,Hot tub not heating,Medium,Blue Water Pools,364,Closed
+T0152,Driftwood Bungalow,2026-07-22,2026-07-23,1,Appliances,Dishwasher not draining,Medium,ApplianceDoc,168,Closed
+T0153,Pelican Flats,2026-07-22,2026-08-05,14,Plumbing,Clogged drain,Medium,FlowRight Plumbing,288,Closed
+T0154,Market Street Studio,2026-07-22,2026-07-25,3,Appliances,Dishwasher not draining,Low,ApplianceDoc,211,Closed
+T0155,Driftwood Bungalow,2026-07-22,2026-07-26,4,HVAC,AC unit leaking,High,Coastal Climate Co.,478,Closed
+T0156,Driftwood Bungalow,2026-07-24,2026-08-03,10,Appliances,Dishwasher not draining,Medium,ApplianceDoc,181,Closed
+T0157,Lighthouse View,2026-07-25,2026-08-06,12,General repair,Screen door torn,Medium,In-house team,64,Closed
+T0158,Driftwood Bungalow,2026-07-26,2026-08-06,11,Pest,Quarterly pest treatment,Medium,Shield Pest Control,148,Closed
+T0159,Lighthouse View,2026-07-27,2026-08-24,28,General repair,Loose railing,Medium,HandyPros,175,Closed
+T0160,Summit Lodge,2026-07-27,2026-08-05,9,Locks & access,Lockbox code reset,High,KeySafe Locksmith,101,Closed
+T0161,Willow Point House,2026-07-28,2026-08-08,11,General repair,Screen door torn,Low,In-house team,81,Closed
+T0162,Driftwood Bungalow,2026-07-28,2026-08-20,23,HVAC,AC unit leaking,Medium,Reliable Heating & Air,572,Closed
+T0163,Driftwood Bungalow,2026-07-29,2026-08-05,7,General repair,Drywall patch,Low,In-house team,57,Closed
+T0164,Willow Point House,2026-08-01,2026-08-06,5,Pool & hot tub,Hot tub cloudy water,Low,Blue Water Pools,225,Closed
+T0165,Lighthouse View,2026-08-03,2026-08-05,2,General repair,Loose railing,Medium,In-house team,71,Closed
+T0166,Aspen Hideaway,2026-08-03,2026-08-05,2,Plumbing,Clogged drain,Medium,FlowRight Plumbing,347,Closed
+T0167,Market Street Studio,2026-08-03,2026-08-13,10,Pest,Quarterly pest treatment,High,Shield Pest Control,151,Closed
+T0168,Pelican Flats,2026-08-04,2026-08-17,13,Appliances,Dishwasher not draining,Medium,ApplianceDoc,166,Closed
+T0169,Seabreeze Cottage,2026-08-05,2026-08-14,9,Locks & access,Smart lock offline,High,KeySafe Locksmith,163,Closed
+T0170,Aspen Hideaway,2026-08-05,2026-08-15,10,Appliances,Fridge too warm,Low,ApplianceDoc,155,Closed
+T0171,Aspen Hideaway,2026-08-05,2026-08-14,9,General repair,Screen door torn,Low,HandyPros,170,Closed
+T0172,Lighthouse View,2026-08-06,2026-08-17,11,Pest,Ants in kitchen,Medium,Shield Pest Control,214,Closed
+T0173,Pelican Flats,2026-08-06,2026-08-06,0,Plumbing,Leaking faucet,Medium,FlowRight Plumbing,348,Closed
+T0174,Driftwood Bungalow,2026-08-06,2026-08-08,2,HVAC,AC unit leaking,High,Coastal Climate Co.,490,Closed
+T0175,Lighthouse View,2026-08-07,2026-08-19,12,Electrical,Lights flickering,Low,BrightLine Electric,326,Closed
+T0176,Driftwood Bungalow,2026-08-08,2026-08-13,5,Appliances,Dishwasher not draining,Medium,ApplianceDoc,219,Closed
+T0177,Old Town Loft,2026-08-08,2026-08-18,10,Pest,Ants in kitchen,Medium,Shield Pest Control,154,Closed
+T0178,Market Street Studio,2026-08-08,2026-08-21,13,General repair,Loose railing,Low,In-house team,65,Closed
+T0179,Lakeside Retreat,2026-08-08,2026-08-08,0,HVAC,AC unit leaking,High,Reliable Heating & Air,434,Closed
+T0180,Lighthouse View,2026-08-09,2026-08-11,2,Plumbing,Leaking faucet,Low,FlowRight Plumbing,260,Closed
+T0181,Pine Ridge Cabin,2026-08-11,2026-08-12,1,Appliances,Fridge too warm,Low,ApplianceDoc,305,Closed
+T0182,Aspen Hideaway,2026-08-13,2026-09-12,30,Electrical,Outlet not working,Medium,BrightLine Electric,279,Closed
+T0183,Driftwood Bungalow,2026-08-13,2026-08-19,6,HVAC,AC not cooling,High,Coastal Climate Co.,516,Closed
+T0184,Old Town Loft,2026-08-14,2026-08-22,8,Electrical,Outlet not working,High,BrightLine Electric,292,Closed
+T0185,Old Town Loft,2026-08-14,2026-08-15,1,HVAC,AC unit leaking,Medium,Coastal Climate Co.,672,Closed
+T0186,Seabreeze Cottage,2026-08-16,2026-08-18,2,Locks & access,Smart lock offline,High,KeySafe Locksmith,146,Closed
+T0187,Pelican Flats,2026-08-17,2026-08-27,10,General repair,Screen door torn,Medium,HandyPros,134,Closed
+T0188,Dockside Cottage,2026-08-18,2026-08-21,3,Electrical,Lights flickering,High,BrightLine Electric,202,Closed
+T0189,Seabreeze Cottage,2026-08-20,2026-08-22,2,HVAC,Thermostat not responding,Medium,Coastal Climate Co.,457,Closed
+T0190,Pine Ridge Cabin,2026-08-20,2026-08-24,4,Pest,Ants in kitchen,High,Shield Pest Control,184,Closed
+T0191,Summit Lodge,2026-08-20,2026-08-31,11,Pool & hot tub,Hot tub cloudy water,Medium,Blue Water Pools,246,Closed
+T0192,Seabreeze Cottage,2026-08-21,2026-08-30,9,General repair,Loose railing,Low,In-house team,56,Closed
+T0193,Lighthouse View,2026-08-21,2026-08-27,6,Pool & hot tub,Hot tub cloudy water,Low,Blue Water Pools,428,Closed
+T0194,Pelican Flats,2026-08-21,2026-08-21,0,Pool & hot tub,Pool pump noise,Medium,Blue Water Pools,388,Closed
+T0195,Pelican Flats,2026-08-22,2026-09-16,25,General repair,Screen door torn,Medium,In-house team,52,Closed
+T0196,Pine Ridge Cabin,2026-08-22,2026-09-03,12,Locks & access,Smart lock offline,Medium,KeySafe Locksmith,102,Closed
+T0197,Pine Ridge Cabin,2026-08-22,2026-09-11,20,Pool & hot tub,Hot tub cloudy water,High,Blue Water Pools,339,Closed
+T0198,Market Street Studio,2026-08-24,2026-09-26,33,Appliances,Dishwasher not draining,Medium,ApplianceDoc,198,Closed
+T0199,Pine Ridge Cabin,2026-08-24,2026-08-25,1,Pool & hot tub,Hot tub cloudy water,Medium,Blue Water Pools,319,Closed
+T0200,Seabreeze Cottage,2026-08-25,2026-09-04,10,Plumbing,Clogged drain,High,Harbor Plumbing,332,Closed
+T0201,Aspen Hideaway,2026-08-25,2026-08-27,2,Electrical,Outlet not working,High,BrightLine Electric,312,Closed
+T0202,Pelican Flats,2026-08-28,2026-09-08,11,Appliances,Washer error code,Medium,ApplianceDoc,235,Closed
+T0203,Aspen Hideaway,2026-08-28,2026-09-08,11,Appliances,Washer error code,Medium,ApplianceDoc,220,Closed
+T0204,Lakeside Retreat,2026-08-28,2026-09-28,31,Pest,Quarterly pest treatment,Low,Shield Pest Control,141,Closed
+T0205,Willow Point House,2026-08-28,2026-08-29,1,General repair,Screen door torn,Medium,In-house team,58,Closed
+T0206,Summit Lodge,2026-08-29,2026-09-02,4,HVAC,Thermostat not responding,Medium,Reliable Heating & Air,489,Closed
+T0207,Pelican Flats,2026-08-30,2026-09-05,6,Appliances,Washer error code,Medium,ApplianceDoc,264,Closed
+T0208,Willow Point House,2026-08-31,2026-09-10,10,Pool & hot tub,Pool pump noise,Medium,Blue Water Pools,268,Closed
+T0209,Driftwood Bungalow,2026-08-31,,,HVAC,AC not cooling,High,Reliable Heating & Air,469,Open
+T0210,Lighthouse View,2026-09-02,2026-09-30,28,Pest,Ants in kitchen,Medium,Shield Pest Control,170,Closed
+T0211,Driftwood Bungalow,2026-09-02,2026-09-07,5,HVAC,AC not cooling,High,Coastal Climate Co.,728,Closed
+T0212,Lighthouse View,2026-09-04,2026-09-09,5,HVAC,AC not cooling,High,Coastal Climate Co.,670,Closed
+T0213,Driftwood Bungalow,2026-09-05,2026-09-08,3,General repair,Screen door torn,Low,HandyPros,150,Closed
+T0214,Pelican Flats,2026-09-05,2026-09-06,1,HVAC,Thermostat not responding,High,Reliable Heating & Air,527,Closed
+T0215,Market Street Studio,2026-09-05,2026-09-09,4,Locks & access,Lockbox code reset,High,KeySafe Locksmith,140,Closed
+T0216,Seabreeze Cottage,2026-09-07,2026-09-08,1,Electrical,Outlet not working,Low,BrightLine Electric,210,Closed
+T0217,Dockside Cottage,2026-09-07,2026-09-07,0,General repair,Screen door torn,Medium,HandyPros,114,Closed
+T0218,Seabreeze Cottage,2026-09-08,2026-09-10,2,General repair,Loose railing,Low,In-house team,66,Closed
+T0219,Summit Lodge,2026-09-08,2026-09-12,4,HVAC,Thermostat not responding,Medium,Coastal Climate Co.,525,Closed
+T0220,Dockside Cottage,2026-09-08,2026-09-12,4,Pest,Ants in kitchen,Medium,Shield Pest Control,185,Closed
+T0221,Driftwood Bungalow,2026-09-08,2026-09-10,2,HVAC,Thermostat not responding,Medium,Reliable Heating & Air,443,Closed
+T0222,Driftwood Bungalow,2026-09-09,2026-09-16,7,Electrical,Lights flickering,Medium,BrightLine Electric,266,Closed
+T0223,Willow Point House,2026-09-09,2026-09-09,0,Plumbing,Clogged drain,High,Harbor Plumbing,204,Closed
+T0224,Lakeside Retreat,2026-09-10,2026-09-12,2,Electrical,Lights flickering,Medium,BrightLine Electric,318,Closed
+T0225,Summit Lodge,2026-09-12,2026-09-18,6,Locks & access,Smart lock offline,Medium,KeySafe Locksmith,119,Closed
+T0226,Summit Lodge,2026-09-12,2026-09-17,5,HVAC,AC unit leaking,High,Reliable Heating & Air,303,Closed
+T0227,Seabreeze Cottage,2026-09-14,2026-09-24,10,Electrical,Lights flickering,High,BrightLine Electric,284,Closed
+T0228,Dockside Cottage,2026-09-14,2026-09-25,11,Plumbing,Leaking faucet,Medium,FlowRight Plumbing,314,Closed
+T0229,Driftwood Bungalow,2026-09-16,2026-09-20,4,HVAC,AC not cooling,Medium,Coastal Climate Co.,537,Closed
 T0230,Aspen Hideaway,2026-09-17,2026-09-21,4,Locks & access,Smart lock offline,High,KeySafe Locksmith,150,Closed
 T0231,Lakeside Retreat,2026-09-17,2026-09-23,6,HVAC,AC not cooling,High,Reliable Heating & Air,534,Closed
 T0232,Dockside Cottage,2026-09-17,,,Appliances,Dishwasher not draining,Medium,ApplianceDoc,164,Open
@@ -240,10 +240,10 @@ T0238,Summit Lodge,2026-09-24,2026-09-24,0,HVAC,AC unit leaking,High,Reliable He
 T0239,Pelican Flats,2026-09-25,2026-09-27,2,HVAC,Thermostat not responding,High,Coastal Climate Co.,541,Closed
 T0240,Willow Point House,2026-09-26,,,General repair,Loose railing,Medium,In-house team,84,Open
 T0241,Driftwood Bungalow,2026-09-26,2026-09-30,4,HVAC,AC not cooling,High,Reliable Heating & Air,435,Closed
-T0242,Pelican Flats,2026-09-28,,,Pest,Ants in kitchen,Low,Shield Pest Control,192,Open
-T0243,Summit Lodge,2026-09-28,,,Pest,Quarterly pest treatment,Medium,Shield Pest Control,208,Open
-T0244,Old Town Loft,2026-09-28,2026-09-30,2,General repair,Drywall patch,High,In-house team,75,Closed
-T0245,Driftwood Bungalow,2026-09-29,,,Plumbing,Clogged drain,Medium,FlowRight Plumbing,199,Open
+T0242,Seabreeze Cottage,2026-09-27,2026-09-27,0,Pest,Ants in kitchen,Low,Shield Pest Control,220,Closed
+T0243,Pelican Flats,2026-09-28,,,Pest,Ants in kitchen,Low,Shield Pest Control,192,Open
+T0244,Summit Lodge,2026-09-28,,,Pest,Quarterly pest treatment,Medium,Shield Pest Control,208,Open
+T0245,Old Town Loft,2026-09-28,2026-09-30,2,General repair,Drywall patch,High,In-house team,75,Closed
 T0246,Pine Ridge Cabin,2026-09-29,,,General repair,Screen door torn,High,HandyPros,127,Open
 T0247,Market Street Studio,2026-09-29,,,General repair,Drywall patch,Low,HandyPros,164,Open
 T0248,Lighthouse View,2026-09-30,,,Plumbing,Clogged drain,Medium,FlowRight Plumbing,297,Open
