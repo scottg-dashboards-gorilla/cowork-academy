@@ -233,6 +233,11 @@ button.tiny{font-size:12px;padding:6px 11px}
 .hwnav{display:flex;justify-content:space-between;gap:10px;margin-top:18px;flex-wrap:wrap}
 .hwnav button:disabled{opacity:.35;cursor:default}
 .hwnotes textarea{width:100%;background:#0c1224;border:1px solid var(--line);border-radius:10px;color:var(--ink);padding:11px 13px;font-family:inherit;font-size:14px;min-height:64px;margin-top:8px}
+.datapack{display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap;background:var(--panel);border:1px dashed var(--accent2);border-radius:14px;padding:14px 18px;margin:16px 0 0}
+.datapack span{display:block;color:var(--muted);font-size:13px;max-width:560px;margin-top:2px}
+.dlinks{display:flex;gap:8px;flex-wrap:wrap}
+.dlinks a{font-size:12.5px;font-weight:700;text-decoration:none;border:1px solid var(--line);border-radius:9px;padding:7px 11px;background:var(--panel2);color:var(--accent2)}
+.dlinks a:hover{border-color:var(--accent2)}
 </style>
 </head>
 <body>
@@ -280,6 +285,14 @@ button.tiny{font-size:12px;padding:6px 11px}
     <div class="secthead"><h3>🎓 Academy sessions</h3>
       <p class="csub">Pick the time you have. Every session is hands-on in Cowork, asks you to think about your own work as you go, ends by sparking an idea for your job, and earns a certificate.</p></div>
     <div class="sessgrid" id="sessGrid"></div>
+
+    <div class="secthead"><h3>👥 Paths by role</h3>
+      <p class="csub">For vacation rental and hospitality teams: two hours of missions built around your actual job, using your own data or the practice data pack below. Each path ends by sparking an idea and earns a role certificate.</p></div>
+    <div class="sessgrid" id="roleGrid"></div>
+    <div class="datapack">
+      <div><b>🗂️ Practice data pack</b><span>Fictional bookings, guest reviews and maintenance tickets for a 12-property rental company, April–September 2026. Use it whenever a mission needs data and you'd rather not use your own. There are real patterns hidden inside.</span></div>
+      <div class="dlinks"><a href="data/bookings.csv" download>bookings.csv</a><a href="data/guest-reviews.csv" download>guest-reviews.csv</a><a href="data/maintenance-tickets.csv" download>maintenance-tickets.csv</a><a href="data/README.txt" target="_blank" rel="noopener">About the data</a></div>
+    </div>
 
     <div class="secthead"><h3>🛠️ How-to guides</h3>
       <p class="csub">Need one skill right now? Each guide takes about 10 minutes, one step at a time. You do each step in Cowork and see the result for yourself.</p></div>
@@ -359,12 +372,12 @@ button.tiny{font-size:12px;padding:6px 11px}
 const SESSIONS=[
   {id:'quick',hours:1,name:'AI Quick Start',cred:'Starter',
    who:'Anyone with a Claude license. See what it can do for your job in one hour.',
-   outcomes:['Make a real Word document','Analyze a spreadsheet and chart it','Leave with an idea for your own job'],
-   items:[['beginner',3],['intermediate',5],['ideas',0]]},
+   outcomes:['Use Claude safely at work','Analyze real data and chart it','Leave with an idea for your own job'],
+   items:[['safety',0],['intermediate',5],['ideas',0]]},
   {id:'explorer',hours:2,name:'Cowork at Work',cred:'Explorer',
    who:'Busy professionals who want the highlights, applied to their own work.',
-   outcomes:['Documents, research and data analysis','Connect an app and use your real data','Build and save your own skill','Leave with an idea for your own job'],
-   items:[['beginner',3],['beginner',6],['beginner',7],['intermediate',5],['intermediate',2],['ideas',0]]},
+   outcomes:['Use Claude safely at work','A real document and data analysis','Connect an app and use your real data','Build and save your own skill','Leave with an idea for your own job'],
+   items:[['safety',0],['beginner',3],['beginner',7],['intermediate',5],['intermediate',2],['ideas',0]]},
   {id:'essentials',hours:4,name:'Cowork Essentials',cred:'Practitioner',levels:['beginner'],
    who:'Everyone. Your day-one Cowork toolkit.',
    outcomes:['Word documents, spreadsheets and images','Sourced web research and a one-page site','Use a skill and connect a tool','Leave with ideas for your own job']},
@@ -376,8 +389,13 @@ const SESSIONS=[
    outcomes:['Everything in Professional, plus:','Browser and desktop automation','Plugins and combined connectors','Workflows that run unattended']}
 ];
 const TRACKS=SESSIONS; // older name, kept for anything still referring to it
-const GROUPS=Object.assign({},LEVELS,{ideas:IDEAS});
-function sessionItems(s){return s.items||[].concat(...s.levels.map(l=>LEVELS[l].missions.map((m,mi)=>[l,mi])),[['ideas',0]]);}
+const GROUPS=Object.assign({},LEVELS,{ideas:IDEAS,safety:SAFETY});
+ROLES.forEach(r=>{GROUPS['role-'+r.id]={key:'role-'+r.id,cls:'b4',icon:r.icon,name:r.name,missions:r.missions};});
+const ROLE_SESSIONS=ROLES.map(r=>({id:'role-'+r.id,hours:2,icon:r.icon,name:r.name,cred:'Role Path',who:r.who,
+  outcomes:r.outcomes.concat(['Leave with ideas for your own job']),
+  items:[['safety',0]].concat(r.missions.map((m,i)=>['role-'+r.id,i]),[['ideas',0]])}));
+function findSession(id){return SESSIONS.concat(ROLE_SESSIONS).find(x=>x.id===id);}
+function sessionItems(s){return s.items||[].concat([['safety',0]],...s.levels.map(l=>LEVELS[l].missions.map((m,mi)=>[l,mi])),[['ideas',0]]);}
 function itemsProgress(items){let total=0,done=0;items.forEach(([l,mi])=>GROUPS[l].missions[mi].steps.forEach((x,si)=>{total++;if(isChecked(l,mi,si))done++;}));return{done,total,pct:total?Math.round(done/total*100):0};}
 const MIN_PER_STEP=7;
 function missionMins(m){return Math.round((m.steps.length*MIN_PER_STEP)/5)*5;}
@@ -443,12 +461,13 @@ function missionDone(lvl,mi){const m=GROUPS[lvl].missions[mi];return m.steps.eve
 
 function esc(t){return String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
 
-function renderSessions(){
-  const g=document.getElementById('sessGrid');if(!g)return;
-  g.innerHTML=SESSIONS.map(t=>{
+function renderSessions(){renderSessionGrid('sessGrid',SESSIONS);renderSessionGrid('roleGrid',ROLE_SESSIONS);}
+function renderSessionGrid(gridId,list){
+  const g=document.getElementById(gridId);if(!g)return;
+  g.innerHTML=list.map(t=>{
     const p=itemsProgress(sessionItems(t));const cur=state.track===t.id;
     return `<div class="sess ${cur?'cur':''}" data-sess="${t.id}">
-      <div class="hrs">${t.hours}<small> hr${t.hours>1?'s':''}</small></div>
+      <div class="hrs">${t.icon?t.icon+' ':''}${t.hours}<small> hr${t.hours>1?'s':''}</small></div>
       <h4>${t.name}</h4><div class="cred">→ ${t.cred} certificate</div>
       <div class="who">${t.who}</div>
       <ul>${t.outcomes.map(o=>`<li>${o}</li>`).join('')}</ul>
@@ -505,9 +524,9 @@ function openLevel(lvl){
   renderList(L.missions.map((m,mi)=>[lvl,mi]),{kind:'level',lvl,capKey:lvl});
 }
 function openSession(id){
-  const t=SESSIONS.find(x=>x.id===id);if(!t)return goHome();
+  const t=findSession(id);if(!t)return goHome();
   state.current='s:'+id;state.track=id;save();scheduleSync();showView('board');
-  document.getElementById('bTitle').textContent='🎓 '+t.name;
+  document.getElementById('bTitle').textContent=(t.icon||'🎓')+' '+t.name;
   const pill=document.getElementById('bPill');pill.textContent=t.hours+' hr'+(t.hours>1?'s':'')+' · '+t.cred;pill.className='pill b1';
   document.getElementById('bSub').textContent=t.who+' Do each mission in Cowork, answer its "Think about your work" question, and finish by sparking an idea of your own.';
   renderList(sessionItems(t),{kind:'session',sess:t,capKey:'s:'+id});
@@ -608,10 +627,11 @@ function refreshList(){
   fin.classList.remove('hide');
   if(ctx.kind==='session'){
     const t=ctx.sess;
-    fin.innerHTML=`<h3>🏆 ${t.name} complete. You've earned ${t.cred}!</h3>
+    const credName=t.icon?'your role certificate':t.cred;
+    fin.innerHTML=`<h3>🏆 ${t.name} complete. You've earned ${credName}!</h3>
       <p>You built real things with Claude Cowork and found an idea for your own work. Make sure your idea is in <b>Spark</b>, because that's where it turns into a real improvement. Then keep going with a how-to guide or a longer session.</p>
       <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
-        <a class="finbtn" href="${certLink(t.name+' — '+t.cred,p.done)}">🎓 Get your ${t.cred} Certificate</a>
+        <a class="finbtn" href="${certLink(t.name+' — '+t.cred,p.done)}">🎓 Get your ${t.icon?'role':t.cred} certificate</a>
         <button class="ghost" onclick="goHome()">Back to the Academy</button>
       </div>`;
     return;

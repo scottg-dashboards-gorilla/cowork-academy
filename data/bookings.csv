@@ -1,0 +1,415 @@
+booking_id,property,area,bedrooms,channel,booked_on,check_in,check_out,nights,guests,nightly_rate,cleaning_fee,platform_fee,total_revenue,status
+B1001,Seabreeze Cottage,Harbor Point,2,Airbnb,2026-03-10,2026-04-04,2026-04-09,5,3,161,110,128,787,Completed
+B1002,Seabreeze Cottage,Harbor Point,2,Airbnb,2026-03-13,2026-04-10,2026-04-12,2,1,158,110,60,366,Completed
+B1003,Seabreeze Cottage,Harbor Point,2,Airbnb,2026-02-21,2026-04-15,2026-04-21,6,3,160,110,150,920,Completed
+B1004,Seabreeze Cottage,Harbor Point,2,Direct,2026-03-12,2026-04-23,2026-04-29,6,1,178,110,0,1178,Completed
+B1005,Seabreeze Cottage,Harbor Point,2,Airbnb,2026-03-26,2026-04-29,2026-05-06,7,1,152,110,164,1010,Completed
+B1006,Seabreeze Cottage,Harbor Point,2,Vrbo,2026-02-17,2026-05-06,2026-05-12,6,4,187,110,99,1133,Completed
+B1007,Seabreeze Cottage,Harbor Point,2,Vrbo,2026-03-01,2026-05-13,2026-05-19,6,2,202,110,106,1216,Completed
+B1008,Seabreeze Cottage,Harbor Point,2,Vrbo,2026-03-24,2026-05-19,2026-05-24,5,1,199,110,88,1017,Completed
+B1009,Seabreeze Cottage,Harbor Point,2,Direct,2026-02-27,2026-05-26,2026-05-29,3,4,203,110,0,719,Completed
+B1010,Seabreeze Cottage,Harbor Point,2,Vrbo,2026-03-06,2026-05-29,2026-06-03,5,3,180,110,81,929,Completed
+B1011,Seabreeze Cottage,Harbor Point,2,Vrbo,2026-03-13,2026-06-07,2026-06-14,7,4,212,110,128,1466,Completed
+B1012,Seabreeze Cottage,Harbor Point,2,Vrbo,2026-05-13,2026-06-14,2026-06-18,4,3,230,110,82,948,Completed
+B1013,Seabreeze Cottage,Harbor Point,2,Airbnb,2026-04-04,2026-06-20,2026-06-26,6,3,200,110,183,0,Cancelled
+B1014,Seabreeze Cottage,Harbor Point,2,Booking.com,2026-04-27,2026-06-26,2026-07-02,6,3,205,110,201,0,Cancelled
+B1015,Seabreeze Cottage,Harbor Point,2,Direct,2026-04-22,2026-07-06,2026-07-10,4,4,237,110,0,1058,Completed
+B1016,Seabreeze Cottage,Harbor Point,2,Airbnb,2026-07-05,2026-07-12,2026-07-14,2,2,238,110,82,504,Completed
+B1017,Seabreeze Cottage,Harbor Point,2,Airbnb,2026-05-14,2026-07-16,2026-07-20,4,2,231,110,145,889,Completed
+B1018,Seabreeze Cottage,Harbor Point,2,Vrbo,2026-07-19,2026-07-23,2026-07-29,6,1,228,110,118,1360,Completed
+B1019,Seabreeze Cottage,Harbor Point,2,Direct,2026-06-19,2026-07-29,2026-08-03,5,2,266,110,0,1440,Completed
+B1020,Seabreeze Cottage,Harbor Point,2,Direct,2026-06-23,2026-08-03,2026-08-08,5,1,226,110,0,1240,Completed
+B1021,Seabreeze Cottage,Harbor Point,2,Airbnb,2026-07-21,2026-08-10,2026-08-16,6,4,231,110,209,1287,Completed
+B1022,Seabreeze Cottage,Harbor Point,2,Booking.com,2026-07-13,2026-08-17,2026-08-20,3,3,210,110,111,629,Completed
+B1023,Seabreeze Cottage,Harbor Point,2,Booking.com,2026-07-02,2026-08-22,2026-08-27,5,3,225,110,185,1050,Completed
+B1024,Seabreeze Cottage,Harbor Point,2,Vrbo,2026-07-07,2026-08-27,2026-08-30,3,3,233,110,65,744,Completed
+B1025,Seabreeze Cottage,Harbor Point,2,Vrbo,2026-07-01,2026-09-01,2026-09-04,3,2,178,110,52,592,Completed
+B1026,Seabreeze Cottage,Harbor Point,2,Airbnb,2026-06-10,2026-09-04,2026-09-07,3,3,170,110,87,533,Completed
+B1027,Seabreeze Cottage,Harbor Point,2,Direct,2026-08-26,2026-09-07,2026-09-14,7,3,191,110,0,1447,Completed
+B1028,Seabreeze Cottage,Harbor Point,2,Booking.com,2026-09-11,2026-09-14,2026-09-17,3,1,172,110,94,532,Completed
+B1029,Seabreeze Cottage,Harbor Point,2,Airbnb,2026-07-17,2026-09-17,2026-09-20,3,2,177,110,90,551,Completed
+B1030,Seabreeze Cottage,Harbor Point,2,Direct,2026-06-29,2026-09-22,2026-09-29,7,2,193,110,0,1461,Completed
+B1031,Driftwood Bungalow,Harbor Point,2,Direct,2026-03-23,2026-04-01,2026-04-03,2,1,171,110,0,452,Completed
+B1032,Driftwood Bungalow,Harbor Point,2,Airbnb,2026-03-19,2026-04-03,2026-04-06,3,1,151,110,79,484,Completed
+B1033,Driftwood Bungalow,Harbor Point,2,Airbnb,2026-03-26,2026-04-09,2026-04-12,3,4,138,110,73,451,Completed
+B1034,Driftwood Bungalow,Harbor Point,2,Airbnb,2026-02-24,2026-04-12,2026-04-18,6,4,154,110,145,889,Completed
+B1035,Driftwood Bungalow,Harbor Point,2,Booking.com,2026-02-11,2026-04-18,2026-04-20,2,3,158,110,64,362,Completed
+B1036,Driftwood Bungalow,Harbor Point,2,Vrbo,2026-01-26,2026-04-24,2026-05-01,7,2,153,110,94,1087,Completed
+B1037,Driftwood Bungalow,Harbor Point,2,Airbnb,2026-04-20,2026-05-01,2026-05-06,5,4,156,110,125,765,Completed
+B1038,Driftwood Bungalow,Harbor Point,2,Vrbo,2026-03-18,2026-05-06,2026-05-11,5,2,178,110,80,920,Completed
+B1039,Driftwood Bungalow,Harbor Point,2,Vrbo,2026-02-18,2026-05-11,2026-05-14,3,4,163,110,48,551,Completed
+B1040,Driftwood Bungalow,Harbor Point,2,Airbnb,2026-04-07,2026-05-14,2026-05-21,7,2,169,110,181,1112,Completed
+B1041,Driftwood Bungalow,Harbor Point,2,Booking.com,2026-04-17,2026-05-21,2026-05-28,7,4,177,110,202,1147,Completed
+B1042,Driftwood Bungalow,Harbor Point,2,Vrbo,2026-02-27,2026-05-28,2026-05-31,3,1,183,110,53,606,Completed
+B1043,Driftwood Bungalow,Harbor Point,2,Vrbo,2026-04-04,2026-05-31,2026-06-06,6,1,185,110,98,0,Cancelled
+B1044,Driftwood Bungalow,Harbor Point,2,Direct,2026-05-31,2026-06-06,2026-06-08,2,2,224,110,0,558,Completed
+B1045,Driftwood Bungalow,Harbor Point,2,Vrbo,2026-05-22,2026-06-08,2026-06-11,3,3,220,110,62,708,Completed
+B1046,Driftwood Bungalow,Harbor Point,2,Booking.com,2026-04-12,2026-06-14,2026-06-17,3,4,210,110,111,629,Completed
+B1047,Driftwood Bungalow,Harbor Point,2,Airbnb,2026-05-21,2026-06-17,2026-06-24,7,4,192,110,204,1250,Completed
+B1048,Driftwood Bungalow,Harbor Point,2,Airbnb,2026-05-31,2026-06-24,2026-06-28,4,4,194,110,124,762,Completed
+B1049,Driftwood Bungalow,Harbor Point,2,Direct,2026-06-07,2026-06-30,2026-07-05,5,4,207,110,0,1145,Completed
+B1050,Driftwood Bungalow,Harbor Point,2,Direct,2026-06-27,2026-07-08,2026-07-11,3,1,228,110,0,794,Completed
+B1051,Driftwood Bungalow,Harbor Point,2,Vrbo,2026-04-20,2026-07-11,2026-07-15,4,1,223,110,80,922,Completed
+B1052,Driftwood Bungalow,Harbor Point,2,Vrbo,2026-05-31,2026-07-15,2026-07-17,2,2,233,110,46,530,Completed
+B1053,Driftwood Bungalow,Harbor Point,2,Vrbo,2026-06-24,2026-07-17,2026-07-24,7,2,234,110,140,1608,Completed
+B1054,Driftwood Bungalow,Harbor Point,2,Vrbo,2026-06-01,2026-07-24,2026-07-26,2,3,237,110,47,537,Completed
+B1055,Driftwood Bungalow,Harbor Point,2,Vrbo,2026-05-06,2026-07-28,2026-08-04,7,2,224,110,134,0,Cancelled
+B1056,Driftwood Bungalow,Harbor Point,2,Booking.com,2026-05-08,2026-08-05,2026-08-11,6,3,192,110,189,1073,Completed
+B1057,Driftwood Bungalow,Harbor Point,2,Booking.com,2026-05-30,2026-08-12,2026-08-14,2,3,198,110,76,430,Completed
+B1058,Driftwood Bungalow,Harbor Point,2,Airbnb,2026-06-14,2026-08-14,2026-08-21,7,2,208,110,219,1347,Completed
+B1059,Driftwood Bungalow,Harbor Point,2,Airbnb,2026-06-30,2026-08-23,2026-08-28,5,4,214,110,165,1015,Completed
+B1060,Driftwood Bungalow,Harbor Point,2,Vrbo,2026-07-23,2026-08-28,2026-08-31,3,2,205,110,58,667,Completed
+B1061,Driftwood Bungalow,Harbor Point,2,Vrbo,2026-08-19,2026-08-31,2026-09-06,6,2,206,110,108,1238,Completed
+B1062,Driftwood Bungalow,Harbor Point,2,Airbnb,2026-08-26,2026-09-06,2026-09-13,7,4,161,110,173,1064,Completed
+B1063,Driftwood Bungalow,Harbor Point,2,Vrbo,2026-08-25,2026-09-13,2026-09-17,4,3,171,110,64,730,Completed
+B1064,Driftwood Bungalow,Harbor Point,2,Vrbo,2026-06-20,2026-09-17,2026-09-23,6,3,186,110,98,1128,Completed
+B1065,Driftwood Bungalow,Harbor Point,2,Airbnb,2026-08-08,2026-09-23,2026-09-25,2,2,158,110,60,366,Completed
+B1066,Driftwood Bungalow,Harbor Point,2,Airbnb,2026-08-21,2026-09-25,2026-10-01,6,4,154,110,145,889,Completed
+B1067,Lighthouse View,Harbor Point,4,Vrbo,2026-02-28,2026-04-03,2026-04-08,5,7,288,160,128,1472,Completed
+B1068,Lighthouse View,Harbor Point,4,Airbnb,2026-01-16,2026-04-08,2026-04-12,4,5,282,160,180,1108,Completed
+B1069,Lighthouse View,Harbor Point,4,Airbnb,2026-04-03,2026-04-12,2026-04-19,7,2,303,160,319,1962,Completed
+B1070,Lighthouse View,Harbor Point,4,Vrbo,2026-02-14,2026-04-19,2026-04-22,3,6,312,160,88,1008,Completed
+B1071,Lighthouse View,Harbor Point,4,Direct,2026-04-15,2026-04-22,2026-04-27,5,4,304,160,0,1680,Completed
+B1072,Lighthouse View,Harbor Point,4,Booking.com,2026-04-23,2026-04-30,2026-05-07,7,1,317,160,357,2022,Completed
+B1073,Lighthouse View,Harbor Point,4,Vrbo,2026-04-19,2026-05-10,2026-05-16,6,1,354,160,183,2101,Completed
+B1074,Lighthouse View,Harbor Point,4,Vrbo,2026-04-04,2026-05-16,2026-05-19,3,6,340,160,94,0,Cancelled
+B1075,Lighthouse View,Harbor Point,4,Vrbo,2026-03-21,2026-05-19,2026-05-24,5,3,335,160,147,1688,Completed
+B1076,Lighthouse View,Harbor Point,4,Vrbo,2026-05-17,2026-05-24,2026-05-29,5,3,329,160,144,0,Cancelled
+B1077,Lighthouse View,Harbor Point,4,Airbnb,2026-04-22,2026-05-30,2026-06-02,3,4,346,160,168,1030,Completed
+B1078,Lighthouse View,Harbor Point,4,Vrbo,2026-05-27,2026-06-02,2026-06-08,6,1,434,160,221,2543,Completed
+B1079,Lighthouse View,Harbor Point,4,Booking.com,2026-04-02,2026-06-08,2026-06-10,2,3,410,160,147,833,Completed
+B1080,Lighthouse View,Harbor Point,4,Airbnb,2026-05-16,2026-06-14,2026-06-17,3,8,396,160,189,1159,Completed
+B1081,Lighthouse View,Harbor Point,4,Airbnb,2026-05-12,2026-06-17,2026-06-23,6,4,404,160,362,0,Cancelled
+B1082,Lighthouse View,Harbor Point,4,Airbnb,2026-03-30,2026-06-25,2026-06-27,2,7,357,160,122,752,Completed
+B1083,Lighthouse View,Harbor Point,4,Direct,2026-04-25,2026-06-27,2026-07-02,5,4,429,160,0,2305,Completed
+B1084,Lighthouse View,Harbor Point,4,Direct,2026-04-12,2026-07-02,2026-07-07,5,8,463,160,0,2475,Completed
+B1085,Lighthouse View,Harbor Point,4,Vrbo,2026-05-22,2026-07-07,2026-07-10,3,2,434,160,117,1345,Completed
+B1086,Lighthouse View,Harbor Point,4,Direct,2026-04-24,2026-07-10,2026-07-15,5,2,473,160,0,2525,Completed
+B1087,Lighthouse View,Harbor Point,4,Airbnb,2026-05-16,2026-07-17,2026-07-22,5,3,409,160,309,1896,Completed
+B1088,Lighthouse View,Harbor Point,4,Airbnb,2026-06-11,2026-07-25,2026-07-29,4,5,436,160,267,1637,Completed
+B1089,Lighthouse View,Harbor Point,4,Direct,2026-07-28,2026-07-31,2026-08-05,5,6,485,160,0,2585,Completed
+B1090,Lighthouse View,Harbor Point,4,Direct,2026-06-20,2026-08-05,2026-08-11,6,5,461,160,0,2926,Completed
+B1091,Lighthouse View,Harbor Point,4,Direct,2026-05-22,2026-08-11,2026-08-17,6,6,472,160,0,2992,Completed
+B1092,Lighthouse View,Harbor Point,4,Vrbo,2026-06-06,2026-08-17,2026-08-19,2,5,424,160,81,927,Completed
+B1093,Lighthouse View,Harbor Point,4,Airbnb,2026-07-15,2026-08-19,2026-08-26,7,2,408,160,422,2594,Completed
+B1094,Lighthouse View,Harbor Point,4,Airbnb,2026-08-04,2026-08-26,2026-09-01,6,8,412,160,368,2264,Completed
+B1095,Lighthouse View,Harbor Point,4,Vrbo,2026-07-16,2026-09-04,2026-09-11,7,5,343,160,205,0,Cancelled
+B1096,Lighthouse View,Harbor Point,4,Vrbo,2026-06-27,2026-09-11,2026-09-17,6,1,368,160,189,2179,Completed
+B1097,Lighthouse View,Harbor Point,4,Vrbo,2026-07-22,2026-09-17,2026-09-22,5,2,332,160,146,1674,Completed
+B1098,Lighthouse View,Harbor Point,4,Vrbo,2026-09-05,2026-09-22,2026-09-29,7,3,330,160,198,2272,Completed
+B1099,Lighthouse View,Harbor Point,4,Booking.com,2026-07-05,2026-09-29,2026-10-02,3,1,328,160,172,972,Completed
+B1100,Pelican Flats,Harbor Point,1,Direct,2026-03-18,2026-04-01,2026-04-08,7,2,124,85,0,953,Completed
+B1101,Pelican Flats,Harbor Point,1,Vrbo,2026-03-06,2026-04-11,2026-04-15,4,2,106,85,41,468,Completed
+B1102,Pelican Flats,Harbor Point,1,Airbnb,2026-01-26,2026-04-15,2026-04-17,2,1,102,85,40,249,Completed
+B1103,Pelican Flats,Harbor Point,1,Booking.com,2026-04-08,2026-04-18,2026-04-24,6,2,109,85,111,628,Completed
+B1104,Pelican Flats,Harbor Point,1,Booking.com,2026-03-05,2026-04-24,2026-04-27,3,1,109,85,62,350,Completed
+B1105,Pelican Flats,Harbor Point,1,Airbnb,2026-04-01,2026-04-27,2026-05-03,6,2,108,85,103,0,Cancelled
+B1106,Pelican Flats,Harbor Point,1,Direct,2026-03-06,2026-05-03,2026-05-09,6,1,138,85,0,913,Completed
+B1107,Pelican Flats,Harbor Point,1,Direct,2026-05-05,2026-05-09,2026-05-12,3,2,127,85,0,466,Completed
+B1108,Pelican Flats,Harbor Point,1,Booking.com,2026-04-07,2026-05-12,2026-05-15,3,2,117,85,65,371,Completed
+B1109,Pelican Flats,Harbor Point,1,Airbnb,2026-04-24,2026-05-18,2026-05-25,7,2,118,85,128,0,Cancelled
+B1110,Pelican Flats,Harbor Point,1,Airbnb,2026-05-21,2026-05-25,2026-05-27,2,2,116,85,44,273,Completed
+B1111,Pelican Flats,Harbor Point,1,Vrbo,2026-05-23,2026-05-30,2026-06-03,4,2,125,85,47,538,Completed
+B1112,Pelican Flats,Harbor Point,1,Vrbo,2026-05-25,2026-06-03,2026-06-08,5,2,146,85,65,750,Completed
+B1113,Pelican Flats,Harbor Point,1,Vrbo,2026-04-29,2026-06-08,2026-06-12,4,2,158,85,57,660,Completed
+B1114,Pelican Flats,Harbor Point,1,Direct,2026-05-25,2026-06-12,2026-06-15,3,2,148,85,0,529,Completed
+B1115,Pelican Flats,Harbor Point,1,Airbnb,2026-05-07,2026-06-16,2026-06-20,4,1,137,85,89,544,Completed
+B1116,Pelican Flats,Harbor Point,1,Airbnb,2026-04-10,2026-06-20,2026-06-27,7,2,150,85,159,976,Completed
+B1117,Pelican Flats,Harbor Point,1,Airbnb,2026-05-11,2026-07-01,2026-07-03,2,1,141,85,51,316,Completed
+B1118,Pelican Flats,Harbor Point,1,Airbnb,2026-05-16,2026-07-03,2026-07-08,5,1,160,85,124,761,Completed
+B1119,Pelican Flats,Harbor Point,1,Airbnb,2026-06-17,2026-07-11,2026-07-13,2,2,146,85,53,324,Completed
+B1120,Pelican Flats,Harbor Point,1,Vrbo,2026-04-22,2026-07-13,2026-07-19,6,2,153,85,80,923,Completed
+B1121,Pelican Flats,Harbor Point,1,Airbnb,2026-05-07,2026-07-19,2026-07-22,3,2,145,85,73,447,Completed
+B1122,Pelican Flats,Harbor Point,1,Vrbo,2026-05-20,2026-07-22,2026-07-25,3,2,155,85,44,506,Completed
+B1123,Pelican Flats,Harbor Point,1,Vrbo,2026-06-27,2026-07-25,2026-07-27,2,2,160,85,32,373,Completed
+B1124,Pelican Flats,Harbor Point,1,Airbnb,2026-07-02,2026-07-27,2026-07-30,3,1,143,85,72,442,Completed
+B1125,Pelican Flats,Harbor Point,1,Airbnb,2026-05-31,2026-07-31,2026-08-03,3,2,141,85,71,0,Cancelled
+B1126,Pelican Flats,Harbor Point,1,Booking.com,2026-07-27,2026-08-03,2026-08-09,6,1,145,85,143,812,Completed
+B1127,Pelican Flats,Harbor Point,1,Airbnb,2026-06-17,2026-08-10,2026-08-12,2,2,138,85,51,310,Completed
+B1128,Pelican Flats,Harbor Point,1,Direct,2026-08-02,2026-08-13,2026-08-15,2,2,172,85,0,429,Completed
+B1129,Pelican Flats,Harbor Point,1,Airbnb,2026-05-30,2026-08-15,2026-08-18,3,2,135,85,69,421,Completed
+B1130,Pelican Flats,Harbor Point,1,Vrbo,2026-07-19,2026-08-18,2026-08-22,4,1,155,85,56,649,Completed
+B1131,Pelican Flats,Harbor Point,1,Direct,2026-06-15,2026-08-22,2026-08-26,4,2,150,85,0,685,Completed
+B1132,Pelican Flats,Harbor Point,1,Airbnb,2026-06-28,2026-08-29,2026-09-03,5,2,147,85,115,705,Completed
+B1133,Pelican Flats,Harbor Point,1,Airbnb,2026-06-30,2026-09-03,2026-09-07,4,1,127,85,83,510,Completed
+B1134,Pelican Flats,Harbor Point,1,Direct,2026-07-11,2026-09-07,2026-09-11,4,1,132,85,0,613,Completed
+B1135,Pelican Flats,Harbor Point,1,Direct,2026-08-21,2026-09-15,2026-09-19,4,1,134,85,0,621,Completed
+B1136,Pelican Flats,Harbor Point,1,Airbnb,2026-07-20,2026-09-19,2026-09-26,7,2,112,85,122,747,Completed
+B1137,Pelican Flats,Harbor Point,1,Booking.com,2026-07-07,2026-09-26,2026-09-28,2,1,115,85,47,268,Completed
+B1138,Pine Ridge Cabin,Pine Ridge,3,Direct,2026-03-08,2026-04-05,2026-04-12,7,6,208,135,0,1591,Completed
+B1139,Pine Ridge Cabin,Pine Ridge,3,Airbnb,2026-01-15,2026-04-12,2026-04-17,5,2,196,135,156,959,Completed
+B1140,Pine Ridge Cabin,Pine Ridge,3,Vrbo,2026-02-28,2026-04-17,2026-04-23,6,4,179,135,97,1112,Completed
+B1141,Pine Ridge Cabin,Pine Ridge,3,Airbnb,2026-03-26,2026-04-27,2026-05-04,7,3,193,135,208,1278,Completed
+B1142,Pine Ridge Cabin,Pine Ridge,3,Direct,2026-04-27,2026-05-04,2026-05-09,5,5,229,135,0,1280,Completed
+B1143,Pine Ridge Cabin,Pine Ridge,3,Vrbo,2026-03-13,2026-05-11,2026-05-13,2,2,232,135,48,551,Completed
+B1144,Pine Ridge Cabin,Pine Ridge,3,Vrbo,2026-03-19,2026-05-13,2026-05-18,5,3,222,135,100,1145,Completed
+B1145,Pine Ridge Cabin,Pine Ridge,3,Vrbo,2026-03-11,2026-05-18,2026-05-24,6,3,207,135,110,1267,Completed
+B1146,Pine Ridge Cabin,Pine Ridge,3,Vrbo,2026-04-15,2026-05-24,2026-05-28,4,3,220,135,81,934,Completed
+B1147,Pine Ridge Cabin,Pine Ridge,3,Vrbo,2026-04-05,2026-05-30,2026-06-02,3,4,226,135,65,748,Completed
+B1148,Pine Ridge Cabin,Pine Ridge,3,Airbnb,2026-05-07,2026-06-03,2026-06-10,7,1,236,135,250,1537,Completed
+B1149,Pine Ridge Cabin,Pine Ridge,3,Airbnb,2026-04-19,2026-06-12,2026-06-15,3,3,257,135,127,0,Cancelled
+B1150,Pine Ridge Cabin,Pine Ridge,3,Booking.com,2026-05-21,2026-06-15,2026-06-18,3,3,225,135,122,688,Completed
+B1151,Pine Ridge Cabin,Pine Ridge,3,Airbnb,2026-04-21,2026-06-18,2026-06-20,2,5,248,135,88,0,Cancelled
+B1152,Pine Ridge Cabin,Pine Ridge,3,Airbnb,2026-05-07,2026-06-20,2026-06-25,5,1,240,135,187,1148,Completed
+B1153,Pine Ridge Cabin,Pine Ridge,3,Direct,2026-05-02,2026-06-25,2026-06-27,2,1,257,135,0,649,Completed
+B1154,Pine Ridge Cabin,Pine Ridge,3,Vrbo,2026-05-10,2026-06-27,2026-07-02,5,3,267,135,118,0,Cancelled
+B1155,Pine Ridge Cabin,Pine Ridge,3,Vrbo,2026-05-30,2026-07-06,2026-07-09,3,1,297,135,82,944,Completed
+B1156,Pine Ridge Cabin,Pine Ridge,3,Direct,2026-04-26,2026-07-09,2026-07-15,6,6,274,135,0,1779,Completed
+B1157,Pine Ridge Cabin,Pine Ridge,3,Vrbo,2026-06-07,2026-07-15,2026-07-19,4,6,298,135,106,1221,Completed
+B1158,Pine Ridge Cabin,Pine Ridge,3,Booking.com,2026-06-02,2026-07-19,2026-07-26,7,3,262,135,295,1674,Completed
+B1159,Pine Ridge Cabin,Pine Ridge,3,Vrbo,2026-06-12,2026-07-30,2026-08-03,4,5,262,135,95,1088,Completed
+B1160,Pine Ridge Cabin,Pine Ridge,3,Airbnb,2026-06-04,2026-08-03,2026-08-09,6,5,253,135,231,1422,Completed
+B1161,Pine Ridge Cabin,Pine Ridge,3,Vrbo,2026-07-01,2026-08-09,2026-08-15,6,5,252,135,132,1515,Completed
+B1162,Pine Ridge Cabin,Pine Ridge,3,Airbnb,2026-07-13,2026-08-15,2026-08-17,2,1,261,135,92,565,Completed
+B1163,Pine Ridge Cabin,Pine Ridge,3,Airbnb,2026-06-17,2026-08-17,2026-08-22,5,1,235,135,183,1127,Completed
+B1164,Pine Ridge Cabin,Pine Ridge,3,Booking.com,2026-08-08,2026-08-22,2026-08-26,4,5,246,135,168,0,Cancelled
+B1165,Pine Ridge Cabin,Pine Ridge,3,Vrbo,2026-08-09,2026-08-28,2026-09-03,6,3,260,135,136,1559,Completed
+B1166,Pine Ridge Cabin,Pine Ridge,3,Airbnb,2026-08-07,2026-09-03,2026-09-08,5,5,216,135,170,1045,Completed
+B1167,Pine Ridge Cabin,Pine Ridge,3,Vrbo,2026-09-04,2026-09-08,2026-09-15,7,3,231,135,140,1612,Completed
+B1168,Pine Ridge Cabin,Pine Ridge,3,Airbnb,2026-07-22,2026-09-15,2026-09-20,5,6,204,135,162,993,Completed
+B1169,Pine Ridge Cabin,Pine Ridge,3,Booking.com,2026-08-02,2026-09-20,2026-09-24,4,3,204,135,143,808,Completed
+B1170,Pine Ridge Cabin,Pine Ridge,3,Direct,2026-07-13,2026-09-24,2026-09-27,3,2,245,135,0,870,Completed
+B1171,Aspen Hideaway,Pine Ridge,2,Vrbo,2026-03-11,2026-04-01,2026-04-03,2,1,136,110,31,351,Completed
+B1172,Aspen Hideaway,Pine Ridge,2,Airbnb,2026-01-12,2026-04-05,2026-04-08,3,3,137,110,73,448,Completed
+B1173,Aspen Hideaway,Pine Ridge,2,Airbnb,2026-02-15,2026-04-08,2026-04-12,4,3,125,110,85,525,Completed
+B1174,Aspen Hideaway,Pine Ridge,2,Vrbo,2026-01-19,2026-04-12,2026-04-17,5,4,131,110,61,0,Cancelled
+B1175,Aspen Hideaway,Pine Ridge,2,Airbnb,2026-02-16,2026-04-17,2026-04-20,3,2,143,110,75,464,Completed
+B1176,Aspen Hideaway,Pine Ridge,2,Airbnb,2026-04-18,2026-04-24,2026-05-01,7,4,128,110,141,865,Completed
+B1177,Aspen Hideaway,Pine Ridge,2,Direct,2026-05-02,2026-05-05,2026-05-07,2,3,166,110,0,442,Completed
+B1178,Aspen Hideaway,Pine Ridge,2,Airbnb,2026-02-18,2026-05-11,2026-05-13,2,2,151,110,58,354,Completed
+B1179,Aspen Hideaway,Pine Ridge,2,Airbnb,2026-05-04,2026-05-17,2026-05-19,2,2,142,110,55,339,Completed
+B1180,Aspen Hideaway,Pine Ridge,2,Airbnb,2026-05-11,2026-05-19,2026-05-24,5,4,139,110,113,692,Completed
+B1181,Aspen Hideaway,Pine Ridge,2,Direct,2026-05-08,2026-05-25,2026-05-27,2,4,158,110,0,426,Completed
+B1182,Aspen Hideaway,Pine Ridge,2,Airbnb,2026-04-19,2026-05-27,2026-05-30,3,1,155,110,81,494,Completed
+B1183,Aspen Hideaway,Pine Ridge,2,Airbnb,2026-05-06,2026-06-03,2026-06-09,6,4,165,110,154,946,Completed
+B1184,Aspen Hideaway,Pine Ridge,2,Vrbo,2026-05-20,2026-06-09,2026-06-12,3,3,185,110,53,612,Completed
+B1185,Aspen Hideaway,Pine Ridge,2,Direct,2026-04-01,2026-06-12,2026-06-17,5,3,185,110,0,1035,Completed
+B1186,Aspen Hideaway,Pine Ridge,2,Airbnb,2026-05-21,2026-06-19,2026-06-21,2,2,177,110,65,399,Completed
+B1187,Aspen Hideaway,Pine Ridge,2,Booking.com,2026-04-22,2026-06-21,2026-06-27,6,4,170,110,170,960,Completed
+B1188,Aspen Hideaway,Pine Ridge,2,Direct,2026-04-10,2026-06-27,2026-06-30,3,4,201,110,0,713,Completed
+B1189,Aspen Hideaway,Pine Ridge,2,Airbnb,2026-05-11,2026-07-04,2026-07-09,5,4,181,110,142,873,Completed
+B1190,Aspen Hideaway,Pine Ridge,2,Airbnb,2026-05-23,2026-07-09,2026-07-12,3,4,203,110,101,618,Completed
+B1191,Aspen Hideaway,Pine Ridge,2,Direct,2026-06-07,2026-07-12,2026-07-15,3,4,202,110,0,716,Completed
+B1192,Aspen Hideaway,Pine Ridge,2,Airbnb,2026-05-22,2026-07-16,2026-07-22,6,4,178,110,165,1013,Completed
+B1193,Aspen Hideaway,Pine Ridge,2,Vrbo,2026-06-30,2026-07-24,2026-07-27,3,4,212,110,60,686,Completed
+B1194,Aspen Hideaway,Pine Ridge,2,Booking.com,2026-06-08,2026-07-30,2026-08-01,2,1,194,110,75,423,Completed
+B1195,Aspen Hideaway,Pine Ridge,2,Airbnb,2026-06-11,2026-08-01,2026-08-07,6,1,170,110,158,972,Completed
+B1196,Aspen Hideaway,Pine Ridge,2,Airbnb,2026-05-15,2026-08-08,2026-08-12,4,3,176,110,114,0,Cancelled
+B1197,Aspen Hideaway,Pine Ridge,2,Airbnb,2026-05-25,2026-08-13,2026-08-16,3,2,179,110,91,556,Completed
+B1198,Aspen Hideaway,Pine Ridge,2,Airbnb,2026-07-10,2026-08-16,2026-08-20,4,1,175,110,113,697,Completed
+B1199,Aspen Hideaway,Pine Ridge,2,Vrbo,2026-07-14,2026-08-20,2026-08-27,7,3,182,110,111,1273,Completed
+B1200,Aspen Hideaway,Pine Ridge,2,Booking.com,2026-07-21,2026-08-27,2026-08-30,3,4,188,110,101,573,Completed
+B1201,Aspen Hideaway,Pine Ridge,2,Direct,2026-06-14,2026-08-30,2026-09-06,7,3,212,110,0,1594,Completed
+B1202,Aspen Hideaway,Pine Ridge,2,Vrbo,2026-07-13,2026-09-08,2026-09-12,4,2,151,110,57,0,Cancelled
+B1203,Aspen Hideaway,Pine Ridge,2,Booking.com,2026-09-01,2026-09-15,2026-09-21,6,2,150,110,152,0,Cancelled
+B1204,Aspen Hideaway,Pine Ridge,2,Vrbo,2026-06-28,2026-09-21,2026-09-26,5,4,160,110,73,837,Completed
+B1205,Aspen Hideaway,Pine Ridge,2,Airbnb,2026-09-07,2026-09-26,2026-09-29,3,1,159,110,82,505,Completed
+B1206,Summit Lodge,Pine Ridge,5,Direct,2026-01-15,2026-04-04,2026-04-08,4,9,423,185,0,1877,Completed
+B1207,Summit Lodge,Pine Ridge,5,Airbnb,2026-01-14,2026-04-08,2026-04-10,2,2,365,185,128,787,Completed
+B1208,Summit Lodge,Pine Ridge,5,Airbnb,2026-01-18,2026-04-14,2026-04-18,4,6,421,185,262,1607,Completed
+B1209,Summit Lodge,Pine Ridge,5,Airbnb,2026-04-14,2026-04-20,2026-04-27,7,5,390,185,408,2507,Completed
+B1210,Summit Lodge,Pine Ridge,5,Vrbo,2026-03-09,2026-04-27,2026-04-29,2,10,443,185,86,985,Completed
+B1211,Summit Lodge,Pine Ridge,5,Booking.com,2026-04-01,2026-04-29,2026-05-03,4,1,425,185,283,1602,Completed
+B1212,Summit Lodge,Pine Ridge,5,Direct,2026-03-15,2026-05-03,2026-05-09,6,7,461,185,0,2951,Completed
+B1213,Summit Lodge,Pine Ridge,5,Vrbo,2026-04-26,2026-05-09,2026-05-13,4,3,475,185,167,1918,Completed
+B1214,Summit Lodge,Pine Ridge,5,Vrbo,2026-04-13,2026-05-13,2026-05-18,5,1,437,185,190,2180,Completed
+B1215,Summit Lodge,Pine Ridge,5,Airbnb,2026-02-28,2026-05-18,2026-05-21,3,8,470,185,223,1372,Completed
+B1216,Summit Lodge,Pine Ridge,5,Airbnb,2026-04-26,2026-05-21,2026-05-28,7,2,475,185,491,3019,Completed
+B1217,Summit Lodge,Pine Ridge,5,Airbnb,2026-05-21,2026-05-28,2026-05-31,3,5,460,185,219,1346,Completed
+B1218,Summit Lodge,Pine Ridge,5,Vrbo,2026-05-29,2026-06-03,2026-06-07,4,8,528,185,184,2113,Completed
+B1219,Summit Lodge,Pine Ridge,5,Booking.com,2026-05-28,2026-06-07,2026-06-10,3,5,496,185,251,0,Cancelled
+B1220,Summit Lodge,Pine Ridge,5,Airbnb,2026-04-05,2026-06-10,2026-06-17,7,1,546,185,561,3446,Completed
+B1221,Summit Lodge,Pine Ridge,5,Airbnb,2026-05-06,2026-06-17,2026-06-19,2,6,517,185,171,1048,Completed
+B1222,Summit Lodge,Pine Ridge,5,Airbnb,2026-04-09,2026-06-19,2026-06-21,2,3,501,185,166,1021,Completed
+B1223,Summit Lodge,Pine Ridge,5,Vrbo,2026-04-24,2026-06-23,2026-06-26,3,6,587,185,156,1790,Completed
+B1224,Summit Lodge,Pine Ridge,5,Direct,2026-04-30,2026-06-26,2026-07-02,6,2,611,185,0,3851,Completed
+B1225,Summit Lodge,Pine Ridge,5,Vrbo,2026-05-24,2026-07-04,2026-07-10,6,3,640,185,322,3703,Completed
+B1226,Summit Lodge,Pine Ridge,5,Vrbo,2026-04-12,2026-07-10,2026-07-16,6,10,567,185,287,3300,Completed
+B1227,Summit Lodge,Pine Ridge,5,Airbnb,2026-07-05,2026-07-16,2026-07-21,5,10,586,185,436,2679,Completed
+B1228,Summit Lodge,Pine Ridge,5,Vrbo,2026-06-16,2026-07-21,2026-07-26,5,10,555,185,237,2723,Completed
+B1229,Summit Lodge,Pine Ridge,5,Airbnb,2026-06-11,2026-07-26,2026-07-29,3,6,596,185,276,1697,Completed
+B1230,Summit Lodge,Pine Ridge,5,Airbnb,2026-07-30,2026-08-02,2026-08-06,4,3,502,185,307,1886,Completed
+B1231,Summit Lodge,Pine Ridge,5,Direct,2026-05-20,2026-08-07,2026-08-10,3,6,550,185,0,1835,Completed
+B1232,Summit Lodge,Pine Ridge,5,Airbnb,2026-05-25,2026-08-12,2026-08-19,7,9,575,185,589,3621,Completed
+B1233,Summit Lodge,Pine Ridge,5,Booking.com,2026-05-23,2026-08-19,2026-08-24,5,9,547,185,438,2482,Completed
+B1234,Summit Lodge,Pine Ridge,5,Vrbo,2026-07-29,2026-08-24,2026-08-26,2,1,571,185,106,1221,Completed
+B1235,Summit Lodge,Pine Ridge,5,Vrbo,2026-07-21,2026-08-26,2026-08-28,2,3,573,185,106,1225,Completed
+B1236,Summit Lodge,Pine Ridge,5,Vrbo,2026-07-10,2026-08-28,2026-08-30,2,10,543,185,102,1169,Completed
+B1237,Summit Lodge,Pine Ridge,5,Vrbo,2026-08-08,2026-08-30,2026-09-06,7,1,532,185,313,3596,Completed
+B1238,Summit Lodge,Pine Ridge,5,Booking.com,2026-06-17,2026-09-06,2026-09-09,3,8,434,185,223,1264,Completed
+B1239,Summit Lodge,Pine Ridge,5,Airbnb,2026-07-07,2026-09-09,2026-09-14,5,2,421,185,321,0,Cancelled
+B1240,Summit Lodge,Pine Ridge,5,Vrbo,2026-08-20,2026-09-17,2026-09-20,3,10,458,185,125,1434,Completed
+B1241,Summit Lodge,Pine Ridge,5,Vrbo,2026-07-07,2026-09-20,2026-09-27,7,4,470,185,278,3197,Completed
+B1242,Old Town Loft,Old Town,1,Booking.com,2026-02-17,2026-04-02,2026-04-04,2,1,117,85,48,271,Completed
+B1243,Old Town Loft,Old Town,1,Booking.com,2026-03-22,2026-04-04,2026-04-09,5,1,114,85,98,557,Completed
+B1244,Old Town Loft,Old Town,1,Vrbo,2026-01-19,2026-04-09,2026-04-16,7,1,128,85,78,903,Completed
+B1245,Old Town Loft,Old Town,1,Airbnb,2026-04-09,2026-04-16,2026-04-22,6,1,114,85,108,661,Completed
+B1246,Old Town Loft,Old Town,1,Direct,2026-03-26,2026-04-25,2026-04-29,4,1,134,85,0,621,Completed
+B1247,Old Town Loft,Old Town,1,Booking.com,2026-03-11,2026-04-29,2026-05-01,2,2,118,85,48,0,Cancelled
+B1248,Old Town Loft,Old Town,1,Booking.com,2026-02-24,2026-05-01,2026-05-03,2,1,146,85,57,320,Completed
+B1249,Old Town Loft,Old Town,1,Vrbo,2026-02-28,2026-05-03,2026-05-06,3,2,137,85,40,456,Completed
+B1250,Old Town Loft,Old Town,1,Airbnb,2026-04-30,2026-05-10,2026-05-16,6,1,138,85,128,785,Completed
+B1251,Old Town Loft,Old Town,1,Airbnb,2026-03-03,2026-05-16,2026-05-22,6,2,128,85,119,734,Completed
+B1252,Old Town Loft,Old Town,1,Vrbo,2026-04-09,2026-05-23,2026-05-28,5,2,129,85,58,672,Completed
+B1253,Old Town Loft,Old Town,1,Airbnb,2026-04-06,2026-05-28,2026-06-01,4,1,141,85,91,558,Completed
+B1254,Old Town Loft,Old Town,1,Airbnb,2026-04-11,2026-06-03,2026-06-10,7,2,159,85,168,1030,Completed
+B1255,Old Town Loft,Old Town,1,Airbnb,2026-04-17,2026-06-10,2026-06-13,3,1,161,85,80,488,Completed
+B1256,Old Town Loft,Old Town,1,Vrbo,2026-03-23,2026-06-13,2026-06-19,6,2,169,85,88,1011,Completed
+B1257,Old Town Loft,Old Town,1,Airbnb,2026-04-20,2026-06-19,2026-06-25,6,1,148,85,136,837,Completed
+B1258,Old Town Loft,Old Town,1,Vrbo,2026-04-11,2026-06-28,2026-07-02,4,1,161,85,58,671,Completed
+B1259,Old Town Loft,Old Town,1,Vrbo,2026-06-25,2026-07-02,2026-07-06,4,2,176,85,63,726,Completed
+B1260,Old Town Loft,Old Town,1,Vrbo,2026-04-09,2026-07-06,2026-07-11,5,2,171,85,75,865,Completed
+B1261,Old Town Loft,Old Town,1,Airbnb,2026-06-24,2026-07-11,2026-07-15,4,2,180,85,113,692,Completed
+B1262,Old Town Loft,Old Town,1,Vrbo,2026-05-28,2026-07-18,2026-07-24,6,1,187,85,97,1110,Completed
+B1263,Old Town Loft,Old Town,1,Airbnb,2026-05-29,2026-07-24,2026-07-31,7,1,171,85,179,1103,Completed
+B1264,Old Town Loft,Old Town,1,Direct,2026-05-06,2026-07-31,2026-08-02,2,1,197,85,0,479,Completed
+B1265,Old Town Loft,Old Town,1,Airbnb,2026-08-02,2026-08-06,2026-08-08,2,2,155,85,55,340,Completed
+B1266,Old Town Loft,Old Town,1,Vrbo,2026-06-21,2026-08-09,2026-08-13,4,1,179,85,64,0,Cancelled
+B1267,Old Town Loft,Old Town,1,Airbnb,2026-07-25,2026-08-13,2026-08-20,7,1,170,85,179,1096,Completed
+B1268,Old Town Loft,Old Town,1,Booking.com,2026-06-30,2026-08-20,2026-08-22,2,2,158,85,60,341,Completed
+B1269,Old Town Loft,Old Town,1,Airbnb,2026-07-14,2026-08-22,2026-08-25,3,2,164,85,81,0,Cancelled
+B1270,Old Town Loft,Old Town,1,Booking.com,2026-08-16,2026-08-25,2026-09-01,7,2,173,85,194,0,Cancelled
+B1271,Old Town Loft,Old Town,1,Direct,2026-07-13,2026-09-04,2026-09-11,7,1,146,85,0,1107,Completed
+B1272,Old Town Loft,Old Town,1,Airbnb,2026-08-19,2026-09-11,2026-09-18,7,2,136,85,145,892,Completed
+B1273,Old Town Loft,Old Town,1,Airbnb,2026-08-15,2026-09-19,2026-09-21,2,1,130,85,48,297,Completed
+B1274,Old Town Loft,Old Town,1,Booking.com,2026-07-18,2026-09-23,2026-09-28,5,2,139,85,117,663,Completed
+B1275,Old Town Loft,Old Town,1,Airbnb,2026-07-04,2026-09-28,2026-10-01,3,1,135,85,69,0,Cancelled
+B1276,Market Street Studio,Old Town,1,Vrbo,2026-03-19,2026-04-04,2026-04-06,2,1,93,85,22,249,Completed
+B1277,Market Street Studio,Old Town,1,Airbnb,2026-02-12,2026-04-06,2026-04-11,5,2,96,85,79,486,Completed
+B1278,Market Street Studio,Old Town,1,Direct,2026-04-02,2026-04-14,2026-04-20,6,2,103,85,0,703,Completed
+B1279,Market Street Studio,Old Town,1,Vrbo,2026-02-08,2026-04-20,2026-04-22,2,2,94,85,22,251,Completed
+B1280,Market Street Studio,Old Town,1,Airbnb,2026-03-13,2026-04-22,2026-04-27,5,1,90,85,75,460,Completed
+B1281,Market Street Studio,Old Town,1,Direct,2026-03-12,2026-04-27,2026-04-30,3,2,95,85,0,370,Completed
+B1282,Market Street Studio,Old Town,1,Direct,2026-02-03,2026-04-30,2026-05-03,3,1,97,85,0,376,Completed
+B1283,Market Street Studio,Old Town,1,Airbnb,2026-04-18,2026-05-03,2026-05-07,4,1,96,85,66,403,Completed
+B1284,Market Street Studio,Old Town,1,Direct,2026-02-17,2026-05-09,2026-05-11,2,1,114,85,0,313,Completed
+B1285,Market Street Studio,Old Town,1,Vrbo,2026-03-26,2026-05-12,2026-05-17,5,1,108,85,50,575,Completed
+B1286,Market Street Studio,Old Town,1,Airbnb,2026-03-17,2026-05-17,2026-05-19,2,2,108,85,42,259,Completed
+B1287,Market Street Studio,Old Town,1,Airbnb,2026-02-28,2026-05-19,2026-05-21,2,2,98,85,39,242,Completed
+B1288,Market Street Studio,Old Town,1,Vrbo,2026-04-30,2026-05-21,2026-05-26,5,1,110,85,51,584,Completed
+B1289,Market Street Studio,Old Town,1,Airbnb,2026-05-02,2026-05-29,2026-06-01,3,1,106,85,56,347,Completed
+B1290,Market Street Studio,Old Town,1,Airbnb,2026-03-04,2026-06-02,2026-06-06,4,1,110,85,74,451,Completed
+B1291,Market Street Studio,Old Town,1,Vrbo,2026-03-19,2026-06-07,2026-06-11,4,1,124,85,46,0,Cancelled
+B1292,Market Street Studio,Old Town,1,Vrbo,2026-04-16,2026-06-11,2026-06-15,4,2,134,85,50,571,Completed
+B1293,Market Street Studio,Old Town,1,Booking.com,2026-05-25,2026-06-15,2026-06-21,6,1,116,85,117,664,Completed
+B1294,Market Street Studio,Old Town,1,Booking.com,2026-04-13,2026-06-24,2026-06-28,4,1,123,85,87,490,Completed
+B1295,Market Street Studio,Old Town,1,Airbnb,2026-04-04,2026-06-28,2026-06-30,2,1,118,85,45,0,Cancelled
+B1296,Market Street Studio,Old Town,1,Vrbo,2026-04-16,2026-06-30,2026-07-02,2,1,135,85,28,327,Completed
+B1297,Market Street Studio,Old Town,1,Airbnb,2026-04-05,2026-07-02,2026-07-09,7,1,121,85,130,802,Completed
+B1298,Market Street Studio,Old Town,1,Airbnb,2026-05-23,2026-07-09,2026-07-15,6,2,125,85,117,718,Completed
+B1299,Market Street Studio,Old Town,1,Direct,2026-07-02,2026-07-15,2026-07-22,7,1,151,85,0,1142,Completed
+B1300,Market Street Studio,Old Town,1,Airbnb,2026-05-29,2026-07-23,2026-07-28,5,2,128,85,102,623,Completed
+B1301,Market Street Studio,Old Town,1,Vrbo,2026-06-19,2026-07-28,2026-08-04,7,2,144,85,87,0,Cancelled
+B1302,Market Street Studio,Old Town,1,Vrbo,2026-06-04,2026-08-04,2026-08-09,5,2,132,85,60,685,Completed
+B1303,Market Street Studio,Old Town,1,Airbnb,2026-06-11,2026-08-09,2026-08-15,6,2,129,85,120,739,Completed
+B1304,Market Street Studio,Old Town,1,Airbnb,2026-07-27,2026-08-18,2026-08-21,3,2,126,85,65,398,Completed
+B1305,Market Street Studio,Old Town,1,Vrbo,2026-05-29,2026-08-21,2026-08-27,6,1,138,85,73,840,Completed
+B1306,Market Street Studio,Old Town,1,Airbnb,2026-07-28,2026-08-30,2026-09-02,3,2,119,85,62,380,Completed
+B1307,Market Street Studio,Old Town,1,Vrbo,2026-07-19,2026-09-02,2026-09-09,7,2,115,85,71,819,Completed
+B1308,Market Street Studio,Old Town,1,Vrbo,2026-09-06,2026-09-09,2026-09-14,5,2,110,85,51,584,Completed
+B1309,Market Street Studio,Old Town,1,Airbnb,2026-09-07,2026-09-17,2026-09-20,3,2,95,85,52,318,Completed
+B1310,Market Street Studio,Old Town,1,Booking.com,2026-07-19,2026-09-20,2026-09-24,4,1,102,85,74,0,Cancelled
+B1311,Market Street Studio,Old Town,1,Airbnb,2026-07-11,2026-09-25,2026-10-01,6,2,95,85,92,563,Completed
+B1312,Lakeside Retreat,Lakeside,4,Vrbo,2026-02-17,2026-04-02,2026-04-05,3,1,286,160,81,937,Completed
+B1313,Lakeside Retreat,Lakeside,4,Direct,2026-02-04,2026-04-05,2026-04-07,2,5,323,160,0,806,Completed
+B1314,Lakeside Retreat,Lakeside,4,Direct,2026-03-19,2026-04-07,2026-04-12,5,4,325,160,0,0,Cancelled
+B1315,Lakeside Retreat,Lakeside,4,Airbnb,2026-02-17,2026-04-12,2026-04-17,5,8,282,160,220,1350,Completed
+B1316,Lakeside Retreat,Lakeside,4,Airbnb,2026-03-30,2026-04-21,2026-04-28,7,8,288,160,305,1871,Completed
+B1317,Lakeside Retreat,Lakeside,4,Vrbo,2026-03-15,2026-04-29,2026-05-06,7,4,303,160,182,2099,Completed
+B1318,Lakeside Retreat,Lakeside,4,Airbnb,2026-02-08,2026-05-06,2026-05-08,2,5,298,160,106,650,Completed
+B1319,Lakeside Retreat,Lakeside,4,Airbnb,2026-04-14,2026-05-08,2026-05-15,7,1,294,160,311,0,Cancelled
+B1320,Lakeside Retreat,Lakeside,4,Airbnb,2026-05-08,2026-05-15,2026-05-18,3,3,290,160,144,886,Completed
+B1321,Lakeside Retreat,Lakeside,4,Vrbo,2026-02-20,2026-05-18,2026-05-20,2,3,333,160,66,760,Completed
+B1322,Lakeside Retreat,Lakeside,4,Airbnb,2026-05-03,2026-05-20,2026-05-27,7,3,295,160,312,1913,Completed
+B1323,Lakeside Retreat,Lakeside,4,Vrbo,2026-05-01,2026-05-27,2026-05-30,3,4,333,160,93,1066,Completed
+B1324,Lakeside Retreat,Lakeside,4,Airbnb,2026-05-16,2026-05-30,2026-06-05,6,2,307,160,280,1722,Completed
+B1325,Lakeside Retreat,Lakeside,4,Vrbo,2026-04-24,2026-06-09,2026-06-11,2,5,360,160,70,810,Completed
+B1326,Lakeside Retreat,Lakeside,4,Booking.com,2026-05-29,2026-06-11,2026-06-15,4,1,387,160,256,1452,Completed
+B1327,Lakeside Retreat,Lakeside,4,Vrbo,2026-05-12,2026-06-15,2026-06-21,6,8,360,160,186,2134,Completed
+B1328,Lakeside Retreat,Lakeside,4,Airbnb,2026-06-13,2026-06-21,2026-06-23,2,4,344,160,119,729,Completed
+B1329,Lakeside Retreat,Lakeside,4,Booking.com,2026-06-08,2026-06-23,2026-06-27,4,6,365,160,243,1377,Completed
+B1330,Lakeside Retreat,Lakeside,4,Airbnb,2026-06-05,2026-06-27,2026-07-03,6,2,364,160,328,2016,Completed
+B1331,Lakeside Retreat,Lakeside,4,Direct,2026-04-09,2026-07-03,2026-07-08,5,7,466,160,0,2490,Completed
+B1332,Lakeside Retreat,Lakeside,4,Airbnb,2026-05-15,2026-07-11,2026-07-15,4,2,386,160,239,1465,Completed
+B1333,Lakeside Retreat,Lakeside,4,Vrbo,2026-04-26,2026-07-15,2026-07-17,2,7,404,160,77,891,Completed
+B1334,Lakeside Retreat,Lakeside,4,Direct,2026-06-29,2026-07-17,2026-07-23,6,7,413,160,0,2638,Completed
+B1335,Lakeside Retreat,Lakeside,4,Airbnb,2026-06-29,2026-07-23,2026-07-26,3,4,417,160,198,1213,Completed
+B1336,Lakeside Retreat,Lakeside,4,Direct,2026-05-21,2026-07-26,2026-07-28,2,1,409,160,0,978,Completed
+B1337,Lakeside Retreat,Lakeside,4,Vrbo,2026-05-25,2026-07-28,2026-08-01,4,3,382,160,135,1553,Completed
+B1338,Lakeside Retreat,Lakeside,4,Direct,2026-07-26,2026-08-01,2026-08-06,5,8,384,160,0,2080,Completed
+B1339,Lakeside Retreat,Lakeside,4,Vrbo,2026-06-30,2026-08-09,2026-08-14,5,6,362,160,158,1812,Completed
+B1340,Lakeside Retreat,Lakeside,4,Booking.com,2026-07-27,2026-08-14,2026-08-18,4,1,391,160,259,1465,Completed
+B1341,Lakeside Retreat,Lakeside,4,Airbnb,2026-05-21,2026-08-18,2026-08-23,5,3,394,160,298,1832,Completed
+B1342,Lakeside Retreat,Lakeside,4,Vrbo,2026-07-21,2026-08-27,2026-09-01,5,4,373,160,162,1863,Completed
+B1343,Lakeside Retreat,Lakeside,4,Airbnb,2026-08-31,2026-09-03,2026-09-07,4,6,327,160,206,1262,Completed
+B1344,Lakeside Retreat,Lakeside,4,Vrbo,2026-08-27,2026-09-07,2026-09-14,7,6,312,160,188,2156,Completed
+B1345,Lakeside Retreat,Lakeside,4,Airbnb,2026-07-27,2026-09-14,2026-09-16,2,5,308,160,109,667,Completed
+B1346,Lakeside Retreat,Lakeside,4,Airbnb,2026-07-22,2026-09-19,2026-09-23,4,8,305,160,193,1187,Completed
+B1347,Lakeside Retreat,Lakeside,4,Airbnb,2026-09-12,2026-09-25,2026-10-01,6,5,315,160,287,1763,Completed
+B1348,Dockside Cottage,Lakeside,3,Airbnb,2026-02-10,2026-04-01,2026-04-05,4,2,191,135,126,773,Completed
+B1349,Dockside Cottage,Lakeside,3,Airbnb,2026-01-20,2026-04-06,2026-04-09,3,5,185,135,97,593,Completed
+B1350,Dockside Cottage,Lakeside,3,Airbnb,2026-02-03,2026-04-09,2026-04-13,4,3,186,135,123,756,Completed
+B1351,Dockside Cottage,Lakeside,3,Airbnb,2026-02-22,2026-04-15,2026-04-21,6,3,202,135,189,1158,Completed
+B1352,Dockside Cottage,Lakeside,3,Airbnb,2026-02-26,2026-04-21,2026-04-27,6,2,198,135,185,1138,Completed
+B1353,Dockside Cottage,Lakeside,3,Vrbo,2026-02-22,2026-04-30,2026-05-06,6,6,219,135,116,1333,Completed
+B1354,Dockside Cottage,Lakeside,3,Airbnb,2026-03-28,2026-05-06,2026-05-09,3,1,209,135,107,655,Completed
+B1355,Dockside Cottage,Lakeside,3,Airbnb,2026-02-14,2026-05-09,2026-05-12,3,2,243,135,121,743,Completed
+B1356,Dockside Cottage,Lakeside,3,Vrbo,2026-03-03,2026-05-12,2026-05-18,6,5,221,135,117,1344,Completed
+B1357,Dockside Cottage,Lakeside,3,Airbnb,2026-04-08,2026-05-20,2026-05-27,7,4,240,135,254,1561,Completed
+B1358,Dockside Cottage,Lakeside,3,Vrbo,2026-05-17,2026-05-28,2026-05-30,2,5,245,135,50,575,Completed
+B1359,Dockside Cottage,Lakeside,3,Vrbo,2026-05-24,2026-05-30,2026-06-06,7,4,223,135,136,1560,Completed
+B1360,Dockside Cottage,Lakeside,3,Vrbo,2026-05-19,2026-06-08,2026-06-12,4,5,259,135,94,1077,Completed
+B1361,Dockside Cottage,Lakeside,3,Airbnb,2026-05-15,2026-06-12,2026-06-19,7,4,253,135,267,1639,Completed
+B1362,Dockside Cottage,Lakeside,3,Vrbo,2026-04-29,2026-06-19,2026-06-21,2,5,287,135,57,652,Completed
+B1363,Dockside Cottage,Lakeside,3,Vrbo,2026-05-25,2026-06-21,2026-06-24,3,3,297,135,82,944,Completed
+B1364,Dockside Cottage,Lakeside,3,Vrbo,2026-04-17,2026-06-24,2026-07-01,7,5,257,135,155,1779,Completed
+B1365,Dockside Cottage,Lakeside,3,Airbnb,2026-06-11,2026-07-05,2026-07-07,2,6,289,135,100,613,Completed
+B1366,Dockside Cottage,Lakeside,3,Airbnb,2026-05-01,2026-07-07,2026-07-09,2,6,272,135,95,584,Completed
+B1367,Dockside Cottage,Lakeside,3,Vrbo,2026-05-19,2026-07-09,2026-07-12,3,1,296,135,82,941,Completed
+B1368,Dockside Cottage,Lakeside,3,Booking.com,2026-06-28,2026-07-16,2026-07-19,3,2,293,135,152,862,Completed
+B1369,Dockside Cottage,Lakeside,3,Vrbo,2026-05-16,2026-07-19,2026-07-21,2,2,289,135,57,656,Completed
+B1370,Dockside Cottage,Lakeside,3,Vrbo,2026-06-02,2026-07-21,2026-07-27,6,4,284,135,147,1692,Completed
+B1371,Dockside Cottage,Lakeside,3,Vrbo,2026-07-07,2026-07-29,2026-08-04,6,5,302,135,156,1791,Completed
+B1372,Dockside Cottage,Lakeside,3,Vrbo,2026-05-20,2026-08-06,2026-08-13,7,4,276,135,165,0,Cancelled
+B1373,Dockside Cottage,Lakeside,3,Direct,2026-07-07,2026-08-13,2026-08-15,2,3,288,135,0,711,Completed
+B1374,Dockside Cottage,Lakeside,3,Vrbo,2026-07-05,2026-08-15,2026-08-22,7,5,277,135,166,1908,Completed
+B1375,Dockside Cottage,Lakeside,3,Airbnb,2026-07-06,2026-08-22,2026-08-29,7,6,273,135,286,1760,Completed
+B1376,Dockside Cottage,Lakeside,3,Airbnb,2026-07-31,2026-08-29,2026-08-31,2,4,266,135,93,574,Completed
+B1377,Dockside Cottage,Lakeside,3,Vrbo,2026-06-26,2026-08-31,2026-09-06,6,6,298,135,154,1769,Completed
+B1378,Dockside Cottage,Lakeside,3,Airbnb,2026-07-26,2026-09-07,2026-09-09,2,4,232,135,84,0,Cancelled
+B1379,Dockside Cottage,Lakeside,3,Booking.com,2026-08-16,2026-09-09,2026-09-14,5,5,232,135,194,1101,Completed
+B1380,Dockside Cottage,Lakeside,3,Vrbo,2026-08-29,2026-09-14,2026-09-21,7,6,246,135,149,1708,Completed
+B1381,Dockside Cottage,Lakeside,3,Vrbo,2026-09-09,2026-09-21,2026-09-27,6,2,231,135,122,1399,Completed
+B1382,Dockside Cottage,Lakeside,3,Airbnb,2026-08-12,2026-09-27,2026-10-02,5,3,211,135,167,1023,Completed
+B1383,Willow Point House,Lakeside,3,Airbnb,2026-02-12,2026-04-01,2026-04-08,7,2,224,135,238,1465,Completed
+B1384,Willow Point House,Lakeside,3,Vrbo,2026-01-13,2026-04-08,2026-04-15,7,6,240,135,145,1670,Completed
+B1385,Willow Point House,Lakeside,3,Direct,2026-03-24,2026-04-15,2026-04-21,6,5,241,135,0,1581,Completed
+B1386,Willow Point House,Lakeside,3,Vrbo,2026-03-04,2026-04-21,2026-04-28,7,4,227,135,138,1586,Completed
+B1387,Willow Point House,Lakeside,3,Direct,2026-03-10,2026-05-01,2026-05-03,2,6,249,135,0,633,Completed
+B1388,Willow Point House,Lakeside,3,Airbnb,2026-02-13,2026-05-03,2026-05-06,3,5,222,135,112,689,Completed
+B1389,Willow Point House,Lakeside,3,Vrbo,2026-03-01,2026-05-06,2026-05-09,3,5,269,135,75,867,Completed
+B1390,Willow Point House,Lakeside,3,Booking.com,2026-04-03,2026-05-13,2026-05-18,5,3,240,135,200,1135,Completed
+B1391,Willow Point House,Lakeside,3,Vrbo,2026-03-15,2026-05-18,2026-05-21,3,5,246,135,70,0,Cancelled
+B1392,Willow Point House,Lakeside,3,Direct,2026-04-03,2026-05-21,2026-05-24,3,1,274,135,0,957,Completed
+B1393,Willow Point House,Lakeside,3,Airbnb,2026-05-18,2026-05-27,2026-05-30,3,5,253,135,125,769,Completed
+B1394,Willow Point House,Lakeside,3,Airbnb,2026-03-12,2026-06-03,2026-06-05,2,2,275,135,96,589,Completed
+B1395,Willow Point House,Lakeside,3,Booking.com,2026-04-30,2026-06-09,2026-06-12,3,2,291,135,151,857,Completed
+B1396,Willow Point House,Lakeside,3,Vrbo,2026-03-18,2026-06-12,2026-06-19,7,4,272,135,163,0,Cancelled
+B1397,Willow Point House,Lakeside,3,Direct,2026-04-10,2026-06-19,2026-06-21,2,1,303,135,0,741,Completed
+B1398,Willow Point House,Lakeside,3,Booking.com,2026-05-15,2026-06-21,2026-06-28,7,1,264,135,297,1686,Completed
+B1399,Willow Point House,Lakeside,3,Direct,2026-05-16,2026-06-28,2026-07-05,7,3,323,135,0,2396,Completed
+B1400,Willow Point House,Lakeside,3,Airbnb,2026-06-21,2026-07-05,2026-07-08,3,5,292,135,142,869,Completed
+B1401,Willow Point House,Lakeside,3,Airbnb,2026-05-14,2026-07-12,2026-07-19,7,3,293,135,306,1880,Completed
+B1402,Willow Point House,Lakeside,3,Airbnb,2026-05-13,2026-07-19,2026-07-26,7,3,288,135,301,1850,Completed
+B1403,Willow Point House,Lakeside,3,Vrbo,2026-07-19,2026-07-26,2026-07-31,5,5,327,135,142,1628,Completed
+B1404,Willow Point House,Lakeside,3,Booking.com,2026-06-09,2026-07-31,2026-08-05,5,5,325,135,264,1496,Completed
+B1405,Willow Point House,Lakeside,3,Vrbo,2026-07-03,2026-08-07,2026-08-14,7,5,307,135,183,2101,Completed
+B1406,Willow Point House,Lakeside,3,Direct,2026-07-14,2026-08-14,2026-08-16,2,1,318,135,0,771,Completed
+B1407,Willow Point House,Lakeside,3,Vrbo,2026-05-18,2026-08-16,2026-08-22,6,1,326,135,167,1924,Completed
+B1408,Willow Point House,Lakeside,3,Vrbo,2026-06-03,2026-08-22,2026-08-24,2,4,290,135,57,658,Completed
+B1409,Willow Point House,Lakeside,3,Booking.com,2026-06-10,2026-08-26,2026-08-28,2,3,277,135,103,586,Completed
+B1410,Willow Point House,Lakeside,3,Direct,2026-06-30,2026-08-30,2026-09-01,2,6,332,135,0,799,Completed
+B1411,Willow Point House,Lakeside,3,Airbnb,2026-07-25,2026-09-05,2026-09-08,3,6,236,135,118,725,Completed
+B1412,Willow Point House,Lakeside,3,Vrbo,2026-06-20,2026-09-08,2026-09-14,6,6,251,135,131,1510,Completed
+B1413,Willow Point House,Lakeside,3,Airbnb,2026-08-31,2026-09-18,2026-09-25,7,2,231,135,245,1507,Completed
+B1414,Willow Point House,Lakeside,3,Booking.com,2026-08-29,2026-09-25,2026-09-27,2,1,248,135,95,536,Completed
