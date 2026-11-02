@@ -96,7 +96,13 @@ const FN=SB_URL+'/functions/v1/academy-report';
 const LEVELMAP={};for(const k in LEVELS){const L=LEVELS[k];LEVELMAP[k]={name:L.name,project:L.project,missions:L.missions.map(m=>({t:m.t,blk:m.blk,steps:m.steps.length}))};}
 const LORDER=['beginner','intermediate','higher'];
 let DATA=[], sortKey='last_active', sortDir=-1, pass='';
-let STALL_DAYS=7, cohortFilter='';
+let STALL_DAYS=7, cohortFilter='', followOnly=false;
+// "Spark your ideas" is the point of every session: track who finished it and who needs a nudge.
+const IDEA_STEPS=IDEAS.missions[0].steps.length;
+function ideaStatus(pr){const p=pr.ideas||{};let d=0;for(let s=0;s<IDEA_STEPS;s++)if(p['0.'+s])d++;return d>=IDEA_STEPS?'done':d>0?'started':'none';}
+function anyActivity(pr){return Object.keys(pr).some(k=>k[0]!=='_'&&pr[k]&&typeof pr[k]==='object'&&Object.values(pr[k]).some(Boolean));}
+function guidesDone(pr){const h=pr._howtos||{};return HOWTOS.filter(x=>h[x.id]&&h[x.id].done).map(x=>x.title);}
+function ideaBadge(st){return st==='done'?'<span class="badge b-done">💡 Sparked</span>':st==='started'?'<span class="badge b-prog">Started</span>':'<span class="badge b-none">Not yet</span>';}
 
 function levelTotals(){const t={};LORDER.forEach(k=>t[k]=LEVELMAP[k].missions.reduce((a,m)=>a+m.steps,0));t.all=LORDER.reduce((a,k)=>a+t[k],0);return t;}
 const TOT=levelTotals();
@@ -130,9 +136,11 @@ function computeRows(){
     const ov=overall(pr);
     const lv={};LORDER.forEach(k=>{const d=countDone(pr,k);lv[k]={done:d,total:TOT[k],pct:pct(d,TOT[k])};});
     const idle=daysSince(u.last_active);
-    const stalled = ov.pct<100 && ov.done>0 && idle!=null && idle>=STALL_DAYS;
+    const idea=ideaStatus(pr),active=anyActivity(pr),guides=guidesDone(pr);
+    const stalled = idea!=='done' && active && idle!=null && idle>=STALL_DAYS;
+    const followUp = active && idea!=='done';
     return {name:u.name||'(no name)',email:u.email,created:u.created_at,active:u.last_active,ov,lv,progress:pr,
-      cohort:pr._cohort||'',track:pr._track||'',capstones:pr._capstones||{},feedback:pr._feedback||{},idle,stalled};
+      cohort:pr._cohort||'',track:pr._track||'',capstones:pr._capstones||{},feedback:pr._feedback||{},idle,stalled,idea,engaged:active,guides,followUp};
   });
 }
 function trackLabel(id){return ({quick:'1h Quick Start',explorer:'2h Cowork at Work',essentials:'4h Essentials',professional:'8h Professional',mastery:'12h Mastery'})[id]||((typeof ROLES!=='undefined'&&ROLES.find(r=>'role-'+r.id===id))?'Role: '+ROLES.find(r=>'role-'+r.id===id).name:'');}
@@ -141,6 +149,7 @@ function sortRows(rows){
     let av,bv;
     if(sortKey==='name'){av=a.name.toLowerCase();bv=b.name.toLowerCase();}
     else if(sortKey==='overall'){av=a.ov.pct;bv=b.ov.pct;}
+    else if(sortKey==='idea'){const o={done:2,started:1,none:0};av=o[a.idea];bv=o[b.idea];}
     else if(sortKey==='created'){av=new Date(a.created||0);bv=new Date(b.created||0);}
     else {av=new Date(a.active||0);bv=new Date(b.active||0);}
     if(av<bv)return -1*sortDir;if(av>bv)return 1*sortDir;return 0;
@@ -152,14 +161,17 @@ function render(){
   let rows=sortRows(computeRows());
   const allCohorts=[...new Set(computeRows().map(r=>r.cohort).filter(Boolean))].sort();
   if(cohortFilter)rows=rows.filter(r=>r.cohort===cohortFilter);
+  if(followOnly)rows=rows.filter(r=>r.followUp);
   document.getElementById('asof').textContent='As of '+new Date().toLocaleString()+' · '+rows.length+' learner'+(rows.length===1?'':'s')+(cohortFilter?(' in '+cohortFilter):'');
   // summary cards
-  const started=rows.filter(r=>r.ov.done>0).length;
+  const started=rows.filter(r=>r.engaged).length;
+  const sparked=rows.filter(r=>r.idea==='done').length;
+  const follow=rows.filter(r=>r.followUp).length;
   const fullDone=rows.filter(r=>r.ov.pct>=100).length;
   const stalledN=rows.filter(r=>r.stalled).length;
   const perLevelDone=LORDER.map(k=>rows.filter(r=>r.lv[k].pct>=100).length);
   const cards=[
-    ['Learners',rows.length],['Started',started],['Full mastery',fullDone],['⚠️ Stalled ('+STALL_DAYS+'d+)',stalledN],
+    ['Learners',rows.length],['Started',started],['💡 Ideas sparked',sparked],['📞 Follow up: no idea yet',follow],['⚠️ Stalled ('+STALL_DAYS+'d+)',stalledN],['Full mastery',fullDone],
     ['🌱 Beginner done',perLevelDone[0]],['⚡ Intermediate done',perLevelDone[1]],['🔥 Higher done',perLevelDone[2]]
   ];
   document.getElementById('cards').innerHTML=cards.map(c=>`<div class="card"><div class="n">${c[1]}</div><div class="l">${c[0]}</div></div>`).join('');
@@ -167,7 +179,9 @@ function render(){
   const cohortOpts=['<option value="">All teams/groups</option>'].concat(allCohorts.map(c=>`<option value="${esc(c)}" ${cohortFilter===c?'selected':''}>${esc(c)}</option>`)).join('');
   document.getElementById('controls').innerHTML=`
     <label>Team/group: <select id="cohortSel">${cohortOpts}</select></label>
-    <label>Flag stalled after <input id="stallInp" type="number" min="1" value="${STALL_DAYS}" style="width:56px"> days</label>`;
+    <label>Flag stalled after <input id="stallInp" type="number" min="1" value="${STALL_DAYS}" style="width:56px"> days</label>
+    <label><input id="followChk" type="checkbox" ${followOnly?'checked':''}> Only people to follow up with</label>`;
+  document.getElementById('followChk').onchange=e=>{followOnly=e.target.checked;render();};
   document.getElementById('cohortSel').onchange=e=>{cohortFilter=e.target.value;render();};
   document.getElementById('stallInp').onchange=e=>{STALL_DAYS=Math.max(1,+e.target.value||7);render();};
   if(!rows.length){document.getElementById('tablewrap').innerHTML='<div class="empty">No learners yet. Once someone starts the course, they\'ll appear here.</div>';return;}
@@ -177,6 +191,7 @@ function render(){
     <th>Team</th>
     <th data-sort="overall">Overall</th>
     <th data-sort="overall">Status</th>
+    <th data-sort="idea">Idea</th>
     <th>🌱 Beg</th><th>⚡ Int</th><th>🔥 High</th>
     <th data-sort="created">First seen</th>
     <th data-sort="active">Last active</th>
@@ -190,11 +205,12 @@ function render(){
       <td style="color:var(--muted)">${esc(r.cohort)||'—'}</td>
       <td>${pcell(r.ov)}<span style="color:var(--muted);font-size:11px">${r.ov.done}/${r.ov.total}</span></td>
       <td>${statusBadge(r.ov.pct)}</td>
+      <td>${ideaBadge(r.idea)}</td>
       <td>${r.lv.beginner.pct}%</td><td>${r.lv.intermediate.pct}%</td><td>${r.lv.higher.pct}%</td>
       <td style="color:var(--muted)">${fdate(r.created)}</td>
       <td style="color:var(--muted)">${fdate(r.active)}</td>
       <td><span class="expand" data-row="${i}">details ▾</span></td></tr>
-      <tr class="detail hide" id="d${i}"><td colspan="10">${missionDetail(r)}</td></tr>`;
+      <tr class="detail hide" id="d${i}"><td colspan="11">${missionDetail(r)}</td></tr>`;
   });
   html+='</tbody></table>';
   document.getElementById('tablewrap').innerHTML=html;
@@ -204,7 +220,11 @@ function render(){
 function capLink(v){const s=String(v||'');return /^https?:\/\//.test(s)?`<a href="${esc(s)}" target="_blank" rel="noopener">${esc(s)}</a>`:esc(s);}
 function missionDetail(r){
   let h='';
-  if(r.track)h+=`<div style="font-size:12.5px;color:var(--muted);margin-bottom:6px">Chosen track: <b style="color:var(--ink)">${esc(trackLabel(r.track))}</b></div>`;
+  if(r.track)h+=`<div style="font-size:12.5px;color:var(--muted);margin-bottom:6px">Chosen path: <b style="color:var(--ink)">${esc(trackLabel(r.track))}</b></div>`;
+  h+=`<div style="font-size:12.5px;color:var(--muted);margin-bottom:6px">Spark your ideas: ${ideaBadge(r.idea)} &nbsp; 10-minute guides done: <b style="color:var(--ink)">${r.guides.length?esc(r.guides.join(', ')):'none'}</b></div>`;
+  ROLES.forEach(role=>{const k='role-'+role.id;const p=r.progress[k];if(!p)return;
+    const tot=role.missions.reduce((a,m)=>a+m.steps.length,0);let d=0;for(const x in p)if(p[x])d++;
+    h+=`<div style="font-size:12.5px;color:var(--muted);margin-bottom:6px">${role.icon} ${esc(role.name)} path: <b style="color:var(--ink)">${pct(d,tot)}%</b></div>`;});
   LORDER.forEach(k=>{
     const cap=r.capstones[k];
     h+=`<div style="margin:8px 0 2px;font-weight:700;color:var(--accent2);font-size:12.5px">${LEVELMAP[k].name} — ${LEVELMAP[k].project} (${r.lv[k].pct}%)</div><div class="mgrid">`;
@@ -217,16 +237,19 @@ function missionDetail(r){
     h+='</div>';
     if(cap)h+=`<div class="capbox">🎯 <b>Capstone:</b> ${capLink(cap)}</div>`;
   });
+  Object.entries(r.capstones).forEach(([k,v])=>{if(!v||LORDER.includes(k))return;
+    h+=`<div class="capbox">🎯 <b>${esc(trackLabel(k.replace(/^s:/,''))||k)} capstone:</b> ${capLink(v)}</div>`;});
   return h;
 }
 function toCSV(){
   let rows=sortRows(computeRows());
   if(cohortFilter)rows=rows.filter(r=>r.cohort===cohortFilter);
-  const head=['Name','Email','Team','Track','Overall %','Steps done','Steps total','Beginner %','Intermediate %','Higher %','Stalled','Days idle','Capstones','First seen','Last active'];
+  if(followOnly)rows=rows.filter(r=>r.followUp);
+  const head=['Name','Email','Team','Track','Idea mission','Needs follow-up','Guides done','Overall %','Steps done','Steps total','Beginner %','Intermediate %','Higher %','Stalled','Days idle','Capstones','First seen','Last active'];
   const lines=[head.join(',')];
   rows.forEach(r=>{
-    const caps=LORDER.map(k=>r.capstones[k]).filter(Boolean).join(' | ');
-    const cells=[r.name,r.email,r.cohort,trackLabel(r.track),r.ov.pct,r.ov.done,r.ov.total,r.lv.beginner.pct,r.lv.intermediate.pct,r.lv.higher.pct,r.stalled?'YES':'',r.idle==null?'':r.idle,caps,r.created||'',r.active||''];
+    const caps=Object.values(r.capstones).filter(Boolean).join(' | ');
+    const cells=[r.name,r.email,r.cohort,trackLabel(r.track),r.idea,r.followUp?'YES':'',r.guides.length,r.ov.pct,r.ov.done,r.ov.total,r.lv.beginner.pct,r.lv.intermediate.pct,r.lv.higher.pct,r.stalled?'YES':'',r.idle==null?'':r.idle,caps,r.created||'',r.active||''];
     lines.push(cells.map(c=>{const s=String(c==null?'':c);return /[",\n]/.test(s)?'"'+s.replace(/"/g,'""')+'"':s;}).join(','));
   });
   const blob=new Blob([lines.join('\n')],{type:'text/csv'});const a=document.createElement('a');

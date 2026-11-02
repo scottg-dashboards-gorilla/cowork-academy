@@ -527,3 +527,6 @@ const ROLES = [
      hints:["Ask it to cut the update to half the length, then decide what you miss.","Ask: \"What question will my boss ask after reading this?\""]}
    ]}
 ];
+
+/* Where learners submit ideas. */
+const SPARK_URL = "https://spark.mydatapath.com";

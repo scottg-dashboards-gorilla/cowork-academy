@@ -292,7 +292,7 @@ button.tiny{font-size:13px;padding:6px 11px}
     <input type="text" id="gateCohort" placeholder="Operations, Cohort A" autocomplete="off">
     <div class="err" id="gateErr"></div>
     <button class="primary" id="gateStart">Start learning</button>
-    <p class="fine">Your name, email and the steps you complete are recorded so your program administrator can see progress. Other learners can't see it, and your notes stay on this device.</p>
+    <p class="fine">Your name, email and the steps you complete are recorded so your program administrator can see progress. Other learners can't see it, and your notes stay on this device. <a href="privacy.html" target="_blank" rel="noopener">Privacy notice</a> · <a href="terms.html" target="_blank" rel="noopener">Terms of use</a></p>
   </div>
 </div>
 
@@ -415,7 +415,7 @@ button.tiny{font-size:13px;padding:6px 11px}
     </details>
 
     <p class="xlink">Prefer a story? Try <a href="https://scottg-dashboards-gorilla.github.io/henry-founder-quest/" target="_blank" rel="noopener">Founder Quest</a> and build a whole business as a game.</p>
-    <p class="foot">Cowork Academy, by Datapath. <span id="ver">v2</span></p>
+    <p class="foot">Cowork Academy, by Datapath. <a href="facilitator.html">Facilitator kit</a> &nbsp; <a href="privacy.html">Privacy</a> &nbsp; <a href="terms.html">Terms of use</a> &nbsp; <span id="ver">v2</span></p>
   </section>
 
   <section id="board" class="board hide">
@@ -641,6 +641,7 @@ function renderList(items,ctx){
         <div class="steplabel">Do these in Cowork, and tick each one as you finish</div>
         <ul class="steps">${stepsHtml}</ul>
         <div class="victory"><b>🏁 You're done when:</b> ${esc(m.victory)}</div>
+        ${lvl==='ideas'?`<p style="margin:10px 0 0"><a class="finbtn" href="${SPARK_URL}" target="_blank" rel="noopener">Open Spark to submit your idea</a></p>`:''}
         ${thinkHtml}
         <div class="notes"><label>${m.think?'Your answer (it goes into your idea notebook, saved on this device)':'Your notes, saved on this device'}</label>
           <textarea data-note="${ii}" placeholder="${m.think?'Your answer to the question above, plus anything you want to remember...':'Jot anything you want to remember: what you built, links, ideas to revisit...'}">${esc(getNote(lvl,mi))}</textarea></div>
@@ -704,8 +705,9 @@ function refreshList(){
     const t=ctx.sess;
     const credName=t.icon?'your role certificate':t.cred;
     fin.innerHTML=`<h3>🏆 ${t.name} complete. You've earned ${credName}!</h3>
-      <p>You built real things with Claude Cowork and found an idea for your own work. Make sure your idea is in <b>Spark</b>, because that's where it turns into a real improvement. Then keep going with a how-to guide or a longer session.</p>
+      <p>You built real things with Claude Cowork and found an idea for your own work. Make sure your idea is in <a href="${SPARK_URL}" target="_blank" rel="noopener" style="color:var(--spark)">Spark</a>, because that's where it turns into a real improvement. Then keep going with a how-to guide or a longer session.</p>
       <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
+        <a class="finbtn" href="${SPARK_URL}" target="_blank" rel="noopener">Submit your idea in Spark</a>
         <a class="finbtn" href="${certLink(t.name+' — '+t.cred,p.done)}">🎓 Get your ${t.icon?'role':t.cred} certificate</a>
         <button class="ghost" onclick="goHome()">Back to the Academy</button>
       </div>`;
@@ -778,7 +780,7 @@ function renderFuse(){
   document.getElementById('fuseSub').textContent=fresh?'Every path follows the same four steps.':stage===3?'You sparked an idea. Make sure it\'s in Spark.':'You\'re on your way. Here\'s what comes next.';
   const steps=[['Learn by doing','Hands-on missions in Cowork, on real work.'],['Think about your work','Each mission asks where it fits in your job.'],['Spark an idea','Cowork helps you find your best opportunity.'],['Build it','Submit it in Spark, and Datapath helps build it.']];
   const ol=document.getElementById('fuseSteps');
-  ol.innerHTML=steps.map(([t,d],i)=>`<li class="${!fresh&&i<stage?'lit':!fresh&&i===stage?'now':''}"><span class="node">${!fresh&&i<stage?'✓':i+1}</span><div><div class="st">${t}</div><div class="sd">${d}</div></div></li>`).join('');
+  ol.innerHTML=steps.map(([t,d],i)=>`<li class="${!fresh&&i<stage?'lit':!fresh&&i===stage?'now':''}"><span class="node">${!fresh&&i<stage?'✓':i+1}</span><div><div class="st">${t}</div><div class="sd">${i===3?d.replace('Spark',`<a href="${SPARK_URL}" target="_blank" rel="noopener" style="color:var(--spark)">Spark</a>`):d}</div></div></li>`).join('');
   const pct=fresh?0:[0,30,62,100][stage];
   ol.style.setProperty('--lit','0%');requestAnimationFrame(()=>requestAnimationFrame(()=>ol.style.setProperty('--lit',pct+'%')));
 }
@@ -823,7 +825,7 @@ function renderNotebook(){
     host.innerHTML=`<div class="nbempty"><h3>Your notebook is empty</h3><p>Every mission ends with a question about your own work. Answer it, and your answer appears here, ready to turn into an idea for Spark.</p><button class="sparkbtn" id="nbStart">Start the 1-hour Quick Start</button></div>`;
     document.getElementById('nbStart').onclick=()=>openSession('quick');return;
   }
-  host.innerHTML=`<div class="nbtools"><button class="primary" id="nbCopy">Copy all for Spark</button><button id="nbDl">Download as text</button></div>`+
+  host.innerHTML=`<div class="nbtools"><button class="primary" id="nbCopy">Copy all for Spark</button><a class="finbtn" href="${SPARK_URL}" target="_blank" rel="noopener" style="font-size:14.5px;padding:9px 15px">Open Spark</a><button id="nbDl">Download as text</button></div>`+
     list.map((e,i)=>`<div class="nbentry"><div class="nq">${esc(e.q)}</div><div class="nfrom">${esc(e.from)}</div><button class="tiny nopen" data-nb="${i}">Open mission</button><div class="na">${esc(e.a)}</div></div>`).join('');
   document.getElementById('nbCopy').onclick=()=>navigator.clipboard.writeText(notebookText()).then(()=>toast('Copied. Paste your best ideas into Spark'));
   document.getElementById('nbDl').onclick=()=>{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([notebookText()],{type:'text/plain'}));a.download='my-cowork-ideas.txt';a.click();toast('Notebook downloaded');};
@@ -856,7 +858,7 @@ function renderHowto(id){
       <div class="see"><b>What you now have:</b> ${esc(h.result)}</div>
       <div class="think"><div class="tl">💭 Use it at work</div><p class="scene">Ways other people use this:</p>
         <ul>${h.atwork.map(a=>`<li>${esc(a)}</li>`).join('')}</ul>
-        <p class="ask">Where could you use this in your job? It's saved to your idea notebook. If it's a good idea, submit it in Spark.</p></div>
+        <p class="ask">Where could you use this in your job? It's saved to your idea notebook. If it's a good idea, <a href="${SPARK_URL}" target="_blank" rel="noopener">submit it in Spark</a>.</p></div>
       <div class="hwnotes"><textarea id="hwNote" placeholder="Your idea, in one sentence...">${esc(getNote('howto',id))}</textarea></div>
       <div class="hwnav"><button class="ghost" data-go="0">↺ Do it again</button>
         <button class="primary" onclick="goHome()">Back to the Academy</button></div></div>`;

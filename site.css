@@ -1,0 +1,41 @@
+/* Shared look for Cowork Academy's secondary pages (certificate, facilitator kit, privacy, terms).
+   Tokens match the inline styles in index.html. */
+:root{
+  --paper:#F2F5FA;--card:#FFFFFF;--sunk:#E9EEF6;--ink:#14213D;--slate:#55617A;--line:#D6DEEA;
+  --spark:#FFC83D;--spark-soft:#FFF1C7;--go:#127A5A;--go-soft:#E2F3EC;--blue:#2848A8;--warn:#B42318;
+  --display:"Bricolage Grotesque",ui-sans-serif,system-ui,sans-serif;
+  --body:"Atkinson Hyperlegible",ui-sans-serif,system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:var(--body);font-size:16px;line-height:1.6;color:var(--ink);background-color:var(--paper);
+  background-image:linear-gradient(rgba(20,33,61,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(20,33,61,.045) 1px,transparent 1px);background-size:28px 28px}
+a{color:var(--blue)}
+:focus-visible{outline:3px solid var(--blue);outline-offset:2px;border-radius:6px}
+h1,h2,h3{font-family:var(--display);letter-spacing:-.01em;line-height:1.2}
+.page{max-width:820px;margin:0 auto;padding:0 24px 80px}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 0;border-bottom:1px solid var(--line);margin-bottom:28px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;font-family:var(--display);font-weight:800;font-size:19px;color:var(--ink);text-decoration:none}
+.brand .mark{width:30px;height:30px;border-radius:8px;background:var(--ink);display:grid;place-items:center}
+.brand .mark i{width:10px;height:10px;border-radius:50%;background:var(--spark);box-shadow:0 0 0 4px rgba(255,200,61,.25)}
+.page h1{font-size:clamp(32px,4.4vw,44px);margin:0 0 10px;letter-spacing:-.02em}
+.page h2{font-size:24px;margin:36px 0 10px}
+.page h3{font-size:18px;margin:22px 0 6px}
+.lede{font-size:18px;color:var(--slate);margin:0 0 20px;max-width:38em}
+.page p,.page li{max-width:40em}
+.note{background:var(--spark-soft);border:1px solid #F0D27F;border-radius:12px;padding:12px 16px;margin:0 0 22px;font-size:15px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin:12px 0}
+table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;font-size:15px}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-family:var(--display);background:var(--sunk);font-size:14.5px}
+tr:last-child td{border-bottom:none}
+td.t{white-space:nowrap;font-weight:700;width:110px}
+button,.btn{font-family:var(--body);font-size:14.5px;font-weight:700;border-radius:10px;border:1px solid var(--line);padding:9px 15px;cursor:pointer;background:var(--card);color:var(--ink);text-decoration:none;display:inline-block}
+button:hover,.btn:hover{border-color:var(--ink)}
+.btn.primary,button.primary{background:var(--ink);color:#fff;border-color:var(--ink)}
+.btn.spark,button.spark{background:var(--spark);border-color:#E5AE1F}
+.copyblock{background:var(--paper);border:1px solid var(--line);border-left:4px solid var(--ink);border-radius:10px;padding:12px 14px;margin:8px 0}
+.copyblock pre{margin:0 0 8px;white-space:pre-wrap;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:13.5px;line-height:1.55}
+.foot{margin-top:40px;color:var(--slate);font-size:13.5px}
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:var(--ink);color:#fff;padding:10px 16px;border-radius:10px;font-weight:700;opacity:0;transition:.3s;pointer-events:none}
+.toast.show{opacity:1}
+@media print{body{background:#fff}.bar,.noprint{display:none}}
