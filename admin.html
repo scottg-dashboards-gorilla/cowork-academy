@@ -238,7 +238,7 @@ function missionDetail(r){
     if(cap)h+=`<div class="capbox">🎯 <b>Capstone:</b> ${capLink(cap)}</div>`;
   });
   Object.entries(r.capstones).forEach(([k,v])=>{if(!v||LORDER.includes(k))return;
-    h+=`<div class="capbox">🎯 <b>${esc(trackLabel(k.replace(/^s:/,''))||k)} capstone:</b> ${capLink(v)}</div>`;});
+    h+=`<div class="capbox">🎯 <b>${esc(trackLabel(k.replace(/^s:/,''))||'Other')} capstone:</b> ${capLink(v)}</div>`;});
   return h;
 }
 function toCSV(){
