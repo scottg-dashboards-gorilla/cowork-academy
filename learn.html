@@ -1,0 +1,1270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cowork Academy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F2F5FA;--card:#FFFFFF;--sunk:#E9EEF6;--ink:#14213D;--slate:#55617A;--line:#D6DEEA;
+  --spark:#FFC83D;--spark-soft:#FFF1C7;--go:#127A5A;--go-soft:#E2F3EC;--blue:#2848A8;--warn:#B42318;
+  --b1:#1F8A5B;--b2:#A86400;--b3:#B8355F;--b4:#8A6500;
+  /* legacy names used by rendered views */
+  --bg:var(--paper);--panel:var(--card);--panel2:var(--sunk);--muted:var(--slate);--accent:var(--blue);--accent2:var(--go);--gold:var(--b4);--good:var(--go);--bad:var(--warn);
+  --display:"Bricolage Grotesque",ui-sans-serif,system-ui,sans-serif;
+  --body:"Atkinson Hyperlegible",ui-sans-serif,system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:var(--body);font-size:16px;line-height:1.55;color:var(--ink);min-height:100vh;
+  background-color:var(--paper);
+  background-image:linear-gradient(rgba(20,33,61,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(20,33,61,.045) 1px,transparent 1px);
+  background-size:28px 28px}
+a{color:var(--blue)}
+:focus-visible{outline:3px solid var(--blue);outline-offset:2px;border-radius:6px}
+h1,h2,h3,h4{font-family:var(--display);letter-spacing:-.01em;line-height:1.15}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px 80px}
+.hide{display:none!important}
+
+/* ---- top bar ---- */
+.topbar{position:sticky;top:0;z-index:30;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;
+  padding:12px 0;margin-bottom:8px;background:rgba(242,245,250,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:10px;font-family:var(--display);font-weight:800;font-size:19px;color:var(--ink);text-decoration:none;cursor:pointer;background:none;border:none;padding:0}
+.brand .mark{width:30px;height:30px;border-radius:8px;background:var(--ink);display:grid;place-items:center}
+.brand .mark i{width:10px;height:10px;border-radius:50%;background:var(--spark);box-shadow:0 0 0 4px rgba(255,200,61,.25)}
+.who{font-size:13.5px;color:var(--slate)}
+.topbtns{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.savedot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--go);margin-right:6px;vertical-align:middle}
+
+/* ---- buttons ---- */
+button{font-family:var(--body);font-size:14.5px;font-weight:700;border-radius:10px;border:1px solid var(--line);padding:9px 15px;cursor:pointer;background:var(--card);color:var(--ink)}
+button:hover{border-color:var(--ink)}
+button.primary{background:var(--ink);color:#fff;border-color:var(--ink)}
+button.primary:hover{background:#22325a}
+button.sparkbtn,.finbtn{background:var(--spark);color:var(--ink);border:1px solid #E5AE1F;font-weight:700}
+button.sparkbtn:hover,.finbtn:hover{background:#FFD25E}
+button.ghost{background:transparent}
+button.tiny{font-size:13px;padding:6px 11px}
+.finbtn{display:inline-block;text-decoration:none;font-family:var(--body);font-size:15px;border-radius:10px;padding:11px 18px}
+
+/* ---- hero ---- */
+.hero{display:grid;grid-template-columns:1.25fr 1fr;gap:40px;align-items:center;padding:48px 0 28px}
+@media(max-width:900px){.hero{grid-template-columns:1fr;gap:28px;padding-top:28px}}
+.hero h1{font-size:clamp(36px,5.2vw,58px);font-weight:800;margin:0 0 16px;letter-spacing:-.025em}
+.hero .lede{font-size:18.5px;color:var(--slate);max-width:34em;margin:0 0 26px}
+.finder{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px 18px;box-shadow:0 1px 0 var(--line),0 12px 30px -24px rgba(20,33,61,.4)}
+.finder .fq{font-size:16px;line-height:2.4}
+.finder select{font-family:var(--body);font-size:15.5px;font-weight:700;color:var(--ink);background:var(--spark-soft);border:1px solid #F0D27F;border-radius:8px;padding:5px 8px;margin:0 2px;max-width:100%}
+.finder .frow{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:8px}
+.finder .fout{font-size:14px;color:var(--slate)}
+
+/* the fuse: the learner's journey, lit to their progress */
+.fuse{background:var(--ink);color:#fff;border-radius:20px;padding:26px 24px 22px;position:relative;overflow:hidden}
+.fuse h2{font-size:20px;margin:0 0 4px;color:#fff}
+.fuse .fsub{color:#B9C3D9;font-size:14px;margin:0 0 20px}
+.fuse ol{list-style:none;margin:0;padding:0;position:relative}
+.fuse ol::before{content:"";position:absolute;left:15px;top:16px;bottom:16px;width:3px;background:#2E3D63;border-radius:3px}
+.fuse ol::after{content:"";position:absolute;left:15px;top:16px;width:3px;height:var(--lit,0%);background:var(--spark);border-radius:3px;box-shadow:0 0 12px var(--spark);transition:height 1.4s cubic-bezier(.2,.7,.2,1)}
+.fuse li{position:relative;display:grid;grid-template-columns:34px 1fr;gap:12px;padding:8px 0;z-index:1}
+.fuse .node{width:33px;height:33px;border-radius:50%;background:#1D2B4D;border:2px solid #3A4A73;display:grid;place-items:center;font-size:15px;font-weight:800;color:#8D9BBB;font-family:var(--display)}
+.fuse li.lit .node{background:var(--spark);border-color:var(--spark);color:var(--ink)}
+.fuse li.now .node{background:var(--ink);border-color:var(--spark);color:var(--spark);box-shadow:0 0 0 5px rgba(255,200,61,.18)}
+.fuse .st{font-family:var(--display);font-weight:700;font-size:16.5px;color:#fff}
+.fuse .sd{font-size:13.5px;color:#B9C3D9}
+.fuse li:not(.lit):not(.now) .st{color:#C9D1E4}
+@media (prefers-reduced-motion:reduce){.fuse ol::after{transition:none}}
+
+/* ---- resume + stats strip ---- */
+.resume{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;background:var(--spark-soft);border:1px solid #F0D27F;border-radius:14px;padding:14px 18px;margin:8px 0 0}
+.resume .rt{font-weight:700}
+.resume .rs{font-size:14px;color:var(--slate)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr) auto;gap:0;background:var(--card);border:1px solid var(--line);border-radius:14px;margin:14px 0 0;overflow:hidden}
+.stats .st{padding:14px 18px;border-right:1px solid var(--line)}
+.stats .sv{font-family:var(--display);font-size:28px;font-weight:800;line-height:1}
+.stats .sl{font-size:13.5px;color:var(--slate);margin-top:4px}
+.stats .sa{display:flex;align-items:center;padding:12px 18px}
+@media(max-width:700px){.stats{grid-template-columns:1fr 1fr 1fr}.stats .sa{grid-column:1/-1;border-top:1px solid var(--line)}.stats .st:nth-child(3){border-right:none}}
+
+/* ---- path chooser ---- */
+.paths{margin-top:44px;scroll-margin-top:84px}
+@media(max-width:700px){.topbar{position:static}.topbar .who{display:none}.topbtns{flex-wrap:nowrap;overflow-x:auto;max-width:100%;padding-bottom:2px}.topbtns button{white-space:nowrap}}
+.paths>h2{font-size:30px;margin:0 0 6px}
+.paths>.psub{color:var(--slate);margin:0 0 18px;max-width:46em}
+.tabs{display:flex;gap:4px;background:var(--sunk);border-radius:12px;padding:4px;width:max-content;max-width:100%;overflow-x:auto}
+.tabs button{border:none;background:transparent;border-radius:9px;padding:9px 16px;font-size:14.5px;color:var(--slate);white-space:nowrap}
+.tabs button[aria-selected="true"]{background:var(--card);color:var(--ink);box-shadow:0 1px 3px rgba(20,33,61,.15)}
+.tabpanel{margin-top:18px}
+.tabpanel .tnote{color:var(--slate);font-size:14.5px;margin:0 0 14px;max-width:48em}
+
+/* time ruler: sessions laid out by how long they take */
+.ruler{position:relative;height:28px;margin:0 6px 6px;border-bottom:2px solid var(--ink)}
+.ruler span{position:absolute;bottom:-2px;transform:translateX(-50%);font-family:var(--display);font-weight:700;font-size:13px;color:var(--slate);padding-bottom:8px}
+.ruler span::after{content:"";position:absolute;left:50%;bottom:0;width:2px;height:7px;background:var(--ink)}
+@media(max-width:820px){.ruler{display:none}}
+.sessgrid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+@media(max-width:980px){.sessgrid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.sessgrid{grid-template-columns:1fr}}
+.sess{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;cursor:pointer;display:flex;flex-direction:column;text-align:left;font-weight:400;font-size:inherit;color:inherit;line-height:inherit}
+.sess:hover{border-color:var(--ink)}
+.sess.cur{border:2px solid var(--ink);padding:15px}
+.sess .hrs{font-family:var(--display);font-size:30px;font-weight:800;line-height:1}
+.sess .hrs small{font-size:15px;color:var(--slate);font-weight:700}
+.sess h4{margin:8px 0 2px;font-size:17px}
+.sess .cred{font-size:13px;color:var(--b4);font-weight:700}
+.sess .who{color:var(--slate);font-size:13.5px;margin:8px 0}
+.sess ul{margin:0 0 12px;padding-left:17px;color:var(--slate);font-size:13.5px;flex:1}
+.sess ul li{margin:3px 0}
+.sess .prog{height:6px;background:var(--sunk);border-radius:99px;overflow:hidden;margin:2px 0 8px}
+.sess .prog i{display:block;height:100%;background:var(--go)}
+.sess .go{font-size:14px;font-weight:700;color:var(--blue)}
+.sess.rec{box-shadow:0 0 0 3px var(--spark)}
+.rolegrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px}
+.rolegrid .sess .hrs{font-size:26px}
+.howgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
+.how{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;cursor:pointer;position:relative;text-align:left;font-weight:400;font-size:inherit;color:inherit;line-height:inherit;display:block;width:100%}
+.how:hover{border-color:var(--ink)}
+.how .hi{font-size:26px;line-height:1}
+.how h4{margin:8px 0 4px;font-size:17px}
+.how .hr{color:var(--slate);font-size:14px;margin:0 0 8px}
+.how .hm{font-size:13.5px;color:var(--slate);font-weight:700}
+.how .hdone{position:absolute;top:14px;right:14px;font-size:12px;font-weight:700;color:var(--go);background:var(--go-soft);border-radius:99px;padding:3px 9px}
+.levels{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+@media(max-width:820px){.levels{grid-template-columns:1fr}}
+.lvl{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;cursor:pointer;border-top:4px solid var(--line)}
+.lvl:hover{border-color:var(--ink)}
+.lvl.b1{border-top-color:var(--b1)}.lvl.b2{border-top-color:var(--b2)}.lvl.b3{border-top-color:var(--b3)}
+.lvl .tag{font-size:13.5px;font-weight:700;color:var(--slate)}
+.lvl h2{margin:8px 0 4px;font-size:21px}
+.lvl .proj{display:none}
+.lvl p{color:var(--slate);font-size:14px;margin:0 0 12px}
+.lvl ul{margin:0 0 14px;padding-left:18px;color:var(--slate);font-size:14px}
+.lvl .meta{display:flex;justify-content:space-between;font-size:13px;color:var(--slate)}
+.lvl .prog{height:6px;background:var(--sunk);border-radius:99px;overflow:hidden;margin-top:6px}
+.lvl .prog i{display:block;height:100%;background:var(--go)}
+.tbadge{font-size:12.5px;color:var(--slate);font-weight:700;background:var(--sunk);border-radius:99px;padding:2px 8px}
+
+/* ---- reference row ---- */
+.refrow{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:44px}
+@media(max-width:820px){.refrow{grid-template-columns:1fr}}
+.edbadge{font-family:var(--display);font-weight:700;font-size:13px;background:var(--spark-soft);color:var(--ink);border:1px solid #E5AE1F;border-radius:999px;padding:3px 10px;margin-right:auto}
+.refcard{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px}
+.refcard h3{margin:0 0 6px;font-size:19px}
+.refcard p{color:var(--slate);font-size:14.5px;margin:0 0 12px}
+.refcard ol{margin:0;padding-left:20px;font-size:14.5px}
+.refcard ol li{margin:6px 0}
+.dlinks{display:flex;gap:8px;flex-wrap:wrap}
+.dlinks a{font-size:13.5px;font-weight:700;text-decoration:none;border:1px solid var(--line);border-radius:9px;padding:7px 11px;background:var(--paper);color:var(--blue)}
+.dlinks a:hover{border-color:var(--blue)}
+.faq,.orient{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:4px 18px;margin:14px 0 0}
+.faq summary,.orient summary{cursor:pointer;font-weight:700;font-size:15.5px;padding:13px 0}
+.faq .fbody,.orient .obody{padding:0 0 14px;color:var(--slate);font-size:14.5px}
+.faq .fbody b,.orient .obody b{color:var(--ink)}
+.orient .obody p{margin:0 0 10px}
+.capgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:0 24px;padding-bottom:10px}
+@media(max-width:680px){.capgrid{grid-template-columns:1fr}}
+.caprow{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px dashed var(--line)}
+.caprow .cname{flex:1;font-size:14.5px;color:var(--ink)}
+.caprow .cname .cd{display:block;color:var(--slate);font-size:13px}
+.lvlchips{display:flex;gap:5px;flex-wrap:wrap}
+.lchip{font-size:12px;font-weight:700;padding:2px 8px;border-radius:99px;background:var(--sunk)}
+.lchip.b1{color:var(--b1)}.lchip.b2{color:var(--b2)}.lchip.b3{color:var(--b3)}
+.masterbanner{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;background:var(--spark-soft);border:1px solid #F0D27F;border-radius:14px;padding:14px 18px;margin-top:14px}
+.masterbanner .mt{font-weight:700}
+.masterbanner .ms{font-size:14px;color:var(--slate)}
+.xlink{margin-top:36px;font-size:14px;color:var(--slate)}
+.foot{color:var(--slate);font-size:13px;margin-top:8px}
+
+/* ---- mission / session board ---- */
+.board{margin-top:26px}
+.bhead{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:6px}
+.bhead h2{margin:0;font-size:32px}
+.pill{font-size:13px;font-weight:700;padding:4px 11px;border-radius:99px;background:var(--sunk);color:var(--ink)}
+.pill.b1{color:var(--b1)}.pill.b2{color:var(--b2)}.pill.b3{color:var(--b3)}.pill.b4{background:var(--spark-soft);color:var(--ink)}
+.bsub{color:var(--slate);font-size:16px;margin:4px 0 16px;max-width:46em}
+.barwrap{display:flex;align-items:center;gap:12px;margin-bottom:20px}
+.barwrap .prog{flex:1;height:10px;background:var(--sunk);border-radius:99px;overflow:hidden}
+.barwrap .prog i{display:block;height:100%;width:0;background:var(--go);transition:width .4s}
+.barwrap .pct{font-size:14px;color:var(--slate);min-width:140px;text-align:right}
+.grouphead{font-family:var(--display);font-size:15px;font-weight:700;color:var(--slate);margin:24px 0 10px}
+.mission{background:var(--card);border:1px solid var(--line);border-radius:14px;margin-bottom:12px;overflow:hidden}
+.mission.done{border-color:#9FD3BE}
+.mhead{display:flex;align-items:center;gap:13px;padding:15px 18px;cursor:pointer;user-select:none}
+.mnum{flex:0 0 auto;width:34px;height:34px;border-radius:50%;background:var(--sunk);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:800;font-size:15px}
+.mission.done .mnum{background:var(--go);color:#fff}
+.mtitle{flex:1}
+.mtitle .t{font-family:var(--display);font-weight:700;font-size:17.5px}
+.mtitle .blk{font-size:13px;color:var(--slate)}
+.mtime{font-size:13px;color:var(--slate);white-space:nowrap}
+.mchev{color:var(--slate);font-size:13px}
+.mbody{padding:0 18px 18px;border-top:1px solid var(--line)}
+.mbody .lead{color:var(--slate);font-size:15.5px;margin:14px 0}
+.promptcard{background:var(--paper);border:1px solid var(--line);border-left:4px solid var(--ink);border-radius:10px;padding:12px 14px;margin:6px 0 4px}
+.promptcard .plabel{font-size:13.5px;font-weight:700;margin-bottom:8px}
+.promptrow{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.promptrow code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:13.5px;flex:1;min-width:200px;line-height:1.55;color:var(--ink)}
+.steplabel,.blocklabel{font-size:14px;font-weight:700;margin:16px 0 4px}
+.blocklabel .lite{color:var(--slate);font-weight:400}
+.steps{list-style:none;padding:0;margin:6px 0}
+.steps li{display:flex;gap:10px;align-items:flex-start;padding:8px 0;border-bottom:1px dashed var(--line)}
+.steps li:last-child{border-bottom:none}
+.steps input{margin-top:4px;width:18px;height:18px;accent-color:var(--go);flex:0 0 auto;cursor:pointer}
+.steps .stxt{font-size:15.5px}
+.steps li.checked .stxt{color:var(--slate);text-decoration:line-through}
+.victory{background:var(--go-soft);border-radius:10px;padding:11px 14px;margin:14px 0;font-size:14.5px}
+.victory b{color:var(--go)}
+.think{background:var(--spark-soft);border:1px solid #F0D27F;border-radius:12px;padding:13px 15px;margin:14px 0 0}
+.think .tl{font-family:var(--display);font-size:15px;font-weight:700;margin-bottom:4px}
+.think .scene{color:#4A4130;font-size:14.5px;margin:0 0 6px}
+.think .ask{font-size:15.5px;font-weight:700;margin:0}
+.think ul{margin:4px 0 8px;padding-left:18px;font-size:14.5px}
+.notes label{display:block;font-size:13.5px;color:var(--slate);margin:14px 0 5px}
+.notes textarea,.hwnotes textarea{width:100%;background:var(--card);border:1px solid var(--line);border-radius:10px;color:var(--ink);padding:11px 13px;font-family:var(--body);font-size:15px;resize:vertical;min-height:70px}
+.notes textarea:focus,.hwnotes textarea:focus{outline:none;border-color:var(--ink)}
+.hintswrap{margin:14px 0 2px;border-top:1px dashed var(--line);padding-top:8px}
+.hintbox{margin:6px 0}
+.hintbox summary{cursor:pointer;color:var(--blue);font-size:14.5px;font-weight:700}
+.hintbox .hcontent{font-size:14.5px;color:var(--slate);border-left:3px solid var(--line);padding:4px 0 4px 12px;margin:6px 0 6px 4px}
+.fb{display:flex;align-items:center;gap:8px;margin:12px 0 2px;font-size:14px;color:var(--slate)}
+.fb button{padding:4px 10px;font-size:13.5px}
+.fb button.on{border-color:var(--go);background:var(--go-soft)}
+.capstone{background:var(--card);border:2px dashed var(--ink);border-radius:14px;padding:16px 18px;margin:16px 0}
+.capstone .cl{font-family:var(--display);font-weight:700;font-size:17px;margin-bottom:4px}
+.capstone p{color:var(--slate);font-size:14px;margin:0 0 10px}
+.capstone input{width:100%;background:var(--paper);border:1px solid var(--line);border-radius:9px;color:var(--ink);padding:10px 12px;font-size:15px;font-family:var(--body)}
+.capstone .saved{font-size:13px;color:var(--go);margin-top:6px;min-height:15px}
+.finale{background:var(--ink);color:#fff;border-radius:20px;padding:28px;text-align:center;margin-top:22px}
+.finale h3{margin:0 0 8px;font-size:26px;color:#fff}
+.finale p{color:#C9D1E4;max-width:600px;margin:0 auto 16px}
+.finale button.ghost{color:#fff;border-color:#3A4A73}
+.finale button.primary{background:#fff;color:var(--ink)}
+
+/* ---- mission roadmap ---- */
+.road{list-style:none;margin:0;padding:0}
+.roadhead{font-family:var(--display);font-weight:700;color:var(--slate);font-size:15px;margin:22px 0 8px}
+.rm{display:grid;grid-template-columns:40px 1fr auto;gap:14px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin-bottom:8px}
+.rm.now{border:2px solid var(--ink);padding:13px 15px}
+.rm .rn{width:36px;height:36px;border-radius:50%;background:var(--sunk);display:grid;place-items:center;font-family:var(--display);font-weight:800}
+.rm.done .rn{background:var(--go);color:#fff}
+.rm.now .rn{background:var(--spark)}
+.rtt{font-family:var(--display);font-weight:700;font-size:17px;line-height:1.3}
+.rts{font-size:13.5px;color:var(--slate)}
+.rst{display:inline-block;margin-left:6px;font-weight:700;color:var(--ink);background:var(--spark-soft);border-radius:99px;padding:1px 8px;font-size:12.5px}
+.rm.done .rst{background:var(--go-soft);color:var(--go)}
+details.capstone summary{cursor:pointer;font-family:var(--display);font-weight:700;font-size:16px}
+details.capstone p{margin-top:10px}
+
+/* ---- mission player ---- */
+.ptop{display:flex;align-items:center;gap:12px;flex-wrap:wrap;color:var(--slate);font-size:14px;margin-bottom:10px}
+.ptitle{font-size:clamp(26px,3.6vw,36px);margin:0 0 6px}
+.plead{font-size:17px;margin:0 0 4px;max-width:44em}
+.pwhy{color:var(--slate);font-size:15px;margin:0 0 16px;max-width:44em}
+.dots{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 14px}
+.dot{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;padding:0;font-family:var(--display);font-size:13.5px;font-weight:800;background:var(--card);color:var(--slate);border:1px solid var(--line)}
+.dot.d{background:var(--go-soft);color:var(--go);border-color:#9FD3BE}
+.dot.c{background:var(--spark);color:var(--ink);border:2px solid #E5AE1F}
+.dot.flag{background:transparent;border:1px dashed var(--line)}
+.stepcard{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:26px 28px;box-shadow:0 18px 40px -30px rgba(20,33,61,.45);max-width:820px}
+.stepcard .sk{font-size:14px;font-weight:700;color:var(--slate)}
+.stepcard h3{font-size:26px;margin:4px 0 12px}
+.sdo{font-size:18.5px;line-height:1.5;margin:0 0 14px}
+.pbox{display:flex;gap:12px;align-items:flex-start;background:var(--paper);border:1px solid var(--line);border-left:4px solid var(--ink);border-radius:12px;padding:14px 16px;margin:4px 0 6px}
+.ptext{flex:1;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:14px;line-height:1.6;white-space:pre-wrap}
+.ptext mark{background:var(--spark-soft);color:var(--ink);border-radius:4px;padding:0 2px}
+.copybtn{flex:0 0 auto;background:var(--ink);color:#fff;border-color:var(--ink)}
+.pnote{color:var(--slate);font-size:14px;margin:6px 0 10px}
+.files{display:flex;gap:8px;flex-wrap:wrap;margin:6px 0 12px}
+.filebtn{display:inline-block;text-decoration:none;font-weight:700;font-size:14.5px;border:1px solid var(--blue);color:var(--blue);border-radius:10px;padding:9px 14px;background:var(--card)}
+.stuck{margin:8px 0 0}
+.stuck summary{cursor:pointer;color:var(--blue);font-weight:700;font-size:15px}
+.stuck div{color:var(--slate);font-size:15px;border-left:3px solid var(--line);padding:4px 0 4px 12px;margin:8px 0 0 4px}
+.see.miss{background:#FDECEA}
+.see.miss b{color:var(--warn)}
+.nav{display:flex;justify-content:space-between;gap:10px;margin-top:22px;flex-wrap:wrap}
+.nav .primary{font-size:16px;padding:12px 22px}
+.nav button:disabled{opacity:.4;cursor:default}
+.opts{display:grid;gap:8px;margin:4px 0 6px}
+.opts.row{grid-template-columns:repeat(3,1fr)}
+@media(max-width:600px){.opts.row{grid-template-columns:1fr}}
+.opt{text-align:left;font-weight:700;font-size:16px;padding:13px 16px;border-radius:12px;background:var(--card)}
+.opts.row .opt{text-align:center}
+.opt.right{background:var(--go-soft);border-color:var(--go);color:var(--go)}
+.opt.wrong{background:#FDECEA;border-color:var(--warn);color:var(--warn)}
+.opt:disabled{cursor:default;opacity:1}
+.stepcard.think{border-color:#F0D27F}
+.stepcard.think .scene{color:#4A4130;font-size:15.5px;background:var(--spark-soft);border-radius:10px;padding:10px 14px}
+.stepcard.think .ask{display:block;font-family:var(--display);font-weight:700;font-size:19px;margin:14px 0 8px}
+.stepcard textarea{width:100%;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px;font-family:var(--body);font-size:16px;min-height:90px;color:var(--ink)}
+.stepcard textarea:focus,.ifield:focus{outline:none;border-color:var(--ink)}
+.ibuild{font-size:18px;line-height:2.4}
+.ifield{font-family:var(--body);font-size:16px;border:none;border-bottom:2px solid var(--ink);background:var(--spark-soft);padding:4px 8px;border-radius:6px 6px 0 0;max-width:100%;color:var(--ink)}
+.ipreview{font-family:var(--display);font-size:19px;font-weight:700;background:var(--paper);border-radius:12px;padding:14px 16px;margin:14px 0}
+.donecard h3{font-size:30px}
+.finalbar{height:8px;background:var(--sunk);border-radius:99px;overflow:hidden;margin:0 0 14px;max-width:820px}.finalbar i{display:block;height:100%;background:var(--go)}
+.more{position:relative}.more summary{list-style:none;cursor:pointer;font-weight:700;font-size:13px;border:1px solid var(--line);border-radius:10px;padding:6px 11px;background:transparent}
+.more summary::-webkit-details-marker{display:none}
+.more .menu{position:absolute;right:0;top:110%;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:6px;display:grid;gap:2px;min-width:200px;box-shadow:0 12px 30px -16px rgba(20,33,61,.45);z-index:40}
+.more .menu button{text-align:left;border:none}.more .menu a{display:block;font-size:13px;font-weight:700;padding:6px 11px;color:var(--ink);text-decoration:none;border-radius:8px}.more .menu a:hover{background:var(--sunk)}.more .menu .danger{color:var(--warn)}
+@media(max-width:600px){.pbox{flex-direction:column}.stepcard{padding:20px 18px}.sdo{font-size:17px}.rm{grid-template-columns:36px 1fr;}.rm button{grid-column:1/-1}}
+
+/* ---- how-to stepper ---- */
+.hwdots{display:flex;gap:6px;flex-wrap:wrap;margin:6px 0 16px}
+.hwdots span{width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;background:var(--card);color:var(--slate);border:1px solid var(--line);font-family:var(--display)}
+.hwdots span.d{background:var(--go);color:#fff;border-color:var(--go)}
+.hwdots span.c{background:var(--spark);border-color:#E5AE1F;color:var(--ink)}
+.hwcard{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px}
+.hwcard h3{margin:0 0 10px;font-size:26px}
+.hwnum{font-size:14px;font-weight:700;color:var(--slate)}
+.hwdo{font-family:var(--display);font-size:22px;font-weight:700;margin:6px 0 14px;line-height:1.35}
+.see{background:var(--go-soft);border-radius:10px;padding:11px 14px;margin:14px 0 6px;font-size:15px}
+.see b{color:var(--go)}
+.hwnav{display:flex;justify-content:space-between;gap:10px;margin-top:18px;flex-wrap:wrap}
+.hwnav button:disabled{opacity:.35;cursor:default}
+
+/* ---- idea notebook ---- */
+.nbtools{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 18px}
+.nbentry{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin-bottom:10px;display:grid;grid-template-columns:1fr auto;gap:6px 14px}
+.nbentry .nq{font-weight:700;font-size:15px}
+.nbentry .nfrom{font-size:13px;color:var(--slate);grid-column:1}
+.nbentry .na{grid-column:1/-1;font-size:16px;white-space:pre-wrap;background:var(--spark-soft);border-radius:8px;padding:10px 12px;margin-top:4px}
+.nbentry .nopen{grid-row:1/span 2;grid-column:2;align-self:start}
+.nbempty{background:var(--card);border:2px dashed var(--line);border-radius:16px;padding:30px;text-align:center}
+.nbempty p{color:var(--slate);max-width:34em;margin:6px auto 16px}
+
+/* ---- gate + toast ---- */
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:var(--ink);color:#fff;padding:11px 18px;border-radius:11px;font-weight:700;opacity:0;transition:.3s;pointer-events:none;z-index:50}
+.toast.show{opacity:1}
+.gate{position:fixed;inset:0;background:rgba(20,33,61,.55);backdrop-filter:blur(4px);display:flex;align-items:center;justify-content:center;z-index:100;padding:20px}
+.gatecard{background:var(--card);border-radius:20px;padding:30px 28px;max-width:440px;width:100%;box-shadow:0 30px 80px -30px rgba(20,33,61,.6)}
+.gatecard h2{margin:0 0 6px;font-size:26px}
+.gatecard p{color:var(--slate);font-size:15px;margin:0 0 16px}
+.gatecard label{display:block;font-size:14px;font-weight:700;margin:12px 0 5px}
+.gatecard input{width:100%;background:var(--paper);border:1px solid var(--line);border-radius:10px;color:var(--ink);padding:12px 13px;font-size:16px;font-family:var(--body)}
+.gatecard input:focus{outline:none;border-color:var(--ink)}
+.gatecard .err{color:var(--warn);font-size:14px;margin:8px 0 0;min-height:18px}
+.gatecard button{width:100%;margin-top:14px;padding:13px;font-size:16px}
+.gatecard .fine{font-size:13px;color:var(--slate);margin-top:14px;line-height:1.5}
+</style>
+</head>
+<body>
+<div class="gate hide" id="gate">
+  <div class="gatecard">
+    <h2>Welcome to Cowork Academy</h2>
+    <p>Tell us who you are so your progress is saved for your program.</p>
+    <label for="gateName">Your name</label>
+    <input type="text" id="gateName" placeholder="Jordan Rivera" autocomplete="name">
+    <label for="gateEmail">Work email</label>
+    <input type="email" id="gateEmail" placeholder="you@company.com" autocomplete="email">
+    <label for="gateCohort">Team or group <span style="font-weight:400;color:var(--slate)">(optional)</span></label>
+    <input type="text" id="gateCohort" placeholder="Operations, Cohort A" autocomplete="off">
+    <div class="err" id="gateErr"></div>
+    <button class="primary" id="gateStart">Start learning</button>
+    <p class="fine">Your name, email and the steps you complete are recorded so your program administrator can see progress. Other learners can't see it, and your notes stay on this device. <a href="privacy.html" target="_blank" rel="noopener">Privacy notice</a> · <a href="terms.html" target="_blank" rel="noopener">Terms of use</a></p>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="topbar">
+    <button class="brand" id="btnHome" aria-label="Cowork Academy home"><span class="mark"><i></i></span>Cowork Academy</button>
+    <div class="topbtns">
+      <span class="who" id="who"><span class="savedot"></span>Progress saves automatically</span>
+      <button class="tiny" id="btnNotebook">💡 My idea notebook</button>
+      <button class="ghost tiny" onclick="exportWorkbook()">Workbook PDF</button>
+      <details class="more"><summary class="tinybtn">More</summary><div class="menu">
+        <button class="ghost tiny" onclick="exportSave()">Back up my progress</button>
+        <button class="ghost tiny" onclick="importSave()">Restore from a backup</button>
+        <button class="ghost tiny danger" onclick="resetAll()">Reset all progress</button>
+        <a class="ghost tiny btn" href="index.html">How the Academy works</a></div></details>
+    </div>
+  </div>
+
+  <section id="picker">
+    <div class="hero">
+      <div>
+        <h1>Learn Claude by doing your own job. Leave with an idea worth building.</h1>
+        <p class="lede">Hands-on missions in Claude Cowork, built around real work. As you go, you'll spot the reports, copy-and-paste and chasing that Claude could take off your plate, and turn the best one into an idea for Spark.</p>
+        <div class="finder" id="finder">
+          <div class="fq">I work in
+            <select id="fRole" aria-label="Your role">
+              <option value="other">something else</option>
+            </select>
+            and I have
+            <select id="fTime" aria-label="Time you have">
+              <option value="1">about an hour</option>
+              <option value="2" selected>a couple of hours</option>
+              <option value="4">half a day</option>
+              <option value="8">a few days</option>
+            </select>
+          </div>
+          <div class="frow"><button class="sparkbtn" id="fGo">Show my path</button><span class="fout" id="fOut"></span></div>
+        </div>
+      </div>
+      <aside class="fuse" id="fuse" aria-label="Your progress through the Academy">
+        <h2 id="fuseTitle">How the Academy works</h2>
+        <p class="fsub" id="fuseSub">Every path follows the same four steps.</p>
+        <ol id="fuseSteps"></ol>
+      </aside>
+    </div>
+
+    <div id="resume" class="resume hide"></div>
+    <div class="stats" id="stats"></div>
+    <div id="masterBanner" class="masterbanner hide">
+      <div><div class="mt">👑 You've completed all three levels: Full Cowork Mastery</div>
+      <div class="ms">You've used essentially every Cowork capability, hands-on.</div></div>
+      <a class="finbtn" id="masterCertBtn" href="certificate.html?track=Full%20Cowork%20Mastery">Get your Mastery certificate</a>
+    </div>
+
+    <div class="paths" id="paths">
+      <h2>Choose your path</h2>
+      <p class="psub">Every path is hands-on in Cowork, asks you to think about your own work, ends by sparking an idea, and earns a certificate. Progress carries across paths, so nothing you finish is wasted.</p>
+      <div class="tabs" role="tablist" id="tabs">
+        <button role="tab" id="tab-time" aria-selected="true" aria-controls="panel-time">By time</button>
+        <button role="tab" id="tab-role" aria-selected="false" aria-controls="panel-role">By role</button>
+        <button role="tab" id="tab-how" aria-selected="false" aria-controls="panel-how">10-minute guides</button>
+        <button role="tab" id="tab-level" aria-selected="false" aria-controls="panel-level">By level</button>
+      </div>
+      <div class="tabpanel" role="tabpanel" id="panel-time" aria-labelledby="tab-time">
+        <div class="sessgrid" id="sessGrid"></div>
+      </div>
+      <div class="tabpanel hide" role="tabpanel" id="panel-role" aria-labelledby="tab-role">
+        <p class="tnote" id="roleNote"></p>
+        <div class="rolegrid" id="roleGrid"></div>
+      </div>
+      <div class="tabpanel hide" role="tabpanel" id="panel-how" aria-labelledby="tab-how">
+        <p class="tnote">Need one skill right now? One step at a time: do it in Cowork, check you see the result, move on.</p>
+        <div class="howgrid" id="howGrid"></div>
+      </div>
+      <div class="tabpanel hide" role="tabpanel" id="panel-level" aria-labelledby="tab-level">
+        <p class="tnote">Prefer to go level by level? Each level is one project built over several missions.</p>
+        <div class="levels" id="levelCards"></div>
+        <details class="faq">
+          <summary>Every Cowork capability, and the level where you learn it</summary>
+          <div class="capgrid" id="capGrid"></div>
+        </details>
+      </div>
+    </div>
+
+    <div class="refrow">
+      <div class="refcard">
+        <h3>Practice data pack</h3>
+        <p id="packText"></p>
+        <div class="dlinks" id="packLinks"></div>
+      </div>
+      <div class="refcard">
+        <h3>Three habits for using Claude at work</h3>
+        <ol>
+          <li><b>Keep private things private.</b> No passwords, and nothing your company's policy says stays inside approved tools.</li>
+          <li><b>Claude drafts, you send.</b> You approve anything that goes to a customer, spends money or changes a system.</li>
+          <li><b>Check before you share.</b> Look over numbers and facts before they leave your hands.</li>
+        </ol>
+      </div>
+    </div>
+
+    <details class="orient">
+      <summary>New to Claude Cowork? What it is and how this works</summary>
+      <div class="obody">
+        <p><b>What Cowork is:</b> Claude Cowork is an AI teammate that doesn't just chat; it does the work. It creates documents and spreadsheets, analyzes data, researches the web, connects to your apps and runs tasks on a schedule.</p>
+        <p><b>How the Academy works:</b> each mission gives you a ready-to-paste prompt. Do the task in your own Cowork window, then tick the steps here and answer the question about your own work. You learn by building real things.</p>
+        <p><a href="https://support.claude.com" target="_blank" rel="noopener">Official Claude documentation</a></p>
+      </div>
+    </details>
+    <details class="faq">
+      <summary>How is my progress saved, and is it private?</summary>
+      <div class="fbody">
+        <b>What's recorded:</b> your name, email, the steps you've checked, your capstones and your last-active time. Only your program administrator can see it, never other learners.<br><br>
+        <b>What stays on your device:</b> your notes and your idea notebook are saved only in this browser and are not uploaded.<br><br>
+        <b>Moving devices:</b> use Workbook PDF for a permanent copy, or Back up and Restore to move your record between computers.<br><br>
+        <b>What you build</b> (files, skills, connectors) lives in your own Claude Cowork, not here.
+      </div>
+    </details>
+
+    <p class="foot">Cowork Academy, by Datapath. <a href="facilitator.html">Facilitator kit</a> &nbsp; <a href="privacy.html">Privacy</a> &nbsp; <a href="terms.html">Terms of use</a> &nbsp; <span id="ver">v2</span></p>
+  </section>
+
+  <section id="board" class="board hide">
+    <div class="bhead">
+      <h2 id="bTitle"></h2>
+      <span class="pill" id="bPill"></span>
+    </div>
+    <p class="bsub" id="bSub"></p>
+    <div class="barwrap"><div class="prog"><i id="bBar"></i></div><div class="pct" id="bPct"></div></div>
+    <div id="missions"></div>
+    <div id="finale" class="finale hide"></div>
+  </section>
+
+  <section id="player" class="board hide"><div id="playHost"></div></section>
+
+  <section id="howto" class="board hide"><div id="hwHost"></div></section>
+
+  <section id="notebook" class="board hide">
+    <div class="bhead"><h2>💡 My idea notebook</h2></div>
+    <p class="bsub">Every answer you've written to "Think about your work," in one place. Your best ideas belong in Spark, where they can become real improvements.</p>
+    <div id="nbHost"></div>
+  </section>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+/* Edition: the general course (course-data.js) or a client edition (course-data-<id>.js).
+   ?edition=avari switches and is remembered on this device; ?edition=core switches back. */
+(function(){var KNOWN=['avari'],p=new URLSearchParams(location.search).get('edition'),e='';
+  try{if(p)localStorage.setItem('coworkAcademy.edition',KNOWN.indexOf(p)>=0?p:'');e=localStorage.getItem('coworkAcademy.edition')||'';}catch(x){e=p||'';}
+  if(KNOWN.indexOf(e)<0)e='';
+  document.write('<script src="course-data'+(e?'-'+e:'')+'.js"><\/script>');})();
+</script>
+<script>
+
+/* ---- Sessions (front door): time budget -> missions + credential. Every session ends with the "Spark an idea" mission. ---- */
+const SESSIONS=[
+  {id:'quick',hours:1,name:'AI Quick Start',cred:'Starter',
+   who:'Anyone with a Claude license. See what it can do for your job in one hour.',
+   outcomes:['Use Claude safely at work','Analyze real data and chart it','Leave with an idea for your own job'],
+   items:[['setup',0],['safety',0],['intermediate',5],['ideas',0]]},
+  {id:'explorer',hours:2,name:'Cowork at Work',cred:'Explorer',
+   who:'Busy professionals who want the highlights, applied to their own work.',
+   outcomes:['Use Claude safely at work',EDITION.explorerOutcome,'Analyze a spreadsheet and chart it','Build and save your own skill','Leave with an idea for your own job'],
+   items:[['setup',0],['safety',0],['beginner',7],['intermediate',5],['intermediate',2],['ideas',0]]},
+  {id:'essentials',hours:4,name:'Cowork Essentials',cred:'Practitioner',levels:['beginner'],
+   who:'Everyone. Your day-one Cowork toolkit.',
+   outcomes:['Word letters and working spreadsheets','Sourced research and a one-page team page','Use a skill and connect an approved app','Leave with ideas for your own job']},
+  {id:'professional',hours:8,name:'Cowork Professional',cred:'Builder',levels:['beginner','intermediate'],
+   who:'Power users and analysts who build repeatable workflows.',
+   outcomes:['Everything in Essentials, plus:','Build and save your own skills','Data analysis, decks and PDFs','A scheduled summary and a dashboard']},
+  {id:'mastery',hours:12,name:'Cowork Mastery',cred:'Architect',levels:['beginner','intermediate','higher'],
+   who:'Champions and adoption leaders who build for others.',
+   outcomes:['Everything in Professional, plus:','Two apps working together','Optional browser and desktop control','A chained workflow you design']}
+];
+const TRACKS=SESSIONS; // older name, kept for anything still referring to it
+const GROUPS=Object.assign({},LEVELS,{ideas:IDEAS,safety:SAFETY,setup:SETUP});
+ROLES.forEach(r=>{GROUPS['role-'+r.id]={key:'role-'+r.id,cls:'b4',icon:r.icon,name:r.name,missions:r.missions};});
+const ROLE_SESSIONS=ROLES.map(r=>({id:'role-'+r.id,hours:2,icon:r.icon,name:r.name,cred:'Role',who:r.who,
+  outcomes:r.outcomes.concat(['Leave with ideas for your own job']),
+  items:[['setup',0],['safety',0]].concat(r.missions.map((m,i)=>['role-'+r.id,i]),[['ideas',0]])}));
+function findSession(id){return SESSIONS.concat(ROLE_SESSIONS).find(x=>x.id===id);}
+function sessionItems(s){return s.items||[].concat([['setup',0],['safety',0]],...s.levels.map(l=>LEVELS[l].missions.map((m,mi)=>[l,mi])),[['ideas',0]]);}
+function itemsProgress(items){let total=0,done=0;items.forEach(([l,mi])=>GROUPS[l].missions[mi].steps.forEach((x,si)=>{total++;if(isChecked(l,mi,si))done++;}));return{done,total,pct:total?Math.round(done/total*100):0};}
+const MIN_PER_STEP=7;
+function missionMins(m){return m.mins||Math.round((m.steps.length*MIN_PER_STEP)/5)*5;}
+function levelMins(lvl){return GROUPS[lvl].missions.reduce((a,m)=>a+missionMins(m),0);}
+function fmtHrs(mins){const h=mins/60;return h>=1?('~'+(Math.round(h*10)/10)+' hr'):('~'+mins+' min');}
+const DOCS_URL='https://support.claude.com';
+
+const STORE_KEY=EDITION.storeKey;
+const IX=EDITION.ideaExample;
+function blank(){return {current:null,progress:{},notes:{},identity:null,registered:false,track:null,capstones:{},feedback:{},howtos:{}};}
+let state=load();
+if(!state.v2){state.progressV1=state.progress;state.progress={};state.howtos={};state.v2=true;state.play=null;state.current=null;try{localStorage.setItem(STORE_KEY,JSON.stringify(state));}catch(e){}}
+function load(){try{return Object.assign(blank(),JSON.parse(localStorage.getItem(STORE_KEY))||{});}catch(e){return blank();}}
+function save(){try{localStorage.setItem(STORE_KEY,JSON.stringify(state));}catch(e){}pulse();}
+
+/* ---- Progress tracking backend (write-only; reporting via passphrase admin page) ---- */
+const SB_URL='https://dptmmtqiedggqzmfsvdh.supabase.co';
+const SB_KEY='sb_publishable_goN36W02YRbIFEVKWZ7cZQ_v7y4JkX6';
+function sbHeaders(extra){return Object.assign({apikey:SB_KEY,Authorization:'Bearer '+SB_KEY,'Content-Type':'application/json'},extra||{});}
+// Learners write ONLY through a controlled SECURITY DEFINER function (no direct table access).
+async function syncNow(){
+  if(!state.identity)return;
+  // Bundle progress + metadata (cohort, track, capstones, feedback) into one JSON payload.
+  // Reserved keys start with "_" so level-progress counting ignores them.
+  const payload=Object.assign({},state.progress||{},{
+    _cohort:(state.identity&&state.identity.cohort)||'',
+    _edition:EDITION.id,
+    _track:state.track||'',
+    _capstones:state.capstones||{},
+    _feedback:state.feedback||{},
+    _howtos:state.howtos||{},
+    _finals:state.finals||{}
+  });
+  try{
+    const r=await fetch(SB_URL+'/rest/v1/rpc/academy_upsert',{method:'POST',headers:sbHeaders(),
+      body:JSON.stringify({p_email:state.identity.email,p_name:state.identity.name,p_progress:payload})});
+    if(r.ok){state.registered=true;}
+  }catch(e){/* offline — retry on next change */}
+}
+const registerUser=syncNow;
+let syncT;
+function scheduleSync(){
+  if(!state.identity)return;
+  clearTimeout(syncT);
+  syncT=setTimeout(syncNow,1200);
+}
+let pulseT;
+function pulse(){const w=document.getElementById('who');if(!w)return;w.innerHTML='<span class="savedot"></span>Saved.';clearTimeout(pulseT);
+  pulseT=setTimeout(()=>{w.innerHTML='<span class="savedot"></span>Your progress saves automatically.';},1200);}
+
+function isChecked(lvl,m,s){return !!(state.progress[lvl]&&state.progress[lvl][m+'.'+s]);}
+function setChecked(lvl,m,s,v){state.progress[lvl]=state.progress[lvl]||{};state.progress[lvl][m+'.'+s]=v;save();scheduleSync();}
+function getNote(lvl,m){return (state.notes[lvl]&&state.notes[lvl][m])||"";}
+function setNote(lvl,m,v){state.notes[lvl]=state.notes[lvl]||{};state.notes[lvl][m]=v;save();}
+function fbKey(lvl,mi){return lvl+'.'+mi;}
+function getFb(lvl,mi){return (state.feedback||{})[fbKey(lvl,mi)]||0;}
+function setFb(lvl,mi,v){state.feedback=state.feedback||{};const k=fbKey(lvl,mi);state.feedback[k]=(state.feedback[k]===v?0:v);save();scheduleSync();}
+function getCap(lvl){return (state.capstones||{})[lvl]||"";}
+function setCap(lvl,v){state.capstones=state.capstones||{};state.capstones[lvl]=v;save();scheduleSync();}
+
+function levelProgress(lvl){
+  const L=GROUPS[lvl];let total=0,done=0;
+  L.missions.forEach((m,mi)=>{m.steps.forEach((s,si)=>{total++;if(isChecked(lvl,mi,si))done++;});});
+  return{done,total,pct:total?Math.round(done/total*100):0};
+}
+function missionDone(lvl,mi){const m=GROUPS[lvl].missions[mi];return m.steps.every((s,si)=>isChecked(lvl,mi,si));}
+
+function esc(t){return String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+
+function renderSessions(){renderSessionGrid('sessGrid',SESSIONS);renderSessionGrid('roleGrid',ROLE_SESSIONS);}
+function renderSessionGrid(gridId,list){
+  const g=document.getElementById(gridId);if(!g)return;
+  g.innerHTML=list.map(t=>{
+    const p=itemsProgress(sessionItems(t));const cur=state.track===t.id;
+    return `<button class="sess ${cur?'cur':''}" data-sess="${t.id}">
+      <div class="hrs">${t.icon?t.icon+' ':''}${t.hours}<small> hr${t.hours>1?'s':''}</small></div>
+      <h4>${t.name}</h4><div class="cred">${t.cred} certificate</div>
+      <div class="who">${t.who}</div>
+      <ul>${t.outcomes.map(o=>`<li>${o}</li>`).join('')}</ul>
+      ${p.done?`<div class="prog"><i style="width:${p.pct}%"></i></div>`:''}
+      <div class="go">${p.pct===100?'✓ Complete: get your certificate':p.done?`Continue (${p.pct}% done)`:'Start this path'}</div>
+    </button>`;
+  }).join('');
+  g.querySelectorAll('.sess').forEach(el=>el.onclick=()=>openSession(el.dataset.sess));
+}
+function renderHowtos(){
+  const g=document.getElementById('howGrid');if(!g)return;
+  g.innerHTML=HOWTOS.map(h=>{const st=(state.howtos||{})[h.id];
+    return `<button class="how" data-how="${h.id}">${st&&st.done?'<span class="hdone">✓ Done</span>':''}
+      <div class="hi">${h.icon}</div><h4>${esc(h.title)}</h4>
+      <p class="hr">${esc(h.result)}</p>
+      <div class="hm">About ${h.mins} minutes, ${h.steps.length} steps${st&&!st.done&&st.step?` (on step ${st.step+1})`:''}</div></button>`;}).join('');
+  g.querySelectorAll('.how').forEach(el=>el.onclick=()=>openHowto(el.dataset.how));
+}
+function renderHome(){renderSessions();renderHowtos();renderPicker();renderFuse();renderResume();renderStats();}
+function showView(id){['picker','board','howto','notebook','player'].forEach(v=>document.getElementById(v).classList.toggle('hide',v!==id));window.scrollTo({top:0,behavior:'smooth'});}
+
+function renderPicker(){
+  const mb=document.getElementById('masterBanner');
+  if(mb){ if(allLevelsDone()&&['beginner','intermediate','higher'].every(l=>(finalResult(l)||{}).passed)){mb.classList.remove('hide');
+      document.getElementById('masterCertBtn').href=certLink('Full Cowork Mastery',totalStepsDone());}
+    else mb.classList.add('hide'); }
+  const t=null;
+  const wrap=document.getElementById('levelCards');wrap.innerHTML='';
+  Object.values(LEVELS).forEach(L=>{
+    const p=levelProgress(L.key);
+    const inTrack=!t||t.levels.includes(L.key);
+    const el=document.createElement('div');
+    el.className='lvl '+L.cls;
+    if(!inTrack) el.style.opacity='.5';
+    const hrs=fmtHrs(levelMins(L.key));
+    el.innerHTML=`<div class="tag">${L.icon} ${L.name} <span class="tbadge">${hrs}</span>${t&&t.levels.includes(L.key)?' <span class="tbadge" style="color:var(--accent2)">in your track</span>':''}</div>
+      <h2>${L.project}</h2>
+      <div class="proj">Build · Skills · Connectors</div>
+      <p>${L.blurb}</p>
+      <ul>${L.bullets.map(b=>`<li>${b}</li>`).join('')}</ul>
+      <div class="meta"><span>${p.done}/${p.total} steps</span><span>${p.pct}%</span></div>
+      <div class="prog"><i style="width:${p.pct}%"></i></div>`;
+    el.onclick=()=>openLevel(L.key);el.tabIndex=0;el.setAttribute('role','button');
+    el.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openLevel(L.key);}};
+    wrap.appendChild(el);
+  });
+}
+
+function openLevel(lvl){
+  state.current=lvl;state.last=lvl;state.play=null;save();showView('board');
+  const L=LEVELS[lvl];
+  document.getElementById('bTitle').textContent=L.icon+' '+L.project;
+  const pill=document.getElementById('bPill');pill.textContent=L.name;pill.className='pill '+L.cls;
+  document.getElementById('bSub').textContent=L.sub;
+  renderList(L.missions.map((m,mi)=>[lvl,mi]),{kind:'level',lvl,capKey:lvl});
+}
+function openSession(id){
+  const t=findSession(id);if(!t)return goHome();
+  state.current='s:'+id;state.last=state.current;state.track=id;state.play=null;save();scheduleSync();showView('board');
+  document.getElementById('bTitle').textContent=(t.icon||'🎓')+' '+t.name;
+  const pill=document.getElementById('bPill');pill.textContent=t.hours+' hr'+(t.hours>1?'s':'')+' · '+t.cred;pill.className='pill b1';
+  document.getElementById('bSub').textContent=t.who+' Work through the missions in order. Each one walks you through Cowork a step at a time.';
+  renderList(sessionItems(t),{kind:'session',sess:t,capKey:'s:'+id});
+}
+let CUR=null; // {items,ctx} of the open session or level
+function stepTitle(s){return s.title||({start:'Start a new task',check:'Quick check',reflect:'Think about your work',idea:'Write up your idea',quiz:'Take the quiz'})[s.type]||'Step';}
+function stepsDone(l,mi){return GROUPS[l].missions[mi].steps.filter((s,si)=>isChecked(l,mi,si)).length;}
+function renderList(items,ctx){
+  CUR={items,ctx};
+  const host=document.getElementById('missions');
+  const firstOpen=items.findIndex(([l,mi])=>!missionDone(l,mi));
+  let prevL=null,html='<ol class="road">';
+  items.forEach(([lvl,mi],ii)=>{
+    const m=GROUPS[lvl].missions[mi];
+    if(ctx.kind==='session'&&ctx.sess.levels&&lvl!==prevL&&LEVELS[lvl])html+=`<li class="roadhead">${GROUPS[lvl].icon} ${esc(GROUPS[lvl].name)}</li>`;
+    prevL=lvl;
+    const done=missionDone(lvl,mi),n=stepsDone(lvl,mi),tot=m.steps.length,isNow=ii===firstOpen;
+    const status=done?'Done':n?`${n} of ${tot} steps done`:isNow?'Up next':'';
+    html+=`<li class="rm ${done?'done':isNow?'now':''}">
+      <span class="rn">${done?'✓':ii+1}</span>
+      <div class="rtx"><div class="rtt">${esc(m.t)}</div><div class="rts">${esc(m.blk)}, about ${missionMins(m)} min${status?` <span class="rst">${status}</span>`:''}</div></div>
+      <button class="${isNow?'primary':''}" data-ii="${ii}">${done?'Review':n?'Continue':'Start'}</button></li>`;
+  });
+  html+='</ol>';
+  const isSess=ctx.kind==='session';
+  html+=`<details class="capstone"><summary>🎯 Optional: show what you made</summary>
+    <p>${isSess?'In one line, what did you build, and what idea did you come up with?':'Paste a link to, or a one-line description of, what you built in this level.'} Your program administrator can see this.</p>
+    <input type="text" id="capInput" aria-label="What you made" placeholder="${isSess?esc(EDITION.capPlaceholder):'Link or short description'}" value="${esc(getCap(ctx.capKey)).replace(/"/g,'&quot;')}">
+    <div class="saved" id="capSaved"></div></details>`;
+  host.innerHTML=html;
+  host.querySelectorAll('button[data-ii]').forEach(b=>b.onclick=()=>openPlayer(+b.dataset.ii));
+  const capIn=document.getElementById('capInput');
+  if(capIn){let ct;capIn.oninput=()=>{setCap(ctx.capKey,capIn.value);
+    const s=document.getElementById('capSaved');s.textContent='✓ Saved';clearTimeout(ct);ct=setTimeout(()=>s.textContent='',1400);};}
+  refreshList();
+}
+
+/* ---- Final check: every quick-check question in the path, shuffled. Pass mark 80%. ---- */
+const PASS=0.8;
+function pathChecks(items){const out=[];items.forEach(([l,mi])=>GROUPS[l].missions[mi].steps.forEach((s,si)=>{
+  if(s.type==='check')out.push({l,mi,si,s});
+  if(s.type==='quiz')s.items.forEach(it=>out.push({l,mi,si,s:{q:it.s+' What would you do?',options:s.choices,answer:it.a,why:it.why}}));}));return out;}
+function finalResult(key){return (state.finals||{})[key]||null;}
+let FINAL=null;
+function shuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
+function startFinal(){
+  const qs=shuffle(pathChecks(CUR.items)).map(q=>({...q,order:shuffle([0,1,2])}));
+  FINAL={qs,i:0,right:0,picked:null};state.play=null;showView('player');renderFinal();
+}
+function renderFinal(){
+  const F=FINAL,host=document.getElementById('playHost');const ctxName=CUR.ctx.kind==='session'?CUR.ctx.sess.name:LEVELS[CUR.ctx.lvl].project;
+  if(F.i>=F.qs.length){
+    const pct=Math.round(F.right/F.qs.length*100),passed=F.right/F.qs.length>=PASS;
+    const prev=finalResult(CUR.ctx.capKey);
+    if(!prev||pct>prev.score){state.finals=state.finals||{};state.finals[CUR.ctx.capKey]={score:pct,passed:passed||!!(prev&&prev.passed),date:new Date().toISOString()};save();scheduleSync();}
+    host.innerHTML=`<div class="ptop"><button class="ghost tiny" id="fBack">‹ All missions</button><span>Final check, ${esc(ctxName)}</span></div>
+      <div class="stepcard ${passed?'donecard':''}"><div class="sk">Your result</div><h3>${F.right} of ${F.qs.length} right (${pct}%)</h3>
+      <p class="sdo">${passed?'You passed. Your certificate is ready.':'The pass mark is 80%. Look back at the missions you weren\'t sure about, then take the check again. The questions come in a new order each time.'}</p>
+      <div class="nav"><button class="ghost" id="fBack2">All missions</button>${passed?'<button class="primary" id="fDone">See my certificate</button>':'<button class="primary" id="fRetry">Take the check again</button>'}</div></div>`;
+    const back=()=>{showView('board');renderList(CUR.items,CUR.ctx);};
+    document.getElementById('fBack').onclick=back;document.getElementById('fBack2').onclick=back;
+    if(document.getElementById('fDone'))document.getElementById('fDone').onclick=()=>{back();document.getElementById('finale').scrollIntoView({behavior:'smooth'});};
+    if(document.getElementById('fRetry'))document.getElementById('fRetry').onclick=startFinal;
+    return;
+  }
+  const q=F.qs[F.i],s=q.s,answered=F.picked!=null;
+  host.innerHTML=`<div class="ptop"><button class="ghost tiny" id="fBack">‹ All missions</button><span>Final check, ${esc(ctxName)}</span></div>
+    <h2 class="ptitle">Final check</h2><p class="pwhy">${F.qs.length} questions from the missions in this path. Pass mark 80%.</p>
+    <div class="prog finalbar"><i style="width:${Math.round(F.i/F.qs.length*100)}%"></i></div>
+    <div class="stepcard"><div class="sk">Question ${F.i+1} of ${F.qs.length}, from "${esc(GROUPS[q.l].missions[q.mi].t)}"</div>
+      <p class="sdo">${esc(s.q)}</p>
+      <div class="opts">${q.order.map(k=>{const cls=answered?(k===s.answer?'right':k===F.picked?'wrong':''):'';return `<button class="opt ${cls}" data-fopt="${k}" ${answered?'disabled':''}>${esc(s.options[k])}</button>`;}).join('')}</div>
+      ${answered?`<div class="see ${F.picked!==s.answer?'miss':''}"><b>${F.picked===s.answer?'Right.':'Not quite.'}</b> ${esc(s.why)}</div>`:''}
+      <div class="nav"><span></span><button class="primary" id="fNext" ${answered?'':'disabled'}>${F.i===F.qs.length-1?'See my result':'Next question'}</button></div></div>`;
+  document.getElementById('fBack').onclick=()=>{FINAL=null;showView('board');renderList(CUR.items,CUR.ctx);};
+  host.querySelectorAll('[data-fopt]').forEach(b=>b.onclick=()=>{F.picked=+b.dataset.fopt;if(F.picked===s.answer)F.right++;renderFinal();});
+  document.getElementById('fNext').onclick=()=>{F.i++;F.picked=null;renderFinal();window.scrollTo({top:0,behavior:'smooth'});};
+}
+
+/* ---- Mission player: one step at a time ---- */
+const QZ={}; // in-progress quiz answers, per step
+function openPlayer(ii,si){
+  const [l,mi]=CUR.items[ii];const m=GROUPS[l].missions[mi];
+  if(si==null){si=m.steps.findIndex((s,k)=>!isChecked(l,mi,k));if(si<0)si=0;}
+  state.play={ii,si};save();showView('player');renderPlayer();
+}
+function closePlayer(){state.play=null;save();showView('board');renderList(CUR.items,CUR.ctx);}
+function stepDone(){const {ii,si}=state.play;const [l,mi]=CUR.items[ii];if(!isChecked(l,mi,si))setChecked(l,mi,si,true);}
+function goStep(si){state.play.si=si;save();renderPlayer();document.getElementById('player').scrollIntoView({behavior:'smooth',block:'start'});}
+function copyBtn(text,label){return `<button class="copybtn" data-copy="${esc(text).replace(/"/g,'&quot;')}">${label||'Copy'}</button>`;}
+function renderPlayer(){
+  const {ii,si}=state.play;const [l,mi]=CUR.items[ii];const m=GROUPS[l].missions[mi];const n=m.steps.length;
+  const ctxName=CUR.ctx.kind==='session'?CUR.ctx.sess.name:LEVELS[CUR.ctx.lvl].project;
+  const finished=si>=n;
+  const dots=m.steps.map((s,k)=>`<button class="dot ${isChecked(l,mi,k)?'d':''} ${k===si?'c':''}" data-go="${k}" title="${esc(stepTitle(s))}" aria-label="Step ${k+1}: ${esc(stepTitle(s))}">${isChecked(l,mi,k)&&k!==si?'✓':k+1}</button>`).join('')
+    +`<span class="dot flag ${finished?'c':''}" aria-hidden="true">🏁</span>`;
+  let body='';
+  if(finished){
+    const next=CUR.items[ii+1],fb=getFb(l,mi);
+    body=`<div class="stepcard donecard"><div class="sk">Mission complete</div><h3>Nice work.</h3>
+      <div class="see"><b>You now have:</b> ${esc(m.result||'')}</div>
+      ${l==='ideas'?`<p><a class="finbtn" href="${SPARK_URL}" target="_blank" rel="noopener">Submit your idea in Spark</a></p>`:''}
+      <div class="fb">Was this mission clear?
+        <button class="fbup ${fb===1?'on':''}" data-v="1">👍 Yes</button><button class="fbdown ${fb===-1?'on':''}" data-v="-1">👎 Confusing</button></div>
+      <div class="nav"><button class="ghost" id="pBackList">All missions</button>
+        ${next?`<button class="primary" id="pNext">Next mission: ${esc(GROUPS[next[0]].missions[next[1]].t)}</button>`:`<button class="primary" id="pBackList2">Finish</button>`}</div></div>`;
+  } else body=renderStep(m.steps[si],si,n,l,mi);
+  document.getElementById('playHost').innerHTML=`
+    <div class="ptop"><button class="ghost tiny" id="pAll">‹ All missions</button><span>Mission ${ii+1} of ${CUR.items.length} in ${esc(ctxName)}</span></div>
+    <h2 class="ptitle">${esc(m.t)}</h2>
+    <p class="plead">${esc(m.lead||'')}</p>
+    ${m.why?`<p class="pwhy"><b>Why it matters:</b> ${esc(m.why)}</p>`:''}
+    <div class="dots" role="group" aria-label="Steps">${dots}</div>
+    ${body}`;
+  wirePlayer(m,l,mi,si,n);
+}
+function navHtml(si,nextLabel,disabled){return `<div class="nav"><button class="ghost" id="pPrev" ${si===0?'disabled':''}>Back</button><button class="primary" id="pDone" ${disabled?'disabled':''}>${nextLabel}</button></div>`;}
+function renderStep(s,si,n,l,mi){
+  const head=`<div class="sk">Step ${si+1} of ${n}</div><h3>${esc(stepTitle(s))}</h3>`;
+  const last=si===n-1;const nextLabel=last?'Done, finish mission':'Done, next step';
+  if(s.type==='start')return `<div class="stepcard">${head}
+    <p class="sdo">In Cowork, start a new task in your <b>Cowork Academy</b> folder. Each mission gets its own task, so Cowork stays focused.</p>
+    <div class="see"><b>You should see:</b> an empty task with a message box, ready for your first message.</div>
+    <details class="stuck"><summary>Haven't set up the folder yet?</summary><div>Do the <b>Set up Cowork for the Academy</b> mission first. It takes about 10 minutes.</div></details>
+    ${navHtml(si,'Ready, next step')}</div>`;
+  if(s.type==='do'){
+    const files=(s.files||[]).map(f=>`<a href="${EDITION.dataDir}${f}" download>${f}</a>`).join(', ');
+    const link=s.link?`<a class="filebtn" href="${s.link.href}" ${s.link.download?'download':'target="_blank" rel="noopener"'}>${esc(s.link.label)}</a>`:'';
+    const prompt=s.prompt?fillTokens(s.prompt):'';
+    return `<div class="stepcard">${head}
+      <p class="sdo">${esc(s.do)}</p>
+      ${link?`<div class="files">${link}</div>`:''}
+      ${prompt?`<div class="pbox"><div class="ptext">${esc(prompt).replace(/\[([^\]]+)\]/g,'<mark>[$1]</mark>')}</div>${copyBtn(prompt,'Copy prompt')}</div>
+        ${/\[/.test(prompt)?'<p class="pnote">Replace the highlighted part in brackets with your own details after you paste it.</p>':''}`:''}
+      <div class="see"><b>You should see:</b> ${esc(s.see)}</div>
+      ${s.stuck?`<details class="stuck"><summary>Didn't see that?</summary><div>${esc(s.stuck)}</div></details>`:''}
+      ${files?`<p class="pnote">Missing a practice file from your folder? Download ${files} and move it into Cowork Academy.</p>`:''}
+      ${navHtml(si,nextLabel)}</div>`;
+  }
+  if(s.type==='check'){
+    const a=QZ['c'+l+mi+si];const answered=a!=null||isChecked(l,mi,si);
+    return `<div class="stepcard">${head}<p class="sdo">${esc(s.q)}</p>
+      <div class="opts">${s.options.map((o,k)=>{const cls=answered?(k===s.answer?'right':k===a?'wrong':''):'';return `<button class="opt ${cls}" data-opt="${k}" ${answered?'disabled':''}>${esc(o)}</button>`;}).join('')}</div>
+      ${answered?`<div class="see ${a!=null&&a!==s.answer?'miss':''}"><b>${a==null||a===s.answer?'Right.':'Not quite.'}</b> ${esc(s.why)}</div>`:''}
+      ${navHtml(si,nextLabel,!answered)}</div>`;
+  }
+  if(s.type==='quiz'){
+    const key='q'+l+mi+si;const q=QZ[key]||(QZ[key]={i:0,ans:[]});
+    if(isChecked(l,mi,si)&&!q.ans.length)q.i=s.items.length;
+    if(q.i>=s.items.length){const score=q.ans.filter((x,k)=>x===s.items[k].a).length;
+      return `<div class="stepcard">${head}<p class="sdo">${q.ans.length?`You got <b>${score} of ${s.items.length}</b> right.`:'You finished this quiz.'} The rule of thumb: public information is fine, personal or confidential information needs approval, and passwords never go into an AI tool.</p>
+        <button class="ghost tiny" id="qRetry">Take it again</button>${navHtml(si,nextLabel)}</div>`;}
+    const it=s.items[q.i];const a=q.ans[q.i];const answered=a!=null;
+    return `<div class="stepcard">${head}<p class="pnote">${esc(s.intro)} Question ${q.i+1} of ${s.items.length}.</p>
+      <p class="sdo">${esc(it.s)}</p>
+      <div class="opts row">${s.choices.map((c,k)=>{const cls=answered?(k===it.a?'right':k===a?'wrong':''):'';return `<button class="opt ${cls}" data-qopt="${k}" ${answered?'disabled':''}>${esc(c)}</button>`;}).join('')}</div>
+      ${answered?`<div class="see ${a!==it.a?'miss':''}"><b>${a===it.a?'Right.':'The answer is "'+esc(s.choices[it.a])+'".'}</b> ${esc(it.why)}</div>
+        <div class="nav"><span></span><button class="primary" id="qNext">${q.i===s.items.length-1?'See my score':'Next question'}</button></div>`:''}</div>`;
+  }
+  if(s.type==='reflect'){
+    const m=GROUPS[l].missions[mi];
+    return `<div class="stepcard think">${head}
+      <p class="scene">${esc(m.think.scene)}</p>
+      <label class="ask" for="reflectBox">${esc(m.think.ask)}</label>
+      <textarea id="reflectBox" placeholder="A sentence or two is plenty.">${esc(getNote(l,mi))}</textarea>
+      <p class="pnote">Why we ask: noticing where each skill fits your own job is how you'll find ideas worth building. Your answer is saved in your idea notebook, on this device only.</p>
+      ${navHtml(si,last?'Save and finish mission':'Save, next step')}</div>`;
+  }
+  if(s.type==='idea'){
+    const v=(state.ideaDraft||{});const f=(k,ph,w)=>`<input class="ifield" data-k="${k}" placeholder="${ph}" value="${esc(v[k]||'').replace(/"/g,'&quot;')}" style="width:${w}">`;
+    return `<div class="stepcard think">${head}
+      <p class="sdo">Fill in the blanks with your best idea from Cowork's list. Good ideas are specific: the task, how often, the time it takes and what Cowork would do.</p>
+      <div class="ibuild">Every ${f('when',IX.when,'11em')} I spend ${f('time',IX.time,'7em')} on ${f('task',IX.task,'100%')} Cowork could ${f('what',IX.what,'100%')}</div>
+      <div class="ipreview" id="iPreview"></div>
+      <div class="files"><button id="iCopy">Copy my idea</button><a class="finbtn" href="${SPARK_URL}" target="_blank" rel="noopener">Open Spark to submit it</a></div>
+      <p class="pnote">Your idea is also saved in your idea notebook.</p>
+      ${navHtml(si,last?'Done, finish mission':'Done, next step')}</div>`;
+  }
+  return `<div class="stepcard">${head}${navHtml(si,nextLabel)}</div>`;
+}
+const ROLE_LABEL=Object.fromEntries(ROLES.map(r=>[r.id,r.label]));
+function fillTokens(t){
+  if(!/\{\{/.test(t))return t;
+  const rid=(CUR&&CUR.ctx.kind==='session'&&CUR.ctx.sess.id.startsWith('role-'))?CUR.ctx.sess.id.slice(5):(state.finder&&state.finder.role);
+  const role=ROLE_LABEL[rid]||'[your role, e.g. customer service]';
+  const notes=[...new Set(notebookEntries().filter(e=>e.g!=='ideas').map(e=>e.a.replace(/\s+/g,' ').trim()).filter(Boolean))].slice(0,8);
+  return t.replace('{{ROLE}}',role).replace('{{NOTES}}',notes.length?'Notes I made while learning Cowork: '+notes.map(n=>'"'+n.slice(0,160)+'"').join('; ')+'. ':'');
+}
+function ideaSentence(){const v=state.ideaDraft||{};if(!v.task&&!v.what)return '';
+  return `Every ${v.when||'___'} I spend ${v.time||'___'} on ${v.task||'___'}. Cowork could ${v.what||'___'}.`;}
+function wirePlayer(m,l,mi,si,n){
+  const $=id=>document.getElementById(id);
+  $('pAll').onclick=closePlayer;
+  document.querySelectorAll('#playHost .dot[data-go]').forEach(b=>b.onclick=()=>goStep(+b.dataset.go));
+  document.querySelectorAll('#playHost [data-copy]').forEach(b=>b.onclick=()=>navigator.clipboard.writeText(b.dataset.copy.replace(/&quot;/g,'"').replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&amp;/g,'&')).then(()=>{b.textContent='Copied';toast('Copied. Paste it into your Cowork task');setTimeout(()=>b.textContent='Copy prompt',1600);}));
+  if($('pPrev'))$('pPrev').onclick=()=>goStep(Math.max(0,si-1));
+  if($('pDone'))$('pDone').onclick=()=>{
+    const rb=$('reflectBox');if(rb)setNote(l,mi,rb.value);
+    stepDone();goStep(si+1);if(si+1>=n){toast('Mission complete');}
+  };
+  document.querySelectorAll('#playHost [data-opt]').forEach(b=>b.onclick=()=>{QZ['c'+l+mi+si]=+b.dataset.opt;
+    state.checks=state.checks||{};const k=l+'.'+mi+'.'+si;if(!(k in state.checks))state.checks[k]=(+b.dataset.opt===m.steps[si].answer);
+    stepDone();renderPlayer();});
+  const s=m.steps[si];
+  if(s&&s.type==='quiz'){const q=QZ['q'+l+mi+si];
+    document.querySelectorAll('#playHost [data-qopt]').forEach(b=>b.onclick=()=>{q.ans[q.i]=+b.dataset.qopt;renderPlayer();});
+    if($('qNext'))$('qNext').onclick=()=>{q.i++;if(q.i>=s.items.length)stepDone();renderPlayer();};
+    if($('qRetry'))$('qRetry').onclick=()=>{QZ['q'+l+mi+si]={i:0,ans:[]};renderPlayer();};}
+  if(s&&s.type==='reflect'){const rb=$('reflectBox');rb.oninput=()=>setNote(l,mi,rb.value);}
+  if(s&&s.type==='idea'){
+    const upd=()=>{const t=ideaSentence();$('iPreview').textContent=t||'Your idea will appear here as you type.';if(t)setNote('ideas',0,t);};
+    document.querySelectorAll('#playHost .ifield').forEach(i=>i.oninput=()=>{state.ideaDraft=state.ideaDraft||{};state.ideaDraft[i.dataset.k]=i.value;save();upd();});
+    $('iCopy').onclick=()=>{const t=ideaSentence();if(!t)return toast('Fill in your idea first');navigator.clipboard.writeText(t).then(()=>toast('Copied. Paste it into Spark'));};
+    upd();}
+  document.querySelectorAll('#playHost .fb button').forEach(b=>b.onclick=()=>{setFb(l,mi,+b.dataset.v);renderPlayer();toast('Thanks for the feedback');});
+  if($('pBackList'))$('pBackList').onclick=closePlayer;
+  if($('pBackList2'))$('pBackList2').onclick=closePlayer;
+  if($('pNext'))$('pNext').onclick=()=>openPlayer(state.play.ii+1);
+}
+
+function allLevelsDone(){return ["beginner","intermediate","higher"].every(l=>levelProgress(l).pct===100);}
+function totalStepsDone(){return ["beginner","intermediate","higher"].reduce((a,l)=>a+levelProgress(l).done,0);}
+function certLink(track,steps,score){
+  const p=new URLSearchParams();if(state.identity&&state.identity.name)p.set('name',state.identity.name);if(track)p.set('track',track);if(steps)p.set('steps',steps);if(score!=null)p.set('score',score);
+  return 'certificate.html?'+p.toString();
+}
+function refreshList(){
+  const {items,ctx}=CUR;const p=itemsProgress(items);
+  document.getElementById('bBar').style.width=p.pct+'%';
+  document.getElementById('bPct').textContent=`${items.filter(([l,mi])=>missionDone(l,mi)).length} of ${items.length} missions done`;
+  const fin=document.getElementById('finale');
+  if(p.pct!==100){fin.classList.add('hide');return;}
+  fin.classList.remove('hide');
+  const fr=finalResult(ctx.capKey),nq=pathChecks(items).length;
+  if(!fr||!fr.passed){
+    fin.innerHTML=`<h3>All missions done. One last thing: the final check.</h3>
+      <p>${nq} questions from the missions you just did, in a new order. Score 80% or more to earn your certificate. You can take it again if you need to.</p>
+      ${fr?`<p>Your best score so far: ${fr.score}%.</p>`:''}
+      <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap"><button class="sparkbtn" id="finStart">Take the final check</button></div>`;
+    document.getElementById('finStart').onclick=startFinal;return;
+  }
+  if(ctx.kind==='session'){
+    const t=ctx.sess;
+    const credName=t.icon?'your role certificate':t.cred;
+    fin.innerHTML=`<h3>🏆 ${t.name} complete. You've earned ${credName}!</h3>
+      <p>You built real things with Claude Cowork and found an idea for your own work. Make sure your idea is in <a href="${SPARK_URL}" target="_blank" rel="noopener" style="color:var(--spark)">Spark</a>, because that's where it turns into a real improvement. Then keep going with a how-to guide or a longer session.</p>
+      <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
+        <a class="finbtn" href="${SPARK_URL}" target="_blank" rel="noopener">Submit your idea in Spark</a>
+        <a class="finbtn" href="${certLink(t.name+' — '+t.cred,p.done,fr.score)}">🎓 Get your ${t.icon?'role':t.cred} certificate</a>
+        <button class="ghost" onclick="goHome()">Back to the Academy</button>
+      </div>`;
+    return;
+  }
+  const lvl=ctx.lvl;
+  if(allLevelsDone()&&['beginner','intermediate','higher'].every(l=>(finalResult(l)||{}).passed)){
+    fin.innerHTML=`<h3>👑 Full Cowork Mastery: all three levels complete!</h3>
+      <p>You've done the entire course, hands-on: documents, data, decks, research, skills, connected apps, delegation, dashboards, scheduled tasks and chained workflows.</p>
+      <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
+        <a class="finbtn" href="${certLink('Full Cowork Mastery',totalStepsDone())}">🎓 Get your Mastery Certificate</a>
+        <button class="ghost" onclick="goHome()">Back to the Academy</button>
+      </div>`;
+  } else {
+    fin.innerHTML=`<h3>🎉 ${LEVELS[lvl].project}: complete!</h3>
+      <p>You built real things with Claude Cowork and can prove it. Get your certificate, then take on the next level.</p>
+      <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
+        <a class="finbtn" href="${certLink(LEVELS[lvl].name+' — '+LEVELS[lvl].project,p.done,fr.score)}">🎓 Get your certificate</a>
+        ${nextLevelBtn(lvl)}
+        <button class="ghost" onclick="goHome()">Back to the Academy</button>
+      </div>`;
+  }
+}
+function nextLevelBtn(lvl){
+  const order=["beginner","intermediate","higher"];const i=order.indexOf(lvl);
+  if(i<order.length-1){const n=order[i+1];return `<button class="primary" onclick="openLevel('${n}')">Next level: ${LEVELS[n].project}</button>`;}
+  return `<button class="primary" onclick="goHome()">🏆 You finished the hardest track!</button>`;
+}
+
+function goHome(){state.current=null;save();showView('picker');renderHome();}
+
+/* ---- Home: path finder, fuse, resume, stats, tabs ---- */
+function selectTab(id){
+  document.querySelectorAll('#tabs [role=tab]').forEach(t=>{const on=t.id==='tab-'+id;t.setAttribute('aria-selected',on);t.tabIndex=on?0:-1;
+    document.getElementById(t.getAttribute('aria-controls')).classList.toggle('hide',!on);});
+}
+document.querySelectorAll('#tabs [role=tab]').forEach((t,i,all)=>{
+  t.onclick=()=>selectTab(t.id.slice(4));
+  t.onkeydown=e=>{if(e.key!=='ArrowRight'&&e.key!=='ArrowLeft')return;const n=all[(i+(e.key==='ArrowRight'?1:all.length-1))%all.length];n.focus();selectTab(n.id.slice(4));};
+});
+function recommend(role,hours){
+  if(!ROLES.some(r=>r.id===role))role='other';
+  if(hours>=8)return {id:'professional',why:'You have time for the full Professional path: workflows, skills, agents and automation.'};
+  if(hours>=4)return {id:'essentials',why:'Half a day covers the everyday Cowork toolkit end to end.'};
+  if(role!=='other'&&hours>=2)return {id:'role-'+role,why:'Two hours of missions built around your job, with practice data ready to use.'};
+  if(hours>=2)return {id:'explorer',why:'The highlights, applied to your own work.'};
+  return {id:'quick',why:'One hour to see what Claude can do for your job, ending with an idea of your own.'};
+}
+document.getElementById('fGo').onclick=()=>{
+  const r=recommend(document.getElementById('fRole').value,+document.getElementById('fTime').value);
+  const t=findSession(r.id);state.finder={role:document.getElementById('fRole').value,time:document.getElementById('fTime').value};save();
+  document.querySelectorAll('.sess.rec').forEach(e=>e.classList.remove('rec'));
+  selectTab(r.id.startsWith('role-')?'role':'time');
+  const card=document.querySelector(`.sess[data-sess="${r.id}"]`);if(card){card.classList.add('rec');}
+  document.getElementById('fOut').innerHTML=`<b>${esc(t.name)}</b>. ${esc(r.why)} <a href="#paths" id="fOpen">Open it</a>`;
+  document.getElementById('fOpen').onclick=e=>{e.preventDefault();openSession(r.id);};
+  document.getElementById('paths').scrollIntoView({behavior:'smooth',block:'start'});
+};
+function notebookEntries(){
+  const out=[];
+  Object.keys(GROUPS).forEach(g=>GROUPS[g].missions.forEach((m,mi)=>{const a=getNote(g,mi).trim();
+    if(m.think&&a)out.push({q:m.think.ask,from:GROUPS[g].name+': '+m.t,a,g,mi});}));
+  HOWTOS.forEach(h=>{const a=getNote('howto',h.id).trim();if(a)out.push({q:'Where could you use "'+h.title+'" in your job?',from:'How-to guide: '+h.title,a,howto:h.id});});
+  return out;
+}
+function anyStepDone(){return Object.keys(state.progress||{}).some(g=>Object.values(state.progress[g]||{}).some(Boolean));}
+function renderFuse(){
+  const stage=!anyStepDone()?0:missionDone('ideas',0)?3:notebookEntries().length?2:1;
+  const fresh=stage===0;
+  document.getElementById('fuseTitle').textContent=fresh?'How the Academy works':'Your progress';
+  document.getElementById('fuseSub').textContent=fresh?'Every path follows the same four steps.':stage===3?'You sparked an idea. Make sure it\'s in Spark.':'You\'re on your way. Here\'s what comes next.';
+  const steps=[['Learn by doing','Hands-on missions in Cowork, on real work.'],['Think about your work','Each mission asks where it fits in your job.'],['Spark an idea','Cowork helps you find your best opportunity.'],['Build it','Submit it in Spark, and Datapath helps build it.']];
+  const ol=document.getElementById('fuseSteps');
+  ol.innerHTML=steps.map(([t,d],i)=>`<li class="${!fresh&&i<stage?'lit':!fresh&&i===stage?'now':''}"><span class="node">${!fresh&&i<stage?'✓':i+1}</span><div><div class="st">${t}</div><div class="sd">${i===3?d.replace('Spark',`<a href="${SPARK_URL}" target="_blank" rel="noopener" style="color:var(--spark)">Spark</a>`):d}</div></div></li>`).join('');
+  const pct=fresh?0:[0,30,62,100][stage];
+  ol.style.setProperty('--lit','0%');requestAnimationFrame(()=>requestAnimationFrame(()=>ol.style.setProperty('--lit',pct+'%')));
+}
+function placeName(c){
+  if(!c)return null;
+  if(LEVELS[c])return {name:LEVELS[c].name+': '+LEVELS[c].project,items:LEVELS[c].missions.map((m,mi)=>[c,mi])};
+  if(c.startsWith('s:')){const t=findSession(c.slice(2));return t&&{name:t.name,items:sessionItems(t)};}
+  if(c.startsWith('h:')){const h=HOWTOS.find(x=>x.id===c.slice(2));return h&&{name:h.title,howto:h};}
+  return null;
+}
+function renderResume(){
+  const el=document.getElementById('resume');const pl=placeName(state.last);
+  if(!pl){el.classList.remove('hide');
+    el.innerHTML=`<div><div class="rt">New here? Start with the 1-hour AI Quick Start.</div><div class="rs">It sets up Cowork, covers the safe habits, has you analyze real data, and ends with an idea for your job.</div></div><button class="primary" id="resumeBtn">Start the Quick Start</button>`;
+    document.getElementById('resumeBtn').onclick=()=>openSession('quick');return;}
+  let next='';
+  if(pl.items){const it=pl.items.find(([l,mi])=>!missionDone(l,mi));if(!it){el.classList.add('hide');return;}next='Next up: '+GROUPS[it[0]].missions[it[1]].t;}
+  else{const st=howtoState(pl.howto.id);if(st.done){el.classList.add('hide');return;}next='Step '+(st.step+1)+' of '+pl.howto.steps.length;}
+  el.classList.remove('hide');
+  el.innerHTML=`<div><div class="rt">Pick up where you left off: ${esc(pl.name)}</div><div class="rs">${esc(next)}</div></div><button class="primary" id="resumeBtn">Continue</button>`;
+  document.getElementById('resumeBtn').onclick=()=>{state.current=state.last;route();
+    if(CUR&&pl.items){const ii=CUR.items.findIndex(([l,mi])=>!missionDone(l,mi));if(ii>=0)openPlayer(ii);}};
+}
+function certsEarned(){return Object.values(state.finals||{}).filter(f=>f.passed).length;}
+function renderStats(){
+  document.getElementById('stats').classList.toggle('hide',!anyStepDone());
+  const ideas=notebookEntries().length;const guides=HOWTOS.filter(h=>(state.howtos||{})[h.id]&&state.howtos[h.id].done).length;
+  document.getElementById('stats').innerHTML=`
+    <div class="st"><div class="sv">${certsEarned()}</div><div class="sl">certificates earned</div></div>
+    <div class="st"><div class="sv">${ideas}</div><div class="sl">ideas in your notebook</div></div>
+    <div class="st"><div class="sv">${guides}<span style="font-size:16px;color:var(--slate)"> of ${HOWTOS.length}</span></div><div class="sl">10-minute guides done</div></div>
+    <div class="sa"><button id="statsNb">Open my idea notebook</button></div>`;
+  document.getElementById('statsNb').onclick=openNotebook;
+}
+
+/* ---- Idea notebook ---- */
+function openNotebook(){state.current='notebook';save();showView('notebook');renderNotebook();}
+function notebookText(){
+  return 'My ideas from Cowork Academy\n\n'+notebookEntries().map(e=>'Q: '+e.q+'\n('+e.from+')\n'+e.a+'\n').join('\n');
+}
+function renderNotebook(){
+  const host=document.getElementById('nbHost');const list=notebookEntries();
+  if(!list.length){
+    host.innerHTML=`<div class="nbempty"><h3>Your notebook is empty</h3><p>Every mission ends with a question about your own work. Answer it, and your answer appears here, ready to turn into an idea for Spark.</p><button class="sparkbtn" id="nbStart">Start the 1-hour Quick Start</button></div>`;
+    document.getElementById('nbStart').onclick=()=>openSession('quick');return;
+  }
+  host.innerHTML=`<div class="nbtools"><button class="primary" id="nbCopy">Copy all for Spark</button><a class="finbtn" href="${SPARK_URL}" target="_blank" rel="noopener" style="font-size:14.5px;padding:9px 15px">Open Spark</a><button id="nbDl">Download as text</button></div>`+
+    list.map((e,i)=>`<div class="nbentry"><div class="nq">${esc(e.q)}</div><div class="nfrom">${esc(e.from)}</div><button class="tiny nopen" data-nb="${i}">Open mission</button><div class="na">${esc(e.a)}</div></div>`).join('');
+  document.getElementById('nbCopy').onclick=()=>navigator.clipboard.writeText(notebookText()).then(()=>toast('Copied. Paste your best ideas into Spark'));
+  document.getElementById('nbDl').onclick=()=>{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([notebookText()],{type:'text/plain'}));a.download='my-cowork-ideas.txt';a.click();toast('Notebook downloaded');};
+  host.querySelectorAll('[data-nb]').forEach(b=>b.onclick=()=>{const e=list[+b.dataset.nb];
+    if(e.howto)return openHowto(e.howto);
+    if(LEVELS[e.g])return openLevel(e.g);
+    if(e.g.startsWith('role-'))return openSession(e.g);
+    openSession(state.track&&findSession(state.track)?state.track:'quick');});
+}
+document.getElementById('btnNotebook').onclick=openNotebook;
+
+/* ---- How-to guides: one step at a time ---- */
+function openHowto(id){if(!HOWTOS.find(h=>h.id===id))return goHome();state.current='h:'+id;state.last=state.current;save();showView('howto');renderHowto(id);}
+function howtoState(id){state.howtos=state.howtos||{};return state.howtos[id]||(state.howtos[id]={step:0,done:false});}
+function renderHowto(id){
+  const h=HOWTOS.find(x=>x.id===id);const st=howtoState(id);const n=h.steps.length;const k=Math.min(st.step,n);
+  const dots=h.steps.map((x,i)=>`<span class="${i<k?'d':i===k?'c':''}">${i<k?'✓':i+1}</span>`).join('')+`<span class="${k===n?'c':''}">🏁</span>`;
+  let card;
+  if(k<n){const s=h.steps[k];
+    card=`<div class="hwcard"><div class="hwnum">Step ${k+1} of ${n}</div>
+      <div class="hwdo">${esc(s.do)}</div>
+      ${s.prompt?`<div class="pbox"><div class="ptext">${esc(s.prompt).replace(/\[([^\]]+)\]/g,'<mark>[$1]</mark>')}</div><button class="copybtn" id="hwCopy">Copy prompt</button></div>
+        <p class="pnote">Paste it into your Cowork task and press Enter.${/\[/.test(s.prompt)?' Replace the highlighted part in brackets with your own details.':''}</p>`:''}
+      <div class="see"><b>✅ You should see:</b> ${esc(s.see)}</div>
+      ${s.stuck?`<details class="hintbox"><summary>🤔 Didn't see that?</summary><div class="hcontent">${esc(s.stuck)}</div></details>`:''}
+      <div class="hwnav"><button class="ghost" data-go="${k-1}" ${k===0?'disabled':''}>← Back</button>
+        <button class="primary" data-go="${k+1}">${k===n-1?'I see it, finish the guide':'I see it, next step'}</button></div></div>`;
+  } else {
+    card=`<div class="hwcard"><h3>🎉 You did it!</h3>
+      <div class="see"><b>What you now have:</b> ${esc(h.result)}</div>
+      <div class="think"><div class="tl">💭 Use it at work</div><p class="scene">Ways other people use this:</p>
+        <ul>${h.atwork.map(a=>`<li>${esc(a)}</li>`).join('')}</ul>
+        <p class="ask">Where could you use this in your job? It's saved to your idea notebook. If it's a good idea, <a href="${SPARK_URL}" target="_blank" rel="noopener">submit it in Spark</a>.</p></div>
+      <div class="hwnotes"><textarea id="hwNote" placeholder="Your idea, in one sentence...">${esc(getNote('howto',id))}</textarea></div>
+      <div class="hwnav"><button class="ghost" data-go="0">↺ Do it again</button>
+        <button class="primary" onclick="goHome()">Back to the Academy</button></div></div>`;
+  }
+  document.getElementById('hwHost').innerHTML=`<div class="bhead"><h2>${h.icon} ${esc(h.title)}</h2><span class="pill b4">How-to · ~${h.mins} min</span></div>
+    <p class="bsub">${esc(h.why)}</p><div class="hwdots">${dots}</div>${card}`;
+  const host=document.getElementById('hwHost');
+  host.querySelectorAll('button[data-go]').forEach(b=>b.onclick=()=>{
+    const to=+b.dataset.go;st.step=to;if(to>=n&&!st.done){st.done=true;toast('Guide complete');}
+    save();scheduleSync();renderHowto(id);window.scrollTo({top:0,behavior:'smooth'});});
+  const cp=document.getElementById('hwCopy');
+  if(cp)cp.onclick=()=>navigator.clipboard.writeText(h.steps[k].prompt).then(()=>toast('Copied. Paste it into Cowork'));
+  const nt=document.getElementById('hwNote');if(nt)nt.oninput=()=>setNote('howto',id,nt.value);
+}
+document.getElementById('btnHome').onclick=goHome;
+
+function toast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),1500);}
+
+function exportSave(){
+  const blob=new Blob([JSON.stringify(state,null,2)],{type:"application/json"});
+  const a=document.createElement('a');a.href=URL.createObjectURL(blob);
+  a.download="cowork-academy-progress.json";a.click();toast('Backup downloaded');
+}
+
+function exportWorkbook(){
+  // Build a clean printable record of every level: completed steps + the learner's notes.
+  const order=["beginner","intermediate","higher","ideas"];
+  const today=new Date().toLocaleDateString(undefined,{year:'numeric',month:'long',day:'numeric'});
+  let anyWork=false;
+  let body="";
+  order.forEach(lvl=>{
+    const L=GROUPS[lvl];const p=levelProgress(lvl);
+    const hasNotes=L.missions.some((m,mi)=>getNote(lvl,mi).trim());
+    if(p.done===0 && !hasNotes) return; // skip untouched levels
+    anyWork=true;
+    body+=`<section class="lvl"><h2>${L.icon} ${esc(L.project)} <span class="lname">${esc(L.name)}</span></h2>
+      <div class="bar"><span style="width:${p.pct}%"></span></div>
+      <div class="meta">${p.done}/${p.total} steps complete · ${p.pct}%</div>`;
+    L.missions.forEach((m,mi)=>{
+      const stepsHtml=m.steps.map((s,si)=>{
+        const ck=isChecked(lvl,mi,si);
+        return `<li class="${ck?'done':''}">${ck?'☑':'☐'} ${esc(stepTitle(s))}</li>`;
+      }).join('');
+      const note=getNote(lvl,mi).trim();
+      const mdone=missionDone(lvl,mi);
+      body+=`<div class="mission"><h3>${mdone?'✓ ':''}${mi+1}. ${esc(m.t)} <span class="blk">${esc(m.blk)}</span></h3>
+        <ul>${stepsHtml}</ul>
+        ${note?`<div class="note"><b>My notes:</b><br>${esc(note).replace(/\n/g,'<br>')}</div>`:''}</div>`;
+    });
+    body+=`</section>`;
+  });
+  const doneHow=HOWTOS.filter(h=>(state.howtos||{})[h.id]&&state.howtos[h.id].done);
+  if(doneHow.length){anyWork=true;body+=`<section class="lvl"><h2>🛠️ How-to guides completed</h2><ul>`+doneHow.map(h=>{const n=getNote('howto',h.id).trim();
+    return `<li><b>${h.icon} ${esc(h.title)}</b>${n?`: <i>${esc(n)}</i>`:''}</li>`;}).join('')+`</ul></section>`;}
+  if(!anyWork){toast('Start a level first — nothing to export yet');return;}
+  const html=`<!DOCTYPE html><html><head><meta charset="utf-8"><title>My Cowork Academy Workbook</title>
+  <style>
+    body{font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:#15203a;max-width:740px;margin:0 auto;padding:36px 28px;line-height:1.55}
+    h1{font-size:28px;margin:0 0 2px} .date{color:#667;margin:0 0 22px;font-size:13px}
+    .lvl{margin:0 0 26px;page-break-inside:avoid} .lvl>h2{font-size:21px;border-bottom:2px solid #6c7bff;padding-bottom:5px;margin-bottom:6px}
+    .lname{font-size:12px;color:#fff;background:#6c7bff;border-radius:99px;padding:2px 9px;vertical-align:middle;margin-left:6px}
+    .bar{height:7px;background:#e6e9f5;border-radius:99px;overflow:hidden;margin:6px 0 3px}
+    .bar span{display:block;height:100%;background:linear-gradient(90deg,#6c7bff,#36c0a4)}
+    .meta{font-size:12px;color:#667;margin-bottom:12px}
+    .mission{margin:0 0 14px;page-break-inside:avoid} .mission h3{font-size:15px;margin:10px 0 4px}
+    .mission .blk{font-size:11px;color:#889;font-weight:normal}
+    .mission ul{list-style:none;padding:0;margin:4px 0;font-size:13.5px}
+    .mission li{margin:3px 0;color:#556} .mission li.done{color:#15203a}
+    .note{background:#f4f6ff;border-left:3px solid #6c7bff;border-radius:0 8px 8px 0;padding:9px 12px;font-size:13px;margin:6px 0 2px}
+    .foot{margin-top:24px;color:#889;font-size:11px;border-top:1px solid #e6e9f5;padding-top:10px}
+    @media print{@page{margin:14mm}}
+  </style></head><body>
+    <h1>My Cowork Academy Workbook</h1>
+    <p class="date">Exported ${today}</p>
+    ${body}
+    <p class="foot">Cowork Academy · your personal record of what you built and learned. Tip: use your browser's Print dialog and choose "Save as PDF".</p>
+    <script>setTimeout(function(){window.print();},400);<\/script>
+  </body></html>`;
+  const w=window.open('','_blank');
+  if(!w){toast('Allow pop-ups to export your workbook');return;}
+  w.document.open();w.document.write(html);w.document.close();
+  toast('Workbook ready — save it as PDF');
+}
+function importSave(){
+  const inp=document.createElement('input');inp.type='file';inp.accept='.json,application/json';
+  inp.onchange=e=>{const f=e.target.files[0];if(!f)return;const r=new FileReader();
+    r.onload=()=>{try{const data=JSON.parse(r.result);if(data&&typeof data==='object'){
+      // Keep who's signed in on this device if the backup has no identity, then push the restored progress.
+      const me=state.identity;state=Object.assign(blank(),data);if(!state.identity)state.identity=me;state.registered=false;save();
+      syncNow();toast('Progress restored');route();}}catch(err){toast('Could not read that file');}};
+    r.readAsText(f);};
+  inp.click();
+}
+function resetAll(){
+  if(confirm("Reset ALL progress? This clears your checked steps, how-to guides, notes, capstones and feedback on this device AND your progress record with the program administrator. It can't be undone (use Backup first if unsure).")){
+    state.current=null;state.progress={};state.notes={};state.capstones={};state.feedback={};state.howtos={};state.checks={};state.finals={};state.ideaDraft={};save();syncNow();goHome();toast('Reset done');
+  }
+}
+
+const CAPS=[
+  ["Memory","Claude remembers your project across sessions",["b1","b2","b3"]],
+  ["Websites","Build real one-page & multi-page sites",["b1","b2","b3"]],
+  ["Design","Design critique, UX copy, accessibility",["b1","b2","b3"]],
+  ["Skills — using built-in","Run Cowork's ready-made abilities",["b1"]],
+  ["Skills — building your own","Teach & save a reusable custom skill",["b2","b3"]],
+  ["Word documents","Create real .docx files",["b1","b2"]],
+  ["Spreadsheets","Excel with working formulas",["b1"]],
+  ["Data analysis","Analyze data + build charts",["b2"]],
+  ["Presentations","Build PowerPoint decks",["b2"]],
+  ["PDFs","Produce client-ready PDFs",["b2"]],
+  ["Logos","Design a simple logo as an SVG file",["b1"]],
+  ["Web research","Search the web, sourced summaries",["b1"]],
+  ["Connectors (MCP)","Plug Cowork into real apps",["b1","b2","b3"]],
+  ["Delegation","Write a clear brief and judge the result",["b2","b3"]],
+  ["Dashboards","Refreshable pages built from your data",["b2","b3"]],
+  ["Scheduled tasks","Summaries that run on a timetable while the app is open",["b2","b3"]],
+  ["Browser control","Optional: Claude in Chrome, if your setup has it",["b3"]],
+  ["Computer use","Optional: control desktop apps, if available",["b3"]],
+  ["Plugins","Optional: add capability bundles, if available",["b3"]],
+  ["Chained workflows","Plan and link several steps into one workflow",["b3"]],
+  ["Publishing","Put your site live on the web",["b1","b2","b3"]]
+];
+const LBL={b1:"🌱 Beg",b2:"⚡ Int",b3:"🔥 High"};
+function renderCapMap(){
+  const g=document.getElementById('capGrid');if(!g)return;
+  g.innerHTML=CAPS.map(([n,d,ls])=>`<div class="caprow">
+    <div class="cname">${n}<span class="cd">${d}</span></div>
+    <div class="lvlchips">${ls.map(l=>`<span class="lchip ${l}">${LBL[l]}</span>`).join('')}</div>
+  </div>`).join('');
+}
+
+/* ---- Identity gate ---- */
+function showGate(){
+  const g=document.getElementById('gate');g.classList.remove('hide');
+  const nm=document.getElementById('gateName'),em=document.getElementById('gateEmail'),err=document.getElementById('gateErr');
+  setTimeout(()=>nm.focus(),80);
+  document.getElementById('gateStart').onclick=()=>{
+    const name=nm.value.trim(), email=em.value.trim().toLowerCase();
+    const cohort=(document.getElementById('gateCohort').value||'').trim();
+    if(name.length<2){err.textContent='Please enter your name.';return;}
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){err.textContent='Please enter a valid email.';return;}
+    state.identity={name,email,cohort};state.registered=false;save();
+    g.classList.add('hide');
+    registerUser();
+  };
+  [nm,em].forEach(f=>f.addEventListener('keydown',e=>{if(e.key==='Enter')document.getElementById('gateStart').click();}));
+}
+
+function route(){
+  const c=state.current||'';
+  const play=state.play;
+  if(LEVELS[c])openLevel(c);
+  else if(c.startsWith('s:'))openSession(c.slice(2));
+  else if(c.startsWith('h:'))openHowto(c.slice(2));
+  else if(c==='notebook')openNotebook();
+  if(play&&CUR&&(LEVELS[c]||c.startsWith('s:'))&&CUR.items[play.ii]){state.play=play;showView('player');renderPlayer();}
+  else goHome();
+}
+/* Edition-specific wording: role finder, role note, practice data pack, edition badge. */
+(function(){
+  const sel=document.getElementById('fRole');
+  ROLES.forEach((r,i)=>{const o=document.createElement('option');o.value=r.id;o.textContent=r.finder;sel.insertBefore(o,sel.options[i]);});
+  sel.value=ROLES[0].id;
+  document.getElementById('roleNote').textContent=EDITION.roleNote;
+  document.getElementById('packText').textContent=EDITION.dataPack.text;
+  const dd=EDITION.dataDir;
+  document.getElementById('packLinks').innerHTML=`<a href="${dd}cowork-academy-starter.zip" download style="background:var(--spark);border-color:#E5AE1F;color:var(--ink)">Download the starter folder</a>`
+    +EDITION.dataPack.files.map(f=>`<a href="${dd}${f}" download>${f}</a>`).join('')
+    +`<a href="${dd}README.txt" target="_blank" rel="noopener">About the data</a>`;
+  if(EDITION.badge){
+    const b=document.createElement('span');b.className='edbadge';b.textContent=EDITION.badge;
+    document.getElementById('btnHome').after(b);
+    const m=document.querySelector('.more .menu');const x=document.createElement('a');x.className='ghost tiny btn';x.href='?edition=core';x.textContent='Switch to the general course';m.appendChild(x);
+  }
+})();
+/* Deep link from the landing page: learn.html?path=quick opens that path. */
+(function(){const p=new URLSearchParams(location.search).get('path');if(p&&findSession(p))setTimeout(()=>openSession(p),0);})();
+if(state.finder){try{document.getElementById('fRole').value=state.finder.role;document.getElementById('fTime').value=state.finder.time;}catch(e){}}
+renderHome();
+renderCapMap();
+if(!state.identity){ showGate(); }
+else { if(!state.registered) registerUser(); else syncNow(); }
+route();
+</script>
+</body>
+</html>

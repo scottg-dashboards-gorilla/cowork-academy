@@ -20,7 +20,8 @@ Learners enter their name and email once. Checked steps, chosen track, team, cap
 ## Files
 | File | What it is |
 |------|-----------|
-| `index.html` | The course app (UI, progress, sync) |
+| `index.html` | Landing page: how it works, what you'll learn, paths and certificates |
+| `learn.html` | The course app (UI, progress, sync). `?path=<id>` opens a path directly. |
 | `course-data.js` | The general edition's course content (any industry; practice company Lakeview Supply Co.). Generated. |
 | `course-data-avari.js` | The Avari edition (vacation rental), opened at `/avari/`. Generated. |
 | `admin.html` | Passphrase-protected progress report (cohort filter, stalled learners, capstones, CSV export) |
@@ -44,7 +45,7 @@ node tools/make-core-data.js                                        # general pr
 
 Progress is stored by position (`missionIndex.stepIndex`), so **add new missions or steps at the end of a level**. Reordering or deleting existing ones shifts learners' saved ticks.
 
-To add a client edition, copy `tools/missions-core` to `tools/missions-<client>` and adapt it. Add the id to `KNOWN` in `index.html`'s edition loader, then add a `<client>/index.html` redirect like `avari/index.html`.
+To add a client edition, copy `tools/missions-core` to `tools/missions-<client>` and adapt it. Add the id to `KNOWN` in the edition loader in `learn.html` and `index.html`, then add a `<client>/index.html` redirect like `avari/index.html`.
 
 ## Backend
 Supabase project `cowork-academy-tracking` (ref `dptmmtqiedggqzmfsvdh`), in the scottgordon2002 Supabase account. It replaced the original project, which was deleted and recreated by Cowork on 2026-10-30.
@@ -52,4 +53,4 @@ Supabase project `cowork-academy-tracking` (ref `dptmmtqiedggqzmfsvdh`), in the 
 - `supabase/migrations/` — the `academy_users` table (RLS on, no direct browser access) and the `academy_upsert` function learners write through.
 - `supabase/functions/academy-report/` — the passphrase-checked admin report. The passphrase is the `ADMIN_PASSPHRASE` Edge Function secret and never goes in this repo.
 
-To rebuild from scratch: run the migration SQL, set the secret, deploy the function with JWT verification off (it checks the passphrase itself), then update `SB_URL`/`SB_KEY` in `index.html`, `admin.html` and the keepalive workflow.
+To rebuild from scratch: run the migration SQL, set the secret, deploy the function with JWT verification off (it checks the passphrase itself), then update `SB_URL`/`SB_KEY` in `learn.html`, `admin.html` and the keepalive workflow.
