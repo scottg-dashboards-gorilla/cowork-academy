@@ -10,8 +10,9 @@
   "result": "Cowork open on your Cowork Academy folder, ready for every mission.",
   "steps": [
    {
-    "type": "do",
+    "goal": "Get into the Claude desktop app, because Cowork only runs there and not in a browser tab.",
     "title": "Open the Claude desktop app",
+    "type": "do",
     "do": "Open the Claude app on your computer and sign in with your work account. Cowork runs in the desktop app, not in a browser tab.",
     "see": "The Claude app is open and signed in.",
     "stuck": "No desktop app yet? Use the button above to download it. If you can't find Cowork once it's open, your plan may not include it yet. Ask your Academy program contact.",
@@ -21,15 +22,17 @@
     }
    },
    {
-    "type": "do",
+    "goal": "Set up your screen so you can read each step here and do it in Claude without switching back and forth.",
     "title": "Put the windows side by side",
+    "type": "do",
     "do": "Arrange this page and the Claude app side by side, so you can read a step here and do it there.",
     "see": "The Academy on one half of your screen and Claude on the other.",
     "stuck": "On a small laptop screen, keep both open and switch between them with Cmd+Tab on a Mac or Alt+Tab on Windows."
    },
    {
-    "type": "do",
+    "goal": "Put the Academy's practice files on your computer in one folder, so every later mission already has what it needs.",
     "title": "Get the starter folder",
+    "type": "do",
     "do": "Download the starter folder below. Open the downloaded zip file, then move the Cowork Academy folder inside it into your Documents folder.",
     "see": "A folder called Cowork Academy in Documents, with practice files inside such as orders.csv, customer-feedback.csv, support-tickets.csv, customer-messages.txt and team-notes.txt.",
     "stuck": "On a Mac, double-click the zip in Downloads, then drag the Cowork Academy folder to Documents. On Windows, right-click the zip, choose Extract All, then move the Cowork Academy folder to Documents.",
@@ -40,18 +43,20 @@
     }
    },
    {
-    "type": "do",
+    "goal": "Point Cowork at the Cowork Academy folder, because it can only see and change files in the folder you give it.",
     "title": "Start a Cowork task on the folder",
+    "type": "do",
     "do": "In the Claude app, switch to Cowork and start a new task. When it asks which folder it can work in, choose Cowork Academy in Documents.",
     "see": "An empty Cowork task with a message box, working in your Cowork Academy folder.",
     "stuck": "If it didn't ask for a folder, look for an option to choose or change the working folder near the message box. Still stuck? Check support.claude.com or ask your Academy program contact."
    },
    {
-    "type": "do",
+    "goal": "Confirm Cowork can read your folder and create a file in it, so you know setup worked before the first mission.",
     "title": "Check Cowork can see the files",
+    "type": "do",
     "do": "Paste this into the message box and press Enter.",
     "prompt": "List the files in this folder and tell me in one sentence what each one seems to contain. Then create a file called hello.txt that says: My Cowork Academy folder.",
-    "see": "A list of the practice files with a short description of each, and a new hello.txt in your Cowork Academy folder.",
+    "see": "A list of the practice files with a short description of each, and a new hello.txt in your Cowork Academy folder. Notice that it described files you know are there, which shows it's in the right folder.",
     "stuck": "If Cowork asks your permission before creating the file, allow it. If it says it can't see any files, the task is pointed at the wrong folder: start a new task and choose Cowork Academy."
    },
    {
@@ -123,8 +128,9 @@
     ]
    },
    {
-    "type": "do",
+    "goal": "Try finding the private details on your own first, so you can compare your eye with Cowork's and learn what to look for.",
     "title": "Spot the private details yourself",
+    "type": "do",
     "do": "Read this made-up message and count every private or sensitive detail before going on: \"Hi team, Maria Gomez (555-201-3344, company card ending 4417) is on medical leave after surgery. Her building door code was 8812. Please reimburse her travel costs.\"",
     "see": "Your own count. There are four kinds of private detail in it.",
     "stuck": "Look for anything that identifies a person, could be used to get in somewhere, relates to payment, or reveals health information."
@@ -133,8 +139,9 @@
     "type": "start"
    },
    {
-    "type": "do",
+    "goal": "See what Cowork flags and how it rewrites the message safely, so you learn what to remove before sharing anything.",
     "title": "Compare with Cowork",
+    "type": "do",
     "do": "Paste this into your Cowork task and press Enter. Everything in it is made up, which is the only reason it's okay to paste.",
     "prompt": "List every private or sensitive detail in this message, then rewrite it so it’s safe to share with the wider team: \"Hi team, Maria Gomez (555-201-3344, company card ending 4417) is on medical leave after surgery. Her building door code was 8812. Please reimburse her travel costs.\"",
     "see": "Cowork lists the employee’s name and phone number, the card digits, the medical leave and the door code, and gives a rewritten message without them. Did you find all four kinds?",
@@ -167,24 +174,27 @@
   },
   "steps": [
    {
+    "goal": "Let Cowork ask about your week, so repetitive work you've stopped noticing comes to the surface.",
+    "title": "Get interviewed about your week",
     "type": "do",
-    "title": "Get interviewed",
     "do": "Copy this prompt (it already includes your role and the notes you saved during the Academy), paste it into your Cowork task and press Enter. Answer each question in a sentence or two.",
     "prompt": "I work in {{ROLE}}. {{NOTES}}Interview me about my job. Ask me 5 short questions, one at a time, about what I do each week, which tasks are repetitive or manual, which reports I build, and where I wait on information from other people. Wait for my answer before asking the next question.",
     "see": "Cowork asks its first question and waits for your answer.",
     "stuck": "If it asks all 5 questions at once, answer them all in one message. That works too."
    },
    {
+    "goal": "Turn your answers into five concrete ideas with time savings, so you can choose which one is worth pursuing.",
+    "title": "Rank your top five opportunities",
     "type": "do",
-    "title": "Get your top 5",
     "do": "After your last answer, paste this into the same task and press Enter.",
     "prompt": "Based on my answers, list my top 5 opportunities to use Claude. For each, say what Cowork would do (a skill, a connector, a report, a dashboard or a scheduled task), roughly how many hours a month it could save, and whether I could build it myself or would need help.",
-    "see": "A numbered list of 5 opportunities, each with what Cowork would do and an estimate of hours saved.",
+    "see": "A numbered list of 5 opportunities, each with what Cowork would do and an estimate of hours saved. Notice which ones save the most hours.",
     "stuck": "If the ideas feel generic, add: \"Make them specific to what I told you about my week.\""
    },
    {
-    "type": "do",
+    "goal": "Test the first step of your favorite idea, so your Spark write-up comes from something you've seen work.",
     "title": "Optional: try the best one",
+    "type": "do",
     "do": "If you have 10 minutes, pick the opportunity that would help you most and try its first step. Otherwise, skip to the next step.",
     "prompt": "Let's try the first step of opportunity number [the number you picked, e.g. 2] right now, using files in this folder or realistic made-up data.",
     "see": "Cowork starts on your idea, for example drafting the first version of a report, a template or a checklist.",

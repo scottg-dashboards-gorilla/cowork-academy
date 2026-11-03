@@ -8,24 +8,32 @@
   "result": "A saved skill that does one of your tasks your way, tested in a fresh task.",
   "steps": [
    {
+    "goal": "Tell Cowork the task you repeat, and let it interview you. Its questions pull out the rules you'd otherwise have to explain every time.",
+    "title": "Choose a task and answer questions",
     "do": "Pick a task you do the same way every time. Paste this into your Cowork task, change the bracketed part, and press Enter.",
     "prompt": "I want to create a reusable skill for this task: [a task you repeat, e.g. replying to customer questions about delivery dates, or summarizing a weekly team update]. Interview me to learn how I like it done: the steps, the format, the tone, and anything to avoid. Ask one question at a time.",
     "see": "Cowork asks you questions about the task, one at a time. Answer each one in a sentence or two.",
     "stuck": "If it starts doing the task instead, say: \"Stop. I want to save this as a skill first.\" Can’t think of a task? Use replying to the messages in customer-messages.txt."
    },
    {
+    "goal": "Save your answers as a skill, so Cowork can do this task your way in any future task without you explaining it again.",
+    "title": "Save your answers as a skill",
     "do": "When the questions are done, paste this into the same task and press Enter.",
     "prompt": "Now save this as a skill called [short name, e.g. customer-reply]. Include my rules, one example of a good result, and at least one thing it should never do.",
     "see": "Cowork creates the skill and tells you its name. It may ask you to approve the skill or turn it on. Do that.",
     "stuck": "If Cowork says it can't save skills in your setup, check Claude's help center at support.claude.com, or ask your Academy program contact."
    },
    {
+    "goal": "Test the skill in a fresh task without naming it. If it works, the skill is picking up your request by itself.",
+    "title": "Test the skill in a fresh task",
     "do": "Start another new task in your Cowork Academy folder. Ask for the task in your own words, without mentioning the skill, and press Enter.",
     "prompt": "[Your request, e.g. Draft a reply to message 3 in customer-messages.txt.]",
     "see": "The result follows your format and rules without you explaining them again. That's your skill working.",
     "stuck": "If it didn't use the skill, say: \"Use my [skill name] skill.\" Then say: \"Update that skill's description so you use it for requests like this one.\""
    },
    {
+    "goal": "Make one small improvement and see it take effect. This shows you how to refine a skill over time.",
+    "title": "Improve the skill with one change",
     "do": "Improve the skill once. Paste this into the same task, change the bracketed parts, and press Enter.",
     "prompt": "Update my [skill name] skill: [one change, e.g. keep replies under 120 words and always sign off with our team name].",
     "see": "Cowork updates the skill, and the next result shows your change. It may ask you to approve the update.",
@@ -47,6 +55,8 @@
   "result": "A saved command you run by name whenever you need it.",
   "steps": [
    {
+    "goal": "Save a request you type often as a named command, so you can run it again with a single short instruction.",
+    "title": "Save a request as a command",
     "do": "Pick a request you type often. Paste this into your Cowork task, change the bracketed parts, and press Enter.",
     "prompt": "Save a reusable command called [short name, e.g. open-tickets]. When I run it, it should [the request, e.g. read support-tickets.csv in this folder and list every ticket with status Open, grouped by customer]. Only run it when I call it by name.",
     "see": "Cowork creates the command, possibly as a skill, and tells you its name. It may ask you to approve it or turn it on. Do that.",
@@ -56,12 +66,16 @@
     ]
    },
    {
+    "goal": "Run the command in a fresh task to prove it works without you retyping the request.",
+    "title": "Run the command by name",
     "do": "Start another new task in your Cowork Academy folder. Type / to see if your command appears in the list, or paste this and press Enter.",
     "prompt": "Run my [command name] command.",
     "see": "Cowork does the saved request without you explaining it again, for example a list of open tickets grouped by customer.",
     "stuck": "Nothing in the / list? That's fine. Asking for it by name works the same way."
    },
    {
+    "goal": "Make the command ask for what it needs before it starts, so one command can serve different situations.",
+    "title": "Make the command ask a question first",
     "do": "Make it ask for what it needs first. Paste this into the same task, change the bracketed parts, and press Enter.",
     "prompt": "Change my [command name] command so it first asks me [what it needs, e.g. which customer or region to focus on] before it starts.",
     "see": "The next time you run it, Cowork asks your question first, then does the task.",
@@ -83,22 +97,30 @@
   "result": "Cowork turning information from an approved work app, or the practice inbox, into a sorted list with draft replies.",
   "steps": [
    {
+    "goal": "Pick which app Cowork will read from. Choosing only an approved one keeps company data safe, and the practice file is a fine substitute.",
+    "title": "Choose an approved app",
     "do": "Choose one app your company has approved for Claude, such as your work email or calendar. If no app is approved yet, skip this step and use customer-messages.txt, which is already in your Cowork Academy folder.",
     "see": "You know which approved app you’ll use, or you’re practicing with customer-messages.txt.",
     "stuck": "Not sure what's approved? Ask your manager or your Academy program contact before you connect anything."
    },
    {
+    "goal": "Connect the app so Cowork can read from it. You sign in yourself, so Cowork never sees your password.",
+    "title": "Connect the app with your sign-in",
     "do": "Connect the app in Claude's connector settings. A sign-in pop-up appears: sign in yourself with your work account.",
     "see": "The app shows as connected.",
     "stuck": "Pop-up blocked? Allow pop-ups and try again. Can't find the connector settings, or the app isn't listed? Check Claude's help center at support.claude.com, or ask your Academy program contact."
    },
    {
+    "goal": "Ask Cowork to pull real information from the app without changing anything, so you see the connection works safely.",
+    "title": "Pull real information, read only",
     "do": "Paste this into your Cowork task, change the bracketed parts, and press Enter.",
     "prompt": "Using my [app, e.g. work email] connector, or customer-messages.txt in this folder if I’m practicing, show me [what you want, e.g. customer messages from the last 3 days]. Don’t send, change or delete anything.",
     "see": "Real information from your app, or the 8 practice messages, listed in Cowork. Not made-up examples.",
     "stuck": "If Cowork says it can’t reach the app, reconnect it in Claude’s connector settings and try again, or use customer-messages.txt for now."
    },
    {
+    "goal": "Turn the raw information into something you can act on, with replies kept as drafts for you to review and send.",
+    "title": "Turn it into a sorted list with drafts",
     "do": "Paste this into the same task, change the bracketed part, and press Enter.",
     "prompt": "Turn that into [something useful, e.g. a list sorted by urgency, with a draft reply for the two most urgent]. Keep any replies as drafts. I'll review and send them myself.",
     "see": "A useful result built from the data. With the practice inbox, Dr. Okafor’s undelivered order and Coastal Credit Union’s double charge should be near the top.",
@@ -120,6 +142,8 @@
   "result": "A Word report with findings, charts and recommendations from orders.csv, plus a skill to repeat it next month.",
   "steps": [
    {
+    "goal": "Have Cowork read your order data and tell you what matters, so the report you build next rests on real findings.",
+    "title": "Find the key findings in your data",
     "do": "orders.csv is already in your Cowork Academy folder. Paste this into your Cowork task and press Enter. Using your own export instead is fine, as long as it has no customer or employee personal details.",
     "prompt": "Open orders.csv in this folder. Tell me the 3 most important findings about revenue, sales channels and cancellations, anything unusual, and what I should do about it. Show the numbers behind each one.",
     "see": "Three findings in plain English with real figures, such as revenue by channel or which channel has the most cancellations.",
@@ -129,18 +153,24 @@
     ]
    },
    {
+    "goal": "Turn the findings into a shareable Word report with charts and recommendations, ready to send to a colleague or manager.",
+    "title": "Turn the findings into a Word report",
     "do": "Paste this into the same task and press Enter.",
     "prompt": "Turn this into a 1 to 2 page Word report saved in this folder as orders-report.docx: a summary at the top, 2 charts, the findings, and 3 recommendations. Put the charts inside the document.",
     "see": "orders-report.docx appears in your Cowork Academy folder. Open it to check the summary, charts and recommendations.",
     "stuck": "Charts missing from the file? Say: \"Put the charts inside the document itself.\" Want a PDF too? Say: \"Save a PDF copy as well.\""
    },
    {
+    "goal": "Check one number before you share anything. A quick check protects you from passing on a wrong figure.",
+    "title": "Check one number in the report",
     "do": "Check one number before you share anything. Paste this into the same task and press Enter.",
     "prompt": "Show me how you calculated the first finding, step by step, so I can check it.",
     "see": "The calculation broken down so you can follow it, with totals you could check in the spreadsheet yourself.",
     "stuck": "If a number looks wrong, say which one and ask Cowork to recalculate it and update the report."
    },
    {
+    "goal": "Save the report process as a skill, so next month a new export gives you the same report in one step.",
+    "title": "Save the report as a repeatable skill",
     "do": "Make it repeatable. Paste this into the same task, change the bracketed part, and press Enter.",
     "prompt": "Save this as a skill called [name, e.g. monthly-orders-report] so next month I can give you a new orders export and get the same report in one step.",
     "see": "Cowork creates the skill and tells you its name. It may ask you to approve it or turn it on.",
@@ -162,23 +192,31 @@
   "result": "A working interactive tool saved as an HTML file in your Cowork Academy folder, built without writing code.",
   "steps": [
    {
+    "goal": "Describe the tool you want in plain words and have Cowork build it as a file you can open in your browser. No coding needed.",
+    "title": "Describe the tool you want",
     "do": "Paste this into your Cowork task, change the bracketed parts, and press Enter.",
     "prompt": "Build a simple interactive [tool, e.g. order total calculator with unit price, units, discount and shipping] for my work as a [role, e.g. sales coordinator]. Save it in this folder as [name, e.g. order-calculator].html so I can open it in my browser.",
     "see": "A new HTML file with the name you chose appears in your Cowork Academy folder. Cowork may also show a preview.",
     "stuck": "Not sure what to build? Try a checklist for onboarding a new hire, or a calculator for the total cost of an order."
    },
    {
+    "goal": "Open the tool and try it with real values. Using it yourself is the quickest way to spot what is missing or broken.",
+    "title": "Open the tool and try it out",
     "do": "Open the HTML file from your Cowork Academy folder. It opens in your web browser. Click around and enter some real values.",
     "see": "The tool responds as you use it: totals update and items check off.",
     "stuck": "Something doesn't work? Go back to your Cowork task, describe what you clicked and what happened, and ask Cowork to fix the file."
    },
    {
+    "goal": "Ask for one change so the tool fits your work better. Small steered changes are quicker than a big rebuild.",
+    "title": "Add a feature and your colors",
     "do": "Make it yours. Paste this into your Cowork task, change the bracketed parts, and press Enter.",
     "prompt": "Update [name].html: add [one feature, e.g. a discount for orders of 100 units or more] and use our company colors ([colors, e.g. navy and gray]). Save it over the same file.",
     "see": "Refresh the page in your browser and your changes appear.",
     "stuck": "Ask for one change at a time. It's quicker to steer."
    },
    {
+    "goal": "Confirm the tool is a real saved file that works every time you open it, and learn how to share it.",
+    "title": "Reopen the tool to confirm it's saved",
     "do": "Close the browser tab. Open the HTML file from your Cowork Academy folder again.",
     "see": "The tool is still there and still works. To share it, send the file or put it on a shared drive.",
     "stuck": "Can't find the file? Look in your Cowork Academy folder in Documents, or say in your Cowork task: \"Tell me the exact name of the HTML file you saved.\""
@@ -199,11 +237,15 @@
   "result": "A task that runs on a schedule and saves its result for you to review.",
   "steps": [
    {
+    "goal": "Write down the task, the timing and the reason in one sentence. A clear sentence makes the schedule easy to set up.",
+    "title": "Describe the task you want scheduled",
     "do": "Finish this sentence for your job: \"Every [when], I want [what] so I can [why].\"",
     "see": "You have one sentence that describes your task.",
     "stuck": "Example: \"Every Monday at 8am, I want a list of open tickets from support-tickets.csv, grouped by customer, so I can plan the week.\""
    },
    {
+    "goal": "Turn your sentence into a scheduled task, and see a sample of its output before it ever runs on its own.",
+    "title": "Create the scheduled task",
     "do": "Paste this into your Cowork task, change the bracketed parts to match your sentence, and press Enter.",
     "prompt": "Create a scheduled task: every [day and time, e.g. Monday at 8am], [what to do, e.g. read support-tickets.csv in this folder and list the open tickets by customer]. Save the result in this folder. Show me a sample of what it will produce.",
     "see": "Cowork confirms the day and time of the schedule and shows you a sample of the result.",
@@ -213,12 +255,16 @@
     ]
    },
    {
+    "goal": "Run the task once now, so you see the real result before you rely on it running by itself.",
+    "title": "Run the scheduled task once to test it",
     "do": "Paste this into the same task and press Enter.",
     "prompt": "Run that scheduled task once now so I can check the result.",
     "see": "The same kind of result you'll get every time it runs, saved in your Cowork Academy folder.",
     "stuck": "Not quite right? Say what to change, then run it again."
    },
    {
+    "goal": "Confirm the task is on the schedule and see when it will next run, so nothing surprises you later.",
+    "title": "Check the task is scheduled",
     "do": "Paste this into the same task and press Enter.",
     "prompt": "Show me my scheduled tasks.",
     "see": "Your task is listed with its next run time. Keep your computer on and the Claude app open at that time.",

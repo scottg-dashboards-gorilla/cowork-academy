@@ -59,7 +59,7 @@ const SPARK_URL = ${J(D.SPARK_URL)};
   Object.values(LEVELS).forEach(L=>L.missions.forEach(fix));
   ROLES.forEach(r=>r.missions.forEach(fix));
   [SETUP,SAFETY,IDEAS].forEach(g=>g.missions.forEach(fix));
-  HOWTOS.forEach(h=>h.steps.unshift({do:"In Cowork, start a new task in your Cowork Academy folder.",see:"An empty task with a message box, ready for your first message.",stuck:"Haven't set up the folder yet? Do the \\"Set up Cowork for the Academy\\" mission first. It takes about 10 minutes."}));
+  HOWTOS.forEach(h=>h.steps.unshift({title:"Start a new task",goal:"Give this guide its own fresh task in Cowork, so it works only with your practice files and nothing from earlier work gets mixed in.",do:"In Cowork, start a new task in your Cowork Academy folder.",see:"An empty task with a message box, ready for your first message.",stuck:"Haven't set up the folder yet? Do the \\"Set up Cowork for the Academy\\" mission first. It takes about 10 minutes."}));
 })();
 `;
 fs.writeFileSync(outFile,out);console.log('wrote',outFile);

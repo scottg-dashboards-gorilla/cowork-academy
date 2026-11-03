@@ -13,6 +13,8 @@ a.forEach((m,i)=>{const w=(s)=>errs.push(`mission ${i+1} (${m.t}): ${s}`);
   if(dos.length<2||dos.length>4)w(`needs 2-4 do steps, has ${dos.length}`);
   if(chk.length!==1||m.steps[m.steps.length-1].type!=='check')w('needs exactly 1 check step, last');
   dos.forEach((s,j)=>{if(!s.title||!s.do||!s.see)w(`do step ${j+1} needs title, do, see`);
+    if(typeof s.goal!=='string'||s.goal.length<40||s.goal.length>260)w(`do step ${j+1} needs a goal of 40-260 characters`);
+    if(s.title&&s.title.length>48)w(`do step ${j+1} title over 48 characters`);
     if(s.prompt&&/____/.test(s.prompt))w(`step ${j+1} prompt uses ____`);
     if(s.files&&s.files.some(x=>!FILES.includes(x)))w(`step ${j+1} unknown file`);});
   chk.forEach(c=>{if(!c.q||!Array.isArray(c.options)||c.options.length!==3||!(c.answer>=0&&c.answer<3)||!c.why)w('check needs q, 3 options, answer 0-2, why');});

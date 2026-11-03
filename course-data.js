@@ -64,26 +64,29 @@ const LEVELS = {
         },
         "steps": [
           {
+            "goal": "Tell Cowork what team page you plan to build, so it saves the background in a notes file and you never have to explain it again.",
+            "title": "Describe your team page project",
             "type": "do",
-            "title": "Describe your project",
             "do": "Paste this into your Cowork task, change the part in square brackets, and press Enter. Use roles or first names only, and leave out customer details, phone numbers and passwords.",
             "prompt": "I'm new to Cowork. Over the next few missions I'll build a one-page internal page for my team at work. My team: [your team and what it does, e.g. the accounts payable team, we pay supplier invoices, or the HR team, we onboard new hires]. Save a short file called project-notes.md in this folder that says what the page is for, who will use it, and what it should include. Keep it under 10 lines.",
-            "see": "Cowork confirms it saved project-notes.md, and the file appears in your Cowork Academy folder.",
+            "see": "Cowork confirms it saved project-notes.md, and the file appears in your Cowork Academy folder. It's a plain file you can open and edit yourself.",
             "stuck": "If Cowork asks you questions about the page first, answer them in a sentence or two. Plain English is fine, there's no wrong answer."
           },
           {
+            "goal": "Read what Cowork wrote, because every later task will rely on this file and a mistake here would repeat everywhere.",
+            "title": "Check the notes are accurate",
             "type": "do",
-            "title": "Read the notes",
             "do": "Open project-notes.md from your Cowork Academy folder and read it. If anything is wrong, tell Cowork in the same task what to change.",
-            "see": "A few short lines describing your team, who the page is for and what it should include, in words you recognize.",
+            "see": "A few short lines describing your team, who the page is for and what it should include, in words you recognize. Notice whether it reads like your team, in your words.",
             "stuck": "If the file opens in an app you don't expect, that's fine. Any text editor or browser can show it."
           },
           {
+            "goal": "Prove the notes work: a brand-new task should know your project only by reading the file, not from memory.",
+            "title": "Test that a new task remembers",
             "type": "do",
-            "title": "Test that it remembers",
             "do": "Start another new task in your Cowork Academy folder. Paste this in and press Enter.",
             "prompt": "Read project-notes.md in this folder and tell me in one sentence what my team page project is about.",
-            "see": "One sentence that matches your project, even though this is a brand-new task.",
+            "see": "One sentence that matches your project, even though this is a brand-new task. Notice that Cowork knew this without you explaining it again.",
             "stuck": "If Cowork says it can't find the file, check that the new task is using your Cowork Academy folder, not a different one."
           },
           {
@@ -112,33 +115,37 @@ const LEVELS = {
         },
         "steps": [
           {
+            "goal": "Have Cowork turn your project notes into a real web page for your team, so you see an idea become something you can open in minutes.",
+            "title": "Build your team page",
             "type": "do",
-            "title": "Build the page",
             "do": "Paste this into your Cowork task, change the part in square brackets, and press Enter.",
             "prompt": "Read project-notes.md in this folder (if it's missing, my team is [your team and what it does, e.g. the sales operations team, we keep quotes and pricing moving]). Build a one-page internal page for my team and save it as index.html. Include a headline, a short What we do section, a Who to contact section with roles, and a list of useful links. Use placeholder names I can edit later. Make it clean and easy to read.",
-            "see": "Cowork confirms it saved index.html, and the file appears in your Cowork Academy folder.",
+            "see": "Cowork confirms it saved index.html, and the file appears in your Cowork Academy folder. This is the first draft, which you'll improve in the next steps.",
             "stuck": "Don't have project-notes.md? That's fine. The part in square brackets tells Cowork enough to build the page."
           },
           {
+            "goal": "See the draft the way your team would, because you can only judge the design once you've looked at the real page.",
+            "title": "Open the page in your browser",
             "type": "do",
-            "title": "Look at it",
-            "do": "Open index.html from your Cowork Academy folder. It opens in your web browser. Look at it properly.",
-            "see": "Your team page in the browser, with a headline and sections for what you do, who to contact and useful links.",
+            "do": "Open index.html from your Cowork Academy folder. It opens in your web browser.",
+            "see": "Your team page in the browser, with a headline and sections for what you do, who to contact and useful links. Notice anything that feels cramped or plain, since that's what you'll ask Cowork to improve next.",
             "stuck": "If you see code instead of a web page, the file opened in a text editor. Right-click it and choose to open it with your web browser."
           },
           {
+            "goal": "Ask Cowork to review its own page like a designer, so you get three specific improvements instead of guessing what to fix.",
+            "title": "Get a design critique",
             "type": "do",
-            "title": "Ask for a critique",
             "do": "Paste this into the same task and press Enter.",
             "prompt": "Give my page a quick design critique. List the 3 changes that would improve it most, in plain English.",
-            "see": "A short numbered list of design suggestions, such as more space around the headline or clearer section headings."
+            "see": "A short numbered list of design suggestions, such as more space around the headline or clearer section headings. Notice which two you'd pick for the next step."
           },
           {
+            "goal": "Choose the two suggestions that matter most and have Cowork apply them, which finishes your improved team page.",
+            "title": "Apply two chosen changes",
             "type": "do",
-            "title": "Apply two changes",
             "do": "Paste this into the same task with the 2 suggestions you like, and press Enter. Then refresh the page in your browser.",
             "prompt": "Apply suggestions [the numbers you like, e.g. 1 and 3] to index.html.",
-            "see": "After refreshing, the page shows the changes you picked.",
+            "see": "After refreshing, the page shows the changes you picked. Compare it with your first version to see the difference.",
             "stuck": "If nothing looks different, refresh the browser tab again, or reopen index.html from the folder."
           },
           {
@@ -167,19 +174,21 @@ const LEVELS = {
         },
         "steps": [
           {
+            "goal": "Find out which ready-made skills Cowork can use and which one fits your page best, so you don't need to know any skill names.",
+            "title": "See what skills Cowork has",
             "type": "do",
-            "title": "See the skills",
             "do": "Paste this into your Cowork task and press Enter.",
             "prompt": "What skills do you have available right now? List them in plain English, with one line on what each is good for. Then look at index.html in this folder and tell me which one skill would improve it most, and why.",
-            "see": "A list of skills with short descriptions, followed by one recommended skill and a sentence or two on how it would help your page.",
+            "see": "A list of skills with short descriptions, followed by one recommended skill and a sentence or two on how it would help your page. Notice which skill it recommends and the reason it gives.",
             "stuck": "Don't have index.html? First paste: \"Make a quick one-page internal page for my team and save it as index.html.\" Then paste the prompt above."
           },
           {
+            "goal": "Use the recommended skill on index.html, so you see a skill do real work on a file you already have.",
+            "title": "Apply the skill to your page",
             "type": "do",
-            "title": "Use it on your page",
             "do": "Paste this into the same task and press Enter. Then open index.html from your Cowork Academy folder, or refresh it, to see the change.",
             "prompt": "Use that skill to improve index.html, and tell me what you changed.",
-            "see": "A short summary of what changed, and the updated page in your browser.",
+            "see": "A short summary of what changed, and the updated page in your browser. Notice what it improved that you might not have thought to ask for.",
             "stuck": "If Cowork shows the result only in the task and the page hasn't changed, paste: \"Please update index.html with that.\""
           },
           {
@@ -208,23 +217,26 @@ const LEVELS = {
         },
         "steps": [
           {
+            "goal": "Have Cowork turn a messy team email thread into a short customer letter, using only facts from the notes.",
+            "title": "Ask for the customer letter",
             "type": "do",
-            "title": "Ask for the letter",
             "do": "team-notes.txt is already in your Cowork Academy folder. Paste this into your Cowork task and press Enter.",
             "prompt": "Read team-notes.txt in this folder. Write a short, friendly update letter to Dr. Okafor at Desert Bloom Clinics about the late deliveries: what's been happening, what we are doing about it, and what happens next. Keep it short enough to read on a phone. Use only facts from the notes. Save it as a Word document called customer-update-desert-bloom.docx.",
-            "see": "Cowork confirms it saved customer-update-desert-bloom.docx, and the file appears in your Cowork Academy folder.",
+            "see": "Cowork confirms it saved customer-update-desert-bloom.docx, and the file appears in your Cowork Academy folder. Notice it's a real Word file, not just text in the task.",
             "stuck": "If Cowork can't find team-notes.txt, check that this task is using your Cowork Academy folder. If the file is missing, download the starter folder again from the setup mission."
           },
           {
+            "goal": "Check Cowork's facts yourself, because a letter that goes to a customer must match the source notes exactly.",
+            "title": "Check the letter against the notes",
             "type": "do",
-            "title": "Open and check it",
             "do": "Open customer-update-desert-bloom.docx from your Cowork Academy folder. Compare the numbers in it with team-notes.txt.",
-            "see": "A formatted one-page letter to Dr. Okafor that mentions the late deliveries since July, how many of Desert Bloom's orders were late, and the carrier change, matching the notes.",
+            "see": "A formatted one-page letter to Dr. Okafor that mentions the late deliveries since July, how many of Desert Bloom's orders were late, and the carrier change, matching the notes. Notice whether each number is the same in both.",
             "stuck": "If you don't have Word, the file also opens in Google Docs, Pages or another word processor."
           },
           {
+            "goal": "Practice asking for one specific edit to the saved file, which is how you'd tailor a letter before sending it.",
+            "title": "Change one thing in the letter",
             "type": "do",
-            "title": "Adjust the letter",
             "do": "Close the file. Then paste this into the same task, change the part in square brackets, and press Enter.",
             "prompt": "Update customer-update-desert-bloom.docx: [one change, e.g. make it shorter and put the plan in the first paragraph].",
             "see": "Cowork confirms the update. When you reopen the letter, the change is there.",
@@ -256,29 +268,32 @@ const LEVELS = {
         },
         "steps": [
           {
+            "goal": "Have Cowork sum up the practice support tickets by category in a spreadsheet, with a total row that calculates itself.",
+            "title": "Build the support tracker",
             "type": "do",
-            "title": "Ask for the tracker",
             "do": "support-tickets.csv is already in your Cowork Academy folder. Paste this into your Cowork task and press Enter.",
             "prompt": "Open support-tickets.csv in this folder. Create an Excel spreadsheet called support-tracker.xlsx with one row per ticket category, showing its number of tickets and total credit issued, sorted from highest credit to lowest. Add a total row at the bottom that uses SUM formulas, so it updates when a number changes.",
-            "see": "Cowork confirms it saved support-tracker.xlsx, and the file appears in your Cowork Academy folder.",
+            "see": "Cowork confirms it saved support-tracker.xlsx, and the file appears in your Cowork Academy folder. Notice the rows are sorted by credit issued, not by number of tickets.",
             "stuck": "If Cowork can't find support-tickets.csv, use the download link below to get it, save it in your Cowork Academy folder, and paste the prompt again.",
             "files": [
               "support-tickets.csv"
             ]
           },
           {
+            "goal": "Prove the totals are real formulas by changing a number and watching the total move, so you can trust the file later.",
+            "title": "Test that the total updates",
             "type": "do",
-            "title": "Test the formula",
             "do": "Open support-tracker.xlsx from your Cowork Academy folder. Change one category's credit amount and press Enter. Then close the file without saving.",
             "see": "The total at the bottom changes by itself to match your new number.",
             "stuck": "If the total doesn't change, click on it. If you see a plain number instead of something like =SUM(...), paste into the task: \"Make the totals SUM formulas.\""
           },
           {
+            "goal": "Turn the table into a bar chart so you can see at a glance which category costs the most credit.",
+            "title": "Add a credit chart",
             "type": "do",
-            "title": "Add a chart",
             "do": "Paste this into the same task and press Enter. Then reopen support-tracker.xlsx.",
             "prompt": "Add a bar chart to support-tracker.xlsx that shows the total credit issued for each ticket category.",
-            "see": "A bar chart in the spreadsheet with one bar per category, with the tallest bar for the category with the most credit.",
+            "see": "A bar chart in the spreadsheet with one bar per category, with the tallest bar for the category with the most credit. Notice which bar is tallest, since that's the answer to the check question.",
             "stuck": "If Cowork says it can't save the file, make sure support-tracker.xlsx is closed in Excel, then ask again."
           },
           {
@@ -307,23 +322,26 @@ const LEVELS = {
         },
         "steps": [
           {
+            "goal": "Have Cowork draw three simple logos for your team page, so you can compare real options instead of imagining them.",
+            "title": "Design three logo options",
             "type": "do",
-            "title": "Ask for options",
             "do": "Paste this into your Cowork task, change the parts in square brackets, and press Enter.",
             "prompt": "Read project-notes.md in this folder (if it's missing, my team is [your team and what it does, e.g. the customer service team, we answer questions about orders]). Design 3 simple logo options for my team page in a [style, e.g. clean and modern, or warm and friendly] style. Save them in this folder as SVG files called logo-1.svg, logo-2.svg and logo-3.svg.",
             "see": "Three files, logo-1.svg, logo-2.svg and logo-3.svg, appear in your Cowork Academy folder.",
             "stuck": "If Cowork shows the logos only in the task, paste: \"Save each logo as an SVG file in this folder.\""
           },
           {
+            "goal": "Pick the logo that fits your team, or tell Cowork what to change, because you decide the look and Cowork draws it.",
+            "title": "Choose your favorite logo",
             "type": "do",
-            "title": "Pick your favorite",
             "do": "Open the three logo files from your Cowork Academy folder and choose one. If none feels right, tell Cowork in the same task what to change.",
-            "see": "You have one logo you like.",
+            "see": "You have one logo you like. Notice what you'd change in the others, which helps you give clearer feedback.",
             "stuck": "If a logo opens as code, right-click it and choose to open it with your web browser. Be specific about changes, for example \"simpler shapes\" or \"use navy instead of green\"."
           },
           {
+            "goal": "Place your chosen logo on index.html, so the logo and the page come together as your finished team page.",
+            "title": "Put the logo on your page",
             "type": "do",
-            "title": "Add it to your page",
             "do": "Paste this into the same task with the number of your favorite, and press Enter. Then open or refresh index.html.",
             "prompt": "Add logo-[your pick, e.g. 2].svg to the top of index.html, next to the headline, at a sensible size.",
             "see": "Your team page shows the logo at the top.",
@@ -355,26 +373,29 @@ const LEVELS = {
         },
         "steps": [
           {
+            "goal": "Give Cowork a real question from your job and get a short answer with links, so you can see where each claim comes from.",
+            "title": "Ask a sourced work question",
             "type": "do",
-            "title": "Ask your question",
             "do": "Paste this into your Cowork task, change the question in square brackets, and press Enter.",
             "prompt": "Search the web and research this for me: [a work question, e.g. what are the most common reasons business customers switch suppliers, and how do suppliers prevent it]. Give me the key points in 5 short bullets, and list the sources you used with links.",
-            "see": "Five bullet points answering your question, followed by a list of web sources with links.",
+            "see": "Five bullet points answering your question, followed by a list of web sources with links. Notice that each bullet should trace back to a listed source.",
             "stuck": "If the answer is too general, make the question more specific, with an industry, region or time frame. If Cowork says it can't search the web, check Claude's help center at support.claude.com, or ask your Academy program contact."
           },
           {
+            "goal": "Open one source and verify the fact, because Cowork can misread a page and you're the one who answers for it.",
+            "title": "Check one source yourself",
             "type": "do",
-            "title": "Check one source",
             "do": "Click one of the source links and find the fact Cowork took from it.",
-            "see": "The page supports what Cowork said in its summary.",
+            "see": "The page supports what Cowork said in its summary. If it doesn't, you've caught a mistake before it spread.",
             "stuck": "If the page doesn't say what Cowork claimed, paste into the same task: \"This source doesn't support that point. Please check it.\""
           },
           {
+            "goal": "Ask a second question that builds on the first answer, which is how a quick search turns into useful research.",
+            "title": "Dig deeper with a follow-up",
             "type": "do",
-            "title": "Ask a follow-up",
             "do": "Type one follow-up question into the same task, based on what you learned, and press Enter.",
             "prompt": "[your follow-up, e.g. Which of these would be cheapest for a team like ours to try first, and why?]",
-            "see": "A focused answer that builds on the first summary."
+            "see": "A focused answer that builds on the first summary. Notice that it uses what the first summary already said."
           },
           {
             "type": "check",
@@ -402,25 +423,28 @@ const LEVELS = {
         },
         "steps": [
           {
+            "goal": "Find out which app your company allows you to connect, so you stay inside company rules before touching any connector.",
+            "title": "Pick an approved app",
             "type": "do",
-            "title": "Find an approved app",
             "do": "Only connect apps your company has approved. Ask your manager or Academy program contact which app you can connect, such as your work calendar.",
             "see": "You know one approved app to connect, or you know there isn't one yet.",
             "stuck": "No approved app yet? Skip the next step and use the practice prompt in the last step's tip instead."
           },
           {
+            "goal": "Link the app to Cowork by signing in yourself, so Cowork can read from it without ever seeing your password.",
+            "title": "Connect the approved app",
             "type": "do",
-            "title": "Connect it",
             "do": "Connect the approved app. For directions, check Claude's help center at support.claude.com. A sign-in window opens and you sign in yourself with your work account.",
             "see": "The app shows as connected in Cowork.",
             "stuck": "If the sign-in window doesn't appear, check whether your browser blocked a pop-up, then try again. If you're still stuck, ask your Academy program contact."
           },
           {
+            "goal": "Have Cowork read and summarize one thing from the app, without changing anything, to see how a connector saves you clicking through it.",
+            "title": "Have Cowork read one thing",
             "type": "do",
-            "title": "Read one thing",
             "do": "Only if your company has approved this connector. Otherwise, use customer-messages.txt. Paste this into your Cowork task, choose the example that fits your app, and press Enter.",
             "prompt": "Using the app I connected, read [one thing, e.g. my calendar events for the next 7 days] and summarize it in short bullets. Don't send, change or delete anything.",
-            "see": "A short summary of real information from your app, such as next week's meetings.",
+            "see": "A short summary of real information from your app, such as next week's meetings. Notice that nothing was sent, changed or deleted.",
             "stuck": "No approved app? Paste this instead: \"Read customer-messages.txt in this folder and summarize the 8 messages in short bullets. Don't reply to anything.\" If Cowork can't reach your connected app, ask your Academy program contact."
           },
           {
@@ -449,25 +473,28 @@ const LEVELS = {
         },
         "steps": [
           {
+            "goal": "Have Cowork list your files and describe what you made in this level, so you see how much you've built.",
+            "title": "Get a recap of your build",
             "type": "do",
-            "title": "Get the recap",
             "do": "Paste this into your Cowork task, change the part in square brackets to match what you did, and press Enter.",
             "prompt": "List the files in this folder. Then write a short recap of what I built in Cowork Academy, in plain English bullets. Here's what I did: [what you did, e.g. built a team page, wrote a customer update letter, made a support tracker, designed a logo, used a skill, connected my calendar].",
             "see": "A list of the files in your folder, then a bulleted recap that names what you built, such as index.html, the customer letter and the tracker.",
             "stuck": "If the recap misses something or adds something you didn't do, tell Cowork, for example: \"I didn't connect an app. Please remove that.\""
           },
           {
+            "goal": "Add the recap to project-notes.md, so future tasks start with the full picture of your project.",
+            "title": "Save the recap in your notes",
             "type": "do",
-            "title": "Save it to your notes",
             "do": "Paste this into the same task and press Enter.",
             "prompt": "Add that recap to the end of project-notes.md under a heading called What I built. Don't change the rest of the file. If project-notes.md doesn't exist, create it.",
             "see": "Cowork confirms it updated or created project-notes.md."
           },
           {
+            "goal": "Confirm the recap landed and your original notes are intact, since this file carries your work into later missions.",
+            "title": "Check the notes file",
             "type": "do",
-            "title": "Check the file",
             "do": "Open project-notes.md from your Cowork Academy folder.",
-            "see": "Your original project description at the top, and the new What I built section at the end.",
+            "see": "Your original project description at the top, and the new What I built section at the end. Notice that nothing from your first description was lost.",
             "stuck": "If your original notes are gone, paste into the task: \"Please put back my original project description at the top.\""
           },
           {
@@ -496,24 +523,27 @@ const LEVELS = {
         },
         "steps": [
           {
+            "goal": "Have Cowork scan your page for anything private before it goes online, because a published page is public to anyone with the link.",
+            "title": "Check the page for private details",
             "type": "do",
-            "title": "Check what's public",
             "do": "Ask your manager before you publish a team page. Then paste this into your Cowork task and press Enter.",
             "prompt": "I may publish index.html online, where anyone with the link can see it. Check it for anything that shouldn't be public, like mobile numbers, personal emails, passwords or access codes, customer names, prices or internal notes, and list what you find.",
             "see": "A short list of details that shouldn't be public, or a note that there are none.",
             "stuck": "If something is listed, ask Cowork to remove it from index.html before you go on. If your manager would rather keep the page internal, put index.html on your team's shared drive instead and stop here. Don't have index.html? Ask Cowork to make a quick one-page team page first."
           },
           {
+            "goal": "Have Cowork guide you one step at a time through publishing, so you can put the page online with no prior experience.",
+            "title": "Walk through GitHub Pages publishing",
             "type": "do",
-            "title": "Follow the walkthrough",
             "do": "Paste this into the same task and press Enter. Follow each step and say done after each one. You create the GitHub account and sign in yourself.",
             "prompt": "Walk me through publishing index.html, and any logo file it uses, for free with GitHub Pages. I'm a complete beginner. Give me one step at a time and wait for me to say done before the next one.",
             "see": "One step at a time, ending with a link that looks like yourname.github.io.",
             "stuck": "If a step doesn't match your screen, describe what you see to Cowork. If your company doesn't allow GitHub, stop here and share the file on your team's drive instead."
           },
           {
+            "goal": "Open the link as a visitor would, to confirm the page and logo load correctly from the internet.",
+            "title": "Open your live page",
             "type": "do",
-            "title": "Open your page",
             "do": "Open your link in a new browser tab.",
             "see": "Your team page, with its headline and logo, loading from the internet.",
             "stuck": "A new site can take a few minutes to appear. If the link shows an error, wait 5 minutes and try again. If the logo is missing, tell Cowork. The file may not have been uploaded."
@@ -560,27 +590,30 @@ const LEVELS = {
         },
         "steps": [
           {
+            "goal": "Tell Cowork the basics of your company so it can write them down. This gives every later mission the same background to work from.",
             "type": "do",
-            "title": "Describe the company",
+            "title": "Describe your company to Cowork",
             "do": "Fill in the brackets with your company's details, then paste this into your Cowork task and press Enter. Keep it to public facts, with no customer or employee names.",
             "prompt": "I work for a company called [name, e.g. Northgate Dental Group]. It [what it does, e.g. runs 8 dental clinics across the state]. Our customers are [who, e.g. families and local employers]. My team is [your team, e.g. patient billing]. Our tone is [tone, e.g. calm, clear and reassuring]. Ask me up to 3 questions to fill any gaps.",
             "see": "Up to three short questions from Cowork, such as what makes the company different or who your customers talk to first.",
             "stuck": "Short on time, or don't want to describe your own company? Paste this instead: \"Make a copy of sample-business-brief.md called business-brief.md in this folder.\" That gives you the practice company, Lakeview Supply Co. Then go straight to the test in a new task."
           },
           {
+            "goal": "Turn what you just told Cowork into a saved file. A file lasts, so you won't have to explain the company in every new task.",
             "type": "do",
-            "title": "Save the brief",
+            "title": "Save the answers as a brief",
             "do": "Answer Cowork's questions in the same task, then paste this and press Enter.",
             "prompt": "Save everything you know about this company as business-brief.md in this folder: name, what it does, customers, my team, tone, and 3 things we should never say or promise. Keep it to one page.",
-            "see": "A file named business-brief.md appears in your Cowork Academy folder, and Cowork shows a short summary of what it wrote.",
+            "see": "A file named business-brief.md appears in your Cowork Academy folder, and Cowork shows a short summary. Notice that it includes the three things never to say or promise.",
             "stuck": "If Cowork only shows the brief in the task, ask: \"Please save that as business-brief.md in this folder.\""
           },
           {
+            "goal": "Prove the brief works by asking a brand-new task about your company. If it answers correctly, any future task can start from this file.",
             "type": "do",
-            "title": "Test it in a new task",
+            "title": "Test the brief in a new task",
             "do": "Start another new task in Cowork, in your Cowork Academy folder. Paste this into it and press Enter.",
             "prompt": "Read business-brief.md in this folder. Then tell me in 2 sentences what company we work for and who its customers are.",
-            "see": "Two sentences that describe your company and its customers correctly, without you explaining anything again.",
+            "see": "Two sentences that describe your company and its customers correctly, without you explaining anything again. Notice that the answer comes from the file, not from this task's memory.",
             "stuck": "If Cowork says it can't find the file, check that the new task is using your Cowork Academy folder."
           },
           {
@@ -609,34 +642,38 @@ const LEVELS = {
         },
         "steps": [
           {
+            "goal": "Have Cowork turn your company brief into a first full website draft. You'll improve this same file in the next two steps.",
             "type": "do",
-            "title": "Build the site",
+            "title": "Build the first draft of the site",
             "do": "Paste this into your Cowork task and press Enter.",
             "prompt": "Read business-brief.md in this folder (or sample-business-brief.md if I don't have one). Build a website for this company as one file called site.html: a hero with a headline, what we offer, about us, an FAQ for customers about ordering, returns and invoices, and a clear call to action. Make it modern, easy to read and trustworthy.",
             "see": "A file named site.html appears in your Cowork Academy folder, and Cowork describes each section it built.",
             "stuck": "Don't have business-brief.md? Use sample-business-brief.md instead. It's already in your Cowork Academy folder."
           },
           {
+            "goal": "Get a professional designer's view of your draft, so you fix real layout problems instead of guessing what feels off.",
             "type": "do",
-            "title": "Get a design critique",
+            "title": "Get a design critique and fixes",
             "do": "Paste this into the same task and press Enter.",
             "prompt": "Critique the design of site.html like a professional designer. List the top 3 problems with layout, spacing, color or hierarchy, then fix those 3 in the file.",
-            "see": "A numbered list of three design problems with a reason for each, followed by an updated site.html.",
+            "see": "A numbered list of three design problems with a reason for each, followed by an updated site.html. Notice that each problem names a section and a specific fix.",
             "stuck": "If the critique is vague, ask: \"Be specific. Name the section and exactly what to change.\""
           },
           {
+            "goal": "Improve the words visitors read first. A clearer headline and button make the site persuasive, not just tidy.",
             "type": "do",
-            "title": "Sharpen the words",
+            "title": "Pick a stronger headline and button",
             "do": "Paste this into the same task and press Enter.",
             "prompt": "Suggest 3 stronger versions of the hero headline and the call-to-action button text, in the tone from the brief. Use the best one in site.html and tell me why you chose it.",
-            "see": "Three headline and button options, the one Cowork picked with a short reason, and an updated site.html.",
+            "see": "Three headline and button options, the one Cowork picked with a short reason, and an updated site.html. Notice whether its reason matches the tone in your brief.",
             "stuck": "If you prefer a different option, say: \"Use option 2 instead.\""
           },
           {
+            "goal": "See the finished site the way a customer would. Looking at it yourself is the only way to confirm the changes landed.",
             "type": "do",
-            "title": "Open the site",
+            "title": "Open the site in your browser",
             "do": "Open site.html from your Cowork Academy folder. It opens in your web browser.",
-            "see": "Your website in the browser, with all five sections and the new headline.",
+            "see": "Your website in the browser, with all five sections and the new headline. Notice whether the spacing and layout look better than the first draft.",
             "stuck": "If it opens as code in a text editor, right-click the file and choose to open it with your web browser."
           },
           {
@@ -665,35 +702,39 @@ const LEVELS = {
         },
         "steps": [
           {
+            "goal": "Start a reusable skill for customer replies. Cowork needs your rules first, so it can write like your company every time.",
             "type": "do",
-            "title": "Start the skill",
+            "title": "Start a customer reply skill",
             "do": "Paste this into your Cowork task and press Enter.",
             "prompt": "Read business-brief.md in this folder (or sample-business-brief.md if I don't have one). Help me create a reusable skill that drafts replies to customer messages in our voice. Ask me for my rules, including at least one thing it must never do, and one good example reply.",
             "see": "Cowork reads the brief, then asks you for your rules, one thing the skill must never do, and an example of a good reply.",
             "stuck": "Don't have business-brief.md? Use sample-business-brief.md instead. It's already in your Cowork Academy folder. If you aren't sure what rules to give, try: keep replies under 120 words, always offer a next step, never promise credits or delivery dates."
           },
           {
+            "goal": "Turn your answers into a saved skill. Once saved, Cowork can use it in any future task without you repeating the rules.",
             "type": "do",
-            "title": "Answer and save it",
+            "title": "Save the rules as a skill",
             "do": "Answer Cowork's questions in the same task, then paste this and press Enter. Cowork will create the skill and may ask you to approve it or turn it on.",
             "prompt": "Create the skill now. Tell me its name and the kind of request that will make you use it.",
             "see": "Cowork confirms the skill is created, tells you its name, and describes the requests that will make it use the skill.",
             "stuck": "If Cowork can't save skills in your setup, check Claude's help center at support.claude.com, or ask your Academy program contact. Meanwhile, ask Cowork to save the rules as reply-rules.md so you don't lose them."
           },
           {
+            "goal": "Try the skill on a real practice message in a fresh task, to see whether it works without you repeating anything.",
             "type": "do",
-            "title": "Test with a real message",
+            "title": "Test the skill on a real message",
             "do": "Start another new task in Cowork, in your Cowork Academy folder. Paste this into it and press Enter.",
             "prompt": "Draft a reply to message 3 in customer-messages.txt in this folder.",
-            "see": "A draft reply in your tone and format that follows your rules and explains the next step for a return, without you repeating the rules.",
+            "see": "A draft reply in your tone and format that follows your rules and explains the next step for a return. Notice that you didn't have to repeat any rules.",
             "stuck": "If the reply ignores your rules, ask: \"Did you use my skill?\" If not, start the request with the skill's name."
           },
           {
+            "goal": "Push the skill with a message that tempts it to break your \"never\" rule. A skill is only trustworthy if the rule holds under pressure.",
             "type": "do",
-            "title": "Test with a tricky request",
-            "do": "Paste this into the same task and press Enter. A tricky request shows whether your \"never\" rule holds.",
+            "title": "Test the skill on a tricky message",
+            "do": "Paste this into the same task and press Enter.",
             "prompt": "Draft a reply to this customer: \"Our order arrived two weeks late and we missed a deadline. I want a full credit on the invoice today.\"",
-            "see": "A reply that stays polite and on brand and still follows your \"never\" rule, such as not promising a credit.",
+            "see": "A reply that stays polite and on brand and still follows your \"never\" rule, such as not promising a credit. Notice whether it offers a next step instead.",
             "stuck": "If it broke a rule, say: \"Update the skill so it never does that,\" then test again."
           },
           {
@@ -722,11 +763,12 @@ const LEVELS = {
         },
         "steps": [
           {
+            "goal": "Hand Cowork a multi-step job using a four-part brief, so it knows what to find, where to look and how to report back.",
             "type": "do",
-            "title": "Fill in the brief",
-            "do": "customer-feedback.csv and support-tickets.csv are already in your Cowork Academy folder. Read the four lines of this brief, change the bracket if you like, then paste it into your Cowork task and press Enter.",
+            "title": "Brief Cowork on the job",
+            "do": "customer-feedback.csv and support-tickets.csv are already in your Cowork Academy folder. Read the four lines of this brief, change the bracket if you like, then paste it into your task and press Enter.",
             "prompt": "Goal: find the 3 customers that need attention most.\nScope: all customers, [time range, e.g. April to September 2026]. Diagnose only, don't plan fixes.\nSources: customer-feedback.csv and support-tickets.csv in this folder only.\nOutput: a table with customer, main problem, evidence from each file, and one next step. Save it as attention-report.md.",
-            "see": "Cowork works through both files, may show its plan or progress, and then shows a table of three customers with evidence from each file.",
+            "see": "Cowork works through both files, may show its plan, and then shows a table of three customers with evidence from each file. Notice which customers appear in both files.",
             "stuck": "If Cowork asks you a question first, your brief was missing something. Answer it, and note what to add to your next brief.",
             "files": [
               "customer-feedback.csv",
@@ -734,11 +776,12 @@ const LEVELS = {
             ]
           },
           {
+            "goal": "Check the report against your brief. Judging delegated work is your job, and this step shows you where the brief or the work fell short.",
             "type": "do",
-            "title": "Judge it against the brief",
-            "do": "Paste this into the same task and press Enter. Checking the output against each part of the brief is your job as the person delegating.",
+            "title": "Check the report against your brief",
+            "do": "Paste this into the same task and press Enter.",
             "prompt": "Check your report against my brief, one line each for goal, scope, sources and output. Then list any claims you couldn't confirm in the two files.",
-            "see": "A line for each part of the brief saying whether it was met, plus any claims Cowork couldn't confirm in the files.",
+            "see": "A line for each part of the brief saying whether it was met, plus any claims Cowork couldn't confirm in the files. Notice which claims lack evidence.",
             "stuck": "If a part was missed, say: \"Fix the [part, e.g. output] so it matches my brief,\" and Cowork updates attention-report.md."
           },
           {
@@ -767,18 +810,20 @@ const LEVELS = {
         },
         "steps": [
           {
+            "goal": "Decide where the information will come from. Connecting only an approved app keeps company data safe, and the practice inbox lets you learn the same workflow.",
             "type": "do",
-            "title": "Connect your calendar",
-            "do": "Only if your company has approved this connector. Otherwise, use customer-messages.txt and go to the next step. To connect, sign in yourself with your work account when the sign-in window pops up.",
+            "title": "Choose a data source",
+            "do": "Connect only if your company has approved the calendar connector. Otherwise, use customer-messages.txt and go to the next step. To connect, sign in yourself with your work account when the pop-up appears.",
             "see": "The calendar shows as connected in Cowork, or you've chosen to use customer-messages.txt.",
             "stuck": "If you can't find where to connect apps, check Claude's help center at support.claude.com, or ask your Academy program contact. Only connect apps your company has approved."
           },
           {
+            "goal": "Turn raw calendar or inbox information into a one-page summary you can act on, while Cowork changes nothing in the source.",
             "type": "do",
-            "title": "Make the summary",
-            "do": "Paste this into your Cowork task and press Enter. Telling Cowork not to change anything is a habit worth keeping with every connector.",
+            "title": "Summarize the source on one page",
+            "do": "Paste this into your Cowork task and press Enter. Telling Cowork not to change anything is a habit to keep with every connector.",
             "prompt": "Using my connected calendar, list my events for the next 7 days. Summarize them on one page: busy days, meetings I need to prepare for, and any clashes. Don't send, change or delete anything. Save it as week-ahead.md in this folder.",
-            "see": "A one-page summary of your next 7 days, with busy days and meetings that need prep, and week-ahead.md in your Cowork Academy folder.",
+            "see": "A one-page summary of your next 7 days, with busy days and meetings that need prep, and week-ahead.md in your Cowork Academy folder. Notice whether the clashes it found are real.",
             "stuck": "Using the practice inbox instead? Paste this: \"Read customer-messages.txt in this folder. Summarize it on one page: main topics, anything urgent, and draft replies only. Save it as inbox-summary.md.\" Cowork drafts, and you send anything outbound."
           },
           {
@@ -807,30 +852,33 @@ const LEVELS = {
         },
         "steps": [
           {
+            "goal": "Have Cowork read six months of orders and tell you what matters, so you get findings and numbers rather than a raw spreadsheet.",
             "type": "do",
-            "title": "Ask for the findings",
-            "do": "orders.csv is already in your Cowork Academy folder. Paste this into your Cowork task and press Enter. Using your own export instead is fine, as long as it has no customer or employee personal details.",
+            "title": "Find the key findings in orders",
+            "do": "orders.csv is already in your Cowork Academy folder. Paste this into your Cowork task and press Enter. Using your own export is fine if it has no personal details.",
             "prompt": "Open orders.csv in this folder. Make a table with one row per channel: number of orders, total revenue, average order value and cancellation rate. Use the revenue column, which counts only Delivered orders. Then give me the 3 most important findings, with the numbers behind each and what each means for decisions.",
-            "see": "A table with one row per channel, showing orders, revenue, average order value and cancellation rate, then three numbered findings in plain English with the figures behind each.",
+            "see": "A table with one row per channel, showing orders, revenue, average order value and cancellation rate, then three numbered findings with figures. Notice which channel stands out on cancellations.",
             "stuck": "If Cowork says it can't find the file, check that this task is using your Cowork Academy folder. Still missing? Use the download link below.",
             "files": [
               "orders.csv"
             ]
           },
           {
+            "goal": "Turn the findings into two pictures. A chart makes the pattern clear at a glance, which suits a manager reading quickly.",
             "type": "do",
-            "title": "Make the charts",
+            "title": "Turn the findings into two charts",
             "do": "Paste this into the same task and press Enter.",
             "prompt": "Make 2 charts that show these findings, with clear titles and labeled axes, and save them in this folder as PNG images.",
-            "see": "Two chart image files in your Cowork Academy folder, for example revenue by channel and cancellation rate by channel.",
+            "see": "Two chart image files in your Cowork Academy folder, such as revenue by channel and cancellation rate by channel. Notice whether each chart shows one of your three findings.",
             "stuck": "If the charts appear only in the task, ask: \"Save those charts as PNG files in this folder.\""
           },
           {
+            "goal": "Confirm one figure before you rely on it. Spot-checking a number shows you whether Cowork's math can be trusted.",
             "type": "do",
-            "title": "Check one number",
+            "title": "Check one cancellation rate",
             "do": "Paste this into the same task and press Enter. Checking is a habit, not a sign of distrust.",
             "prompt": "Show me how you calculated the cancellation rate for the channel with the highest rate: how many orders it had, how many were cancelled, and the division.",
-            "see": "The calculation broken down step by step, with an order count, a cancelled count and a percentage you could confirm by filtering the spreadsheet yourself.",
+            "see": "The calculation broken down step by step, with an order count, a cancelled count and a percentage. Notice whether it matches what you'd get by filtering the spreadsheet yourself.",
             "stuck": "If the steps are hard to follow, ask: \"Show me the rows you counted for that number.\""
           },
           {
@@ -859,8 +907,9 @@ const LEVELS = {
         },
         "steps": [
           {
+            "goal": "Have Cowork turn your brief and order data into a first pitch deck for a prospective customer, with speaker notes for you to use.",
             "type": "do",
-            "title": "Draft the deck",
+            "title": "Draft the pitch deck",
             "do": "Paste this into your Cowork task and press Enter.",
             "prompt": "Read business-brief.md (or sample-business-brief.md if I don't have one). Create a 6 to 8 slide PowerPoint deck called pitch-deck.pptx for a business thinking of becoming our customer: title, their problem, what we offer, why us, one chart, next steps. Use a chart image in this folder, or make one from orders.csv. Add speaker notes.",
             "see": "Cowork lists the slides it made, and pitch-deck.pptx appears in your Cowork Academy folder.",
@@ -870,18 +919,20 @@ const LEVELS = {
             ]
           },
           {
+            "goal": "Read the deck as an audience would, and find the slide that is trying to say too much. You'll fix that one next.",
             "type": "do",
-            "title": "Open and review",
+            "title": "Open the deck and find the busy slide",
             "do": "Open pitch-deck.pptx from your Cowork Academy folder. Click through every slide and note the number of the one that feels busiest.",
-            "see": "Your slides open in PowerPoint, Keynote or Google Slides, with speaker notes under each slide.",
+            "see": "Your slides open in PowerPoint, Keynote or Google Slides, with speaker notes under each slide. Notice which slide has the most text, and write down its number.",
             "stuck": "If the file won't open, check you have a program that opens .pptx files. Google Slides can open it if you upload it to Google Drive."
           },
           {
+            "goal": "Make the busiest slide easy to take in, by keeping one point on the slide and moving detail into the speaker notes.",
             "type": "do",
-            "title": "Fix the busiest slide",
+            "title": "Simplify the busiest slide",
             "do": "Fill in the bracket, then paste this into the same task and press Enter.",
             "prompt": "Slide [number, e.g. 4] has too much on it. Cut it to one main point and at most 3 short bullets, move the detail into the speaker notes, and save the deck again.",
-            "see": "An updated pitch-deck.pptx where that slide is lighter and the detail sits in the speaker notes.",
+            "see": "An updated pitch-deck.pptx where that slide is lighter and the detail sits in the speaker notes. Notice that nothing was lost, only moved.",
             "stuck": "If you still have the old version open, close it and open the file again to see the change."
           },
           {
@@ -910,19 +961,21 @@ const LEVELS = {
         },
         "steps": [
           {
+            "goal": "Have Cowork write a one-page customer guide as a PDF. Marking unknown details as [to confirm] stops it inventing facts.",
             "type": "do",
-            "title": "Make the PDF",
+            "title": "Create the customer guide PDF",
             "do": "Paste this into your Cowork task and press Enter.",
             "prompt": "Read business-brief.md (or sample-business-brief.md if I don't have one). Create a polished one-page PDF called customer-guide.pdf for our customers: a headline, how to order, how returns work, how to get an invoice copy, and who to contact. Mark any fee, deadline or contact detail you weren't given as [to confirm].",
-            "see": "customer-guide.pdf appears in your Cowork Academy folder, and Cowork describes its layout.",
+            "see": "customer-guide.pdf appears in your Cowork Academy folder, and Cowork describes its layout. Notice every place it wrote [to confirm].",
             "stuck": "Don't have business-brief.md? Use sample-business-brief.md instead. It's already in your Cowork Academy folder. If Cowork makes a Word document instead, ask: \"Please save it as a PDF too.\""
           },
           {
+            "goal": "Read the guide as a customer would, and fix anything wrong or unclear. You're the last check before it goes out.",
             "type": "do",
-            "title": "Check and fix it",
+            "title": "Fix the details in the guide",
             "do": "Open customer-guide.pdf from your Cowork Academy folder and read it as a customer would. Then fill in the brackets, paste this into the same task and press Enter.",
             "prompt": "Update customer-guide.pdf: [your fixes, e.g. remove the return deadline, use the phone number 555-0142, and add more space around the headline]. Keep it to one page.",
-            "see": "An updated customer-guide.pdf with your fixes, still on one page.",
+            "see": "An updated customer-guide.pdf with your fixes, still on one page. Notice that no invented fee, deadline or phone number remains.",
             "stuck": "If the layout breaks onto two pages, ask: \"Shorten the text so it fits on one page.\""
           },
           {
@@ -951,8 +1004,9 @@ const LEVELS = {
         },
         "steps": [
           {
+            "goal": "Set up a task that runs on its own each Monday and summarizes open support tickets, so you don't have to ask for it every week.",
             "type": "do",
-            "title": "Schedule the task",
+            "title": "Schedule the Monday ticket summary",
             "do": "support-tickets.csv is already in your Cowork Academy folder. Paste this into your Cowork task and press Enter. Scheduled tasks may only run while your computer is on and the Claude app is open.",
             "prompt": "Set up a scheduled task for every Monday at 8am. It reads support-tickets.csv in this folder and writes monday-tickets.md: how many tickets have status Open, the 3 most urgent by priority, and any opened more than 7 days before 30 September 2026, the last date in the file. Replace the old summary each time.",
             "see": "Cowork confirms a scheduled task with its day, time and the file it will write.",
@@ -962,19 +1016,21 @@ const LEVELS = {
             ]
           },
           {
+            "goal": "Run the scheduled task once now, so you can see what it will produce each Monday before relying on it.",
             "type": "do",
-            "title": "Test it now",
+            "title": "Run the task once to test it",
             "do": "Paste this into the same task and press Enter. A test run shows what you'll get each Monday.",
             "prompt": "Run that scheduled task once now so I can see the result. Then tell me when it will next run.",
-            "see": "monday-tickets.md appears in your Cowork Academy folder with a count of open tickets and the most urgent issues, and Cowork tells you when it will next run.",
+            "see": "monday-tickets.md appears in your Cowork Academy folder with a count of open tickets and the most urgent issues, and Cowork says when it will next run. Notice the open-ticket count; you'll compare it in the next step.",
             "stuck": "If the summary misses something you care about, say: \"Also include open tickets by customer,\" and ask Cowork to update the scheduled task."
           },
           {
+            "goal": "Change one ticket and rerun, to prove the summary follows the data. This is how the task will behave when the file changes by itself.",
             "type": "do",
-            "title": "Change the data and rerun",
+            "title": "Change a ticket and rerun the task",
             "do": "Paste this into the same task and press Enter. In real work, the file would change on its own each week. Here you change one row yourself.",
             "prompt": "In support-tickets.csv, change the status of ticket CS-1204 (Magnolia Hotels Group, invoice copy needed) from Open to Closed. Then run the Monday task again and tell me what changed in monday-tickets.md.",
-            "see": "Cowork marks CS-1204 as Closed, reruns the task, and tells you what changed in monday-tickets.md, such as one fewer open ticket.",
+            "see": "Cowork marks CS-1204 as Closed, reruns the task, and tells you what changed in monday-tickets.md, such as one fewer open ticket. Notice that the count dropped by one.",
             "stuck": "Want the original file back later? Use the download link on the first step of this mission."
           },
           {
@@ -1003,8 +1059,9 @@ const LEVELS = {
         },
         "steps": [
           {
+            "goal": "Have Cowork build a one-page dashboard from your practice data, with three key numbers that each say where they came from.",
             "type": "do",
-            "title": "Build the dashboard",
+            "title": "Build a three-tile dashboard",
             "do": "orders.csv and support-tickets.csv are already in your Cowork Academy folder. Paste this into your Cowork task and press Enter.",
             "prompt": "Build a simple dashboard as one file called dashboard.html with 3 tiles: total revenue and the best month by revenue from orders.csv, and the number of tickets with status Open in support-tickets.csv. Under each tile, show in small print which file and column it came from, and the date you built it.",
             "see": "dashboard.html appears in your Cowork Academy folder, and Cowork lists the three tiles and their numbers.",
@@ -1015,18 +1072,20 @@ const LEVELS = {
             ]
           },
           {
+            "goal": "Look at the dashboard in a browser and read the small print, so you know where each number comes from and when it was built.",
             "type": "do",
-            "title": "Open it",
+            "title": "Open the dashboard in your browser",
             "do": "Open dashboard.html from your Cowork Academy folder. It opens in your web browser. Read the small print under each tile.",
-            "see": "Three labeled tiles with numbers, each with a note on its source file and the build date.",
+            "see": "Three labeled tiles with numbers, each with a note on its source file and the build date. Notice the build date; it should change in the next step.",
             "stuck": "If it opens as code in a text editor, right-click the file and choose to open it with your web browser."
           },
           {
+            "goal": "Learn how a dashboard stays current: you ask Cowork to rebuild it from the newest files, since the file never updates itself.",
             "type": "do",
-            "title": "Refresh it",
+            "title": "Rebuild the dashboard with new data",
             "do": "The file doesn't update by itself. To refresh it, you ask Cowork to rebuild it. Paste this into the same task and press Enter.",
             "prompt": "Rebuild dashboard.html from the newest orders.csv and support-tickets.csv in this folder. Tell me which numbers changed since the last build, if any.",
-            "see": "An updated dashboard.html with today's build date, and a short note from Cowork on which numbers changed, if any.",
+            "see": "An updated dashboard.html with today's build date, and a short note from Cowork on which numbers changed, if any. Notice that the build date is newer than before.",
             "stuck": "If the browser still shows the old version, refresh the browser page or open the file again."
           },
           {
@@ -1055,27 +1114,30 @@ const LEVELS = {
         },
         "steps": [
           {
+            "goal": "Get an inventory of what you made in this course, so the write-up in the next steps starts from facts.",
             "type": "do",
-            "title": "List your files",
+            "title": "List the files you created",
             "do": "Paste this into your Cowork task and press Enter.",
             "prompt": "List the files in this folder that were made in this course, not the starter practice files. One line each on what the file is.",
-            "see": "A list of the files in your Cowork Academy folder, such as site.html, pitch-deck.pptx and dashboard.html, with a line on what each one is.",
+            "see": "A list of the files in your Cowork Academy folder, such as site.html, pitch-deck.pptx and dashboard.html, with a line on each. Notice anything you expected that is missing.",
             "stuck": "If the list is short because you skipped missions, that's fine. Write up what you did."
           },
           {
+            "goal": "Add the work Cowork can't see, such as skills and scheduled tasks, so the saved summary covers everything you built.",
             "type": "do",
-            "title": "Add what Cowork can't see",
+            "title": "Write up everything you built",
             "do": "Fill in the brackets, then paste this into the same task and press Enter. Cowork can't see your skills, connectors or schedules from the folder, so you tell it.",
             "prompt": "I also built: [what else, e.g. a customer-reply skill, and a Monday tickets scheduled task]. Write a one-page summary of everything, with one line each on how to use it again. Save it as what-we-built.md.",
-            "see": "what-we-built.md appears in your Cowork Academy folder, with a section for files and a section for skills, connectors and scheduled tasks.",
+            "see": "what-we-built.md appears in your Cowork Academy folder, with a section for files and a section for skills, connectors and scheduled tasks. Notice the one line on how to reuse each item.",
             "stuck": "If you didn't build any skills or connectors, write \"nothing else\" in the brackets."
           },
           {
+            "goal": "Connect what you built to your real job. Picking one thing to reuse at work turns practice into a habit.",
             "type": "do",
-            "title": "Plan to reuse it",
+            "title": "Plan how to reuse it at work",
             "do": "Fill in the brackets, then paste this into the same task and press Enter.",
             "prompt": "My real job is [your role, e.g. accounts payable clerk, HR coordinator, or sales manager]. Suggest 3 ways I could adapt what I built for tasks I do every week, and the one rule or setting I'd most need to change.",
-            "see": "Three ideas tied to your role, and the one change you'd make first.",
+            "see": "Three ideas tied to your role, and the one change you'd make first. Notice which idea you'd actually try this week.",
             "stuck": "If the ideas feel generic, add a sentence about a task you really do every week."
           },
           {
@@ -1104,26 +1166,29 @@ const LEVELS = {
         },
         "steps": [
           {
+            "goal": "Check the site for private details and mistakes before it goes public. Anything you publish can be seen by anyone with the link.",
             "type": "do",
-            "title": "Check before you publish",
+            "title": "Check the site before publishing",
             "do": "Paste this into your Cowork task and press Enter. Anything you publish can be seen by anyone with the link, so publish only practice content unless your company approves.",
             "prompt": "Check site.html in this folder before I publish it. List any customer or employee details, private company information, broken links or made-up facts I should fix, then fix them.",
             "see": "A short list of anything to fix, or confirmation that the site looks safe to publish.",
             "stuck": "Don't have site.html? Ask Cowork: \"Build a one-page site.html from sample-business-brief.md.\" Then run this check."
           },
           {
+            "goal": "Publish the checked site on free hosting. Cowork guides you one step at a time, and you do the sign-in yourself.",
             "type": "do",
-            "title": "Follow the steps",
+            "title": "Publish the site with GitHub Pages",
             "do": "Paste this into the same task and press Enter. Do each step Cowork gives you, and sign in to GitHub yourself.",
             "prompt": "Walk me through publishing site.html for free with GitHub Pages, one step at a time. Wait for me to say done before giving the next step.",
-            "see": "One step at a time, and at the end a web address for your site.",
+            "see": "One step at a time, and at the end a web address for your site. Notice that Cowork waits for you to say done before moving on.",
             "stuck": "If a screen looks different from what Cowork describes, tell it what you see. If the link shows a 404 page, wait a few minutes and refresh."
           },
           {
+            "goal": "Open the live address and click through it, to confirm the published site works the way the file did on your computer.",
             "type": "do",
-            "title": "Open the site",
+            "title": "Open the live site and test it",
             "do": "Open your new link in your browser. Click every section and link to check they work.",
-            "see": "Your practice website online at its own address, with all sections working.",
+            "see": "Your practice website online at its own address, with all sections working. Notice that anyone with this link could now open it.",
             "stuck": "If the page has no styling or images are missing, tell Cowork what you see and ask it to fix the files."
           },
           {
@@ -1168,11 +1233,12 @@ const LEVELS = {
         },
         "steps": [
           {
+            "goal": "Describe the tool you want to build: the problem, who uses it, its two data sources and how you'll know it works. Cowork asks questions first, so gaps show up before you build.",
             "type": "do",
-            "title": "Write the brief",
+            "title": "Write the brief for your tool",
             "do": "Replace every bracketed part with your own decision. Then paste it into your Cowork task and press Enter.",
             "prompt": "I'm planning a small internal tool for my team at [your company and team, e.g. a law firm's client intake team]. Problem: [the problem in one sentence]. Users: [who uses it, and when]. Sources: [two sources, e.g. support-tickets.csv and customer-feedback.csv]. Done means: [a test you could check, e.g. a manager sees which customers have unresolved issues in under a minute]. Ask me up to 4 questions about anything unclear, one at a time.",
-            "see": "Cowork asks you a single question, such as how often the users would open the tool or what they do today instead.",
+            "see": "Cowork asks you a single question, such as how often the users would open the tool or what they do today instead. Notice that it is probing a gap in your brief.",
             "stuck": "No idea yet? Use the example: a customer issue tracker that combines support-tickets.csv and customer-feedback.csv for Lakeview Supply Co. Both files are already in your Cowork Academy folder. If Cowork writes a plan straight away, reply: 'Stop. Ask me your questions first, one at a time.'",
             "files": [
               "support-tickets.csv",
@@ -1180,19 +1246,21 @@ const LEVELS = {
             ]
           },
           {
+            "goal": "Answer Cowork's questions, then have it turn your answers into a one-page plan. You'll build from this plan in every later mission, so it needs to be specific.",
             "type": "do",
             "title": "Answer, then save the plan",
             "do": "Answer each question in a sentence or two. After the last one, fill in the brackets below, paste it into the same task and press Enter.",
             "prompt": "Write a one-page plan and save it in this folder as product-plan.md. Sections: problem and users, the done test, data sources, the pages of a small internal website, one job I'd delegate: [e.g. a weekly review of low-rated feedback], one task to save as a skill: [e.g. replying to a customer complaint in our voice], and open questions.",
-            "see": "product-plan.md appears in your Cowork Academy folder, with a short section for each item, including your done test word for word.",
+            "see": "product-plan.md appears in your Cowork Academy folder, with a short section for each item, including your done test word for word. Notice whether each section names a real source or page.",
             "stuck": "If a section is vague, such as 'a messaging app', reply: 'Name the exact source for each section and update product-plan.md.'"
           },
           {
+            "goal": "Have Cowork attack the plan as a skeptical reviewer would, so you cut weak parts now instead of after you've built them. This leaves you with a plan you can trust.",
             "type": "do",
-            "title": "Pressure-test it",
+            "title": "Pressure-test the plan",
             "do": "Fill in the bracket, then paste this into the same task and press Enter.",
             "prompt": "Read product-plan.md as a skeptical [who will judge it, e.g. our head of operations, or the finance director]. Does every section serve the done test? List up to 3 gaps, and suggest one thing to cut. Update the file only after I agree.",
-            "see": "Up to three specific gaps and one suggested cut. After you agree, Cowork updates product-plan.md.",
+            "see": "Up to three specific gaps and one suggested cut. Notice which section Cowork says would fail the done test first. After you agree, Cowork updates product-plan.md.",
             "stuck": "If Cowork says the plan is fine, ask: 'Which section would fail first if we built it tomorrow?'"
           },
           {
@@ -1221,26 +1289,29 @@ const LEVELS = {
         },
         "steps": [
           {
+            "goal": "Have Cowork turn product-plan.md into a working multi-page internal website. You decide the pages and what people must be able to do, so the site matches your done test.",
             "type": "do",
-            "title": "Build the site",
+            "title": "Build the site from your plan",
             "do": "Fill in the brackets, then paste this into your Cowork task and press Enter.",
             "prompt": "Read product-plan.md (or sample-business-brief.md if you don't have one). Build the internal website it describes as linked HTML pages in a new folder called site: [the pages, e.g. a home page, an open issues page and an issues by customer page]. It must [your done test, e.g. let a manager find any customer's open issues in two clicks] and work at phone width. Use sample data from the practice files.",
-            "see": "A folder called site appears in your Cowork Academy folder, with index.html and the other pages you asked for.",
+            "see": "A folder called site appears in your Cowork Academy folder, with index.html and the other pages you asked for. Notice whether the page names match your plan.",
             "stuck": "Don't have product-plan.md? The prompt falls back to sample-business-brief.md, which is already in your folder. If neither is there, describe your tool in two sentences at the start of the prompt."
           },
           {
+            "goal": "See the site the way your users will, before asking Cowork to judge it. Trying your own done test shows you what to fix in the next step.",
             "type": "do",
-            "title": "Test it yourself",
+            "title": "Click through the site yourself",
             "do": "Open index.html from the site folder in your Cowork Academy folder. Click every link, then try your done test as if you were one of your users.",
-            "see": "The site opens in your web browser, every link works, and you can tell whether your done test passes.",
+            "see": "The site opens in your web browser, every link works, and you can tell whether your done test passes. Notice any page that feels slow, confusing or unfinished.",
             "stuck": "If it opens as code in a text editor, right-click index.html and choose to open it with your web browser."
           },
           {
+            "goal": "Have Cowork critique the site as your user would, on design, wording and accessibility, then fix what it finds. This turns a first draft into something you could show the team.",
             "type": "do",
-            "title": "Review and fix",
+            "title": "Review the site and fix problems",
             "do": "Fill in the brackets, then paste this into the same task and press Enter.",
             "prompt": "Review the site as [your user, e.g. a support agent checking it on a phone between calls, or a store manager on the shop floor]. Do a design critique, a plain-language pass and an accessibility check (contrast, text size, tap targets). List the top 3 issues in each, fix them, and confirm the site still passes: [your done test]. Also fix this, which I found: [one thing that bothered you].",
-            "see": "Three short lists of issues, a summary of what Cowork changed, and a line on whether the done test still passes. Refresh the page in your browser to see the fixes.",
+            "see": "Three short lists of issues, a summary of what Cowork changed, and a line on whether the done test still passes. Notice which issues matter for your user. Refresh the page in your browser to see the fixes.",
             "stuck": "If the fixes don't show, refresh the browser page. If the site still feels like a first draft, ask: 'Do a second, tighter design pass, and show me what you changed.'"
           },
           {
@@ -1269,38 +1340,42 @@ const LEVELS = {
         },
         "steps": [
           {
+            "goal": "Hand Cowork a self-contained job with a goal, scope, sources and output format. A clear brief is the skill that decides whether delegated work comes back usable.",
             "type": "do",
-            "title": "Write the brief",
+            "title": "Write the delegation brief",
             "do": "Fill in all four parts of the brief: goal, scope, sources and output format. Then paste it into your Cowork task and press Enter.",
             "prompt": "Treat this as a delegated job and follow the brief exactly.\nGoal: [the decision this helps, e.g. which region the sales director should call first].\nScope: [what's in and out, e.g. responses from July to September 2026, no contact with customers].\nSources: customer-feedback.csv and [any other file, or none].\nOutput format: [e.g. a ranked table of the 3 lowest-rated customers with the comments behind each].\nSave the result as agent-result.md.",
-            "see": "Cowork works through the job, then agent-result.md appears in your Cowork Academy folder in the format you asked for.",
+            "see": "Cowork works through the job, then agent-result.md appears in your Cowork Academy folder in the format you asked for. Notice whether it follows your count, layout and scope.",
             "stuck": "Cowork may do the job in this task or hand it to a helper, depending on your setup. Either is fine: you're practicing the brief. If the result misses, change the brief part that caused it and run it again.",
             "files": [
               "customer-feedback.csv"
             ]
           },
           {
+            "goal": "Don't trust delegated work until you've checked it. Compare the result with your four brief parts and have Cowork show its working, so you can catch errors and loose briefs.",
             "type": "do",
-            "title": "Judge the output",
+            "title": "Check the result against the brief",
             "do": "Open agent-result.md and compare it with your four brief parts. Then paste this into the same task and press Enter.",
             "prompt": "Check agent-result.md against my brief, part by part: goal, scope, sources and output format. Say where it falls short, and show me how you got the two most important numbers so I can check them in customer-feedback.csv.",
-            "see": "A part-by-part check against your brief, and the working behind two numbers, such as a customer's average rating and how many responses it's based on.",
+            "see": "A part-by-part check against your brief, and the working behind two numbers, such as a customer's average rating and how many responses it's based on. Notice any number that rests on very few rows.",
             "stuck": "If the working doesn't match the file, ask: 'Recalculate that from customer-feedback.csv and show me the rows you used.'"
           },
           {
+            "goal": "Save a task you repeat as a custom skill, so you can run it the same way every time without rewriting the instructions. You decide the task and the criteria for good output.",
             "type": "do",
-            "title": "Build the skill",
+            "title": "Turn a repeated task into a skill",
             "do": "Fill in the brackets, then paste this into the same task and press Enter.",
             "prompt": "Create a custom skill for a task I repeat: [the task, e.g. replying to a customer complaint in our voice, or summarizing a supplier call for the finance team]. Good output means: [your criteria, e.g. under 120 words, apologizes once, offers one concrete fix, promises no refunds]. Ask me for one real-looking example before you write it.",
-            "see": "Cowork asks for an example, then creates the skill. It may ask you to approve the skill or turn it on.",
+            "see": "Cowork asks for an example, then creates the skill. It may ask you to approve the skill or turn it on. Notice that the skill's name and its rules match what you described.",
             "stuck": "If Cowork asks you to approve or turn on the skill, do it. If you can't find where, check Claude's help center at support.claude.com, or ask your Academy program contact."
           },
           {
+            "goal": "Prove the skill works on its own in a new task, with none of the earlier context. If it passes here, it's ready to reuse.",
             "type": "do",
-            "title": "Test it in a new task",
+            "title": "Test the skill in a fresh task",
             "do": "Start a new Cowork task in your Cowork Academy folder. Fill in the bracket, then paste this and press Enter.",
             "prompt": "Use my [skill name] skill on the lowest-rated comment in agent-result.md (or in customer-feedback.csv if you don't have that file). Save the output as skill-test.md, and tell me which of the skill's criteria it met.",
-            "see": "skill-test.md appears in your Cowork Academy folder, written to your criteria, with a note on which ones it met.",
+            "see": "skill-test.md appears in your Cowork Academy folder, written to your criteria, with a note on which ones it met. Notice any criterion it missed.",
             "stuck": "If Cowork doesn't seem to know the skill, check that you approved it or turned it on, then name the skill again in your request."
           },
           {
@@ -1329,29 +1404,32 @@ const LEVELS = {
         },
         "steps": [
           {
+            "goal": "Confirm that both sources are connected and readable before building anything on them. Catching a connection problem now saves you debugging a workflow later.",
             "type": "do",
-            "title": "Pick your two sources",
+            "title": "Test both sources with a sample",
             "do": "Only connect apps your company has approved, and sign in yourself in any pop-up. Then fill in the brackets, paste this into your Cowork task and press Enter.",
             "prompt": "Show me one small sample from each of these two sources so I know both work: [source 1, e.g. customer-messages.txt or my company calendar] and [source 2, e.g. support-tickets.csv or a shared team sheet]. Don't send, change or delete anything.",
-            "see": "A short sample from each source, for example two customer messages and the first few rows of the tickets.",
+            "see": "A short sample from each source, for example two customer messages and the first few rows of the tickets. Notice that both samples are real data, not made up.",
             "stuck": "Use a real inbox or calendar only if your company has approved this connector. Otherwise, use customer-messages.txt and support-tickets.csv, which are already in your folder. For help connecting an approved app, check support.claude.com or ask your Academy program contact.",
             "files": [
               "support-tickets.csv"
             ]
           },
           {
+            "goal": "Have Cowork match items from one source against the other and write a draft for each match. This is the useful part of combining sources: each draft draws on both.",
             "type": "do",
-            "title": "Brief the workflow",
+            "title": "Match the two sources into drafts",
             "do": "Fill in every bracket, then paste this into the same task and press Enter.",
             "prompt": "Build one workflow from these two sources. Starts when: [the trigger, e.g. a customer message mentions an invoice or a delivery problem]. From source 1, take: [e.g. the customer and the problem]. Match it in source 2 with: [e.g. open tickets for that customer]. Each draft must: [your criteria, e.g. give the customer a realistic next step and name the ticket]. Save all drafts in this folder as bridge-drafts.md. Don't send, change or delete anything.",
-            "see": "bridge-drafts.md appears in your Cowork Academy folder, with one draft per matched item that names details from both sources.",
+            "see": "bridge-drafts.md appears in your Cowork Academy folder, with one draft per matched item that names details from both sources. Notice that nothing was sent or changed.",
             "stuck": "If Cowork starts to send or change something, reply: 'Stop. Drafts in bridge-drafts.md only.' Then check the app to see whether anything changed."
           },
           {
+            "goal": "Spot-check the output against the originals before you rely on it. Two careful checks tell you whether the matching rule is sound.",
             "type": "do",
-            "title": "Check two drafts",
+            "title": "Verify two drafts by hand",
             "do": "Open bridge-drafts.md. Pick two drafts and check each one against the original item in both sources.",
-            "see": "Each draft you checked names the right item from source 1 and the right match from source 2.",
+            "see": "Each draft you checked names the right item from source 1 and the right match from source 2. Notice whether any detail came from neither source.",
             "stuck": "If a draft matched the wrong item, tell Cowork which one and why, and ask it to tighten the matching rule and redo bridge-drafts.md."
           },
           {
@@ -1380,11 +1458,12 @@ const LEVELS = {
         },
         "steps": [
           {
+            "goal": "Decide which 4 or 5 numbers the dashboard will show, and the decision each one supports. A signal nobody acts on is clutter, so this step keeps the dashboard useful.",
             "type": "do",
-            "title": "Pick the signals",
+            "title": "Choose signals that drive decisions",
             "do": "support-tickets.csv and customer-feedback.csv are already in your Cowork Academy folder. Fill in the brackets, then paste this into your Cowork task and press Enter.",
             "prompt": "Read product-plan.md (or sample-business-brief.md if you don't have one). Using support-tickets.csv and customer-feedback.csv, propose 4 or 5 signals for a dashboard read by [who, e.g. the Monday customer service meeting]. Each signal must help decide [the decision, e.g. which region or ticket category needs action this week]. Include the number of Delivery tickets opened each month. Drop any signal that doesn't lead to a decision.",
-            "see": "A short list of signals, each with the decision it supports, such as 'Average rating by region: where to send help first.'",
+            "see": "A short list of signals, each with the decision it supports, such as 'Average rating by region: where to send help first.' Notice any signal without a clear action behind it.",
             "stuck": "If a signal has no clear decision, reply: 'Replace that one with a signal someone would act on this week.'",
             "files": [
               "support-tickets.csv",
@@ -1392,19 +1471,21 @@ const LEVELS = {
             ]
           },
           {
+            "goal": "Have Cowork build the dashboard with a 'what changed' summary, and save a prompt that rebuilds it later. The file won't update itself, so the saved prompt is how you refresh it.",
             "type": "do",
-            "title": "Build it",
+            "title": "Build the dashboard and refresh prompt",
             "do": "Fill in the bracket, then paste this into the same task and press Enter. Open dashboard.html from your folder when it's ready.",
             "prompt": "Build those signals as dashboard.html in this folder, one tile each, with a 'what changed' summary at the top comparing September 2026 with August 2026. It must pass this test: [your done test, e.g. a manager can name the top problem in 30 seconds]. Also save refresh.md with the exact prompt I can paste to rebuild it from the newest data.",
-            "see": "dashboard.html opens in your browser with a tile per signal and a short summary at the top. refresh.md is in your folder.",
+            "see": "dashboard.html opens in your browser with a tile per signal and a short summary at the top. refresh.md is in your folder. Notice that each tile names its signal and its source.",
             "stuck": "If dashboard.html opens as code, right-click it and choose to open it with your web browser. The file doesn't update by itself: you refresh it by asking Cowork to rebuild it."
           },
           {
+            "goal": "Prove the refresh works by adding one test ticket to a copy of the data and rebuilding. If the right tile changes, the dashboard will stay accurate with newer data.",
             "type": "do",
-            "title": "Test a refresh",
+            "title": "Test the refresh with a new ticket",
             "do": "Paste this into the same task and press Enter. Coming back later with newer data to use refresh.md is optional.",
             "prompt": "Copy support-tickets.csv to tickets-test.csv and add one Open Delivery ticket for Desert Bloom Clinics in the West, opened 2026-09-30. Rebuild the dashboard from tickets-test.csv as dashboard-test.html, and tell me which tiles changed.",
-            "see": "dashboard-test.html appears in your folder, and Cowork names the tiles that changed, such as the open ticket count or West Delivery tickets.",
+            "see": "dashboard-test.html appears in your folder, and Cowork names the tiles that changed, such as the open ticket count or West Delivery tickets. Notice that unrelated tiles stay the same.",
             "stuck": "If Cowork edits support-tickets.csv itself, ask it to undo that change. Other missions rely on the original file."
           },
           {
@@ -1433,26 +1514,29 @@ const LEVELS = {
         },
         "steps": [
           {
+            "goal": "Find out whether Cowork can use your browser before you plan a task around it. If not, you can skip this mission without losing anything later.",
             "type": "do",
-            "title": "Check it's available",
+            "title": "Check Chrome access is on",
             "do": "Paste this into your Cowork task and press Enter.",
             "prompt": "Can you use my Chrome browser through Claude in Chrome in this task right now? Answer yes or no, and don't change any settings.",
-            "see": "A clear yes or no.",
+            "see": "A clear yes or no. Notice that a yes means Cowork can click and read pages in your own Chrome.",
             "stuck": "If the answer is no, or your company doesn't allow browser extensions, skip this mission. Nothing later in this level depends on it. For setup help, check support.claude.com or ask your Academy program contact."
           },
           {
+            "goal": "Have Cowork browse a site that has no export button and gather the information into a file. This is how you pull in data that isn't available as a download.",
             "type": "do",
-            "title": "Brief the web task",
+            "title": "Collect data from a website",
             "do": "Fill in every bracket, then paste this into the same task and press Enter. If the site asks you to sign in, do it yourself.",
             "prompt": "Using Claude in Chrome, go to [a site you use for work, e.g. a supplier's price list, a public tender portal or a carrier's tracking page]. Collect [what you need, e.g. prices for our 5 most-ordered items]. Done means: [your test, e.g. every item has a price, a unit size and the page it came from]. Don't buy, submit or send anything. Save it in this folder as web-results.md.",
-            "see": "Chrome moves through the site while Cowork reports what it's doing. Then web-results.md appears in your Cowork Academy folder.",
+            "see": "Chrome moves through the site while Cowork reports what it's doing. Then web-results.md appears in your Cowork Academy folder. Notice that you stay in control: you sign in yourself.",
             "stuck": "If Cowork asks to submit, buy or send something, say no. If the site blocks it, try a public page with the same kind of information."
           },
           {
+            "goal": "Verify two collected items against the live site yourself. Browser results can be wrong or out of date, so you check before using them.",
             "type": "do",
-            "title": "Spot-check the results",
+            "title": "Spot-check the collected results",
             "do": "Pick two items in web-results.md and compare them with the website yourself.",
-            "see": "Both items match what the site shows today, and each one meets your done test.",
+            "see": "Both items match what the site shows today, and each one meets your done test. Notice any item where the value or date differs.",
             "stuck": "If something doesn't match, reply: 'The entry for [item] doesn't match the site. Check it again and show me where you found it.'"
           },
           {
@@ -1481,26 +1565,29 @@ const LEVELS = {
         },
         "steps": [
           {
+            "goal": "Find out whether Cowork can control apps on your computer before planning a task. If not, you can skip this mission without losing anything later.",
             "type": "do",
-            "title": "Check it's available",
+            "title": "Check desktop control is on",
             "do": "Paste this into your Cowork task and press Enter.",
             "prompt": "Can you control desktop apps on my computer in this task right now? Answer yes or no, and if yes, name the kinds of apps.",
-            "see": "A clear yes or no, and if yes, the kinds of apps it can use.",
+            "see": "A clear yes or no, and if yes, the kinds of apps it can use. Notice which apps are named, since you'll pick one in the next step.",
             "stuck": "If the answer is no, or your company has computer control turned off, skip this mission. Nothing later in this level depends on it. For setup help, check support.claude.com or ask your Academy program contact."
           },
           {
+            "goal": "Have Cowork do one small, reversible task by clicking and typing in an app, while you watch. A small task lets you learn the permissions safely.",
             "type": "do",
-            "title": "Brief a small task",
+            "title": "Give Cowork one small app task",
             "do": "Fill in the brackets, then paste this into the same task and press Enter. Read any permission request before you allow it.",
             "prompt": "Do one small, reversible task in a desktop app: [the task, e.g. open a text editor and draft a launch checklist from product-plan.md]. Done means: [your test, e.g. a saved file with 8 to 10 checklist items]. Don't delete, send or pay for anything. Tell me exactly what you did.",
-            "see": "The app opens and you watch Cowork click and type in it, followed by a short report of what it did.",
+            "see": "The app opens and you watch Cowork click and type in it, followed by a short report of what it did. Notice each permission request before you allow it.",
             "stuck": "If you're not comfortable with what a permission request allows, deny it and pick a smaller task. Don't have product-plan.md? Use sample-business-brief.md instead."
           },
           {
+            "goal": "Confirm that the work really happened in the app and matches the report. You verify the result yourself rather than trusting the summary.",
             "type": "do",
-            "title": "Check the result",
+            "title": "Check the work in the app",
             "do": "Open the app yourself and look at what Cowork made or changed.",
-            "see": "The work is there, matches Cowork's report and passes your done test.",
+            "see": "The work is there, matches Cowork's report and passes your done test. Notice any difference between what Cowork said and what the app shows.",
             "stuck": "If anything looks wrong, undo it in the app yourself, then tell Cowork what went wrong."
           },
           {
@@ -1529,27 +1616,30 @@ const LEVELS = {
         },
         "steps": [
           {
+            "goal": "See which plugins are installed or available to you before choosing one. Plugins add skills and connections, so you want to know what's on offer.",
             "type": "do",
-            "title": "See what's available",
+            "title": "List the plugins you can use",
             "do": "Paste this into your Cowork task and press Enter.",
             "prompt": "Which plugins can you see that are installed or available to me right now? List only ones you can actually see, with one line on what each adds. If you can't see any, say so.",
-            "see": "A short list of plugins with what each adds, or a clear statement that none are visible.",
+            "see": "A short list of plugins with what each adds, or a clear statement that none are visible. Notice which one fits a task for your tool.",
             "stuck": "If none are available, or your company limits plugins, skip this mission. Nothing later in this level depends on it. To learn where plugins are installed, check support.claude.com or ask your Academy program contact."
           },
           {
+            "goal": "Find out what a plugin can access before you install it. Checking first keeps your company's data safe.",
             "type": "do",
-            "title": "Vet it, then install",
+            "title": "Check a plugin, then install it",
             "do": "Fill in the bracket, then paste this into the same task and press Enter. Install it only if what it can access is fine for your work.",
             "prompt": "Before I install [a plugin from the list], tell me what it adds and what apps or data it can access. Then tell me whether it fits product-plan.md (or sample-business-brief.md).",
-            "see": "A short explanation of what the plugin adds and what it can reach. Once you install it, Cowork may ask you to approve or turn it on.",
+            "see": "A short explanation of what the plugin adds and what it can reach. Notice which apps or data it touches. Once you install it, Cowork may ask you to approve or turn it on.",
             "stuck": "If it asks you to sign in to an app, do it yourself, and only for apps your company has approved. If your account can't install plugins, use one that's already installed."
           },
           {
+            "goal": "Run a real task for your tool with the plugin and judge the output against your own criteria. This shows whether the plugin is worth keeping.",
             "type": "do",
-            "title": "Use it",
+            "title": "Use the plugin on a real task",
             "do": "Fill in every bracket, then paste this into the same task and press Enter.",
             "prompt": "Use [the plugin] on this task: [the task, e.g. a weekly summary of support-tickets.csv for the customer success team]. Good output means: [your criteria, e.g. one page, top 3 problem categories, no internal jargon]. Tell me which skill or tool from the plugin you used, and which criteria the output met.",
-            "see": "Finished work, plus a note naming the plugin skill or tool Cowork used and how it scored against your criteria.",
+            "see": "Finished work, plus a note naming the plugin skill or tool Cowork used and how it scored against your criteria. Notice whether the work actually used the plugin.",
             "stuck": "If Cowork does the work without the plugin, reply: 'Redo this using the plugin, and name the skill you used.'",
             "files": [
               "support-tickets.csv"
@@ -1581,30 +1671,33 @@ const LEVELS = {
         },
         "steps": [
           {
+            "goal": "Plan one workflow that links a data source, your skill and a delegated job, with a done test. Writing it down first makes the chain clear before you run it.",
             "type": "do",
-            "title": "Design the chain",
+            "title": "Design a source, skill and job chain",
             "do": "Fill in every bracket, then paste this into your Cowork task and press Enter.",
             "prompt": "Read product-plan.md (or sample-business-brief.md). Design one workflow. Input: [a source, e.g. support-tickets.csv or an approved app]. Delegated job: [goal, scope and output format, e.g. rank open tickets by customer impact in a table]. Skill: use my [skill name] skill to [what it does, e.g. draft status updates for the top 3 customers]. Done means: [your test]. Outbound stays a draft. Save numbered steps as workflow.md.",
-            "see": "workflow.md appears in your Cowork Academy folder, with numbered steps naming the input, the delegated job, the skill and your done test.",
+            "see": "workflow.md appears in your Cowork Academy folder, with numbered steps naming the input, the delegated job, the skill and your done test. Notice where each step hands off to the next.",
             "stuck": "No custom skill yet? Replace the skill line with two or three written rules, such as 'under 100 words, plain English'. Don't have product-plan.md? The prompt falls back to sample-business-brief.md.",
             "files": [
               "support-tickets.csv"
             ]
           },
           {
+            "goal": "Run the whole chain once, step by step, to find what breaks before you schedule it. A scheduled workflow that fails quietly is worse than none.",
             "type": "do",
-            "title": "Test it once",
+            "title": "Run the workflow once to test it",
             "do": "Paste this into the same task and press Enter.",
             "prompt": "Run workflow.md once now, step by step. Show me what each step produced and where it handed off to the next, then tell me whether the run passed my done test.",
-            "see": "A run-through of each step and its output, ending with drafts for you to review and a pass or fail against your test.",
+            "see": "A run-through of each step and its output, ending with drafts for you to review and a pass or fail against your test. Notice which step, if any, needed a fix.",
             "stuck": "If one step fails, fix it on its own first. Reply: 'Run only step [number] and show me what goes wrong.'"
           },
           {
+            "goal": "Put the tested workflow on a schedule so it runs without you. This is the last step that turns your chain into something that works on its own.",
             "type": "do",
-            "title": "Put it on a schedule",
+            "title": "Schedule the workflow to run",
             "do": "Fill in the bracket, then paste this into the same task and press Enter.",
             "prompt": "Schedule workflow.md to run [how often, e.g. every Monday at 8am]. Save results in this folder and keep anything outbound as drafts. Tell me the schedule's name and when it runs next.",
-            "see": "Cowork confirms the schedule's name and the next run time.",
+            "see": "Cowork confirms the schedule's name and the next run time. Notice that it only keeps drafts and doesn't send anything.",
             "stuck": "Scheduled tasks may only run while your computer is on and the Claude app is open. If scheduling isn't available, run it on demand by pasting 'Run workflow.md once now.' To pause or delete a schedule, check support.claude.com or ask your Academy program contact."
           },
           {
@@ -1633,19 +1726,21 @@ const LEVELS = {
         },
         "steps": [
           {
+            "goal": "Tell Cowork what you built across this level and have it write a timed demo for your audience. This pulls your separate pieces into one story.",
             "type": "do",
-            "title": "Write the demo script",
+            "title": "Write a 5-minute demo script",
             "do": "Fill in every bracket, then paste this into your Cowork task and press Enter.",
             "prompt": "Here's what I built: [the parts you finished, e.g. the site folder, dashboard.html, a complaint-reply skill, workflow.md]. List the files in this folder to confirm. Then write a 5-minute demo for [your audience, e.g. my department head, or the finance team] showing how it meets: [your done test from product-plan.md]. Name the Cowork feature behind each part. Save it as demo-script.md.",
-            "see": "A list of the files in your folder, then demo-script.md appears, split into timed sections with the feature behind each part.",
+            "see": "A list of the files in your folder, then demo-script.md appears, split into timed sections with the feature behind each part. Notice whether each part ties to your done test.",
             "stuck": "Cowork can't see skills or connectors from earlier tasks, so name them yourself in the prompt. If you skipped missions, list only what you finished. Don't have product-plan.md? Write your done test in one sentence instead."
           },
           {
+            "goal": "Have Cowork name the one weakest part of your product and one fix, then save a launch summary. Knowing what to fix first is what makes the launch honest.",
             "type": "do",
-            "title": "Find the weak spot and save",
+            "title": "Find the weak spot, save the summary",
             "do": "Paste this into the same task and press Enter.",
             "prompt": "What's the single weakest part of this product, and what one change would improve it most? Then save a one-page launch-summary.md: what it does, who it helps, what's built, the weak spot and its fix, and 3 ideas for a next version.",
-            "see": "One named weak spot with a concrete fix, then launch-summary.md appears in your Cowork Academy folder with those sections.",
+            "see": "One named weak spot with a concrete fix, then launch-summary.md appears in your Cowork Academy folder with those sections. Notice whether you agree that this is the weakest part.",
             "stuck": "If Cowork lists several weak spots, reply: 'Pick only the one that matters most, and update launch-summary.md.'"
           },
           {
@@ -1674,19 +1769,21 @@ const LEVELS = {
         },
         "steps": [
           {
+            "goal": "Check every file in your site folder for anything that shouldn't be public before you publish. Once a page is online, anyone with the link can read it.",
             "type": "do",
-            "title": "Check it's safe to share",
+            "title": "Scan the site for private data",
             "do": "Fill in the brackets, then paste this into your Cowork task and press Enter.",
             "prompt": "Before I publish the site folder for [who will see it, e.g. anyone with the link], check every file. List anything private: customer or employee names, emails, phone numbers, passwords, internal figures and [anything else that must stay off, e.g. supplier prices or salaries]. Suggest a safe replacement for each, and change the files only after I agree.",
-            "see": "A list of private items with a suggested fix for each, or a clear note that nothing private was found.",
+            "see": "A list of private items with a suggested fix for each, or a clear note that nothing private was found. Notice any file you had forgotten was in the folder.",
             "stuck": "Don't have a site folder? Skip this mission, or do 'Build the multi-page website' first. If the site includes a dashboard built from real company data, ask: 'Remove the dashboard from the version I publish.'"
           },
           {
+            "goal": "Put the checked site online at an address you can share. This is the last step that turns your product into something others can open.",
             "type": "do",
-            "title": "Publish it",
+            "title": "Publish the site at a web address",
             "do": "If your company has an approved place for internal pages, use it and stop here. Otherwise, paste this into the same task, press Enter and follow each step.",
             "prompt": "Walk me through publishing the site folder to a free host such as GitHub Pages, one step at a time. Wait for me to finish each step before you give the next one. I'll create any accounts and sign in myself.",
-            "see": "Only the first step, for example creating a GitHub account, then Cowork waits. At the end you have a web address, and every page loads there on your computer and your phone.",
+            "see": "Only the first step, for example creating a GitHub account, then Cowork waits. At the end you have a web address, and every page loads there on your computer and your phone. Notice any page that shows a 404 error.",
             "stuck": "Check your company's rules about public websites before you publish. A new site can take a few minutes to appear. If a page shows a 404 error, tell Cowork which page and ask it to find the cause."
           },
           {
@@ -1725,8 +1822,9 @@ const SETUP = {
       "result": "Cowork open on your Cowork Academy folder, ready for every mission.",
       "steps": [
         {
-          "type": "do",
+          "goal": "Get into the Claude desktop app, because Cowork only runs there and not in a browser tab.",
           "title": "Open the Claude desktop app",
+          "type": "do",
           "do": "Open the Claude app on your computer and sign in with your work account. Cowork runs in the desktop app, not in a browser tab.",
           "see": "The Claude app is open and signed in.",
           "stuck": "No desktop app yet? Use the button above to download it. If you can't find Cowork once it's open, your plan may not include it yet. Ask your Academy program contact.",
@@ -1736,15 +1834,17 @@ const SETUP = {
           }
         },
         {
-          "type": "do",
+          "goal": "Set up your screen so you can read each step here and do it in Claude without switching back and forth.",
           "title": "Put the windows side by side",
+          "type": "do",
           "do": "Arrange this page and the Claude app side by side, so you can read a step here and do it there.",
           "see": "The Academy on one half of your screen and Claude on the other.",
           "stuck": "On a small laptop screen, keep both open and switch between them with Cmd+Tab on a Mac or Alt+Tab on Windows."
         },
         {
-          "type": "do",
+          "goal": "Put the Academy's practice files on your computer in one folder, so every later mission already has what it needs.",
           "title": "Get the starter folder",
+          "type": "do",
           "do": "Download the starter folder below. Open the downloaded zip file, then move the Cowork Academy folder inside it into your Documents folder.",
           "see": "A folder called Cowork Academy in Documents, with practice files inside such as orders.csv, customer-feedback.csv, support-tickets.csv, customer-messages.txt and team-notes.txt.",
           "stuck": "On a Mac, double-click the zip in Downloads, then drag the Cowork Academy folder to Documents. On Windows, right-click the zip, choose Extract All, then move the Cowork Academy folder to Documents.",
@@ -1755,18 +1855,20 @@ const SETUP = {
           }
         },
         {
-          "type": "do",
+          "goal": "Point Cowork at the Cowork Academy folder, because it can only see and change files in the folder you give it.",
           "title": "Start a Cowork task on the folder",
+          "type": "do",
           "do": "In the Claude app, switch to Cowork and start a new task. When it asks which folder it can work in, choose Cowork Academy in Documents.",
           "see": "An empty Cowork task with a message box, working in your Cowork Academy folder.",
           "stuck": "If it didn't ask for a folder, look for an option to choose or change the working folder near the message box. Still stuck? Check support.claude.com or ask your Academy program contact."
         },
         {
-          "type": "do",
+          "goal": "Confirm Cowork can read your folder and create a file in it, so you know setup worked before the first mission.",
           "title": "Check Cowork can see the files",
+          "type": "do",
           "do": "Paste this into the message box and press Enter.",
           "prompt": "List the files in this folder and tell me in one sentence what each one seems to contain. Then create a file called hello.txt that says: My Cowork Academy folder.",
-          "see": "A list of the practice files with a short description of each, and a new hello.txt in your Cowork Academy folder.",
+          "see": "A list of the practice files with a short description of each, and a new hello.txt in your Cowork Academy folder. Notice that it described files you know are there, which shows it's in the right folder.",
           "stuck": "If Cowork asks your permission before creating the file, allow it. If it says it can't see any files, the task is pointed at the wrong folder: start a new task and choose Cowork Academy."
         },
         {
@@ -1849,8 +1951,9 @@ const SAFETY = {
           ]
         },
         {
-          "type": "do",
+          "goal": "Try finding the private details on your own first, so you can compare your eye with Cowork's and learn what to look for.",
           "title": "Spot the private details yourself",
+          "type": "do",
           "do": "Read this made-up message and count every private or sensitive detail before going on: \"Hi team, Maria Gomez (555-201-3344, company card ending 4417) is on medical leave after surgery. Her building door code was 8812. Please reimburse her travel costs.\"",
           "see": "Your own count. There are four kinds of private detail in it.",
           "stuck": "Look for anything that identifies a person, could be used to get in somewhere, relates to payment, or reveals health information."
@@ -1859,8 +1962,9 @@ const SAFETY = {
           "type": "start"
         },
         {
-          "type": "do",
+          "goal": "See what Cowork flags and how it rewrites the message safely, so you learn what to remove before sharing anything.",
           "title": "Compare with Cowork",
+          "type": "do",
           "do": "Paste this into your Cowork task and press Enter. Everything in it is made up, which is the only reason it's okay to paste.",
           "prompt": "List every private or sensitive detail in this message, then rewrite it so it’s safe to share with the wider team: \"Hi team, Maria Gomez (555-201-3344, company card ending 4417) is on medical leave after surgery. Her building door code was 8812. Please reimburse her travel costs.\"",
           "see": "Cowork lists the employee’s name and phone number, the card digits, the medical leave and the door code, and gives a rewritten message without them. Did you find all four kinds?",
@@ -1904,24 +2008,27 @@ const IDEAS = {
       },
       "steps": [
         {
+          "goal": "Let Cowork ask about your week, so repetitive work you've stopped noticing comes to the surface.",
+          "title": "Get interviewed about your week",
           "type": "do",
-          "title": "Get interviewed",
           "do": "Copy this prompt (it already includes your role and the notes you saved during the Academy), paste it into your Cowork task and press Enter. Answer each question in a sentence or two.",
           "prompt": "I work in {{ROLE}}. {{NOTES}}Interview me about my job. Ask me 5 short questions, one at a time, about what I do each week, which tasks are repetitive or manual, which reports I build, and where I wait on information from other people. Wait for my answer before asking the next question.",
           "see": "Cowork asks its first question and waits for your answer.",
           "stuck": "If it asks all 5 questions at once, answer them all in one message. That works too."
         },
         {
+          "goal": "Turn your answers into five concrete ideas with time savings, so you can choose which one is worth pursuing.",
+          "title": "Rank your top five opportunities",
           "type": "do",
-          "title": "Get your top 5",
           "do": "After your last answer, paste this into the same task and press Enter.",
           "prompt": "Based on my answers, list my top 5 opportunities to use Claude. For each, say what Cowork would do (a skill, a connector, a report, a dashboard or a scheduled task), roughly how many hours a month it could save, and whether I could build it myself or would need help.",
-          "see": "A numbered list of 5 opportunities, each with what Cowork would do and an estimate of hours saved.",
+          "see": "A numbered list of 5 opportunities, each with what Cowork would do and an estimate of hours saved. Notice which ones save the most hours.",
           "stuck": "If the ideas feel generic, add: \"Make them specific to what I told you about my week.\""
         },
         {
-          "type": "do",
+          "goal": "Test the first step of your favorite idea, so your Spark write-up comes from something you've seen work.",
           "title": "Optional: try the best one",
+          "type": "do",
           "do": "If you have 10 minutes, pick the opportunity that would help you most and try its first step. Otherwise, skip to the next step.",
           "prompt": "Let's try the first step of opportunity number [the number you picked, e.g. 2] right now, using files in this folder or realistic made-up data.",
           "see": "Cowork starts on your idea, for example drafting the first version of a report, a template or a checklist.",
@@ -1975,27 +2082,30 @@ const ROLES = [
         },
         "steps": [
           {
+            "goal": "Give Cowork your tone and your three most common policies, so it drafts replies that sound like your company and never promise what you can't deliver.",
+            "title": "Teach Cowork your reply policies",
             "type": "do",
-            "title": "Describe your replies",
             "do": "Paste this into your Cowork task. Replace the part in square brackets with your own 3 questions and policies, or keep the example, then press Enter.",
             "prompt": "Help me build a skill called customer-replies that drafts answers to customer messages. Use the tone and never-rules in sample-business-brief.md in this folder. Our most common questions and policies: [e.g. 1. Returns: within 30 days, we send a prepaid label, refunds never promised before we inspect the item. 2. Quotes: a rep replies within one business day, no prices in email. 3. Invoices: copies can be resent any time]. Keep replies friendly and short.",
-            "see": "Cowork asks you a question or two about your tone, or shows a draft of the skill with your policies and the never-promise rules from the brief.",
+            "see": "Cowork asks a question or two about your tone, or shows a draft of the skill. Notice that your policies and the never-promise rules from the brief both appear in it.",
             "stuck": "If Cowork asks questions, answer them in the same task in a sentence or two. Leave out any real customer names, emails or phone numbers."
           },
           {
+            "goal": "Turn the draft into a saved skill, so you can reuse the same tone and rules in any future task without explaining them again.",
+            "title": "Save the replies skill",
             "type": "do",
-            "title": "Save the skill",
             "do": "Paste this into the same task and press Enter.",
             "prompt": "Save this as a skill called customer-replies so I can use it in future tasks. Then list the rules it will follow, in plain English.",
-            "see": "Cowork creates the customer-replies skill and lists its rules, including the never-promise rules. It may ask you to approve the skill or turn it on.",
+            "see": "Cowork creates the customer-replies skill and lists its rules in plain English. Notice that the never-promise rules are on the list. It may ask you to approve the skill or turn it on.",
             "stuck": "If Cowork asks you to approve or turn on the skill, do that. If saving doesn't work, check Claude's help center at support.claude.com, or ask your Academy program contact."
           },
           {
+            "goal": "Try the skill on two messages from the practice inbox, so you see whether the drafts follow your policies before you rely on it.",
+            "title": "Test it on two real messages",
             "type": "do",
-            "title": "Test two messages",
             "do": "Paste this into the same task and press Enter. customer-messages.txt, a practice inbox, is already in your Cowork Academy folder.",
             "prompt": "Use the customer-replies skill to draft replies to messages 3 and 7 in customer-messages.txt in this folder. Show them here as drafts for me to review. Don't send anything.",
-            "see": "Two short drafts: one to Greg about the broken chair base that explains the return steps, and one to Owen about next year's pricing that doesn't promise a price.",
+            "see": "Two short drafts: one to Greg about the broken chair base that explains the return steps, and one to Owen about next year's pricing. Notice that the pricing draft doesn't promise a price.",
             "stuck": "If a draft promises something it shouldn't, paste: \"That reply promised something it shouldn't. Add a rule to the customer-replies skill to prevent this, and save it.\""
           },
           {
@@ -2024,30 +2134,33 @@ const ROLES = [
         },
         "steps": [
           {
+            "goal": "Have Cowork read every survey response and group the comments into themes, so you see what customers raise most, not just the loudest one-off remark.",
+            "title": "Find the top feedback themes",
             "type": "do",
-            "title": "Find the themes",
             "do": "customer-feedback.csv is already in your Cowork Academy folder. Paste this into your Cowork task and press Enter.",
             "prompt": "Open customer-feedback.csv in this folder. Find the top 5 themes in the comments, with how many responses mention each. Then make a table of regions with response count, average rating and the number of responses rated 2 or below, worst first.",
-            "see": "Five themes with a count for each, such as late delivery, damaged furniture or billing, and a table of the 4 regions with average rating and low-rating count.",
+            "see": "Five themes with a count for each, such as late delivery, damaged furniture or billing, then a table of the 4 regions with average rating and low-rating count. Notice which region has the most low ratings.",
             "stuck": "If Cowork says it can't find the file, check that this task is using your Cowork Academy folder.",
             "files": [
               "customer-feedback.csv"
             ]
           },
           {
+            "goal": "Break each theme down by region, so you can tell a company-wide problem from one that sits in a single place and needs a local fix.",
+            "title": "Compare themes across regions",
             "type": "do",
-            "title": "Split themes by region",
             "do": "Paste this into the same task and press Enter.",
             "prompt": "For each theme, show how many complaints come from each region. Which problems are spread across all regions, and which are concentrated in one place? Use the numbers.",
-            "see": "A small table of themes by region. One theme stands out as coming almost entirely from a single region, while others are spread thinly.",
+            "see": "A small table of themes by region. Notice which theme comes almost entirely from one region and which are spread thinly across all of them.",
             "stuck": "If the counts look loose, paste: \"Only count a response when its comment clearly mentions that problem, and list the response_id values you counted.\""
           },
           {
+            "goal": "Turn the findings into a one-page Word document your manager can read in a minute, with customer quotes and three fixes to act on.",
+            "title": "Write the one-page summary",
             "type": "do",
-            "title": "Write the summary",
             "do": "Paste this into the same task and press Enter.",
             "prompt": "Turn this into a one-page Word document called feedback-summary.docx in this folder. Include the 5 themes with a short customer quote for each, the regions that need attention, and 3 fixes that would raise our ratings. Say which fix would help the most.",
-            "see": "feedback-summary.docx appears in your Cowork Academy folder, with themes, quotes, the region comparison and 3 recommended fixes on one page.",
+            "see": "feedback-summary.docx appears in your Cowork Academy folder. Notice that the 5 themes with quotes, the region comparison and 3 fixes all fit on one page.",
             "stuck": "If the summary runs longer than a page, paste: \"Cut this to one page. Keep the numbers and the fixes.\""
           },
           {
@@ -2076,26 +2189,29 @@ const ROLES = [
         },
         "steps": [
           {
+            "goal": "Have Cowork turn your ordering, returns and invoice details into a clear, well-designed guide, so customers can answer their own questions.",
+            "title": "Create the customer help guide",
             "type": "do",
-            "title": "Create the guide",
             "do": "Paste this into your Cowork task. Replace the part in square brackets with real details for your own company, or keep the example, then press Enter.",
             "prompt": "Create a friendly, well-designed customer help guide as a Word document called help-guide.docx, saved in this folder. Cover ordering, returns and invoices. Details: [e.g. orders placed online or by calling a sales rep, delivery in 3 to 5 business days, returns within 30 days with a prepaid label, invoices emailed monthly and payable in 30 days, support at the address on your invoice].",
-            "see": "help-guide.docx appears in your Cowork Academy folder, with clear sections such as Placing an order, Returns and Your invoice.",
+            "see": "help-guide.docx appears in your Cowork Academy folder, with clear sections such as Placing an order, Returns and Your invoice. Notice whether your own details sit where a customer would look for them.",
             "stuck": "If you don't see the file, paste: \"Where did you save help-guide.docx?\""
           },
           {
+            "goal": "Check the guide the way a new customer would, so you catch anything confusing or missing before you send it out.",
+            "title": "Read the guide as a customer",
             "type": "do",
-            "title": "Review it as a customer",
             "do": "Open help-guide.docx from your Cowork Academy folder and read it as if you were a new customer who has never dealt with your company.",
-            "see": "The guide opens in Word or your document viewer, with headings and your details.",
+            "see": "The guide opens in Word or your document viewer, with headings and your details. Notice any place where a new customer would have to guess, and note it down.",
             "stuck": "If anything is wrong or missing, paste into the task: \"Change [what to fix, e.g. the return window to 14 days] and save the guide again.\""
           },
           {
-            "type": "do",
+            "goal": "Create a short message that points new customers to the guide, so they find it right after their first order.",
             "title": "Write the welcome message",
+            "type": "do",
             "do": "Paste this into the same task and press Enter.",
             "prompt": "Write a short, warm message I can send new customers after their first order. Point them to the help guide and mention the 2 things they most need to know about returns and invoices.",
-            "see": "A message of a few sentences in the task that you can copy into your email and send yourself.",
+            "see": "A message of a few sentences in the task that you can copy into your email and send yourself. Notice that it points to the guide and names the 2 things customers most need to know.",
             "stuck": "If it's too long, paste: \"Make it 3 sentences.\""
           },
           {
@@ -2124,27 +2240,30 @@ const ROLES = [
         },
         "steps": [
           {
+            "goal": "Have Cowork sort 8 customer messages by topic and urgency, so you know what needs action today before you answer anything.",
+            "title": "Sort the practice inbox by urgency",
             "type": "do",
-            "title": "Sort the messages",
             "do": "customer-messages.txt, a practice inbox of 8 messages, is already in your Cowork Academy folder. Paste this into your Cowork task and press Enter.",
             "prompt": "Open customer-messages.txt in this folder. Group the messages by topic and by urgency, and put anything that needs action today at the top. Don't send, change or delete anything.",
-            "see": "A grouped list, such as delivery problems, billing, returns and quote requests, with Desert Bloom Clinics (order not arrived) and Coastal Credit Union (charged twice) flagged at the top.",
+            "see": "A grouped list, such as delivery problems, billing, returns and quote requests, with Desert Bloom Clinics (order not arrived) and Coastal Credit Union (charged twice) flagged at the top. Notice the reason given for each message flagged at the top.",
             "stuck": "Want to try your real inbox instead? Only if your company has approved this connector. Otherwise, use customer-messages.txt. Only connect apps your company has approved, sign in yourself in the pop-up, and tell Cowork not to send, change or delete anything."
           },
           {
+            "goal": "Get replies ready for the two messages that can't wait, with gaps left for facts only you can supply. You review before anything goes out.",
+            "title": "Draft replies to the urgent two",
             "type": "do",
-            "title": "Draft the urgent replies",
             "do": "Paste this into the same task and press Enter. Read each draft carefully.",
             "prompt": "Draft replies to the 2 most urgent messages. Show them here as drafts for me to review. Put a placeholder in square brackets for anything you can't know, such as a tracking update or a refund date. Do not send anything.",
-            "see": "Two drafts, one to Dr. Okafor at Desert Bloom Clinics and one to Tariq at Coastal Credit Union, with placeholders such as [new delivery date]. Nothing has been sent.",
+            "see": "Two drafts, one to Dr. Okafor at Desert Bloom Clinics and one to Tariq at Coastal Credit Union, with placeholders such as [new delivery date]. Nothing has been sent. Notice the bracketed placeholders: those are the facts you must check before sending.",
             "stuck": "If a draft makes up a detail, such as a delivery date or a refund amount, paste: \"Replace anything you guessed with a placeholder in square brackets.\""
           },
           {
+            "goal": "Keep the sorted list and drafts in one file, so whoever picks up next can see what's handled and what's waiting.",
+            "title": "Save the list for the next shift",
             "type": "do",
-            "title": "Save it for the shift",
             "do": "Paste this into the same task and press Enter.",
             "prompt": "Save the sorted list and the 2 drafts as morning-inbox.md in this folder, so the next person on shift can see what's handled and what's waiting.",
-            "see": "morning-inbox.md appears in your Cowork Academy folder, with the sorted list at the top and the 2 drafts below.",
+            "see": "morning-inbox.md appears in your Cowork Academy folder, with the sorted list at the top and the 2 drafts below. Notice that the next person could act on it without asking you anything.",
             "stuck": "If you don't see the file, paste: \"Where did you save morning-inbox.md?\""
           },
           {
@@ -2188,11 +2307,12 @@ const ROLES = [
         },
         "steps": [
           {
+            "goal": "Look at delivery times and tickets by carrier, region and period, so you find where the slowdown really is instead of guessing.",
+            "title": "Find where the delays come from",
             "type": "do",
-            "title": "Find the causes",
             "do": "orders.csv and support-tickets.csv are already in your Cowork Academy folder. Paste this into your Cowork task and press Enter.",
             "prompt": "Open orders.csv and support-tickets.csv in this folder. Show average days to deliver by carrier and by region, and how that changed from April to June versus July to September. Then show tickets by category with average days to close and total credits issued.",
-            "see": "Tables of delivery days by carrier and by region, split into the two periods, and a table of ticket categories with average days to close and credits.",
+            "see": "Tables of delivery days by carrier and by region, split into the two periods, and a table of ticket categories with average days to close and credits. Notice which carrier or region got slower between the periods.",
             "stuck": "If Cowork says it can't find a file, check that this task is using your Cowork Academy folder.",
             "files": [
               "orders.csv",
@@ -2200,19 +2320,21 @@ const ROLES = [
             ]
           },
           {
+            "goal": "Narrow it down to the carrier and region behind the rise in Delivery tickets, with the cost in tickets and credits.",
+            "title": "Link the delays to the tickets",
             "type": "do",
-            "title": "Connect the dots",
             "do": "Paste this into the same task and press Enter.",
             "prompt": "Which carrier and region together explain the rise in Delivery tickets since July? Show the number of tickets, the credits issued and how many shipments took 7 or more days. Use the numbers.",
-            "see": "A short answer pointing to one carrier and one region, with ticket counts, credits and the number of slow shipments.",
+            "see": "A short answer pointing to one carrier and one region, with ticket counts, credits and the number of slow shipments. Notice that figures back the answer up, not just a claim.",
             "stuck": "If the answer stays vague, paste: \"Name one carrier and one region, and show the counts that prove it.\""
           },
           {
+            "goal": "Turn the findings into two charts and three ranked fixes, so you can show your manager what to do first and which customers to contact.",
+            "title": "Chart it and recommend fixes",
             "type": "do",
-            "title": "Chart it and recommend",
             "do": "Paste this into the same task and press Enter.",
             "prompt": "Make 2 charts that show the biggest patterns and save them in this folder as PNG images. Then recommend 3 fixes in order of impact, and say which customers to call first and why.",
-            "see": "Two chart images in your Cowork Academy folder, and in the task 3 fixes plus a short list of customers with a reason for each.",
+            "see": "Two chart images in your Cowork Academy folder, and in the task 3 fixes plus a short list of customers with a reason for each. Notice whether the first fix targets the carrier and region from the last step.",
             "stuck": "If the charts appear only in the task, paste: \"Save those charts as PNG files in this folder.\""
           },
           {
@@ -2241,33 +2363,37 @@ const ROLES = [
         },
         "steps": [
           {
+            "goal": "Create a tick-off checklist for a routine process, so nothing gets skipped and anyone on the team follows it the same way.",
+            "title": "Build the process checklist",
             "type": "do",
-            "title": "Build the checklist",
             "do": "Paste this into your Cowork task. Replace the part in square brackets with a routine process from your own work, or keep the example, then press Enter.",
             "prompt": "Build an interactive checklist for [a routine process, e.g. setting up a new business customer], as a single HTML file called process-checklist.html in this folder. Group the tasks into sections (for example account details, billing, delivery, welcome), with tick boxes, a progress bar and large buttons that work on a phone.",
-            "see": "process-checklist.html appears in your Cowork Academy folder, and Cowork describes a checklist grouped into sections with a progress bar.",
+            "see": "process-checklist.html appears in your Cowork Academy folder, and Cowork describes a checklist grouped into sections with a progress bar. Notice whether the sections follow the order the work really happens.",
             "stuck": "If you don't see the file, paste: \"Where did you save process-checklist.html?\""
           },
           {
-            "type": "do",
+            "goal": "Add a place to hand off problems, so an issue found mid-checklist reaches the right team with the details they need.",
             "title": "Add a follow-up form",
+            "type": "do",
             "do": "Paste this into the same task and press Enter.",
             "prompt": "Add a \"needs follow-up\" section at the end. Include a drop-down for which team should pick it up (Sales, Billing, Warehouse, Customer support), a box for the customer or item name, a description box, a priority choice, and a button that makes a short handoff summary I can copy.",
-            "see": "Cowork confirms the checklist now ends with a follow-up section that has a team drop-down, a description box, a priority choice and a summary button.",
+            "see": "Cowork confirms the checklist now ends with a follow-up section that has a team drop-down, a description box, a priority choice and a summary button. Notice that the form asks for everything the other team needs, so nobody has to follow up with questions.",
             "stuck": "If something is missing, paste: \"The follow-up section must have all the fields I listed. Please fix it.\""
           },
           {
+            "goal": "Use the checklist yourself before sharing it, so you know the ticking, progress bar and summary all work.",
+            "title": "Test the checklist in a browser",
             "type": "do",
-            "title": "Try it out",
             "do": "Open process-checklist.html from your Cowork Academy folder. It opens in your web browser. Tick a few items, add a test follow-up and press the summary button.",
-            "see": "Items tick off and the progress bar fills. The button produces a short summary with the team, issue and priority.",
+            "see": "Items tick off and the progress bar fills. The button produces a short summary with the team, issue and priority. Notice that the summary is something you could paste straight into a message.",
             "stuck": "If ticking or the button does nothing, tell Cowork in the same task: \"The checklist doesn't work when I open the file. Please fix it.\""
           },
           {
+            "goal": "Check it works on a phone, since a colleague may use it away from a desk.",
+            "title": "Open it on your phone",
             "type": "do",
-            "title": "Put it on a phone",
             "do": "To see how a colleague would use it, save process-checklist.html to a shared drive your team already uses, then open it from your phone's web browser.",
-            "see": "The checklist fits your phone screen, with buttons big enough to tap.",
+            "see": "The checklist fits your phone screen, with buttons big enough to tap. Notice whether anything is cut off or hard to tap.",
             "stuck": "If your phone shows code or a download instead of the page, open the file in your phone's browser. If your team has no approved shared drive, ask your IT team how to share an HTML file, or skip this step."
           },
           {
@@ -2296,11 +2422,12 @@ const ROLES = [
         },
         "steps": [
           {
+            "goal": "Get one good operations brief for a single week, and check it yourself, before you automate anything.",
+            "title": "Build one weekly brief",
             "type": "do",
-            "title": "Build the brief once",
             "do": "orders.csv and support-tickets.csv are already in your Cowork Academy folder. Paste this into your Cowork task and press Enter.",
             "prompt": "Using orders.csv and support-tickets.csv in this folder, write a one-page operations brief for the week of 21 to 27 September 2026. Include orders placed that week by region, every ticket with status Open (oldest first, with days open as of 30 September 2026), and anything that could affect a customer's delivery. Save it as ops-brief.docx in this folder.",
-            "see": "ops-brief.docx appears in your Cowork Academy folder, with orders by region, a list of open tickets starting with the oldest, and a short section on delivery risks.",
+            "see": "ops-brief.docx appears in your Cowork Academy folder, with orders by region, a list of open tickets starting with the oldest, and a short section on delivery risks. Notice that the oldest tickets come first, since those need attention soonest.",
             "stuck": "If the list includes closed tickets, paste: \"Only list tickets whose status is Open.\" For other changes, ask in the same task, for example: \"Add the ticket category for each open ticket.\"",
             "files": [
               "orders.csv",
@@ -2308,11 +2435,12 @@ const ROLES = [
             ]
           },
           {
+            "goal": "Make the brief repeat on its own each Monday, so you stop rebuilding it by hand. The habit is to check a report once, then let it repeat.",
+            "title": "Schedule the brief for Mondays",
             "type": "do",
-            "title": "Schedule it",
-            "do": "This step shows the habit: check a report once, then let it repeat. When the brief looks right, paste this into the same task and press Enter.",
+            "do": "When the brief looks right, paste this into the same task and press Enter.",
             "prompt": "Create a scheduled task that rebuilds this operations brief every Monday at 7am from the newest orders.csv and support-tickets.csv in this folder, covering the most recent week in the data. Save it in this folder. Don't send anything.",
-            "see": "A confirmation of a weekly scheduled task for Mondays at 7am, with a short description of what it will do. Scheduled tasks may only run while your computer is on and the Claude app is open.",
+            "see": "A confirmation of a weekly scheduled task for Mondays at 7am, with a short description of what it will do. Scheduled tasks may only run while your computer is on and the Claude app is open. Notice the day, time and description of what it will rebuild.",
             "stuck": "If Cowork can't create a scheduled task, skip this step: the habit of checking once before repeating is the point. To learn more, check Claude's help center at support.claude.com, or ask your Academy program contact."
           },
           {
@@ -2341,30 +2469,33 @@ const ROLES = [
         },
         "steps": [
           {
+            "goal": "See how each current carrier performed before looking elsewhere, so any switch rests on your own data.",
+            "title": "Compare your current carriers",
             "type": "do",
-            "title": "Compare current carriers",
             "do": "orders.csv is already in your Cowork Academy folder. Paste this into your Cowork task and press Enter.",
             "prompt": "Open orders.csv in this folder. Compare each carrier: number of shipments, average days to deliver (April to June versus July to September), and how many shipments took 7 or more days.",
-            "see": "A table of the three carriers, Northline Freight, SwiftRoute and ParcelPro, with shipments, average days in each period, and slow shipments.",
+            "see": "A table of the three carriers, Northline Freight, SwiftRoute and ParcelPro, with shipments, average days in each period, and slow shipments. Notice which carrier slowed down most between the two periods.",
             "stuck": "If Cowork includes cancelled orders without a carrier, paste: \"Only use rows that have a carrier and a days_to_deliver value.\"",
             "files": [
               "orders.csv"
             ]
           },
           {
-            "type": "do",
+            "goal": "Give Cowork a clear brief with a goal and scope, so it can research alternative carriers while you do other work.",
             "title": "Send a research brief",
-            "do": "Paste this into the same task. Replace the part in square brackets with your own area, or keep the example, then press Enter. You can do other work while it researches.",
+            "type": "do",
+            "do": "Paste this into the same task, replace the part in square brackets with your own area (or keep the example), and press Enter. You can do other work while it researches.",
             "prompt": "Research brief. Goal: find 3 delivery carriers that could back up or replace our slowest one. Scope: [your area, e.g. regional freight for office furniture across four U.S. regions], with tracking and proof of delivery. Sources: carrier websites and public reviews. Output: a table of published pricing, service area, review rating and contract terms, then questions to ask before switching.",
-            "see": "After a few minutes, a table of carriers with pricing, service area, ratings and contract terms, followed by a list of questions to ask.",
+            "see": "After a few minutes, a table of carriers with pricing, service area, ratings and contract terms, then a list of questions to ask. Notice which details look firm and which look vague.",
             "stuck": "If it finds fewer than 3 carriers or the results are vague, widen the scope in the brief and send it again."
           },
           {
+            "goal": "Make every price and rating traceable to a source and put everything in one spreadsheet, so you can trust it and share it.",
+            "title": "Add sources and save the file",
             "type": "do",
-            "title": "Source it and save",
             "do": "Paste this into the same task and press Enter.",
             "prompt": "For each price and rating, add the source link or write \"not found\". Then save our current carrier comparison, the new carrier table and the questions as vendor-comparison.xlsx in this folder.",
-            "see": "vendor-comparison.xlsx appears in your Cowork Academy folder, with source links next to prices and ratings, and anything unconfirmed marked.",
+            "see": "vendor-comparison.xlsx appears in your Cowork Academy folder, with source links next to prices and ratings. Notice which entries are marked not found: confirm those before you rely on them.",
             "stuck": "If you don't see the file, paste: \"Where did you save vendor-comparison.xlsx?\""
           },
           {
@@ -2408,30 +2539,33 @@ const ROLES = [
         },
         "steps": [
           {
+            "goal": "Have Cowork summarize orders by sales channel and by month, so you see where revenue actually comes from.",
+            "title": "Break orders down by channel",
             "type": "do",
-            "title": "Break it down",
             "do": "orders.csv is already in your Cowork Academy folder. Paste this into your Cowork task and press Enter. Using your own sales or spending export instead is fine, as long as it has no customer or employee personal details.",
             "prompt": "Open orders.csv in this folder. For each sales channel and for each month from April to September 2026, show the number of orders, revenue, average order value for Delivered orders, average days to deliver, cancellation rate and return rate. Revenue counts only Delivered orders.",
-            "see": "Two tables: one row per channel and one row per month, each with orders, revenue, average order value, days to deliver, cancellation rate and return rate.",
+            "see": "Two tables: one row per channel and one row per month, each with orders, revenue, average order value, days to deliver, cancellation rate and return rate. Notice which channel and which month stand out on revenue, and on cancellation or return rate.",
             "stuck": "If Cowork says it can't find the file, check that this task is using your Cowork Academy folder.",
             "files": [
               "orders.csv"
             ]
           },
           {
+            "goal": "Turn the tables into pictures, so differences between channels and months are easy to spot and to show others.",
+            "title": "Chart revenue by channel and month",
             "type": "do",
-            "title": "Make the charts",
             "do": "Paste this into the same task and press Enter.",
             "prompt": "Make charts of revenue by channel and revenue by month, and save them in this folder as PNG images.",
-            "see": "Chart images in your Cowork Academy folder, such as a bar chart by channel and a line or bar chart by month.",
+            "see": "Chart images in your Cowork Academy folder, such as a bar chart by channel and a line or bar chart by month. Notice which bar or point is clearly highest or lowest.",
             "stuck": "If the charts appear only in the task, paste: \"Save those charts as PNG files in this folder.\""
           },
           {
+            "goal": "Ask Cowork for three decisions the data supports and what would change them, so you move from tables to action.",
+            "title": "Ask what the numbers mean",
             "type": "do",
-            "title": "Ask what it means",
             "do": "Paste this into the same task and press Enter.",
             "prompt": "Tell me the 3 pricing or sales decisions these numbers point to. For each, say what would change your answer.",
-            "see": "Three numbered decisions, each tied to a figure from your tables and a note on what would change the advice.",
+            "see": "Three numbered decisions, each tied to a figure from your tables and a note on what would change the advice. Notice that each decision points to a figure you can find in your tables.",
             "stuck": "If the decisions feel generic, paste: \"Use specific numbers from the tables in each one.\""
           },
           {
@@ -2460,26 +2594,29 @@ const ROLES = [
         },
         "steps": [
           {
+            "goal": "Create an Excel model with price, cost and volume as inputs, so you can test pricing changes without redoing the maths.",
+            "title": "Build the pricing model",
             "type": "do",
-            "title": "Build the model",
             "do": "Paste this into your Cowork task and press Enter. Change the example in the brackets to something from your own work, or keep it.",
             "prompt": "Build an Excel model called pricing-model.xlsx in this folder for [a product or service, e.g. a yearly service plan for office equipment]. Inputs: price per unit, units sold per month, discount percentage, cost per unit and monthly fixed costs. Calculate monthly revenue and profit with working formulas. Highlight the input cells in a different color.",
-            "see": "A file called pricing-model.xlsx in your Cowork Academy folder, with an inputs section and calculated revenue and profit below it.",
+            "see": "A file called pricing-model.xlsx in your Cowork Academy folder, with an inputs section and calculated revenue and profit below it. Notice that results are formulas that refer to the inputs, not typed numbers.",
             "stuck": "If Cowork asks for numbers, make up believable ones and say they are placeholders. You can replace them later."
           },
           {
+            "goal": "Compare the current numbers with a discount and a price rise side by side, so you can see which move earns more profit.",
+            "title": "Add three what-if scenarios",
             "type": "do",
-            "title": "Add scenarios",
             "do": "Paste this into the same task and press Enter.",
             "prompt": "Add a scenario table that compares: current numbers, a 10% discount with units up 15%, and price up 5% with units down 3%. Show revenue and profit for each, using formulas linked to the inputs.",
-            "see": "A table with three scenario rows and columns for revenue and profit, which Cowork says are linked to the inputs.",
+            "see": "A table with three scenario rows and columns for revenue and profit, which Cowork says are linked to the inputs. Notice which scenario gives the highest profit, and not only the highest revenue.",
             "stuck": "If the scenario results look typed in, paste: \"Make every scenario result a formula that uses the input cells.\""
           },
           {
+            "goal": "Prove the model is live by changing one input yourself and seeing every result update.",
+            "title": "Change the price and watch",
             "type": "do",
-            "title": "Change an input",
             "do": "Open pricing-model.xlsx from your Cowork Academy folder in Excel. Change the price per unit and watch the results.",
-            "see": "Revenue, profit and every scenario update as soon as you change the price.",
+            "see": "Revenue, profit and every scenario update as soon as you change the price. Notice that profit and every scenario move together. If one doesn't, a formula is broken.",
             "stuck": "If nothing changes, the results may be typed in. Paste into the task: \"Explain each formula in plain English, and fix any result cell that isn't a formula.\""
           },
           {
@@ -2508,29 +2645,32 @@ const ROLES = [
         },
         "steps": [
           {
+            "goal": "Turn a month of orders into a finished report with a summary, charts and recommendations, ready for you to review and send.",
+            "title": "Create the September report",
             "type": "do",
-            "title": "Create the report",
             "do": "orders.csv is already in your Cowork Academy folder. Paste this into your Cowork task and press Enter.",
             "prompt": "Using orders.csv in this folder, create a performance report for September 2026 as a Word document called report-2026-09.docx in this folder. Include a short executive summary with total revenue compared with August, 3 charts inside the document, the top and bottom customers by revenue, and 3 recommendations.",
-            "see": "A file called report-2026-09.docx in your Cowork Academy folder, with a summary, charts, a customer table and recommendations.",
+            "see": "A file called report-2026-09.docx in your Cowork Academy folder, with a summary, charts, a customer table and recommendations. Notice the headline revenue figure in the summary, which you'll check next.",
             "stuck": "If Cowork says it can't find the file, check that this task is using your Cowork Academy folder. If the charts are missing from the document, paste: \"Put the 3 charts inside the Word document itself.\"",
             "files": [
               "orders.csv"
             ]
           },
           {
+            "goal": "Read the report yourself and check its headline number against what Cowork told you, since you're the one who sends it.",
+            "title": "Check the report against the data",
             "type": "do",
-            "title": "Review the report",
             "do": "Open report-2026-09.docx from your Cowork Academy folder and read it through. Check the September revenue total against the summary in your task.",
-            "see": "The report opens in Word with charts and headings, and the revenue total matches what Cowork told you.",
+            "see": "The report opens in Word with charts and headings, and the revenue total matches what Cowork told you. Notice any figure that doesn't match.",
             "stuck": "To fix something, tell Cowork in the same task what to change, for example: \"Make the summary 3 sentences.\" Need a PDF? Ask for one."
           },
           {
+            "goal": "Capture the steps as a skill, so next month you give it new data and a month and get the same report.",
+            "title": "Save the steps as a skill",
             "type": "do",
-            "title": "Save it as a skill",
             "do": "Paste this into the same task and press Enter. Cowork will create the skill and may ask you to approve it or turn it on.",
             "prompt": "Save the steps you used for this report as a skill called monthly-report, so next month I can ask for the same report with new data and a new month.",
-            "see": "Cowork confirms it created a skill called monthly-report and describes what it does.",
+            "see": "Cowork confirms it created a skill called monthly-report and describes what it does. Notice that the description matches the steps you just used.",
             "stuck": "If Cowork asks you to approve or turn on the skill, follow its prompt. If it can't save skills in your setup, ask your Academy program contact, or check Claude's help center at support.claude.com."
           },
           {
@@ -2559,19 +2699,21 @@ const ROLES = [
         },
         "steps": [
           {
+            "goal": "Have Cowork compare every line with the agreed rate, so you find overcharges you would likely miss by eye.",
+            "title": "Check the invoice against the rate",
             "type": "do",
-            "title": "Check the invoice",
             "do": "vendor-invoice-swiftroute-september-2026.csv is already in your Cowork Academy folder. Paste this into your Cowork task and press Enter. A supplier invoice of your own works too, as long as it has no personal details.",
             "prompt": "Open vendor-invoice-swiftroute-september-2026.csv in this folder. The agreed rate is $14.50 per package plus an 8% fuel surcharge on the base charge. Check every line's math, check the fuel surcharge on every line, and look for duplicate lines. Don't stop at the first mistake. For each problem, give the order ID, what's wrong, the correct figure and how you found it, then give the corrected invoice total.",
-            "see": "A list of mistakes, each with an order ID, the wrong figure, the right figure and the reason, followed by a corrected invoice total.",
+            "see": "A list of mistakes, each with an order ID, the wrong figure, the right figure and the reason, followed by a corrected invoice total. Notice that each mistake comes with a reason, so you can explain it to the carrier.",
             "stuck": "If Cowork finds only one or two problems, paste: \"Check again: every line's package count against its base charge, every fuel surcharge, and any repeated lines.\""
           },
           {
-            "type": "do",
+            "goal": "Turn the errors into a polite, specific note to the carrier, so you can ask for a credit with figures to back it up.",
             "title": "Write the dispute note",
+            "type": "do",
             "do": "Paste this into the same task and press Enter. You read the note and send it yourself.",
             "prompt": "Write a short, polite note to SwiftRoute's billing team that sets out each correction on this invoice, with the right figures, the corrected total and the amount we are asking them to credit. Save it as invoice-dispute.md in this folder.",
-            "see": "A file called invoice-dispute.md in your Cowork Academy folder with each correction, the corrected total and the credit requested.",
+            "see": "A file called invoice-dispute.md in your Cowork Academy folder with each correction, the corrected total and the credit requested. Notice that the figures match the corrected invoice from the last step.",
             "stuck": "If the note sounds angry, paste: \"Make the tone calm and factual.\""
           },
           {
@@ -2615,35 +2757,39 @@ const ROLES = [
         },
         "steps": [
           {
+            "goal": "Find out what a description is missing before you rewrite it, so the rewrite fixes real weaknesses.",
+            "title": "Get a critique of your description",
             "type": "do",
-            "title": "Get a critique",
             "do": "Paste this into your Cowork task and press Enter. Replace the text in brackets with a real description from your work, or keep the example.",
             "prompt": "Critique this product description. What works, what's missing, and what would make a customer buy? Description: [paste a description here, e.g. Standard Service Plan. Yearly equipment check and phone support for small offices. Fast response.]",
-            "see": "A short critique with what works, what is missing and specific ideas to improve it.",
+            "see": "A short critique with what works, what is missing and specific ideas to improve it. Notice which weaknesses it names, since the rewrite should fix those.",
             "stuck": "If Cowork asks which description you mean, paste the full text of one into the task."
           },
           {
+            "goal": "Get a stronger version in your own voice with headline options, leading with what the customer gets.",
+            "title": "Rewrite it in your brand voice",
             "type": "do",
-            "title": "Rewrite it",
             "do": "Paste this into the same task and press Enter.",
             "prompt": "Rewrite the description in our brand voice: [your brand voice, e.g. warm, plain and practical, no jargon]. Give me 3 headline options and put the strongest benefits first. Never exaggerate speed, results or features, and don't invent specifics I haven't given you.",
-            "see": "Three headline options and a rewritten description that opens with the main benefit for the customer.",
+            "see": "Three headline options and a rewritten description that opens with the main benefit for the customer. Notice whether any claim goes further than you can support.",
             "stuck": "If Cowork adds details you didn't give it, paste: \"Remove anything I didn't tell you, and mark gaps with [to confirm].\""
           },
           {
+            "goal": "Save the voice and the never-exaggerate rule as a skill, so you can reuse them on any product.",
+            "title": "Save the writing skill",
             "type": "do",
-            "title": "Save the skill",
             "do": "Paste this into the same task and press Enter. Cowork will create the skill and may ask you to approve it or turn it on.",
             "prompt": "Save your approach as a skill called product-writer, including the brand voice and the rule to never exaggerate speed, results or features.",
-            "see": "Cowork confirms it created a skill called product-writer and summarizes the voice and the rules it saved.",
+            "see": "Cowork confirms it created a skill called product-writer and summarizes the voice and the rules it saved. Notice that the never-exaggerate rule is in the summary.",
             "stuck": "If Cowork asks you to approve or turn on the skill, follow its prompt. If skills aren't available to you, ask your Academy program contact."
           },
           {
+            "goal": "Check the skill works on a different description, so you know it is reusable and not tuned to just one product.",
+            "title": "Test the skill on another product",
             "type": "do",
-            "title": "Test on a second product",
             "do": "Paste this into the same task and press Enter.",
             "prompt": "Use the product-writer skill to rewrite this description: [paste a second description here, e.g. Ergo Task Chair. Adjustable chair for office use. 5-year warranty.]",
-            "see": "A new description in the same voice, with headline options and the benefits first, following the saved rules.",
+            "see": "A new description in the same voice, with headline options and the benefits first, following the saved rules. Notice whether the voice and rules match the first rewrite.",
             "stuck": "If Cowork doesn't seem to use the skill, paste: \"Use the product-writer skill, and tell me when you do.\""
           },
           {
@@ -2672,27 +2818,30 @@ const ROLES = [
         },
         "steps": [
           {
+            "goal": "Get a first overview of demand, events, competitors and prices in your market, as raw material for a brief.",
+            "title": "Research your market",
             "type": "do",
-            "title": "Research the market",
             "do": "Paste this into your Cowork task and press Enter. Change the example in the brackets to your own industry and area.",
             "prompt": "Research the market for [your industry and area, e.g. commercial office furniture suppliers in the Southwest]: what drives demand, major events or regulation changes in the next 6 months, the main competitors and typical prices for [your main product or service, e.g. a standard desk or yearly service plan].",
-            "see": "A written overview with sections on demand drivers, upcoming events, competitors and typical prices, with some facts and figures.",
+            "see": "A written overview with sections on demand drivers, upcoming events, competitors and typical prices, with some facts and figures. Notice which facts come with numbers: those need checking in the next step.",
             "stuck": "If Cowork says it can't search the web, ask it to tell you exactly what it can and can't look up. Then paste in an article or report you trust and ask it to work from that."
           },
           {
+            "goal": "Find out where each fact came from and which may be out of date, so you don't quote something you can't back up.",
+            "title": "Ask for sources and weak spots",
             "type": "do",
-            "title": "Ask for sources",
             "do": "Paste this into the same task and press Enter.",
             "prompt": "List the sources you used, with a link for each, and tell me which numbers might be out of date or hard to confirm.",
-            "see": "A list of sources with links, and a short note on which figures are uncertain or old.",
+            "see": "A list of sources with links, and a short note on which figures are uncertain or old. Notice which figures are marked uncertain or old.",
             "stuck": "If a number has no source, paste: \"Remove any figure you can't source, or mark it as unconfirmed.\""
           },
           {
+            "goal": "Package the research as a one-page brief with sources at the bottom, ready to share.",
+            "title": "Turn it into a one-page brief",
             "type": "do",
-            "title": "Make the brief",
             "do": "Paste this into the same task and press Enter.",
             "prompt": "Turn this into a one-page market brief as a Word document called market-brief.docx in this folder, with sources listed at the bottom.",
-            "see": "A file called market-brief.docx in your Cowork Academy folder, one page long, with the sources at the bottom.",
+            "see": "A file called market-brief.docx in your Cowork Academy folder, one page long, with the sources at the bottom. Notice that every key figure has a source listed.",
             "stuck": "If the brief runs past one page, paste: \"Cut it to fit on one page and keep the most useful points.\""
           },
           {
@@ -2721,29 +2870,32 @@ const ROLES = [
         },
         "steps": [
           {
+            "goal": "Have Cowork build a short renewal pitch with a results slide drawn from the orders data, so you start from a full draft, not a blank slide.",
+            "title": "Create the customer pitch deck",
             "type": "do",
-            "title": "Create the deck",
             "do": "orders.csv is already in your Cowork Academy folder. Paste this into your Cowork task and press Enter. For a service-plan pitch instead, change the customer and offer in the brackets.",
             "prompt": "Create a 6 to 8 slide PowerPoint deck called customer-pitch.pptx in this folder: a renewal pitch for [customer and offer, e.g. Desert Bloom Clinics, renewing a supply agreement in November]. Slides: where we are today, what we delivered, results, what's next, our proposal, next steps. Pricing: [your offer, e.g. a 12-month service plan at $450 per month]; don't invent other prices. Results: that customer's orders and revenue by month and product line from orders.csv. Add speaker notes.",
-            "see": "A file called customer-pitch.pptx in your Cowork Academy folder, with 6 to 8 slides, a results slide with real figures from the data, and notes under each slide.",
+            "see": "A file called customer-pitch.pptx in your Cowork Academy folder, with 6 to 8 slides, a results slide with real figures from the data, and notes under each slide. Notice that the figures on the results slide come from the data.",
             "stuck": "If Cowork says it can't find the file, check that this task is using your Cowork Academy folder. If it can't make a PowerPoint file in your setup, ask your Academy program contact.",
             "files": [
               "orders.csv"
             ]
           },
           {
+            "goal": "Read the deck the way the customer would, notes included, before you change anything.",
+            "title": "Click through every slide",
             "type": "do",
-            "title": "Review the deck",
             "do": "Open customer-pitch.pptx from your Cowork Academy folder and click through every slide, including the speaker notes.",
-            "see": "The deck opens in PowerPoint or Keynote with 6 to 8 slides and notes under each one.",
+            "see": "The deck opens in PowerPoint or Keynote with 6 to 8 slides and notes under each one. Notice any slide where a figure or claim needs checking.",
             "stuck": "If a slide is too busy, tell Cowork in the same task: \"Simplify slide [number, e.g. 3] to 3 short points.\""
           },
           {
+            "goal": "Mark every slide that uses practice data, so nobody sends it to a real customer by mistake.",
+            "title": "Flag the practice numbers",
             "type": "do",
-            "title": "Mark the practice numbers",
             "do": "Paste this into the same task and press Enter.",
             "prompt": "Add a clear note on every slide that uses numbers from orders.csv: \"Practice data. Replace with our real, checked numbers before any customer sees this.\" Save the deck again.",
-            "see": "Every slide with figures now carries the practice-data note, and the deck is saved again in your folder.",
+            "see": "Every slide with figures now carries the practice-data note, and the deck is saved again in your folder. Notice that no slide with figures is missing the note.",
             "stuck": "If the note covers part of a slide, paste: \"Move the note to the bottom of the slide in small text.\""
           },
           {
@@ -2772,11 +2924,12 @@ const ROLES = [
         },
         "steps": [
           {
+            "goal": "Pull the customer's orders, tickets and the cause of the delays into one summary, so the letter rests on facts and not memory.",
+            "title": "Gather the facts for the update",
             "type": "do",
-            "title": "Gather the facts",
             "do": "team-notes.txt, orders.csv and support-tickets.csv are already in your Cowork Academy folder. Paste this into your Cowork task and press Enter.",
             "prompt": "Read team-notes.txt in this folder. Then, using orders.csv and support-tickets.csv, summarize Desert Bloom Clinics: orders and revenue for April to September 2026, their support tickets by category with credits issued, and anything that shows late deliveries. List what the notes say is causing the delays, and the options being discussed. Where the notes and the data disagree, tell me.",
-            "see": "A summary with the customer's orders and revenue, ticket counts by category, the cause of the delays from the notes, and the options on the table.",
+            "see": "A summary with the customer's orders and revenue, ticket counts by category, the cause of the delays from the notes, and the options on the table. Notice that the cause of the delays comes from the team notes, not a guess.",
             "stuck": "If Cowork says it can't find a file, check that this task is using your Cowork Academy folder. Don't have team-notes.txt? Ask Cowork to make a short practice note about late deliveries first.",
             "files": [
               "orders.csv",
@@ -2784,18 +2937,20 @@ const ROLES = [
             ]
           },
           {
+            "goal": "Turn the facts into a short, honest letter that explains the problem and the cause, offers options and gives a clear next step.",
+            "title": "Write the update letter",
             "type": "do",
-            "title": "Write the letter",
             "do": "Paste this into the same task and press Enter. You read the letter and send it yourself.",
             "prompt": "Write a short, warm, honest update to Dr. Okafor at Desert Bloom Clinics as a Word document called customer-update-okafor.docx in this folder. Dr. Okafor is busy and reads on a phone, so keep it under one page. Be open about the late deliveries, say what we are doing, and give 2 or 3 options with pros and cons. Don't invent prices or dates: where something isn't in the notes, write [to confirm].",
-            "see": "A file called customer-update-okafor.docx in your Cowork Academy folder: a short letter with the problem, the cause, options and a clear next step.",
+            "see": "A file called customer-update-okafor.docx in your Cowork Academy folder: a short letter with the problem, the cause, options and a clear next step. Notice that it admits the problem plainly before offering options.",
             "stuck": "If the letter is too long, paste: \"Cut it to 150 words and keep the options.\""
           },
           {
+            "goal": "Read the letter the way the customer would and verify one number, since you're the one who sends it.",
+            "title": "Check the letter as the customer",
             "type": "do",
-            "title": "Read it as the customer",
             "do": "Open customer-update-okafor.docx from your Cowork Academy folder. Read it as Dr. Okafor would, and check one number against the summary in your task.",
-            "see": "A one-page letter you could stand behind, with numbers that match the summary.",
+            "see": "A one-page letter you could stand behind, with numbers that match the summary. Notice any sentence the customer might read the wrong way.",
             "stuck": "If a number doesn't match, paste: \"[the number, e.g. the late order count] in the letter doesn't match your summary. Fix it.\" This is practice data: a real letter needs your real, checked numbers."
           },
           {
@@ -2839,40 +2994,44 @@ const ROLES = [
         },
         "steps": [
           {
+            "goal": "Create a one-page dashboard of the numbers leadership asks about, with a monthly trend, so they sit in one place.",
+            "title": "Build the KPI dashboard",
             "type": "do",
-            "title": "Build the dashboard",
             "do": "orders.csv is already in your Cowork Academy folder. Paste this into your Cowork task and press Enter.",
             "prompt": "Using orders.csv in this folder, build a KPI dashboard as a single HTML file called kpi-dashboard.html in this folder. Show 4 or 5 key numbers (revenue, orders, average order value, cancellation rate, average days to deliver) and a monthly revenue chart for April to September 2026. Add a short summary of what changed in September compared with August.",
-            "see": "A file called kpi-dashboard.html in your Cowork Academy folder, and a short description from Cowork of what it contains.",
+            "see": "A file called kpi-dashboard.html in your Cowork Academy folder, and a short description from Cowork of what it contains. Notice which key numbers Cowork chose and whether they are the ones leadership cares about.",
             "stuck": "If Cowork says it can't find the file, check that this task is using your Cowork Academy folder.",
             "files": [
               "orders.csv"
             ]
           },
           {
+            "goal": "Add the customers with the most support tickets, so the dashboard shows who needs attention and not just totals.",
+            "title": "Add a customers-to-watch list",
             "type": "do",
-            "title": "Add a watch list",
             "do": "support-tickets.csv is already in your Cowork Academy folder. Paste this into the same task and press Enter.",
             "prompt": "Add a \"customers to watch\" section. Use support-tickets.csv in this folder to show the 5 customers with the most tickets, their most common ticket category, the credits issued to them and how many of their tickets are still Open. Match each to its revenue from orders.csv.",
-            "see": "A new section showing 5 customers with ticket counts, main category, credits, open tickets and revenue.",
+            "see": "A new section showing 5 customers with ticket counts, main category, credits, open tickets and revenue. Notice which customers combine many tickets with high revenue.",
             "stuck": "If the section is missing, paste: \"Add the customers to watch section to kpi-dashboard.html and save it.\"",
             "files": [
               "support-tickets.csv"
             ]
           },
           {
+            "goal": "See the dashboard the way a reader would, and check that the numbers look right.",
+            "title": "Open and review the dashboard",
             "type": "do",
-            "title": "Open the dashboard",
             "do": "Open kpi-dashboard.html from your Cowork Academy folder. It opens in your web browser.",
-            "see": "A page with the summary, 4 or 5 number tiles, a monthly chart and the customers-to-watch list.",
+            "see": "A page with the summary, 4 or 5 number tiles, a monthly chart and the customers-to-watch list. Notice whether each number matches what Cowork described.",
             "stuck": "If the chart is blank, tell Cowork in the same task: \"The chart doesn't show when I open the file. Please fix it.\""
           },
           {
+            "goal": "Refresh the dashboard by asking Cowork to rebuild it from the latest files, since the file doesn't update by itself.",
+            "title": "Rebuild it from new data",
             "type": "do",
-            "title": "Refresh by rebuilding",
-            "do": "Paste this into the same task and press Enter. The file doesn't update by itself: you refresh it by asking Cowork to rebuild it.",
+            "do": "Paste this into the same task and press Enter.",
             "prompt": "Rebuild kpi-dashboard.html from the newest orders.csv and support-tickets.csv in this folder. Show the last date in the data at the top.",
-            "see": "The dashboard is rebuilt, with the last date in the data shown at the top of the page.",
+            "see": "The dashboard is rebuilt, with the last date in the data shown at the top of the page. Notice that the date at the top tells readers how current the data is.",
             "stuck": "If the old version still shows, reload the page in your browser after Cowork finishes."
           },
           {
@@ -2901,26 +3060,29 @@ const ROLES = [
         },
         "steps": [
           {
+            "goal": "Let Cowork ask you questions about a weekly process, so the steps come out of your head and onto the page.",
+            "title": "Start the process interview",
             "type": "do",
-            "title": "Start the interview",
             "do": "Paste this into your Cowork task and press Enter. Replace the example in brackets with a process from your own work.",
             "prompt": "Interview me about a process my team runs every week: [your team and process, e.g. the accounts payable team paying supplier invoices, or the HR team onboarding new hires]. Ask me one question at a time about each step, who does it, and how long it takes.",
-            "see": "Cowork asks a first question about the process, such as what triggers it or what the first step is.",
+            "see": "Cowork asks a first question about the process, such as what triggers it or what the first step is. Notice that Cowork asks one question at a time.",
             "stuck": "If Cowork asks several questions at once, paste: \"One question at a time, please.\""
           },
           {
+            "goal": "Describe each step, who does it and how long it takes, as accurately as you can, because the map is only as good as your answers.",
+            "title": "Answer the interview questions",
             "type": "do",
-            "title": "Answer the questions",
             "do": "Type your answer to each question in the same task and press Enter. Keep going until Cowork says it has enough.",
-            "see": "A new question after each answer, and then a message saying it has what it needs to build the map.",
+            "see": "A new question after each answer, and then a message saying it has what it needs to build the map. Notice that Cowork tells you when it has enough.",
             "stuck": "If you don't know how long a step takes, give your best guess and say it's a guess."
           },
           {
+            "goal": "Turn your answers into a table that shows which steps Claude could take on, which need a person and what that saves.",
+            "title": "Mark where Claude can help",
             "type": "do",
-            "title": "Mark where Claude fits",
             "do": "Paste this into the same task and press Enter.",
             "prompt": "Map the process as a table: step, who does it, time it takes. Mark which steps Claude could do, which need a person, and estimate the hours saved per month.",
-            "see": "A table with one row per step, a column showing Claude or a person, and an estimate of hours saved per month at the bottom.",
+            "see": "A table with one row per step, a column showing Claude or a person, and an estimate of hours saved per month at the bottom. Notice that judgment calls are marked for a person.",
             "stuck": "If the estimate seems too good, paste: \"Show how you calculated the hours saved, and use cautious numbers.\""
           },
           {
@@ -2949,27 +3111,30 @@ const ROLES = [
         },
         "steps": [
           {
+            "goal": "Get an agenda and slide for a 30-minute huddle, so your team can come up with ideas quickly.",
+            "title": "Prepare the team huddle",
             "type": "do",
-            "title": "Prepare the huddle",
             "do": "Paste this into your Cowork task and press Enter. Change the example in brackets to describe your own team.",
             "prompt": "Create a 30-minute team huddle agenda and one simple PowerPoint slide called huddle-slide.pptx, saved in this folder, to help my team find ways Claude could save time in our work. Our team: [your team and what it does, e.g. the customer service team at a bank, we answer account questions]. Include 3 warm-up questions.",
-            "see": "An agenda in the task, with timings and 3 warm-up questions, and a file called huddle-slide.pptx in your Cowork Academy folder.",
+            "see": "An agenda in the task, with timings and 3 warm-up questions, and a file called huddle-slide.pptx in your Cowork Academy folder. Notice the warm-up questions: use them to get people talking.",
             "stuck": "If Cowork can't make the slide, ask it for the agenda only and put the warm-up questions on a whiteboard."
           },
           {
+            "goal": "Sort your team's ideas by hours saved and effort, so the best ones stand out.",
+            "title": "Group and score the ideas",
             "type": "do",
-            "title": "Score the ideas",
             "do": "Paste this into the same task and press Enter. Use the ideas your team came up with, or keep the examples.",
             "prompt": "Here are my team's ideas: [your team's ideas, e.g. draft replies to routine customer emails; summarize open support tickets each Monday; check supplier invoices against agreed rates; match late deliveries to complaints]. Group them, score each by hours saved and effort, and pick the top 3.",
-            "see": "A table grouping the ideas, with a score for hours saved and effort for each, and 3 ideas picked as the top choices.",
+            "see": "A table grouping the ideas, with a score for hours saved and effort for each, and 3 ideas picked as the top choices. Notice why the top 3 were chosen.",
             "stuck": "If you have no ideas yet, ask Cowork: \"Suggest 6 ideas for my team based on the work I described.\""
           },
           {
+            "goal": "Write up the three best ideas in a file you can carry into the Spark your ideas mission.",
+            "title": "Save the top three ideas",
             "type": "do",
-            "title": "Save the top 3",
             "do": "Paste this into the same task and press Enter.",
             "prompt": "Save the top 3 ideas to huddle-ideas.md in this folder. For each, write a clear title, the problem today, how Claude could help, and the estimated hours saved per month, in under 100 words.",
-            "see": "A file called huddle-ideas.md in your Cowork Academy folder with 3 short idea write-ups.",
+            "see": "A file called huddle-ideas.md in your Cowork Academy folder with 3 short idea write-ups. Notice that each write-up states the problem today and the hours saved.",
             "stuck": "If an idea runs over 100 words, paste: \"Shorten each idea to under 100 words.\""
           },
           {
@@ -2998,27 +3163,30 @@ const ROLES = [
         },
         "steps": [
           {
+            "goal": "Turn rough notes and numbers into a one-page update that leadership can read in a minute.",
+            "title": "Draft the leadership update",
             "type": "do",
-            "title": "Write the update",
             "do": "Paste this into your Cowork task and press Enter. Replace the notes in brackets with your own, or keep the example.",
             "prompt": "Turn these notes into a one-page leadership update with wins, key numbers, risks and asks, in a clear and direct tone. Notes: [your notes, e.g. September revenue $198,754, up from $148,777 in August; West revenue fell from $74,245 in July to $33,564 in September; SwiftRoute averages 7.6 days to deliver since July; 7 support tickets still open at 30 September; ask: approve moving West shipments to Northline Freight].",
-            "see": "A one-page update with sections for wins, key numbers, risks and asks, using the figures you gave.",
+            "see": "A one-page update with sections for wins, key numbers, risks and asks, using the figures you gave. Notice that every figure matches the notes you gave.",
             "stuck": "If Cowork changes your figures, paste: \"Use only the numbers I gave you, exactly as written.\""
           },
           {
+            "goal": "Find the gaps in the update before your boss does, and fix them in the update itself.",
+            "title": "Predict your boss's questions",
             "type": "do",
-            "title": "Test it",
             "do": "Paste this into the same task and press Enter.",
             "prompt": "What questions will my boss ask after reading this? Suggest how to answer each one in the update itself.",
-            "see": "A short list of likely questions, each with a suggested line to add to the update.",
+            "see": "A short list of likely questions, each with a suggested line to add to the update. Notice which question you couldn't answer: add that detail.",
             "stuck": "If the questions are too general, paste: \"Make them specific to the numbers in my update.\""
           },
           {
+            "goal": "Save the format as a skill, so next month you paste in new notes and get the same one-page update.",
+            "title": "Save the update format",
             "type": "do",
-            "title": "Save the format",
             "do": "Paste this into the same task and press Enter. Cowork will create the skill and may ask you to approve it or turn it on.",
             "prompt": "Save this format as a skill called leadership-update, so next month I can paste new notes and get the same one-page update.",
-            "see": "Cowork confirms it created a skill called leadership-update and describes the format it saved.",
+            "see": "Cowork confirms it created a skill called leadership-update and describes the format it saved. Notice that the description matches the sections you just used.",
             "stuck": "If Cowork asks you to approve or turn on the skill, follow its prompt. If skills aren't available to you, ask your Academy program contact."
           },
           {
@@ -3049,24 +3217,32 @@ const HOWTOS = [
     "result": "A saved skill that does one of your tasks your way, tested in a fresh task.",
     "steps": [
       {
+        "goal": "Tell Cowork the task you repeat, and let it interview you. Its questions pull out the rules you'd otherwise have to explain every time.",
+        "title": "Choose a task and answer questions",
         "do": "Pick a task you do the same way every time. Paste this into your Cowork task, change the bracketed part, and press Enter.",
         "prompt": "I want to create a reusable skill for this task: [a task you repeat, e.g. replying to customer questions about delivery dates, or summarizing a weekly team update]. Interview me to learn how I like it done: the steps, the format, the tone, and anything to avoid. Ask one question at a time.",
         "see": "Cowork asks you questions about the task, one at a time. Answer each one in a sentence or two.",
         "stuck": "If it starts doing the task instead, say: \"Stop. I want to save this as a skill first.\" Can’t think of a task? Use replying to the messages in customer-messages.txt."
       },
       {
+        "goal": "Save your answers as a skill, so Cowork can do this task your way in any future task without you explaining it again.",
+        "title": "Save your answers as a skill",
         "do": "When the questions are done, paste this into the same task and press Enter.",
         "prompt": "Now save this as a skill called [short name, e.g. customer-reply]. Include my rules, one example of a good result, and at least one thing it should never do.",
         "see": "Cowork creates the skill and tells you its name. It may ask you to approve the skill or turn it on. Do that.",
         "stuck": "If Cowork says it can't save skills in your setup, check Claude's help center at support.claude.com, or ask your Academy program contact."
       },
       {
+        "goal": "Test the skill in a fresh task without naming it. If it works, the skill is picking up your request by itself.",
+        "title": "Test the skill in a fresh task",
         "do": "Start another new task in your Cowork Academy folder. Ask for the task in your own words, without mentioning the skill, and press Enter.",
         "prompt": "[Your request, e.g. Draft a reply to message 3 in customer-messages.txt.]",
         "see": "The result follows your format and rules without you explaining them again. That's your skill working.",
         "stuck": "If it didn't use the skill, say: \"Use my [skill name] skill.\" Then say: \"Update that skill's description so you use it for requests like this one.\""
       },
       {
+        "goal": "Make one small improvement and see it take effect. This shows you how to refine a skill over time.",
+        "title": "Improve the skill with one change",
         "do": "Improve the skill once. Paste this into the same task, change the bracketed parts, and press Enter.",
         "prompt": "Update my [skill name] skill: [one change, e.g. keep replies under 120 words and always sign off with our team name].",
         "see": "Cowork updates the skill, and the next result shows your change. It may ask you to approve the update.",
@@ -3088,6 +3264,8 @@ const HOWTOS = [
     "result": "A saved command you run by name whenever you need it.",
     "steps": [
       {
+        "goal": "Save a request you type often as a named command, so you can run it again with a single short instruction.",
+        "title": "Save a request as a command",
         "do": "Pick a request you type often. Paste this into your Cowork task, change the bracketed parts, and press Enter.",
         "prompt": "Save a reusable command called [short name, e.g. open-tickets]. When I run it, it should [the request, e.g. read support-tickets.csv in this folder and list every ticket with status Open, grouped by customer]. Only run it when I call it by name.",
         "see": "Cowork creates the command, possibly as a skill, and tells you its name. It may ask you to approve it or turn it on. Do that.",
@@ -3097,12 +3275,16 @@ const HOWTOS = [
         ]
       },
       {
+        "goal": "Run the command in a fresh task to prove it works without you retyping the request.",
+        "title": "Run the command by name",
         "do": "Start another new task in your Cowork Academy folder. Type / to see if your command appears in the list, or paste this and press Enter.",
         "prompt": "Run my [command name] command.",
         "see": "Cowork does the saved request without you explaining it again, for example a list of open tickets grouped by customer.",
         "stuck": "Nothing in the / list? That's fine. Asking for it by name works the same way."
       },
       {
+        "goal": "Make the command ask for what it needs before it starts, so one command can serve different situations.",
+        "title": "Make the command ask a question first",
         "do": "Make it ask for what it needs first. Paste this into the same task, change the bracketed parts, and press Enter.",
         "prompt": "Change my [command name] command so it first asks me [what it needs, e.g. which customer or region to focus on] before it starts.",
         "see": "The next time you run it, Cowork asks your question first, then does the task.",
@@ -3124,22 +3306,30 @@ const HOWTOS = [
     "result": "Cowork turning information from an approved work app, or the practice inbox, into a sorted list with draft replies.",
     "steps": [
       {
+        "goal": "Pick which app Cowork will read from. Choosing only an approved one keeps company data safe, and the practice file is a fine substitute.",
+        "title": "Choose an approved app",
         "do": "Choose one app your company has approved for Claude, such as your work email or calendar. If no app is approved yet, skip this step and use customer-messages.txt, which is already in your Cowork Academy folder.",
         "see": "You know which approved app you’ll use, or you’re practicing with customer-messages.txt.",
         "stuck": "Not sure what's approved? Ask your manager or your Academy program contact before you connect anything."
       },
       {
+        "goal": "Connect the app so Cowork can read from it. You sign in yourself, so Cowork never sees your password.",
+        "title": "Connect the app with your sign-in",
         "do": "Connect the app in Claude's connector settings. A sign-in pop-up appears: sign in yourself with your work account.",
         "see": "The app shows as connected.",
         "stuck": "Pop-up blocked? Allow pop-ups and try again. Can't find the connector settings, or the app isn't listed? Check Claude's help center at support.claude.com, or ask your Academy program contact."
       },
       {
+        "goal": "Ask Cowork to pull real information from the app without changing anything, so you see the connection works safely.",
+        "title": "Pull real information, read only",
         "do": "Paste this into your Cowork task, change the bracketed parts, and press Enter.",
         "prompt": "Using my [app, e.g. work email] connector, or customer-messages.txt in this folder if I’m practicing, show me [what you want, e.g. customer messages from the last 3 days]. Don’t send, change or delete anything.",
         "see": "Real information from your app, or the 8 practice messages, listed in Cowork. Not made-up examples.",
         "stuck": "If Cowork says it can’t reach the app, reconnect it in Claude’s connector settings and try again, or use customer-messages.txt for now."
       },
       {
+        "goal": "Turn the raw information into something you can act on, with replies kept as drafts for you to review and send.",
+        "title": "Turn it into a sorted list with drafts",
         "do": "Paste this into the same task, change the bracketed part, and press Enter.",
         "prompt": "Turn that into [something useful, e.g. a list sorted by urgency, with a draft reply for the two most urgent]. Keep any replies as drafts. I'll review and send them myself.",
         "see": "A useful result built from the data. With the practice inbox, Dr. Okafor’s undelivered order and Coastal Credit Union’s double charge should be near the top.",
@@ -3161,6 +3351,8 @@ const HOWTOS = [
     "result": "A Word report with findings, charts and recommendations from orders.csv, plus a skill to repeat it next month.",
     "steps": [
       {
+        "goal": "Have Cowork read your order data and tell you what matters, so the report you build next rests on real findings.",
+        "title": "Find the key findings in your data",
         "do": "orders.csv is already in your Cowork Academy folder. Paste this into your Cowork task and press Enter. Using your own export instead is fine, as long as it has no customer or employee personal details.",
         "prompt": "Open orders.csv in this folder. Tell me the 3 most important findings about revenue, sales channels and cancellations, anything unusual, and what I should do about it. Show the numbers behind each one.",
         "see": "Three findings in plain English with real figures, such as revenue by channel or which channel has the most cancellations.",
@@ -3170,18 +3362,24 @@ const HOWTOS = [
         ]
       },
       {
+        "goal": "Turn the findings into a shareable Word report with charts and recommendations, ready to send to a colleague or manager.",
+        "title": "Turn the findings into a Word report",
         "do": "Paste this into the same task and press Enter.",
         "prompt": "Turn this into a 1 to 2 page Word report saved in this folder as orders-report.docx: a summary at the top, 2 charts, the findings, and 3 recommendations. Put the charts inside the document.",
         "see": "orders-report.docx appears in your Cowork Academy folder. Open it to check the summary, charts and recommendations.",
         "stuck": "Charts missing from the file? Say: \"Put the charts inside the document itself.\" Want a PDF too? Say: \"Save a PDF copy as well.\""
       },
       {
+        "goal": "Check one number before you share anything. A quick check protects you from passing on a wrong figure.",
+        "title": "Check one number in the report",
         "do": "Check one number before you share anything. Paste this into the same task and press Enter.",
         "prompt": "Show me how you calculated the first finding, step by step, so I can check it.",
         "see": "The calculation broken down so you can follow it, with totals you could check in the spreadsheet yourself.",
         "stuck": "If a number looks wrong, say which one and ask Cowork to recalculate it and update the report."
       },
       {
+        "goal": "Save the report process as a skill, so next month a new export gives you the same report in one step.",
+        "title": "Save the report as a repeatable skill",
         "do": "Make it repeatable. Paste this into the same task, change the bracketed part, and press Enter.",
         "prompt": "Save this as a skill called [name, e.g. monthly-orders-report] so next month I can give you a new orders export and get the same report in one step.",
         "see": "Cowork creates the skill and tells you its name. It may ask you to approve it or turn it on.",
@@ -3203,23 +3401,31 @@ const HOWTOS = [
     "result": "A working interactive tool saved as an HTML file in your Cowork Academy folder, built without writing code.",
     "steps": [
       {
+        "goal": "Describe the tool you want in plain words and have Cowork build it as a file you can open in your browser. No coding needed.",
+        "title": "Describe the tool you want",
         "do": "Paste this into your Cowork task, change the bracketed parts, and press Enter.",
         "prompt": "Build a simple interactive [tool, e.g. order total calculator with unit price, units, discount and shipping] for my work as a [role, e.g. sales coordinator]. Save it in this folder as [name, e.g. order-calculator].html so I can open it in my browser.",
         "see": "A new HTML file with the name you chose appears in your Cowork Academy folder. Cowork may also show a preview.",
         "stuck": "Not sure what to build? Try a checklist for onboarding a new hire, or a calculator for the total cost of an order."
       },
       {
+        "goal": "Open the tool and try it with real values. Using it yourself is the quickest way to spot what is missing or broken.",
+        "title": "Open the tool and try it out",
         "do": "Open the HTML file from your Cowork Academy folder. It opens in your web browser. Click around and enter some real values.",
         "see": "The tool responds as you use it: totals update and items check off.",
         "stuck": "Something doesn't work? Go back to your Cowork task, describe what you clicked and what happened, and ask Cowork to fix the file."
       },
       {
+        "goal": "Ask for one change so the tool fits your work better. Small steered changes are quicker than a big rebuild.",
+        "title": "Add a feature and your colors",
         "do": "Make it yours. Paste this into your Cowork task, change the bracketed parts, and press Enter.",
         "prompt": "Update [name].html: add [one feature, e.g. a discount for orders of 100 units or more] and use our company colors ([colors, e.g. navy and gray]). Save it over the same file.",
         "see": "Refresh the page in your browser and your changes appear.",
         "stuck": "Ask for one change at a time. It's quicker to steer."
       },
       {
+        "goal": "Confirm the tool is a real saved file that works every time you open it, and learn how to share it.",
+        "title": "Reopen the tool to confirm it's saved",
         "do": "Close the browser tab. Open the HTML file from your Cowork Academy folder again.",
         "see": "The tool is still there and still works. To share it, send the file or put it on a shared drive.",
         "stuck": "Can't find the file? Look in your Cowork Academy folder in Documents, or say in your Cowork task: \"Tell me the exact name of the HTML file you saved.\""
@@ -3240,11 +3446,15 @@ const HOWTOS = [
     "result": "A task that runs on a schedule and saves its result for you to review.",
     "steps": [
       {
+        "goal": "Write down the task, the timing and the reason in one sentence. A clear sentence makes the schedule easy to set up.",
+        "title": "Describe the task you want scheduled",
         "do": "Finish this sentence for your job: \"Every [when], I want [what] so I can [why].\"",
         "see": "You have one sentence that describes your task.",
         "stuck": "Example: \"Every Monday at 8am, I want a list of open tickets from support-tickets.csv, grouped by customer, so I can plan the week.\""
       },
       {
+        "goal": "Turn your sentence into a scheduled task, and see a sample of its output before it ever runs on its own.",
+        "title": "Create the scheduled task",
         "do": "Paste this into your Cowork task, change the bracketed parts to match your sentence, and press Enter.",
         "prompt": "Create a scheduled task: every [day and time, e.g. Monday at 8am], [what to do, e.g. read support-tickets.csv in this folder and list the open tickets by customer]. Save the result in this folder. Show me a sample of what it will produce.",
         "see": "Cowork confirms the day and time of the schedule and shows you a sample of the result.",
@@ -3254,12 +3464,16 @@ const HOWTOS = [
         ]
       },
       {
+        "goal": "Run the task once now, so you see the real result before you rely on it running by itself.",
+        "title": "Run the scheduled task once to test it",
         "do": "Paste this into the same task and press Enter.",
         "prompt": "Run that scheduled task once now so I can check the result.",
         "see": "The same kind of result you'll get every time it runs, saved in your Cowork Academy folder.",
         "stuck": "Not quite right? Say what to change, then run it again."
       },
       {
+        "goal": "Confirm the task is on the schedule and see when it will next run, so nothing surprises you later.",
+        "title": "Check the task is scheduled",
         "do": "Paste this into the same task and press Enter.",
         "prompt": "Show me my scheduled tasks.",
         "see": "Your task is listed with its next run time. Keep your computer on and the Claude app open at that time.",
@@ -3283,5 +3497,5 @@ const SPARK_URL = "https://spark.mydatapath.com";
   Object.values(LEVELS).forEach(L=>L.missions.forEach(fix));
   ROLES.forEach(r=>r.missions.forEach(fix));
   [SETUP,SAFETY,IDEAS].forEach(g=>g.missions.forEach(fix));
-  HOWTOS.forEach(h=>h.steps.unshift({do:"In Cowork, start a new task in your Cowork Academy folder.",see:"An empty task with a message box, ready for your first message.",stuck:"Haven't set up the folder yet? Do the \"Set up Cowork for the Academy\" mission first. It takes about 10 minutes."}));
+  HOWTOS.forEach(h=>h.steps.unshift({title:"Start a new task",goal:"Give this guide its own fresh task in Cowork, so it works only with your practice files and nothing from earlier work gets mixed in.",do:"In Cowork, start a new task in your Cowork Academy folder.",see:"An empty task with a message box, ready for your first message.",stuck:"Haven't set up the folder yet? Do the \"Set up Cowork for the Academy\" mission first. It takes about 10 minutes."}));
 })();

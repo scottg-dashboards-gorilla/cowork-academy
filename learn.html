@@ -270,6 +270,10 @@ details.capstone p{margin-top:10px}
 .stepcard .sk{font-size:14px;font-weight:700;color:var(--slate)}
 .stepcard h3{font-size:26px;margin:4px 0 12px}
 .sdo{font-size:18.5px;line-height:1.5;margin:0 0 14px}
+.sgoal{border-left:4px solid var(--spark);background:#FFFBEA;border-radius:0 10px 10px 0;padding:10px 14px;margin:0 0 16px;font-size:16.5px;line-height:1.5}
+.sgoal b,.shead{display:block;font-family:var(--display);font-weight:700;font-size:13.5px;color:var(--slate);margin-bottom:2px}
+.plan{margin:0 0 16px;padding-left:22px;font-size:16px}.plan li{margin:3px 0}
+.plan li.chk{color:var(--slate)}
 .pbox{display:flex;gap:12px;align-items:flex-start;background:var(--paper);border:1px solid var(--line);border-left:4px solid var(--ink);border-radius:12px;padding:14px 16px;margin:4px 0 6px}
 .ptext{flex:1;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:14px;line-height:1.6;white-space:pre-wrap}
 .ptext mark{background:var(--spark-soft);color:var(--ink);border-radius:4px;padding:0 2px}
@@ -685,7 +689,7 @@ function openSession(id){
   renderList(sessionItems(t),{kind:'session',sess:t,capKey:'s:'+id});
 }
 let CUR=null; // {items,ctx} of the open session or level
-function stepTitle(s){return s.title||({start:'Start a new task',check:'Quick check',reflect:'Think about your work',idea:'Write up your idea',quiz:'Take the quiz'})[s.type]||'Step';}
+function stepTitle(s){return s.title||({start:'Before you start',check:'Quick check',reflect:'Think about your work',idea:'Write up your idea',quiz:'Take the quiz'})[s.type]||'Step';}
 function stepsDone(l,mi){return GROUPS[l].missions[mi].steps.filter((s,si)=>isChecked(l,mi,si)).length;}
 function renderList(items,ctx){
   CUR={items,ctx};
@@ -800,16 +804,22 @@ function navHtml(si,nextLabel,disabled){return `<div class="nav"><button class="
 function renderStep(s,si,n,l,mi){
   const head=`<div class="sk">Step ${si+1} of ${n}</div><h3>${esc(stepTitle(s))}</h3>`;
   const last=si===n-1;const nextLabel=last?'Done, finish mission':'Done, next step';
-  if(s.type==='start')return `<div class="stepcard">${head}
-    <p class="sdo">In Cowork, start a new task in your <b>Cowork Academy</b> folder. Each mission gets its own task, so Cowork stays focused.</p>
+  if(s.type==='start'){
+    const m=GROUPS[l].missions[mi];
+    const plan=m.steps.filter(x=>x.type==='do'||x.type==='check'||x.type==='quiz'||x.type==='idea').map(x=>`<li class="${x.type==='check'?'chk':''}">${esc(stepTitle(x))}</li>`).join('');
+    return `<div class="stepcard">${head}
+    ${m.result?`<div class="sgoal"><b>By the end of this mission you'll have</b>${esc(m.result)}</div>`:''}
+    ${plan?`<span class="shead">Here's the plan</span><ol class="plan">${plan}</ol>`:''}
+    <p class="sdo">First, open Cowork and start a new task in your <b>Cowork Academy</b> folder. Each mission gets its own task, so Cowork stays focused on this one job.</p>
     <div class="see"><b>You should see:</b> an empty task with a message box, ready for your first message.</div>
     <details class="stuck"><summary>Haven't set up the folder yet?</summary><div>Do the <b>Set up Cowork for the Academy</b> mission first. It takes about 10 minutes.</div></details>
-    ${navHtml(si,'Ready, next step')}</div>`;
+    ${navHtml(si,'Ready, next step')}</div>`;}
   if(s.type==='do'){
     const files=(s.files||[]).map(f=>`<a href="${EDITION.dataDir}${f}" download>${f}</a>`).join(', ');
     const link=s.link?`<a class="filebtn" href="${s.link.href}" ${s.link.download?'download':'target="_blank" rel="noopener"'}>${esc(s.link.label)}</a>`:'';
     const prompt=s.prompt?fillTokens(s.prompt):'';
     return `<div class="stepcard">${head}
+      ${s.goal?`<div class="sgoal"><b>What you're doing</b>${esc(s.goal)}</div>`:''}
       <p class="sdo">${esc(s.do)}</p>
       ${link?`<div class="files">${link}</div>`:''}
       ${prompt?`<div class="pbox"><div class="ptext">${esc(prompt).replace(/\[([^\]]+)\]/g,'<mark>[$1]</mark>')}</div>${copyBtn(prompt,'Copy prompt')}</div>
@@ -821,7 +831,7 @@ function renderStep(s,si,n,l,mi){
   }
   if(s.type==='check'){
     const a=QZ['c'+l+mi+si];const answered=a!=null||isChecked(l,mi,si);
-    return `<div class="stepcard">${head}<p class="sdo">${esc(s.q)}</p>
+    return `<div class="stepcard">${head}<p class="pnote">One question to check it clicked. It comes up again in your final check.</p><p class="sdo">${esc(s.q)}</p>
       <div class="opts">${s.options.map((o,k)=>{const cls=answered?(k===s.answer?'right':k===a?'wrong':''):'';return `<button class="opt ${cls}" data-opt="${k}" ${answered?'disabled':''}>${esc(o)}</button>`;}).join('')}</div>
       ${answered?`<div class="see ${a!=null&&a!==s.answer?'miss':''}"><b>${a==null||a===s.answer?'Right.':'Not quite.'}</b> ${esc(s.why)}</div>`:''}
       ${navHtml(si,nextLabel,!answered)}</div>`;
@@ -1069,6 +1079,8 @@ function renderHowto(id){
   let card;
   if(k<n){const s=h.steps[k];
     card=`<div class="hwcard"><div class="hwnum">Step ${k+1} of ${n}</div>
+      ${s.title?`<h3 style="margin:2px 0 10px">${esc(s.title)}</h3>`:''}
+      ${s.goal?`<div class="sgoal"><b>What you're doing</b>${esc(s.goal)}</div>`:''}
       <div class="hwdo">${esc(s.do)}</div>
       ${s.prompt?`<div class="pbox"><div class="ptext">${esc(s.prompt).replace(/\[([^\]]+)\]/g,'<mark>[$1]</mark>')}</div><button class="copybtn" id="hwCopy">Copy prompt</button></div>
         <p class="pnote">Paste it into your Cowork task and press Enter.${/\[/.test(s.prompt)?' Replace the highlighted part in brackets with your own details.':''}</p>`:''}
